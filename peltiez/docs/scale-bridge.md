@@ -2,6 +2,8 @@
 
 **Protocole SCALE — version documentaire v1.0** (aligné [`PROJECT_GENESIS.md`](../../PROJECT_GENESIS.md) §4). Toute révision majeure : mettre à jour ce fichier + la genèse + [`CHANGELOG.md`](../../CHANGELOG.md).
 
+- **Contrat opérationnel v1.1** (états, sévérités, codes, journaux, escalade) : [`scale-protocol-v1.1.md`](scale-protocol-v1.1.md).
+
 **Langue par défaut : français** — les sections anglaises reprennent le même contenu.
 
 Ce document est le **kit conceptuel** exportable (plateforme, UI, pitch, doc technique, schémas). Il complète la section **« Pont de cohérence inter-systèmes (protocole SCALE) »** du fichier racine [`PROJECT_GENESIS.md`](../../PROJECT_GENESIS.md).

@@ -132,6 +132,7 @@ Sans ce pont, les systèmes « se parlent » mais ne partagent pas la même **v�
 ### Protocole SCALE (version documentaire v1.0)
 
 - **v1.0** — figé avec cette section et le kit [`peltiez/docs/scale-bridge.md`](peltiez/docs/scale-bridge.md) (encarts, Mermaid, bilingue). Toute évolution majeure du protocole = révision explicite de ces fichiers + entrée [`CHANGELOG.md`](CHANGELOG.md).
+- **v1.1 (contrat opérationnel)** — états du pont, niveaux de sévérité, codes de retour, escalade humaine, erreurs standardisées, journaux : [`peltiez/docs/scale-protocol-v1.1.md`](peltiez/docs/scale-protocol-v1.1.md).
 
 ---
 
