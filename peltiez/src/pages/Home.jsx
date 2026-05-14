@@ -15,7 +15,7 @@ import InteractiveMap from "@/components/InteractiveMap";
 import { SITE_ORIGIN, SITE_TAGLINE } from "@/lib/site";
 import { Package, ArrowRight, Recycle, Wrench, Gift, RefreshCw,
   Users, Star, Shield, Heart, Globe, CheckCircle,
-  Sparkles, HandHeart, MapPin, Crown, Earth, Building2, GraduationCap, Cpu, Infinity
+  Sparkles, HandHeart, MapPin, Crown, Earth, Building2, GraduationCap, Cpu, Infinity, Download
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -303,6 +303,12 @@ export default function Home() {
               <Button asChild size="lg" className="rounded-xl font-bold shadow-2xl px-10 text-base border-0 text-white uppercase tracking-wide"
                 style={{ background: "linear-gradient(135deg, hsl(158,60%,35%), hsl(260,70%,40%))" }}>
                 <Link to="/publier">👑 Entrer dans le sanctuaire <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              </Button>
+              <Button asChild size="lg" className="rounded-xl font-bold shadow-xl px-8 text-base border-0 text-slate-950 uppercase tracking-wide bg-gradient-to-r from-amber-200 via-amber-100 to-amber-200 hover:from-amber-100 hover:to-amber-300">
+                <a href="/encyclopedie.pdf" download="encyclopedie.pdf">
+                  <Download className="mr-2 h-4 w-4 inline" aria-hidden />
+                  Télécharger l’encyclopédie (PDF)
+                </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-xl text-white hover:bg-white/10 text-base"
                 style={{ borderColor: "rgba(255,255,255,0.15)" }}>
