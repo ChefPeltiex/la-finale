@@ -1,0 +1,14 @@
+# Superseded by `deploy_and_terraform.yml` — kept for manual `workflow_dispatch` only (no push) to avoid duplicate deploys.
+# Configure secrets as documented in `deploy_and_terraform.yml`.
+
+name: Deploy CirculAI φ (legacy dispatch)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Prefer .github/workflows/deploy_and_terraform.yml for the canonical pipeline."

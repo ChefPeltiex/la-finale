@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" width="360" height="360" role="img" aria-label="Racines 19-ièmes de l'unité">
+  <title>Racines 19-ièmes de l'unité : primitives (orange) vs autres (gris)</title>
+  <desc>19 points sur un cercle de rayon 120 centré en (180,180). Position k : (180+120cos(2πk/19), 180−120sin(2πk/19)). Primitives : indices k avec pgcd(k,19)=1.</desc>
+  <defs>
+    <style type="text/css"><![CDATA[
+      .guide { fill: none; stroke: #d5d8dc; stroke-width: 1.5; }
+      .axis { fill: none; stroke: #aeb6bf; stroke-width: 1; stroke-dasharray: 4 4; }
+      .center-dot { fill: #2c3e50; stroke: none; }
+      .pt-nonprim { fill: #7f8c8d; stroke: #566573; stroke-width: 1; }
+      .pt-prim { fill: #e67e22; stroke: #a04000; stroke-width: 1; }
+    ]]></style>
+  </defs>
+  <circle class="guide" cx="180.0" cy="180.0" r="120.0"/>
+  <line class="axis" x1="60.0" y1="180.0" x2="300.0" y2="180.0"/>
+  <line class="axis" x1="180.0" y1="60.0" x2="180.0" y2="300.0"/>
+  <circle class="center-dot" cx="180.0" cy="180.0" r="2"/>
+  <!-- racines non primitives (dessinées en premier) -->
+  <circle class="pt-nonprim" cx="300.000000" cy="180.000000" r="3.0"/>
+  <!-- racines primitives (par-dessus) -->
+  <circle class="pt-prim" cx="293.498069" cy="141.036064" r="5.0"/>
+  <circle class="pt-prim" cx="274.696861" cy="106.294474" r="5.0"/>
+  <circle class="pt-prim" cx="245.633779" cy="79.540023" r="5.0"/>
+  <circle class="pt-prim" cx="209.458258" cy="63.671968" r="5.0"/>
+  <circle class="pt-prim" cx="170.090479" cy="60.409861" r="5.0"/>
+  <circle class="pt-prim" cx="131.796549" cy="70.107201" r="5.0"/>
+  <circle class="pt-prim" cx="98.726211" cy="91.713131" r="5.0"/>
+  <circle class="pt-prim" cx="74.463150" cy="122.886313" r="5.0"/>
+  <circle class="pt-prim" cx="61.636644" cy="160.248649" r="5.0"/>
+  <circle class="pt-prim" cx="61.636644" cy="199.751351" r="5.0"/>
+  <circle class="pt-prim" cx="74.463150" cy="237.113687" r="5.0"/>
+  <circle class="pt-prim" cx="98.726211" cy="268.286869" r="5.0"/>
+  <circle class="pt-prim" cx="131.796549" cy="289.892799" r="5.0"/>
+  <circle class="pt-prim" cx="170.090479" cy="299.590139" r="5.0"/>
+  <circle class="pt-prim" cx="209.458258" cy="296.328032" r="5.0"/>
+  <circle class="pt-prim" cx="245.633779" cy="280.459977" r="5.0"/>
+  <circle class="pt-prim" cx="274.696861" cy="253.705526" r="5.0"/>
+  <circle class="pt-prim" cx="293.498069" cy="218.963936" r="5.0"/>
+</svg>

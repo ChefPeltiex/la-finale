@@ -1,0 +1,28 @@
+# Copy to terraform.tfvars (not committed) and fill in.
+# terraform plan -var-file=terraform.tfvars
+
+aws_region = "eu-west-1"
+
+# Short prefix for AWS resource names
+project = "circulai"
+
+# Optional: custom hostname for CloudFront (must match ACM cert in us-east-1)
+# your_domain = "www.example.com"
+domain = ""
+
+# Optional: ACM certificate ARN in **us-east-1** (required if domain is set)
+# certificate_arn = "arn:aws:acm:us-east-1:123456789012:certificate/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+certificate_arn = ""
+
+# Bucket and key where you uploaded the Lambda zip (see ../terraform/README.md)
+# lambda_s3_bucket = "your-lambda-artifacts-bucket"
+# lambda_s3_key    = "path/lambda-ab.zip"
+lambda_s3_bucket = ""
+lambda_s3_key    = ""
+
+# POST endpoint for experiment events (optional; empty = no outbound POST in Lambda)
+# event_collector_url = "https://your-collector.example/events"
+event_collector_url = ""
+
+# Fraction of new users assigned to "control"; remainder → "phi" (see lambda/ab-lambda.js)
+assign_prob_control = "0.5"

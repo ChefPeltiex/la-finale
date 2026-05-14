@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" width="360" height="360" role="img" aria-label="Racines 105-ièmes de l'unité">
+  <title>Racines 105-ièmes de l'unité : primitives (orange) vs autres (gris)</title>
+  <desc>105 points sur un cercle de rayon 120 centré en (180,180). Position k : (180+120cos(2πk/105), 180−120sin(2πk/105)). Primitives : indices k avec pgcd(k,105)=1.</desc>
+  <defs>
+    <style type="text/css"><![CDATA[
+      .guide { fill: none; stroke: #d5d8dc; stroke-width: 1.5; }
+      .axis { fill: none; stroke: #aeb6bf; stroke-width: 1; stroke-dasharray: 4 4; }
+      .center-dot { fill: #2c3e50; stroke: none; }
+      .pt-nonprim { fill: #7f8c8d; stroke: #566573; stroke-width: 1; }
+      .pt-prim { fill: #e67e22; stroke: #a04000; stroke-width: 1; }
+    ]]></style>
+  </defs>
+  <circle class="guide" cx="180.0" cy="180.0" r="120.0"/>
+  <line class="axis" x1="60.0" y1="180.0" x2="300.0" y2="180.0"/>
+  <line class="axis" x1="180.0" y1="60.0" x2="180.0" y2="300.0"/>
+  <circle class="center-dot" cx="180.0" cy="180.0" r="2"/>
+  <!-- racines non primitives (dessinées en premier) -->
+  <circle class="pt-nonprim" cx="300.000000" cy="180.000000" r="2.0"/>
+  <circle class="pt-nonprim" cx="298.071551" cy="158.573173" r="2.0"/>
+  <circle class="pt-nonprim" cx="294.668737" cy="144.629379" r="2.0"/>
+  <circle class="pt-nonprim" cx="292.348184" cy="137.835021" r="2.0"/>
+  <circle class="pt-nonprim" cx="289.625455" cy="131.191603" r="2.0"/>
+  <circle class="pt-nonprim" cx="283.013855" cy="118.452087" r="2.0"/>
+  <circle class="pt-nonprim" cx="279.148653" cy="112.401593" r="2.0"/>
+  <circle class="pt-nonprim" cx="270.368576" cy="101.047353" r="2.0"/>
+  <circle class="pt-nonprim" cx="260.295673" cy="90.822621" r="2.0"/>
+  <circle class="pt-nonprim" cx="254.818776" cy="86.180222" r="2.0"/>
+  <circle class="pt-nonprim" cx="236.864239" cy="74.328536" r="2.0"/>
+  <circle class="pt-nonprim" cx="223.840923" cy="68.295150" r="2.0"/>
+  <circle class="pt-nonprim" cx="217.082039" cy="65.873218" r="2.0"/>
+  <circle class="pt-nonprim" cx="196.107992" cy="61.086029" r="2.0"/>
+  <circle class="pt-nonprim" cx="188.967611" cy="60.335544" r="2.0"/>
+  <circle class="pt-nonprim" cx="174.616220" cy="60.120832" r="2.0"/>
+  <circle class="pt-nonprim" cx="167.456584" cy="60.657373" r="2.0"/>
+  <circle class="pt-nonprim" cx="153.297488" cy="63.008651" r="2.0"/>
+  <circle class="pt-nonprim" cx="132.836996" cy="69.656667" r="2.0"/>
+  <circle class="pt-nonprim" cx="120.000000" cy="76.076952" r="2.0"/>
+  <circle class="pt-nonprim" cx="113.892362" cy="79.851210" r="2.0"/>
+  <circle class="pt-nonprim" cx="97.072482" cy="93.264616" r="2.0"/>
+  <circle class="pt-nonprim" cx="92.033775" cy="98.379271" r="2.0"/>
+  <circle class="pt-nonprim" cx="82.917961" cy="109.465770" r="2.0"/>
+  <circle class="pt-nonprim" cx="71.883736" cy="127.933951" r="2.0"/>
+  <circle class="pt-nonprim" cx="64.324457" cy="148.075579" r="2.0"/>
+  <circle class="pt-nonprim" cx="62.622288" cy="155.050597" r="2.0"/>
+  <circle class="pt-nonprim" cx="61.340301" cy="162.114928" r="2.0"/>
+  <circle class="pt-nonprim" cx="60.483085" cy="169.243283" r="2.0"/>
+  <circle class="pt-nonprim" cx="60.483085" cy="190.756717" r="2.0"/>
+  <circle class="pt-nonprim" cx="61.340301" cy="197.885072" r="2.0"/>
+  <circle class="pt-nonprim" cx="62.622288" cy="204.949403" r="2.0"/>
+  <circle class="pt-nonprim" cx="64.324457" cy="211.924421" r="2.0"/>
+  <circle class="pt-nonprim" cx="71.883736" cy="232.066049" r="2.0"/>
+  <circle class="pt-nonprim" cx="82.917961" cy="250.534230" r="2.0"/>
+  <circle class="pt-nonprim" cx="92.033775" cy="261.620729" r="2.0"/>
+  <circle class="pt-nonprim" cx="97.072482" cy="266.735384" r="2.0"/>
+  <circle class="pt-nonprim" cx="113.892362" cy="280.148790" r="2.0"/>
+  <circle class="pt-nonprim" cx="120.000000" cy="283.923048" r="2.0"/>
+  <circle class="pt-nonprim" cx="132.836996" cy="290.343333" r="2.0"/>
+  <circle class="pt-nonprim" cx="153.297488" cy="296.991349" r="2.0"/>
+  <circle class="pt-nonprim" cx="167.456584" cy="299.342627" r="2.0"/>
+  <circle class="pt-nonprim" cx="174.616220" cy="299.879168" r="2.0"/>
+  <circle class="pt-nonprim" cx="188.967611" cy="299.664456" r="2.0"/>
+  <circle class="pt-nonprim" cx="196.107992" cy="298.913971" r="2.0"/>
+  <circle class="pt-nonprim" cx="217.082039" cy="294.126782" r="2.0"/>
+  <circle class="pt-nonprim" cx="223.840923" cy="291.704850" r="2.0"/>
+  <circle class="pt-nonprim" cx="236.864239" cy="285.671464" r="2.0"/>
+  <circle class="pt-nonprim" cx="254.818776" cy="273.819778" r="2.0"/>
+  <circle class="pt-nonprim" cx="260.295673" cy="269.177379" r="2.0"/>
+  <circle class="pt-nonprim" cx="270.368576" cy="258.952647" r="2.0"/>
+  <circle class="pt-nonprim" cx="279.148653" cy="247.598407" r="2.0"/>
+  <circle class="pt-nonprim" cx="283.013855" cy="241.547913" r="2.0"/>
+  <circle class="pt-nonprim" cx="289.625455" cy="228.808397" r="2.0"/>
+  <circle class="pt-nonprim" cx="292.348184" cy="222.164979" r="2.0"/>
+  <circle class="pt-nonprim" cx="294.668737" cy="215.370621" r="2.0"/>
+  <circle class="pt-nonprim" cx="298.071551" cy="201.426827" r="2.0"/>
+  <!-- racines primitives (par-dessus) -->
+  <circle class="pt-prim" cx="299.785216" cy="172.823502" r="5.0"/>
+  <circle class="pt-prim" cx="299.141631" cy="165.672693" r="5.0"/>
+  <circle class="pt-prim" cx="296.578805" cy="151.550355" r="5.0"/>
+  <circle class="pt-prim" cx="286.510295" cy="124.722906" r="5.0"/>
+  <circle class="pt-prim" cx="274.928524" cy="106.593084" r="5.0"/>
+  <circle class="pt-prim" cx="265.485132" cy="95.784252" r="5.0"/>
+  <circle class="pt-prim" cx="249.074048" cy="81.873674" r="5.0"/>
+  <circle class="pt-prim" cx="243.082052" cy="77.918392" r="5.0"/>
+  <circle class="pt-prim" cx="230.442867" cy="71.116957" r="5.0"/>
+  <circle class="pt-prim" cx="210.190412" cy="63.859830" r="5.0"/>
+  <circle class="pt-prim" cx="203.190710" cy="62.262194" r="5.0"/>
+  <circle class="pt-prim" cx="181.795129" cy="60.013428" r="5.0"/>
+  <circle class="pt-prim" cx="160.341851" cy="61.621129" r="5.0"/>
+  <circle class="pt-prim" cx="146.348713" cy="64.814971" r="5.0"/>
+  <circle class="pt-prim" cx="139.520402" cy="67.033624" r="5.0"/>
+  <circle class="pt-prim" cx="126.322422" cy="72.674711" r="5.0"/>
+  <circle class="pt-prim" cx="108.021373" cy="83.983974" r="5.0"/>
+  <circle class="pt-prim" cx="102.408048" cy="88.460451" r="5.0"/>
+  <circle class="pt-prim" cx="87.309965" cy="103.786108" r="5.0"/>
+  <circle class="pt-prim" cx="78.873485" cy="115.397926" r="5.0"/>
+  <circle class="pt-prim" cx="75.191016" cy="121.561341" r="5.0"/>
+  <circle class="pt-prim" cx="68.963484" cy="134.492944" r="5.0"/>
+  <circle class="pt-prim" cx="66.440714" cy="141.214841" r="5.0"/>
+  <circle class="pt-prim" cx="60.053708" cy="176.410144" r="5.0"/>
+  <circle class="pt-prim" cx="60.053708" cy="183.589856" r="5.0"/>
+  <circle class="pt-prim" cx="66.440714" cy="218.785159" r="5.0"/>
+  <circle class="pt-prim" cx="68.963484" cy="225.507056" r="5.0"/>
+  <circle class="pt-prim" cx="75.191016" cy="238.438659" r="5.0"/>
+  <circle class="pt-prim" cx="78.873485" cy="244.602074" r="5.0"/>
+  <circle class="pt-prim" cx="87.309965" cy="256.213892" r="5.0"/>
+  <circle class="pt-prim" cx="102.408048" cy="271.539549" r="5.0"/>
+  <circle class="pt-prim" cx="108.021373" cy="276.016026" r="5.0"/>
+  <circle class="pt-prim" cx="126.322422" cy="287.325289" r="5.0"/>
+  <circle class="pt-prim" cx="139.520402" cy="292.966376" r="5.0"/>
+  <circle class="pt-prim" cx="146.348713" cy="295.185029" r="5.0"/>
+  <circle class="pt-prim" cx="160.341851" cy="298.378871" r="5.0"/>
+  <circle class="pt-prim" cx="181.795129" cy="299.986572" r="5.0"/>
+  <circle class="pt-prim" cx="203.190710" cy="297.737806" r="5.0"/>
+  <circle class="pt-prim" cx="210.190412" cy="296.140170" r="5.0"/>
+  <circle class="pt-prim" cx="230.442867" cy="288.883043" r="5.0"/>
+  <circle class="pt-prim" cx="243.082052" cy="282.081608" r="5.0"/>
+  <circle class="pt-prim" cx="249.074048" cy="278.126326" r="5.0"/>
+  <circle class="pt-prim" cx="265.485132" cy="264.215748" r="5.0"/>
+  <circle class="pt-prim" cx="274.928524" cy="253.406916" r="5.0"/>
+  <circle class="pt-prim" cx="286.510295" cy="235.277094" r="5.0"/>
+  <circle class="pt-prim" cx="296.578805" cy="208.449645" r="5.0"/>
+  <circle class="pt-prim" cx="299.141631" cy="194.327307" r="5.0"/>
+  <circle class="pt-prim" cx="299.785216" cy="187.176498" r="5.0"/>
+</svg>

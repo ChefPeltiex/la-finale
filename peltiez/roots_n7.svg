@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="220" height="220">
+  <title>Racines 7-i�mes de l'unit�</title>
+  <desc>Cercle unitaire : racines primitives (k=1..6) vs z=1 (non primitive parmi les 7-i�mes).</desc>
+  <rect width="100%" height="100%" fill="#fafafa"/>
+  <!-- Unit circle, center (110,110), R=95; math angle theta from +x, screen y down -->
+  <circle cx="110" cy="110" r="95" fill="none" stroke="#333" stroke-width="1.5"/>
+  <line x1="110" y1="110" x2="205" y2="110" stroke="#ccc" stroke-width="1"/>
+  <line x1="110" y1="110" x2="110" y2="15" stroke="#ccc" stroke-width="1"/>
+  <!-- k=0: z=1 non-primitive among 7th roots -->
+  <circle cx="205" cy="110" r="6" fill="#94a3b8" stroke="#334155" stroke-width="1"/>
+  <!-- k=1..6: all primitive for n=7 (angles 2*pi*k/7) -->
+  <circle cx="169.2" cy="35.7" r="6" fill="#2563eb" stroke="#1e3a8a" stroke-width="1"/>
+  <circle cx="88.9" cy="17.4" r="6" fill="#2563eb" stroke="#1e3a8a" stroke-width="1"/>
+  <circle cx="24.4" cy="68.8" r="6" fill="#2563eb" stroke="#1e3a8a" stroke-width="1"/>
+  <circle cx="24.4" cy="151.2" r="6" fill="#2563eb" stroke="#1e3a8a" stroke-width="1"/>
+  <circle cx="88.9" cy="202.6" r="6" fill="#2563eb" stroke="#1e3a8a" stroke-width="1"/>
+  <circle cx="169.2" cy="184.3" r="6" fill="#2563eb" stroke="#1e3a8a" stroke-width="1"/>
+  <text x="110" y="14" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#334155">n = 7</text>
+  <rect x="8" y="188" width="204" height="26" fill="#ffffff" stroke="#e2e8f0" rx="4"/>
+  <circle cx="22" cy="201" r="5" fill="#2563eb" stroke="#1e3a8a"/>
+  <text x="32" y="205" font-family="system-ui,sans-serif" font-size="10" fill="#334155">Racines primitives (�(7)=6)</text>
+  <circle cx="150" cy="201" r="5" fill="#94a3b8" stroke="#334155"/>
+  <text x="160" y="205" font-family="system-ui,sans-serif" font-size="10" fill="#334155">z = 1 (ordre 1)</text>
+</svg>

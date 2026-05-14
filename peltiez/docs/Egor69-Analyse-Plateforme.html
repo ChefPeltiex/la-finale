@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Egor69 — Analyse de plateforme (A à Z)</title>
+  <style>
+    :root {
+      --ink: #0f172a;
+      --muted: #475569;
+      --line: #e2e8f0;
+      --accent: #047857;
+      --bg: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
+      max-width: 48rem;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+      font-size: 11pt;
+    }
+    h1 {
+      font-size: 1.65rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.35rem;
+      color: #022c22;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent);
+    }
+    h2 {
+      font-size: 1.15rem;
+      margin: 2rem 0 0.75rem;
+      color: #064e3b;
+      page-break-after: avoid;
+    }
+    h3 {
+      font-size: 1rem;
+      margin: 1.25rem 0 0.5rem;
+      color: var(--ink);
+      page-break-after: avoid;
+    }
+    p { margin: 0.5rem 0 0.75rem; }
+    ul { margin: 0.35rem 0 0.85rem; padding-left: 1.25rem; }
+    li { margin: 0.25rem 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.75rem 0 1rem;
+      font-size: 0.95rem;
+      page-break-inside: avoid;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 0.45rem 0.55rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #f0fdf4; font-weight: 600; }
+    .note {
+      background: #f8fafc;
+      border-left: 4px solid var(--accent);
+      padding: 0.75rem 1rem;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    .footer {
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    @media print {
+      body { padding: 1.2cm; max-width: none; }
+      h2 { page-break-before: auto; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Egor69 — Analyse de plateforme (A à Z)</h1>
+  <p class="meta">
+    Document généré pour le dépôt <strong>peltiez</strong> · Domaine canonique&nbsp;: <strong>https://egor69.ca</strong><br />
+    Portée&nbsp;: produit, architecture, données, monétisation, risques et pistes de pérennité.
+  </p>
+
+  <h2>1. Synthèse exécutive</h2>
+  <p>
+    <strong>Egor69</strong> est une application web monopage (React&nbsp;18, Vite&nbsp;6) à surface fonctionnelle très large&nbsp;:
+    marketplace circulaire, atlas et fiches vivantes, encyclopédie biblique (carte, graphe, scènes&nbsp;3D), monde&nbsp;3D (Verse),
+    nombreux hubs thématiques, dashboards «&nbsp;radar&nbsp;», pricing Stripe, pages légales et de transparence, personnalisation
+    «&nbsp;mon univers&nbsp;», PWA (service worker). Un noyau API Express (<strong>sovereign core</strong>) concentre Stripe,
+    l’Atlas côté serveur et des métriques agrégées.
+  </p>
+  <p>
+    Une partie des données «&nbsp;métier&nbsp;» côté navigateur repose encore sur un <strong>client local</strong> (localStorage,
+    préfixes <code>igor:</code>) — utile pour démo et prototypes — distinct des flux financiers et Atlas réellement câblés sur le serveur.
+  </p>
+
+  <h2>2. Identité et promesse publique</h2>
+  <ul>
+    <li><strong>Site canonique</strong> et SEO centralisés dans <code>src/lib/site.js</code> (<code>SITE_ORIGIN</code>, <code>SITE_TAGLINE</code>, <code>SUPPORT_EMAIL</code>).</li>
+    <li><strong>Éthos</strong> (<code>WORLD_ETHOS</code>)&nbsp;: souveraineté, transparence, pas de secrets dans le bundle, HTTPS en production, cadre commun pour tous les utilisateurs.</li>
+    <li><strong>Porte d’accueil</strong> et <strong>décompte de lancement</strong> pilotés par <code>experienceFlags.js</code> (dates symboliques documentées dans le code).</li>
+  </ul>
+
+  <h2>3. Architecture technique</h2>
+  <table>
+    <thead>
+      <tr><th>Couche</th><th>Rôle principal</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Front (Vite + React)</td>
+        <td>Router volumineux (~128 routes dans <code>App.jsx</code>), lazy loading des pages, providers (thème, auth «&nbsp;souverain&nbsp;» minimal, TanStack Query), <code>Layout</code> avec sidebar et navigation filtrée (<code>universePreferences</code>).</td>
+      </tr>
+      <tr>
+        <td>Build & qualité</td>
+        <td><code>npm run verify</code> = ESLint + <code>tsc</code> + build Vite ; dédup React ; chunk <code>react-vendor</code> pour limiter les doubles instances de React en production.</td>
+      </tr>
+      <tr>
+        <td>API locale</td>
+        <td><code>server/index.js</code> lit <code>.env.server</code>, monte <code>createSovereignApp</code> sur le port <strong>8787</strong> ; en dev, Vite proxifie <code>/api</code> vers ce port.</td>
+      </tr>
+      <tr>
+        <td>PWA</td>
+        <td><code>public/sw.js</code> — stratégie de cache versionnée ; les assets <code>/assets/</code> et fichiers <code>.js</code> ne doivent pas recevoir de fallback HTML (risque historique de corruption d’exécution).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>4. Données côté client (prototype)</h2>
+  <p>
+    Le module <code>src/api/igorClient.js</code> (réexporté comme <code>base44</code>) fournit des entités (annonces, «&nbsp;consciousness director&nbsp;», etc.) stockées en <strong>localStorage</strong>, avec seeds minimales pour les écrans courants.
+    Cela permet une démonstration riche sans backend métier complet sur chaque route.
+  </p>
+  <div class="note">
+    <strong>Implication produit</strong>&nbsp;: distinguer clairement pour les utilisateurs et partenaires ce qui est synchronisé serveur
+    (Stripe, Atlas, CRM) et ce qui est local / démo — argument clé pour la confiance et la monétisation B2B.
+  </div>
+
+  <h2>5. API souveraine (Express)</h2>
+  <p>Fichier pivot&nbsp;: <code>server/sovereignApp.js</code>. Exemples de responsabilités&nbsp;:</p>
+  <ul>
+    <li><strong>Santé</strong>&nbsp;: <code>GET /api/health</code></li>
+    <li><strong>Atlas</strong>&nbsp;: compteur fiches vivantes, aperçu, fiche par <code>scanId</code>, conversion batch (secret optionnel <code>IGOR_ATLAS_BATCH_SECRET</code>)</li>
+    <li><strong>Stripe</strong>&nbsp;: sessions checkout, payment intents, webhooks, agrégats d’abonnements actifs</li>
+    <li><strong>CRM</strong>&nbsp;: capture de leads validée (schémas Zod)</li>
+    <li><strong>Sécurité</strong>&nbsp;: Helmet (sans CSP sur l’API JSON), CORS sur liste d’origines, rate limiting par famille de routes, corps JSON limités</li>
+  </ul>
+
+  <h2>6. Parcours utilisateur (aperçu)</h2>
+  <ul>
+    <li><strong>Accueil</strong>&nbsp;: mur radar, planète&nbsp;3D (lazy), sections valeur, SEO (<code>SEOMeta</code>), notifications de proximité / compteur Atlas.</li>
+    <li><strong>Hub Soutien</strong>&nbsp;: route <code>/soutien</code> — regroupe connaissance (Atlas, pricing), communauté (abonnement, contact), territoires (fondations, contact structuré).</li>
+    <li><strong>Monétisation</strong>&nbsp;: <code>/pricing</code> (passes Stripe documentées), <code>/abonnement</code> (autre palier), emails support.</li>
+    <li><strong>Connaissance immersive</strong>&nbsp;: Atlas, Bible (multi-vues), Genome, Sentinelle, Authenticity, etc.</li>
+    <li><strong>Loisirs / immersion</strong>&nbsp;: Verse&nbsp;3D, arène virtuelle, nombreux hubs (nature, spiritualité, jeu…).</li>
+  </ul>
+
+  <h2>7. Observabilité et erreurs</h2>
+  <ul>
+    <li><strong>Sentry</strong> (optionnel) via <code>VITE_SENTRY_DSN</code> — import dynamique pour ne pas alourdir le dev.</li>
+    <li><strong>ErrorBoundary</strong> avec message utilisateur en français.</li>
+    <li>Les libellés <strong>AggregateError</strong> vus dans des outils tiers (ex. Sentry, dépendances) ne proviennent en général pas du code applicatif <code>src/</code> — souvent agrégation d’erreurs liées ou recherche dans <code>node_modules</code>.</li>
+  </ul>
+
+  <h2>8. Stratégie de revenus (rappel)</h2>
+  <h3>Freemium de la connaissance</h3>
+  <p>Base gratuite (lecture / socle) ; passes et options avancées (radar, profondeur, packs produit) alignés sur Stripe — frontière à exprimer sans ambiguïté.</p>
+  <h3>Micro-contributions & gouvernance</h3>
+  <p>Abonnements, badges, soutien récurrent ; transparence sur l’usage des fonds renforce la crédibilité.</p>
+  <h3>Services B2B / B2G</h3>
+  <p>Tableaux de bord territoriaux, ateliers, exports — à traiter comme une offre contractuelle (DPA, SLA), distincte du parcours grand public.</p>
+
+  <h2>9. Points forts pour la pérennité</h2>
+  <ol>
+    <li>Séparation nette entre <strong>démo locale</strong> et <strong>noyau payant / Atlas serveur</strong>.</li>
+    <li>Bonnes pratiques API déjà en place (CORS, rate limit, validation, pas de secrets front).</li>
+    <li>Pipeline <code>verify</code> reproductible avant déploiement.</li>
+    <li>Identité de marque et SEO centralisés.</li>
+  </ol>
+
+  <h2>10. Risques et recommandations pragmatiques</h2>
+  <ul>
+    <li><strong>Double vérité données</strong>&nbsp;: documenter ce qui est local vs serveur ; réduire la surprise pour les payeurs.</li>
+    <li><strong>Surface produit</strong>&nbsp;: prioriser tests, accessibilité et performance sur les parcours «&nbsp;jour J&nbsp;» (21&nbsp;mai) avant d’étendre.</li>
+    <li><strong>Documentation déploiement</strong>&nbsp;: aligner les exemples d’URL (README serveur, variables d’environnement) sur le domaine canonique actuel.</li>
+    <li><strong>Narration vs conformité</strong>&nbsp;: isoler les écrans «&nbsp;ludiques / cosmiques&nbsp;» des offres institutionnelles sobres.</li>
+  </ul>
+
+  <h2>11. Glossaire rapide</h2>
+  <table>
+    <thead><tr><th>Terme</th><th>Sens dans ce dépôt</th></tr></thead>
+    <tbody>
+      <tr><td>Sovereign core</td><td>API Express Stripe + Atlas + CRM minimal</td></tr>
+      <tr><td>igorClient / base44</td><td>Couche entités locale (localStorage), nom historique conservé</td></tr>
+      <tr><td>Fiches vivantes</td><td>Contenus Atlas alimentés par scans / conversion batch</td></tr>
+      <tr><td>experienceFlags</td><td>Interrupteurs produit (porte d’accueil, décompte, Gros Câlin, etc.)</td></tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    Document interne — Egor69 / peltiez. Source&nbsp;: <code>docs/Egor69-Analyse-Plateforme.html</code>.
+    Pour régénérer le PDF&nbsp;: ouvrir ce HTML dans Chrome ou Edge puis
+    <strong>Fichier → Imprimer → Enregistrer au format PDF</strong> (ou ligne de commande headless
+    <code>--print-to-pdf</code> pointant vers l’URL <code>file:///</code> du fichier HTML).
+  </div>
+
+</body>
+</html>

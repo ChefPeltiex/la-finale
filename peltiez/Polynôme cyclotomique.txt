@@ -1,0 +1,160 @@
+Polynômes cyclotomiques — article de référence
+==============================================
+
+Introduction
+------------
+
+Dans tout ce texte, **φ(n)** désigne exclusivement la **fonction indicatrice
+d'Euler** (totient) : le nombre d'entiers de {1,…,n} premiers avec n ; elle
+intervient notamment comme **degré** du n-ième polynôme cyclotomique. Ce
+**φ(n)** n'a **rien à voir** avec la lettre **φ** du **nombre d'or**
+\( \varphi_{\mathrm{or}} = (1 + \sqrt{5})/2 \approx 1{,}618\ldots \) utilisé en géométrie et en design (dont le dépôt
+CirculAI) — il s'agit d'une **homonymie de notation** qu'il vaut mieux
+garder à l'esprit dès l'abord.
+
+Pour tout entier \( n \ge 1 \), le **n-ième polynôme cyclotomique** \( \Phi_n(X) \) est le
+polynôme unitaire à coefficients entiers dont les racines complexes sont
+exactement les **racines primitives n-ièmes de l'unité**, c'est-à-dire les
+\( z \in \mathbb{C} \) tels que \( z^n = 1 \) et que \( n \) soit le plus petit entier positif pour
+lequel \( z^n = 1 \) (l'ordre multiplicatif de \( z \) est \( n \)).
+
+Sommaire
+--------
+
+1. Définition formelle (produit sur les racines primitives)
+2. Degré φ(n) et coefficients dans ℤ[X]
+3. Formule produit de Möbius
+4. Identité de factorisation \( X^m - 1 = \prod_{d\mid m} \Phi_d(X) \)
+5. Factorisation sur \( \mathbb{F}_p \) (esquisse)
+6. Irréductibilité sur \( \mathbb{Q} \) — idée de preuve et références
+7. Exemples \( \Phi_1 \) à \( \Phi_6 \) ; outils et figures
+
+Puis : norme ISO/IEC 7810 (carte bancaire vs « nombre d'or ») ; algorithmes ;
+checklist éditoriale ; **licence**.
+
+1. Définition formelle (produit sur les racines primitives)
+-----------------------------------------------------------
+
+Soit \( P_n \) l'ensemble des entiers \( k \) avec \( 1 \le k \le n \) et \( \gcd(k,n) = 1 \). Alors
+
+  \( \displaystyle \Phi_n(X) = \prod_{k \in P_n} \bigl( X - \exp(2\pi i k/n) \bigr) \),
+
+produit sur les racines primitives n-ièmes dans \( \mathbb{C} \) (\( i \) désigne l'unité
+imaginaire).
+
+2. Degré φ(n) et coefficients dans ℤ[X]
+---------------------------------------
+
+Le degré de \( \Phi_n \) est **\( |P_n| = \varphi(n) \)** (totient d'Euler). On démontre que
+\( \Phi_n \in \mathbb{Z}[X] \) (polynôme unitaire à coefficients entiers) ; il est **irréductible
+sur \( \mathbb{Q} \)** (voir §6).
+
+3. Formule produit de Möbius
+-----------------------------
+
+Pour tout \( n \ge 1 \),
+
+  \( \displaystyle \Phi_n(X) = \prod_{d\mid n} ( X^d - 1 )^{ \mu(n/d) } \),
+
+où le produit porte sur les diviseurs positifs \( d \) de \( n \) et **μ** est la
+fonction de Möbius arithmétique. Cette écriture revient à **inverser la
+formule de Möbius** sur les diviseurs de \( n \) à partir de la relation
+\( X^n - 1 = \prod_{d\mid n} \Phi_d(X) \).
+
+4. Identité de factorisation \( X^m - 1 = \prod_{d\mid m} \Phi_d(X) \)
+------------------------------------------------------
+
+Pour tout entier \( m \ge 1 \),
+
+  \( \displaystyle X^m - 1 = \prod_{d\mid m} \Phi_d(X) \),
+
+produit sur les diviseurs \( d \) de \( m \) : décomposition complète de \( X^m - 1 \) en
+facteurs cyclotomiques sur \( \mathbb{Q} \).
+
+5. Factorisation sur \( \mathbb{F}_p \) (esquisse)
+------------------------------------
+
+Soit \( p \) un premier ne divisant pas \( n \). Dans une clôture algébrique de \( \mathbb{F}_p \),
+les racines de \( \Phi_n \) sont les éléments d'ordre exactement \( n \) dans le groupe
+multiplicatif ; le Frobenius \( x \mapsto x^p \) agit par permutation de ces racines.
+Les facteurs irréductibles de \( \Phi_n \) sur \( \mathbb{F}_p \) correspondent aux orbites sous ce
+Frobenius : chaque facteur irréductible a le même degré \( d \), égal à l'ordre de
+\( p \) modulo \( n \) dans \( (\mathbb{Z}/n\mathbb{Z})^\times \) (le plus petit \( d > 0 \) tel que
+\( p^d \equiv 1 \pmod{n} \)).
+Le nombre de facteurs irréductibles de degré \( d \) est alors \( \varphi(n) / d \).
+
+Exemple (\( n = 7 \), \( p = 2 \)) : \( 2^3 = 8 \equiv 1 \pmod{7} \), donc l'ordre de 2 modulo 7
+est 3. Ainsi \( \Phi_7 \) se décompose sur \( \mathbb{F}_2 \) en deux polynômes irréductibles de
+degré 3 (car \( \varphi(7) = 6 = 2 \times 3 \)), alors que sur \( \mathbb{Q} \) il reste irréductible de
+degré 6.
+
+6. Irréductibilité sur \( \mathbb{Q} \) — idée de preuve et références
+--------------------------------------------------------
+
+Théorème : pour tout \( n \ge 1 \), \( \Phi_n \) est **irréductible sur \( \mathbb{Q} \)**. Les preuves
+classiques passent par l'action de \( \mathrm{Gal}(\mathbb{Q}(\zeta_n)/\mathbb{Q}) \) sur les racines primitives
+\( \zeta_n^k \) (\( \gcd(k,n) = 1 \)), ou par des arguments de réduction modulo \( p \) et de
+polynômes minimaux. Pour un exposé détaillé : L. C. Washington,
+*Introduction to Cyclotomic Fields* ; S. Lang, *Algebra* (chapitres sur les
+corps cyclotomiques et polynômes cyclotomiques).
+
+7. Exemples \( \Phi_1 \) à \( \Phi_6 \) ; outils et figures
+------------------------------------------
+
+  \( \Phi_1(X) = X - 1 \)
+  \( \Phi_2(X) = X + 1 \)
+  \( \Phi_3(X) = X^2 + X + 1 \)
+  \( \Phi_4(X) = X^2 + 1 \)
+  \( \Phi_5(X) = X^4 + X^3 + X^2 + X + 1 \)
+  \( \Phi_6(X) = X^2 - X + 1 \)
+
+Pour calculer ou vérifier d'autres \( \Phi_n(X) \) avec un outil symbolique, voir le
+script Python (SymPy) : `scripts/compute_cyclotomic.py` (copie identique `compute_cyclotomic.py` à la racine) ; option `--verify` pour recouper le produit de Möbius avec `cyclotomic_poly`.
+
+Références visuelles (racines n-ièmes sur le cercle, indices \( k=0,\ldots,n-1 \) ; primitives si \( \gcd(k,n)=1 \)) :
+
+  `docs/assets/roots_n7.svg`, `docs/assets/roots_n12.svg`, … générés par `generate_roots_svg.py` ou `scripts/generate_roots_svg.py` (défaut `docs/assets/roots_n{n}.svg`).
+  Anciennes figures : `docs/assets/cyclotomic-roots-n7.svg`, `docs/assets/cyclotomic-roots-n12.svg`.
+
+Section ISO/IEC 7810 — carte de crédit et « nombre d'or »
+---------------------------------------------------------
+
+La norme ISO/IEC 7810 fixe pour les cartes ID-1 (cartes bancaires usuelles)
+des dimensions 85,60 mm sur 53,98 mm. Le rapport longueur / largeur vaut
+
+  85,60 / 53,98 ≈ 1,586…
+
+Ce rapport est **proche mais distinct** du nombre d'or (~1,618). L'idée
+répandue d'une « carte au nombre d'or » relève le plus souvent d'une
+**confusion de proportions** ou d'un **mythe de design** : le mathématicien
+Nikos Salingaros, entre autres, a souligné combien il est facile d'attribuer
+à φ des mesures empiriques qui n'en sont pas — au point que des ratios
+voisins (comme celui de la carte bancaire) sont parfois annoncés à tort comme
+« dorés ». En pratique, la norme vise l'interopérabilité mécanique et la
+lisibilité, pas une proportion mythique.
+
+Algorithmes (rappel)
+--------------------
+
+  compute_cyclotomic.py ; scripts/compute_cyclotomic.py
+  generate_roots_svg.py ; scripts/generate_roots_svg.py
+  docs/assets/roots_n7.svg, docs/assets/roots_n12.svg, …
+
+Checklist éditoriale
+--------------------
+
+- Distinguer **φ(n) Euler** et **φ nombre d'or** dès l'introduction.
+- Vérifier les indices des racines primitives dans les schémas (pgcd(k,n)=1).
+- Ne pas confondre rapport ISO 7810 (~1,586) et φ (~1,618).
+- Citer les formules de Möbius et X^m − 1 de façon cohérente avec les notations du texte.
+- Renvoyer vers `docs/Nombre d'or.txt` pour le contexte design du φ doré.
+
+Licence
+-------
+
+Ce texte (sections 1 à 7 et annexes) est mis à disposition sous **Creative Commons
+Attribution 4.0 International (CC BY 4.0)** : vous pouvez partager et adapter le
+matériel à condition de conserver une mention de paternité appropriée. Les
+scripts et figures du dépôt restent soumis à la licence du projet si elle est
+différente ; en l'absence de fichier `LICENSE` dédié, considérer cette note comme
+licence **CC BY 4.0** pour le seul contenu rédactionnel de ce fichier.

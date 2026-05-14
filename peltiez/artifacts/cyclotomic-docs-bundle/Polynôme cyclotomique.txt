@@ -1,0 +1,116 @@
+Polynômes cyclotomiques — note de référence
+==========================================
+
+Introduction
+------------
+
+Pour tout entier n >= 1, le **n-ième polynôme cyclotomique** Phi_n(X) est le
+polynôme unitaire à coefficients entiers dont les racines complexes sont
+exactement les **racines primitives n-ièmes de l'unité**, c'est-à-dire les
+nombres complexes z tels que z^n = 1 et que n soit le plus petit entier
+positif vérifiant cette égalité (l'ordre multiplicatif de z est n).
+
+Son degré est **phi(n)**, où **phi** désigne ici la **fonction indicatrice
+d'Euler** (totient) : le nombre d'entiers k dans {1,...,n} premiers avec n.
+On évite soigneusement la confusion avec la lettre **phi** utilisée pour le
+**nombre d'or** en géométrie et en design, souvent noté
+
+  phi = (1 + sqrt(5)) / 2 ~ 1,618...
+
+qui n'a aucun lien direct avec phi(n) d'Euler.
+
+Définition formelle
+-------------------
+
+Soit P_n l'ensemble des entiers k avec 1 <= k <= n et pgcd(k,n) = 1. Alors
+
+  Phi_n(X) = prod_{k dans P_n} ( X - exp(2*i*pi*k/n) ),
+
+produit étendu aux racines primitives n-ièmes dans C (i designe l'unité
+imaginaire). Les coefficients sont entiers ; Phi_n est irréductible sur Q.
+
+Formule produit de Möbius
+-------------------------
+
+Pour tout n >= 1,
+
+  Phi_n(X) = prod_{d|n} ( X^d - 1 )^( mu(n/d) ),
+
+où le produit porte sur les diviseurs positifs d de n et **mu** est la
+fonction de Möbius arithmétique. Cette écriture revient à **inverser la
+formule de Möbius** appliquée aux diviseurs de n à partir de la relation
+X^n - 1 = prod_{d|n} Phi_d(X).
+
+Identité de factorisation des X^m - 1
+-------------------------------------
+
+Pour tout entier m >= 1,
+
+  X^m - 1 = prod_{d|m} Phi_d(X),
+
+produit sur les diviseurs d de m. C'est la décomposition complète de X^m - 1
+en facteurs cyclotomiques sur Q.
+
+Factorisation sur F_p (esquisse)
+-------------------------------
+
+Soit p un premier ne divisant pas n. Dans une clôture algébrique de F_p,
+les racines de Phi_n sont les éléments d'ordre exactement n dans le groupe
+multiplicatif ; le Frobenius x |-> x^p agit par permutation de ces racines.
+Les facteurs irréductibles de Phi_n sur F_p correspondent aux orbites sous ce
+Frobenius : chaque facteur irréductible a le même degré d, égal à l'ordre de
+p modulo n dans le groupe multiplicatif (Z/nZ)^* (le plus petit d > 0 tel que
+p^d = 1 mod n). Le nombre de facteurs irréductibles de degré d est alors
+phi(n)/d.
+
+Exemple numérique (en mots) : pour n = 7 et p = 2, on a 2^3 = 8 = 1 (mod 7),
+donc l'ordre de 2 modulo 7 est 3. Ainsi Phi_7 se décompose sur F_2 en deux
+polynômes irréductibles de degré 3 (car phi(7) = 6 = 2 * 3), alors que sur Q
+il reste irréductible de degré 6.
+
+Section ISO/IEC 7810 — carte de crédit et « nombre d'or »
+---------------------------------------------------------
+
+La norme ISO/IEC 7810 fixe pour les cartes ID-1 (cartes bancaires usuelles)
+des dimensions 85,60 mm sur 53,98 mm. Le rapport longueur / largeur vaut
+
+  85,60 / 53,98 ~ 1,586...
+
+Ce rapport est **proche mais distinct** du nombre d'or (~1,618). L'idée
+répandue d'une « carte au nombre d'or » relève le plus souvent d'une
+**confusion de proportions** ou d'un **mythe de design** : le mathématicien
+Nikos Salingaros, entre autres, a souligné combien il est facile d'attribuer
+à phi des mesures empiriques qui n'en sont pas — au point que des ratios
+voisins (comme celui de la carte bancaire) sont parfois annoncés à tort comme
+« dorés ». En pratique, la norme vise l'interopérabilité mécanique et la
+lisibilité, pas une proportion mythique.
+
+Algorithmes
+-----------
+
+Pour calculer ou vérifier des Phi_n(X) avec un outil symbolique, voir le
+script Python (sympy). **Fichier canonique (monorepo)** :
+
+  scripts/compute_cyclotomic.py
+
+Une copie miroir à la racine permet aussi :
+
+  compute_cyclotomic.py
+
+Références visuelles (racines sur le cercle unité), fichiers à la racine :
+
+  roots_n7.svg
+  roots_n12.svg
+
+Variantes historiques sous docs/assets/ : cyclotomic-roots-n7.svg,
+cyclotomic-roots-n12.svg.
+
+Licence et sources
+------------------
+
+- **Texte** : note de référence rédigée pour le dépôt PELTIEZ ; les énoncés
+  mathématiques standard (définition de Phi_n, formule de Möbius, factorisation
+  sur les corps finis) relèvent du domaine public scientifique.
+- **Implémentation** : `scripts/compute_cyclotomic.py` utilise la bibliothèque
+  [SymPy](https://www.sympy.org/) (licence BSD).
+- **Figures SVG** : schémas originaux (cercle unité, marqueurs de racines).

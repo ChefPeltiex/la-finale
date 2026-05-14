@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Prototype φ — Landing</title>
+<link rel="stylesheet" href="/design-tokens.css" />
+<style>
+  :root{
+    --card-w: 320px;
+    --muted: #2b2b2b;
+    --glass: rgba(255,255,255,0.04);
+  }
+  html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+  body{background:linear-gradient(180deg,#071021 0%, var(--bg) 100%);color:#e6eef6;display:flex;align-items:center;justify-content:center;padding:2rem;}
+  .wrap{max-width:1200px;width:100%;display:grid;grid-template-columns:1fr minmax(0, calc(100% / (var(--phi) * var(--phi))));gap:var(--gutter);align-items:center;}
+  .hero{
+    padding:2rem;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border-radius:14px;backdrop-filter: blur(6px);box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+  }
+  h1{font-size:var(--scale-2);margin:0 0 0.5rem 0;line-height:1.02;color:var(--accent);}
+  p.lead{font-size:var(--scale-1);margin:0 0 1.25rem 0;color:#cfe6ff;}
+  .cta{display:inline-flex;gap:0.75rem;align-items:center}
+  .btn{
+    background:var(--accent);color:#071021;padding:0.7rem 1.1rem;border-radius:10px;font-weight:600;border:none;cursor:pointer;
+    box-shadow: 0 6px 18px rgba(255,127,80,0.12);
+  }
+  .muted{color:#9fb6d6;font-size:0.95rem}
+  /* Card column */
+  .side{display:flex;flex-direction:column;gap:var(--gutter);}
+  .card{background:var(--glass);padding:1rem;border-radius:12px;border:1px solid rgba(255,255,255,0.03);}
+  .metric{font-size:1.25rem;font-weight:700;color:var(--accent)}
+  .small{font-size:0.9rem;color:#bcd7f0}
+  /* SVG container */
+  #spiral-wrap{width:100%;height:420px;display:flex;align-items:center;justify-content:center}
+  svg{max-width:100%;height:auto;display:block}
+  /* Responsive */
+  @media (max-width:980px){
+    .wrap{grid-template-columns:1fr; padding:0}
+    #spiral-wrap{height:320px}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">CirculAI — Architectures en proportion φ</h1>
+      <p class="lead">Passe de l’approximation à la structure : design, optimisation et génération procédurale guidés par le nombre d’or.</p>
+      <div class="cta">
+        <button class="btn" id="launch">Tester le prototype</button>
+        <div class="muted">Prototype responsive • A/B ready</div>
+      </div>
+      <div id="spiral-wrap" aria-hidden="false" style="margin-top:1.25rem">
+        <!-- SVG spirale générée par JS -->
+        <svg id="spiral" viewBox="-300 -300 600 600" role="img" aria-label="Spirale dorée"></svg>
+      </div>
+    </section>
+    <aside class="side" aria-label="Indicateurs du prototype">
+      <div class="card">
+        <div class="small">KPI cible</div>
+        <div class="metric" id="kpi-ctr">CTR +12%</div>
+        <div class="small">Prototype appliqué à landing + dashboard</div>
+      </div>
+      <div class="card">
+        <div class="small">Optimisation</div>
+        <div class="small">Golden‑section search intégré pour tuning d’un paramètre</div>
+      </div>
+      <div class="card">
+        <div class="small">Design system</div>
+        <div class="small">Variables centrales : --phi, --base, --gutter</div>
+      </div>
+    </aside>
+  </div>
+<script>
+/* Génération de la spirale dorée (r(θ)=r0·φ^{2θ/π}) en SVG */
+(function(){
+  const svg = document.getElementById('spiral');
+  const phi = (1 + Math.sqrt(5)) / 2;
+  const k = 2 * Math.log(phi) / Math.PI; // r = r0 * e^{kθ}
+  const r0 = 2;
+  const steps = 2500;
+  const stepTheta = 0.012; // densité
+  let path = '';
+  for (let i = 0; i < steps; i++){
+    const theta = i * stepTheta;
+    const r = r0 * Math.exp(k * theta);
+    const x = r * Math.cos(theta);
+    const y = r * Math.sin(theta);
+    if (i === 0) path += `M ${x} ${y} `;
+    else path += `L ${x} ${y} `;
+    // stop if out of viewbox
+    if (Math.abs(x) > 290 || Math.abs(y) > 290) break;
+  }
+  const p = document.createElementNS('http://www.w3.org/2000/svg','path');
+  p.setAttribute('d', path);
+  p.setAttribute('stroke', '#ffb07a');
+  p.setAttribute('fill', 'none');
+  p.setAttribute('stroke-width', 1.6);
+  p.setAttribute('stroke-linecap','round');
+  svg.appendChild(p);
+  // subtle animation: stroke-dashoffset
+  const len = p.getTotalLength();
+  p.style.strokeDasharray = len;
+  p.style.strokeDashoffset = len;
+  p.style.transition = 'stroke-dashoffset 2.2s cubic-bezier(.2,.9,.2,1)';
+  requestAnimationFrame(()=> p.style.strokeDashoffset = '0');
+  // CTA hook (demo)
+  document.getElementById('launch').addEventListener('click', ()=> {
+    alert('Prototype φ lancé — intégrer dans ton repo et A/B tester la landing.');
+  });
+})();
+</script>
+</body>
+</html>

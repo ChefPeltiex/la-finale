@@ -1,0 +1,10 @@
+:root{
+  --phi: 1.6180339887;
+  --base: 16px;
+  --scale-0: calc(var(--base) * 1);
+  --scale-1: calc(var(--base) * var(--phi));
+  --scale-2: calc(var(--base) * var(--phi) * var(--phi));
+  --gutter: calc(8px * var(--phi));
+  --accent: #ff7f50;
+  --bg: #0f1720;
+}

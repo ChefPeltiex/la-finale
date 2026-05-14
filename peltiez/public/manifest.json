@@ -1,0 +1,43 @@
+{
+  "id": "/",
+  "name": "Egor69",
+  "short_name": "Egor69",
+  "description": "Egor69 — fidèle serviteur de l'humanité pour le service de la planète et de tout l'univers entier",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "browser"],
+  "orientation": "natural",
+  "background_color": "#050a19",
+  "theme_color": "#10b981",
+  "lang": "fr-CA",
+  "dir": "ltr",
+  "categories": ["business", "lifestyle", "social"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
+

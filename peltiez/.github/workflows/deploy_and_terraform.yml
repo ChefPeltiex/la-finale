@@ -1,0 +1,96 @@
+# Canonical CI: static bundle (CirculAI φ), Lambda zip → S3, Terraform apply, S3 sync, CloudFront invalidation.
+#
+# Required GitHub secrets:
+#   AWS_ACCESS_KEY_ID
+#   AWS_SECRET_ACCESS_KEY
+#   AWS_REGION
+#   LAMBDA_S3_BUCKET       — bucket for Lambda deployment zip (same as TF_VAR_lambda_s3_bucket)
+#   STAGING_S3_BUCKET      — target bucket for static files (often equals terraform output static_bucket_name)
+#   CLOUDFRONT_ID          — distribution ID for cache invalidation (optional: omit or empty to skip)
+#   EVENT_COLLECTOR_URL    — optional; forwarded to Lambda as TF_VAR_event_collector_url
+#
+# Optional secret (custom domain + ACM in us-east-1):
+#   CLOUDFRONT_CERT_ARN    — maps to Terraform variable certificate_arn
+#
+# Optional GitHub Variables: `TF_VAR_PROJECT` (defaults to `circulai`), `TF_VAR_domain`, etc. — see `terraform/variables.tf`.
+
+name: Deploy and Terraform
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+    paths:
+      - "public/circulai-phi/**"
+      - "lambda/**"
+      - "terraform/**"
+      - "scripts/package_lambda.sh"
+      - "scripts/package_and_deploy.sh"
+      - ".github/workflows/deploy_and_terraform.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      TF_VAR_project: ${{ vars.TF_VAR_PROJECT || 'circulai' }}
+      TF_VAR_lambda_s3_bucket: ${{ secrets.LAMBDA_S3_BUCKET }}
+      TF_VAR_lambda_s3_key: ${{ github.ref_name }}/lambda.zip
+      TF_VAR_event_collector_url: ${{ secrets.EVENT_COLLECTOR_URL }}
+      TF_VAR_certificate_arn: ${{ secrets.CLOUDFRONT_CERT_ARN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Assemble static bundle from public/circulai-phi
+        run: |
+          mkdir -p dist/circulai-phi
+          cp public/circulai-phi/index.html dist/circulai-phi/
+          cp public/circulai-phi/design-tokens.css dist/circulai-phi/
+          cp public/circulai-phi/ab_experiment.js dist/circulai-phi/
+
+      - name: Package and upload Lambda (scripts/package_lambda.sh)
+        run: bash scripts/package_lambda.sh "${{ secrets.LAMBDA_S3_BUCKET }}" "${{ github.ref_name }}/lambda.zip"
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.9.8"
+          terraform_wrapper: false
+
+      - name: Terraform init
+        working-directory: terraform
+        run: terraform init -input=false
+
+      - name: Terraform apply
+        working-directory: terraform
+        run: terraform apply -input=false -auto-approve
+
+      - name: Sync static site to S3
+        env:
+          STAGING_S3_BUCKET: ${{ secrets.STAGING_S3_BUCKET }}
+        run: |
+          if [ -z "$STAGING_S3_BUCKET" ]; then
+            echo "STAGING_S3_BUCKET secret is required for static sync."
+            exit 1
+          fi
+          aws s3 sync dist/circulai-phi/ "s3://${STAGING_S3_BUCKET}/" --delete
+
+      - name: Invalidate CloudFront
+        env:
+          DIST_ID: ${{ secrets.CLOUDFRONT_ID }}
+        run: |
+          if [ -n "$DIST_ID" ]; then
+            aws cloudfront create-invalidation --distribution-id "$DIST_ID" --paths "/*"
+          else
+            echo "CLOUDFRONT_ID empty — skipping invalidation"
+          fi

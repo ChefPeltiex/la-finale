@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" width="360" height="360" role="img" aria-label="Racines 12-ièmes de l'unité">
+  <title>Racines 12-ièmes de l'unité : primitives (orange) vs autres (gris)</title>
+  <desc>12 points sur un cercle de rayon 120 centré en (180,180). Position k : (180+120cos(2πk/12), 180−120sin(2πk/12)). Primitives : indices k avec pgcd(k,12)=1.</desc>
+  <defs>
+    <style type="text/css"><![CDATA[
+      .guide { fill: none; stroke: #d5d8dc; stroke-width: 1.5; }
+      .axis { fill: none; stroke: #aeb6bf; stroke-width: 1; stroke-dasharray: 4 4; }
+      .center-dot { fill: #2c3e50; stroke: none; }
+      .pt-nonprim { fill: #7f8c8d; stroke: #566573; stroke-width: 1; }
+      .pt-prim { fill: #e67e22; stroke: #a04000; stroke-width: 1; }
+    ]]></style>
+  </defs>
+  <circle class="guide" cx="180.0" cy="180.0" r="120.0"/>
+  <line class="axis" x1="60.0" y1="180.0" x2="300.0" y2="180.0"/>
+  <line class="axis" x1="180.0" y1="60.0" x2="180.0" y2="300.0"/>
+  <circle class="center-dot" cx="180.0" cy="180.0" r="2"/>
+  <!-- racines non primitives (dessinées en premier) -->
+  <circle class="pt-nonprim" cx="300.000000" cy="180.000000" r="3.0"/>
+  <circle class="pt-nonprim" cx="240.000000" cy="76.076952" r="3.0"/>
+  <circle class="pt-nonprim" cx="180.000000" cy="60.000000" r="3.0"/>
+  <circle class="pt-nonprim" cx="120.000000" cy="76.076952" r="3.0"/>
+  <circle class="pt-nonprim" cx="60.000000" cy="180.000000" r="3.0"/>
+  <circle class="pt-nonprim" cx="120.000000" cy="283.923048" r="3.0"/>
+  <circle class="pt-nonprim" cx="180.000000" cy="300.000000" r="3.0"/>
+  <circle class="pt-nonprim" cx="240.000000" cy="283.923048" r="3.0"/>
+  <!-- racines primitives (par-dessus) -->
+  <circle class="pt-prim" cx="283.923048" cy="120.000000" r="5.0"/>
+  <circle class="pt-prim" cx="76.076952" cy="120.000000" r="5.0"/>
+  <circle class="pt-prim" cx="76.076952" cy="240.000000" r="5.0"/>
+  <circle class="pt-prim" cx="283.923048" cy="240.000000" r="5.0"/>
+</svg>

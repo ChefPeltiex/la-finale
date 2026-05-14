@@ -1,0 +1,44 @@
+# Serverless Framework — CirculAI φ prototype API (A/B assignment).
+# Déployer depuis la racine du monorepo : `npx serverless deploy --stage staging`
+# (ou `npm run deploy` dans `circulai-serverless/`).
+# Prérequis : Node 18+, AWS credentials ; optionnel : EVENT_COLLECTOR_URL, COOKIE_DOMAIN.
+# `ASSIGN_PROB_CONTROL` défaut 0,5 (50 % control / 50 % phi, aligné sur `server/ab-server.js`).
+
+service: circulai-phi
+
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  stage: ${opt:stage, 'staging'}
+  region: ${opt:region, 'eu-west-3'}
+  httpApi:
+    cors: true
+  environment:
+    EXPERIMENT_ID: circulai_phi_v1
+    EVENT_COLLECTOR_URL: ${env:EVENT_COLLECTOR_URL, ''}
+    ASSIGN_PROB_CONTROL: ${env:ASSIGN_PROB_CONTROL, '0.5'}
+
+functions:
+  ab:
+    handler: lambda/ab-lambda.handler
+    description: Assignation A/B HTTP API v2 (circulai_phi_v1)
+    memorySize: 128
+    timeout: 5
+    events:
+      - httpApi:
+          path: /
+          method: get
+      - httpApi:
+          path: /api/experiment
+          method: get
+      - httpApi:
+          path: /api/experiment/convert
+          method: post
+
+package:
+  individually: true
+  patterns:
+    - "!**"
+    - "lambda/ab-lambda.js"

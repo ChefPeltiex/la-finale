@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" width="360" height="360" role="img">
+  <title>Racines 12-ièmes : primitives k ∈ {1,5,7,11} en orange</title>
+  <desc>Douze points équidistants sur un cercle de rayon 120 centré en (180,180), positions (180+120cos(2πk/12), 180−120sin(2πk/12)). Les indices k premiers avec 12 sont colorés en orange ; les autres en gris.</desc>
+  <defs>
+    <style type="text/css"><![CDATA[
+      .guide { fill: none; stroke: #d5d8dc; stroke-width: 1.5; }
+      .axis { fill: none; stroke: #aeb6bf; stroke-width: 1; stroke-dasharray: 4 4; }
+      .pt-other { fill: #bdc3c7; stroke: #95a5a6; stroke-width: 1.5; }
+      .pt-prim { fill: #e67e22; stroke: #a04000; stroke-width: 1.5; }
+    ]]></style>
+  </defs>
+  <circle class="guide" cx="180" cy="180" r="120"/>
+  <line class="axis" x1="60" y1="180" x2="300" y2="180"/>
+  <line class="axis" x1="180" y1="60" x2="180" y2="300"/>
+  <!-- k=0 -->
+  <circle class="pt-other" cx="300" cy="180" r="9"/>
+  <!-- k=1 primitive -->
+  <circle class="pt-prim" cx="283.92" cy="120" r="9"/>
+  <circle class="pt-other" cx="240" cy="76.08" r="9"/>
+  <circle class="pt-other" cx="180" cy="60" r="9"/>
+  <circle class="pt-other" cx="120" cy="76.08" r="9"/>
+  <!-- k=5 primitive -->
+  <circle class="pt-prim" cx="76.08" cy="120" r="9"/>
+  <circle class="pt-other" cx="60" cy="180" r="9"/>
+  <!-- k=7 primitive -->
+  <circle class="pt-prim" cx="76.08" cy="240" r="9"/>
+  <circle class="pt-other" cx="120" cy="283.92" r="9"/>
+  <circle class="pt-other" cx="180" cy="300" r="9"/>
+  <circle class="pt-other" cx="240" cy="283.92" r="9"/>
+  <!-- k=11 primitive -->
+  <circle class="pt-prim" cx="283.92" cy="240" r="9"/>
+</svg>

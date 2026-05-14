@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "project": "UEAIOUY",
+  "assets": [
+    {
+      "id": "sample-asset-001",
+      "title": "Exemple — remplacer par votre glb",
+      "source": "manual",
+      "gltfUrl": "https://example.com/models/example.glb",
+      "megascanId": "",
+      "notes": "Héberger avec CORS pour cette origine ; pas de fichier binaire Epic dans ce dépôt.",
+      "createdAt": "2026-05-10T12:00:00.000Z"
+    }
+  ]
+}

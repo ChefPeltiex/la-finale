@@ -1,0 +1,17 @@
+# Deprecated — use `.github/workflows/deploy_and_terraform.yml` for push-based CI:
+# static assets from `public/circulai-phi/`, Lambda packaging + S3 upload, Terraform apply, S3 sync, CloudFront invalidation.
+#
+# This workflow is intentionally minimal so existing links to "Deploy CirculAI Phi" remain valid without duplicating deploys.
+
+name: Deploy CirculAI Phi (deprecated)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  notice:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Migration notice
+        run: |
+          echo "Use workflow: deploy_and_terraform.yml (path .github/workflows/deploy_and_terraform.yml)."

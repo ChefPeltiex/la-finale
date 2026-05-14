@@ -1,0 +1,14 @@
+=== cyclotomic-git-status ===
+Date: 2026-05-13 (generated during bundle task)
+
+- `git` was not found on PATH in the automation environment.
+- No `.git` directory at repo root (`peltiez`), so `git status` / `git diff` cannot be run here.
+
+If you initialize or clone this tree as a Git repo, re-run from the repo root:
+
+```
+git status
+git diff --stat
+```
+
+and paste or redirect the output into this file.

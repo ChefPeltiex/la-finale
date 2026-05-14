@@ -1,0 +1,1 @@
+The `analysis` scripts expect Python 3.10+; install `requests` and `boto3` for `data_ingestion.py` (HTTP and S3 pulls). Run `auto_report.py` on a local NDJSON file after ingestion; it imports lift helpers from `compute_lift.py`.

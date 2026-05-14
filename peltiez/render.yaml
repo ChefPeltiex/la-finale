@@ -1,0 +1,19 @@
+# Déploiement pré-lancement (exemple Render.com) — un seul service : build Vite + API Express + fichiers statiques.
+# 1) Créer un Web Service sur render.com, lier ce dépôt, laisser render.yaml s’appliquer OU copier build/start manuellement.
+# 2) Dans le tableau de bord Render, ajouter les secrets : STRIPE_* (si checkout actif), PUBLIC_SITE_URL, STRIPE_ALLOWED_ORIGINS (URL Render + domaine final).
+# 3) Pour une preview sans Stripe, désactiver ou ne pas appeler le checkout côté UI jusqu’à configuration.
+
+services:
+  - type: web
+    name: igor-prelaunch
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm ci && npm run build
+    startCommand: NODE_ENV=production SERVE_SPA_DIST=1 node server/index.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SERVE_SPA_DIST
+        value: "1"

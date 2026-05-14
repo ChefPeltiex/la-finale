@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" width="360" height="360" role="img" aria-label="Racines 31-ièmes de l'unité">
+  <title>Racines 31-ièmes de l'unité : primitives (orange) vs autres (gris)</title>
+  <desc>31 points sur un cercle de rayon 120 centré en (180,180). Position k : (180+120cos(2πk/31), 180−120sin(2πk/31)). Primitives : indices k avec pgcd(k,31)=1.</desc>
+  <defs>
+    <style type="text/css"><![CDATA[
+      .guide { fill: none; stroke: #d5d8dc; stroke-width: 1.5; }
+      .axis { fill: none; stroke: #aeb6bf; stroke-width: 1; stroke-dasharray: 4 4; }
+      .center-dot { fill: #2c3e50; stroke: none; }
+      .pt-nonprim { fill: #7f8c8d; stroke: #566573; stroke-width: 1; }
+      .pt-prim { fill: #e67e22; stroke: #a04000; stroke-width: 1; }
+    ]]></style>
+  </defs>
+  <circle class="guide" cx="180.0" cy="180.0" r="120.0"/>
+  <line class="axis" x1="60.0" y1="180.0" x2="300.0" y2="180.0"/>
+  <line class="axis" x1="180.0" y1="60.0" x2="180.0" y2="300.0"/>
+  <circle class="center-dot" cx="180.0" cy="180.0" r="2"/>
+  <!-- racines non primitives (dessinées en premier) -->
+  <circle class="pt-nonprim" cx="300.000000" cy="180.000000" r="2.5"/>
+  <!-- racines primitives (par-dessus) -->
+  <circle class="pt-prim" cx="297.543593" cy="155.844178" r="5.0"/>
+  <circle class="pt-prim" cx="290.274937" cy="132.677297" r="5.0"/>
+  <circle class="pt-prim" cx="278.491613" cy="111.447814" r="5.0"/>
+  <circle class="pt-prim" cx="262.676030" cy="93.024866" r="5.0"/>
+  <circle class="pt-prim" cx="243.475681" cy="78.162689" r="5.0"/>
+  <circle class="pt-prim" cx="221.676630" cy="67.469744" r="5.0"/>
+  <circle class="pt-prim" cx="198.171333" cy="61.383801" r="5.0"/>
+  <circle class="pt-prim" cx="173.922100" cy="60.154019" r="5.0"/>
+  <circle class="pt-prim" cx="149.921696" cy="63.830746" r="5.0"/>
+  <circle class="pt-prim" cx="127.152702" cy="72.263455" r="5.0"/>
+  <circle class="pt-prim" cx="106.547282" cy="85.106912" r="5.0"/>
+  <circle class="pt-prim" cx="88.949025" cy="101.835302" r="5.0"/>
+  <circle class="pt-prim" cx="75.078406" cy="121.763764" r="5.0"/>
+  <circle class="pt-prim" cx="65.503289" cy="144.076425" r="5.0"/>
+  <circle class="pt-prim" cx="60.615681" cy="167.859801" r="5.0"/>
+  <circle class="pt-prim" cx="60.615681" cy="192.140199" r="5.0"/>
+  <circle class="pt-prim" cx="65.503289" cy="215.923575" r="5.0"/>
+  <circle class="pt-prim" cx="75.078406" cy="238.236236" r="5.0"/>
+  <circle class="pt-prim" cx="88.949025" cy="258.164698" r="5.0"/>
+  <circle class="pt-prim" cx="106.547282" cy="274.893088" r="5.0"/>
+  <circle class="pt-prim" cx="127.152702" cy="287.736545" r="5.0"/>
+  <circle class="pt-prim" cx="149.921696" cy="296.169254" r="5.0"/>
+  <circle class="pt-prim" cx="173.922100" cy="299.845981" r="5.0"/>
+  <circle class="pt-prim" cx="198.171333" cy="298.616199" r="5.0"/>
+  <circle class="pt-prim" cx="221.676630" cy="292.530256" r="5.0"/>
+  <circle class="pt-prim" cx="243.475681" cy="281.837311" r="5.0"/>
+  <circle class="pt-prim" cx="262.676030" cy="266.975134" r="5.0"/>
+  <circle class="pt-prim" cx="278.491613" cy="248.552186" r="5.0"/>
+  <circle class="pt-prim" cx="290.274937" cy="227.322703" r="5.0"/>
+  <circle class="pt-prim" cx="297.543593" cy="204.155822" r="5.0"/>
+</svg>

@@ -1,0 +1,25 @@
+# PELTIEZ — chemins liés aux polynômes cyclotomiques et racines n-ièmes (relatif à la racine du dépôt)
+# Généré / maintenu pour le bundle artifacts/cyclotomic-docs-bundle.zip
+
+CYCL0_PATCH_README.md
+Polynôme cyclotomique.txt
+cyclotomic_update.patch
+compute_cyclotomic.py
+generate_roots_svg.py
+docs/Polynome-cyclotomique.txt
+docs/PR-CYCLOTOMIC-template.md
+docs/cyclotomic_analysis.ipynb
+docs/assets/cyclotomic-roots-n12.svg
+docs/assets/cyclotomic-roots-n7.svg
+docs/assets/roots_n105.svg
+docs/assets/roots_n12.svg
+docs/assets/roots_n17.svg
+docs/assets/roots_n19.svg
+docs/assets/roots_n23.svg
+docs/assets/roots_n31.svg
+docs/assets/roots_n7.svg
+scripts/_emit_cyclotomic_patch.py
+scripts/compute_cyclotomic.py
+scripts/generate_roots_svg.py
+artifacts/MANIFEST-cyclotomic.txt
+artifacts/cyclotomic-docs-bundle.zip

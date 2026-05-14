@@ -1,0 +1,50 @@
+Nombre d'or — extrait de référence (CirculAI / design φ)
+=======================================================
+
+Le nombre d'or relie en géométrie la **section dorée**, la **divine proportion** et,
+dans le plan, la **spirale logarithmique** (spirale dite « dorée » construite à
+partir de rectangles successifs inscrits dans des carrés) : trois formulations d'un
+même idéal de proportion, souvent citées ensemble dans les arts et les traités
+classiques, avant toute application numérique moderne.
+
+En termes stricts, c'est une proportion définie comme l'unique rapport a/b entre
+deux longueurs a et b telles que le rapport de la somme a + b des deux longueurs
+sur la plus grande (a) soit égal à celui de la plus grande (a) sur la plus petite
+(b). On l'appelle aussi proportion dorée — le fondement géométrique reste le même.
+
+  (a + b) / a  =  a / b  =  φ
+
+La spirale dorée utilisée en visualisation dans ce dépôt est un cas particulier
+de spirale logarithmique : en coordonnées polaires, le rayon croît de façon
+exponentielle avec l'angle, avec un pas lié à φ.
+
+Valeur numérique usuelle : φ = (1 + √5) / 2 ≈ 1,6180339887.
+
+Dans ce dépôt, φ sert de convention de design (espacements, typo) et d'outil
+d'optimisation sans dérivée (recherche par section dorée sur une dimension), sans
+prétention métaphysique au-delà de l'utilité mathématique et UX.
+
+Document : Nombre d'or.txt (ce fichier, sous `docs/`).
+
+Références code : `public/circulai-phi/`, `src/lib/goldenRatio.js`,
+`scripts/golden_search.py`, `docs/PHI-DESIGN-SYSTEM-AND-ROADMAP.md`.
+
+Remarque utile — divine proportion
+-----------------------------------
+
+La « divine proportion » désigne le même rapport φ : on l’a rencontrée en géométrie
+(section dorée), en composition visuelle (harmonie des masses), et en optimisation
+(recherche sans dérivée sur une dimension). En design produit, φ sert de repère
+pour espacements et hiérarchie typographique ; en analyse, elle structure des
+expérimentations (voir `docs/circulai-power-analysis.ipynb`) sans confondre outil
+mathématique et discours métaphysique. L’intérêt pratique reste la cohérence
+mesurable (lisibilité, convergence d’algorithmes) plutôt que l’étiquette « divine ».
+
+Lien utile — ne pas confondre avec φ(n) d'Euler
+-----------------------------------------------
+
+En théorie des nombres, **φ(n)** note la **fonction d'Euler** (totient), par
+exemple le degré des polynômes cyclotomiques Φ_n — **sans lien** avec le
+nombre d'or **φ = (1+√5)/2** ci-dessus.
+
+Voir aussi `docs/Polynome-cyclotomique.txt` (φ(n) d'Euler vs φ nombre d'or).

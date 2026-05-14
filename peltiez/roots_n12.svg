@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="220" height="220">
+  <title>Racines 12-i�mes de l'unit�</title>
+  <desc>Cercle unitaire : racines primitives (k premier avec 12) vs racines non primitives.</desc>
+  <rect width="100%" height="100%" fill="#fafafa"/>
+  <circle cx="110" cy="110" r="95" fill="none" stroke="#333" stroke-width="1.5"/>
+  <line x1="110" y1="110" x2="205" y2="110" stroke="#ccc" stroke-width="1"/>
+  <line x1="110" y1="110" x2="110" y2="15" stroke="#ccc" stroke-width="1"/>
+  <!-- Angles: theta_k = -2*pi*k/12 in standard math -> x = cx+R*cos(theta), y = cy-R*sin(theta) -->
+  <!-- k=0 -->
+  <circle cx="205" cy="110" r="5.5" fill="#94a3b8" stroke="#334155" stroke-width="1"/>
+  <!-- k=1 primitive -->
+  <circle cx="192.3" cy="62.5" r="5.5" fill="#2563eb" stroke="#1e3a8a" stroke-width="1"/>
+  <!-- k=2 -->
+  <circle cx="157.5" cy="27.7" r="5.5" fill="#94a3b8" stroke="#334155" stroke-width="1"/>
+  <!-- k=3 -->
+  <circle cx="110.0" cy="15.0" r="5.5" fill="#94a3b8" stroke="#334155" stroke-width="1"/>
+  <!-- k=4 -->
+  <circle cx="62.5" cy="27.7" r="5.5" fill="#94a3b8" stroke="#334155" stroke-width="1"/>
+  <!-- k=5 primitive -->
+  <circle cx="27.7" cy="62.5" r="5.5" fill="#2563eb" stroke="#1e3a8a" stroke-width="1"/>
+  <!-- k=6 -->
+  <circle cx="15.0" cy="110.0" r="5.5" fill="#94a3b8" stroke="#334155" stroke-width="1"/>
+  <!-- k=7 primitive -->
+  <circle cx="27.7" cy="157.5" r="5.5" fill="#2563eb" stroke="#1e3a8a" stroke-width="1"/>
+  <!-- k=8 -->
+  <circle cx="62.5" cy="192.3" r="5.5" fill="#94a3b8" stroke="#334155" stroke-width="1"/>
+  <!-- k=9 -->
+  <circle cx="110.0" cy="205.0" r="5.5" fill="#94a3b8" stroke="#334155" stroke-width="1"/>
+  <!-- k=10 -->
+  <circle cx="157.5" cy="192.3" r="5.5" fill="#94a3b8" stroke="#334155" stroke-width="1"/>
+  <!-- k=11 primitive -->
+  <circle cx="192.3" cy="157.5" r="5.5" fill="#2563eb" stroke="#1e3a8a" stroke-width="1"/>
+  <text x="110" y="14" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#334155">n = 12</text>
+  <rect x="8" y="188" width="204" height="26" fill="#ffffff" stroke="#e2e8f0" rx="4"/>
+  <circle cx="22" cy="201" r="5" fill="#2563eb" stroke="#1e3a8a"/>
+  <text x="32" y="205" font-family="system-ui,sans-serif" font-size="10" fill="#334155">Primitives (�(12)=4)</text>
+  <circle cx="128" cy="201" r="5" fill="#94a3b8" stroke="#334155"/>
+  <text x="138" y="205" font-family="system-ui,sans-serif" font-size="10" fill="#334155">Autres racines 12-i�mes</text>
+</svg>

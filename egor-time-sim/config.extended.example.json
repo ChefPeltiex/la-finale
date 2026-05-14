@@ -1,0 +1,11 @@
+{
+  "n": 200000,
+  "dt": 0.05,
+  "nu_hz": 228e12,
+  "sigma_tech": 1e-16,
+  "epsilon": 3e-18,
+  "seed": 42,
+  "allan_tau_min_factor": 5,
+  "allan_tau_max_factor": 8000,
+  "allan_num_points": 14
+}

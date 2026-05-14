@@ -1,0 +1,2 @@
+﻿[ -d "${PACK_ROOT}/scripts/codex-usb" ] || { echo "codex-usb validators missing under PACK_ROOT=${PACK_ROOT}" >&2; exit 1; }
+python3 "${PACK_ROOT}/scripts/codex-usb/validator_full.py" || exit "$?"

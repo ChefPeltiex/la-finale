@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" width="360" height="360" role="img">
+  <title>Racines 7-ièmes de l'unité : primitive (orange) vs 1 (gris)</title>
+  <desc>Sept points sur un cercle de rayon 120 centré en (180,180). L'affixe 1 (k=0) n'est pas une racine primitive 7-ième ; les six autres (k=1 à 6) sont primitives et colorées en orange.</desc>
+  <defs>
+    <style type="text/css"><![CDATA[
+      .guide { fill: none; stroke: #d5d8dc; stroke-width: 1.5; }
+      .axis { fill: none; stroke: #aeb6bf; stroke-width: 1; stroke-dasharray: 4 4; }
+      .pt-nonprim { fill: #7f8c8d; stroke: #566573; stroke-width: 1.5; }
+      .pt-prim { fill: #e67e22; stroke: #a04000; stroke-width: 1.5; }
+    ]]></style>
+  </defs>
+  <circle class="guide" cx="180" cy="180" r="120"/>
+  <line class="axis" x1="60" y1="180" x2="300" y2="180"/>
+  <line class="axis" x1="180" y1="60" x2="180" y2="300"/>
+  <!-- k=0 : 1 — non primitive pour n=7 -->
+  <circle class="pt-nonprim" cx="300" cy="180" r="10"/>
+  <!-- k=1..6 : primitives -->
+  <circle class="pt-prim" cx="254.82" cy="86.18" r="10"/>
+  <circle class="pt-prim" cx="153.3" cy="63.01" r="10"/>
+  <circle class="pt-prim" cx="71.88" cy="127.93" r="10"/>
+  <circle class="pt-prim" cx="71.88" cy="232.07" r="10"/>
+  <circle class="pt-prim" cx="153.3" cy="296.99" r="10"/>
+  <circle class="pt-prim" cx="254.82" cy="273.82" r="10"/>
+</svg>

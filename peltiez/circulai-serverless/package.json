@@ -1,0 +1,10 @@
+{
+  "name": "circulai-phi",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Helpers déploiement CirculAI φ — Serverless lit ../serverless.yml à la racine du monorepo.",
+  "scripts": {
+    "start": "node ../server/ab-server.js",
+    "deploy": "cd .. && npx serverless deploy --stage staging"
+  }
+}

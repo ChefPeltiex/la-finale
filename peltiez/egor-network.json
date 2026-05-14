@@ -1,0 +1,21 @@
+{
+  "network": {
+    "listen_addresses": [
+      "/ip4/0.0.0.0/tcp/4001",
+      "/ip4/0.0.0.0/udp/4001/quic"
+    ],
+    "connection_manager": {
+      "low_watermark": 100,
+      "high_watermark": 1000,
+      "grace_period": "30s"
+    },
+    "bandwidth": {
+      "rate_limit_total_out_bytes_per_sec": 12500000,
+      "rate_limit_total_in_bytes_per_sec": 25000000
+    },
+    "routing": {
+      "type": "dht",
+      "client_only": false
+    }
+  }
+}

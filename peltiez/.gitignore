@@ -1,0 +1,50 @@
+#env
+.env
+.env.*
+
+# Logs
+/logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+.serverless/
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+.env
+.vite
+
+# Rapport local généré par scripts/dev-universal.ps1
+reports/dev-universal-last-run.md
+
+# Rapport HTML généré par scripts/guardian.ps1
+reports/guardian-scan.html
+
+# Registre abonnements Stripe (serveur local)
+server/data/*.json
+!server/data/.gitkeep
+server/data/atlas-vivant.json
+server/data/crm-leads.ndjson
+server/data/welcome-sent-sessions.ndjson
+
+# Playwright
+playwright-report/
+test-results/
+blob-report/
