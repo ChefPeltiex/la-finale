@@ -4,6 +4,7 @@ Ce dossier regroupe des **schémas source** réutilisables dans la documentation
 
 ## Contenu attendu (hors README)
 
+- **`infra.mmd`** : bundle source des quatre vues (vue infra logique, séquence GitHub → Vercel, landing zone, flux données), séparées par `%% --- cut ---`. Les éditeurs ou la CLI Mermaid **stricts** n’acceptent souvent qu’un graphe par fichier : dans ce cas, copier chaque segment entre deux lignes `%% --- cut ---` dans un fichier `.mmd` dédié.
 - Schémas **landing zone** (abonnements, réseau, identité, journalisation) — voir `landing-zone-notes.md`
 - Diagrammes exportés (PNG/SVG) depuis Miro, draw.io ou équivalent si vous versionnez des exports
 - Alignement des CIDR sur `peltiez/docs/network-ip-plan.md` ; toute divergence doit être tracée (PR ou légende du schéma)
@@ -193,4 +194,5 @@ flowchart LR
 
 ## Fichiers complémentaires
 
+- **`infra.mmd`** : même matière que les quatre blocs Mermaid ci-dessous (le 2ᵉ bloc du fichier est une **séquence** GitHub → Vercel ; la section « 2 » ci-dessous reste une vue **couches** complémentaire).
 - **`landing-zone-notes.md`** : pistes de modules IaC et dépendances (sans fichier `.tf` factice).
