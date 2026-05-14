@@ -1,0 +1,32 @@
+# Vérification planifiée : même gate que la CI principale (`npm run verify` dans `peltiez/`).
+# Détecte les régressions liées aux dépendances ou à l’environnement sans attendre un push.
+
+name: igor-nightly
+
+on:
+  schedule:
+    # Tous les jours à 06:00 UTC (~ 1h du matin heure de Montréal en hiver, ~ 2h en été)
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: nightly verify (lint · types · build)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: peltiez
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: peltiez/package-lock.json
+      - name: Install
+        run: npm ci --legacy-peer-deps
+      - name: Lint, types & build
+        run: npm run verify

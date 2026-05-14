@@ -104,7 +104,38 @@ Synthèse des engagements transcrits dans les règles `.mdc` et dans le ton des 
 
 ---
 
-## 4. Reprise post-reset (checklist courte)
+## 4. Pont de cohérence inter-systèmes (protocole SCALE)
+
+**Problème** : dès que **deux systèmes** agissent sur le même produit (ex. IDE + assistant, plateforme + moteur, pipeline CI + contributeur externe), les échanges directs risquent la **désynchronisation** : formats différents, intentions floues, actions non autorisées ou non traçables.
+
+**Chaînon manquant** : un **orchestrateur de validation** — pas seulement un bus de messages, mais un **nœud** qui :
+
+1. **Reçoit** les requêtes ou sorties de chaque système (prompts, patches, hooks, événements métier).
+2. **Vérifie** la conformité : syntaxe, politiques de sécurité, règles produit, périmètre autorisé (ce que la constitution IGOR et les règles `.mdc` formalisent déjà côté dev).
+3. **Journalise** ce qui a été accepté, refusé ou modéré (traçabilité pour audit et amélioration continue).
+4. **Renvoie** une réponse **validée** ou une erreur **explicable** à chaque partie.
+5. **Réserve la décision finale** sur le sensible (sécurité à fort impact, conformité, arbitrage métier à risque) à un **humain habilité** — l’IA et les automates **proposent** ; les outils **exécutent** après cadre ; **seul l’humain** porte l’**autorité de validation** sur ces périmètres.
+
+**Pierre angulaire (règle d’or)** :
+
+> **L’humain est le valideur autorisé sur le sensible.**  
+> L’IA peut proposer. L’outil peut exécuter dans le périmètre autorisé. Ni l’IA ni le pipeline ne remplacent cette autorité — ce qui limite dérive, automatisations abusives et erreurs irréversibles.
+
+Sans ce pont, les systèmes « se parlent » mais ne partagent pas la même **vérité** opérationnelle. Avec lui, l’intégration devient un **écosystème** : moins de friction, corrections plus rapides, confiance entre humains, IA et outils.
+
+**Implémentation côté dépôt (aujourd’hui)** : la couche « orchestrateur » est **distribuée** mais **explicite** — `npm run verify`, CI **`igor-verify`**, **`SECURITY.md`** + avis privés, **`CONTRIBUTING.md`**, **`CODEOWNERS`**, releases sur tags **`v*`**. Pour la **plateforme EGOR**, le même principe peut être concentré dans un **module SCALE** : arbitre unique (ou fédéré) entre flux humains, IA et automates, avec politiques versionnées et journaux consultables.
+
+**Kit réutilisable (FR + EN, pitch, tooltip, Mermaid)** : [`peltiez/docs/scale-bridge.md`](peltiez/docs/scale-bridge.md).
+
+**Non-objectifs** : ce pont ne remplace pas la **décision humaine** sur le risque métier, légal ou éthique ; il les **prépare** et les **cadre**. Le dépôt matérialise déjà une partie de cette autorité : merge sur GitHub par un compte humain, revue de code, choix de déploiement et gestion des secrets hors automate public.
+
+### Protocole SCALE (version documentaire v1.0)
+
+- **v1.0** — figé avec cette section et le kit [`peltiez/docs/scale-bridge.md`](peltiez/docs/scale-bridge.md) (encarts, Mermaid, bilingue). Toute évolution majeure du protocole = révision explicite de ces fichiers + entrée [`CHANGELOG.md`](CHANGELOG.md).
+
+---
+
+## 5. Reprise post-reset (checklist courte)
 
 1. Lire ce fichier puis **`peltiez/.cursor/rules/*.mdc`** pour réaligner le ton et les garde-fous.
 2. En dev : terminal API (`npm run dev:api` dans `peltiez`) + `npm run dev` ; vérifier **`/hub-souverain`** et la réponse **`/api/health`**.

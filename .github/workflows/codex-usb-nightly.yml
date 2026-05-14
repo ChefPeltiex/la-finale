@@ -1,0 +1,36 @@
+# Valide les scripts Python Codex USB (JSON + assets + rapport HTML) sur Ubuntu.
+# Copie un manifest minimal vers scripts/manifest.json (attendu par les validateurs), puis exécute la même chaîne que validate_all.bat.
+
+name: codex-usb-nightly
+
+on:
+  schedule:
+    - cron: "30 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: codex-usb validators (Python)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install minimal smoke manifest (scripts/manifest.json)
+        run: |
+          mkdir -p scripts
+          cp .github/fixtures/codex-usb-minimal-manifest.json scripts/manifest.json
+
+      - name: validator_full (JSON + assets)
+        working-directory: scripts/codex-usb
+        run: python validator_full.py
+
+      - name: validate_html (report under scripts/)
+        working-directory: scripts/codex-usb
+        run: python validate_html.py
