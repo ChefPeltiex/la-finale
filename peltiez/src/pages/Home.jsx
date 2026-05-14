@@ -304,10 +304,18 @@ export default function Home() {
                 style={{ background: "linear-gradient(135deg, hsl(158,60%,35%), hsl(260,70%,40%))" }}>
                 <Link to="/publier">👑 Entrer dans le sanctuaire <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
-              <Button asChild size="lg" className="rounded-xl font-bold shadow-xl px-8 text-base border-0 text-slate-950 uppercase tracking-wide bg-gradient-to-r from-amber-200 via-amber-100 to-amber-200 hover:from-amber-100 hover:to-amber-300">
-                <a href="/encyclopedie.pdf" download="encyclopedie.pdf">
-                  <Download className="mr-2 h-4 w-4 inline" aria-hidden />
-                  Télécharger l’encyclopédie (PDF)
+              <Button
+                asChild
+                size="lg"
+                className="rounded-xl border-2 border-amber-500/85 bg-black px-8 text-base font-bold uppercase tracking-[0.14em] text-amber-100 shadow-[0_0_32px_rgba(212,175,55,0.14)] transition-colors hover:border-amber-300 hover:bg-zinc-950 hover:text-amber-50"
+              >
+                <a
+                  href="/encyclopedie.pdf"
+                  download="encyclopedie.pdf"
+                  className="inline-flex items-center gap-2 font-serif normal-case tracking-normal"
+                >
+                  <Download className="h-4 w-4 shrink-0 text-amber-400" aria-hidden />
+                  <span className="font-semibold tracking-tight">Télécharger l’encyclopédie (PDF)</span>
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-xl text-white hover:bg-white/10 text-base"
