@@ -48,3 +48,6 @@ server/data/welcome-sent-sessions.ndjson
 playwright-report/
 test-results/
 blob-report/
+
+# Assemblage Codex (aperçu PDF local depuis scripts/assemble-codex-pdf.mjs)
+docs/encyclopedie/codex-assembled-preview.pdf

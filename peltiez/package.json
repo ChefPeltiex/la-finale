@@ -33,6 +33,7 @@
     "start:prod": "node ./server/index.js",
     "start:server": "node ./server/index.js",
     "encyclopedie:placeholder-pdf": "node ./scripts/generate-codex-encyclopedie-placeholder-pdf.mjs",
+    "docs:assemble-codex-pdf": "node ./scripts/assemble-codex-pdf.mjs",
     "docs:dossier-pdf": "node ./scripts/generate-strategy-dossier-pdf.mjs",
     "docs:synthese-complete-pdf": "node ./scripts/generate-circulai-synthese-complete-pdf.mjs",
     "atlas:convert": "node scripts/run-atlas-convert.mjs",

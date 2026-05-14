@@ -1,51 +1,38 @@
-# Notes de version v1.0 — Codex / Encyclopédie (la-finale)
+# Notes de version v1.0 — Codex / encyclopédie PDF (CirculAI)
 
-**Version :** `v1.0` (placeholder de contenu PDF tant que `encyclopedie.pdf` n’est pas remplacé par l’export final InDesign/Canva ; les actifs et le blueprint sont la base éditoriale.)
+**Langue du document :** français (résumé anglais en fin de fichier).
 
-**Dépôt :** [ChefPeltiex/la-finale](https://github.com/ChefPeltiex/la-finale)
+## Contexte
 
----
+La version **v1.0** documente la chaîne de production et de diffusion du PDF de l’encyclopédie visuelle CirculAI (projet Codex), ainsi que l’intégration côté site. Le contenu encyclopédique **complet** peut rester en **placeholder** jusqu’à livraison éditoriale finale ; les artefacts décrits ici structurent le travail et la validation (dont revue **SCALE** / humaine).
 
-## FR — Faits marquants
-
-- **Blueprint PDF** : gabarit unique (`peltiez/docs/codex-pdf-blueprint.md`) — format, métadonnées, ordre des pages, nommage des visuels, note SCALE Git.
-- **Assemblage** : guide opérationnel (`peltiez/docs/codex-pdf-assembly.md`) — séquence de pages alignée sur le blueprint, inventaire des PNG sous `assets/codex-encyclopedie/`, options InDesign / Canva / script placeholder.
-- **Diffusion web** : le site Vite/React (`peltiez/`) sert `public/encyclopedie.pdf` à l’URL **`/encyclopedie.pdf`** ; l’accueil propose un bouton **« Télécharger l’encyclopédie (PDF) »** (style codex noir/or, sans emoji dans ce CTA).
-- **Automatisation légère** : `pnpm run encyclopedie:placeholder-pdf` (dans `peltiez/`) régénère un PDF minimal de secours via **pdfkit** (déjà présent).
-
-### Contenu livré (v1.0)
+## Livrables documentation
 
 | Élément | Emplacement |
 |---------|-------------|
-| PDF (placeholder ou final) | `peltiez/public/encyclopedie.pdf` |
-| Visuels Codex | `assets/codex-encyclopedie/*.png` |
-| Blueprint | `peltiez/docs/codex-pdf-blueprint.md` |
-| Guide d’assemblage | `peltiez/docs/codex-pdf-assembly.md` |
+| Gabarit unique (métadonnées, format, nommage, ordre des pages, déploiement) | `peltiez/docs/codex-pdf-blueprint.md` |
+| Guide d’assemblage opérationnel (liste de pages, checklist métadonnées, DPI/marges, Canva / Affinity / InDesign, script Node optionnel) | `peltiez/docs/encyclopedie/README.md` |
 
-### Lien site (schéma)
+## Site et fichier public
 
-Après déploiement Vercel (ou équivalent) du projet frontend :
+- **Placeholder PDF** et **bouton / lien de téléchargement** sur le site : déjà intégrés dans le projet `peltiez` (commit de référence : `d38e2b3`).
+- Fichier attendu sous la racine publique du build : `encyclopedie.pdf` (chemin source typique : `peltiez/public/encyclopedie.pdf`).
 
-`https://<votre-domaine>/encyclopedie.pdf`
+## URL de diffusion (schéma)
 
-Exemple avec le domaine par défaut Vercel : `https://<nom-du-projet>.vercel.app/encyclopedie.pdf` — vérifier le nom exact dans le tableau de bord Vercel.
+Lien direct de téléchargement ou vérification en production (adapter au domaine Vercel réel du projet) :
 
----
+`https://circulai-copy.vercel.app/encyclopedie.pdf`
 
-## EN — Short summary
+## Assemblage automatisé (optionnel)
 
-- **v1.0** ships the **Codex PDF blueprint**, an **assembly guide**, **encyclopedia PNG assets** under `assets/codex-encyclopedie/`, and a **downloadable** `encyclopedie.pdf` exposed at **`/encyclopedie.pdf`** from the Vite app’s `public/` folder.
-- The homepage includes a **French** download CTA aligned with the **black/gold** codex look.
-- Replace the placeholder PDF with the final print-ready export when editorial sign-off is complete.
+Un script Node réutilise **pdfkit** (déjà présent en `devDependency` de `peltiez`) pour assembler des PNG existants en un PDF de **prévisualisation** ; voir `peltiez/docs/encyclopedie/README.md` et la commande `npm run docs:assemble-codex-pdf` depuis `peltiez/`. Sans images dans le dossier configuré, le script se contente d’un message explicite (no-op).
 
----
+## SCALE — validation humaine et Git
 
-## SCALE — Git et revue
+- **Revue humaine** : valider le PDF final (rendu, métadonnées, pagination, contrastes) avant envoi sur `origin`.
+- **Staging** : éviter `git add .` ; indexer uniquement les chemins voulus pour des commits lisibles et traçables.
 
-- **Revue humaine** : valider rendu PDF, contrastes, pagination et métadonnées avant diffusion large.
-- **Staging** : préférer `git add <chemins explicites>` à `git add .` pour des commits lisibles (voir blueprint §8).
-- **Intégrité** : ne pas désactiver TLS ni affaiblir la chaîne de build pour forcer un déploiement.
+## English summary
 
----
-
-*Document destiné au copier-coller dans l’interface GitHub Releases (tag `v1.0`).*
+v1.0 documents the Codex PDF pipeline: blueprint at `peltiez/docs/codex-pdf-blueprint.md`, assembly guide at `peltiez/docs/encyclopedie/README.md`, placeholder `encyclopedie.pdf` plus download entry on the site (`d38e2b3`), and the public URL pattern `https://circulai-copy.vercel.app/encyclopedie.pdf`. Full encyclopedia content may remain placeholder until shipped; human/SCALE review applies before pushing final binaries.
