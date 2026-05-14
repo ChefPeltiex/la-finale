@@ -68,6 +68,40 @@ Les implémentations **peuvent** exposer entiers **ou** chaînes stables ; les d
 
 ---
 
+## Modèle multi-agents : permis / pas permis
+
+<a id="scale-multi-agent-model"></a>
+
+Les cadres réglementaires ciblent surtout les **effets sur le monde réel** lorsque le **contrôle humain** n’est pas clairement établi — pas chaque message technique entre services.
+
+```
+  Agent A ──┐
+            ├──▶ Propositions · coordination ──▶ [ SCALE ] ──▶ Effets sensibles ──▶ Humain habilité (décision finale)
+  Agent B ──┘
+
+  OK       : se coordonner pour proposer (échanges techniques sans court-circuit du contrôle humain).
+  Interdit : s’octroyer mutuellement la décision finale sur les effets sensibles.
+```
+
+*Les agents peuvent se coordonner pour proposer ; ils ne doivent pas s’octroyer la décision finale sur les effets sensibles.*
+
+### Multi-agent model: allowed / not allowed (EN summary)
+
+Regulatory frameworks focus on **world-affecting outcomes** where **human control** is not clearly established — not on every technical service-to-service message.
+
+```
+  Agent A ──┐
+            ├──▶ Proposals · coordination ──▶ [ SCALE ] ──▶ Sensitive effects ──▶ Authorized human (final decision)
+  Agent B ──┘
+
+  Allowed    : coordinate to propose (technical exchanges that do not bypass human control).
+  Not allowed: agents granting each other final authority on sensitive effects.
+```
+
+*Agents may coordinate to propose; they must not grant themselves the final decision on sensitive effects.*
+
+---
+
 ## Français
 
 ### Règles d’escalade humaine (ESCALATE / PENDING_HUMAN obligatoires)

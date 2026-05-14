@@ -10,6 +10,8 @@ Ce document est le **kit conceptuel** exportable (plateforme, UI, pitch, doc tec
 
 **Gouvernance & CI (monorepo `la finale/`)** : [`CONTRIBUTING.md`](../../CONTRIBUTING.md) (tableau CI), [`SECURITY.md`](../../SECURITY.md), [`.github/workflows/ci.yml`](../../.github/workflows/ci.yml) (`igor-verify`), [`.github/workflows/nightly.yml`](../../.github/workflows/nightly.yml), [`.github/workflows/codex-usb-nightly.yml`](../../.github/workflows/codex-usb-nightly.yml), [`.github/workflows/release.yml`](../../.github/workflows/release.yml), [`CHANGELOG.md`](../../CHANGELOG.md).
 
+- **Charte multi-agents EGOR (principes, non contractuelle)** : [`EGOR-charte-cooperation-multi-agents.md`](EGOR-charte-cooperation-multi-agents.md) — intentions de coopération supervisée et limites d’auto-autorisation ; complément au kit SCALE ci-dessous.
+
 ---
 
 ## Encart plateforme — autorité (FR)
@@ -65,6 +67,11 @@ flowchart TB
   H --> OUT
 ```
 
+**Multi-agents (permis / pas permis).** *Les agents peuvent se coordonner pour proposer ; ils ne doivent pas s’octroyer la décision finale sur les effets sensibles.*  
+Les cadres visent surtout les effets sur le monde sans contrôle humain clair, pas chaque message inter-services.  
+*Agents may coordinate to propose; they must not grant themselves the final decision on sensitive effects.*  
+Norme détaillée (diagramme, nuances) : [`scale-protocol-v1.1.md#scale-multi-agent-model`](scale-protocol-v1.1.md#scale-multi-agent-model).
+
 ---
 
 ## Schéma ASCII (légende slide)
@@ -83,7 +90,7 @@ flowchart TB
 ### Bloc plateforme (autonome)
 
 **Pont de cohérence inter-systèmes (SCALE)**  
-Quand deux systèmes (ex. plateforme + moteur, ou IDE + IA) échangent sans médiation, on obtient du bruit et peu de traçabilité. Le **chaînon** indispensable est un **orchestrateur de validation** : il reçoit les flux, applique règles de conformité et de sécurité, journalise, et ne renvoie que des réponses **validées** ou des refus **explicites**. C’est ce qui transforme une intégration en **écosystème fiable**. Sur EGOR, ce rôle peut être porté par un **module SCALE** qui arbitre entre actions humaines, IA et automates — sans remplacer la décision humaine sur les sujets sensibles, mais en la **cadre** et en la **prépare**.
+Quand deux systèmes (ex. plateforme + moteur, ou IDE + IA) échangent sans médiation, on obtient du bruit et peu de traçabilité. Le **chaînon** indispensable est un **orchestrateur de validation** : il reçoit les flux, applique règles de conformité et de sécurité, journalise, et ne renvoie que des réponses **validées** ou des refus **explicites**. C’est ce qui transforme une intégration en **écosystème fiable**. Sur EGOR, ce rôle peut être porté par un **module SCALE** qui arbitre entre actions humaines, IA et automates — sans remplacer la décision humaine sur les sujets sensibles, mais **en l’encadrant et en la préparant**.
 
 ### Tooltip (~120 caractères)
 

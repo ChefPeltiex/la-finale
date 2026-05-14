@@ -133,6 +133,7 @@ Sans ce pont, les systèmes « se parlent » mais ne partagent pas la même **v�
 
 - **v1.0** — figé avec cette section et le kit [`peltiez/docs/scale-bridge.md`](peltiez/docs/scale-bridge.md) (encarts, Mermaid, bilingue). Toute évolution majeure du protocole = révision explicite de ces fichiers + entrée [`CHANGELOG.md`](CHANGELOG.md).
 - **v1.1 (contrat opérationnel)** — états du pont, niveaux de sévérité, codes de retour, escalade humaine, erreurs standardisées, journaux : [`peltiez/docs/scale-protocol-v1.1.md`](peltiez/docs/scale-protocol-v1.1.md).
+- **Couche philosophique optionnelle (charte multi-agents)** — principes d’intention et de gouvernance interne (non contractuels) : [`peltiez/docs/EGOR-charte-cooperation-multi-agents.md`](peltiez/docs/EGOR-charte-cooperation-multi-agents.md).
 
 ---
 
