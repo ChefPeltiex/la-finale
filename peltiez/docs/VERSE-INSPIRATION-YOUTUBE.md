@@ -12,14 +12,17 @@
 | 6 | `3OvM4ycNVL8` | Dreamy Flow | ~2 h 53 | **Audio** + miniature **sommeil / lune** | Duo 528 + 432 Hz — nuit réparatrice | **Moyenne** — mode nuit | P1 axes (partagé 5) · P2 mode nuit cosmique |
 | 8 | `r9GYYKrrLAg` | Inner Healing | ~71 min | **Audio-first** (branding bien-être) | Schumann **7,83 Hz** + 432 + binaural — ancrage Terre | **Moyenne** — ancrage sol | P1-INS-14 ancrage HUD · P2-INS-12 pulse anneau sol |
 | 9 | `3ciMHwo1ApA` | Culture Capital | ~1 h 1 | **Audio** + ambient décoratif | **Om** + ombre / lumière, shadow integration | **Moyenne** — seuil / dualité | P1-INS-12/13 équilibre, respiration · P2 bol seuil (spec) |
-| 10 | `deFpiq6EYzE` | Inner Eye Awakening | ~2 h 55 | **Audio** dominant (pas de gameplay 3D) | Transe chamanique / **tiers œil** — seuil « 1 min » (marketing) | **Moyenne** — rituel seuil | P1-INS-15 rituel 60 s · P2-INS-13 transe profonde 60 s |
-| 12 | `Zocof7wZF4c` | Chakra Healing Frequencies | ~2 h 21 | **Audio** + **visuel** stock (Envato / Storyblocks) | **7 chakras** + **999 Hz** — nettoyage **corps entier** / aura | **Moyenne** — affine arc 7 | P1 corps entier 7/7 session · P2 balayage lumière voyageur (renforce P1-INS-9 / P2-INS-8) |
+| 7 | `oHMg7ZeWAxQ` | Inner Lotus Music | ~3 h 34 | **Audio-first** (art chaîne) | **852 Hz** / Ajna — clarté, intuition | **Moyenne** — regard intérieur | P1 (complète INS-8) · aligné tiers œil symbolique |
+| 10 | `deFpiq6EYzE` | Inner Eye Awakening | ~2 h 55 | **Audio** dominant (pas de gameplay 3D) | Transe chamanique / **tiers œil** — seuil « 1 min » (marketing) | **Moyenne** — rituel seuil | P1-INS-16 rituel 60 s · P2-INS-16 transe profonde 60 s |
+| 11 | `admhD1UCmI8` | 136Hz - Find Your Inner Peace | ~71 min | **Audio** dominant (miniature / branding chaîne) | **Theta 4–8 Hz** — subconscious, créativité / « billionaire » (marketing abondance) | **Moyenne** — flux créatif | P1-INS-15 seuil theta créatif · P2-INS-15 vague theta visuelle |
+| 12 | `Zocof7wZF4c` | Chakra Healing Frequencies | ~2 h 21 | **Audio** + **visuel** stock (Envato / Storyblocks) | **7 chakras** + **999 Hz** — nettoyage **corps entier** / aura | **Moyenne** — affine arc 7 | P1-INS-17 corps entier 7/7 · P2-INS-17 balayage lumière (renforce P1-INS-9 / P2-INS-8) |
+| 15 | `svKgmiSTpG4` | Abundant Vibe Frequencies | ~11 h 55 | **Audio** pur (keywords richesse / 432 / 888) | **LoA** + flux financier + gratitude — piste ~12 h | **Basse** — redondant (3, 4, 5, 6, 8) | **Aucune tâche nouvelle** — renforce P1-INS-8 (anti-LoA), P2-INS-7 (session extrême) |
 
 **Lecture priorité :** **Haute** = plusieurs URLs convergent (dérive lente, paliers, HUD minimal) — à traiter en P1 avant polish P2. **Moyenne** = affine un levier déjà couvert (session longue, nuit, stack, rituel). **Aucune** référence ne montre vol dans des anneaux ou rail spatial : priorité **jamais** sur gameplay arcade / hyperspace.
 
 **Audio vs visuel :** la majorité des entrées sont **musique / méditation** ; le Verse apporte le **décor 3D** (fog, étoiles, tores). Ne pas intégrer pistes YouTube (P2-INS-4). Visuels chaîne (IA, miniature) = **palette uniquement**, pas d’assets repris.
 
-**Phase 2 (produit)** : après **13** références, le corpus est majoritairement **solfège / méditation / ambient** (≈10/13) ; **aucune** ne montre vol dans des anneaux ou rail spatial. Prioriser l’implémentation **P1 HUD + arc** ([`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md)) plutôt que d’ajouter des entrées YouTube, sauf si l’utilisateur envoie des refs **visuelles** (vol cosmique, anneaux traversés, hyperspace).
+**Phase 2 (produit)** : après **13** références utilisateur, le corpus est majoritairement **solfège / méditation / ambient** (≈11/13) ; la **#13** (`8kQgu2_1uEk`) est un **documentaire narratif** hors Hz — pas une ref vol cosmique. **Aucune** URL ne montre vol dans des anneaux ou rail spatial. Prioriser l’implémentation **P1 HUD + arc** ([`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md)) plutôt que d’ajouter des entrées YouTube, sauf refs **visuelles** (vol cosmique, anneaux traversés, hyperspace).
 
 ---
 
@@ -679,9 +682,9 @@ Les sept entrées documentées confirment une **traversée symbolique contemplat
 
 ## Cinq recommandations concrètes (vidéo 10)
 
-1. **Rituel seuil 60 s (P1-INS-15)** : à &lt; 5 m d’un tore non visité, proposer option « une minute de présence » (respiration + `ritualHint`) avant activation `E` — miroir « after 1 minute », **sans** mind control ni promesse DMT.
-2. **Indicateur intuition (P1-INS-15)** : flèche ou halo discret vers le prochain realm aligné intention localStorage (complète P1-INS-8) — tiers œil = **direction**, pas glande.
-3. **Transe cosmique profonde (P2-INS-13)** : à 60 s sans input (avant les 90 s de P2-INS-7) : vignette + pulsation tore très lente — distinct de la dérive passive complète.
+1. **Rituel seuil 60 s (P1-INS-17)** : à &lt; 5 m d’un tore non visité, proposer option « une minute de présence » (respiration + `ritualHint`) avant activation `E` — miroir « after 1 minute », **sans** mind control ni promesse DMT.
+2. **Indicateur intuition (P1-INS-17)** : flèche ou halo discret vers le prochain realm aligné intention localStorage (complète P1-INS-8) — tiers œil = **direction**, pas glande.
+3. **Transe cosmique profonde (P2-INS-17)** : à 60 s sans input (avant les 90 s de P2-INS-7) : vignette + pulsation tore très lente — distinct de la dérive passive complète.
 4. **Conserver P1-INS-7/8 et P2-INS-7/11** : focus portail, intention, dérive longue et nuit restent valides ; la vidéo 10 **ajoute** le seuil minute + couche transe, ne remplace pas les arcs 9/7/5.
 5. **Audio (P2)** : nappes ambiantes graves très douces — interdit Inner Eye Awakening et tons « third eye » identifiables.
 
@@ -689,7 +692,7 @@ Les sept entrées documentées confirment une **traversée symbolique contemplat
 
 ## Fichiers code liés (vidéo 10)
 
-- `docs/VERSE-COSMIC-NAV-DESIGN.md` — P1-INS-15, P2-INS-13 (distincts des vidéos 1–9 et des tâches Om/ombre/Schumann)
+- `docs/VERSE-COSMIC-NAV-DESIGN.md` — P1-INS-16, P2-INS-16 (distincts des vidéos 1–9 et des tâches Om/ombre/Schumann/theta)
 - `src/pages/WorldHub.jsx` — rituel 60 s, copy intuition
 - `src/world/WorldScene.jsx` — vignette transe, pulse tore lent
 - `src/world/realms.js` — `ritualHint` tiers œil / seuil
@@ -1000,8 +1003,8 @@ Les sept références documentées à ce stade confirment une **traversée symbo
 
 ## Cinq recommandations concrètes (vidéo 7)
 
-1. **Focalisation clarté (P1)** : à l’approche d’un tore, HUD une ligne « regarder l’horizon » + variante `ritualHint` clarté — inspiré 852/Ajna (`oHMg7ZeWAxQ`), **sans** Hz ni pinéale (distinct de P1-INS-8 intention générale).
-2. **Éclaircissement d’approche (P2)** : première approche d’un tore non visité en session : `fog` density −8 % pendant 3 s — métaphore brouillard mental, **avant** entrée (distinct P2-INS-8 halo **après** visite).
+1. **Focalisation clarté (P1-INS-16)** : à l’approche d’un tore, HUD une ligne « regarder l’horizon » + variante `ritualHint` clarté — inspiré 852/Ajna (`oHMg7ZeWAxQ`), **sans** Hz ni pinéale (distinct de P1-INS-8 intention et P1-INS-13 seuil Om).
+2. **Éclaircissement d’approche (P2-INS-16)** : première approche d’un tore non visité en session : `fog` density −8 % pendant 3 s — métaphore brouillard mental, **avant** entrée (distinct P2-INS-8 halo **après** visite et P2-INS-14 oscillation ombre-lumière).
 3. **Conserver P1-INS-1 à 3** : mode contemplation, prochain anneau, palette cœur/cosmos couvrent déjà Inner Lotus v1 — la v7 **affine** la couche clarté, ne remplace pas le triptyque cœur.
 4. **Conserver P2-INS-7** : session ~3,5 h = cas d’usage naturel de la dérive passive ; pas de ton 852 Hz en boucle.
 5. **Audio (P2)** : timbre ambiant « clair » (aigus doux, pas ton pur) — interdit *Ajna Awakening* et toute piste Inner Lotus identifiable.
@@ -1010,7 +1013,348 @@ Les sept références documentées à ce stade confirment une **traversée symbo
 
 ## Fichiers code liés (vidéo 7)
 
-- `docs/VERSE-COSMIC-NAV-DESIGN.md` — P1-INS-13, P2-INS-12 (distincts des vidéos 1–6 et 9)
+- `docs/VERSE-COSMIC-NAV-DESIGN.md` — P1-INS-16, P2-INS-16 (distincts des vidéos 1–6, 8–11)
 - `src/pages/WorldHub.jsx` — copy focalisation / clarté
 - `src/world/WorldScene.jsx` — atténuation brume à l’approche
 - `src/world/realms.js` — `ritualHint` vision / horizon
+
+---
+
+# Addendum — Vidéo 12 (12ᵉ référence « verse des anneaux »)
+
+**Lien :** [https://www.youtube.com/watch?v=Zocof7wZF4c](https://www.youtube.com/watch?v=Zocof7wZF4c)  
+**ID :** `Zocof7wZF4c`  
+**Date de capture :** mai 2026  
+**Contexte utilisateur :** douzième référence YouTube — accent **999 Hz**, **7 chakras** (liste couleur Root→Crown), **whole body energy cleansing** et **aura cleansing** (Chakra Healing Frequencies) ; proche de la vidéo 4 (`4mJc9A1yOx0`) mais chaîne, durée (~2 h 21) et visuels **stock footage** distincts.
+
+---
+
+## Ce que la vidéo est réellement
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *Frequency 999Hz Opens All 7 Chakras, Whole Body Energy Cleansing, Aura Cleansing, Chakra Healing* |
+| **Chaîne** | Chakra Healing Frequencies |
+| **Durée** | 2:20:49 (~2 h 21 min) |
+| **Vues** | ~7,1 M (au moment de la capture) |
+| **Publié** | 2025-07-20 |
+| **Catégorie** | Music |
+| **Type** | Musique méditation / **999 Hz** + marketing **7 chakras**, nettoyage corps entier et aura — **pas** vol spatial, **pas** traversée d’anneaux cinématographiques, **pas** gameplay |
+
+### Thèmes publics (description chaîne)
+
+- **999 Hz** : ton mis en avant pour « ouvrir » les 7 chakras — symbolique haute vibration, **non** preuve médicale.
+- **7 chakras** : liste explicite Root (Muladhara) → Crown (Sahasrara) avec **couleurs** (rouge, orange, jaune, vert, bleu, violet, blanc) — arc **spectral** séquentiel.
+- **Whole body energy cleansing** : purification **globale** du corps en une session — pas palier isolé.
+- **Aura cleansing / chakra healing** : équilibre énergétique, stress, mindfulness — **à ne pas reprendre** en promesses santé.
+- **Visuel** : footage et images sous licence (Envato, Storyblocks, iStock, Adobe Stock) — fonds **décoratifs** probables ; **sans** mécanique de vol dans des anneaux ni rail spatial.
+- **Usage** : casque, yeux fermés, respiration, visualisation de lumière — écoute passive longue (~2 h).
+
+### Transcript
+
+Pas de narration structurante exploitable ; contenu **audio + visuels stock** + copy marketing. L’inspiration produit = **arc 7 couleurs**, **nettoyage symbolique corps entier**, session **~2 h** — pas storyboard UX de vol dans les anneaux.
+
+### Note « verse des anneaux »
+
+Les **tores** du Verse Egor69 (`realms.js`) restent la métaphore utilisateur. Cette URL **renforce** la vidéo 4 (7 chakras + 999 Hz) avec un fil **corps entier** et une durée intermédiaire (~2 h 21) — **sans** MGM, Tolkien, ni iconographie chakra copiée.
+
+### Implémentation 3D (constat vidéo)
+
+| Élément recherché | Présent dans la vidéo ? | Note Verse |
+|-------------------|-------------------------|------------|
+| Traversée d’anneaux / rail | **Non** | P2-INS-1 inchangé — portail narratif |
+| Vol spatial / cockpit | **Non** | Third-person marche cosmique |
+| Hyperspace / warp | **Non** | Transitions fade/scale existantes |
+| Anneaux planétaires / échelle NASA | **Non** | Échelle via fog, étoiles, tores (`COSMIC_NAV_V2`) |
+| Gameplay arcade | **Non** | Mood purification, pas runner |
+
+**Priorité produit :** affine P1-INS-9 / P2-INS-8 (arc 7, clarté) — **pas** nouvelle priorité vol / anneaux spatiaux.
+
+---
+
+## Emprunter (mood & UX — sans copier l’œuvre)
+
+| Idée | Application Egor69 Verse |
+|------|---------------------------|
+| **Corps entier 7/7** | Indicateur session quand chaque groupe des 7 harmoniques a ≥1 visite — métaphore « all 7 chakras open », sans nom chakra |
+| **Spectre couleur** | 7 teintes d’accent ordonnées (rouge→violet→blanc doux) sur minimap — complète P1-INS-9 |
+| **Session ~2 h** | Compatible dérive passive (P2-INS-7) + mode contemplation |
+| **Aura / lumière** | Renforcer P2-INS-8 (brume + halo) — pas claim aura cleansing |
+| **Footage stock** | Inspiration mouvement lent ciel / particules — palette uniquement, **interdit** reprendre clips licenciés |
+
+---
+
+## Ne pas copier (droits & promesses)
+
+| Risque | Action |
+|--------|--------|
+| **© Chakra Healing Frequencies / Holimedia** | Aucun extrait 999 Hz, miniature, footage stock, ni branding chaîne |
+| **Opens all 7 chakras / chakra healing** | Pas de promesse ouverture chakra, guérison, ni detox énergétique |
+| **Whole body / aura cleansing** | Pas de claims médicaux ni purification garantie |
+| **999 Hz identifiable** | Pas de ton pur ni boucle reconnaissable — audio P2 original uniquement |
+| **Noms sanskrit / emojis chakras** | Pas de Muladhara, Sahasrara, etc. sur `/world` |
+| **Gameplay inexistant** | Ne pas annoncer vol dans les anneaux sur cette URL |
+
+---
+
+## Comparaison vidéo 4 vs 12 (7 chakras + 999 Hz)
+
+| Critère | `4mJc9A1yOx0` (Abundance Energy) | `Zocof7wZF4c` (Chakra Healing Frequencies) |
+|---------|----------------------------------|--------------------------------------------|
+| **Durée** | ~59 min | **~2 h 21** |
+| **Structure** | 7 chakras + 999 Hz + miracles | **7 chakras** + 999 Hz + **corps entier** |
+| **Visuel** | Cosmos **MidJourney** (IA) | **Stock footage** licencié (Envato, etc.) |
+| **Narratif** | Purification, miracles, good luck | **Whole body cleansing**, aura, équilibre |
+| **Pour les Anneaux** | P1-INS-9, P2-INS-8 | **P1-INS-17**, **P2-INS-17** |
+
+Les douze références documentées confirment une **traversée symbolique contemplative** — **aucune** ne montre de gameplay « anneaux » ou vol spatial réel.
+
+---
+
+## Cinq recommandations concrètes (vidéo 12)
+
+1. **Corps entier 7/7 (P1-INS-17)** : bandeau discret « Parcours aligné 5/7 » (groupes harmoniques touchés en session) — miroir « whole body » **sans** chakra, Hz, ni guérison (complète P1-INS-9).
+2. **Spectre 7 teintes (P1)** : ordre couleur fixe sur les 7 groupes minimap — teintes **très** désaturées pour rester cosmique.
+3. **Balayage lumière voyageur (P2-INS-17)** : à 7/7 session, pulse emissive bas→haut sur `CosmicTraveler` (2 s, une fois) ; `prefers-reduced-motion` = halo statique.
+4. **Conserver P1-INS-9 et P2-INS-8** : harmoniques 7 et clarté brume restent la base vidéo 4 ; la vidéo 12 **ajoute** corps entier + balayage.
+5. **Audio (P2)** : boucle ambiante évolutive ~2 h (presets internes) — interdit Chakra Healing Frequencies et ton 999 Hz pur.
+
+---
+
+## Fichiers code liés (vidéo 12)
+
+- `docs/VERSE-COSMIC-NAV-DESIGN.md` — P1-INS-17, P2-INS-17 (distincts des vidéos 1–11 ; renforce P1-INS-9 / P2-INS-8)
+- `src/pages/WorldHub.jsx` — indicateur 7/7 session, teintes spectre
+- `src/components/world/CosmicNavControls.jsx` — balayage emissive `CosmicTraveler`
+- `src/world/WorldScene.jsx` — particules / clarté (complète P2-INS-8)
+
+---
+
+# Addendum — Vidéo 13 (13ᵉ référence « verse des anneaux »)
+
+**Lien :** [https://www.youtube.com/watch?v=8kQgu2_1uEk](https://www.youtube.com/watch?v=8kQgu2_1uEk)  
+**ID :** `8kQgu2_1uEk`  
+**Date de capture :** mai 2026  
+**Contexte utilisateur :** treizième référence YouTube — **documentaire narratif** (Évangile de Marie-Madeleine, textes gnostiques) ; **pas** musique solfège ni ambient ; **pas** vol spatial ni traversée d’anneaux cinématographiques.
+
+---
+
+## Ce que la vidéo est réellement
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *L'Évangile De Marie-Madeleine Révèle La Phrase Qui Te Rend Immortel* |
+| **Chaîne** | Évangile Interdit |
+| **Durée** | 46:40 (~47 min) |
+| **Vues** | ~78,7 K (au moment de la capture) |
+| **Publié** | 2025-12-04 |
+| **Catégorie** | People & Blogs |
+| **Langue** | Français |
+| **Type** | **Documentaire / voix-off** sur l’Évangile de Marie (manuscrit copte, Nag Hammadi, gnosticisme) — **pas** gameplay, **pas** méditation Hz, **pas** décor cosmique 3D |
+
+### Mood visuel / audio
+
+| Dimension | Lecture produit |
+|-----------|-----------------|
+| **Visuel** | Montage narratif typique chaîne « révélations » (stock, papyrus, cartes) — **aucun** vol dans anneaux spatiaux, rail, cockpit ou anneaux planétaires. **Pas** contenu cosmique/space ring exploitable pour le Verse 3D. |
+| **Audio** | Voix-off continue + musique de fond documentaire — **pas** piste solfège ni binaural. |
+| **Structure** | Arc **~47 min** : découverte manuscrit → phrase « le péché n’existe pas » → **sept niveaux / pouvoirs** de l’âme → confrontation Marie/Pierre → Sophia / marketing ebook chaîne. |
+| **Narratif** | Immortalité de l’âme, gnosticisme, censure Vatican — **discours spirituel/historique**, non preuve médicale ni gameplay. |
+| **Transcript** | Narration longue exploitable pour **intention produit** (parcours par seuils, silence après passage) — pas storyboard 3D. |
+
+### Note « verse des anneaux »
+
+Les **tores** du Verse Egor69 (`realms.js`) restent la métaphore utilisateur (« Anneaux du Verse »). Cette URL apporte un fil **parcours à 7 seuils narratifs** et **repos / silence** après franchissement — **sans** copier MGM, Tolkien, iconographie chrétienne officielle, ni promesses d’immortalité.
+
+### Implémentation 3D (constat vidéo)
+
+| Élément recherché | Présent dans la vidéo ? | Note Verse |
+|-------------------|-------------------------|------------|
+| Traversée d’anneaux / rail | **Non** | P2-INS-1 inchangé — portail narratif |
+| Vol spatial / cockpit | **Non** | Third-person marche cosmique |
+| Hyperspace / warp | **Non** | Transitions fade/scale existantes |
+| Anneaux planétaires / échelle NASA | **Non** | Échelle via fog, étoiles, tores (`COSMIC_NAV_V2`) |
+| Visuels cosmos / space flight | **Non** | Documentaire historique — **priorité vol P1 : nulle** |
+
+**Priorité produit :** arc **Passage X/7** (distinct harmoniques P1-INS-9) + **silence HUD** post-visite — **pas** recommandations vol / traversée arcade.
+
+---
+
+## Emprunter (mood & UX — sans copier l’œuvre)
+
+| Idée | Application Egor69 Verse |
+|------|---------------------------|
+| **Sept passages** | HUD « Passage 4/7 » sur session ou arc — métaphore sept niveaux **sans** gardiens, gnosticisme ni immortalité |
+| **Repos du silence** | 10–12 s HUD minimal au retour 3D→2D — franchissement symbolique, pas transe forcée |
+| **Seuil avant portail** | Complète P1-INS-7/13 : une intention sobre, pas « phrase magique » |
+| **Parcours ~47 min** | Session médiane : contemplation + focus portail suffisent |
+| **Autonomie** | Copy HUD « ton chemin » — sans rejet d’institutions ni promesse éveil garanti |
+
+---
+
+## Ne pas copier (droits & promesses)
+
+| Risque | Action |
+|--------|--------|
+| **© Évangile Interdit** | Aucun extrait audio voix-off, miniature, ni branding chaîne |
+| **Immortalité / DMT / pinéale / péché n’existe pas** | Pas de claims doctrinales, gnostiques, ni santé sur `/world` |
+| **Vatican / censure / ebook** | Pas de funnels « vérité cachée », liens ebook, ni CTAs chaîne |
+| **Marie-Madeleine / Sophia / iconographie** | Pas d’art religieux, noms sacrés marketing, ni récit officiel copié |
+| **Gameplay inexistant** | Ne pas annoncer vol dans les anneaux sur cette URL |
+
+---
+
+## Comparaison (sélection — vidéos 2, 4, 9, 13)
+
+| Critère | `NxXzQLl2H5Y` | `4mJc9A1yOx0` | `3ciMHwo1ApA` | `8kQgu2_1uEk` |
+|---------|---------------|---------------|---------------|---------------|
+| **Type** | Solfège 9 chapitres | Solfège 7 chakras | Ambient Om | **Documentaire FR** |
+| **Durée** | ~46 min | ~59 min | ~1 h 1 | **~47 min** |
+| **Structure** | **9 paliers** Hz | **7** chakras + 999 Hz | 1 ambient Om | **7 niveaux** âme (narratif) |
+| **Visuel** | Écran noir | Cosmos IA décoratif | Symboles ambient | **Stock / narration** — pas space rings |
+| **Pour les Anneaux** | Palier X/9 | Harmonie 7/7 | Seuil Om, clair/sombre | **Passage X/7**, silence post-portail |
+
+Les treize références utilisateur confirment une **traversée symbolique contemplative** dans le Verse — **aucune** ne montre de gameplay « anneaux » spatial ou vol cosmique.
+
+---
+
+## Cinq recommandations concrètes (vidéo 13)
+
+1. **Sept passages (P1-INS-18)** : HUD « Passage X/7 » — miroir sept niveaux **sans** vocabulaire religieux ni immortalité (distinct P1-INS-9 harmoniques et P1-INS-6 paliers 9).
+2. **Silence post-traversée (P2-INS-18)** : au retour 3D après realm 2D : HUD minimal 10–12 s — métaphore « repos du silence », désactivable.
+3. **Conserver P1-INS-7 et P1-INS-9** : focus portail et harmoniques 7 restent le véhicule principal ; la vidéo 13 **ajoute** une couche narrative 7-passages, ne remplace pas les arcs Hz déjà couverts.
+4. **Ne pas sur-prioriser vol P1** : cette URL n’apporte **aucune** ref visuelle anneaux spatiaux — priorité = HUD + arc, pas rail shooter.
+5. **Audio (P2-INS-4)** : aucune voix-off ni musique documentaire — boucle ambiante originale uniquement.
+
+---
+
+## Fichiers code liés (vidéo 13)
+
+- `docs/VERSE-COSMIC-NAV-DESIGN.md` — P1-INS-18, P2-INS-18 (distincts des vidéos 1–12 et 7/10/16)
+- `src/pages/WorldHub.jsx` — HUD Passage X/7, masquage post-visite
+- `src/world/realms.js` — `ritualHint` seuil / chemin intérieur
+
+---
+
+# Addendum — Vidéo 15 (15ᵉ référence « verse des anneaux »)
+
+**Lien :** [https://www.youtube.com/watch?v=svKgmiSTpG4](https://www.youtube.com/watch?v=svKgmiSTpG4)  
+**ID :** `svKgmiSTpG4`  
+**Date de capture :** mai 2026  
+**Contexte utilisateur :** quinzième référence YouTube — accent **flux d’argent**, **fréquences richesse**, **432 Hz**, **LoA** et codes **888** (Abundant Vibe Frequencies) ; **pas** vol spatial, **pas** traversée d’anneaux, **pas** gameplay.
+
+---
+
+## Ce que la vidéo est réellement
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *POSITIVE MONEY FLOW \| MONEY FREQUENCY FOR ABUNDANCE \| 432HZ ENERGY MUSIC* |
+| **Chaîne** | Abundant Vibe Frequencies |
+| **Durée** | 11:55:00 (~11 h 55 min) |
+| **Vues** | ~8 (au moment de la capture — chaîne très récente) |
+| **Publié** | 2026-05-14 |
+| **Catégorie** | Entertainment |
+| **Type** | Musique méditation / **wealth frequency** + marketing **law of attraction**, manifestation financière, **432 Hz** (et keywords 528 Hz, 888, angel numbers) — **pas** vol spatial, **pas** anneaux traversables, **pas** storyboard 3D |
+
+### Thèmes publics (description chaîne)
+
+- **Money attraction & financial flow** : synchronisation mentale avec abondance, succès, prospérité — **discours bien-être / mindset, non preuve économique**.
+- **Law of attraction & manifestation** : visualisation, affirmations positives, gratitude — **même famille** que vidéo 3 (`OlV26ouCn5w`) et miracles vidéo 4 (`4mJc9A1yOx0`).
+- **432 Hz / healing frequencies** : ton mis en avant dans le titre — déjà couvert par vidéos 6 (`3OvM4ycNVL8`), 8 (`r9GYYKrrLAg`), 9 (`3ciMHwo1ApA`).
+- **888 / angel numbers / prosperity codes** : symboles numériques marketing — **interdit** sur le Verse (cf. vidéo 5, money magnet).
+- **Usage** : fond pendant travail, sommeil, méditation — écoute **très longue** (~12 h), volume bas, casque ou haut-parleurs.
+
+### Transcript
+
+Pas de narration structurante exploitable ; contenu **audio + copy marketing** (listes hashtags abondance). L’inspiration produit utile = **session passive extrême** et rappel de **ne pas** promettre richesse — pas storyboard de vol dans les anneaux.
+
+### Note « verse des anneaux »
+
+Les **tores** du Verse Egor69 (`realms.js`) restent la métaphore utilisateur. Cette URL **ne change pas** la priorité produit : elle **confirme** que les références utilisateur restent surtout **méditation / Hz / LoA**, **sans** contenu visuel de vol dans des anneaux spatiaux.
+
+### Implémentation 3D (constat vidéo)
+
+| Élément recherché | Présent dans la vidéo ? | Note Verse |
+|-------------------|-------------------------|------------|
+| Traversée d’anneaux / rail | **Non** | P2-INS-1 inchangé — portail narratif |
+| Vol spatial / cockpit | **Non** | Third-person marche cosmique |
+| Hyperspace / warp | **Non** | Transitions fade/scale existantes |
+| Anneaux planétaires / échelle NASA | **Non** | Échelle via fog, étoiles, tores (`COSMIC_NAV_V2`) |
+| Visuels cosmiques cinématographiques | **Non** | **Audio-first** — keywords richesse, pas décor flight |
+
+**Priorité produit :** **basse** pour catalogage supplémentaire — redondant avec intentions (3), miracles (4), money stack (5), 432 (6/8/9). **Aucune nouvelle tâche P1/P2** dans `VERSE-COSMIC-NAV-DESIGN.md`.
+
+---
+
+## Emprunter (mood & UX — sans copier l’œuvre)
+
+| Idée | Application Egor69 Verse |
+|------|---------------------------|
+| **Session ~12 h** | P2-INS-7 (dérive passive) couvre déjà l’écoute extrême — pas de mécanique « money flow » |
+| **Gratitude sobre** | Toast une ligne post-visite (déjà P2 vidéo 3) — **sans** promesse financière |
+| **Intention honnête** | P1-INS-8 — formulation personnelle, **anti-LoA** explicite dans les disclaimers |
+| **432 feel (audio futur)** | P2-INS-4 — accords doux, **pas** ton pur ni piste Abundant Vibe |
+| **Travail / fond** | HUD minimal en dérive longue — complète P1-INS-7 focus portail, pas copy richesse |
+
+---
+
+## Ne pas copier (droits & promesses)
+
+| Risque | Action |
+|--------|--------|
+| **© Abundant Vibe Frequencies** | Aucun extrait, sample money frequency, miniature ni branding chaîne |
+| **Manifest money / attract money / unlimited abundance** | Pas de promesse richesse, flux financier, ni mindset « rich » sur `/world` |
+| **Law of attraction / 888 / angel numbers** | Pas de signes numériques, codes prospérité, ni LoA en UI |
+| **432 Hz / 528 Hz identifiables** | Pas de tons purs — audio P2 original uniquement |
+| **Gameplay inexistant** | Ne pas annoncer vol dans les anneaux sur cette URL |
+
+---
+
+## Comparaison (sélection — redondance)
+
+| Critère | `OlV26ouCn5w` (v3) | `4mJc9A1yOx0` (v4) | `IFH1pi6xIk4` (v5) | `svKgmiSTpG4` (v15) |
+|---------|-------------------|-------------------|-------------------|---------------------|
+| **Durée** | ~6 h | ~59 min | ~3 h 10 | **~11 h 55** |
+| **Narratif** | LoA / intention | Miracles / aura | Money / stack 5 Hz | **Money flow** explicite |
+| **432 Hz** | Titre 963 | Marketing | Dans stack | **Titre** |
+| **Pour les Anneaux** | Intention, AFK | 7 teintes | 5 couches | **Rien de nouveau** — anti-LoA + dérive longue |
+
+Les quinze références documentées confirment une **traversée symbolique contemplative** — **aucune** ne montre de gameplay « anneaux » spatial ou vol dans des anneaux.
+
+---
+
+## Cinq recommandations concrètes (vidéo 15)
+
+1. **Ne pas créer de tâches P1/P2 dédiées** : la vidéo 15 est **cataloguée pour traçabilité** uniquement ; implémenter d’abord P1-INS-1 à 15 et P2-INS-1 à 15 déjà listés.
+2. **Renforcer le garde-fou LoA (P1-INS-8)** : toute copy intention doit rester **honnête et non transactionnelle** — cette URL est un contre-exemple marketing à éviter.
+3. **Session 12 h = P2-INS-7** : valider en QA une session AFK prolongée sans pénalité — pas de badge « money flow ».
+4. **Ne pas afficher 432 / 888 / Hz** : barrière commune à toutes les refs solfège — inchangée.
+5. **Prioriser l’implémentation code** : voir pied de page ci-dessous — **pause catalogage** sauf URL avec espace visuel ou vol anneaux réel.
+
+---
+
+## Fichiers code liés (vidéo 15)
+
+- `docs/VERSE-COSMIC-NAV-DESIGN.md` — **aucune** ligne ajoutée (redondance)
+- `src/pages/WorldHub.jsx` — P1-INS-2, P1-INS-8 (déjà spécifiés)
+- `src/world/WorldScene.jsx` — P2-INS-7 (dérive passive)
+
+---
+
+## Pied de page — recommandation forte (catalogue YouTube)
+
+**Pause du catalogage** des références YouTube **sauf** si une future URL montre explicitement :
+
+- un **espace visuel** exploitable (cockpit, nébuleuse traversée, anneaux géants filmés en vol), ou  
+- du **vol / rail / traversée d’anneaux** comme référence gameplay (aucune des 15 entrées à ce jour).
+
+**Prochain sprint dev recommandé :** **implémenter** les tâches **P1-INS** déjà spécifiées dans `VERSE-COSMIC-NAV-DESIGN.md`, en priorité :
+
+| Priorité sprint | Tâches | Livrable utilisateur |
+|-----------------|--------|----------------------|
+| **P0 sprint** | P1-INS-2, P1-INS-6, P1-INS-7 | HUD « Prochain anneau » + palier X/9 + focus portail |
+| **P0 sprint** | P1-INS-1 | Mode contemplation (toggle vitesse) |
+| **P1 sprint** | P1-INS-4, P1-INS-8 | Constellations minimap + intention session (anti-LoA) |
+
+Le mood méditatif est **suffisamment documenté** ; la valeur utilisateur est dans le **Verse 3D** (`/world`), pas dans une 16ᵉ fiche audio redondante.
