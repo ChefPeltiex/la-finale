@@ -30,7 +30,7 @@
 
 **Audio vs visuel :** la majorité des entrées sont **musique / méditation** ; le Verse apporte le **décor 3D** (fog, étoiles, tores). Ne pas intégrer pistes YouTube (P2-INS-4). Visuels chaîne (IA, miniature) = **palette uniquement**, pas d’assets repris.
 
-**Phase 2 (produit)** : après **18** références utilisateur (dont **#14** focus gamma), le corpus reste majoritairement **solfège / méditation / ambient / binaural** ; la **#13** (`8kQgu2_1uEk`) reste le seul **documentaire narratif** hors Hz — pas une ref vol cosmique. Les **#14** et **#17** **confirment** des motifs déjà couverts (focus / paliers, 963 Hz + LoA) — **aucune** tâche P1/P2 supplémentaire. **Aucune** URL ne montre vol dans des anneaux ou rail spatial. Prioriser l’implémentation **P1 HUD + arc** ([`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md)) plutôt que d’ajouter des entrées YouTube, sauf refs **visuelles** (vol cosmique, anneaux traversés, hyperspace).
+**Phase 2 (produit) — catalogue suffisant :** après **19** références utilisateur, le corpus reste majoritairement **solfège / méditation / ambient / binaural** (≈16/19) ; la **#13** (`8kQgu2_1uEk`) reste le seul **documentaire narratif** hors Hz — pas une ref vol cosmique. La **#19** (`S-_vF1RxMR0`) **duplique** la **#4** et la **#12** (7 chakras + 999 Hz, Abundance Energy) — **aucune** tâche P1/P2 supplémentaire. **Aucune** URL ne montre vol dans des anneaux ou rail spatial. **Pause catalogage** YouTube sauf refs **visuelles** (vol cosmique, anneaux traversés, hyperspace). **Top 3 P1 à implémenter en code** : **P1-INS-2** (HUD « Prochain anneau »), **P1-INS-6** + **P1-INS-7** (palier X/9 + focus portail), **P1-INS-1** (mode contemplation). Détail : [`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md).
 
 ---
 
@@ -1709,6 +1709,134 @@ Les dix-sept références documentées confirment une **traversée symbolique co
 - `docs/VERSE-COSMIC-NAV-DESIGN.md` — **aucune** ligne ajoutée (redondance v3/v4)
 - `src/pages/WorldHub.jsx` — P1-INS-8 (intention anti-LoA)
 - `src/world/WorldScene.jsx` — P2-INS-7 (dérive passive)
+
+---
+
+# Addendum — Vidéo 18 (18ᵉ référence « verse des anneaux »)
+
+**Lien :** [https://www.youtube.com/watch?v=hmq72SLWBt8](https://www.youtube.com/watch?v=hmq72SLWBt8)  
+**ID :** `hmq72SLWBt8`  
+**Date de capture :** mai 2026  
+**Contexte utilisateur :** dix-huitième référence YouTube — stack **432 + 741 + 963 Hz**, marketing **guérison corps & âme** / sommeil profond (Brainwave Healing) ; **pas** vol spatial ni traversée d’anneaux.
+
+---
+
+## Ce que la vidéo est réellement
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *432Hz + 741Hz + 963Hz \| The Most Powerful Healing Frequency: Heals All Damage In Body And Soul #60* |
+| **Chaîne** | Brainwave Healing |
+| **Durée** | 3:00:00 (~3 h) |
+| **Vues** | ~8 (au moment de la capture — chaîne récente) |
+| **Publié** | 2026-05-13 |
+| **Catégorie** | Music |
+| **Type** | Musique méditation / **3 tons solfège superposés** + copy **healing frequency**, sommeil, sound therapy — **pas** gameplay, **pas** anneaux spatiaux, **pas** storyboard 3D |
+
+### Thèmes publics (description chaîne)
+
+- **Stack triplet** : 432 Hz (« nature’s heartbeat »), 741 Hz, 963 Hz (« pure consciousness ») — description mentionne aussi **528 Hz** (ADN / réparation, marketing) en keywords, **non** les trois du titre.
+- **Heal body and soul** : même famille que vidéo 5 (`IFH1pi6xIk4`, stack 5 Hz + corps/esprit) et vidéo 6 (`3OvM4ycNVL8`, duo 528+432) — **discours bien-être, non preuve médicale**.
+- **Deep sleep / insomnia relief** : piste fond sommeil, brainwave healing, relaxation — écoute passive ~3 h.
+- **Sound therapy** : réduction stress, équilibre émotionnel — **sans** narration structurante.
+- **Visuel** : miniature / branding chaîne typique sleep-music — **audio-first**, pas séquence vol cosmique ni anneaux traversables.
+
+### Transcript
+
+Pas de voix-off narrative exploitable ; contenu **audio superposé** + copy marketing (hashtags multilingues sommeil / guérison). L’inspiration produit utile = **session ~3 h** + rappel **anti-claims guérison** — pas storyboard de vol dans les anneaux.
+
+### Note « verse des anneaux »
+
+Les **tores** du Verse Egor69 (`realms.js`) restent la métaphore utilisateur. Cette URL **ne change pas** la priorité produit : elle **confirme** le pattern triplet/stack Hz + corps–âme déjà couvert par les vidéos 1, 5 et 6.
+
+### Implémentation 3D (constat vidéo)
+
+| Élément recherché | Présent dans la vidéo ? | Note Verse |
+|-------------------|-------------------------|------------|
+| Traversée d’anneaux / rail | **Non** | P2-INS-1 inchangé — portail narratif |
+| Vol spatial / cockpit | **Non** | Third-person marche cosmique |
+| Hyperspace / warp | **Non** | Transitions fade/scale existantes |
+| Anneaux planétaires / échelle NASA | **Non** | Échelle via fog, étoiles, tores (`COSMIC_NAV_V2`) |
+| Visuels cosmos / space flight | **Non** | **Audio-first** — pas décor flight |
+
+**Priorité produit :** **basse** — redondant avec triplet (1), stack 5 (5), duo corps–esprit (6), 432 (8). **Aucune nouvelle tâche P1/P2** dans `VERSE-COSMIC-NAV-DESIGN.md`.
+
+---
+
+## Emprunter (mood & UX — sans copier l’œuvre)
+
+| Idée | Application Egor69 Verse |
+|------|---------------------------|
+| **Session ~3 h** | P2-INS-7 (dérive passive) + mode contemplation (P1-INS-1) — déjà spécifiés |
+| **Corps / esprit** | P1-INS-11 (axes corps/esprit) — fil « body and soul » **sans** Hz ni guérison |
+| **Triplet symbolique** | Mood vidéo 1 (3 Hz fusionnés) — **ne pas** dupliquer un HUD « 3/3 » supplémentaire |
+| **Sommeil profond** | Complète P2-INS-11 (mode nuit) — pas nouvelle mécanique |
+| **Sound therapy** | Futur P2-INS-4 : ambiant original très bas — jamais Brainwave Healing |
+
+---
+
+## Ne pas copier (droits & promesses)
+
+| Risque | Action |
+|--------|--------|
+| **© Brainwave Healing** | Aucun extrait 432/741/963 Hz, miniature, ni branding chaîne |
+| **Heal all damage / most powerful healing** | Pas de claims guérison, ADN, insomnia cure, ni « powerful frequency » sur `/world` |
+| **432 / 528 / 741 / 963 Hz identifiables** | Pas de tons purs ni stack reconnaissable — audio P2 original uniquement |
+| **DNA repair (keywords 528)** | Pas de promesse réparation corporelle (barrière vidéo 6) |
+| **Gameplay inexistant** | Ne pas annoncer vol dans les anneaux sur cette URL |
+
+---
+
+## Comparaison (sélection — redondance)
+
+| Critère | `pSXgXAqomMY` (v1) | `IFH1pi6xIk4` (v5) | `3OvM4ycNVL8` (v6) | `hmq72SLWBt8` (v18) |
+|---------|-------------------|-------------------|-------------------|---------------------|
+| **Durée** | ~71 min | ~3 h 10 | ~2 h 53 | **~3 h** |
+| **Structure** | **3 Hz** fusionnés | **5 Hz** empilés | **2 Hz** (528+432) | **3 Hz** (432+741+963) |
+| **Visuel** | Art chaîne | Audio-first | Sleep / lune | **Audio-first** |
+| **Narratif** | Cœur / univers | Stack corps/esprit | Sommeil / ADN (marketing) | **Guérison corps & âme**, sommeil |
+| **Pour les Anneaux** | Dérive, `ritualHint` | 5 couches, axes | Mode nuit | **Rien de nouveau** — P1-INS-11 + P2-INS-7 |
+
+Les dix-huit références documentées confirment une **traversée symbolique contemplative** — **aucune** ne montre de gameplay « anneaux » spatial ou vol cosmique.
+
+---
+
+## Cinq recommandations concrètes (vidéo 18)
+
+1. **Ne pas créer de tâches P1/P2 dédiées** : catalogage **traçabilité** uniquement ; implémenter le **bundle P1** (pied de page ci-dessous).
+2. **Renforcer P1-INS-11** : axes corps/esprit couvrent déjà « body and soul » — pas de HUD triplet Hz.
+3. **Session 3 h = P2-INS-7** : valider dérive passive ~3 h sans pénalité AFK.
+4. **Barrière guérison** : disclaimers produit inchangés — cette URL est un contre-exemple marketing « heals all damage ».
+5. **Pause catalogage** : prochaine URL utile = **vol cosmique visuel** ou **traversée d’anneaux** filmée — sinon enchaîner **P1-INS-1 → P1-INS-18** en code.
+
+---
+
+## Fichiers code liés (vidéo 18)
+
+- `docs/VERSE-COSMIC-NAV-DESIGN.md` — **aucune** ligne ajoutée (redondance)
+- `src/pages/WorldHub.jsx` — P1-INS-11, P1-INS-8 (déjà spécifiés)
+- `src/world/WorldScene.jsx` — P2-INS-7, P2-INS-11 (dérive + nuit)
+
+---
+
+## Pied de page — recommandation forte (catalogue YouTube, mise à jour #18)
+
+**Pause du catalogage** des références YouTube **sauf** si une future URL montre explicitement :
+
+- un **espace visuel** exploitable (cockpit, nébuleuse traversée, anneaux géants filmés en vol), ou  
+- du **vol / rail / traversée d’anneaux** comme référence gameplay (aucune des **18** entrées à ce jour, dont `hmq72SLWBt8`).
+
+**Prochain sprint dev recommandé — bundle P1 (implémentation)** :
+
+| Priorité sprint | Tâches | Livrable utilisateur |
+|-----------------|--------|----------------------|
+| **P0 sprint** | P1-INS-2, P1-INS-6, P1-INS-7 | HUD « Prochain anneau » + palier X/9 + focus portail |
+| **P0 sprint** | P1-INS-1 | Mode contemplation (toggle vitesse) |
+| **P1 sprint** | P1-INS-4, P1-INS-8 | Constellations minimap + intention session (anti-LoA) |
+| **P1 sprint** | P1-INS-9, P1-INS-10, P1-INS-11 | Harmoniques 7 + couches 5 + axes corps/esprit |
+| **P1 sprint** | P1-INS-14, P1-INS-15, P1-INS-17 | Ancrage sol + theta créatif + corps entier 7/7 |
+
+Le mood méditatif est **suffisamment documenté** ; la valeur utilisateur est dans le **Verse 3D** (`/world`), pas dans une 19ᵉ fiche audio redondante.
 
 ---
 
