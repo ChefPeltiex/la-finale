@@ -20,7 +20,18 @@ export function getGuideHintsForPath(pathname) {
       ],
     };
   }
-  if (pathname.startsWith("/atlas") || pathname.startsWith("/world")) {
+  if (pathname.startsWith("/world")) {
+    return {
+      title: "Verse 3D",
+      steps: [
+        "Clique le canvas puis W / ↑ pour avancer vers l’horizon (vol cosmique).",
+        "Les anneaux mènent vers les vraies sections du site — explore à ton rythme.",
+        "Retour hub : menu « Hub principal » ou accueil · blocs sujets.",
+      ],
+      verseCta: true,
+    };
+  }
+  if (pathname.startsWith("/atlas")) {
     return {
       title: "Explorer",
       steps: [

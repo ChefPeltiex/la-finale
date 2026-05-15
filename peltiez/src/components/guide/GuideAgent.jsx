@@ -74,6 +74,28 @@ export default function GuideAgent() {
                 </li>
               ))}
             </ul>
+            {hints.verseCta && (
+              <div className="mt-3 space-y-2">
+                <Link
+                  to="/"
+                  onClick={() => setOpen(false)}
+                  className="block rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-[11px] text-white/80 hover:text-white hover:border-[#D4AF37]/40 transition-colors"
+                >
+                  Hub principal · blocs sujets
+                </Link>
+                <Link
+                  to="/world"
+                  onClick={() => setOpen(false)}
+                  className="flex items-center gap-2 rounded-lg border border-[#FFD700]/45 bg-[#FFD700]/10 px-3 py-2 text-[11px] font-semibold text-[#FFD700] hover:bg-[#FFD700]/15 transition-colors"
+                >
+                  <Sparkles className="h-3.5 w-3.5 shrink-0" />
+                  <span>
+                    Entrer dans le Verse
+                    <span className="block font-normal text-[#FFD700]/65">Vol cosmique · anneaux</span>
+                  </span>
+                </Link>
+              </div>
+            )}
             <a
               href={`/${COMPANION_DOC_PATH}`}
               target="_blank"

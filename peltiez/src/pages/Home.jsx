@@ -3,6 +3,7 @@ import SEOMeta from "@/components/SEOMeta";
 import { Link, useLocation } from "react-router-dom";
 import HomeHeroCards from "@/components/home/HomeHeroCards";
 import HomeEncyclopediasSection from "@/components/home/HomeEncyclopediasSection";
+import HomeSubjectBlocks from "@/components/home/HomeSubjectBlocks";
 import SymbolicDisclaimer from "@/components/ui/SymbolicDisclaimer";
 import useDisplayMode from "@/hooks/useDisplayMode";
 import SovereigntyLaws from "@/components/SovereigntyLaws";
@@ -177,6 +178,8 @@ export default function Home() {
       <HomeHeroCards />
 
       <HomeEncyclopediasSection />
+
+      <HomeSubjectBlocks />
 
       {/* Mur de la Victoire (Radar temps réel) */}
       <div id="accueil-radar" className="scroll-mt-28 lg:scroll-mt-8">

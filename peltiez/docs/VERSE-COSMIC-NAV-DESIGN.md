@@ -36,6 +36,7 @@ Remplacer l’exploration « pawn vert sur terrain » par un **voyage immersif d
 - Minimap / radar : couches « constellation » (regroupement des `WORLD_REALMS` par pôle).
 - Fil conducteur HUD : objectif courant (prochain portail non visité).
 - Données : étendre `worldPersistence` (constellations débloquées).
+- **Alignement 2D :** les blocs sujets de `NAV_POLE_BLOCKS` (`docs/ARCHITECTURE-NAV-BLOCS.md`) préfigurent ces groupes — un bloc = future constellation dans le HUD.
 
 ### P2 — Galaxies & chapitres
 
