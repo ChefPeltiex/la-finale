@@ -276,7 +276,7 @@ export const HOME_POLE_CARDS = NAV_POLES.map((pole) => {
   }
   const tagline =
     pole.id === "jouer"
-      ? "Entre dans le Verse — le jeu commence ici."
+      ? "Verse cinéma — dérive lente entre les anneaux, comme un voyage Planet Earth."
       : pole.id === "echanger"
         ? "Circule, publie, partage — l’économie vivante."
         : pole.id === "explorer"

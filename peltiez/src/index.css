@@ -73,6 +73,11 @@
     --sovereign-passion: #FF1744;
     --sovereign-mauve: #BF00FF;
     --sovereign-violet: #8A2BE2;
+    /* Verse 3D — ref. Planet Earth II OST (hL-BvWLPseE) */
+    --verse-twilight: #01040f;
+    --verse-fog: #1e1b4b;
+    --verse-gold-rim: #fbbf24;
+    --verse-nebula: #6366f1;
   }
 
   .dark {

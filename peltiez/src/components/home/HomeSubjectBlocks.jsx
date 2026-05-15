@@ -62,7 +62,7 @@ export default function HomeSubjectBlocks() {
                   <span className="flex-1 min-w-0">
                     Entrer dans le Verse
                     <span className="block text-[10px] font-normal text-[#FFD700]/70">
-                      Vol cosmique · anneaux
+                      Cinéma nature · anneaux du Verse
                     </span>
                   </span>
                   <ArrowRight className="h-4 w-4 shrink-0" />

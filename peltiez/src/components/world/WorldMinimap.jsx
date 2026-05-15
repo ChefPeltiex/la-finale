@@ -6,7 +6,9 @@ const WORLD_LIMIT = 58;
 /**
  * Radar façon GTA + repères façon carte TotK — rendu canvas (pas de re-render React par frame).
  */
-export default function WorldMinimap({ telemetryRef }) {
+export default function WorldMinimap({ telemetryRef, visitedSlugs = [] }) {
+  const visited = useRef(new Set(visitedSlugs));
+  visited.current = new Set(visitedSlugs);
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -34,7 +36,7 @@ export default function WorldMinimap({ telemetryRef }) {
       ctx.arc(cx, cy, mapR, 0, Math.PI * 2);
       ctx.fill();
 
-      ctx.strokeStyle = "rgba(52, 211, 153, 0.45)";
+      ctx.strokeStyle = "rgba(167, 139, 250, 0.5)";
       ctx.lineWidth = 2;
       ctx.beginPath();
       ctx.arc(cx, cy, mapR, 0, Math.PI * 2);
@@ -52,11 +54,17 @@ export default function WorldMinimap({ telemetryRef }) {
       for (const realm of WORLD_REALMS) {
         const mx = cx + realm.pos[0] * scale;
         const my = cy + realm.pos[2] * scale;
+        const done = visited.current.has(realm.slug);
         ctx.fillStyle = realm.color;
-        ctx.globalAlpha = 0.85;
+        ctx.globalAlpha = done ? 1 : 0.45;
         ctx.beginPath();
-        ctx.arc(mx, my, 4.5, 0, Math.PI * 2);
+        ctx.arc(mx, my, done ? 5 : 4, 0, Math.PI * 2);
         ctx.fill();
+        if (done) {
+          ctx.strokeStyle = "rgba(251, 191, 36, 0.75)";
+          ctx.lineWidth = 1.5;
+          ctx.stroke();
+        }
         ctx.globalAlpha = 1;
       }
 
@@ -64,7 +72,7 @@ export default function WorldMinimap({ telemetryRef }) {
       if (t && typeof t.x === "number" && typeof t.z === "number") {
         const px = cx + t.x * scale;
         const py = cy + t.z * scale;
-        ctx.strokeStyle = "#34d399";
+        ctx.strokeStyle = "#fbbf24";
         ctx.lineWidth = 2;
         ctx.beginPath();
         ctx.moveTo(px, py);
@@ -88,11 +96,11 @@ export default function WorldMinimap({ telemetryRef }) {
       alive = false;
       cancelAnimationFrame(raf);
     };
-  }, [telemetryRef]);
+  }, [telemetryRef, visitedSlugs]);
 
   return (
     <div className="pointer-events-none absolute bottom-24 right-4 sm:bottom-28 sm:right-6 z-[210]">
-      <canvas ref={canvasRef} width={168} height={168} className="rounded-full border border-emerald-500/30 shadow-lg shadow-emerald-900/40" />
+      <canvas ref={canvasRef} width={168} height={168} className="rounded-full border border-indigo-400/35 shadow-lg shadow-indigo-950/50" />
       <p className="mt-1 text-center text-[9px] font-bold uppercase tracking-widest text-white/45">Radar</p>
     </div>
   );

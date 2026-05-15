@@ -3,8 +3,8 @@ import { useNavigate, Link } from "react-router-dom";
 
 const WorldScene = lazy(() => import("@/world/WorldScene"));
 import SEOMeta from "@/components/SEOMeta";
-import { Sparkles, MousePointer2, DoorOpen, ChevronLeft, Trophy, Gem, CircleHelp, BookOpen } from "lucide-react";
-import { loadCheckpoint, recordRealmVisit, getVisitedRealmCount } from "@/lib/worldPersistence";
+import { Sparkles, MousePointer2, DoorOpen, ChevronLeft, Trophy, Gem, CircleHelp, BookOpen, Compass } from "lucide-react";
+import { loadCheckpoint, recordRealmVisit, getVisitedRealmCount, getVisitedRealmSlugs } from "@/lib/worldPersistence";
 import { REALM_COUNT } from "@/world/realms";
 import { SITE_ORIGIN, WORLD_ETHOS } from "@/lib/site";
 import WorldMinimap from "@/components/world/WorldMinimap";
@@ -12,7 +12,16 @@ import WorldLorePanel from "@/components/world/WorldLorePanel";
 import VerseGrimoire from "@/components/world/VerseGrimoire";
 import { loadUniversePreferences } from "@/lib/universePreferences";
 import { useWorldKeyboard } from "@/components/world/CosmicNavControls";
-import { COSMIC_NAV_V2 } from "@/config/cosmicNav";
+import { COSMIC_NAV_V2, VERSE_STYLE } from "@/config/cosmicNav";
+import { findNearestUnvisitedRealm, getArcSegmentProgress } from "@/lib/verseHud";
+import {
+  getVerseAudioEngine,
+  getRealmFrequencyProfile,
+  isVerseAudioEnabled,
+  setVerseAudioEnabled,
+} from "@/lib/verseAudio";
+import VerseMaitre from "@/components/world/VerseMaitre";
+import SymbolicDisclaimer from "@/components/ui/SymbolicDisclaimer";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
@@ -25,7 +34,20 @@ export default function WorldHub() {
   const [universePrefs, setUniversePrefs] = useState(loadUniversePreferences);
   const [helpOpen, setHelpOpen] = useState(false);
   const [grimoireOpen, setGrimoireOpen] = useState(false);
+  const [portalFocus, setPortalFocus] = useState(false);
+  const [hudTick, setHudTick] = useState(0);
+  const [audioOn, setAudioOn] = useState(() => isVerseAudioEnabled());
+  const [profileId, setProfileId] = useState("earth");
+  const [maitrePulse, setMaitrePulse] = useState(false);
+  const lastNearSlugRef = useRef(null);
   const navigate = useNavigate();
+
+  const visitedSlugs = useMemo(() => getVisitedRealmSlugs(), [visitedCount, hudTick]);
+  const arc = useMemo(() => getArcSegmentProgress(visitedCount, REALM_COUNT), [visitedCount]);
+  const nextRing = useMemo(() => {
+    const t = playerTelemetryRef.current;
+    return findNearestUnvisitedRealm(t?.x, t?.z, visitedSlugs);
+  }, [visitedSlugs, nearRealm, hudTick]);
 
   const controls = useMemo(
     () => [
@@ -64,6 +86,62 @@ export default function WorldHub() {
   }, []);
 
   useEffect(() => {
+    const id = window.setInterval(() => setHudTick((n) => n + 1), 900);
+    return () => window.clearInterval(id);
+  }, []);
+
+  useEffect(() => {
+    const onAudioChange = (ev) => setAudioOn(!!ev.detail?.enabled);
+    window.addEventListener("egor69-verse-audio-change", onAudioChange);
+    return () => window.removeEventListener("egor69-verse-audio-change", onAudioChange);
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      getVerseAudioEngine().stop();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!audioOn) return;
+    const pid = getRealmFrequencyProfile(nearRealm);
+    setProfileId(pid);
+    const engine = getVerseAudioEngine();
+    void engine.crossfadeTo(pid);
+  }, [nearRealm?.slug, audioOn]);
+
+  useEffect(() => {
+    const slug = nearRealm?.slug ?? null;
+    if (slug === lastNearSlugRef.current) return;
+    const hadPrevious = lastNearSlugRef.current != null;
+    lastNearSlugRef.current = slug;
+    if (!slug) return;
+    setPortalFocus(true);
+    setMaitrePulse(true);
+    if (audioOn) void getVerseAudioEngine().playPortalChime();
+    const tFocus = window.setTimeout(() => setPortalFocus(false), VERSE_STYLE.portalFocusMs);
+    const tMaitre = window.setTimeout(() => setMaitrePulse(false), VERSE_STYLE.portalFocusMs);
+    return () => {
+      window.clearTimeout(tFocus);
+      window.clearTimeout(tMaitre);
+    };
+  }, [nearRealm?.slug, audioOn]);
+
+  const toggleVerseAudio = async () => {
+    const next = !audioOn;
+    setVerseAudioEnabled(next);
+    setAudioOn(next);
+    const engine = getVerseAudioEngine();
+    if (next) {
+      const pid = getRealmFrequencyProfile(nearRealm);
+      setProfileId(pid);
+      await engine.start(pid);
+    } else {
+      engine.stop();
+    }
+  };
+
+  useEffect(() => {
     const onPortalKey = (e) => {
       if ((e.code === "Enter" || e.code === "KeyE") && nearRealm) {
         e.preventDefault();
@@ -76,8 +154,19 @@ export default function WorldHub() {
     return () => window.removeEventListener("keydown", onPortalKey);
   }, [nearRealm, navigate]);
 
+  const hudAccent = COSMIC_NAV_V2 ? "text-amber-200/90" : "text-emerald-300/90";
+  const nearAccent = COSMIC_NAV_V2
+    ? "border-amber-400/45 shadow-[0_0_40px_rgba(251,191,36,0.2)]"
+    : "border-emerald-400/50 shadow-[0_0_40px_rgba(52,211,153,0.25)]";
+
   return (
-    <div className="fixed inset-0 z-[200] bg-black text-white">
+    <div className="fixed inset-0 z-[200] bg-[#01040f] text-white">
+      {COSMIC_NAV_V2 ? (
+        <>
+          <div className="pointer-events-none absolute inset-x-0 top-0 z-[210] h-[5vh] min-h-[28px] bg-gradient-to-b from-black/85 to-transparent" aria-hidden />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[210] h-[6vh] min-h-[32px] bg-gradient-to-t from-black/80 to-transparent" aria-hidden />
+        </>
+      ) : null}
       <SEOMeta
         title="Verse Egor69 — open world WebGL, portails narratifs & progression honnête"
         description="Explore un continent numérique : relief procédural, sprint, saut et glisse, radar façon GTA, douze salles reliées au marketplace, atlas, encyclopédie biblique, cosmos, ésotérisme, génome et alliances — chaque portail expose lore, rites suggérés et engagements vérifiables, sans métriques fictives."
@@ -89,7 +178,7 @@ export default function WorldHub() {
         <Suspense
           fallback={
             <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-black text-white/75">
-              <div className="h-9 w-9 border-2 border-emerald-400/30 border-t-emerald-400 rounded-full animate-spin" />
+              <div className="h-9 w-9 border-2 border-amber-400/30 border-t-amber-400 rounded-full animate-spin" />
               <p className="text-sm font-medium tracking-wide">Chargement 3D…</p>
             </div>
           }
@@ -103,23 +192,56 @@ export default function WorldHub() {
         </Suspense>
       </div>
 
-      <WorldMinimap telemetryRef={playerTelemetryRef} />
+      <div className={`transition-opacity duration-500 ${portalFocus ? "opacity-0 pointer-events-none" : "opacity-100"}`}>
+        <WorldMinimap telemetryRef={playerTelemetryRef} visitedSlugs={visitedSlugs} />
+      </div>
 
-      {/* HUD — pas un overlay 8-bit : typographie nette, glass UI */}
       <div className="pointer-events-none absolute inset-0 flex flex-col justify-between p-4 sm:p-6">
-        <div className="pointer-events-auto flex flex-wrap items-start justify-between gap-3">
+        <div
+          className={`pointer-events-auto flex flex-wrap items-start justify-between gap-3 transition-opacity duration-500 ${
+            portalFocus ? "opacity-0" : "opacity-100"
+          }`}
+        >
           <div
-            className="rounded-2xl border border-white/10 px-4 py-3 backdrop-blur-xl max-w-md"
+            className={`rounded-2xl border px-4 py-3 backdrop-blur-xl max-w-md ${
+              COSMIC_NAV_V2 ? "border-indigo-400/20" : "border-white/10"
+            }`}
             style={{
-              background: "linear-gradient(135deg, rgba(16,185,129,0.12), rgba(99,102,241,0.08))",
+              background: COSMIC_NAV_V2
+                ? "linear-gradient(135deg, rgba(251,191,36,0.1), rgba(99,102,241,0.12))"
+                : "linear-gradient(135deg, rgba(16,185,129,0.12), rgba(99,102,241,0.08))",
             }}
           >
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-emerald-300/90">
+            <div className={`flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] ${hudAccent}`}>
               <Sparkles className="h-4 w-4" />
-              Verse spatial Egor69
+              {COSMIC_NAV_V2 ? "Verse · voyage cinéma" : "Verse spatial Egor69"}
             </div>
+
+            {COSMIC_NAV_V2 && nextRing ? (
+              <div className="mt-2 rounded-xl border border-amber-400/35 bg-black/40 px-3 py-2">
+                <p className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-violet-200/80">
+                  <Compass className="h-3 w-3 shrink-0" /> Prochain anneau
+                </p>
+                <p className="text-sm font-semibold text-white leading-snug">{nextRing.label}</p>
+                {nextRing.ritualHint ? (
+                  <p className="mt-1 text-[11px] text-white/65 italic leading-snug">{nextRing.ritualHint}</p>
+                ) : null}
+              </div>
+            ) : null}
+
+            {COSMIC_NAV_V2 ? (
+              <div className="mt-2 flex flex-wrap items-center gap-2 text-[11px] font-semibold">
+                <span className="rounded-full border border-indigo-400/40 bg-indigo-950/50 px-2.5 py-0.5 text-violet-200">
+                  Anneau {arc.segment}/{arc.segments}
+                </span>
+                <span className="text-white/55">
+                  {visitedCount}/{REALM_COUNT} salles
+                </span>
+              </div>
+            ) : null}
+
             {universePrefs.gameplayUniverse?.name?.trim() ? (
-              <div className="mt-2 rounded-xl border border-emerald-400/30 bg-black/30 px-3 py-2">
+              <div className="mt-2 rounded-xl border border-violet-400/30 bg-black/30 px-3 py-2">
                 <p className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-fuchsia-200/80">
                   <Gem className="h-3 w-3" /> Univers personnel
                 </p>
@@ -133,31 +255,37 @@ export default function WorldHub() {
                 ) : null}
               </div>
             ) : null}
+
             <p className="mt-2 text-sm text-white/80 leading-snug">
               {COSMIC_NAV_V2
-                ? "Voyage cosmique · anneaux du Verse · une intention honnête suffit avant un portail · "
+                ? "Dérive lente · anneaux du Verse · regard vers l’horizon avant chaque seuil · "
                 : "Open world · "}
-              clic canvas pour la souris · <span className="text-white font-semibold">W A S D</span> ou flèches ·{" "}
-              <span className="text-emerald-300">Shift</span> sprint · <span className="text-sky-300">Espace</span> saut /
-              maintien en l’air (glisse) · <span className="text-amber-300">E</span> portail
+              clic canvas · <span className="text-white font-semibold">W A S D</span> ·{" "}
+              <span className={COSMIC_NAV_V2 ? "text-amber-300" : "text-emerald-300"}>Shift</span> sprint ·{" "}
+              <span className="text-sky-300">Espace</span> saut / glisse ·{" "}
+              <span className="text-amber-300">E</span> portail
             </p>
-            <p className="mt-2 flex items-center gap-2 text-xs font-semibold text-cyan-300/90">
+            <p className={`mt-2 flex items-center gap-2 text-xs font-semibold ${COSMIC_NAV_V2 ? "text-violet-200/90" : "text-cyan-300/90"}`}>
               <Trophy className="h-3.5 w-3.5 shrink-0" />
-              Progression : {visitedCount} / {REALM_COUNT} salles ouvertes · pose sauvegardée en session
+              Progression : {visitedCount} / {REALM_COUNT} salles · localStorage par portail
             </p>
-            <ul className="mt-3 space-y-1.5 text-[10px] leading-snug text-white/55 border-t border-white/10 pt-3">
-              {WORLD_ETHOS.charter.slice(0, 3).map((line) => (
-                <li key={line.slice(0, 24)} className="flex gap-2">
-                  <span className="text-emerald-500/90 shrink-0">◆</span>
-                  <span>{line}</span>
-                </li>
-              ))}
-            </ul>
+            {!COSMIC_NAV_V2 ? (
+              <ul className="mt-3 space-y-1.5 text-[10px] leading-snug text-white/55 border-t border-white/10 pt-3">
+                {WORLD_ETHOS.charter.slice(0, 3).map((line) => (
+                  <li key={line.slice(0, 24)} className="flex gap-2">
+                    <span className="text-emerald-500/90 shrink-0">◆</span>
+                    <span>{line}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
           </div>
 
           <Link
             to="/"
-            className="pointer-events-auto inline-flex items-center gap-2 rounded-xl border border-white/15 bg-black/50 px-4 py-2.5 text-sm font-semibold text-white/90 backdrop-blur-md hover:bg-white/10 hover:border-emerald-400/40 transition-colors"
+            className={`pointer-events-auto inline-flex items-center gap-2 rounded-xl border border-white/15 bg-black/50 px-4 py-2.5 text-sm font-semibold text-white/90 backdrop-blur-md hover:bg-white/10 transition-colors ${
+              COSMIC_NAV_V2 ? "hover:border-amber-400/40" : "hover:border-emerald-400/40"
+            }`}
           >
             <ChevronLeft className="h-4 w-4" />
             Interface 2D
@@ -178,7 +306,9 @@ export default function WorldHub() {
             type="button"
             variant="outline"
             size="sm"
-            className="pointer-events-auto border-white/15 bg-black/50 text-white/90 backdrop-blur-md hover:bg-white/10 hover:border-emerald-400/40"
+            className={`pointer-events-auto border-white/15 bg-black/50 text-white/90 backdrop-blur-md hover:bg-white/10 ${
+              COSMIC_NAV_V2 ? "hover:border-amber-400/40" : "hover:border-emerald-400/40"
+            }`}
             onClick={() => setHelpOpen(true)}
           >
             <CircleHelp className="h-4 w-4" />
@@ -189,26 +319,33 @@ export default function WorldHub() {
         <div className="pointer-events-none flex justify-center pb-4 px-2">
           <div
             className={`rounded-2xl border px-4 sm:px-6 py-4 backdrop-blur-xl transition-all duration-300 max-h-[52vh] overflow-y-auto ${
-              nearRealm
-                ? "border-emerald-400/50 shadow-[0_0_40px_rgba(52,211,153,0.25)] scale-[1.02]"
-                : "border-white/10 opacity-80"
+              nearRealm ? `${nearAccent} scale-[1.02]` : "border-white/10 opacity-80"
             }`}
             style={{
               background: nearRealm
-                ? "linear-gradient(135deg, rgba(16,185,129,0.2), rgba(59,130,246,0.12))"
+                ? COSMIC_NAV_V2
+                  ? "linear-gradient(135deg, rgba(251,191,36,0.18), rgba(99,102,241,0.14))"
+                  : "linear-gradient(135deg, rgba(16,185,129,0.2), rgba(59,130,246,0.12))"
                 : "linear-gradient(135deg, rgba(0,0,0,0.55), rgba(15,23,42,0.5))",
             }}
           >
             <div className="flex flex-col sm:flex-row sm:items-start gap-4 w-full max-w-4xl mx-auto">
-              <MousePointer2 className={`h-6 w-6 shrink-0 mt-1 ${nearRealm ? "text-emerald-400" : "text-white/40"}`} />
+              <MousePointer2
+                className={`h-6 w-6 shrink-0 mt-1 ${nearRealm ? (COSMIC_NAV_V2 ? "text-amber-400" : "text-emerald-400") : "text-white/40"}`}
+              />
               <div className="flex-1 min-w-0 space-y-3">
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-white/50">Portail & narration</p>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-white/50">
+                    {portalFocus ? "Focus portail" : "Portail & narration"}
+                  </p>
                   <p className="text-lg font-black tracking-tight">
                     {nearRealm ? nearRealm.label : "Anneaux du Verse — approche pour déplier la chambre"}
                   </p>
+                  {nearRealm?.ritualHint ? (
+                    <p className="mt-2 text-sm text-amber-100/85 italic leading-snug">{nearRealm.ritualHint}</p>
+                  ) : null}
                   {nearRealm && (
-                    <p className="mt-2 flex flex-wrap items-center gap-2 text-sm text-emerald-200/90">
+                    <p className={`mt-2 flex flex-wrap items-center gap-2 text-sm ${COSMIC_NAV_V2 ? "text-amber-200/90" : "text-emerald-200/90"}`}>
                       <DoorOpen className="h-4 w-4 shrink-0" />
                       <span>
                         <kbd className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-xs">E</kbd> ou{" "}
@@ -217,7 +354,7 @@ export default function WorldHub() {
                     </p>
                   )}
                 </div>
-                <WorldLorePanel realm={nearRealm} />
+                {!portalFocus ? <WorldLorePanel realm={nearRealm} /> : null}
               </div>
             </div>
           </div>
@@ -227,15 +364,15 @@ export default function WorldHub() {
       <VerseGrimoire open={grimoireOpen} onOpenChange={setGrimoireOpen} highlightSlug={nearRealm?.slug ?? null} />
 
       <Dialog open={helpOpen} onOpenChange={setHelpOpen}>
-        <DialogContent className="max-w-lg border-emerald-500/20 bg-zinc-950 text-zinc-100">
+        <DialogContent className={`max-w-lg bg-zinc-950 text-zinc-100 ${COSMIC_NAV_V2 ? "border-amber-500/25" : "border-emerald-500/20"}`}>
           <DialogHeader>
-            <DialogTitle className="flex items-center gap-2 text-emerald-200">
+            <DialogTitle className={`flex items-center gap-2 ${COSMIC_NAV_V2 ? "text-amber-200" : "text-emerald-200"}`}>
               <CircleHelp className="h-5 w-5" />
               Verse 3D — contrôles & progression
             </DialogTitle>
             <DialogDescription className="text-zinc-400">
               Rappel rapide. Le manuel complet est disponible dans l’app via <code className="rounded bg-zinc-900 px-1">/manuel</code>.
-              Ouvre le <span className="text-emerald-300/90">Codex du Verse</span> (bouton grimoire) pour les cartes-portails style TGC.
+              Ouvre le <span className={COSMIC_NAV_V2 ? "text-amber-300/90" : "text-emerald-300/90"}>Codex du Verse</span> pour les cartes-portails.
             </DialogDescription>
           </DialogHeader>
 
@@ -255,8 +392,16 @@ export default function WorldHub() {
             <div className="rounded-xl border border-white/10 bg-black/40 p-4">
               <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Progression</p>
               <p className="mt-2 text-sm text-white/80">
-                Visites enregistrées : <span className="font-semibold text-emerald-200">{visitedCount}</span> /{" "}
-                <span className="font-semibold">{REALM_COUNT}</span>. La position est sauvegardée en session.
+                Visites (localStorage) :{" "}
+                <span className={`font-semibold ${COSMIC_NAV_V2 ? "text-amber-200" : "text-emerald-200"}`}>{visitedCount}</span> /{" "}
+                <span className="font-semibold">{REALM_COUNT}</span>
+                {COSMIC_NAV_V2 ? (
+                  <>
+                    {" "}
+                    · arc <span className="font-semibold text-violet-200">Anneau {arc.segment}/{arc.segments}</span>
+                  </>
+                ) : null}
+                . Position sauvegardée en session.
               </p>
             </div>
           </div>

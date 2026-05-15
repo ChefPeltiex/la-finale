@@ -1,5 +1,38 @@
 # Verse — Inspiration YouTube (référence utilisateur)
 
+## PRIMARY STYLE REFERENCE — `hL-BvWLPseE` (tout le Verse)
+
+**Lien :** [https://www.youtube.com/watch?v=hL-BvWLPseE](https://www.youtube.com/watch?v=hL-BvWLPseE)  
+**ID :** `hL-BvWLPseE`  
+**Statut :** référence **principale** demandée par l’utilisateur (« je voudrais ça dans ce style là pour tout ») — prioritaire sur les entrées numérotées ci-dessous.
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *Planet Earth II Soundtrack — Hans Zimmer / Shea / Klebe — Cupofchill Music* |
+| **Chaîne** | Cupofchill Music |
+| **Durée** | ~44 min (playlist OST complète) |
+| **Type** | **Audio-first** — bande son documentaire nature BBC, **pas** gameplay vol spatial ni boucle nébuleuse YouTube |
+
+### Ce que la vidéo est (et n’est pas)
+
+- **Est :** voyage orchestral émotionnel, échelle « planète vivante », montées lentes, orches + cordes, chapitres narratifs (Savage Beauty, Great Migration, Flight Over Alps, etc.).
+- **N’est pas :** vol dans des anneaux, rail hyperspace, solfège Hz, méditation LoA, visuels MidJourney type chaîne Abundance Energy.
+
+### Traduction produit Verse (`/world`, HUD, pôle Jouer)
+
+| Dimension | Emprunter (sans copier l’œuvre) | Implémentation |
+|-----------|----------------------------------|----------------|
+| **Couleurs** | Crépuscule profond, brume indigo, liseré or, violet doux | `VERSE_STYLE` (`cosmicNav.js`), tokens `--verse-*` (`index.css`), fog / Sky / Stars |
+| **Mouvement** | Dérive contemplative, pas course | `COSMIC_WALK_SPEED` −5 %, étoiles lentes, pulse discret des tores |
+| **Échelle** | Awe cinéma, horizon lointain | FOV 62°, brume étendue, double couche `Sparkles` or + violet |
+| **HUD** | Minimal, barres cinéma, pas arcade vert | Letterbox, « Anneau X/9 », prochain anneau + `ritualHint`, focus portail 3–5 s |
+| **Son** | Mood orchestral **uniquement** via piste **licenciée** ou ambiante libre | `AmbientMusic` — `planet-earth` = fichier utilisateur ; **interdit** : extrait YouTube / OST non licenciée |
+| **Santé** | Aucune claim Hz / guérison | Pas de fréquences ni bienfaits médicaux dans le copy |
+
+Les autres URLs du tableau ci-dessous restent des **affinages** (solfège, paliers 9, etc.) ; **`hL-BvWLPseE` fixe la direction visuelle et le pacing** pour l’ensemble du Verse.
+
+---
+
 ## Synthèse — toutes les références (audio vs visuel · priorité)
 
 | # | ID | Chaîne | ~Durée | **Audio** vs **Visuel** | Structure / narratif | **Priorité impl.** | Emprunt Verse (P1 → P2) |

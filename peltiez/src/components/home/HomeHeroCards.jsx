@@ -29,7 +29,7 @@ const CARDS = [
   },
   {
     title: "Verse 3D",
-    desc: "Vestibule immersif vers le monde WebGL.",
+    desc: "Voyage cinéma · anneaux en brume indigo — mood Planet Earth II, sans copier la bande-son.",
     to: "/world",
     icon: Sparkles,
     accent: "from-[#FF1744]/10 to-transparent border-[#FF1744]/35 hover:shadow-[0_0_20px_rgba(255,23,68,0.1)]",
