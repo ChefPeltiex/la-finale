@@ -1603,7 +1603,7 @@ Les seize références documentées à ce stade confirment une **traversée symb
 **Lien :** [https://www.youtube.com/watch?v=iehH5fGK80A](https://www.youtube.com/watch?v=iehH5fGK80A)  
 **ID :** `iehH5fGK80A`  
 **Date de capture :** mai 2026  
-**Contexte utilisateur :** dix-septième référence YouTube — accent **963 Hz** (« fréquence de Dieu »), **miracles / bénédictions / grande tranquillité**, **LoA** et bien-être (chaîne espagnole Lucid Dreaming Music) ; **pas** vol spatial, **pas** traversée d’anneaux, **pas** gameplay.
+**Contexte utilisateur :** dix-septième référence YouTube — accent **963 Hz** (« fréquence de Dieu »), **miracles / bénédictions / grande tranquillité**, **LoA** et bien-être (chaîne espagnole Lucid Dreaming Music) ; **pas** vol spatial, **pas** traversée d’anneaux, **pas** gameplay. **Priorité impl. vol / anneaux cosmiques :** nulle (audio-first — ne pas sur-prioriser P1 flight).
 
 ---
 
@@ -1837,7 +1837,129 @@ Les dix-huit références documentées confirment une **traversée symbolique co
 | **P1 sprint** | P1-INS-9, P1-INS-10, P1-INS-11 | Harmoniques 7 + couches 5 + axes corps/esprit |
 | **P1 sprint** | P1-INS-14, P1-INS-15, P1-INS-17 | Ancrage sol + theta créatif + corps entier 7/7 |
 
-Le mood méditatif est **suffisamment documenté** ; la valeur utilisateur est dans le **Verse 3D** (`/world`), pas dans une 19ᵉ fiche audio redondante.
+Le mood méditatif est **suffisamment documenté** ; la valeur utilisateur est dans le **Verse 3D** (`/world`), pas dans une 21ᵉ fiche audio redondante.
+
+---
+
+# Addendum — Vidéo 20 (20ᵉ référence « verse des anneaux »)
+
+**Lien :** [https://www.youtube.com/watch?v=SiiSBQErMMQ](https://www.youtube.com/watch?v=SiiSBQErMMQ)  
+**ID :** `SiiSBQErMMQ`  
+**Date de capture :** mai 2026  
+**Contexte utilisateur :** vingtième référence YouTube — **millionnaire / abondance**, fusion **432 Hz + 777 Hz**, rituel marketing **7 minutes**, **LoA** et reprogrammation subconsciente (Circle of Attraction) ; **pas** vol spatial, **pas** traversée d’anneaux, **pas** gameplay 3D.
+
+---
+
+## Ce que la vidéo est réellement
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *MEGA-MILLIONAIRE Frequency \| Attract Wealth in 7 Minutes with 432Hz + 777Hz Abundance Sound* |
+| **Chaîne** | Circle of Attraction |
+| **Durée** | 1:11:11 (~1 h 11 min) |
+| **Vues** | ~938 K (au moment de la capture) |
+| **Publié** | 2025-03-05 |
+| **Catégorie** | Music |
+| **Type** | Musique méditation / **wealth frequency** + marketing **law of attraction**, millionnaire, codes **777** / **432 Hz** — **pas** vol spatial, **pas** anneaux traversables, **pas** storyboard 3D |
+
+### Thèmes publics (description chaîne)
+
+- **Mega-millionaire / attract wealth** : « millionaire vibration », flux d’argent, miracles financiers — **discours mindset / bien-être, non preuve économique**.
+- **432 Hz + 777 Hz** : fusion marketing dans le titre — **432** déjà couvert (vidéos 6, 8, 9, 15) ; **777** = angel number / prospérité (même famille que **888** vidéo 15).
+- **Rituel 7 minutes** : copy « listen 7 minutes » pour activer l’abondance — **métaphore seuil court**, pas mécanique Verse (cf. rituel 60 s vidéo 10, distinct).
+- **LoA / subconscious reprogramming** : visualisation, casque, gratitude — **contre-exemple** pour P1-INS-8 (anti-LoA).
+- **Usage** : fond travail ou visualisation ; piste **~1 h 11** en continu — volume modéré, casque recommandé par la chaîne.
+
+### Mood visuel / audio
+
+| Dimension | Lecture produit |
+|-----------|-----------------|
+| **Visuel** | Miniature / branding chaîne (esthétique manifestation / argent) — **pas** de séquence 3D, rail, anneaux planétaires, cockpit ni vol cosmique. **Priorité vol / space rings : nulle.** |
+| **Audio** | **Dominant** — piste longue ~1 h 11 avec promesse d’effet dès 7 min ; tons 432/777 **marketing**, pas gameplay. |
+| **Structure** | **1 piste continue** — pas de chapitres YouTube ; hook « 7 minutes » dans le titre/description uniquement. |
+| **Narratif marketing** | « When this video appears, abundance is near », wealth blocks, millionaire mindset — **à ne pas reprendre** sur `/world`. |
+| **Transcript** | Description + hashtags (#ManifestMoneyNow, #777Hz, etc.) — pas de voix-off storyboard ; inspiration = **session passive** + rappel anti-richesse promise. |
+
+### Note « verse des anneaux »
+
+Les **tores** du Verse Egor69 (`realms.js`) restent la métaphore utilisateur (« Anneaux du Verse »). Cette URL **ne montre pas** d’anneaux cosmiques à traverser : elle **confirme** la playlist **LoA / Hz / richesse** — **sans** levier visuel pour le décor 3D.
+
+### Flag — espace / anneaux spatiaux / vol cosmique ?
+
+| Question | Réponse |
+|----------|---------|
+| **Vol spatial / anneaux géants / rail / hyperspace ?** | **Non** — audio-first manifestation financière. |
+| **Visuel exploitable pour `/world` ?** | **Palette** or / violet marketing optionnelle — **pas** mécanique de vol ni assets chaîne. |
+| **Priorité impl. #1 vol / space rings ?** | **Non** — **ne pas** flagger ; catalogage mood + anti-LoA uniquement. |
+
+### Implémentation 3D (constat vidéo)
+
+| Élément recherché | Présent dans la vidéo ? | Note Verse |
+|-------------------|-------------------------|------------|
+| Traversée d’anneaux / rail | **Non** | P2-INS-1 inchangé — portail narratif |
+| Vol spatial / cockpit | **Non** | Third-person marche cosmique |
+| Hyperspace / warp | **Non** | Transitions fade/scale existantes |
+| Anneaux planétaires / échelle NASA | **Non** | Échelle via fog, étoiles, tores (`COSMIC_NAV_V2`) |
+| Visuels cosmos / space flight | **Non** | **Audio-first** — keywords richesse, pas décor flight |
+
+**Priorité produit :** **basse** — **redondant** avec intention LoA (3), miracles (4), money stack (5), theta billionaire (11), money flow 12 h (15). **Aucune nouvelle tâche P1/P2** dans `VERSE-COSMIC-NAV-DESIGN.md`.
+
+---
+
+## Emprunter (mood & UX — sans copier l’œuvre)
+
+| Idée | Application Egor69 Verse |
+|------|---------------------------|
+| **Session ~1 h** | P1-INS-1 contemplation + P2-INS-7 dérive — même ordre de durée que vidéos 1, 8, 11 |
+| **Seuil court (7 min)** | **Ne pas** copier le marketing « 7 minutes » — le rituel Verse reste P1-INS-19 (60 s) si implémenté |
+| **Intention honnête** | **Renforcer P1-INS-8** — formulation personnelle, **anti-LoA** et anti-richesse explicites |
+| **432 feel (audio futur)** | P2-INS-4 — accords doux, **pas** ton pur ni piste Circle of Attraction |
+| **Gratitude sobre** | Toast une ligne post-visite (déjà P2 vidéo 3) — **sans** promesse millionnaire |
+
+---
+
+## Ne pas copier (droits & promesses)
+
+| Risque | Action |
+|--------|--------|
+| **© Circle of Attraction** | Aucun extrait, sample millionaire frequency, miniature ni branding chaîne |
+| **Mega-millionaire / attract wealth / financial miracles** | Pas de promesse richesse, flux financier, ni mindset « millionaire » sur `/world` |
+| **777 / 888 / angel numbers / LoA** | Pas de codes prospérité, « when this video appears », ni LoA en UI |
+| **432 Hz / 777 Hz identifiables** | Pas de tons purs — audio P2 original uniquement (P2-INS-4) |
+| **7-minute wealth activation** | Pas de copy « activez en 7 min » ni timer magique abondance |
+| **Gameplay inexistant** | Ne pas annoncer vol dans les anneaux sur cette URL |
+
+---
+
+## Comparaison (sélection — redondance LoA / richesse)
+
+| Critère | `OlV26ouCn5w` (v3) | `svKgmiSTpG4` (v15) | `admhD1UCmI8` (v11) | `SiiSBQErMMQ` (v20) |
+|---------|-------------------|---------------------|---------------------|---------------------|
+| **Durée** | ~6 h | ~11 h 55 | ~71 min | **~1 h 11** |
+| **Narratif** | LoA / intention | Money flow / 432 | Theta / billionaire | **Millionaire** + 777 + 7 min |
+| **432 Hz** | Titre 963 | **Titre** | (marketing theta) | **Titre** + 777 |
+| **Visuel** | Branding | Audio pur | Miniature chaîne | **Audio-first** (branding argent) |
+| **Pour les Anneaux** | Intention, AFK | Anti-LoA, dérive 12 h | Theta créatif (sans billionaire) | **Rien de nouveau** — P1-INS-8 + P2-INS-7 |
+
+Les **vingt** références documentées confirment une **traversée symbolique contemplative** — **aucune** ne montre de gameplay « anneaux » spatial ou vol cosmique.
+
+---
+
+## Cinq recommandations concrètes (vidéo 20)
+
+1. **Ne pas créer de tâches P1/P2 dédiées** : catalogage **#20** pour traçabilité ; implémenter le **top 5 P1** (section « Catalogue suffisant » en tête de fichier).
+2. **Renforcer P1-INS-8 (anti-LoA)** : cette URL est un contre-exemple maximal (millionnaire, 777, « abundance is near »).
+3. **Ne pas flagger priorité vol #1** : pas de contenu espace / 3D / vol — **priorité impl. nulle** pour space rings.
+4. **Session ~71 min = P2-INS-7** : valider dérive passive — pas de badge « millionaire frequency ».
+5. **Pause catalogage** : enchaîner le sprint P1-INS-2 → 6 → 7 → 1 → 8 en code ; prochaine URL utile = **vol cosmique visuel** uniquement.
+
+---
+
+## Fichiers code liés (vidéo 20)
+
+- `docs/VERSE-COSMIC-NAV-DESIGN.md` — **aucune** ligne ajoutée (redondance v3/v11/v15)
+- `src/pages/WorldHub.jsx` — P1-INS-8 (intention anti-LoA)
+- `src/world/WorldScene.jsx` — P2-INS-7 (dérive passive)
 
 ---
 
@@ -2069,12 +2191,4 @@ Les dix-neuf références documentées confirment une **traversée symbolique co
 
 ## Pied de page — catalogue suffisant (#19)
 
-Après **19** références utilisateur, le mood **méditation / Hz / ambient** est **documenté**. **Pause catalogage** sauf URL avec **vol cosmique visuel** ou **traversée d’anneaux** gameplay.
-
-**Top 3 P1 — implémentation immédiate :**
-
-| # | Tâche | Livrable |
-|---|-------|----------|
-| 1 | **P1-INS-2** | HUD « Prochain anneau » + `ritualHint` |
-| 2 | **P1-INS-6** + **P1-INS-7** | Palier X/9 + focus portail |
-| 3 | **P1-INS-1** | Mode contemplation (toggle vitesse) |
+Après **19** références utilisateur, le mood **méditation / Hz / ambient** est **documenté**. **Pause catalogage** sauf URL avec **vol cosmique visuel** ou **traversée d’anneaux** gameplay. Voir **#20** (`SiiSBQErMMQ`) et section **« Catalogue suffisant — prioriser implémentation »** en tête de fichier (top 5 P1).
