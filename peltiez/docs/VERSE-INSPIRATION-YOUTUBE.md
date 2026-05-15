@@ -10,11 +10,16 @@
 | 4 | `4mJc9A1yOx0` | Abundance Energy | ~59 min | **Audio** + **visuel** cosmos IA (MidJourney) | **7 chakras** + 999 Hz (marketing) | **Moyenne** — teintes / clarté | P1 harmoniques 7 · P2 brume −10 %, halo voyageur |
 | 5 | `IFH1pi6xIk4` | Asmr Relaxing Deep Sleep | ~3 h 10 | **Audio-first** (keywords pluie, pas gameplay) | **5 Hz empilés** + corps/esprit | **Moyenne** — stack session | P1 couches 5, axes corps/esprit · P2 pluie d’étoiles, glow ×5 |
 | 6 | `3OvM4ycNVL8` | Dreamy Flow | ~2 h 53 | **Audio** + miniature **sommeil / lune** | Duo 528 + 432 Hz — nuit réparatrice | **Moyenne** — mode nuit | P1 axes (partagé 5) · P2 mode nuit cosmique |
-| 10 | `deFpiq6EYzE` | Inner Eye Awakening | ~2 h 55 | **Audio** dominant (pas de gameplay 3D) | Transe chamanique / **tiers œil** — seuil « 1 min » (marketing) | **Moyenne** — rituel seuil | P1 rituel 60 s avant portail · P2 transe cosmique profonde (60 s sans input) |
+| 8 | `r9GYYKrrLAg` | Inner Healing | ~71 min | **Audio-first** (branding bien-être) | Schumann **7,83 Hz** + 432 + binaural — ancrage Terre | **Moyenne** — ancrage sol | P1-INS-14 ancrage HUD · P2-INS-12 pulse anneau sol |
+| 9 | `3ciMHwo1ApA` | Culture Capital | ~1 h 1 | **Audio** + ambient décoratif | **Om** + ombre / lumière, shadow integration | **Moyenne** — seuil / dualité | P1-INS-12/13 équilibre, respiration · P2 bol seuil (spec) |
+| 10 | `deFpiq6EYzE` | Inner Eye Awakening | ~2 h 55 | **Audio** dominant (pas de gameplay 3D) | Transe chamanique / **tiers œil** — seuil « 1 min » (marketing) | **Moyenne** — rituel seuil | P1-INS-15 rituel 60 s · P2-INS-13 transe profonde 60 s |
+| 12 | `Zocof7wZF4c` | Chakra Healing Frequencies | ~2 h 21 | **Audio** + **visuel** stock (Envato / Storyblocks) | **7 chakras** + **999 Hz** — nettoyage **corps entier** / aura | **Moyenne** — affine arc 7 | P1 corps entier 7/7 session · P2 balayage lumière voyageur (renforce P1-INS-9 / P2-INS-8) |
 
 **Lecture priorité :** **Haute** = plusieurs URLs convergent (dérive lente, paliers, HUD minimal) — à traiter en P1 avant polish P2. **Moyenne** = affine un levier déjà couvert (session longue, nuit, stack, rituel). **Aucune** référence ne montre vol dans des anneaux ou rail spatial : priorité **jamais** sur gameplay arcade / hyperspace.
 
-**Audio vs visuel :** toutes les entrées sont **musique / méditation** ; le Verse apporte le **décor 3D** (fog, étoiles, tores). Ne pas intégrer pistes YouTube (P2-INS-4). Visuels chaîne (IA, miniature) = **palette uniquement**, pas d’assets repris.
+**Audio vs visuel :** la majorité des entrées sont **musique / méditation** ; le Verse apporte le **décor 3D** (fog, étoiles, tores). Ne pas intégrer pistes YouTube (P2-INS-4). Visuels chaîne (IA, miniature) = **palette uniquement**, pas d’assets repris.
+
+**Phase 2 (produit)** : après **13** références, le corpus est majoritairement **solfège / méditation / ambient** (≈10/13) ; **aucune** ne montre vol dans des anneaux ou rail spatial. Prioriser l’implémentation **P1 HUD + arc** ([`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md)) plutôt que d’ajouter des entrées YouTube, sauf si l’utilisateur envoie des refs **visuelles** (vol cosmique, anneaux traversés, hyperspace).
 
 ---
 
@@ -674,9 +679,9 @@ Les sept entrées documentées confirment une **traversée symbolique contemplat
 
 ## Cinq recommandations concrètes (vidéo 10)
 
-1. **Rituel seuil 60 s (P1)** : à &lt; 5 m d’un tore non visité, proposer option « une minute de présence » (respiration + `ritualHint`) avant activation `E` — miroir « after 1 minute », **sans** mind control ni promesse DMT.
-2. **Indicateur intuition (P1)** : flèche ou halo discret vers le prochain realm aligné intention localStorage (complète P1-INS-8) — tiers œil = **direction**, pas glande.
-3. **Transe cosmique profonde (P2)** : à 60 s sans input (avant les 90 s de P2-INS-7) : vignette + pulsation tore très lente — distinct de la dérive passive complète.
+1. **Rituel seuil 60 s (P1-INS-15)** : à &lt; 5 m d’un tore non visité, proposer option « une minute de présence » (respiration + `ritualHint`) avant activation `E` — miroir « after 1 minute », **sans** mind control ni promesse DMT.
+2. **Indicateur intuition (P1-INS-15)** : flèche ou halo discret vers le prochain realm aligné intention localStorage (complète P1-INS-8) — tiers œil = **direction**, pas glande.
+3. **Transe cosmique profonde (P2-INS-13)** : à 60 s sans input (avant les 90 s de P2-INS-7) : vignette + pulsation tore très lente — distinct de la dérive passive complète.
 4. **Conserver P1-INS-7/8 et P2-INS-7/11** : focus portail, intention, dérive longue et nuit restent valides ; la vidéo 10 **ajoute** le seuil minute + couche transe, ne remplace pas les arcs 9/7/5.
 5. **Audio (P2)** : nappes ambiantes graves très douces — interdit Inner Eye Awakening et tons « third eye » identifiables.
 
@@ -684,7 +689,7 @@ Les sept entrées documentées confirment une **traversée symbolique contemplat
 
 ## Fichiers code liés (vidéo 10)
 
-- `docs/VERSE-COSMIC-NAV-DESIGN.md` — P1-INS-12, P2-INS-12 (distincts des vidéos 1–6)
+- `docs/VERSE-COSMIC-NAV-DESIGN.md` — P1-INS-15, P2-INS-13 (distincts des vidéos 1–9 et des tâches Om/ombre/Schumann)
 - `src/pages/WorldHub.jsx` — rituel 60 s, copy intuition
 - `src/world/WorldScene.jsx` — vignette transe, pulse tore lent
 - `src/world/realms.js` — `ritualHint` tiers œil / seuil
@@ -889,17 +894,17 @@ Les neuf références utilisateur confirment une **traversée symbolique contemp
 
 ## Cinq recommandations concrètes (vidéo 9)
 
-1. **Seuil Om (P1)** : à &lt; 6 m d’un tore, afficher une ligne `ritualHint` type respiration / pause — sans jouer le mantra ni promettre éveil spirituel.
-2. **Équilibre clair / sombre (P1)** : teinte HUD ou bordure minimap qui bascule doucement (indigo profond ↔ lavande clair) selon realms visités / non visités — métaphore shadow integration, pas thème horror.
-3. **Résonance de seuil (P2)** : one-shot ambiant très court (bol synthétique original) à l’entrée dans le tore — volume bas, désactivable, **interdit** Culture Capital.
-4. **Conserver P1-INS-7 à 11 et P2-INS-7 à 10** : focus portail, intention, 7 harmoniques, 5 couches, dérive passive restent valides ; la vidéo 9 **ajoute** seuil Om + dualité visuelle.
-5. **Audio (P2)** : boucle ambient ~432 **feel** (accords doux, pas ton pur) — jamais la composition « OM \| Deep Ambient… » ni vocals Om identifiables.
+1. **Seuil Om (P1-INS-13)** : à &lt; 6 m d’un tore, afficher une ligne `ritualHint` type respiration / pause — sans jouer le mantra ni promettre éveil spirituel.
+2. **Équilibre clair / sombre (P1-INS-12)** : teinte HUD ou bordure minimap qui bascule doucement (indigo profond ↔ lavande clair) selon realms visités / non visités — métaphore shadow integration, pas thème horror.
+3. **Résonance de seuil (P2-INS-13)** : one-shot ambiant très court (bol synthétique original) à l’entrée dans le tore — volume bas, désactivable, **interdit** Culture Capital.
+4. **Conserver P1-INS-14 et P2-INS-12** (vidéo 8) + P1-INS-6 à 11** : ancrage Schumann, focus, intention, harmoniques, couches, mode nuit ; la vidéo 9 **ajoute** P1-INS-12/13 et P2-INS-13/14 sans conflit avec le pulse anneau sol.
+5. **Audio (P2-INS-4)** : boucle ambient ~432 **feel** (accords doux, pas ton pur) — jamais la composition « OM \| Deep Ambient… » ni vocals Om identifiables.
 
 ---
 
 ## Fichiers code liés (vidéo 9)
 
-- `docs/VERSE-COSMIC-NAV-DESIGN.md` — P1-INS-12, P2-INS-11 (distincts des vidéos 1–8)
+- `docs/VERSE-COSMIC-NAV-DESIGN.md` — P1-INS-12, P1-INS-13, P2-INS-13, P2-INS-14 (distincts des vidéos 1–8 ; P2-INS-12 = vidéo 8)
 - `src/pages/WorldHub.jsx` — copy seuil / équilibre
 - `src/world/WorldScene.jsx` — atténuation lumière équilibre ombre-lumière
 - `src/world/realms.js` — `ritualHint` respiration / seuil

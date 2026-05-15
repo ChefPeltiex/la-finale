@@ -56,6 +56,7 @@ Remplacer l’exploration « pawn vert sur terrain » par un **voyage immersif d
 | P1-INS-12 | **Équilibre clair / sombre** | Teinte HUD ou accent minimap bascule doucement (realm visité vs non visité) — inspiré shadow integration / lumière-ombre (`3ciMHwo1ApA`), **sans** trauma healing, horror, ni iconographie hindoue |
 | P1-INS-13 | **Seuil Om (respiration)** | À &lt; 6 m d’un tore : rappel `ritualHint` respiration / pause 1–2 s avant `E` — métaphore mantra Om, **sans** audio OM copié ni claim tiers œil |
 | P1-INS-14 | **Ancrage au sol** | À &lt; 12 m de l’anneau indigo au sol : HUD une ligne d’ancrage ou `ritualHint` grounding — inspiré résonance Schumann (`r9GYYKrrLAg`), **sans** Hz, pinéale, binaural ni claim santé |
+| P1-INS-15 | **Seuil theta (créativité)** | En mode contemplation, à &lt; 8 m d’un tore : une ligne HUD « laissez une intention créative émerger » — inspiré theta / visionnaires (`admhD1UCmI8`), **sans** billionaire, richesse, manifestation, ni Hz theta affichés |
 
 ### P2 — Galaxies & chapitres
 
@@ -81,6 +82,7 @@ Remplacer l’exploration « pawn vert sur terrain » par un **voyage immersif d
 | P2-INS-12 | **Respiration anneau sol** | Pulse emissive ~8 s sur l’anneau au sol si joueur immobile ≥ 5 s à &lt; 12 m — ancrage Schumann (`r9GYYKrrLAg`) ; `prefers-reduced-motion` : intensité fixe ; pas audio binaural |
 | P2-INS-13 | **Résonance de seuil (bol original)** | One-shot ambiant très court à l’entrée du tore (timbre bol synthétique, volume bas, toggle) — mood Culture Capital (`3ciMHwo1ApA`), **interdit** extrait Om / piste YouTube |
 | P2-INS-14 | **Oscillation brume clair / sombre** | Près d’un portail non visité : `FogExp2` density alterne ±5 % sur 4 s (cycle lent) — équilibre ombre-lumière (`3ciMHwo1ApA`), pas strobe ; `prefers-reduced-motion` désactive |
+| P2-INS-15 | **Vague theta (visuelle)** | Si mode contemplation + immobile ≥ 20 s : modulation très lente (`Stars` factor ou particules, période ~4–8 s) — mood theta (`admhD1UCmI8`), désactivable ; **sans** audio theta identifiable ni promesse abondance |
 
 ### P3 — Météorites, comètes, énigmes
 
@@ -152,7 +154,7 @@ Référence croisée à ajouter dans `alliance-ia-egor69.md` (section agents) lo
 
 ## Références
 
-- **Inspiration YouTube (mood univers / anneaux)** : [VERSE-INSPIRATION-YOUTUBE.md](./VERSE-INSPIRATION-YOUTUBE.md) — `pSXgXAqomMY` (méditation cœur / univers), `NxXzQLl2H5Y` (9 paliers séquentiels, écran noir), `OlV26ouCn5w` (963 Hz long, intention / gratitude), `4mJc9A1yOx0` (7 harmoniques, clarté / halo), `IFH1pi6xIk4` (stack 5 Hz, corps/esprit, ~3 h — **audio-first**), `3OvM4ycNVL8` (528+432, sommeil profond, mode nuit), `r9GYYKrrLAg` (Schumann 7,83 + ancrage terrestre, pulse anneau sol — **audio-first**, pas vol spatial ni anneaux gameplay)
+- **Inspiration YouTube (mood univers / anneaux)** : [VERSE-INSPIRATION-YOUTUBE.md](./VERSE-INSPIRATION-YOUTUBE.md) — `pSXgXAqomMY` (méditation cœur / univers), `NxXzQLl2H5Y` (9 paliers séquentiels, écran noir), `OlV26ouCn5w` (963 Hz long, intention / gratitude), `4mJc9A1yOx0` (7 harmoniques, clarté / halo), `IFH1pi6xIk4` (stack 5 Hz, corps/esprit, ~3 h — **audio-first**), `3OvM4ycNVL8` (528+432, sommeil profond, mode nuit), `oHMg7ZeWAxQ` (852 Hz Inner Lotus, focalisation / brume à l’approche — **audio-first**), `r9GYYKrrLAg` (Schumann 7,83 + ancrage terrestre, pulse anneau sol — **audio-first**), `3ciMHwo1ApA` (Om ambient ~1 h, ombre-lumière, seuil respiration — **pas** vol spatial ni anneaux traversables)
 - Manuel utilisateur : `src/content/manuel-utilisation-igor.md` (section Verse)
 - QA : `docs/MANUAL-QA-PROTOCOL.md` (explorateur cosmique)
 - Glossaire : entrée « Verse 3D » dans `src/data/glossaryCentral.js`
