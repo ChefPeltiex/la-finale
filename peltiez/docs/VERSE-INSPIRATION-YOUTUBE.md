@@ -25,6 +25,24 @@
 | 19 | `S-_vF1RxMR0` | Abundance Energy | ~54 min | **Audio** + **visuel** cosmos IA (MidJourney, description chaîne) | **7 chakras** + **999 Hz** — nettoyage corps entier / miracles | **Basse** — redondant (4, 12) | **Aucune tâche nouvelle** — renforce P1-INS-9, P2-INS-8 ; anti-miracles |
 | 20 | `SiiSBQErMMQ` | Circle of Attraction | ~1 h 11 | **Audio** pur (miniature / branding chaîne) | **432 + 777 Hz** + LoA millionnaire — rituel **7 min** (marketing) | **Basse** — redondant (3, 4, 5, 11, 15) | **Aucune tâche nouvelle** — renforce P1-INS-8 (anti-LoA), P2-INS-7 ; anti-claims richesse / 777 |
 | 21 | `QIHBDFEZFoI` | Gaia Meditation Healing Music | ~1 h 11 | **Audio** pur (branding chaîne / visuel décoratif) | **1111 Hz** + synchronicité + LoA / miracles instantanés — piste continue | **Basse** — redondant (3, 4, 5, 17, 20) | **Aucune tâche nouvelle** — renforce P1-INS-8 (anti-LoA), P2-INS-7 ; anti-claims miracles / 1111 |
+| 22 | `mT4EB3fQ9lg` | Inner Lotus Music | ~3 h 33 | **Audio** pur (art chaîne — **pas** vol cosmique filmé) | **888 + 88 + 8 Hz** pyramide abondance / endorphines (LoA) | **Basse** — redondant (1, 15, 20) | **Aucune tâche nouvelle** — renforce P1-INS-8 ; **pas** ref visuelle anneaux |
+| 23 | `4uR5yfLkxjA` | Inner Healing | ~71 min | **Audio-first** (branding bien-être / visuel décoratif) | **432 Hz** + **111 Hz** + LoA / miracles / abondance — piste ~71 min | **Basse** — redondant (8, 15, 20, 3) | **Aucune tâche nouvelle** — renforce P1-INS-8 (anti-LoA), P1-INS-14 (432, déjà #8) ; anti-miracles / richesse |
+
+### Référence style PRIMARY — « style pour tout »
+
+| Champ | Valeur |
+|-------|--------|
+| **ID** | `hL-BvWLPseE` |
+| **Lien** | [Planet Earth II Soundtrack](https://www.youtube.com/watch?v=hL-BvWLPseE) |
+| **Titre** | *Planet Earth II Soundtrack* — Hans Zimmer / Jacob Shea / Jasha Klebe (upload Cupofchill Music, ~44 min) |
+| **Rôle** | **PRIMARY** — mood, pacing et palette pour **tout** le Verse 3D (`VERSE_STYLE` dans `src/config/cosmicNav.js`) |
+| **Audio vs visuel** | **Audio** cinéma documentaire (orchestre, montées lentes). Plans nature éventuels **hors jeu** — le Verse n’emprunte **pas** les images BBC, seulement **tempo** et **teintes crépuscule**. |
+| **Vol cosmique / anneaux traversés ?** | **Non** — métaphore = **tores** 3D, pas anneaux de Saturne filmés. |
+| **Palette (hex)** | `#01040f` fond · `#1e1b4b` brume · `#fef3c7` key dorée · `#c4b5fd` fill violet · `#6366f1` nébuleuse / anneau sol · `#a78bfa` particules · `#fbbf24` étincelles or |
+| **Motion pace** | Pan **lent**, marche `12.8`, sprint `×1.72`, étoiles `speed≈0.72`, focus portail `~4.2 s` — voyage contemplatif. |
+| **Éléments scène** | Nébuleuse → fog indigo · étoiles → champ dense · anneaux → tore portail + anneau sol (`WorldScene`). |
+| **vs `mT4EB3fQ9lg` (#22)** | Méditation **888 Hz + LoA** — **ne supplante pas** le PRIMARY. **Maître style global : `hL-BvWLPseE`.** |
+| **vs `4uR5yfLkxjA` (#23)** | Méditation **432 Hz + 111 Hz + LoA** (Inner Healing) — **ne supplante pas** le PRIMARY ; redondant **#8**. |
 
 **Lecture priorité :** **Haute** = plusieurs URLs convergent (dérive lente, paliers, HUD minimal) — à traiter en P1 avant polish P2. **Moyenne** = affine un levier déjà couvert (session longue, nuit, stack, rituel). **Basse** = redondant (focus, binaural, session ~2 h) — cataloguer sans nouveaux IDs. **Aucune** référence ne montre vol dans des anneaux ou rail spatial : priorité **jamais** sur gameplay arcade / hyperspace.
 
@@ -32,7 +50,7 @@
 
 **Audio vs visuel :** la majorité des entrées sont **musique / méditation** ; le Verse apporte le **décor 3D** (fog, étoiles, tores). Ne pas intégrer pistes YouTube (P2-INS-4). Visuels chaîne (IA, miniature) = **palette uniquement**, pas d’assets repris.
 
-**Phase 2 (produit) — catalogue suffisant :** après **21** références utilisateur, le corpus reste majoritairement **solfège / méditation / ambient / binaural** (≈18/21) ; la **#13** (`8kQgu2_1uEk`) reste le seul **documentaire narratif** hors Hz — pas une ref vol cosmique. La **#21** (`QIHBDFEZFoI`, Gaia Meditation) **confirme** le motif **LoA + miracles + Hz marketing** (1111) déjà couvert par **#3**, **#4**, **#17**, **#20** — **aucune** tâche P1/P2 supplémentaire. **Aucune** URL ne montre vol dans des anneaux ou rail spatial. **Pause catalogage** YouTube sauf refs **visuelles** (vol cosmique, anneaux traversés, hyperspace). **Top 3 P1 à implémenter en code** : **P1-INS-2** (HUD « Prochain anneau »), **P1-INS-6** + **P1-INS-7** (palier X/9 + focus portail), **P1-INS-1** (mode contemplation). Détail : [`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md).
+**Phase 2 (produit) — catalogue suffisant :** après **23** références playlist + **PRIMARY** `hL-BvWLPseE`, le corpus reste **solfège / méditation / LoA** (≈20/23). La **#23** (`4uR5yfLkxjA`, Inner Healing **432 + LoA**) **duplique** **#8**, **#15**, **#20** — **aucune** tâche P1/P2 ; **pas** de co-primary « vol cosmique anneaux ». **Style maître pour tout le Verse :** `hL-BvWLPseE` (Planet Earth II OST), pas les URLs Hz. **Aucune** URL playlist ne montre vol dans des anneaux ou rail spatial. **Pause catalogage** sauf refs **visuelles** (vol cosmique, anneaux traversés, hyperspace). **Top 3 P1** : **P1-INS-2**, **P1-INS-6** + **P1-INS-7**, **P1-INS-1**. Détail : [`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md).
 
 ---
 
@@ -1826,7 +1844,7 @@ Les dix-huit références documentées confirment une **traversée symbolique co
 **Pause du catalogage** des références YouTube **sauf** si une future URL montre explicitement :
 
 - un **espace visuel** exploitable (cockpit, nébuleuse traversée, anneaux géants filmés en vol), ou  
-- du **vol / rail / traversée d’anneaux** comme référence gameplay (aucune des **21** entrées à ce jour, dont `QIHBDFEZFoI`).
+- du **vol / rail / traversée d’anneaux** comme référence gameplay (aucune des **22** entrées à ce jour, dont `0WOsrKnRkZg`).
 
 **Prochain sprint dev recommandé — bundle P1 (implémentation)** :
 
@@ -2190,6 +2208,85 @@ Les dix-neuf références documentées confirment une **traversée symbolique co
 
 ---
 
-## Pied de page — catalogue suffisant (#19)
+## Pied de page — catalogue suffisant (#22)
 
-Après **21** références utilisateur, le mood **méditation / Hz / ambient** est **documenté**. **Pause catalogage** sauf URL avec **vol cosmique visuel** ou **traversée d’anneaux** gameplay. Voir **#21** (`QIHBDFEZFoI`) et section **« Catalogue suffisant — prioriser implémentation »** en tête de fichier (top 3 P1).
+Après **22** références playlist + **PRIMARY** `hL-BvWLPseE`, le mood **méditation / Hz** est **saturé**. La **#22** (`mT4EB3fQ9lg`) n’apporte **aucun** visuel vol cosmique — **pause catalogage** sauf URL avec vol/anneaux gameplay réels.
+
+**Top 3 P1 — implémentation immédiate :**
+
+| # | Tâche | Livrable |
+|---|-------|----------|
+| 1 | **P1-INS-2** | HUD « Prochain anneau » + `ritualHint` |
+| 2 | **P1-INS-6** + **P1-INS-7** | Palier X/9 + focus portail |
+| 3 | **P1-INS-1** | Mode contemplation (toggle vitesse) |
+
+---
+
+# Addendum — Vidéo 22 (`mT4EB3fQ9lg` · rejet co-primary visuel)
+
+**Lien :** [https://www.youtube.com/watch?v=mT4EB3fQ9lg](https://www.youtube.com/watch?v=mT4EB3fQ9lg)  
+**ID :** `mT4EB3fQ9lg`  
+**Date de capture :** mai 2026  
+**Contexte utilisateur :** lien partagé pour « style pour tout le Verse » — comparé au **PRIMARY** `hL-BvWLPseE`.
+
+---
+
+## Ce que la vidéo est réellement
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *888Hz 88Hz 8Hz Abundance Pyramid \| Gate to Wealth & Prosperity Endorphin Release Meditation Music* |
+| **Chaîne** | Inner Lotus Music (Pierre Ynad) — **même famille** que **#1** (`pSXgXAqomMY`) |
+| **Durée** | ~3 h 33 min |
+| **Vues** | ~8,8 M (capture mai 2026) |
+| **Publié** | 2021-01-31 |
+| **Type** | Méditation **888 + 88 + 8 Hz** + LoA abondance — **pas** vol spatial, **pas** anneaux traversés, **pas** gameplay |
+
+### Audio vs visuel cosmique
+
+| Dimension | Constat |
+|-----------|---------|
+| **Audio** | Piste longue solfège / ambient « wealth & prosperity » — casque, écoute passive. |
+| **Visuel** | Miniature / art chaîne (pyramide dorée, cosmos **décoratif statique**) — **pas** séquence 3D, **pas** vol dans des anneaux, **pas** rail space sim. |
+| **Verdict** | **Méditation audio** — **pas** référence « vol cosmique anneaux ». |
+
+### Flag — contenu visuel espace / anneaux ?
+
+| Question | Réponse |
+|----------|---------|
+| **Vol spatial / rail ?** | **Non** |
+| **Anneaux planétaires filmés ?** | **Non** |
+| **Co-primary ou supplante `hL-BvWLPseE` ?** | **Non** |
+| **Priorité P1 vol / anneaux ?** | **Nulle** — **Basse**, redondant #1 / #15 / #20 |
+
+---
+
+## Comparaison PRIMARY vs #22
+
+| Critère | `hL-BvWLPseE` (**PRIMARY**) | `mT4EB3fQ9lg` (#22) |
+|---------|---------------------------|---------------------|
+| **Nature** | OST Planet Earth II — pacing **cinéma** | Méditation **888 Hz** + LoA |
+| **Vol cosmique anneaux** | **Non** (tores Verse) | **Non** |
+| **Style pour tout le Verse** | **Oui — maître** | **Non** |
+| **WorldScene** | `VERSE_STYLE` déjà aligné | **Aucune** fusion palette recommandée |
+
+---
+
+## Ne pas copier · recommandations (vidéo 22)
+
+| Risque | Action |
+|--------|--------|
+| **© Inner Lotus** | Aucun extrait 888/88/8 Hz ni miniature |
+| **Wealth / endorphin / pyramid** | Pas de promesses richesse sur `/world` (P1-INS-8) |
+| **Co-primary visuel** | Ne pas cataloguer comme « vol cosmique » |
+
+1. **Aucune tâche P1/P2** — PRIMARY reste `hL-BvWLPseE`.  
+2. **Pas de tweak `WorldScene.jsx`** pour #22.  
+3. **Pause catalogage** — prochaine URL = vol/anneaux **visibles**, pas autre Hz.
+
+---
+
+## Fichiers code liés (vidéo 22)
+
+- `src/config/cosmicNav.js` — PRIMARY `hL-BvWLPseE`, `VERSE_STYLE`
+- `src/world/WorldScene.jsx` — inchangé
