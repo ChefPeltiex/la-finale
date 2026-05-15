@@ -85,10 +85,10 @@ Les sections **8–12** du blueprint (chapitres IV–VII, glossaire, annexes, co
 | Script | Rôle | Sortie |
 |--------|------|--------|
 | **`assemble-codex-encyclopedie-full.mjs`** | Texte Codex Magique + fiches `companion.md` + PNG (ordre blueprint) | `public/encyclopedie.pdf` |
-| **`assemble-codex-pdf.mjs`** | PNG seuls (aperçu rapide) | `docs/encyclopedie/codex-assembled-preview.pdf` |
+| **`assemble-codex-pdf.mjs`** | PNG seuls, ou PNG + page texte par planche (`--with-text`, `planches-texte.json`) | `docs/encyclopedie/codex-assembled-preview.pdf` ou `--output public/encyclopedie.pdf` |
 | **`generate-codex-encyclopedie-placeholder-pdf.mjs`** | Placeholder minimal (1 page) | `public/encyclopedie.pdf` |
 
-**Texte source** : `peltiez/docs/codex-magique-egor69.md` (formules, protocoles IA, mapping [IMAGE n] → PNG).
+**Texte source** : `peltiez/docs/codex-magique-egor69.md` (complet) · injection PDF par planche : `peltiez/docs/encyclopedie/planches-texte.json`.
 
 ---
 
@@ -122,6 +122,21 @@ node ./scripts/assemble-codex-encyclopedie-full.mjs --input "../assets/codex-enc
 ```
 
 L’ancien `public/encyclopedie.pdf` est copié vers `encyclopedie.pdf.bak` avant écrasement.
+
+### Aperçu PNG + texte court par planche (`--with-text`)
+
+Métadonnées PDF : *EGOR69 — Codex Magique de l'Oméga Vert* · auteur *Dominic Peltier / Igor 69*. Environ **74 pages** (37 texte + 37 image).
+
+```bash
+cd peltiez
+node ./scripts/assemble-codex-pdf.mjs --with-text --output ./public/encyclopedie.pdf
+```
+
+Régénérer les fiches longues du markdown après édition du JSON :
+
+```bash
+node ./scripts/expand-codex-fiches.mjs
+```
 
 ### Aperçu PNG seul
 
