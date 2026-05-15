@@ -2,24 +2,14 @@ import { memo, useEffect, useRef, useState, useCallback, lazy, Suspense } from "
 import { Outlet, Link, useLocation } from "react-router-dom";
 import MagicParticles from "./MagicParticles";
 import StardustLayer from "./StardustLayer";
-import {
-  Home, ShoppingBag, PlusCircle, User, Menu, X, Recycle,
-  Newspaper, Gamepad2,
-  ChevronRight, Flame, Heart, HeartHandshake, Shield, Globe, BarChart3, Users, Sparkles, BookOpen, FileText, Star, Radar, CheckCircle2, Bell, Leaf, DollarSign, Building2,
-  Gem,
-  Palette,
-  Cuboid,
-  Plug,
-  Map,
-  Info,
-  Mail,
-  Eye,
-} from "lucide-react";
+import { Menu, X, Recycle, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import LanguageSwitcher from "./LanguageSwitcher";
 import NotificationCenter from "./NotificationCenter";
 import Footer from "./layout/Footer";
+import GlobalSearchBar from "./layout/GlobalSearchBar";
 import { PoleNavSidebar, PoleMobileBottomNav } from "./layout/PoleNavigation";
+import { LAYOUT_NAV_ITEMS } from "@/config/layoutNavItems";
 import OnboardingFlow from "./onboarding/OnboardingFlow";
 import GuideAgent from "./guide/GuideAgent";
 import CirculiaWidget from "./CirculiaWidget";
@@ -38,6 +28,8 @@ const SovereigntyFormulaRibbon = lazy(() => import("./SovereigntyFormulaRibbon")
 import { WORLD_ETHOS } from "@/lib/site";
 import { filterNavItemsForPreferences, loadUniversePreferences } from "@/lib/universePreferences";
 import { navLinkTarget } from "@/lib/accueilSections";
+import { filterNavItemsForPilot } from "@/config/pilotScope";
+import usePilotMode from "@/hooks/usePilotMode";
 
 /** Routes sans chrome (canvas plein écran, royaumes immersifs, intro). */
 function layoutIsFullBleed(pathname) {
@@ -56,60 +48,6 @@ function layoutIsFullBleed(pathname) {
   if (pathname.startsWith("/encyclopedie-biblique/scene/")) return true;
   return false;
 }
-
-const NAV_ITEMS = [
-  // Core
-  { path: "/", label: "Accueil", icon: Home, color: "text-emerald-400" },
-  { path: "/", label: "Encyclopédies & Codex", icon: BookOpen, color: "text-[#FFD700]", hash: "accueil-encyclopedies" },
-  { path: "/world", label: "🌐 Verse 3D", icon: Sparkles, color: "text-cyan-300" },
-  { path: "/marketplace", label: "Marketplace", icon: ShoppingBag, color: "text-blue-400" },
-  { path: "/profil", label: "Mon Profil", icon: User, color: "text-pink-400" },
-  { path: "/avatar-creator", label: "Studio Avatar", icon: Palette, color: "text-fuchsia-400" },
-  { path: "/mon-univers", label: "Mon univers", icon: Gem, color: "text-fuchsia-300" },
-  { path: "/alerts", label: "📬 Mes Alertes", icon: Bell, color: "text-blue-400" },
-  { path: "/atlas", label: "📚 Atlas Vivant", icon: BookOpen, color: "text-violet-300" },
-  { path: "/manuel", label: "Manuel", icon: FileText, color: "text-emerald-300" },
-  { path: "/outils-integration", label: "Outils & intégrations", icon: Plug, color: "text-sky-300" },
-  { path: "/carte-site", label: "Carte & parcours", icon: Map, color: "text-lime-300" },
-  { path: "/vision", label: "Vision", icon: Eye, color: "text-sky-300" },
-  { path: "/about", label: "À propos", icon: Info, color: "text-zinc-200" },
-  { path: "/contact", label: "Contact", icon: Mail, color: "text-teal-300" },
-  { path: "/hub-fondations", label: "Hub fondations", icon: Building2, color: "text-sky-200" },
-  { path: "/hub-souverain", label: "Hub souverain", icon: Leaf, color: "text-emerald-300" },
-  { path: "/pricing", label: "💳 Pricing", icon: DollarSign, color: "text-amber-300" },
-  { path: "/soutien", label: "Soutien", icon: HeartHandshake, color: "text-rose-300" },
-  { path: "/pantheon-renders", label: "🏛️ Panthéon (Renders)", icon: Sparkles, color: "text-violet-300" },
-  { path: "/pantheon-3d", label: "🧿 Panthéon (3D)", icon: Globe, color: "text-cyan-300" },
-  { path: "/ue-aiouy", label: "UEAIOUY — ponts UE", icon: Cuboid, color: "text-emerald-400" },
-  { path: "/encyclopedie-biblique", label: "📖 Encyclopédie Biblique", icon: BookOpen, color: "text-amber-200" },
-  // Intelligence & Truth
-  { path: "/paparazzi", label: "🎬 Paparazzi", icon: Flame, color: "text-orange-400" },
-  { path: "/authenticity", label: "🔐 Authenticity", icon: Shield, color: "text-emerald-400" },
-  { path: "/reporters", label: "🌍 Reporters", icon: Radar, color: "text-cyan-400" },
-  { path: "/fact-check", label: "✅ Fact Check", icon: CheckCircle2, color: "text-emerald-400" },
-  { path: "/transparency-log", label: "📋 Transparency", icon: Shield, color: "text-cyan-400" },
-  { path: "/sentinelle", label: "🛡️ Sentinelle", icon: Shield, color: "text-amber-300" },
-  // Content
-  { path: "/publier", label: "Publier", icon: PlusCircle, color: "text-violet-400" },
-  { path: "/actualite", label: "Actualité", icon: Newspaper, color: "text-amber-400" },
-  { path: "/blog", label: "Blog", icon: BookOpen, color: "text-blue-400" },
-  // Community
-  { path: "/feed", label: "Community", icon: Users, color: "text-emerald-400" },
-  { path: "/wellness", label: "Wellness", icon: Heart, color: "text-rose-400" },
-  { path: "/jeu", label: "Games", icon: Gamepad2, color: "text-orange-400" },
-  { path: "/vault", label: "Mon Coffre", icon: Heart, color: "text-rose-400" },
-  // Spiritual & Mystical
-  { path: "/carte-ciel", label: "✨ Carte du Ciel", icon: Sparkles, color: "text-violet-400" },
-  { path: "/numerology", label: "🔢 Numérologie", icon: Star, color: "text-yellow-400" },
-  // Nature & Discovery
-  { path: "/sanctuary", label: "🦁 Sanctuary Animaux", icon: Heart, color: "text-emerald-400" },
-  { path: "/fauna-hub", label: "🦁 Faune", icon: Users, color: "text-orange-400" },
-  { path: "/flora-hub", label: "🌿 Flore", icon: Leaf, color: "text-green-400" },
-  { path: "/insects-hub", label: "🦋 Insectes", icon: Sparkles, color: "text-lime-400" },
-  { path: "/minerals-hub", label: "💎 Géologie & Minéraux", icon: Shield, color: "text-cyan-400" },
-  { path: "/cosmic-portal", label: "🌌 Cosmique", icon: Globe, color: "text-indigo-400" },
-  { path: "/admin", label: "Admin", icon: BarChart3, color: "text-red-400" },
-]
 
 function navItemIsActive(location, item) {
   if (location.pathname !== item.path) return false;
@@ -154,7 +92,9 @@ const NavLink = memo(function NavLink({ item, isActive, onClick }) {
 
 export default function Layout() {
   const location = useLocation();
+  const { pilotMode } = usePilotMode();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileNavAdvanced, setMobileNavAdvanced] = useState(false);
   const [universePrefs, setUniversePrefs] = useState(loadUniversePreferences);
   const clicksRef = useRef([]);
   const closeMobile = useCallback(() => setMobileOpen(false), []);
@@ -180,7 +120,8 @@ export default function Layout() {
     };
   }, []);
 
-  const visibleNavItems = filterNavItemsForPreferences(NAV_ITEMS, universePrefs);
+  const preferenceNavItems = filterNavItemsForPreferences(LAYOUT_NAV_ITEMS, universePrefs);
+  const visibleNavItems = filterNavItemsForPilot(preferenceNavItems, pilotMode, mobileNavAdvanced);
 
   useEffect(() => {
     const onPointer = () => {
@@ -278,6 +219,8 @@ export default function Layout() {
         </div>
       </aside>
 
+      <GlobalSearchBar />
+
       {/* ── Mobile Header ── */}
       <header className="lg:hidden fixed top-0 left-0 right-0 h-14 z-50 flex items-center justify-between px-4"
         style={{
@@ -321,7 +264,7 @@ export default function Layout() {
       )}
 
       {/* ── Main Content ── */}
-      <main className="lg:ml-64 pt-14 lg:pt-0 min-h-screen">
+      <main className="lg:ml-64 pt-[6.5rem] lg:pt-11 min-h-screen">
         {EXPERIENCE_FLAGS.deploymentCountdown ? <DeploymentCountdownBanner /> : null}
         <div className={cn("max-w-6xl mx-auto p-4 sm:p-6 lg:p-8", EXPERIENCE_FLAGS.strategicConversionStrip && "pb-28 lg:pb-10")}>
           <div className="mb-6">
