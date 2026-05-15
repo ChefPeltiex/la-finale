@@ -93,7 +93,7 @@ Les autres URLs du tableau ci-dessous restent des **affinages** (solfège, palie
 
 **Audio vs visuel :** la majorité des entrées sont **musique / méditation** ; le Verse apporte le **décor 3D** (fog, étoiles, tores). Ne pas intégrer pistes YouTube (P2-INS-4). Visuels chaîne (IA, miniature) = **palette uniquement**, pas d’assets repris.
 
-**Phase 2 (produit) — catalogue suffisant :** après **28** références playlist + **PRIMARY** `hL-BvWLPseE`, le corpus reste **solfège / méditation / LoA** (≈25/28). La **#28** (`-pu93aq9uP4`, Lucid Dreaming **999 Hz**, lien **@ 2:00**) **duplique** **#4**, **#12**, **#17** — VFX ∞ décoratif, **pas** vol/anneaux. **Style maître :** `hL-BvWLPseE`. **Pause catalogage** sauf refs **visuelles** (vol cosmique, anneaux traversés). **Top 3 P1** : **P1-INS-2**, **P1-INS-6** + **P1-INS-7**, **P1-INS-1**. Détail : [`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md).
+**Phase 2 (produit) — catalogue suffisant :** après **52** références playlist (+ **PRIMARY** `hL-BvWLPseE`), le corpus **#1–#28** reste **solfège / méditation / LoA** ; le **batch #29–#52** (mai 2026) ajoute surtout **LoA « aimant »**, **astro/tarot** et **talks** — **aucun** vol dans anneaux. **Style maître :** `hL-BvWLPseE`. **Pause catalogage** sauf refs **visuelles** (vol cosmique, anneaux traversés). **Top 3 P1** : **P1-INS-2**, **P1-INS-6** + **P1-INS-7**, **P1-INS-1**. Détail : [`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md).
 
 ---
 
@@ -2614,3 +2614,127 @@ Après **22** références playlist + **PRIMARY** `hL-BvWLPseE`, le mood **médi
 | **P1/P2** | **Aucune** |
 
 **Verdict :** @ 2:00 = ambiance cosmique **abstraite** (accent particules possible) — **ce n’est pas** le moment pour **« tout le Verse »** (rester PRIMARY + tores 3D). Si l’objectif était un **vol dans des anneaux**, ce timestamp **ne le montre pas**.
+
+---
+
+# Batch catalogage #29–#52 (mai 2026 · « aimant » / Gemini / Gaia)
+
+**Contexte utilisateur :** playlist orientée **attraction** (abonnés, spiritualité, entreprises écoresponsables) ; rappel natal **Gémeaux Soleil + Gémeaux ascendant** (21 mai 1984, 6 h 09, Montréal) — **clés symboliques produit uniquement**, pas de promesses astro. **PRIMARY Verse inchangé :** `hL-BvWLPseE`.
+
+**Verdict vol cosmique / anneaux traversés :** **Aucune** URL de ce lot ne montre un **vol dans des anneaux** ou un rail spatial gameplay. Contenu dominant = **voix-off / face caméra / livre audio / tarot / affirmations** ; visuels stock ou statiques. **Ne pas** chercher le style Verse 3D ici.
+
+**Gaia — série [Divine Science](https://www.gaia.com/fr/series/divine-science) (hors YouTube, paywall) :** docu **science + conscience** (vibration, géométrie sacrée, NDE, invités type Gregg Braden). **Audience :** curieux spirituels 35–55, ton **émerveillement + crédibilité pseudo-scientifique**. **Emprunt éthique CirculAI :** positionnement « **pont** entre preuves, encyclopédie et expérience » — **pas** copier épisodes, **pas** claims guérison / « pensée crée la matière » en produit. Parallèle **#31** Sadhguru / **#32** Grinberg pour le **ton pont**, pas le paywall.
+
+## Gémeaux ×2 — clés symboliques produit (non déterministes)
+
+| Clé | Symbolisme | UX / copy Verse · CirculAI |
+|-----|------------|----------------------------|
+| **Messager** | Relier deux mondes | HUD « prochain pont » entre **royaumes** ; copy B2B « **pont** impact ↔ communauté » |
+| **Double chemin** | Curiosité, pas ligne unique | Deux entrées `/world` (contemplation / exploration) ; encyclopédies **liens croisés** |
+| **Miroir** | Réflexion, pas prédiction | Tableau de bord **preuves** (miroir données), pas horoscope |
+| **Vent / air** | Légèreté, circulation | Motion **dérive lente** (`VERSE_STYLE`), pas sprint arcade |
+| **Naissance Montréal 6 h 09** | Aube, pont cultures | Palette **crépuscule** PRIMARY ; ton FR **inclusif** (pas only ES tarot clickbait) |
+
+**Vidéos astro du lot :** **#45–#49**, **#51–#52** = signe **Gémeaux** (pertinent symbolisme) ; **#41–#44** = **Verseau** (hors thème utilisateur — **Basse**, pas d’UI « Verseau chance »).
+
+---
+
+## Table synthèse — batch #29–#52
+
+| # | ID | Titre (court) | Chaîne | ~Durée | Audio vs visuel | Type | Priorité | Redondant / Verse |
+|---|-----|---------------|--------|--------|-----------------|------|----------|-------------------|
+| 29 | `KCyqmt4GJVA` | Livre caché → aimant énergie | Créateurs de Réalité | ~1 h 56 | **Narratif** audio (livre/voix) | LoA / livre audio | **Basse** | LoA **#15**, **#20** ; **pas** visuel Verse |
+| 30 | `IForfeABZz8` | Influencer réalité « comme un aimant » | ATTIRE LA PROSPÉRITÉ | ~24 min | **Narratif** | LoA court | **Basse** | **#20**, **#29** |
+| 31 | `wfzpc5buLTo` | Humanité point de non-retour (Manitara) | AMEDCINE TV | ~1 h 30 | **Narratif** + visuel doc | Documentaire FR | **Moyenne** | Ton **seuil civilisationnel** — copy « transition » eco, **pas** Hz |
+| 32 | `K2hqUff3zRs` | Manifester (Sadhguru FR) | Sadhguru Français | ~17 min | **Narratif** | Enseignement | **Moyenne** | Pont **intention / action** — anti-miracles instantanés |
+| 33 | `3Z_Ozf5hQpg` | Secret → univers ouvre (Grinberg) | Pôle Philosophique | ~18 min | **Narratif** | Philosophie conscience | **Moyenne** | Pont **science ↔ mystère** (encyclopédie), pas copier |
+| 34 | `tknLhTQtU64` | Technique ancienne = aimant | Au-delà de l'Inconnu | ~22 min | **Narratif** | LoA / ésotérisme | **Basse** | **#29–#30** |
+| 35 | `z83pAU8o6bU` | Vibration « Dieu » quantique | Motivated Entrepreneur | ~1 h 12 | **Narratif** long | LoA + pseudo-quantique | **Basse** | **#21**, **#24** (claims divins) |
+| 36 | `50BDubBM0ww` | Affirmations aimant abondance | Fréquence Positive | ~27 min | **Audio** affirmations | LoA | **Basse** | **#15**, **#20** |
+| 37 | `EvBHwXNBL2w` | Livre Emmet Fox → aimant richesse | Créateurs de Réalité | ~1 h 44 | **Narratif** audio | LoA livre | **Basse** | **#29** même chaîne |
+| 38 | `32cptEVMJRg` | « Tu es un aimant » richesse | AMES CONSCIENTES | ~14 min | **Narratif** court | LoA | **Basse** | **#20** |
+| 39 | `IPni5YX8vlU` | Manifestez tout (Sonny Court) | SONNY COURT | ~32 min | **Narratif** | Manifestation FR | **Basse** | **#20** ; ton **hype** — éviter en produit |
+| 40 | `S0J4lEymaVQ` | Loi quantique maîtrise | Motivated Entrepreneur | ~17 min | **Narratif** | Pseudo-science | **Basse** | **#35** |
+| 41 | `HysmIQZqsxE` | Livre interdit maîtriser énergie | Codes de Richesse | ~2 h 30 | **Narratif** long | LoA / gnostique | **Basse** | **#13** (seuils narratifs) |
+| 42 | `zdkoY8M2buI` | Verseau réussite / déblocages | Didige | ~20 min | **Narratif** tarot | Astro **Verseau** | **Basse** | **Hors** Gémeaux utilisateur |
+| 43 | `y1Ux9UB9nuU` | Verseau événement mai | Astrologie Facile | ~15 min | **Narratif** | Astro clickbait | **Basse** | Hors signe |
+| 44 | `262mOI_nhKg` | Verseau vérité / tarot | LE TAROT | ~32 min | **Narratif** | Tarot | **Basse** | Hors signe |
+| 45 | `194MP2HEsDU` | Verseau changement radical | Louise Tarot | ~19 min | **Narratif** | Tarot | **Basse** | Hors signe |
+| 46 | `g7JlEj4uW0o` | Verseau période chanceuse | Louise Tarot | ~17 min | **Narratif** | Tarot | **Basse** | Hors signe |
+| 47 | `uxu_oBAKlWM` | Horoscope Gémeaux mai 2026 | Derya Astro Yoga | ~8 min | **Narratif** | Astro mensuelle | **Moyenne** | **Symbole** calendrier éditorial, **pas** prédiction UI |
+| 48 | `j2En07qCc9w` | Gémeaux inattendu miraculeux | Louise Tarot | ~14 min | **Narratif** | Tarot | **Basse** | Anti-miracles **P1-INS-8** |
+| 49 | `LdVfZC45hgo` | Gemini May 2026 tarot (EN) | Sacred Knowledge Tarot | ~28 min | **Narratif** | Tarot EN | **Basse** | Symbole **#47** seulement |
+| 50 | `i_VcK6YogYA` | Message islam vendredi | Nūr d'Allah | ~22 min | **Narratif** | Foi | **Basse** | Hors périmètre Verse |
+| 51 | `BN7jUz6UbRU` | Ascendant Gémeaux × 12 signes | Compatibilité Astrologique | ~15 min | **Narratif** éducatif | Astro pédagogie | **Moyenne** | **Pont** partenaires B2B (compat), pas destin |
+| 52 | `jlPUptwsd8Y` | Ascendant Gémeaux (intro) | LA BONNE GUIDANCE | ~5 min | **Narratif** court | Astro pédagogie | **Moyenne** | Copy **« double visage »** messager |
+| — | `a3a9--0P5sMw` | *(indisponible / ID invalide)* | — | — | — | — | **N/A** | Vérifier lien utilisateur |
+
+**Lecture batch :** **0 Haute** · **6 Moyenne** (#31–#33, #47, #51–#52) · **17 Basse** · **1 N/A**. **Implémentation Verse :** **aucun** changement `VERSE_STYLE` / `WorldScene`. **CirculAI :** s’inspirer des **hooks honnêtes** ci-dessous, pas des titres YouTube.
+
+---
+
+## Hooks audience « aimant » — CirculAI (honnêtes, non manipulatifs)
+
+1. **Pilote B2B éco** — « 90 jours · 3 preuves publiques » (impact CO₂, engagements signés, témoignages vérifiables) au lieu d’« aimant à abondance ».
+2. **Verse keys symboliques** — accès **royaume** par **parcours complété** (HUD palier X/9), pas Hz guérison.
+3. **Encyclopédie + fact-check** — crédibilité pour spiritualité **et** entreprises (pont **#33** Grinberg, ton Gaia **sans** paywall).
+4. **Tableau « Ponts »** — entreprises écoresponsables ↔ communauté (messager **Gémeaux** = connecteur, pas prédiction).
+5. **Newsletter « Deux chemins »** — curiosité : parcours **contemplation** vs **action locale** (miroir double entrée Verse).
+
+---
+
+## Fiches courtes (nouvelles entrées)
+
+### #29 — `KCyqmt4GJVA`
+
+**Lien :** [youtube.com/watch?v=KCyqmt4GJVA](https://www.youtube.com/watch?v=KCyqmt4GJVA) · **Priorité :** Basse · **Vol/anneaux :** Non · **P1/P2 :** Aucune — anti-LoA **P1-INS-8**.
+
+### #30 — `IForfeABZz8`
+
+**Lien :** [youtube.com/watch?v=IForfeABZz8](https://www.youtube.com/watch?v=IForfeABZz8) · **Priorité :** Basse · **Vol/anneaux :** Non.
+
+### #31 — `wfzpc5buLTo`
+
+**Lien :** [youtube.com/watch?v=wfzpc5buLTo](https://www.youtube.com/watch?v=wfzpc5buLTo) · **Priorité :** Moyenne — copy **transition / responsabilité collective** (eco-spirituel), pas fin du monde sensationaliste.
+
+### #32 — `K2hqUff3zRs`
+
+**Lien :** [youtube.com/watch?v=K2hqUff3zRs](https://www.youtube.com/watch?v=K2hqUff3zRs) · **Priorité :** Moyenne — **intention + discipline** en onboarding partenaire, pas manifestation magique.
+
+### #33 — `3Z_Ozf5hQpg`
+
+**Lien :** [youtube.com/watch?v=3Z_Ozf5hQpg](https://www.youtube.com/watch?v=3Z_Ozf5hQpg) · **Priorité :** Moyenne — encyclopédie comme **pont** connaissance (conscience / matière), disclaimers clairs.
+
+### #34 — `tknLhTQtU64` · #35 — `z83pAU8o6bU` · #36 — `50BDubBM0ww` · #37 — `EvBHwXNBL2w` · #38 — `32cptEVMJRg` · #39 — `IPni5YX8vlU` · #40 — `S0J4lEymaVQ` · #41 — `HysmIQZqsxE`
+
+Famille **LoA / aimant / quantique / livre audio** — **Priorité :** Basse — catalogage traçabilité ; **redondant** **#13–#24** ; **aucune** tâche code.
+
+### #42 — `zdkoY8M2buI` · #43 — `y1Ux9UB9nuU` · #44 — `262mOI_nhKg` · #45 — `194MP2HEsDU` · #46 — `g7JlEj4uW0o`
+
+**Verseau** — hors signe utilisateur ; **ne pas** utiliser en push « chance » ; **Basse**.
+
+### #47 — `uxu_oBAKlWM`
+
+**Lien :** [youtube.com/watch?v=uxu_oBAKlWM](https://www.youtube.com/watch?v=uxu_oBAKlWM) · **Priorité :** Moyenne — **éditorial** « mai 2026 » factuel (releases produit), **pas** horoscope app.
+
+### #48 — `j2En07qCc9w` · #49 — `LdVfZC45hgo`
+
+Tarot **Gémeaux** — **Basse** ; anti-miracles ; symbole **curiosité** seulement.
+
+### #50 — `i_VcK6YogYA`
+
+**Basse** — respecter périmètre laïc / multiconfessionnel du produit.
+
+### #51 — `BN7jUz6UbRU` · #52 — `jlPUptwsd8Y`
+
+**Priorité :** Moyenne — métaphore **compatibilité** partenaires (B2B), copy **messager / double regard** ; **pas** déterminisme astro.
+
+### — `a3a9--0P5sMw`
+
+ID **indisponible** (yt-dlp : Video unavailable) — demander lien corrigé à l’utilisateur.
+
+---
+
+## Recherche YouTube (concept)
+
+`search_query=tout+ce+qui+attire+comme+un+aimant+(spiritualité+abonnés+entreprises+écoresponsables)` — confirme le **biais algorithme** LoA FR ; **ne pas** élargir le catalogue Hz. Prioriser **preuves + pont B2B** (hooks ci-dessus) et refs **visuelles** vol/anneaux si trouvées plus tard.
