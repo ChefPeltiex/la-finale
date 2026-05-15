@@ -349,3 +349,217 @@ Les quatre vidéos confirment une **traversée symbolique ordonnée** dans l’u
 - `src/world/WorldScene.jsx` — fog, halo post-visite
 - `src/components/world/CosmicNavControls.jsx` — `CosmicTraveler` emissive
 - `src/pages/WorldHub.jsx` — segments 7 harmoniques HUD
+
+---
+
+# Addendum — Vidéo 6 (6ᵉ référence « verse des anneaux »)
+
+**Lien :** [https://www.youtube.com/watch?v=3OvM4ycNVL8](https://www.youtube.com/watch?v=3OvM4ycNVL8)  
+**ID :** `3OvM4ycNVL8`  
+**Date de capture :** mai 2026  
+**Contexte utilisateur :** sixième référence YouTube (après [`pSXgXAqomMY`](#verse--inspiration-youtube-référence-utilisateur), [`NxXzQLl2H5Y`](#addendum--vidéo-2-suite-verse-des-anneaux), [`OlV26ouCn5w`](#addendum--vidéo-3-suite-verse-des-anneaux), [`4mJc9A1yOx0`](#addendum--vidéo-4-suite-verse-des-anneaux), [`IFH1pi6xIk4`](#addendum--vidéo-5-suite-verse-des-anneaux)) — accent **528 + 432 Hz**, **sommeil profond**, marketing **« DNA repair »** / guérison corps–esprit (Dreamy Flow ; distinct du stack 5 Hz vidéo 5).
+
+---
+
+## Ce que la vidéo est réellement
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *528Hz + 432Hz \| The Deepest Healing: DNA Repair, Heal Damage In The Body and Spirit* |
+| **Chaîne** | Dreamy Flow |
+| **Durée** | 2:52:33 (~2 h 53 min) |
+| **Vues** | ~13,0 M (au moment de la capture) |
+| **Publié** | 2025-10-08 |
+| **Catégorie** | Music |
+| **Type** | Musique méditation / sommeil — **couche 528 Hz + 432 Hz** (description mentionne aussi 963 Hz en marketing) — **pas** vol spatial, **pas** traversée d’anneaux, **pas** gameplay |
+
+### Mood visuel / audio
+
+| Dimension | Lecture produit |
+|-----------|-----------------|
+| **Visuel** | Miniature / branding chaîne (sanctuaire calme, lune, esthétique « deep sleep ») — **pas** de séquence 3D, rail, ni anneaux géants à traverser. Le Verse reste la scène visuelle ; la vidéo est surtout **audio + mood nocturne**. |
+| **Audio** | Piste longue continue, tons solfège superposés (528 « réparation » + 432 « harmonie ») — écoute passive, casque, volume bas ; mots-clés sommeil, stress, méditation. |
+| **Structure** | **Duo de fréquences** fusionnées (distinct du triptyque 3 Hz vidéo 1, des 9 chapitres vidéo 2, du ton unique 6 h vidéo 3, des 7 chakras vidéo 4). |
+| **Narratif marketing** | « DNA repair », guérison corps et esprit, sommeil réparateur, restauration — **discours bien-être, non preuve médicale**. |
+| **Transcript** | Titre seul en transcript auto ; pas de voix-off narrative — inspiration = **intention nocturne** et **réparation symbolique**, pas storyboard UX. |
+
+### Note « verse des anneaux »
+
+Les **tores** du Verse Egor69 (`realms.js`) restent la métaphore utilisateur. Cette URL complète la série par un arc **nuit / sommeil / dualité corps–esprit** (~3 h) — entre la session courte (vidéo 4, ~59 min) et l’écoute extrême (vidéo 3, ~6 h) — **sans** copier MGM, Tolkien, ni promesses ADN / guérison.
+
+### Implémentation 3D (constat vidéo)
+
+| Élément recherché | Présent dans la vidéo ? | Note Verse |
+|-------------------|-------------------------|------------|
+| Traversée d’anneaux / rail | **Non** | P2-INS-1 inchangé — portail narratif |
+| Vol spatial / cockpit | **Non** | Third-person marche cosmique |
+| Hyperspace / warp | **Non** | Transitions fade/scale existantes |
+| Gameplay arcade | **Non** | Mood sommeil profond, pas runner |
+
+---
+
+## Emprunter (mood & UX — sans copier l’œuvre)
+
+| Idée | Application Egor69 Verse |
+|------|---------------------------|
+| **Duo complémentaire** | Deux indicateurs HUD discrets (ex. anneaux visités / salles 2D explorées) — métaphore 528+432 **sans** Hz ni ADN |
+| **Sommeil profond** | Mode nuit cosmique : scène plus douce, HUD atténué — pas écran noir (vidéo 2) |
+| **Voyage nocturne ~3 h** | Session longue viable : dérive passive (P2-INS-7) + vitesses calmes — entre 59 min et 6 h |
+| **Réparation symbolique** | Copy sobre après longue session (« parcours apaisé ») — pas « DNA repair » |
+| **Sanctuaire calme** | Palette bleu nuit + lavande, brume stable — aligné `COSMIC_NAV_V2` |
+
+---
+
+## Ne pas copier (droits & promesses)
+
+| Risque | Action |
+|--------|--------|
+| **© Dreamy Flow** | Aucun extrait, sample 528/432 Hz, miniature ni branding chaîne |
+| **DNA repair / heal damage** | Pas de promesse réparation ADN, guérison corporelle, ni sommeil programmé |
+| **528 Hz / 432 Hz identifiables** | Pas de tons purs ni boucles reconnaissables — audio P2 original uniquement |
+| **963 Hz en description** | Ne pas afficher fréquences solfège sur `/world` |
+| **Gameplay inexistant** | Ne pas annoncer vol dans les anneaux sur cette URL |
+
+---
+
+## Comparaison vidéo 1 vs 2 vs 3 vs 4 vs 5
+
+| Critère | `pSXgXAqomMY` | `NxXzQLl2H5Y` | `OlV26ouCn5w` | `4mJc9A1yOx0` | `3OvM4ycNVL8` |
+|---------|---------------|---------------|---------------|---------------|---------------|
+| **Chaîne** | Inner Lotus Music | MindfulMed | Meditative Mind | Abundance Energy | Dreamy Flow |
+| **Durée** | ~71 min | ~46 min | ~6 h | ~59 min | **~2 h 53 min** |
+| **Structure** | 3 Hz fusionnés | **9 chapitres** | 1 ton 963 Hz | **7 chakras** + 999 Hz | **2 Hz** (528 + 432) |
+| **Visuel** | Art chaîne | **Écran noir** | Branding | Cosmos IA | **Sleep / lune** (miniature) |
+| **Narratif** | Cœur / univers | Restauration paliers | LoA / intention | Purification / miracles | **Sommeil profond**, corps–esprit |
+| **Pour les Anneaux** | Dérive, `ritualHint` | Palier X/9 | Intention, AFK 6 h | 7 teintes, halo | **Duo HUD**, mode nuit |
+
+Les cinq vidéos confirment une **traversée symbolique contemplative** — **aucune** ne montre de gameplay « anneaux » ou vol spatial.
+
+---
+
+## Cinq recommandations concrètes (vidéo 6)
+
+1. **Axes corps / esprit (P1-INS-11)** : réutiliser les deux compteurs pôles — miroir dualité 528+432 **sans** Hz ni ADN (complète la vidéo 5, ne duplique pas P1-INS-10).
+2. **Mode nuit cosmique (P2-INS-11)** : toggle ou créneau soir — luminosité −20 %, étoiles plus douces, marche défaut −10 % — mood sommeil profond Dreamy Flow.
+3. **Conserver P2-INS-7** : dérive passive couvre les sessions ~3 h ; la vidéo 6 **affine** le mood nuit, ne remplace pas l’AFK 6 h.
+4. **Conserver P1-INS-6 à 10 et P2-INS-9/10** : arcs 9, 7, 5 couches et pluie d’étoiles restent valides.
+5. **Audio (P2)** : boucle nocturne originale très basse — interdit Dreamy Flow et tons 528/432 purs.
+
+---
+
+## Fichiers code liés (vidéo 6)
+
+- `docs/VERSE-COSMIC-NAV-DESIGN.md` — P2-INS-11 (mode nuit) ; P1-INS-11 partagé avec vidéo 5
+- `src/pages/WorldHub.jsx` — toggle nuit cosmique
+- `src/world/WorldScene.jsx` — atténuation lumière mode nuit
+
+---
+
+# Addendum — Vidéo 5 (suite « verse des anneaux »)
+
+**Lien :** [https://www.youtube.com/watch?v=IFH1pi6xIk4](https://www.youtube.com/watch?v=IFH1pi6xIk4)  
+**ID :** `IFH1pi6xIk4`  
+**Date de capture :** mai 2026  
+**Contexte utilisateur :** cinquième référence YouTube — stack **5 fréquences** solfège, arc **corps & esprit**, ambiance sommeil / ASMR.
+
+---
+
+## Ce que la vidéo est réellement
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *963Hz + 285Hz + 432Hz + 741Hz + 528Hz The Deepest Healing Heal Damage In The Body and Spirit #2* |
+| **Chaîne** | Asmr Relaxing Deep Sleep |
+| **Durée** | 3:09:55 (~3 h 10 min) |
+| **Vues** | ~8 (au moment de la capture — chaîne récente) |
+| **Publié** | 2026-05-14 |
+| **Catégorie** | Entertainment |
+| **Type** | Musique méditation / **5 tons solfège superposés** + copy **7 chakras**, guérison corps-esprit, manifestation / abondance — **pas** vol spatial, **pas** traversée d’anneaux, **pas** gameplay |
+
+### Thèmes publics (description chaîne)
+
+- **Stack 5 Hz** : 285, 432, 528, 741, 963 — couches simultanées (« deepest healing »), distinct du triptyque 3 Hz (vidéo 1), des 9 chapitres (vidéo 2), du ton unique 6 h (vidéo 3) et de l’arc 7 chakras + 999 Hz (vidéo 4).
+- **Corps & esprit** : « heal damage in the body and spirit » — dualité bien-être symbolique, **non** preuve médicale.
+- **7 chakras** (liste Muladhara → Sahasrara) : alignement énergétique, respiration, visualisation — même famille que vidéo 4 mais structure **5 couches** audio en avant.
+- **Abondance / money frequency** : 963 Hz + 528 Hz « wealth », signes 888/1111 — **à ne pas reprendre** en promesses produit.
+- **Ambiance** : mots-clés pluie, vent, white noise, plage tropicale / Maldives — fond **relaxation / sommeil**, pas décor 3D montré en jeu.
+- **Usage** : écoute longue passive, casque, sommeil — chaîne ASMR sleep.
+
+### Transcript
+
+Pas de narration structurante exploitable ; contenu **audio superposé** + copy marketing (chakras, manifestation, miracles financiers). L’inspiration produit = **empilement progressif**, **dualité corps/esprit**, **session ~3 h** — pas storyboard de vol dans les anneaux.
+
+### Note « verse des anneaux »
+
+Les **tores** du Verse Egor69 (`realms.js`) restent la métaphore utilisateur. Cette URL ajoute un **empilement à 5 seuils** et un fil **corps ↔ esprit** à la série mood — toujours **sans** MGM, Tolkien, ni promesses guérison / richesse.
+
+### Implémentation 3D (constat vidéo)
+
+| Élément recherché | Présent dans la vidéo ? | Note Verse |
+|-------------------|-------------------------|------------|
+| Traversée d’anneaux / rail | **Non** | Conserver portail narratif (P2-INS-1), pas runner |
+| Hyperspace / warp | **Non** | Transitions fade/scale existantes |
+| Échelle planétaire / anneaux géants | **Non** | Échelle via fog, étoiles, tores (`COSMIC_NAV_V2`) |
+| Vol spatial / cockpit | **Non** | Third-person marche cosmique inchangé |
+| Visuels cosmiques cinématographiques | **Non** (audio-first) | Mots-clés plage/pluie = ambiance sonore, pas référence flight/scale |
+
+**Priorité produit :** mood, empilement symbolique, session longue — **pas** recommandations vol / échelle / traversée arcade (contrairement à une référence avec anneaux spatiaux réels).
+
+---
+
+## Emprunter (mood & UX — sans copier l’œuvre)
+
+| Idée | Application Egor69 Verse |
+|------|---------------------------|
+| **5 couches symboliques** | HUD « Couche 2/5 » sur l’arc de visites — métaphore stack Hz sans nommer fréquences |
+| **Corps / esprit** | Deux pôles de progression (ex. bien-être + mythologies vs divinatoire + cœur) affichés sobrement |
+| **Pluie contemplative** | Particules étoiles légères en mode contemplation — inspiration pluie/white noise, pas plage Maldives |
+| **Session ~3 h** | Sauvegarde position + dérive passive (complète P2-INS-7) sans pénalité AFK |
+| **Empilement doux** | Effet visuel cumulatif discret (+1 anneau de glow par visite dans la session, cap 5) |
+
+---
+
+## Ne pas copier (droits & promesses)
+
+| Risque | Action |
+|--------|--------|
+| **© Asmr Relaxing Deep Sleep / Cakra Frequencies** | Aucun extrait des 5 tons, miniature, ni branding chaîne |
+| **Guérison corps / ADN / detox** | Pas de claims médicaux ni « heal damage » sur `/world` |
+| **Money magnet / abundance / 888** | Pas de promesse richesse, signes numériques, ni manifestation |
+| **5 Hz identifiables** | Pas de boucle superposée 285+432+528+741+963 — audio P2 original uniquement |
+| **Visuels plage / Maldives** | Pas de fond tropical copié ; palette Verse indigo/violet/or conservée |
+| **Gameplay inexistant** | Ne pas annoncer vol dans les anneaux sur cette URL |
+
+---
+
+## Comparaison vidéo 1 vs 2 vs 3 vs 4 vs 5
+
+| Critère | `pSXgXAqomMY` | `NxXzQLl2H5Y` | `OlV26ouCn5w` | `4mJc9A1yOx0` | `IFH1pi6xIk4` |
+|---------|---------------|---------------|---------------|---------------|---------------|
+| **Chaîne** | Inner Lotus Music | MindfulMed | Meditative Mind | Abundance Energy | Asmr Relaxing Deep Sleep |
+| **Durée** | ~71 min | ~46 min | ~6 h | ~59 min | **~3 h 10** |
+| **Structure** | 3 Hz fusionnés | **9 chapitres** | 1 ton 963 Hz | **7 chakras** + 999 Hz | **5 Hz empilés** + corps/esprit |
+| **Visuel** | Art chaîne | **Écran noir** | Branding | Cosmos IA | **Audio-first** (pluie/plage en keywords, pas gameplay) |
+| **Narratif** | Oneness, cœur | Restauration 9 paliers | Question + LoA | Purification, aura | **Stack healing**, chakras, sommeil |
+| **Pour les Anneaux** | Dérive, `ritualHint` | Palier X/9, focus HUD | Intention, AFK 6 h | 7 teintes, clarté brume | **5 couches**, corps/esprit, pluie d’étoiles |
+
+Les cinq vidéos confirment une **traversée symbolique ordonnée** — mood méditatif et seuils narratifs — **aucune** ne montre de gameplay « anneaux » ou vol spatial.
+
+---
+
+## Cinq recommandations concrètes (vidéo 5)
+
+1. **Arc 5 couches (P1)** : HUD « Couche 3/5 » sur progression de session (visites cumulées ou segment d’arc) — miroir du stack 5 Hz **sans** nommer fréquences ni guérison (distinct du X/9 et du 7 harmoniques).
+2. **Pôle corps / pôle esprit (P1)** : regrouper les realms en deux axes HUD (matière / sens) avec compteur discret — fil « body and spirit » sans vocabulaire chakra.
+3. **Pluie d’étoiles (P2)** : en mode contemplation, `Sparkles` ou particules verticales très légères (densité basse, mobile-safe) — inspiration pluie/white noise, pas décor Maldives.
+4. **Glow empilé session (P2)** : +1 intensité emissive sur `CosmicTraveler` par tore visité dans la session (max 5), reset à la déconnexion — métaphore couches superposées.
+5. **Conserver P1-INS-6 à 9 et P2-INS-6/7** : arcs 9, 7, intention et dérive restent valides ; la vidéo 5 **ajoute** la couche 5-stack + dualité corps-esprit, ne remplace pas les arcs précédents.
+
+---
+
+## Fichiers code liés (vidéo 5)
+
+- `docs/VERSE-COSMIC-NAV-DESIGN.md` — P1-INS-10/11, P2-INS-9/10 (distincts des vidéos 1–4)
+- `src/pages/WorldHub.jsx` — HUD 5 couches, axes corps/esprit
+- `src/components/world/CosmicNavControls.jsx` — glow empilé `CosmicTraveler`
+- `src/world/WorldScene.jsx` — particules pluie d’étoiles (contemplation)

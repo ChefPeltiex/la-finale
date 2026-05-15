@@ -51,6 +51,8 @@ Remplacer l’exploration « pawn vert sur terrain » par un **voyage immersif d
 | P1-INS-7 | **Focus portail (HUD minimal)** | À &lt; 8 m d’un tore : masquer ou réduire minimap / panneaux secondaires 3–5 s ; `ritualHint` reste visible — équivalent UX « black screen » |
 | P1-INS-8 | **Intention de session** | Champ optionnel (localStorage) ou rappel HUD : une ligne honnête avant traversée — inspiré « ask universe » (`OlV26ouCn5w`), **sans** law of attraction ni promesse de manifestation |
 | P1-INS-9 | **Sept harmoniques HUD** | Minimap ou bandeau « Harmonie 3/7 » : 7 groupes de realms avec teinte d’accent distincte — inspiré arc 7 chakras (`4mJc9A1yOx0`), **sans** nom chakra, Hz, aura cleansing ni promesse miracle |
+| P1-INS-10 | **Cinq couches de session** | HUD « Couche X/5 » sur visites cumulées ou segment d’arc — inspiré stack 5 Hz (`IFH1pi6xIk4`), **sans** fréquences, guérison corps/esprit ni claims santé |
+| P1-INS-11 | **Axes corps / esprit** | Deux compteurs discrets (pôles matière vs sens sur `WORLD_REALMS`) — dualité body/spirit (`IFH1pi6xIk4`, `3OvM4ycNVL8`), **sans** vocabulaire chakra ni Hz |
 
 ### P2 — Galaxies & chapitres
 
@@ -70,6 +72,9 @@ Remplacer l’exploration « pawn vert sur terrain » par un **voyage immersif d
 | P2-INS-6 | **Complétion de constellation** | Toast ou badge discret quand tous les realms d’un pôle / galaxie sont visités — arc « parcours complet », sans copy MindfulMed |
 | P2-INS-7 | **Dérive passive (session longue)** | Après ~90 s sans input : marche auto lente ou orbite caméra + HUD atténué — mood écoute 6 h (`OlV26ouCn5w`), désactivable ; pas écran noir ni ton 963 Hz |
 | P2-INS-8 | **Clarté + halo post-seuil** | Première visite d’un tore / session : brume −10 % density 2 s ; au retour 3D : emissive voyageur +15 % pendant 12 s — mood lumière radiante (`4mJc9A1yOx0`), pas claim purification ni ton 999 Hz |
+| P2-INS-9 | **Pluie d’étoiles (contemplation)** | Si mode contemplation actif : particules verticales très légères (`Sparkles` ou équivalent, cap mobile) — inspiration pluie/white noise (`IFH1pi6xIk4`), pas fond tropical |
+| P2-INS-10 | **Glow empilé (max 5)** | +1 step emissive `CosmicTraveler` par tore visité en session (plafond 5, reset hors session) — métaphore stack 5 couches, sans audio solfège |
+| P2-INS-11 | **Mode nuit cosmique** | Toggle ou créneau soir local : luminosité scène −15 à 20 %, `Stars` factor réduit, vitesse marche défaut −10 % — sommeil profond (`3OvM4ycNVL8`), désactivable ; pas écran noir ni tons 528/432 |
 
 ### P3 — Météorites, comètes, énigmes
 
@@ -141,7 +146,7 @@ Référence croisée à ajouter dans `alliance-ia-egor69.md` (section agents) lo
 
 ## Références
 
-- **Inspiration YouTube (mood univers / anneaux)** : [VERSE-INSPIRATION-YOUTUBE.md](./VERSE-INSPIRATION-YOUTUBE.md) — `pSXgXAqomMY` (méditation cœur / univers), `NxXzQLl2H5Y` (9 paliers séquentiels, écran noir), `OlV26ouCn5w` (963 Hz long, intention / gratitude), `4mJc9A1yOx0` (7 harmoniques, clarté / halo — pas gameplay anneaux)
+- **Inspiration YouTube (mood univers / anneaux)** : [VERSE-INSPIRATION-YOUTUBE.md](./VERSE-INSPIRATION-YOUTUBE.md) — `pSXgXAqomMY` (méditation cœur / univers), `NxXzQLl2H5Y` (9 paliers séquentiels, écran noir), `OlV26ouCn5w` (963 Hz long, intention / gratitude), `4mJc9A1yOx0` (7 harmoniques, clarté / halo), `IFH1pi6xIk4` (stack 5 Hz, corps/esprit, ~3 h — **audio-first**), `3OvM4ycNVL8` (528+432, sommeil profond, mode nuit — pas vol spatial ni anneaux gameplay)
 - Manuel utilisateur : `src/content/manuel-utilisation-igor.md` (section Verse)
 - QA : `docs/MANUAL-QA-PROTOCOL.md` (explorateur cosmique)
 - Glossaire : entrée « Verse 3D » dans `src/data/glossaryCentral.js`
