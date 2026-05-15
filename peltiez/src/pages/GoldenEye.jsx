@@ -1,3 +1,4 @@
+import SymbolicDisclaimer from "@/components/ui/SymbolicDisclaimer";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -90,6 +91,7 @@ export default function GoldenEye() {
 
   return (
     <div className="fixed inset-0 bg-black overflow-hidden z-50">
+      <SymbolicDisclaimer className="mb-6 max-w-3xl mx-auto" compact />
       <canvas ref={canvasRef} className="absolute inset-0 z-0" />
 
       {/* Dark overlay */}

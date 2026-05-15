@@ -5,11 +5,13 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { getGuideHintsForPath, COMPANION_DOC_PATH } from "@/config/guidePageHints";
 import { loadDisplayMode, saveDisplayMode } from "@/lib/displayMode";
+import usePilotMode from "@/hooks/usePilotMode";
 
 export default function GuideAgent() {
   const location = useLocation();
   const [open, setOpen] = useState(false);
   const [mode, setMode] = useState(() => loadDisplayMode());
+  const { pilotMode, setPilotMode } = usePilotMode();
 
   useEffect(() => {
     const onMode = (ev) => setMode(ev.detail === "simple" ? "simple" : "deep");
@@ -92,17 +94,31 @@ export default function GuideAgent() {
                 Alliance IA
               </Link>
             </div>
-            <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-              <span className="text-[10px] text-white/50 uppercase tracking-wider">Affichage</span>
-              <Button
-                type="button"
-                size="sm"
-                variant="outline"
-                className="h-8 rounded-lg text-xs border-[#D4AF37]/40 hover:bg-[#FFD700]/10"
-                onClick={toggleMode}
-              >
-                {simple ? "Mode profond" : "Mode simple"}
-              </Button>
+            <div className="mt-4 pt-3 border-t border-white/10 space-y-3">
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-[10px] text-white/50 uppercase tracking-wider">Mode pilote</span>
+                <Button
+                  type="button"
+                  size="sm"
+                  variant="outline"
+                  className="h-8 rounded-lg text-xs border-emerald-500/40 hover:bg-emerald-500/10"
+                  onClick={() => setPilotMode(!pilotMode)}
+                >
+                  {pilotMode ? "Activé" : "Désactivé"}
+                </Button>
+              </div>
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-[10px] text-white/50 uppercase tracking-wider">Affichage</span>
+                <Button
+                  type="button"
+                  size="sm"
+                  variant="outline"
+                  className="h-8 rounded-lg text-xs border-[#D4AF37]/40 hover:bg-[#FFD700]/10"
+                  onClick={toggleMode}
+                >
+                  {simple ? "Mode profond" : "Mode simple"}
+                </Button>
+              </div>
             </div>
           </div>
         </div>

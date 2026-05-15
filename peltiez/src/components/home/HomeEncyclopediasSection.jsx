@@ -63,7 +63,7 @@ function EditionTile({ edition, simple }) {
   const title = simple ? edition.labelSimple : edition.label;
 
   const tileClass = cn(
-    "group flex flex-col rounded-2xl border border-[#D4AF37]/35 bg-zinc-950/90 p-5 transition-all duration-300",
+    "pilot-card group flex flex-col p-5 transition-all duration-300",
     "hover:border-[#FFD700]/55 hover:shadow-[0_0_24px_rgba(255,215,0,0.12)] hover:-translate-y-0.5"
   );
 

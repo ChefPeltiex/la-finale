@@ -259,6 +259,15 @@ export default function Layout() {
                 onClick={closeMobile}
               />
             ))}
+            {pilotMode && !mobileNavAdvanced && preferenceNavItems.length > visibleNavItems.length && (
+              <button
+                type="button"
+                onClick={() => setMobileNavAdvanced(true)}
+                className="w-full mt-2 px-3 py-2.5 rounded-xl text-xs font-medium text-[#FFD700]/90 border border-[#D4AF37]/30 hover:bg-[#FFD700]/10"
+              >
+                Tout voir (avancé) · {preferenceNavItems.length - visibleNavItems.length}
+              </button>
+            )}
           </div>
         </div>
       )}

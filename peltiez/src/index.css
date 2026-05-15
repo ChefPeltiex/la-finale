@@ -604,3 +604,10 @@ html.dark .cosmic-bg,
 .cosmic-bg {
   --tw-bg-opacity: 1;
 }
+
+@layer components {
+  .pilot-card {
+    @apply rounded-2xl border border-[#D4AF37]/40 bg-zinc-950/95;
+    box-shadow: 0 0 24px rgba(212, 175, 55, 0.08);
+  }
+}

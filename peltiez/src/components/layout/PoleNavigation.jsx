@@ -1,6 +1,6 @@
 import { memo, useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ChevronDown, ChevronRight } from "lucide-react";
+import { ChevronDown, ChevronRight, Layers } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { navLinkTarget } from "@/lib/accueilSections";
 import {
@@ -9,7 +9,9 @@ import {
   getPoleIdForPath,
   NAV_POLES,
 } from "@/config/navPoles";
+import { isNavItemInPilotScope } from "@/config/pilotScope";
 import { loadDisplayMode } from "@/lib/displayMode";
+import usePilotMode from "@/hooks/usePilotMode";
 
 function navItemIsActive(location, item) {
   if (location.pathname !== item.path) return false;
@@ -39,9 +41,11 @@ const PoleNavLink = memo(function PoleNavLink({ item, isActive, onClick }) {
 
 export const PoleNavSidebar = memo(function PoleNavSidebar({ navItems, NavLinkComponent }) {
   const location = useLocation();
+  const { pilotMode } = usePilotMode();
   const [simple, setSimple] = useState(() => loadDisplayMode() === "simple");
   const activePole = getPoleIdForPath(location.pathname);
   const [expanded, setExpanded] = useState(() => new Set([activePole]));
+  const [advancedPoles, setAdvancedPoles] = useState(() => new Set());
   const groups = groupNavItemsByPole(navItems);
 
   useEffect(() => {
@@ -63,12 +67,27 @@ export const PoleNavSidebar = memo(function PoleNavSidebar({ navItems, NavLinkCo
     });
   };
 
+  const toggleAdvanced = (poleId) => {
+    setAdvancedPoles((prev) => {
+      const next = new Set(prev);
+      if (next.has(poleId)) next.delete(poleId);
+      else next.add(poleId);
+      return next;
+    });
+  };
+
   return (
     <nav className="flex-1 px-3 space-y-1 overflow-y-auto scrollbar-hide relative z-10">
       {groups.map(({ pole, items }) => {
         const isOpen = expanded.has(pole.id);
         const PoleIcon = pole.icon;
         const poleActive = activePole === pole.id;
+        const showAdvanced = advancedPoles.has(pole.id);
+        const pilotOnly = items.filter(isNavItemInPilotScope);
+        const hasHidden = pilotMode && pilotOnly.length < items.length;
+        const visibleItems = pilotMode && !showAdvanced ? pilotOnly : items;
+        const hiddenCount = hasHidden && !showAdvanced ? items.length - pilotOnly.length : 0;
+
         return (
           <div key={pole.id} className="mb-1">
             <button
@@ -91,7 +110,7 @@ export const PoleNavSidebar = memo(function PoleNavSidebar({ navItems, NavLinkCo
             </button>
             {isOpen && (
               <div className="mt-0.5 ml-2 pl-2 border-l border-[#D4AF37]/20 space-y-0.5">
-                {items.map((item) =>
+                {visibleItems.map((item) =>
                   NavLinkComponent ? (
                     <NavLinkComponent
                       key={`${item.path}${item.hash || ""}`}
@@ -105,6 +124,25 @@ export const PoleNavSidebar = memo(function PoleNavSidebar({ navItems, NavLinkCo
                       isActive={navItemIsActive(location, item)}
                     />
                   )
+                )}
+                {hiddenCount > 0 && (
+                  <button
+                    type="button"
+                    onClick={() => toggleAdvanced(pole.id)}
+                    className="mt-1 flex w-full items-center gap-2 px-3 py-2 rounded-lg text-[11px] font-medium text-[#FFD700]/80 hover:text-[#FFD700] hover:bg-[#FFD700]/10 transition-colors"
+                  >
+                    <Layers className="h-3.5 w-3.5 shrink-0" />
+                    Tout voir (avancé) · {hiddenCount}
+                  </button>
+                )}
+                {hasHidden && showAdvanced && (
+                  <button
+                    type="button"
+                    onClick={() => toggleAdvanced(pole.id)}
+                    className="mt-1 flex w-full items-center gap-2 px-3 py-1.5 rounded-lg text-[10px] text-white/40 hover:text-white/60"
+                  >
+                    Replier le menu avancé
+                  </button>
                 )}
               </div>
             )}

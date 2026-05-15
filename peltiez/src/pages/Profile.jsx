@@ -10,6 +10,7 @@ import BadgesDisplay from "@/components/BadgesDisplay";
 import { Link } from "react-router-dom";
 import ReputationBar from "@/components/ReputationBar";
 import { openOnboardingReplay } from "@/components/onboarding/OnboardingFlow";
+import usePilotMode from "@/hooks/usePilotMode";
 
 const TYPE_CONFIG = {
   vente:      { label: "Vente",      color: "bg-blue-100 text-blue-700",    icon: Package },
@@ -27,6 +28,7 @@ const LEVEL_COLORS = {
 };
 
 export default function Profile() {
+  const { pilotMode, setPilotMode } = usePilotMode();
   const { data: user, isLoading: loadingUser } = useQuery({
     queryKey: ["me"],
     queryFn: () => base44.auth.me(),
@@ -179,6 +181,16 @@ export default function Profile() {
           </div>
         </div>
       )}
+
+      <div className="rounded-2xl border border-[#D4AF37]/30 bg-zinc-950/50 p-4 flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <p className="text-sm font-semibold text-foreground">Mode pilote</p>
+          <p className="text-xs text-muted-foreground mt-0.5">Navigation réduite pour découvrir l&apos;essentiel.</p>
+        </div>
+        <Button type="button" size="sm" variant="outline" className="rounded-xl" onClick={() => setPilotMode(!pilotMode)}>
+          {pilotMode ? "Désactiver" : "Activer"}
+        </Button>
+      </div>
 
       {/* Reputation Bar */}
       <ReputationBar listings={listings} />

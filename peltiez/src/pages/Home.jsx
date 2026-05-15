@@ -3,6 +3,7 @@ import SEOMeta from "@/components/SEOMeta";
 import { Link, useLocation } from "react-router-dom";
 import HomeHeroCards from "@/components/home/HomeHeroCards";
 import HomeEncyclopediasSection from "@/components/home/HomeEncyclopediasSection";
+import SymbolicDisclaimer from "@/components/ui/SymbolicDisclaimer";
 import useDisplayMode from "@/hooks/useDisplayMode";
 import SovereigntyLaws from "@/components/SovereigntyLaws";
 import { useQuery } from "@tanstack/react-query";
@@ -198,6 +199,7 @@ export default function Home() {
       {/* Cosmos de valeurs (bonheur infini) */}
       <div id="accueil-cosmos" className="max-w-6xl mx-auto scroll-mt-28 px-4 lg:scroll-mt-8 lg:px-8">
         <ValuesCosmos />
+        <SymbolicDisclaimer className="mt-4" />
       </div>
 
       {/* L'Origine (Frontispice Egor69) */}
@@ -237,6 +239,7 @@ export default function Home() {
         <Suspense fallback={<p className="py-12 text-center text-sm text-muted-foreground">Chargement des formules…</p>}>
           <MathematicsMonument />
         </Suspense>
+        <SymbolicDisclaimer className="mt-4" compact />
       </div>
 
       {/* Join The Revolution CTA */}

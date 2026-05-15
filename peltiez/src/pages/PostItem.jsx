@@ -10,6 +10,7 @@ import { Label } from "@/components/ui/label";
 import { Package, Gift, Wrench, RefreshCw, Upload, Loader2, FileSpreadsheet } from "lucide-react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import PublishNextSteps from "@/components/publish/PublishNextSteps";
 
 const TYPES = [
   { key: "don",        label: "Don",        icon: Gift,       desc: "Offrir gratuitement" },
@@ -57,6 +58,7 @@ export default function PostItem() {
     <div className="max-w-2xl mx-auto pb-20">
       <h1 className="font-display text-2xl font-bold text-foreground">Publier une annonce</h1>
       <p className="text-sm text-muted-foreground mt-1 mb-4">Partagez un objet avec la communauté CirculAI Hub</p>
+      <PublishNextSteps className="mb-6" />
       <div className="mb-8 p-4 bg-accent rounded-2xl flex items-center justify-between gap-3">
         <div>
           <p className="text-sm font-semibold text-accent-foreground">📦 Vous avez plusieurs objets ?</p>

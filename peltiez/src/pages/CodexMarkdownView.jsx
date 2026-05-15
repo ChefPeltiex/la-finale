@@ -6,6 +6,7 @@ import SEOMeta from "@/components/SEOMeta";
 import { SITE_ORIGIN } from "@/lib/site";
 import { BookOpen, Download, FileText, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
+import SymbolicDisclaimer from "@/components/ui/SymbolicDisclaimer";
 
 const THEMES = {
   investisseur: {
@@ -128,6 +129,8 @@ export default function CodexMarkdownView({
             </a>
           </div>
         </div>
+
+        <SymbolicDisclaimer className="mb-6" />
 
         {loading && (
           <p className="text-sm text-white/50 animate-pulse flex items-center gap-2">
