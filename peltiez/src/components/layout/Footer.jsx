@@ -3,6 +3,7 @@ import { ACCUEIL_SECTION_LINKS, linkToHomeSection } from "@/lib/accueilSections"
 import { SITE_TAGLINE } from "@/lib/site";
 import { Shield, Copyright, AlertTriangle } from "lucide-react";
 import { DISCLAIMER } from "@/data/cathedralOfMind";
+import { openOnboardingReplay } from "@/components/onboarding/OnboardingFlow";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -74,6 +75,15 @@ export default function Footer() {
               <li><Link to="/soutien" className="text-muted-foreground hover:text-foreground transition">Soutien le projet</Link></li>
               <li><Link to="/about" className="text-muted-foreground hover:text-foreground transition">À propos</Link></li>
               <li><Link to="/contact" className="text-muted-foreground hover:text-foreground transition">Contact</Link></li>
+              <li>
+                <button
+                  type="button"
+                  onClick={openOnboardingReplay}
+                  className="text-muted-foreground hover:text-[#FFD700] transition text-left"
+                >
+                  Parcours initiatique
+                </button>
+              </li>
             </ul>
             <p className="mt-4 text-[10px] font-bold uppercase tracking-wider text-foreground/80">Accueil — ancres</p>
             <ul className="mt-1.5 space-y-1 text-xs">

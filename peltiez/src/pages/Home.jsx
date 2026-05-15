@@ -1,7 +1,8 @@
 import { useState, useEffect, lazy, Suspense } from "react";
 import SEOMeta from "@/components/SEOMeta";
 import { Link, useLocation } from "react-router-dom";
-import OnboardingTutorial from "@/components/OnboardingTutorial";
+import HomeHeroCards from "@/components/home/HomeHeroCards";
+import useDisplayMode from "@/hooks/useDisplayMode";
 import SovereigntyLaws from "@/components/SovereigntyLaws";
 import { useQuery } from "@tanstack/react-query";
 import { base44 } from "@/api/base44Client";
@@ -109,6 +110,7 @@ function ListingCard({ listing }) {
 export default function Home() {
   const [userLocation, setUserLocation] = useState('');
   const location = useLocation();
+  const { simple: simpleMode } = useDisplayMode();
 
   /** Ancres /#accueil-… : la page n’avait pas d’`id` sur les blocs + le scroll natif ne se rejoue pas toujours après navigation SPA. */
   useEffect(() => {
@@ -168,6 +170,8 @@ export default function Home() {
         canonicalUrl={SITE_ORIGIN}
         schemaData={seoSchema}
       />
+
+      <HomeHeroCards />
 
       {/* Mur de la Victoire (Radar temps réel) */}
       <div id="accueil-radar" className="scroll-mt-28 lg:scroll-mt-8">
@@ -240,9 +244,6 @@ export default function Home() {
         <SovereigntyMatrix />
       </div>
 
-      {/* Onboarding Tutorial */}
-      <OnboardingTutorial />
-
       {/* 10 Universal Laws of Sovereignty */}
       <div id="accueil-lois" className="max-w-7xl mx-auto scroll-mt-28 px-4 lg:scroll-mt-8 lg:px-8">
         <SovereigntyLaws />
@@ -277,26 +278,34 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
               </span>
-              ✦ SANCTUAIRE CIRCULAIRE · PRÉSENCE GLOBALE · EN DIRECT
+              {simpleMode ? "Réseau circulaire · en direct" : "✦ SANCTUAIRE CIRCULAIRE · PRÉSENCE GLOBALE · EN DIRECT"}
             </div>
 
             <h1 className="font-display text-6xl sm:text-8xl font-black text-white leading-none mb-3 tracking-tight" itemProp="headline">
               <span className="text-rainbow">Egor69</span><br />
-              <span style={{ background: "linear-gradient(135deg, #34d399, #60a5fa, #a78bfa)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-                LA vérité du présent.
+              <span style={{ background: "linear-gradient(135deg, #FFD700, #39FF14, #BF00FF)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+                {simpleMode ? "Économie circulaire, ici." : "LA vérité du présent."}
               </span>
             </h1>
-            <p className="font-bold text-sm sm:text-base mb-6 tracking-widest uppercase"
-              style={{ color: "rgba(251,191,36,0.9)", textShadow: "0 0 20px rgba(251,191,36,0.4)" }}>
-              La vérité des vérités · Le futur n'est plus aux portes · Il est LÀ · MAINTENANT
-            </p>
+            {!simpleMode && (
+              <p className="font-bold text-sm sm:text-base mb-6 tracking-widest uppercase"
+                style={{ color: "rgba(251,191,36,0.9)", textShadow: "0 0 20px rgba(251,191,36,0.4)" }}>
+                La vérité des vérités · Le futur n&apos;est plus aux portes · Il est LÀ · MAINTENANT
+              </p>
+            )}
 
             <p className="text-white/70 text-lg sm:text-2xl max-w-3xl leading-relaxed mb-10 font-semibold">
-              Un empire du SOIN : circulation des biens, des savoirs et des quêtes — avec une esthétique cosmique et une exigence de vérité.
-              <br /><br />
-              <span className="text-emerald-300">Radar, encyclopédie vivante, paiement sobre : nous visons l’excellence sans inflation marketing.</span>
-              <br /><br />
-              <span className="text-amber-300 font-bold italic">L’instant où tu agis compte plus que le bruit du monde.</span>
+              {simpleMode ? (
+                <>Don, échange, réparation et savoirs — une plateforme claire pour agir tout de suite.</>
+              ) : (
+                <>
+                  Un empire du SOIN : circulation des biens, des savoirs et des quêtes — avec une esthétique cosmique et une exigence de vérité.
+                  <br /><br />
+                  <span className="text-emerald-300">Radar, encyclopédie vivante, paiement sobre : nous visons l’excellence sans inflation marketing.</span>
+                  <br /><br />
+                  <span className="text-amber-300 font-bold italic">L’instant où tu agis compte plus que le bruit du monde.</span>
+                </>
+              )}
             </p>
 
             <div className="flex flex-wrap gap-3 mb-8">

@@ -76,6 +76,14 @@ module.exports = {
           border:               'hsl(var(--sidebar-border))',
           ring:                 'hsl(var(--sidebar-ring))',
         },
+        sovereign: {
+          gold: '#FFD700',
+          'gold-muted': '#D4AF37',
+          neon: '#39FF14',
+          passion: '#FF1744',
+          mauve: '#BF00FF',
+          violet: '#8A2BE2',
+        },
       },
       backgroundImage: {
         'gradient-radial':   'radial-gradient(var(--tw-gradient-stops))',
@@ -85,6 +93,8 @@ module.exports = {
         'gradient-golden':   'linear-gradient(135deg, #f59e0b, #ef4444)',
         'gradient-cosmic':   'linear-gradient(135deg, #6366f1, #a855f7, #ec4899)',
         'gradient-aurora':   'linear-gradient(135deg, #10b981, #06b6d4, #6366f1)',
+        'gradient-sovereign': 'linear-gradient(135deg, #FFD700, #39FF14, #BF00FF, #FF1744)',
+        'gradient-sovereign-gold': 'linear-gradient(135deg, #D4AF37, #FFD700)',
       },
       boxShadow: {
         'magic':     '0 4px 20px rgba(16,185,129,0.25), 0 1px 4px rgba(0,0,0,0.06)',

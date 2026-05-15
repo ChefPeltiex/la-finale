@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import BadgesDisplay from "@/components/BadgesDisplay";
 import { Link } from "react-router-dom";
 import ReputationBar from "@/components/ReputationBar";
+import { openOnboardingReplay } from "@/components/onboarding/OnboardingFlow";
 
 const TYPE_CONFIG = {
   vente:      { label: "Vente",      color: "bg-blue-100 text-blue-700",    icon: Package },
@@ -132,6 +133,14 @@ export default function Profile() {
             ))}
           </div>
 
+          <Button
+            type="button"
+            variant="secondary"
+            className="rounded-xl w-full mb-2 border border-[#D4AF37]/30"
+            onClick={openOnboardingReplay}
+          >
+            Parcours initiatique · rejouer
+          </Button>
           <Button asChild variant="secondary" className="rounded-xl w-full mb-2">
             <Link to="/mon-univers">
               <Gem className="h-4 w-4 mr-2" /> Mon univers · props & thèmes

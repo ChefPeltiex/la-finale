@@ -19,6 +19,9 @@ import { cn } from "@/lib/utils";
 import LanguageSwitcher from "./LanguageSwitcher";
 import NotificationCenter from "./NotificationCenter";
 import Footer from "./layout/Footer";
+import { PoleNavSidebar, PoleMobileBottomNav } from "./layout/PoleNavigation";
+import OnboardingFlow from "./onboarding/OnboardingFlow";
+import GuideAgent from "./guide/GuideAgent";
 import CirculiaWidget from "./CirculiaWidget";
 import MaintenanceBanner from "./MaintenanceBanner";
 import GlobalLaunchAlert from "./GlobalLaunchAlert";
@@ -177,7 +180,6 @@ export default function Layout() {
   }, []);
 
   const visibleNavItems = filterNavItemsForPreferences(NAV_ITEMS, universePrefs);
-  const bottomNavItems = visibleNavItems.slice(0, 5);
 
   useEffect(() => {
     const onPointer = () => {
@@ -212,7 +214,7 @@ export default function Layout() {
       <aside className="fixed left-0 top-0 bottom-0 w-64 hidden lg:flex flex-col z-40 overflow-hidden"
         style={{
           background: "linear-gradient(180deg, hsl(220,30%,8%) 0%, hsl(220,25%,6%) 100%)",
-          borderRight: "1px solid rgba(255,255,255,0.06)"
+          borderRight: "1px solid rgba(212,175,55,0.22)"
         }}>
 
         {/* Ambient glow blobs */}
@@ -248,16 +250,7 @@ export default function Layout() {
           <span className="text-[10px] text-emerald-400/70 font-medium">Réseau vivant · Ouvert au monde · En direct</span>
         </div>
 
-        {/* Nav */}
-        <nav className="flex-1 px-3 space-y-0.5 overflow-y-auto scrollbar-hide relative z-10">
-          {visibleNavItems.map(item => (
-            <NavLink
-              key={`${item.path}${item.hash || ""}`}
-              item={item}
-              isActive={navItemIsActive(location, item)}
-            />
-          ))}
-        </nav>
+        <PoleNavSidebar navItems={visibleNavItems} NavLinkComponent={NavLink} />
 
         {/* Bottom card */}
         <div className="relative z-10 m-4 p-4 rounded-2xl overflow-hidden"
@@ -342,28 +335,7 @@ export default function Layout() {
 
       {EXPERIENCE_FLAGS.strategicConversionStrip ? <StrategicConversionStrip /> : null}
 
-      {/* ── Mobile Bottom Nav ── */}
-      <nav className="lg:hidden fixed bottom-0 left-0 right-0 flex justify-around py-2 z-50"
-        style={{
-          background: "rgba(10,12,20,0.95)",
-          backdropFilter: "blur(20px)",
-          borderTop: "1px solid rgba(255,255,255,0.06)"
-        }}>
-        {bottomNavItems.map(item => {
-          const isActive = navItemIsActive(location, item);
-          const Icon = item.icon;
-          return (
-            <Link
-              key={`${item.path}${item.hash || ""}`}
-              to={navLinkTarget(item)}
-              className={cn("flex flex-col items-center gap-0.5 py-1 px-2 rounded-xl transition-all",
-                isActive ? "text-white" : "text-white/30")}>
-              <Icon className={cn("h-5 w-5 transition-all", isActive && `${item.color} scale-110`)} />
-              <span className="text-[9px] font-medium">{item.label}</span>
-            </Link>
-          );
-        })}
-      </nav>
+      <PoleMobileBottomNav location={location} onNavigate={closeMobile} />
 
       {/* ── Footer ── */}
       <Footer />
@@ -373,6 +345,9 @@ export default function Layout() {
 
       {/* ── Scorpion Harpoon (engagement) ── */}
       <ScorpionHarpoon />
+
+      <OnboardingFlow />
+      <GuideAgent />
     </div>
   );
 }
