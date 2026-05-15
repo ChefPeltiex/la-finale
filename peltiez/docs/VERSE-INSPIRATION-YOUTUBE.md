@@ -31,6 +31,7 @@
 | 25 | `BrHMdqe0vzM` | Inner Lotus Music | ~2 h 22 | **Audio** dominant + **visuel statique** (lotus / branding) | **963 Hz** + bol — tiers œil / couronne · **timestamp utilisateur `t=3745`** | **Moyenne** — mood milieu session · voir **@ 1:02:25** | P1 contemplation · palette lotus (secondaire) · **pas** co-primary visuel |
 | 26 | `Thji1yQksXI` | Gaia Meditation Healing Music | ~2 h 2 | **Audio** pur (branding chaîne / visuel décoratif) | **888 + 528 Hz** + LoA abondance infinie / prospérité — piste ~2 h | **Basse** — redondant (**#21**, **#22**, **#6**, **#15**) | **Aucune tâche nouvelle** — renforce P1-INS-8 (anti-LoA), P2-INS-7 ; **pas** ref visuelle anneaux |
 | 27 | `xfBTpK1csas` | Lovemotives Meditation Music | ~2 h | **Audio-first** (branding chaîne / visuel décoratif) | **369 Hz** Tesla + stack solfège + **LoA manifestation** — piste ~2 h | **Basse** — redondant (1, 3, 15, 20) | **Aucune tâche nouvelle** — renforce P1-INS-8 (anti-LoA), P2-INS-7 ; anti-Tesla / manifestation |
+| 28 | `-pu93aq9uP4` | Lucid Dreaming Music | ~2 h 3 | **Audio** + **visuel** VFX ∞ (magenta/cyan, **@ 2:00**) | **999 Hz** + guérison divine / LoA (ES) — piste ~2 h | **Basse** — redondant (4, 12, 17) | **Aucune tâche** — @2:00 ≠ vol/anneaux ; **ne supplante pas** PRIMARY |
 
 ### Référence style PRIMARY — « style pour tout »
 
@@ -51,6 +52,7 @@
 | **vs `BrHMdqe0vzM` (#25 @ 1:02:25)** | Lien utilisateur @ **3745 s** — milieu session **963 Hz** ; visuel **statique** lotus (comme #1). **Ne supplante pas** le PRIMARY : affine **dérive** / session longue, pas vol ni anneaux filmés. |
 | **vs `Thji1yQksXI` (#26)** | Gaia **888 + 528 Hz** + LoA (~2 h) — **duplique #21** (même chaîne) et **#22** (888). **Ne supplante pas** `hL-BvWLPseE` ; palette Verse = crépuscule or/indigo (`VERSE_STYLE`), pas méditation Hz. |
 | **vs `xfBTpK1csas` (#27)** | Lovemotives **369 Hz Tesla + LoA** (~2 h) — **duplique #1**, **#3**, **#15**, **#20**. **Ne supplante pas** le PRIMARY. **Maître style global : `hL-BvWLPseE`.** |
+| **vs `-pu93aq9uP4` (#28 @ 2:00)** | VFX **∞** néon sur fond étoilé — cosmos **abstrait**, pas crépuscule or/indigo PRIMARY ; **pas** le moment « tout le Verse ». |
 
 **Lecture priorité :** **Haute** = plusieurs URLs convergent (dérive lente, paliers, HUD minimal) — à traiter en P1 avant polish P2. **Moyenne** = affine un levier déjà couvert (session longue, nuit, stack, rituel). **Basse** = redondant (focus, binaural, session ~2 h) — cataloguer sans nouveaux IDs. **Aucune** référence ne montre vol dans des anneaux ou rail spatial : priorité **jamais** sur gameplay arcade / hyperspace.
 
@@ -58,7 +60,7 @@
 
 **Audio vs visuel :** la majorité des entrées sont **musique / méditation** ; le Verse apporte le **décor 3D** (fog, étoiles, tores). Ne pas intégrer pistes YouTube (P2-INS-4). Visuels chaîne (IA, miniature) = **palette uniquement**, pas d’assets repris.
 
-**Phase 2 (produit) — catalogue suffisant :** après **27** références playlist + **PRIMARY** `hL-BvWLPseE`, le corpus reste **solfège / méditation / LoA** (≈24/27). La **#27** (`xfBTpK1csas`, Lovemotives **369 Tesla + LoA** ~2 h) **duplique** **#1**, **#3**, **#15**, **#20** — **aucune** tâche P1/P2. **Style maître :** `hL-BvWLPseE` — **#27** n’éclipse ni `mT4EB3fQ9lg` (#22) ni `BrHMdqe0vzM@3745s`. **Pause catalogage** sauf refs **visuelles** (vol cosmique, anneaux traversés). **Top 3 P1** : **P1-INS-2**, **P1-INS-6** + **P1-INS-7**, **P1-INS-1**. Tester **`/world`** (`VERSE_STYLE` + HUD). Détail : [`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md).
+**Phase 2 (produit) — catalogue suffisant :** après **28** références playlist + **PRIMARY** `hL-BvWLPseE`, le corpus reste **solfège / méditation / LoA** (≈25/28). La **#28** (`-pu93aq9uP4`, Lucid Dreaming **999 Hz**, lien **@ 2:00**) **duplique** **#4**, **#12**, **#17** — VFX ∞ décoratif, **pas** vol/anneaux. **Style maître :** `hL-BvWLPseE`. **Pause catalogage** sauf refs **visuelles** (vol cosmique, anneaux traversés). **Top 3 P1** : **P1-INS-2**, **P1-INS-6** + **P1-INS-7**, **P1-INS-1**. Détail : [`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md).
 
 ---
 
@@ -2560,3 +2562,22 @@ Après **22** références playlist + **PRIMARY** `hL-BvWLPseE`, le mood **médi
 | **Verdict** | **Maître style global** | **Ne supplante pas** le PRIMARY |
 
 - `src/config/cosmicNav.js` — **inchangé** (PRIMARY `hL-BvWLPseE`).
+
+---
+
+# Addendum — Vidéo 28 (`-pu93aq9uP4` · **timestamp @ 2:00**)
+
+**Lien :** [https://www.youtube.com/watch?v=-pu93aq9uP4&t=120](https://www.youtube.com/watch?v=-pu93aq9uP4&t=120)  
+**ID :** `-pu93aq9uP4` · **Chaîne :** Lucid Dreaming Music · **Durée :** 2:03:01 · **Type :** Music (999 Hz, méditation ES, ~14,7 M vues)
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *LA FRECUENCIA MÁS PODEROSA DEL UNIVERSO 999 Hz - SENTIRAS A DIOS DENTRO DE TI SANANDO TODA TU VIDA* |
+| **@ 2:00** | Fond **noir étoilé** + symbole **∞** en filaments **magenta / violet / cyan** (reflet sol) — VFX **lent**, pas vol dans anneaux planétaires ni rail |
+| **Vol / anneaux ?** | **Non** — ∞ ≠ tores Verse ; pas hyperspace |
+| **vs PRIMARY `hL-BvWLPseE`** | PRIMARY = or/indigo crépuscule (`VERSE_STYLE`). Ici = **néon magenta–cyan** — **ne remplace pas** le style global |
+| **vs #4 / #12 / #17** | Même famille **999 Hz** + cosmos décoratif / Lucid Dreaming — **redondant** |
+| **Code** | `VERSE_STYLE` déjà sur PRIMARY — **pas de tweak** |
+| **P1/P2** | **Aucune** |
+
+**Verdict :** @ 2:00 = ambiance cosmique **abstraite** (accent particules possible) — **ce n’est pas** le moment pour **« tout le Verse »** (rester PRIMARY + tores 3D). Si l’objectif était un **vol dans des anneaux**, ce timestamp **ne le montre pas**.
