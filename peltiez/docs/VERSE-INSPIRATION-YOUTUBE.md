@@ -149,3 +149,96 @@ Les deux vidéos confirment : l’utilisateur vise une **traversée symbolique o
 - `docs/VERSE-COSMIC-NAV-DESIGN.md` — tâches P1-INS-6/7, P2-INS-6 ajoutées (vidéo 2)
 - `src/pages/WorldHub.jsx` — futur HUD paliers / focus
 - `src/world/realms.js` — ordre et `ritualHint` par tore
+
+---
+
+# Addendum — Vidéo 3 (suite « verse des anneaux »)
+
+**Lien :** [https://www.youtube.com/watch?v=OlV26ouCn5w](https://www.youtube.com/watch?v=OlV26ouCn5w)  
+**ID :** `OlV26ouCn5w`  
+**Date de capture :** mai 2026  
+**Contexte utilisateur :** troisième référence YouTube après `pSXgXAqomMY` et `NxXzQLl2H5Y` — même famille solfège / cosmos, accent **manifestation** et **écoute passive très longue**.
+
+---
+
+## Ce que la vidéo est réellement
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *963HZ 》FREQUENCY OF GODS 》Ask Universe What You Want 》Manifest Anything Law of Attraction* |
+| **Chaîne** | Meditative Mind |
+| **Durée** | 6:06:06 (~6 h 6 min) |
+| **Vues** | ~14,3 M (au moment de la capture) |
+| **Publié** | 2019-02-23 |
+| **Catégorie** | Music |
+| **Type** | Ton solfège **963 Hz** prolongé + copy **law of attraction** — **pas** gameplay, vol spatial, ni cinématique d’anneaux |
+
+### Thèmes publics (description chaîne)
+
+- **« Ask Universe What You Want »** : invitation à formuler un désir clair, puis méditer / visualiser / prier.
+- **963 Hz** : discours « frequency of gods », glande pinéale, vibration élevée — symbolique bien-être, **non** preuve médicale.
+- **Law of attraction** : gratitude, lâcher prise, « give before receive », confiance au processus, miracles.
+- **Usage** : musique de sommeil / fond — **volume bas** recommandé par la chaîne.
+- **Structure** : une **piste continue** (pas 9 chapitres YouTube comme MindfulMed, pas le triptyque 963+639+396 d’Inner Lotus).
+
+### Transcript
+
+Pas de narration structurante exploitable ; le contenu est **audio pur** + texte marketing en description (7 étapes « manifest »). L’inspiration produit = **intention**, **passivité longue**, **confiance au parcours** — pas un storyboard 3D.
+
+### Note « verse des anneaux »
+
+Toujours les **tores** du Verse Egor69 (`realms.js`), pas les Anneaux de Tolkien ni MGM. Cette URL renforce le lien **univers / question / seuil** avant de traverser un portail, en complément des arcs « cœur » (vidéo 1) et « 9 paliers » (vidéo 2).
+
+---
+
+## Emprunter (mood & UX — sans copier l’œuvre)
+
+| Idée | Application Egor69 Verse |
+|------|---------------------------|
+| **Question honnête** | Une intention courte avant l’anneau (aligné `ritualHint` existants) — formulation personnelle, pas promesse de manifestation magique. |
+| **Session très longue** | Le Verse peut accueillir une **dérive passive** (AFK, écoute ambiante) : vitesses déjà calmes, option P2 dérive lente. |
+| **Gratitude du parcours** | Micro-copy après visite d’un realm (« merci pour ce passage ») — équivalent sobre des étapes 5–6 de la description, sans LoA. |
+| **Confiance au fil** | Ordre suggéré des anneaux (déjà P2 vidéo 2) + pas de punition si l’utilisateur s’arrête des heures dans la scène. |
+| **Volume / sobriété** | Audio futur (P2) discret, jamais ton pur 963 Hz identique ; HUD sobre quand on « écoute » l’univers. |
+
+---
+
+## Ne pas copier (droits & promesses)
+
+| Risque | Action |
+|--------|--------|
+| **© Meditative Mind™ (MM19034)** | Aucun extrait, sample, ni reprise du titre marketing en UI légale. |
+| **Law of attraction / manifest anything** | Pas de promesse « demande à l’univers et reçois », richesse, miracles, sommeil programmé. |
+| **963 Hz « gods » / pinéale** | Pas de claims santé ou activation spirituelle sur `/world`. |
+| **Gameplay inexistant** | Ne pas annoncer vol dans des anneaux ou quête arcade sur la base de cette URL. |
+| **Ton pur 6 h** | Ne pas boucler un sine 963 Hz — régression UX et droits. |
+
+---
+
+## Comparaison vidéo 1 vs 2 vs 3
+
+| Critère | `pSXgXAqomMY` | `NxXzQLl2H5Y` | `OlV26ouCn5w` |
+|---------|---------------|---------------|---------------|
+| **Durée** | ~71 min | ~46 min | **~6 h** — écoute passive extrême |
+| **Structure** | 3 Hz fusionnés (cœur / lâcher prise / univers) | **9 chapitres** séquentiels | **1 ton** 963 Hz continu |
+| **Visuel** | Art chaîne (hors jeu) | Écran noir | Miniature / branding chaîne (hors jeu) |
+| **Narratif** | Oneness, chakra cœur | Restauration complète par paliers | **Poser une question**, gratitude, LoA |
+| **Pour les Anneaux** | Dérive, palette, `ritualHint` | Palier X/9, focus HUD | **Intention session**, dérive AFK, gratitude post-visite |
+
+---
+
+## Cinq recommandations concrètes (vidéo 3)
+
+1. **Intention avant anneau (P1)** : champ optionnel ou rappel HUD « une intention honnête pour cette traversée » — miroir « ask universe », stockage local, jamais promesse de résultat.
+2. **Dérive passive (P2)** : après ~90 s sans input, vitesse ×0,4 ou orbite caméra lente + HUD réduit — mood des 6 h d’écoute sans imiter le sleep track.
+3. **Gratitude sobre (P2)** : toast une ligne au retour 2D→3D après un realm visité — pas badge « miracle ».
+4. **Conserver P1-INS-6/7** : paliers et focus portail restent le bon véhicule ; la vidéo 3 **complète** sans remplacer l’arc à 9 seuils.
+5. **Audio (P2)** : couches ambiantes évolutives très douces ; interdit Meditative Mind et tons purs identifiables.
+
+---
+
+## Fichiers code liés (vidéo 3)
+
+- `docs/VERSE-COSMIC-NAV-DESIGN.md` — P1-INS-8, P2-INS-7 (distincts des vidéos 1–2)
+- `src/pages/WorldHub.jsx` — copy intention (micro-tweak P0)
+- `src/world/realms.js` — `ritualHint` déjà alignés « intention / question »

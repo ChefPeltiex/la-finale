@@ -49,6 +49,7 @@ Remplacer l’exploration « pawn vert sur terrain » par un **voyage immersif d
 | P1-INS-5 | **Accessibilité mouvement** | `prefers-reduced-motion` : pas de pulsation agressive sur les tores ; étoiles déjà réduites |
 | P1-INS-6 | **Palier X/9 (arc séquentiel)** | HUD affiche progression par segment (9 groupes de realms ou 9 étapes majeures) — inspiré chapitrage MindfulMed, sans mention Hz ni santé |
 | P1-INS-7 | **Focus portail (HUD minimal)** | À &lt; 8 m d’un tore : masquer ou réduire minimap / panneaux secondaires 3–5 s ; `ritualHint` reste visible — équivalent UX « black screen » |
+| P1-INS-8 | **Intention de session** | Champ optionnel (localStorage) ou rappel HUD : une ligne honnête avant traversée — inspiré « ask universe » (`OlV26ouCn5w`), **sans** law of attraction ni promesse de manifestation |
 
 ### P2 — Galaxies & chapitres
 
@@ -66,6 +67,7 @@ Remplacer l’exploration « pawn vert sur terrain » par un **voyage immersif d
 | P2-INS-4 | **Ambiance audio originale** | Boucle ambiante libre de droits — **interdit** : piste Inner Lotus / solfège de la référence |
 | P2-INS-5 | **Anneaux décoratifs** | Tores secondaires non cliquables entre constellations (pure profondeur, pas de collision gameplay) |
 | P2-INS-6 | **Complétion de constellation** | Toast ou badge discret quand tous les realms d’un pôle / galaxie sont visités — arc « parcours complet », sans copy MindfulMed |
+| P2-INS-7 | **Dérive passive (session longue)** | Après ~90 s sans input : marche auto lente ou orbite caméra + HUD atténué — mood écoute 6 h (`OlV26ouCn5w`), désactivable ; pas écran noir ni ton 963 Hz |
 
 ### P3 — Météorites, comètes, énigmes
 
@@ -137,7 +139,7 @@ Référence croisée à ajouter dans `alliance-ia-egor69.md` (section agents) lo
 
 ## Références
 
-- **Inspiration YouTube (mood univers / anneaux)** : [VERSE-INSPIRATION-YOUTUBE.md](./VERSE-INSPIRATION-YOUTUBE.md) — `pSXgXAqomMY` (méditation cœur / univers), `NxXzQLl2H5Y` (9 paliers séquentiels, écran noir — pas gameplay anneaux)
+- **Inspiration YouTube (mood univers / anneaux)** : [VERSE-INSPIRATION-YOUTUBE.md](./VERSE-INSPIRATION-YOUTUBE.md) — `pSXgXAqomMY` (méditation cœur / univers), `NxXzQLl2H5Y` (9 paliers séquentiels, écran noir), `OlV26ouCn5w` (963 Hz long, intention / gratitude — pas gameplay anneaux)
 - Manuel utilisateur : `src/content/manuel-utilisation-igor.md` (section Verse)
 - QA : `docs/MANUAL-QA-PROTOCOL.md` (explorateur cosmique)
 - Glossaire : entrée « Verse 3D » dans `src/data/glossaryCentral.js`

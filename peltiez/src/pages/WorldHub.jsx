@@ -134,7 +134,9 @@ export default function WorldHub() {
               </div>
             ) : null}
             <p className="mt-2 text-sm text-white/80 leading-snug">
-              {COSMIC_NAV_V2 ? "Voyage cosmique · anneaux du Verse · " : "Open world · "}
+              {COSMIC_NAV_V2
+                ? "Voyage cosmique · anneaux du Verse · une intention honnête suffit avant un portail · "
+                : "Open world · "}
               clic canvas pour la souris · <span className="text-white font-semibold">W A S D</span> ou flèches ·{" "}
               <span className="text-emerald-300">Shift</span> sprint · <span className="text-sky-300">Espace</span> saut /
               maintien en l’air (glisse) · <span className="text-amber-300">E</span> portail
