@@ -160,6 +160,7 @@ const CodexInvestisseur = lazy(() => import("./pages/CodexInvestisseur.jsx"));
 const CodexPreuves = lazy(() => import("./pages/CodexPreuves.jsx"));
 const CodexRituel = lazy(() => import("./pages/CodexRituel.jsx"));
 const CodexMagique = lazy(() => import("./pages/CodexMagique.jsx"));
+const PromessesCharpente = lazy(() => import("./pages/PromessesCharpente.jsx"));
 const CodexAlliance = lazy(() => import("./pages/CodexAlliance.jsx"));
 const IntegrationsOutilsHub = lazy(() => import("./pages/IntegrationsOutilsHub.jsx"));
 const CarteSiteEtLiens = lazy(() => import("./pages/CarteSiteEtLiens.jsx"));
@@ -340,6 +341,7 @@ const AuthenticatedApp = () => {
         <Route path="/docs/preuves" element={<CodexPreuves />} />
         <Route path="/docs/rituel" element={<CodexRituel />} />
         <Route path="/docs/magique" element={<CodexMagique />} />
+        <Route path="/docs/promesses" element={<PromessesCharpente />} />
         <Route path="/docs/alliance" element={<CodexAlliance />} />
         <Route path="/outils-integration" element={<IntegrationsOutilsHub />} />
         <Route path="/carte-site" element={<CarteSiteEtLiens />} />

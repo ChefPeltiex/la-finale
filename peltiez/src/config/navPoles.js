@@ -114,6 +114,7 @@ export const NAV_POLE_BLOCKS = {
         { to: "/encyclopedie-biblique", label: "Encyclopédie biblique" },
         { to: "/docs/investisseur", label: "Codex investisseur" },
         { to: "/docs/preuves", label: "Preuves en 2 min" },
+        { to: "/docs/promesses", label: "Charpente (8 lois)" },
       ],
     },
     {
@@ -236,6 +237,7 @@ export const NAV_POLE_BLOCKS = {
         { to: "/docs/rituel", label: "Codex rituel" },
         { to: "/docs/magique", label: "Codex magique" },
         { to: "/docs/preuves", label: "Preuves" },
+        { to: "/docs/promesses", label: "Charpente (8 lois)" },
       ],
     },
     {

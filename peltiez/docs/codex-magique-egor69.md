@@ -874,6 +874,88 @@ Abondance · Alliance IA · Arc-en-ciel · Atlas · Boucle fermée · Cerveau co
 
 ---
 
+## Chapitre — Huit promesses structurelles (charpente anti-LoA)
+
+*Cadre positif remplaçant le marketing « law of attraction » (cf. P1-INS-8, VERSE). Ce ne sont **pas** des garanties de richesse, de miracles ni d’attraction magnétique de l’univers — des **engagements** à calibrer sur un pilote réel.*
+
+### Garde-fou
+
+- **Opérationnel / heuristique** : modèles de travail, pas physique ni médecine.
+- **Auto-évaluation** : module `/docs/promesses` (localStorage) — pas oracle, pas fortune.
+- **Anti-patterns refusés** : manifester la richesse, aimant univers, résultats garantis par l’intention seule.
+
+### Synthèse
+
+Ces huit promesses ne manifestent ni richesse ni miracles : elles **charpentent la responsabilité**. L’attraction devient alignement mesurable, la vibration devient cohérence vérifiable, l’univers devient boucle que tu fermes toi-même.
+
+### 1. Alignement
+
+**Promesse.** Intention, action et indicateur pointent dans la même direction avant de décider.
+
+**Pour Egor69.** Charte CirculAI, filtre positif IA et pilote 90 j — une seule ligne de cap.
+
+**Équation (modèle symbolique).** \( \vec{A} = \sum_i \vec{v}_i \cdot \hat{u} \) — somme vectorielle vers la direction unitaire \( \hat{u} \).
+
+### 2. Cohérence vibratoire
+
+**Promesse.** Une session = un ton et un rythme ; réduire le bruit entre ce que tu annonces et ce que tu fais (« vibration » = cohérence du signal, pas Hz thérapeutiques).
+
+**Pour Egor69.** Palette souveraine, disclaimers homogènes — pas de promesse miracle ni guérison par fréquence.
+
+**Équation (modèle symbolique).** \( H \downarrow \) quand \( \sigma(\text{intention}, \text{action}) \to 0 \) — métaphore entropique, pas claim physique.
+
+### 3. Causalité active
+
+**Promesse.** Chaque objectif a une action traçable sous 48 h — le souhait seul ne compte pas.
+
+**Pour Egor69.** Commits Git, preuves `/docs/preuves`, jalons pilote — cause avant effet narratif.
+
+**Équation (modèle symbolique).** \( \Delta\text{État} = f(\text{Action}) \) ; \( \neg(\Delta\text{État} = f(\text{Souhait})) \).
+
+### 4. Résonance
+
+**Promesse.** Chercher partenaires et outils déjà en phase avec le protocole, sans « aimant univers ».
+
+**Pour Egor69.** Alliance IA à facettes : orchestrateur + spécialistes, pas oracle unique.
+
+**Équation (modèle symbolique).** \( R = \langle s_1, s_2 \rangle / (\|s_1\|\|s_2\|) \) — similarité, pas attraction magique.
+
+### 5. Non-contradiction
+
+**Promesse.** Si deux priorités se contredisent, trancher par écrit avant d’avancer.
+
+**Pour Egor69.** Glossaire central, anti dark patterns — une vérité affichée à la fois.
+
+**Équation (modèle symbolique).** \( \neg(P \land \neg P) \) — cohérence logique des messages publics.
+
+### 6. Expansion
+
+**Promesse.** Grandir par itérations mesurées, jamais par promesse exponentielle illusoire.
+
+**Pour Egor69.** MVP, boucles fermées, Ω heuristique — croissance dans le périmètre du pilote.
+
+**Équation (modèle symbolique).** \( C_{n+1} = C_n + \Delta_m \) — \( \Delta \) mesuré, pas manifestation infinie.
+
+### 7. Retour
+
+**Promesse.** Clore chaque cycle par revue et réemploi — ce qui sort peut rentrer.
+
+**Pour Egor69.** Jubilé documenté, ΔM, économie circulaire — la boucle respire.
+
+**Équation (modèle symbolique).** Sortie → Réentrée → \( \Delta M \geq 0 \) (masse utile dans la boucle).
+
+### 8. Temporalité juste
+
+**Promesse.** Jalons datés et renoncement explicite aux délais fantasmés (« timing divin », synchronicité vendeuse).
+
+**Pour Egor69.** Tempus Meum, calendrier pilote — Chronos sert, ne domine pas.
+
+**Équation (modèle symbolique).** \( \tau^* = \arg\min |t_{\text{action}} - t_{\text{jalon}}| \) sous contraintes réelles.
+
+*Module interactif : `/docs/promesses` · source données UI : `src/data/promessesLoaEgor69.js`.*
+
+---
+
 ## Disclaimer
 
 Ce document est **symbolique et pédagogique**. Il ne constitue pas un avis juridique, médical, financier ou scientifique. Les équations sont des **modèles de travail à calibrer** ; les rituels sont des **aides à l'attention**, pas des garanties de résultat. L'IA doit rester **sous supervision humaine** pour toute décision à enjeu. Les visuels sont interprétés depuis leurs rôles éditoriaux et noms de fichiers — une relecture œil nu peut affiner les descriptions. Pour les textes légaux, voir `LICENSE` / `NOTICE` à la racine du dépôt.

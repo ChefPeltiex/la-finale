@@ -21,7 +21,7 @@ import { SITE_ORIGIN, SITE_TAGLINE } from "@/lib/site";
 import { Package, ArrowRight, Recycle, Wrench, Gift, RefreshCw,
   Users, Star, Shield, Heart, Globe, CheckCircle,
   Sparkles, HandHeart, MapPin, Crown, Earth, Building2, GraduationCap, Cpu, Infinity, Download,
-  FileText, ScrollText
+  FileText, ScrollText, Scale
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -360,7 +360,7 @@ export default function Home() {
               </Button>
             </div>
 
-            <div id="accueil-codex" className="mb-8 grid gap-3 sm:grid-cols-2 max-w-2xl">
+            <div id="accueil-codex" className="mb-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 max-w-3xl">
               <Link
                 to="/docs/investisseur"
                 className="group rounded-xl border border-amber-500/40 bg-zinc-950/80 p-4 text-left transition hover:border-amber-400/70 hover:shadow-[0_0_24px_rgba(212,175,55,0.12)]"
@@ -376,6 +376,16 @@ export default function Home() {
                 <ScrollText className="h-5 w-5 text-[#FFD700] mb-2" aria-hidden />
                 <p className="font-semibold text-[#FFD700] text-sm">Codex rituel</p>
                 <p className="text-xs text-white/55 mt-1 leading-relaxed">Rituels courts · chants · Egor baisse la manette.</p>
+              </Link>
+              <Link
+                to="/docs/promesses"
+                className="group rounded-xl border border-violet-500/35 bg-zinc-950/80 p-4 text-left transition hover:border-violet-400/60 hover:shadow-[0_0_24px_rgba(139,92,246,0.12)] sm:col-span-2 lg:col-span-1"
+              >
+                <Scale className="h-5 w-5 text-violet-300 mb-2" aria-hidden />
+                <p className="font-semibold text-violet-100 text-sm">Charpente · 8 promesses</p>
+                <p className="text-xs text-white/55 mt-1 leading-relaxed">
+                  Lois structurelles anti-LoA — engagements, pas manifestation magique.
+                </p>
               </Link>
             </div>
 

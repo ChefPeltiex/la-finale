@@ -142,6 +142,9 @@ export default function CodexMarkdownView({
                 <Link to="/docs/preuves" className="rounded-lg border border-sky-500/40 px-3 py-1.5 text-sky-200 hover:bg-sky-500/10">
                   Preuves 2 min
                 </Link>
+                <Link to="/docs/promesses" className="rounded-lg border border-violet-500/40 px-3 py-1.5 text-violet-200 hover:bg-violet-500/10">
+                  Charpente (8 lois)
+                </Link>
               </>
             )}
             <a
