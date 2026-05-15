@@ -22,6 +22,7 @@ export const PILOT_ROUTES = [
   "/jeu",
   "/vision",
   "/profil",
+  "/pilote",
 ];
 
 const PILOT_PATH_PREFIXES = [
@@ -42,7 +43,7 @@ const PILOT_PATH_PREFIXES = [
   "/vision",
 ];
 
-const PILOT_EXACT = new Set(["/", "/profil"]);
+const PILOT_EXACT = new Set(["/", "/profil", "/pilote"]);
 
 function pilotKeysFromBlocks() {
   return getAllPilotRouteKeys();

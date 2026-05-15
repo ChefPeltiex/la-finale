@@ -7,6 +7,7 @@ import {
   shouldShowOnboarding,
   ONBOARDING_KEY,
 } from "@/lib/onboarding";
+import { BRIDGE_TAGLINE } from "@/lib/geminiBridge";
 
 const ROLES = [
   { id: "citoyen", label: "Citoyen·ne", desc: "Donner, échanger, découvrir le réseau." },
@@ -109,6 +110,7 @@ export default function OnboardingFlow() {
             <p className="text-[10px] font-bold uppercase tracking-widest text-[#FFD700]/80 mb-1">
               Parcours initiatique · ~3 min
             </p>
+            <p className="text-[11px] text-muted-foreground/90 mb-2 leading-snug">{BRIDGE_TAGLINE}</p>
             <h2 id="onboarding-title" className="font-display text-xl font-bold text-foreground flex items-center gap-2">
               <Sparkles className="h-5 w-5 text-[#39FF14]" aria-hidden />
               {phase === "role" && "Choisis ton rôle"}

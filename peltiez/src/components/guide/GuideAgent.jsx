@@ -6,12 +6,14 @@ import { cn } from "@/lib/utils";
 import { getGuideHintsForPath, COMPANION_DOC_PATH } from "@/config/guidePageHints";
 import { loadDisplayMode, saveDisplayMode } from "@/lib/displayMode";
 import usePilotMode from "@/hooks/usePilotMode";
+import { formatMay21PilotNote, getMay21CalendarState } from "@/lib/geminiBridge";
 
 export default function GuideAgent() {
   const location = useLocation();
   const [open, setOpen] = useState(false);
   const [mode, setMode] = useState(() => loadDisplayMode());
   const { pilotMode, setPilotMode } = usePilotMode();
+  const may21Near = pilotMode && getMay21CalendarState().isNear;
 
   useEffect(() => {
     const onMode = (ev) => setMode(ev.detail === "simple" ? "simple" : "deep");
@@ -119,6 +121,14 @@ export default function GuideAgent() {
                 Alliance IA
               </Link>
             </div>
+            {may21Near ? (
+              <p className="mt-3 text-[10px] text-[#FFD700]/80 leading-snug border border-[#FFD700]/25 rounded-lg px-2.5 py-2">
+                {formatMay21PilotNote()}
+                <Link to="/pilote" className="block mt-1 text-[#39FF14]/90 hover:underline" onClick={() => setOpen(false)}>
+                  Rituel pilote 90 jours →
+                </Link>
+              </p>
+            ) : null}
             <div className="mt-4 pt-3 border-t border-white/10 space-y-3">
               <div className="flex items-center justify-between gap-2">
                 <span className="text-[10px] text-white/50 uppercase tracking-wider">Mode pilote</span>

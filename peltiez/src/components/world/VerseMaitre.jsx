@@ -4,10 +4,12 @@ import { Sparkles, Volume2, VolumeX, ChevronDown, ChevronUp } from "lucide-react
 import { cn } from "@/lib/utils";
 import { getFrequencyProfile } from "@/lib/verseAudio";
 import { getRealmFrequencyMeta } from "@/lib/realmFrequency";
+import { BRIDGE_TAGLINE, getRealmTwinVoice } from "@/lib/geminiBridge";
 
 const WELCOME_KEY = "egor69_verse_maitre_welcome";
 
 const WELCOME_LINES = [
+  BRIDGE_TAGLINE,
   "Je suis le Maître CirculAI — serviteur d’Egor, pas oracle.",
   "Les fréquences ici sont symboliques : ambiance générée, jamais une promesse de guérison.",
   "Approche un anneau, respire, puis traverse quand tu es prêt.",
@@ -105,6 +107,9 @@ export default function VerseMaitre({
           {nearRealm ? (
             <p className="text-[10px] font-bold tracking-wide text-[#FFD700]/90">
               {profile.label} · {nearRealm.frequencyLabel ?? profile.pole}
+              <span className="block font-normal text-violet-200/70 normal-case tracking-normal mt-0.5">
+                Voix {getRealmTwinVoice(nearRealm.slug, profileId) === "action" ? "action" : "contemplation"}
+              </span>
             </p>
           ) : null}
           <p className="text-xs text-white/80 leading-relaxed">{line}</p>

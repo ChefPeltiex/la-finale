@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import ReputationBar from "@/components/ReputationBar";
 import { openOnboardingReplay } from "@/components/onboarding/OnboardingFlow";
 import usePilotMode from "@/hooks/usePilotMode";
+import Pilot90Panel from "@/components/pilot/Pilot90Panel";
 
 const TYPE_CONFIG = {
   vente:      { label: "Vente",      color: "bg-blue-100 text-blue-700",    icon: Package },
@@ -187,10 +188,17 @@ export default function Profile() {
           <p className="text-sm font-semibold text-foreground">Mode pilote</p>
           <p className="text-xs text-muted-foreground mt-0.5">Navigation réduite pour découvrir l&apos;essentiel.</p>
         </div>
-        <Button type="button" size="sm" variant="outline" className="rounded-xl" onClick={() => setPilotMode(!pilotMode)}>
-          {pilotMode ? "Désactiver" : "Activer"}
-        </Button>
+        <div className="flex flex-wrap gap-2">
+          <Button asChild type="button" size="sm" variant="outline" className="rounded-xl">
+            <Link to="/pilote">Pilote 90 jours</Link>
+          </Button>
+          <Button type="button" size="sm" variant="outline" className="rounded-xl" onClick={() => setPilotMode(!pilotMode)}>
+            {pilotMode ? "Désactiver" : "Activer"}
+          </Button>
+        </div>
       </div>
+
+      {pilotMode ? <Pilot90Panel compact /> : null}
 
       {/* Reputation Bar */}
       <ReputationBar listings={listings} />

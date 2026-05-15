@@ -3,6 +3,7 @@
  */
 
 import { FREQUENCY_PROFILES, getRealmFrequencyProfile, getFrequencyProfile } from "@/lib/verseAudio";
+import { appendTwinPathToMaitreLine } from "@/lib/geminiBridge";
 
 function capitalizePole(pole) {
   if (!pole) return "Verse";
@@ -16,21 +17,42 @@ export function buildRealmMaitreLine(realm, profile) {
   const slug = realm?.slug ?? "";
 
   if (slug.startsWith("myth-")) {
-    return `Mythe « ${label} » — clé ${hz} (${profile.pole}) : lecture critique, pas d’oracle.`;
+    return appendTwinPathToMaitreLine(
+      `Mythe « ${label} » — clé ${hz} (${profile.pole}) : lecture critique, pas d’oracle.`,
+      slug,
+      profile?.id
+    );
   }
   if (slug.startsWith("well-")) {
-    return `Bien-être « ${label} » — clé ${hz} : cadre prudent, sans promesse de guérison.`;
+    return appendTwinPathToMaitreLine(
+      `Bien-être « ${label} » — clé ${hz} : cadre prudent, sans promesse de guérison.`,
+      slug,
+      profile?.id
+    );
   }
   if (slug.startsWith("div-")) {
-    return `Seuil divinatoire « ${label} » — clé ${hz} : jeu symbolique, pas sentence.`;
+    return appendTwinPathToMaitreLine(
+      `Seuil divinatoire « ${label} » — clé ${hz} : jeu symbolique, pas sentence.`,
+      slug,
+      profile?.id
+    );
   }
   if (slug === "accueil") {
-    return `Sanctuaire — clé ${hz} : intention honnête avant le voyage.`;
+    return appendTwinPathToMaitreLine(
+      `Sanctuaire — clé ${hz} : intention honnête avant le voyage.`,
+      slug,
+      profile?.id
+    );
   }
   if (slug === "cosmic") {
-    return `Cosmos « ${label} » — clé ${hz} : humilité des chiffres, mystère mesuré.`;
+    return appendTwinPathToMaitreLine(
+      `Cosmos « ${label} » — clé ${hz} : humilité des chiffres, mystère mesuré.`,
+      slug,
+      profile?.id
+    );
   }
-  return `« ${label} » — clé ${hz} · ${capitalizePole(profile.pole)} : ${profile.hint}`;
+  const base = `« ${label} » — clé ${hz} · ${capitalizePole(profile.pole)} : ${profile.hint}`;
+  return appendTwinPathToMaitreLine(base, slug, profile?.id);
 }
 
 /** Métadonnées Hz pour un realm (objet realm ou slug + label). */

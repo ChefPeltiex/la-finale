@@ -2,6 +2,7 @@ import { useState, useEffect, lazy, Suspense } from "react";
 import SEOMeta from "@/components/SEOMeta";
 import { Link, useLocation } from "react-router-dom";
 import HomeHeroCards from "@/components/home/HomeHeroCards";
+import HomeGeminiBridgeStrip from "@/components/home/HomeGeminiBridgeStrip";
 import HomeEncyclopediasSection from "@/components/home/HomeEncyclopediasSection";
 import HomeSubjectBlocks from "@/components/home/HomeSubjectBlocks";
 import SymbolicDisclaimer from "@/components/ui/SymbolicDisclaimer";
@@ -174,6 +175,8 @@ export default function Home() {
         canonicalUrl={SITE_ORIGIN}
         schemaData={seoSchema}
       />
+
+      <HomeGeminiBridgeStrip />
 
       <HomeHeroCards />
 

@@ -34,6 +34,7 @@ const Marketplace = lazy(() => import("./pages/Marketplace.jsx"));
 const PostItem = lazy(() => import("./pages/PostItem.jsx"));
 const ItemDetail = lazy(() => import("./pages/ItemDetail.jsx"));
 const Profile = lazy(() => import("./pages/Profile.jsx"));
+const Pilot90 = lazy(() => import("./pages/Pilot90.jsx"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const GitCommits = lazy(() => import("./pages/GitCommits"));
@@ -331,6 +332,7 @@ const AuthenticatedApp = () => {
         <Route path="/publier" element={<PostItem />} />
         <Route path="/annonce/:itemId" element={<ItemDetail />} />
         <Route path="/profil" element={<Profile />} />
+        <Route path="/pilote" element={<Pilot90 />} />
         <Route path="/mon-univers" element={<MyUniverse />} />
         <Route path="/ue-aiouy" element={<UeAiouyHub />} />
         <Route path="/manuel" element={<ManuelPlateforme />} />
