@@ -7,7 +7,7 @@ import { terrainHeight, createTerrainGeometry } from "./terrain";
 import { maybePersistPlayer } from "@/lib/worldPersistence";
 import { useWakeLock } from "@/hooks/useWakeLock";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
-import { COSMIC_NAV_V2, COSMIC_WALK_SPEED, COSMIC_SPRINT_MULT } from "@/config/cosmicNav";
+import { COSMIC_NAV_V2, COSMIC_WALK_SPEED, COSMIC_SPRINT_MULT, VERSE_STYLE } from "@/config/cosmicNav";
 import {
   PlayerAvatar,
   usePointerLockLook,
@@ -31,7 +31,7 @@ function TerrainMesh() {
   return (
     <mesh geometry={geo} receiveShadow>
       <meshStandardMaterial
-        color="#0a1428"
+        color={COSMIC_NAV_V2 ? "#0c1222" : "#0a1428"}
         metalness={0.55}
         roughness={0.42}
         envMapIntensity={1}
@@ -41,27 +41,33 @@ function TerrainMesh() {
   );
 }
 
-function RealmPortal({ realm }) {
+function RealmPortal({ realm, reducedMotion }) {
   const group = useRef(null);
   const inner = useRef(null);
+  const outerMat = useRef(null);
   const baseY = terrainHeight(realm.pos[0], realm.pos[2]) + 2.55;
 
   useFrame((state) => {
     const t = state.clock.elapsedTime;
-    if (group.current) group.current.rotation.y = t * 0.35;
-    if (inner.current) inner.current.rotation.y = -t * 0.55;
+    if (group.current) group.current.rotation.y = t * 0.28;
+    if (inner.current) inner.current.rotation.y = -t * 0.42;
+    if (outerMat.current && COSMIC_NAV_V2 && !reducedMotion) {
+      outerMat.current.emissiveIntensity = 0.72 + Math.sin(t * 1.15) * 0.22;
+    }
   });
 
   const col = useMemo(() => new THREE.Color(realm.color), [realm.color]);
+  const rim = useMemo(() => new THREE.Color(VERSE_STYLE.sparkleGold), []);
 
   return (
     <group position={[realm.pos[0], baseY, realm.pos[2]]}>
       <mesh ref={group}>
         <torusGeometry args={[2.1, 0.28, 48, 96]} />
         <meshPhysicalMaterial
+          ref={outerMat}
           color={col}
-          emissive={col}
-          emissiveIntensity={0.85}
+          emissive={COSMIC_NAV_V2 ? rim : col}
+          emissiveIntensity={COSMIC_NAV_V2 ? 0.88 : 0.85}
           metalness={0.92}
           roughness={0.18}
           clearcoat={1}
@@ -84,7 +90,7 @@ function RealmPortal({ realm }) {
           opacity={0.96}
         />
       </mesh>
-      <pointLight position={[0, 0.5, 0]} intensity={3.5} distance={18} color={realm.color} />
+      <pointLight position={[0, 0.5, 0]} intensity={3.2} distance={18} color={realm.color} />
       <Text
         position={[0, 3.4, 0]}
         fontSize={0.42}
@@ -100,7 +106,11 @@ function RealmPortal({ realm }) {
       <Html position={[0, 1.15, 0]} center distanceFactor={11} style={{ pointerEvents: "none" }}>
         <div
           className="rounded-xl border border-white/15 bg-black/65 px-3 py-2 text-center shadow-xl backdrop-blur-md max-w-[220px]"
-          style={{ boxShadow: "0 0 24px rgba(52,211,153,0.15)" }}
+          style={{
+            boxShadow: COSMIC_NAV_V2
+              ? "0 0 28px rgba(251,191,36,0.18), 0 0 48px rgba(99,102,241,0.12)"
+              : "0 0 24px rgba(52,211,153,0.15)",
+          }}
         >
           <p className="text-[11px] leading-snug text-white/92 font-medium">{realm.shortHook}</p>
         </div>
@@ -244,12 +254,9 @@ function ImmersiveSleepMitigations({ maxDpr }) {
   useEffect(() => {
     const sync = () => {
       if (document.hidden) {
-        // Stop the render loop when tab is hidden (battery / CPU / GPU).
         setFrameloop("never");
         return;
       }
-
-      // Restore render loop + pixel ratio on return.
       setFrameloop("always");
       gl.setPixelRatio(Math.min(window.devicePixelRatio || 1, maxDpr));
       invalidate();
@@ -275,57 +282,85 @@ function SceneContent({
   return (
     <>
       <ImmersiveSleepMitigations maxDpr={maxCanvasDpr} />
-      <color attach="background" args={[COSMIC_NAV_V2 ? "#020617" : "#030712"]} />
-      <fog attach="fog" args={[COSMIC_NAV_V2 ? "#0f172a" : "#030712", 32, COSMIC_NAV_V2 ? 158 : 120]} />
+      <color attach="background" args={[COSMIC_NAV_V2 ? VERSE_STYLE.bg : "#030712"]} />
+      <fog
+        attach="fog"
+        args={[
+          COSMIC_NAV_V2 ? VERSE_STYLE.fog : "#030712",
+          COSMIC_NAV_V2 ? VERSE_STYLE.fogNear : 32,
+          COSMIC_NAV_V2 ? VERSE_STYLE.fogFar : 120,
+        ]}
+      />
 
-      <ambientLight intensity={0.28} />
-      <directionalLight position={[50, 70, 28]} intensity={1.45} color="#fefce8" />
-      <directionalLight position={[-40, 28, -32]} intensity={0.5} color="#c4b5fd" />
+      <ambientLight intensity={COSMIC_NAV_V2 ? 0.22 : 0.28} />
+      <directionalLight
+        position={[50, 70, 28]}
+        intensity={COSMIC_NAV_V2 ? 1.28 : 1.45}
+        color={COSMIC_NAV_V2 ? VERSE_STYLE.rimGold : "#fefce8"}
+      />
+      <directionalLight
+        position={[-40, 28, -32]}
+        intensity={COSMIC_NAV_V2 ? 0.62 : 0.5}
+        color={VERSE_STYLE.fillViolet}
+      />
+      {COSMIC_NAV_V2 ? (
+        <directionalLight position={[0, 12, -60]} intensity={0.35} color={VERSE_STYLE.nebula} />
+      ) : null}
 
       <Sky
         distance={450000}
-        sunPosition={[140, 48, 200]}
-        inclination={0.48}
-        azimuth={0.38}
-        mieCoefficient={0.0035}
+        sunPosition={COSMIC_NAV_V2 ? [120, 22, 180] : [140, 48, 200]}
+        inclination={COSMIC_NAV_V2 ? 0.62 : 0.48}
+        azimuth={COSMIC_NAV_V2 ? 0.28 : 0.38}
+        mieCoefficient={COSMIC_NAV_V2 ? 0.0048 : 0.0035}
         mieDirectionalG={0.88}
-        turbidity={7}
-        rayleigh={1.25}
+        turbidity={COSMIC_NAV_V2 ? 9 : 7}
+        rayleigh={COSMIC_NAV_V2 ? 1.55 : 1.25}
       />
       <Stars
-        radius={COSMIC_NAV_V2 ? 380 : 320}
+        radius={COSMIC_NAV_V2 ? 400 : 320}
         depth={85}
-        count={reducedMotion ? 3200 : COSMIC_NAV_V2 ? 14000 : 11000}
-        factor={COSMIC_NAV_V2 ? 4.2 : 3.8}
-        saturation={COSMIC_NAV_V2 ? 0.22 : 0.12}
+        count={reducedMotion ? 3200 : COSMIC_NAV_V2 ? VERSE_STYLE.starCount : 11000}
+        factor={COSMIC_NAV_V2 ? VERSE_STYLE.starFactor : 3.8}
+        saturation={COSMIC_NAV_V2 ? 0.18 : 0.12}
         fade
-        speed={COSMIC_NAV_V2 ? 0.72 : 0.55}
+        speed={COSMIC_NAV_V2 ? VERSE_STYLE.starSpeed : 0.55}
       />
       <Sparkles
-        count={reducedMotion ? 140 : COSMIC_NAV_V2 ? 680 : 520}
+        count={reducedMotion ? 140 : COSMIC_NAV_V2 ? 720 : 520}
         scale={[100, 28, 100]}
-        size={COSMIC_NAV_V2 ? 3.6 : 3.2}
-        speed={0.38}
-        opacity={0.5}
-        color={COSMIC_NAV_V2 ? "#c4b5fd" : "#a7f3d0"}
+        size={COSMIC_NAV_V2 ? 3.4 : 3.2}
+        speed={COSMIC_NAV_V2 ? 0.28 : 0.38}
+        opacity={COSMIC_NAV_V2 ? 0.42 : 0.5}
+        color={COSMIC_NAV_V2 ? VERSE_STYLE.sparkleViolet : "#a7f3d0"}
       />
+      {COSMIC_NAV_V2 && !reducedMotion ? (
+        <Sparkles
+          count={220}
+          scale={[90, 18, 90]}
+          size={2.2}
+          speed={VERSE_STYLE.sparkleGoldSpeed}
+          opacity={0.28}
+          color={VERSE_STYLE.sparkleGold}
+        />
+      ) : null}
 
-      <Environment preset="night" environmentIntensity={0.88} />
+      <Environment preset="night" environmentIntensity={COSMIC_NAV_V2 ? 0.82 : 0.88} />
 
       <TerrainMesh />
 
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.04, 0]}>
         <ringGeometry args={[8, 145, 128]} />
         <meshBasicMaterial
-          color={COSMIC_NAV_V2 ? "#6366f1" : "#10b981"}
+          color={COSMIC_NAV_V2 ? VERSE_STYLE.groundRing : "#10b981"}
           transparent
-          opacity={COSMIC_NAV_V2 ? 0.09 : 0.06}
+          opacity={COSMIC_NAV_V2 ? 0.11 : 0.06}
           depthWrite={false}
         />
       </mesh>
 
       {WORLD_REALMS.map((realm) => (
-        <RealmPortal key={realm.slug} realm={realm} />
+        <RealmPortal key={realm.slug} realm={realm} reducedMotion={reducedMotion} />
       ))}
 
       <PlayerAvatar playerPosRef={playerPosRef} />
@@ -374,7 +409,12 @@ export default function WorldScene({ keysRef, onProximityChange, initialCheckpoi
         alpha: false,
         powerPreference: "low-power",
       }}
-      camera={{ fov: 68, near: 0.08, far: 620, position: camStart }}
+      camera={{
+        fov: COSMIC_NAV_V2 ? VERSE_STYLE.cameraFov : 68,
+        near: 0.08,
+        far: 620,
+        position: camStart,
+      }}
       style={{ width: "100%", height: "100%", display: "block" }}
     >
       <SceneContent
