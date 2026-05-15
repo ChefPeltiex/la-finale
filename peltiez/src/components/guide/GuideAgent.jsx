@@ -84,6 +84,9 @@ export default function GuideAgent() {
               {COMPANION_DOC_PATH}
             </a>
             <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-[11px]">
+              <Link to="/docs/preuves" className="text-sky-300/90 hover:underline" onClick={() => setOpen(false)}>
+                Preuves en 2 min
+              </Link>
               <Link to="/docs/investisseur" className="text-amber-300/90 hover:underline" onClick={() => setOpen(false)}>
                 Codex investisseur
               </Link>

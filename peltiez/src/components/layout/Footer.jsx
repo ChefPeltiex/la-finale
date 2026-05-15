@@ -69,6 +69,7 @@ export default function Footer() {
               <li><Link to="/encyclopedie-biblique" className="text-muted-foreground hover:text-foreground transition">Encyclopédie biblique</Link></li>
               <li><Link to="/marketplace" className="text-muted-foreground hover:text-foreground transition">Marketplace</Link></li>
               <li><Link to="/manuel" className="text-muted-foreground hover:text-foreground transition">Manuel</Link></li>
+              <li><Link to="/docs/preuves" className="text-muted-foreground hover:text-foreground transition">Preuves en 2 minutes</Link></li>
               <li><Link to="/docs/investisseur" className="text-muted-foreground hover:text-foreground transition">Codex investisseur</Link></li>
               <li><Link to="/docs/rituel" className="text-muted-foreground hover:text-foreground transition">Codex rituel</Link></li>
               <li><Link to="/docs/alliance" className="text-muted-foreground hover:text-foreground transition">Alliance IA · OMÉGA</Link></li>

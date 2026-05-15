@@ -1,5 +1,7 @@
 # CirculAI / EGOR69 — Résumé exécutif
 
+→ **[Preuves en 2 minutes](/docs/preuves)** — checklist vérifiable (site, PDF, GitHub) sans croire sur parole.
+
 **Document** : édition investisseur · Codex CirculAI v1.0  
 **Porteur** : Dominic Pelletier · Québec / francophonie  
 **Date** : mai 2026 · ~2 pages imprimées

@@ -4,6 +4,7 @@ import { ACCUEIL_SECTION_LINKS, linkToHomeSection, navLinkTarget } from "@/lib/a
 
 /** Routes App.jsx absentes du menu latéral — titres lisibles pour la recherche. */
 const EXTRA_APP_ROUTES = [
+  { title: "Preuves en 2 minutes", path: "/docs/preuves", keywords: "preuves checklist credibilite verifiable" },
   { title: "Codex investisseur", path: "/docs/investisseur", keywords: "codex docs investisseur" },
   { title: "Codex rituel", path: "/docs/rituel", keywords: "codex docs rituel" },
   { title: "Codex magique", path: "/docs/magique", keywords: "codex docs magique" },

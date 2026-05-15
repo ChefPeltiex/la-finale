@@ -8,6 +8,7 @@ import {
   ArrowRight,
   ExternalLink,
   Network,
+  ShieldCheck,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import useDisplayMode from "@/hooks/useDisplayMode";
@@ -31,6 +32,14 @@ const EDITIONS = [
     labelSimple: "Codex",
     desc: "Texte source, formules et index des planches (companion).",
     to: "/docs/magique",
+  },
+  {
+    id: "preuves",
+    icon: ShieldCheck,
+    label: "Preuves en 2 minutes",
+    labelSimple: "Preuves",
+    desc: "Checklist vérifiable : site, PDF, GitHub, Codex — sans croire sur parole.",
+    to: "/docs/preuves",
   },
   {
     id: "investisseur",

@@ -37,6 +37,13 @@ const THEMES = {
     badge: "Alliance IA · OMÉGA",
     prose: "prose-invert prose-headings:text-emerald-200 prose-a:text-[#FFD700]",
   },
+  preuves: {
+    wrapper: "from-sky-950/25 via-zinc-950 to-emerald-950/25",
+    border: "border-sky-500/30",
+    accent: "text-sky-300",
+    badge: "Preuves · 2 min",
+    prose: "prose-invert prose-headings:text-sky-100 prose-a:text-emerald-400",
+  },
 };
 
 export default function CodexMarkdownView({
@@ -92,7 +99,31 @@ export default function CodexMarkdownView({
             <p className="text-sm text-white/70 leading-relaxed">{description}</p>
           </div>
           <div className="flex flex-wrap gap-2 text-xs">
-            {variant !== "magique" && (
+            {variant === "investisseur" && (
+              <>
+                <Link
+                  to="/docs/preuves"
+                  className="rounded-lg border border-sky-500/40 px-3 py-1.5 text-sky-200 hover:bg-sky-500/10"
+                >
+                  Preuves en 2 min
+                </Link>
+                <Link
+                  to="/docs/rituel"
+                  className="rounded-lg border border-white/15 px-3 py-1.5 text-white/80 hover:bg-white/10"
+                >
+                  Édition rituel
+                </Link>
+              </>
+            )}
+            {variant === "preuves" && (
+              <Link
+                to="/docs/investisseur"
+                className="rounded-lg border border-amber-500/40 px-3 py-1.5 text-amber-200 hover:bg-amber-500/10"
+              >
+                Codex investisseur
+              </Link>
+            )}
+            {variant !== "magique" && variant !== "preuves" && (
               <Link
                 to={variant === "investisseur" ? "/docs/rituel" : "/docs/investisseur"}
                 className="rounded-lg border border-white/15 px-3 py-1.5 text-white/80 hover:bg-white/10"
@@ -107,6 +138,9 @@ export default function CodexMarkdownView({
                 </Link>
                 <Link to="/docs/rituel" className="rounded-lg border border-white/15 px-3 py-1.5 text-white/80 hover:bg-white/10">
                   Rituel
+                </Link>
+                <Link to="/docs/preuves" className="rounded-lg border border-sky-500/40 px-3 py-1.5 text-sky-200 hover:bg-sky-500/10">
+                  Preuves 2 min
                 </Link>
               </>
             )}

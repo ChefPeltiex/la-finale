@@ -156,6 +156,7 @@ const SovereignEcoHub = lazy(() => import("./pages/SovereignEcoHub.jsx"));
 const UeAiouyHub = lazy(() => import("./pages/UeAiouyHub.jsx"));
 const ManuelPlateforme = lazy(() => import("./pages/ManuelPlateforme.jsx"));
 const CodexInvestisseur = lazy(() => import("./pages/CodexInvestisseur.jsx"));
+const CodexPreuves = lazy(() => import("./pages/CodexPreuves.jsx"));
 const CodexRituel = lazy(() => import("./pages/CodexRituel.jsx"));
 const CodexMagique = lazy(() => import("./pages/CodexMagique.jsx"));
 const CodexAlliance = lazy(() => import("./pages/CodexAlliance.jsx"));
@@ -334,6 +335,7 @@ const AuthenticatedApp = () => {
         <Route path="/ue-aiouy" element={<UeAiouyHub />} />
         <Route path="/manuel" element={<ManuelPlateforme />} />
         <Route path="/docs/investisseur" element={<CodexInvestisseur />} />
+        <Route path="/docs/preuves" element={<CodexPreuves />} />
         <Route path="/docs/rituel" element={<CodexRituel />} />
         <Route path="/docs/magique" element={<CodexMagique />} />
         <Route path="/docs/alliance" element={<CodexAlliance />} />

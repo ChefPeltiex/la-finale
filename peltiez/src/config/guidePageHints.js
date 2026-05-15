@@ -41,6 +41,7 @@ export function getGuideHintsForPath(pathname) {
   }
   if (
     pathname.startsWith("/docs/investisseur") ||
+    pathname.startsWith("/docs/preuves") ||
     pathname.startsWith("/docs/rituel") ||
     pathname.startsWith("/docs/alliance") ||
     pathname.startsWith("/docs/magique")

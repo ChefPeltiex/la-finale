@@ -313,6 +313,7 @@ La « valeur » immédiate monétisable n’est pas un ARR fictif : c’est une 
 | **Docs sources** | `peltiez/docs/` |
 | **Companion** | `peltiez/docs/companion.md` |
 | **Preuves** | `peltiez/docs/proofs.md` |
+| **Preuves en 2 min (checklist)** | `peltiez/docs/preuves-en-2-minutes.md` · route `/docs/preuves` |
 | **Final pack** | `peltiez/docs/final-pack.md` |
 
 ### 8.3 Commits et références utiles
