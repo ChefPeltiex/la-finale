@@ -300,7 +300,7 @@ export default function Layout() {
       <ScorpionHarpoon />
 
       <OnboardingFlow />
-      <GuideAgent />
+      {!location.pathname.startsWith("/world") ? <GuideAgent /> : null}
     </div>
   );
 }

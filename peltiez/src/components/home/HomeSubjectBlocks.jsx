@@ -68,6 +68,11 @@ export default function HomeSubjectBlocks() {
                   <ArrowRight className="h-4 w-4 shrink-0" />
                 </Link>
               )}
+              {verseHighlight ? (
+                <p className="mb-3 text-[10px] text-violet-200/70 leading-snug">
+                  Le Verse résonne avec les fréquences du Codex (symbolique, non médical).
+                </p>
+              ) : null}
 
               <div className="flex flex-wrap gap-2">
                 {ctas.map((cta) => (

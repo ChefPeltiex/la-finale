@@ -196,6 +196,22 @@ export default function WorldHub() {
         <WorldMinimap telemetryRef={playerTelemetryRef} visitedSlugs={visitedSlugs} />
       </div>
 
+      <div
+        className={`absolute left-4 bottom-24 z-[220] transition-opacity duration-500 sm:bottom-6 ${
+          portalFocus ? "opacity-90" : "opacity-100"
+        }`}
+      >
+        <VerseMaitre
+          nearRealm={nearRealm}
+          nextRing={nextRing}
+          profileId={profileId}
+          audioEnabled={audioOn}
+          onToggleAudio={toggleVerseAudio}
+          portalPulse={maitrePulse}
+        />
+        <SymbolicDisclaimer variant="frequency" compact className="mt-2 max-w-[20rem]" />
+      </div>
+
       <div className="pointer-events-none absolute inset-0 flex flex-col justify-between p-4 sm:p-6">
         <div
           className={`pointer-events-auto flex flex-wrap items-start justify-between gap-3 transition-opacity duration-500 ${
@@ -387,6 +403,14 @@ export default function WorldHub() {
                   </li>
                 ))}
               </ul>
+            </div>
+
+            <div className="rounded-xl border border-white/10 bg-black/40 p-4">
+              <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Ambiance</p>
+              <p className="mt-2 text-sm text-white/80">
+                Son procédural : icône volume sur le Maître (coin bas-gauche). Préférence{" "}
+                <code className="rounded bg-zinc-900 px-1">egor69_verse_audio</code> dans localStorage.
+              </p>
             </div>
 
             <div className="rounded-xl border border-white/10 bg-black/40 p-4">
