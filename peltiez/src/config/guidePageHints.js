@@ -39,10 +39,16 @@ export function getGuideHintsForPath(pathname) {
       ],
     };
   }
-  if (pathname.startsWith("/docs/investisseur") || pathname.startsWith("/docs/rituel")) {
+  if (
+    pathname.startsWith("/docs/investisseur") ||
+    pathname.startsWith("/docs/rituel") ||
+    pathname.startsWith("/docs/alliance") ||
+    pathname.startsWith("/docs/magique")
+  ) {
     return {
       title: "Codex",
       steps: [
+        "Alliance IA : orchestration, manifests JSON et filtre Φ (heuristiques à calibrer).",
         "Édition investisseur : résumé pour partenaires et pilote 90 jours.",
         "Édition rituel : pratique personnelle — optionnelle, non imposée.",
         "Télécharge l’encyclopédie PDF depuis l’accueil ou le bandeau de cette page.",

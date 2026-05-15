@@ -29,11 +29,19 @@ const THEMES = {
     badge: "Magique · companion",
     prose: "prose-invert prose-headings:text-violet-200 prose-a:text-[#FFD700]",
   },
+  alliance: {
+    wrapper: "from-emerald-950/30 via-zinc-950 to-violet-950/20",
+    border: "border-emerald-500/30",
+    accent: "text-emerald-400",
+    badge: "Alliance IA · OMÉGA",
+    prose: "prose-invert prose-headings:text-emerald-200 prose-a:text-[#FFD700]",
+  },
 };
 
 export default function CodexMarkdownView({
   slug,
   variant,
+  docFile,
   title,
   description,
   canonicalPath,
@@ -47,7 +55,7 @@ export default function CodexMarkdownView({
     let cancelled = false;
     setLoading(true);
     setError(null);
-    fetch(`/docs/codex-${slug}.md`)
+    fetch(`/docs/${docFile ?? `codex-${slug}.md`}`)
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.text();
@@ -64,7 +72,7 @@ export default function CodexMarkdownView({
     return () => {
       cancelled = true;
     };
-  }, [slug]);
+  }, [slug, docFile]);
 
   return (
     <div className={cn("min-h-[70vh] bg-gradient-to-b pb-24", theme.wrapper)}>
@@ -110,7 +118,7 @@ export default function CodexMarkdownView({
               Encyclopédie PDF
             </a>
             <a
-              href={`/docs/codex-${slug}.md`}
+              href={`/docs/${docFile ?? `codex-${slug}.md`}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 px-3 py-1.5 text-white/70 hover:bg-white/10"
@@ -130,7 +138,7 @@ export default function CodexMarkdownView({
         {error && (
           <p className="text-sm text-red-400">
             Impossible de charger le document ({error}). Vérifier{" "}
-            <code className="text-xs">public/docs/codex-{slug}.md</code>.
+            <code className="text-xs">public/docs/{docFile ?? `codex-${slug}.md`}</code>.
           </p>
         )}
 

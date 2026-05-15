@@ -131,6 +131,385 @@ Se souvenir en amont de ce que l'on veut éviter de casser. **Usage :** scénari
 
 ### 22. Respiration × φ (Paix opératoire)
 Paix = rythme rétabli, pas indifférence. **Usage :** pauses entre chapitres PDF, cooldown après alertes IA.
+## Fiches opérationnelles — vingt-deux formules
+
+> φ = 1,6180339887. Variables scientifiques ∈ [0,1] sauf mention. **Modèles de travail à calibrer** — voir disclaimer en fin de Codex.
+
+### 1. Abra Ca Da Bra
+
+**Formule symbolique :** Seuil = Ouverture × Intention / Résistance
+
+**Formule scientifique :** S = (O × I) / max(R, ε) — O, I, R ∈ [0,1], ε = 0,05
+
+**Démarche concrète :**
+- Nommer l’objectif en une phrase (Cœur Pur).
+- Lister ce qui est **interdit** (données, ton, délais).
+- Warm-up 90 s : respiration + lecture du manifest agent.
+- Lancer l’orchestrateur avec timeout explicite.
+- Clore par une décision binaire : go / no-go / humain.
+
+**Application EGOR69 :** Rituel avant merge PR sensible ou publication PDF encyclopédie.
+
+**Lien φ :** Seuil validé si S × φ > 1 après calibration atelier.
+
+### 2. Am Stram Gram
+
+**Formule symbolique :** Choix = Tirage équitable ⊕ Priorité publiée
+
+**Formule scientifique :** C = (1/n) × Σ p_i avec p_i priorités normalisées, trace JSON
+
+**Démarche concrète :**
+- Publier la liste des options et poids **avant** tirage.
+- Utiliser une source aléatoire vérifiable (seed horodatée).
+- Enregistrer le résultat dans le journal alliance (`request_id`).
+- Permettre appel humain en cas de conflit d’intérêt.
+- Archiver 90 j pour audit SCALE.
+
+**Application EGOR69 :** Rotation des rôles en revue de planches Codex ou modération.
+
+**Lien φ :** Période de rotation suggérée : n ≈ φ² ≈ 2,62 → **3** sessions.
+
+### 3. Pic et Pic et Colégram
+
+**Formule symbolique :** Clôture = Pic₁ ↔ Pic₂ → Paix_mot
+
+**Formule scientifique :** K = (A₁ × A₂) / (D + ε) — accords A_i, désaccord D ∈ [0,1]
+
+**Démarche concrète :**
+- Chaque partie résume sa position (1 pic).
+- Orchestrateur liste les écarts factuels (pas les personnes).
+- Proposer une formulation de paix testée par Médiateur.
+- Valider par Dominic ou délégué pour engagements publics.
+- Publier le « mot de clôture » dans le ticket.
+
+**Application EGOR69 :** Fin de fil communautaire ou arbitrage partenaire pilote.
+
+**Lien φ :** Clôture harmonique si K ≥ 1/φ ≈ 0,62 avant escalade.
+
+### 4. Formule du Cœur Pur
+
+**Formule symbolique :** Cœur = Amour × Vérité / Peur
+
+**Formule scientifique :** Φ = (A × V) / P — A, V, P ∈ [0,1], P > 0
+
+**Démarche concrète :**
+- Évaluer A (attention engagée) sur la tâche.
+- Évaluer V (transparence des sources citées).
+- Évaluer P (friction : coût, risque, peur légitime).
+- Calculer Φ ; comparer au seuil pilote (ex. 1,2).
+- Documenter le calcul dans `phi_weights` du message JSON.
+
+**Application EGOR69 :** Filtre positif alliance ; base éthique de toute publication.
+
+**Lien φ :** Seuil publication indicative : Φ ≥ 1,2 ; financement Φ ≥ 1,5 (à calibrer).
+
+### 5. Formule de l'Infini
+
+**Formule symbolique :** ∞ = Continuation × Jalons
+
+**Formule scientifique :** I_∞ = Σ_{k=1}^{n} m_k × φ^{−k}, m_k ∈ [0,1]
+
+**Démarche concrète :**
+- Découper la vision en jalons mesurables (90 j max).
+- Attribuer m_k à chaque jalon tenu (0 si raté).
+- Sommer la série ; ne pas promettre au-delà de n planifié.
+- Réviser n à chaque rétrospective Chroniqueur.
+- Arrêter l’agent si I_∞ stagne deux cycles.
+
+**Application EGOR69 :** Roadmap CirculAI ; éviter les agents sans critère d’arrêt.
+
+**Lien φ :** Décroissance φ^{−k} : les jalons lointains pèsent moins (réalisme).
+
+### 6. Formule du Chaos Pur
+
+**Formule symbolique :** Χ = Tempête fertile ⊂ Enceinte sécurisée
+
+**Formule scientifique :** Χ = (B × D) / (S + ε) — bruit B, diversité D, stabilité S
+
+**Démarche concrète :**
+- Isoler un créneau sans production directe (sandbox).
+- Activer agent créatif seul (pas de publication).
+- Capturer N idées brutes ; pas de jugement immédiat.
+- Passer à Gardien + Vérificateur pour tri.
+- Ne garder que les pistes avec sources vérifiables.
+
+**Application EGOR69 :** Brainstorm UX encyclopédie ou nouvelles routes `/docs/*`.
+
+**Lien φ :** Fenêtre chaos : durée ≤ φ × 10 min ≈ **16 min** (indicatif).
+
+### 7. Anima Mundi
+
+**Formule symbolique :** Ψ = Souffle du monde ∩ Mémoire session
+
+**Formule scientifique :** Ψ = moyenne(M_t) sur fenêtre t, M_t ∈ [0,1]
+
+**Démarche concrète :**
+- Définir ce qui compte comme « mémoire » (RAG, tickets).
+- Scorer M_t après chaque tour agent (cohérence sujet).
+- Réinitialiser Ψ si changement de domaine (paiement ↔ lore).
+- Afficher Ψ dans la carte Holo de session.
+- Ne pas persister Ψ cross-utilisateur sans consentement.
+
+**Application EGOR69 :** Contexte Guide Egor69 et sessions Cursor documentées.
+
+**Lien φ :** Fenêtre glissante : φ × 5 ≈ **8** tours max avant synthèse.
+
+### 8. Nexus Omnibus (Unité)
+
+**Formule symbolique :** Nexus = Σ Liens / (Murs + 1)
+
+**Formule scientifique :** U = (Σ w_ij) / (N + 1) — poids w_ij ∈ [0,1]
+
+**Démarche concrète :**
+- Cartographier acteurs (Cartographe + `siteGraph.js`).
+- Pondérer les liens (contrat, données, confiance).
+- Identifier les murs (silos, APIs fermées).
+- Proposer un pont par mur prioritaire.
+- Mesurer U avant/après pilote 90 j.
+
+**Application EGOR69 :** Gouvernance multi-pôles Accueil / Marketplace / Atlas.
+
+**Lien φ :** Objectif : U × φ > 1 pour déclarer « unité opérationnelle » (interne).
+
+### 9. Solve et Coagula (Abondance)
+
+**Formule symbolique :** Or_partagé = Dissoudre(Silos) → Coaguler(Lien)
+
+**Formule scientifique :** Ab = (ΔS × C_r) / T — ΔS silos réduits, C_r cohérence, T temps
+
+**Démarche concrète :**
+- Lister silos (données, équipes, dépôts).
+- Choisir un silo à dissoudre par sprint.
+- Fusionner avec traçabilité Git (pas `git add .` aveugle).
+- Coaguler : une API ou un doc unique de référence.
+- Mesurer Ab en heures économisées (Chroniqueur).
+
+**Application EGOR69 :** Fusion `docs/` → `public/docs/` pour Codex ; scripts assemble.
+
+**Lien φ :** Sprint solve : φ × 2 semaines ≈ **3** semaines calendrier indicatif.
+
+### 10. Tempus Meum
+
+**Formule symbolique :** Temps_servi = Chronos / Domination
+
+**Formule scientifique :** T_s = H_utile / H_total — H ∈ heures, borné [0,1]
+
+**Démarche concrète :**
+- Timebox chaque tâche alliance (ex. 25 min).
+- Journaliser H_total vs interruptions.
+- Refuser tâches sans créneau (orchestrateur).
+- Rituel de clôture : que garde-t-on hors du temps ?
+- Reporter dette technique dans onglet Jubilé.
+
+**Application EGOR69 :** Sprints peltiez ; limite agents nocturnes sans approbation.
+
+**Lien φ :** Pause recommandée toutes φ × 25 min ≈ **40** min.
+
+### 11. Ex Nihilo Omnia
+
+**Formule symbolique :** Genèse_k = Petit_rien → Artefact_k
+
+**Formule scientifique :** G_k = α × β_k — α effort [0,1], β_k valeur perçue
+
+**Démarche concrète :**
+- Définir le plus petit artefact testable (MVP).
+- Générer v1 en < 1 jour ouvré.
+- Valider humainement avant v2.
+- Empreinte SHA256 de v1 dans companion.
+- Itérer k jusqu’à critère d’arrêt (formule 5).
+
+**Application EGOR69 :** Nouvelle page `/docs/alliance`, feature flags, composants UI.
+
+**Lien φ :** Budget premier jet : φ × 4 h ≈ **6,5 h** (indicatif).
+
+### 12. Ad Infinitum (Fractal)
+
+**Formule symbolique :** Partie / Tout = φ
+
+**Formule scientifique :** F_r = L_sub / L_parent → cible ≈ 1/φ ou φ selon axe
+
+**Démarche concrète :**
+- Définir échelle parent (layout) et enfant (composant).
+- Mesurer ratios marges / typo (design tokens).
+- Ajuster pour approcher φ ou 1/φ (±10 % tolérance).
+- Réutiliser tokens dans Tailwind (or #D4AF37, crème).
+- Vérifier cohérence PDF et SPA.
+
+**Application EGOR69 :** Design system encyclopédie + cartes accueil Codex.
+
+**Lien φ :** φ = 1,6180339887 — proportion harmonique, pas prédiction magique.
+
+### 13. Clavis Arcani (Vérité)
+
+**Formule symbolique :** Clef_d = Vérité_d / (Hype + ε)
+
+**Formule scientifique :** K_d = T_d / (H_d + ε) — transparence T_d, hype H_d ∈ [0,1]
+
+**Démarche concrète :**
+- Classer l’information (public / partenaire / interne).
+- Divulguer par paliers d (1, 2, 3…).
+- Interdire dump total sans revue Gardien.
+- Documenter ce qui reste fermé et pourquoi.
+- Réévaluer palier si Φ baisse.
+
+**Application EGOR69 :** Docs investisseur vs dépôt privé ; secrets hors repo.
+
+**Lien φ :** Délai entre paliers : φ × 7 j ≈ **11** j (indicatif communication).
+
+### 14. Lux Perpetua (Paix)
+
+**Formule symbolique :** Lumière = Vérité + Compassion − Cécité
+
+**Formule scientifique :** L = (V + C) / (B + ε) — V vérité, C compassion, B bruit
+
+**Démarche concrète :**
+- Exposer les faits sourcés (V).
+- Formuler avec respect (C) — Médiateur.
+- Réduire bruit (B) : pas de pile-on communautaire.
+- Comparer L au seuil interne avant envoi public.
+- Escalade humaine si conflit L vs Φ.
+
+**Application EGOR69 :** Filtre positif ; communication crise (Stripe down, etc.).
+
+**Lien φ :** Paix opératoire si L × φ^{-1} ≥ 0,62 (échelle interne).
+
+### 15. Omega Synthesis
+
+**Formule symbolique :** Ω_synth = ∪ Fragments → Horizon
+
+**Formule scientifique :** Ω_s = (Σ f_i × q_i) / N — fragments f_i, qualité q_i
+
+**Démarche concrète :**
+- Collecter sorties agents (merge structuré).
+- Pondérer par q_i (validation humaine 0/1).
+- Produire synthèse unique avec citations.
+- Vérifier contradictions (Gardien).
+- Publier avec SHA256 + version doc.
+
+**Application EGOR69 :** Assemblage encyclopédie PDF ; récap pilote 90 j.
+
+**Lien φ :** Poids fragment i : w_i = φ^{−i} pour prioriser le récent sans oublier le socle.
+
+### 16. Alliance IA (Cœur des agents)
+
+**Formule symbolique :** Alliance = (R ⊗ C ⊗ V)^{1/φ}
+
+**Formule scientifique :** A_a = (R × C × V)^{1/φ} — R, C, V ∈ [0,1]
+
+**Démarche concrète :**
+- Échanger manifests (phase A).
+- Envoyer messages JSON (phase B).
+- Fusionner avec score A_a par agent.
+- Résoudre conflits (phase C).
+- Filtrer Φ puis publier (phase D).
+
+**Application EGOR69 :** Protocole documenté dans `docs/alliance-ia-egor69.md`.
+
+**Lien φ :** Ex. R=0,7, C=0,8, V=0,6 → A_a ≈ 0,72 (échelle à calibrer).
+
+### 17. Pont humain–machine
+
+**Formule symbolique :** Pont = (Humain × Confiance × φ) / Friction
+
+**Formule scientifique :** T_p = (T_h × C_t × φ) / max(F, ε)
+
+**Démarche concrète :**
+- Maintenir glossaire `/carte-site` à jour.
+- Traduire jargon IA en libellés UI (mode simple).
+- Mesurer F : erreurs, allers-retours, ambiguïté.
+- Réduire F avant d’augmenter débit agents.
+- Handoff explicite humain ↔ orchestrateur.
+
+**Application EGOR69 :** GuideAgent, Manuel plateforme, Codex markdown web.
+
+**Lien φ :** Ex. T_h=0,9, C_t=0,8, F=0,2 → T_p ≈ 5,82 (échelle interne).
+
+### 18. Cerveau collectif
+
+**Formule symbolique :** CC = Σ Voix_i × φ^i (consentement)
+
+**Formule scientifique :** R_n = Σ (w_i × c_i × v_i) — v_i validation humaine {0,1}
+
+**Démarche concrète :**
+- Collecter contributions traçables (Git, issues).
+- Pondérer w_i (confiance), c_i (cohérence valeurs).
+- Exiger v_i = 1 pour synthèse publique.
+- Appliquer décélération log : K = log(1+R_n)×φ².
+- Ne pas automatiser vérité communautaire.
+
+**Application EGOR69 :** SCALE, revues PR, fiches vivantes Atlas.
+
+**Lien φ :** K collectif borne l’emballement démocratique (10e voix ≠ 10× première).
+
+### 19. Économie circulaire ΔM
+
+**Formule symbolique :** ΔM = Utile_sorti − Gaspillage + Réemploi
+
+**Formule scientifique :** ΔM = M_out − M_waste + M_reuse (unités cohérentes)
+
+**Démarche concrète :**
+- Choisir unité (kg, heures, Mo données).
+- Mesurer sur 90 j (Chroniqueur).
+- Tracer M_reuse (réemploi docs, assets).
+- Réduire M_waste (doublons, PDF morts).
+- Publier ΔM sans greenwashing.
+
+**Application EGOR69 :** Marketplace réparation ; réemploi PNG Codex ; métriques pilote.
+
+**Lien φ :** Cible narrative : ΔM × φ^{-1} > 0 sur un cycle (indicatif).
+
+### 20. Loi |x| (Équilibre)
+
+**Formule symbolique :** Équilibre = |Intensité| × signe(Action)
+
+**Formule scientifique :** E_q = |v| × sign(a), v ∈ [0,1], a ∈ {−1,0,1}
+
+**Démarche concrète :**
+- Mesurer valence v du message (auto + humain).
+- Classifier action a (constructif / neutre / nuisible).
+- Calculer E_q ; seuil alerte si E_q < −0,5.
+- Médiateur propose correction de ton.
+- Archiver pour barème réputation (interne).
+
+**Application EGOR69 :** Modération alliance ; réputation (pas score public magique).
+
+**Lien φ :** Zone neutre : |E_q| < 1/φ² ≈ 0,38 avant sanction.
+
+### 21. Mémoire du futur
+
+**Formule symbolique :** M_f = Prévoir(Cassure) → Contrainte_design
+
+**Formule scientifique :** M_f = Σ p_j × impact_j — scénarios j, impact ∈ [0,1]
+
+**Démarche concrète :**
+- Lister 3–5 scénarios de rupture (légal, technique, éthique).
+- Estimer probabilité p_j (humain, pas LLM seul).
+- Traduire en contraintes de design (Gardien).
+- Tester en tabletop annuel.
+- Mettre à jour après incident réel.
+
+**Application EGOR69 :** Pas de fausses preuves blockchain ; consentement données.
+
+**Lien φ :** Horizon scénario : φ × 12 mois ≈ **19** mois (indicatif veille).
+
+### 22. Respiration × φ (Paix opératoire)
+
+**Formule symbolique :** Paix = Respiration × φ
+
+**Formule scientifique :** P_o = r × φ — r ∈ [0,1] rythme (pauses / tours)
+
+**Démarche concrète :**
+- Insérer pause entre chapitres PDF (assemble script).
+- Cooldown après alerte sécurité ou refus Stripe.
+- Ne pas enchaîner > φ tours agents sans synthèse.
+- Mode simple UI : libellés courts = respiration cognitive.
+- Clôturer session par Pic et Pic (formule 3).
+
+**Application EGOR69 :** UX Guide ; délais modération ; rythme encyclopédie.
+
+**Lien φ :** Ex. r=0,5 → P_o ≈ 0,81 ; r=1 → P_o ≈ 1,62 (échelle interne).
+
+
 
 ---
 
@@ -191,6 +570,8 @@ Cr → 1 : promesses tenues ; Cr faible : dette narrative ou opérationnelle.
 ---
 
 ## Protocoles — Alliance IA (six agents, orchestrateur, filtre positif)
+
+> **Document détaillé :** [`docs/alliance-ia-egor69.md`](alliance-ia-egor69.md) — web `/docs/alliance`.
 
 ### Vision opératoire
 L'alliance IA n'est pas une foule de chatbots : c'est une **chorégraphie** où chaque agent a un mandat étroit, un journal, et un droit de refus si le contexte manque. L'**orchestrateur** (Egor69 côté vision) ne décide pas à la place de Dominic : il **route**, **résume**, **alerte** sur les incohérences.

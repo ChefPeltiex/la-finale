@@ -164,6 +164,18 @@ function writeFrontMatter(doc) {
   });
 
   addCodexTextPage(doc, (W) => {
+    doc.font("Helvetica-Bold").fontSize(14).fillColor(GOLD).text("Protocole Alliance IA (résumé)", { width: W });
+    doc.moveDown(0.4);
+    doc.font("Helvetica").fontSize(9).fillColor(CREAM);
+    doc.text(
+      "Orchestrateur + six agents (Scribe, Gardien, Cartographe, Alchimiste, Médiateur, Chroniqueur). Phases A–D : manifest → message JSON → merge → filtre Φ ≥ 1,2 → publication avec SHA256. OMÉGA opérationnel : Holo, Sym, Négentropie, Shapley, routage circulaire — heuristiques à calibrer, pas lois physiques.",
+      { width: W, align: "justify", lineGap: 3 },
+    );
+    doc.moveDown(0.4);
+    doc.fontSize(8).fillColor(MUTED).text("Source : docs/alliance-ia-egor69.md · Web : /docs/alliance", { width: W });
+  });
+
+  addCodexTextPage(doc, (W) => {
     doc.font("Helvetica-Bold").fontSize(13).fillColor(GOLD).text("Formules — résumé (1/2)", { width: W });
     doc.moveDown(0.4);
     doc.font("Courier").fontSize(8.5).fillColor(CREAM);

@@ -88,6 +88,9 @@ export default function GuideAgent() {
               <Link to="/docs/rituel" className="text-[#D4AF37]/90 hover:underline" onClick={() => setOpen(false)}>
                 Codex rituel
               </Link>
+              <Link to="/docs/alliance" className="text-emerald-400/90 hover:underline" onClick={() => setOpen(false)}>
+                Alliance IA
+              </Link>
             </div>
             <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between gap-2">
               <span className="text-[10px] text-white/50 uppercase tracking-wider">Affichage</span>

@@ -71,6 +71,7 @@ export default function Footer() {
               <li><Link to="/manuel" className="text-muted-foreground hover:text-foreground transition">Manuel</Link></li>
               <li><Link to="/docs/investisseur" className="text-muted-foreground hover:text-foreground transition">Codex investisseur</Link></li>
               <li><Link to="/docs/rituel" className="text-muted-foreground hover:text-foreground transition">Codex rituel</Link></li>
+              <li><Link to="/docs/alliance" className="text-muted-foreground hover:text-foreground transition">Alliance IA · OMÉGA</Link></li>
               <li><Link to="/outils-integration" className="text-muted-foreground hover:text-foreground transition">Outils, IA & Unreal (cadre réel)</Link></li>
               <li><Link to="/carte-site" className="text-muted-foreground hover:text-foreground transition">Carte du site, parcours & glossaire</Link></li>
               <li><Link to="/vision" className="text-muted-foreground hover:text-foreground transition">Vision</Link></li>

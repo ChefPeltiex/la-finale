@@ -7,6 +7,7 @@ import {
   Download,
   ArrowRight,
   ExternalLink,
+  Network,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import useDisplayMode from "@/hooks/useDisplayMode";
@@ -46,6 +47,14 @@ const EDITIONS = [
     labelSimple: "Rituel",
     desc: "Rituels courts, respiration et pratique personnelle.",
     to: "/docs/rituel",
+  },
+  {
+    id: "alliance",
+    icon: Network,
+    label: "Alliance IA · OMÉGA",
+    labelSimple: "Alliance IA",
+    desc: "Orchestration multi-agents, protocole Φ et ponts techniques.",
+    to: "/docs/alliance",
   },
 ];
 
@@ -145,7 +154,7 @@ export default function HomeEncyclopediasSection() {
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
             {EDITIONS.map((edition) => (
               <EditionTile key={edition.id} edition={edition} simple={simple} />
             ))}
