@@ -86,6 +86,7 @@ Les autres URLs du tableau ci-dessous restent des **affinages** (solfège, palie
 | **vs `Thji1yQksXI` (#26)** | Gaia **888 + 528 Hz** + LoA (~2 h) — **duplique #21** (même chaîne) et **#22** (888). **Ne supplante pas** `hL-BvWLPseE` ; palette Verse = crépuscule or/indigo (`VERSE_STYLE`), pas méditation Hz. |
 | **vs `xfBTpK1csas` (#27)** | Lovemotives **369 Hz Tesla + LoA** (~2 h) — **duplique #1**, **#3**, **#15**, **#20**. **Ne supplante pas** le PRIMARY. **Maître style global : `hL-BvWLPseE`.** |
 | **vs `-pu93aq9uP4` (#28 @ 2:00)** | VFX **∞** néon sur fond étoilé — cosmos **abstrait**, pas crépuscule or/indigo PRIMARY ; **pas** le moment « tout le Verse ». |
+| **vs `2MeJL3S3psI` (#53 @ 57:50)** | Interview **podcast** LEGEND (IA / Ringover) — **visuel studio** face cam, **pas** vol ni anneaux ; hors périmètre mood Verse. **Maître style global : `hL-BvWLPseE`.** |
 
 **Lecture priorité :** **Haute** = plusieurs URLs convergent (dérive lente, paliers, HUD minimal) — à traiter en P1 avant polish P2. **Moyenne** = affine un levier déjà couvert (session longue, nuit, stack, rituel). **Basse** = redondant (focus, binaural, session ~2 h) — cataloguer sans nouveaux IDs. **Aucune** référence ne montre vol dans des anneaux ou rail spatial : priorité **jamais** sur gameplay arcade / hyperspace.
 
@@ -2614,6 +2615,30 @@ Après **22** références playlist + **PRIMARY** `hL-BvWLPseE`, le mood **médi
 | **P1/P2** | **Aucune** |
 
 **Verdict :** @ 2:00 = ambiance cosmique **abstraite** (accent particules possible) — **ce n’est pas** le moment pour **« tout le Verse »** (rester PRIMARY + tores 3D). Si l’objectif était un **vol dans des anneaux**, ce timestamp **ne le montre pas**.
+
+---
+
+# Addendum — Vidéo 53 (`2MeJL3S3psI` · **timestamp @ 57:50**)
+
+**Lien :** [https://www.youtube.com/watch?v=2MeJL3S3psI&t=3470](https://www.youtube.com/watch?v=2MeJL3S3psI&t=3470)  
+**ID :** `2MeJL3S3psI` · **Chaîne :** LEGEND (Guillaume PLEY) · **Durée :** 1:21:27 (4887 s) · **Type :** **Narratif** — interview / podcast FR (Ringover × IA), catégorie Entertainment · ~315 k vues (mai 2026)
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *COMMENT L’INTELLIGENCE ARTIFICIELLE VA VOUS PERMETTRE DE TRAVAILLER MOINS TOUT EN GAGNANT PLUS ?* |
+| **Invités** | Ludovic Rateau (CEO Ringover) · Shubham Sharma (IA) — partenariat commercial Influx / Ringover |
+| **@ 57:50 (`t=3470`)** | Chapitre **« L’IA va faire disparaître Google ? »** (début **55:54** ; suivant **1:03:54** « Ce n’est plus possible de détecter l’IA ») — ~2 min dans le segment |
+| **Visuel** | **Studio talk-show** : plans **face cam** / multi-invité, décor LEGEND, inserts motion design **produit / tech** — **pas** nébuleuse, **pas** vol spatial, **pas** anneaux planétaires, **pas** image statique méditation |
+| **Audio** | **Voix-off / dialogue FR** (débat IA, recherche, deepfakes, productivité) — **pas** ambient Hz, **pas** OST documentaire |
+| **Vol / anneaux ?** | **Non** |
+| **vs PRIMARY `hL-BvWLPseE`** | PRIMARY = crépuscule orchestral contemplatif (`VERSE_STYLE`). Ici = **plateau interview** — **ne remplace pas** le style global Verse 3D |
+| **vs batch #29–#52** | Même famille **talk / narratif** (#31–#33, #39) mais sujet **B2B tech IA**, pas LoA ni astro — **hors** mood `/world` |
+| **Style global Verse ?** | **Non** — timestamp **ne devient pas** ref PRIMARY ni co-primary |
+| **Code** | `VERSE_STYLE` / `WorldScene` — **inchangés** |
+| **Priorité** | **Basse** — catalogage **traçabilité** lien utilisateur ; **aucune** tâche P1/P2 Verse |
+| **CirculAI (hors Verse)** | Ton **pont IA ↔ métier** (Ringover, productivité) — copy B2B **éthique**, pas titres clickbait ; **pas** claims Hz / guérison |
+
+**Verdict :** @ 57:50 = fin d’émission **débat IA** (Google, écosystème) — **aucun** emprunt palette ou motion Verse. Si l’intention était un **vol cosmique dans des anneaux**, **cette URL ne correspond pas**.
 
 ---
 
