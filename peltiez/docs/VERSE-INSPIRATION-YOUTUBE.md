@@ -1,5 +1,23 @@
 # Verse — Inspiration YouTube (référence utilisateur)
 
+## Synthèse — toutes les références (audio vs visuel · priorité)
+
+| # | ID | Chaîne | ~Durée | **Audio** vs **Visuel** | Structure / narratif | **Priorité impl.** | Emprunt Verse (P1 → P2) |
+|---|-----|--------|--------|-------------------------|----------------------|--------------------|-------------------------|
+| 1 | `pSXgXAqomMY` | Inner Lotus Music | ~71 min | **Audio** dominant (art chaîne hors jeu) | 3 Hz fusionnés — cœur / lâcher prise / univers | **Haute** — base mood | P1 contemplation, palette, `ritualHint` · P2 audio original |
+| 2 | `NxXzQLl2H5Y` | MindfulMed | ~46 min | **Audio** + **visuel nul** (écran noir) | **9 chapitres** séquentiels | **Haute** — arc paliers | P1 X/9, focus HUD · P2 complétion constellation, fil d’anneaux |
+| 3 | `OlV26ouCn5w` | Meditative Mind | ~6 h | **Audio** pur (branding miniature) | 1 ton 963 Hz — intention / LoA | **Moyenne** — sessions longues | P1 intention session · P2 dérive passive 90 s+ |
+| 4 | `4mJc9A1yOx0` | Abundance Energy | ~59 min | **Audio** + **visuel** cosmos IA (MidJourney) | **7 chakras** + 999 Hz (marketing) | **Moyenne** — teintes / clarté | P1 harmoniques 7 · P2 brume −10 %, halo voyageur |
+| 5 | `IFH1pi6xIk4` | Asmr Relaxing Deep Sleep | ~3 h 10 | **Audio-first** (keywords pluie, pas gameplay) | **5 Hz empilés** + corps/esprit | **Moyenne** — stack session | P1 couches 5, axes corps/esprit · P2 pluie d’étoiles, glow ×5 |
+| 6 | `3OvM4ycNVL8` | Dreamy Flow | ~2 h 53 | **Audio** + miniature **sommeil / lune** | Duo 528 + 432 Hz — nuit réparatrice | **Moyenne** — mode nuit | P1 axes (partagé 5) · P2 mode nuit cosmique |
+| 10 | `deFpiq6EYzE` | Inner Eye Awakening | ~2 h 55 | **Audio** dominant (pas de gameplay 3D) | Transe chamanique / **tiers œil** — seuil « 1 min » (marketing) | **Moyenne** — rituel seuil | P1 rituel 60 s avant portail · P2 transe cosmique profonde (60 s sans input) |
+
+**Lecture priorité :** **Haute** = plusieurs URLs convergent (dérive lente, paliers, HUD minimal) — à traiter en P1 avant polish P2. **Moyenne** = affine un levier déjà couvert (session longue, nuit, stack, rituel). **Aucune** référence ne montre vol dans des anneaux ou rail spatial : priorité **jamais** sur gameplay arcade / hyperspace.
+
+**Audio vs visuel :** toutes les entrées sont **musique / méditation** ; le Verse apporte le **décor 3D** (fog, étoiles, tores). Ne pas intégrer pistes YouTube (P2-INS-4). Visuels chaîne (IA, miniature) = **palette uniquement**, pas d’assets repris.
+
+---
+
 **Lien :** [https://www.youtube.com/watch?v=pSXgXAqomMY](https://www.youtube.com/watch?v=pSXgXAqomMY)  
 **ID :** `pSXgXAqomMY`  
 **Date de capture :** mai 2026
@@ -563,3 +581,431 @@ Les cinq vidéos confirment une **traversée symbolique ordonnée** — mood mé
 - `src/pages/WorldHub.jsx` — HUD 5 couches, axes corps/esprit
 - `src/components/world/CosmicNavControls.jsx` — glow empilé `CosmicTraveler`
 - `src/world/WorldScene.jsx` — particules pluie d’étoiles (contemplation)
+
+---
+
+# Addendum — Vidéo 10 (10ᵉ référence « verse des anneaux »)
+
+**Lien :** [https://www.youtube.com/watch?v=deFpiq6EYzE](https://www.youtube.com/watch?v=deFpiq6EYzE)  
+**ID :** `deFpiq6EYzE`  
+**Date de capture :** mai 2026  
+**Contexte utilisateur :** dixième référence YouTube — accent **transe chamanique**, **tiers œil / intuition**, marketing **« après 1 minute »** et copy **pinéale / DMT** (Inner Eye Awakening) ; **pas** vol spatial ni traversée d’anneaux cinématographiques.
+
+---
+
+## Ce que la vidéo est réellement
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *After 1 Minute, You Will Go into a Deep Shamanic Trance and Mind Control, Pineal Gland DMT Release* |
+| **Chaîne** | Inner Eye Awakening |
+| **Durée** | 2:54:47 (~2 h 55 min) |
+| **Vues** | ~374,5 K (au moment de la capture) |
+| **Publié** | 2026-03-14 |
+| **Catégorie** | People & Blogs |
+| **Type** | Musique / méditation **Third Eye** — piste longue + copy transe, pinéale, DMT — **pas** gameplay, **pas** anneaux spatiaux, **pas** storyboard 3D |
+
+### Thèmes publics (description chaîne)
+
+- **Third Eye Meditation** : intuition, conscience élargie, connexion « énergie intérieure » — symbolique bien-être, **non** preuve médicale.
+- **« After 1 minute »** : promesse marketing d’entrée rapide en transe — équivalent produit = **rituel court** avant seuil, pas contrôle mental.
+- **Transe chamanique** : immersion profonde, sons apaisants — mood **descente** dans l’univers Verse, pas mini-jeu.
+- **Pinéale / DMT release** : discours glande pinéale — **interdit** en copy produit (même barrière que 963 Hz « gods » vidéo 3).
+- **Mind control** (titre) : formulation sensationnaliste — **ne jamais** reprendre ; garder autonomie utilisateur (pointer lock, pause, sortie `/world`).
+- **Usage** : écoute longue passive (~3 h), casque, clarté mentale / équilibre émotionnel (claims chaîne).
+
+### Transcript
+
+Pas de narration structurante exploitable ; contenu **audio + marketing** en description. L’inspiration produit = **seuil temporel court** + **profondeur transe** + **intuition avant portail** — pas storyboard de vol dans les anneaux.
+
+### Note « verse des anneaux »
+
+Les **tores** du Verse Egor69 (`realms.js`) restent la métaphore utilisateur. Cette URL complète la série par un arc **rituel d’entrée** (~1 min) puis **immersion longue** (~3 h) — proche des durées vidéos 5–6, distincte des 9 paliers (2) et du ton unique 6 h (3).
+
+### Implémentation 3D (constat vidéo)
+
+| Élément recherché | Présent dans la vidéo ? | Note Verse |
+|-------------------|-------------------------|------------|
+| Traversée d’anneaux / rail | **Non** | P2-INS-1 inchangé — portail narratif |
+| Vol spatial / cockpit | **Non** | Third-person marche cosmique |
+| Hyperspace / warp | **Non** | Transitions fade/scale existantes |
+| Contrôle mental / gameplay | **Non** | Rituel **opt-in**, jamais « mind control » |
+| Visuels 3D cinématographiques | **Non** | Audio-first ; scène Verse = décor |
+
+---
+
+## Emprunter (mood & UX — sans copier l’œuvre)
+
+| Idée | Application Egor69 Verse |
+|------|---------------------------|
+| **Seuil à 60 s** | Option « respiration / intention » ~60 s avant `E` sur un tore — miroir « after 1 minute », sans promesse de transe forcée |
+| **Intuition / tiers œil** | Copy HUD sobre (« écoute ta direction ») + `ritualHint` existants — pas pinéale ni DMT |
+| **Descente profonde** | Après 60 s sans input : atténuation HUD + vignette légère — transe **cosmique**, pas copy chamanique |
+| **Session ~3 h** | Compatible dérive passive (P2-INS-7) et mode nuit (P2-INS-11) — pas pénalité AFK |
+| **Sons apaisants** | Futur audio P2 : nappes très basses, pas de fréquences « third eye » identifiables |
+
+---
+
+## Ne pas copier (droits & promesses)
+
+| Risque | Action |
+|--------|--------|
+| **© Inner Eye Awakening** | Aucun extrait audio, miniature, ni branding chaîne |
+| **DMT / pinéale / mind control** | Pas de claims neurochimiques, activation pinéale, ni « transe garantie en 1 min » |
+| **Shamanic trance** | Pas de vocabulaire chamanique officiel ni promesse altered state |
+| **Third eye / healing frequencies** | Pas de Hz affichés ni guérison sur `/world` |
+| **Gameplay inexistant** | Ne pas annoncer vol dans les anneaux sur cette URL |
+
+---
+
+## Comparaison vidéo 1 vs 2 vs 3 vs 4 vs 5 vs 6 vs 10
+
+| Critère | `pSXgXAqomMY` | `NxXzQLl2H5Y` | `OlV26ouCn5w` | `4mJc9A1yOx0` | `IFH1pi6xIk4` | `3OvM4ycNVL8` | `deFpiq6EYzE` |
+|---------|---------------|---------------|---------------|---------------|---------------|---------------|---------------|
+| **Durée** | ~71 min | ~46 min | ~6 h | ~59 min | ~3 h 10 | ~2 h 53 | **~2 h 55** |
+| **Structure** | 3 Hz fusionnés | **9 chapitres** | 1 ton continu | **7 chakras** | **5 empilés** | 2 Hz (528+432) | **Seuil 1 min** + transe longue |
+| **Visuel** | Art chaîne | **Écran noir** | Branding | Cosmos IA | Audio-first | Sleep / lune | **Audio-first** |
+| **Narratif** | Cœur / univers | Restauration 9 | LoA / intention | Purification | Stack corps/esprit | Sommeil profond | **Tiers œil / transe** |
+| **Pour les Anneaux** | Dérive, `ritualHint` | Palier X/9 | Intention 6 h | 7 teintes | 5 couches | Mode nuit | **Rituel 60 s**, transe profonde 60 s |
+
+Les sept entrées documentées confirment une **traversée symbolique contemplative** — **aucune** ne montre de gameplay « anneaux » ou vol spatial.
+
+---
+
+## Cinq recommandations concrètes (vidéo 10)
+
+1. **Rituel seuil 60 s (P1)** : à &lt; 5 m d’un tore non visité, proposer option « une minute de présence » (respiration + `ritualHint`) avant activation `E` — miroir « after 1 minute », **sans** mind control ni promesse DMT.
+2. **Indicateur intuition (P1)** : flèche ou halo discret vers le prochain realm aligné intention localStorage (complète P1-INS-8) — tiers œil = **direction**, pas glande.
+3. **Transe cosmique profonde (P2)** : à 60 s sans input (avant les 90 s de P2-INS-7) : vignette + pulsation tore très lente — distinct de la dérive passive complète.
+4. **Conserver P1-INS-7/8 et P2-INS-7/11** : focus portail, intention, dérive longue et nuit restent valides ; la vidéo 10 **ajoute** le seuil minute + couche transe, ne remplace pas les arcs 9/7/5.
+5. **Audio (P2)** : nappes ambiantes graves très douces — interdit Inner Eye Awakening et tons « third eye » identifiables.
+
+---
+
+## Fichiers code liés (vidéo 10)
+
+- `docs/VERSE-COSMIC-NAV-DESIGN.md` — P1-INS-12, P2-INS-12 (distincts des vidéos 1–6)
+- `src/pages/WorldHub.jsx` — rituel 60 s, copy intuition
+- `src/world/WorldScene.jsx` — vignette transe, pulse tore lent
+- `src/world/realms.js` — `ritualHint` tiers œil / seuil
+
+---
+
+# Addendum — Vidéo 8 (8ᵉ référence « verse des anneaux »)
+
+**Lien :** [https://www.youtube.com/watch?v=r9GYYKrrLAg](https://www.youtube.com/watch?v=r9GYYKrrLAg)  
+**ID :** `r9GYYKrrLAg`  
+**Date de capture :** mai 2026  
+**Contexte utilisateur :** huitième référence YouTube (après [`pSXgXAqomMY`](#verse--inspiration-youtube-référence-utilisateur) … [`3OvM4ycNVL8`](#addendum--vidéo-6-6ᵉ-référence-verse-des-anneaux)) — accent **résonance de Schumann 7,83 Hz**, **432 Hz**, **binaural beats**, ancrage terrestre et méditation (Inner Healing).
+
+---
+
+## Ce que la vidéo est réellement
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *7.83 Hz PINEAL GLAND ACTIVATION - Schumann Resonance - (432 Hz)* |
+| **Chaîne** | Inner Healing (Ronnie Radler) |
+| **Durée** | 1:11:11 (~71 min) |
+| **Vues** | ~1,9 M (au moment de la capture) |
+| **Type** | Musique méditation / **binaural beats** (porteur ~70 Hz + différence 7,83 Hz) + couche **432 Hz** — **pas** vol spatial, **pas** traversée d’anneaux cinématographiques, **pas** gameplay |
+
+### Mood visuel / audio
+
+| Dimension | Lecture produit |
+|-----------|-----------------|
+| **Visuel** | Miniature / branding chaîne (symboles bien-être, pas séquence spatiale) — **audio-first** ; le Verse fournit le décor cosmique 3D, la vidéo fournit surtout **rythme et intention**. |
+| **Audio** | Piste longue continue ; casque **recommandé** (binaural) ; volume modéré ; mots-clés grounding, yoga, sommeil, apprentissage. |
+| **Structure** | **Une** fréquence fondamentale mise en avant (7,83 Hz Schumann) + 432 Hz en titre — distinct des stacks 5 Hz (vidéo 5), duo 528+432 (vidéo 6), 9 chapitres (vidéo 2), etc. |
+| **Narratif** | Résonance Terre ↔ être humain (pinéale, hypophyse, hippocampe au même rythme symbolique) ; transition **alpha–thêta** (éveil détendu) ; intuition, ancrage — **discours bien-être, non preuve médicale**. |
+| **Transcript** | Pas de voix-off narrative structurante — inspiration = **ancrage**, **respiration**, **rythme lent**, pas storyboard de vol. |
+
+### Note « verse des anneaux »
+
+Les **tores** du Verse Egor69 (`realms.js`) restent la métaphore utilisateur ; l’**anneau au sol** indigo (`WorldScene`) peut évoquer **sans copier** la « pulsation terrestre » Schumann — lien symbolique anneau-planète, **pas** anneaux de Saturne ni Tolkien. Cette URL complète la série par un fil **ancrage / Terre / rythme ~8 s** — entre méditation cœur (vidéo 1, ~71 min aussi) et sommeil profond (vidéo 6).
+
+### Implémentation 3D (constat vidéo)
+
+| Élément recherché | Présent dans la vidéo ? | Note Verse |
+|-------------------|-------------------------|------------|
+| Traversée d’anneaux / rail | **Non** | Conserver P2-INS-1 — portail narratif |
+| Vol spatial / cockpit | **Non** | Third-person marche cosmique |
+| Hyperspace / warp | **Non** | Transitions fade/scale existantes |
+| Anneaux géants / échelle planétaire | **Non** | Échelle déjà via fog, étoiles, tores |
+| Visuels cosmiques cinématographiques | **Non** | **Priorité P1 vol/anneaux : basse** — référence méditation-only (comme vidéos 1–7) |
+
+**Priorité produit :** mood ancrage, rythme lent, session ~70 min — **pas** recommandations vol / traversée arcade. Ne pas sur-prioriser P1 « flight » sur cette URL.
+
+---
+
+## Emprunter (mood & UX — sans copier l’œuvre)
+
+| Idée | Application Egor69 Verse |
+|------|---------------------------|
+| **Ancrage terrestre** | Copy HUD sobre près de l’anneau au sol (« pied sur le chemin ») — métaphore Schumann **sans** Hz ni pinéale |
+| **Rythme ~8 s** | Pulse visuel très lent sur anneau sol (respiration) quand le joueur est immobile — pas audio binaural |
+| **Alpha–thêta** | Renforcer mode contemplation (P1-INS-1) : marche lente prolongée, pas sprint — éveil détendu |
+| **Casque / écoute** | Rappel discret en aide Verse : ambiance P2 meilleure au casque — sans claim santé |
+| **Session ~71 min** | Compatible dérive passive (P2-INS-7) et focus portail (P1-INS-7) — même ordre de durée que vidéo 1 |
+
+---
+
+## Ne pas copier (droits & promesses)
+
+| Risque | Action |
+|--------|--------|
+| **© Ronnie Radler / Inner Healing** | Aucun extrait, binaural 7,83 Hz, miniature ni branding chaîne |
+| **Activation pinéale / tiers œil** | Pas de claims glande pinéale, intuition « augmentée », ni manifestation |
+| **Schumann / 7,83 Hz / 432 Hz identifiables** | Pas de tons purs, binaural simulé, ni affichage Hz sur `/world` |
+| **Endorphine 70 Hz (porteur)** | Ne pas reproduire la stack binaural — audio P2 original uniquement |
+| **Gameplay inexistant** | Ne pas annoncer vol dans les anneaux sur cette URL |
+
+---
+
+## Comparaison (extraits — vidéos 1, 6, 8)
+
+| Critère | `pSXgXAqomMY` | `3OvM4ycNVL8` | `r9GYYKrrLAg` |
+|---------|---------------|---------------|---------------|
+| **Durée** | ~71 min | ~2 h 53 min | **~71 min** |
+| **Structure** | 3 Hz fusionnés (cœur / univers) | Duo 528 + 432 | **Schumann 7,83** + 432 + binaural |
+| **Visuel** | Art chaîne | Sleep / lune | **Audio-first** (branding bien-être) |
+| **Narratif** | Oneness, chakra cœur | Sommeil, ADN (marketing) | **Ancrage Terre**, alpha–thêta, grounding |
+| **Pour les Anneaux** | Dérive, `ritualHint` | Mode nuit, duo HUD | **Pulse anneau sol**, ancrage, contemplation+ |
+
+Les huit références confirment une **traversée symbolique contemplative** — **aucune** ne montre de gameplay « anneaux » ou vol spatial réel.
+
+---
+
+## Cinq recommandations concrètes (vidéo 8)
+
+1. **Ancrage HUD (P1-INS-14)** : à proximité de l’anneau au sol (&lt; 12 m), bandeau une ligne « Ancré sur le chemin » ou `ritualHint` grounding — **sans** Schumann, Hz, pinéale.
+2. **Respiration anneau sol (P2-INS-12)** : pulse emissive ~8 s sur l’anneau indigo au sol quand le joueur est immobile ≥ 5 s — métaphore pulsation terrestre, `prefers-reduced-motion` = pulse statique.
+3. **Conserver P1-INS-1 et P2-INS-7** : contemplation et dérive couvrent la session ~71 min ; la vidéo 8 **affine** l’ancrage, ne remplace pas l’arc 9 paliers.
+4. **Ne pas sur-prioriser vol P1** : cette URL n’ajoute **pas** de référence visuelle vol/anneaux spatiaux — priorité implémentation = mood + anneau sol, pas rail shooter.
+5. **Audio (P2-INS-4)** : boucle ambiante grave très lente, originale — interdit Inner Healing et binaural 7,83/432 reconnaissables.
+
+---
+
+## Fichiers code liés (vidéo 8)
+
+- `docs/VERSE-COSMIC-NAV-DESIGN.md` — P1-INS-14, P2-INS-12 (distincts des vidéos 1–7 et des tâches Om/ombre vidéo 9)
+- `src/world/WorldScene.jsx` — anneau au sol, pulse emissive
+- `src/pages/WorldHub.jsx` — copy ancrage près du sol
+
+---
+
+# Addendum — Vidéo 9 (9ᵉ référence « verse des anneaux »)
+
+**Lien :** [https://www.youtube.com/watch?v=3ciMHwo1ApA](https://www.youtube.com/watch?v=3ciMHwo1ApA)  
+**ID :** `3ciMHwo1ApA`  
+**Date de capture :** mai 2026  
+**Contexte utilisateur :** neuvième référence YouTube — accent **Om**, méditation ambient profonde, **ombre / lumière**, tiers œil (symbolique), inspiration **hindoue / yogique**, bols chantants ~432 Hz.
+
+---
+
+## Ce que la vidéo est réellement
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *OM \| Deep Ambient Meditation Music \| Third Eye Awakening & Shadow Integration \| Hindu Inspired Music* |
+| **Chaîne** | Culture Capital - Background & Meditation Music |
+| **Durée** | 1:01:19 (~1 h 1 min) |
+| **Vues** | ~549 K (au moment de la capture) |
+| **Publié** | 2026-01-25 |
+| **Catégorie** | Music |
+| **Type** | Ambient méditation / **Om mantra** + bols chantants (~432 Hz) + copy **shadow work** / tiers œil — **pas** vol spatial, **pas** traversée d’anneaux cinématographiques, **pas** gameplay |
+
+### Mood visuel / audio
+
+| Dimension | Lecture produit |
+|-----------|-----------------|
+| **Visuel** | Miniature / esthétique chaîne (méditation, symboles spirituels hindous en keywords — Shiva, etc.) — **pas** de séquence 3D montrant un vol à travers des anneaux planétaires ni un rail spatial. Fond probablement **statique ou slow-motion décoratif** (comme vidéos 1, 3, 5–6), pas référence flight rings. |
+| **Audio** | Soundscape ambient long ; bols résonants, vocals **Om** discrets, fréquence ~432 Hz (discours harmonisation) — écoute passive, yoga, breath work, sommeil. |
+| **Structure** | **Piste continue** ~1 h — entre la session courte (~46–59 min) et les marathons 3–6 h ; thème **dualité** : lumière et ombre, shadow integration, équilibre intérieur. |
+| **Narratif marketing** | Third eye awakening, chakra alignment, sound healing, trauma (keywords) — **discours bien-être, non preuve médicale**. |
+| **Transcript** | Pas de narration structurante exploitable ; inspiration = **stillness**, **Om comme seuil**, **explorer l’ombre sans la fuir** — pas storyboard UX de vol. |
+
+### Note « verse des anneaux »
+
+Les **tores** du Verse Egor69 (`realms.js`) restent la métaphore utilisateur. Cette URL complète la série par un fil **rituel / respiration / seuil sonore** et **équilibre clair–sombre** avant ou pendant la traversée d’un portail — **sans** MGM, Tolkien, ni iconographie hindoue copiée (Shiva, etc.).
+
+### Flag — première référence « espace / anneaux » réels ?
+
+| Question | Réponse |
+|----------|---------|
+| **Vol spatial / cockpit / traversée d’anneaux géants ?** | **Non** — même famille que les références 1–8 déjà documentées (méditation, mood, Hz symboliques). |
+| **Visuels cosmiques décoratifs ?** | Possible en miniature / fond vidéo (comme la vidéo 4, cosmos IA) — **toujours sans** mécanique « flight rings » montrée. |
+| **Conclusion** | **Ce n’est pas** la première référence avec des **anneaux spatiaux traversables** ou du **vol dans les anneaux** ; c’est une **piste ambient Om / ombre-lumière** supplémentaire. Le Verse 3D continue d’être la seule scène où l’utilisateur **marche vers les tores**. |
+
+### Implémentation 3D (constat vidéo)
+
+| Élément recherché | Présent dans la vidéo ? | Note Verse |
+|-------------------|-------------------------|------------|
+| Traversée d’anneaux / rail | **Non** | P2-INS-1 inchangé — portail narratif |
+| Vol spatial / cockpit | **Non** | Third-person marche cosmique |
+| Hyperspace / warp | **Non** | Transitions fade/scale existantes |
+| Anneaux planétaires / échelle NASA | **Non** | Échelle via fog, étoiles, tores (`COSMIC_NAV_V2`) |
+| Gameplay arcade | **Non** | Stillness, pas runner |
+
+---
+
+## Emprunter (mood & UX — sans copier l’œuvre)
+
+| Idée | Application Egor69 Verse |
+|------|---------------------------|
+| **Om comme seuil** | Micro-pause 1–2 s + `ritualHint` respiration à l’approche du tore — métaphore mantra, pas audio OM copié |
+| **Ombre / lumière** | Alternance douce brume / luminosité ciel selon proximité portail (équilibre, pas mode « dark horror ») |
+| **Stillness ~1 h** | Session médiane viable : contemplation + dérive passive (complète P2-INS-7) |
+| **Bols (timbre)** | Inspiration **timbre** ambiant original (résonance courte) — jamais la piste Culture Capital |
+| **Third eye (symbolique)** | Copy HUD « regarder l’horizon » / focalisation — **sans** claim pinéale ou éveil garanti |
+
+---
+
+## Ne pas copier (droits & promesses)
+
+| Risque | Action |
+|--------|--------|
+| **© Culture Capital** | Aucun extrait, sample Om, bols, miniature, ni branding chaîne |
+| **Third eye / shadow work / trauma** | Pas de promesse guérison trauma, activation pinéale, ni shadow therapy sur `/world` |
+| **432 Hz / chakra / sound healing** | Pas de Hz affichés ni claims médicaux |
+| **Hindouisme / Shiva / iconographie** | Pas de noms de divinités, mandalas, ni art religieux repris en jeu |
+| **Gameplay inexistant** | Ne pas annoncer vol dans les anneaux sur cette URL |
+
+---
+
+## Comparaison (sélection — vidéos documentées + 9)
+
+| Critère | `pSXgXAqomMY` | `4mJc9A1yOx0` | `IFH1pi6xIk4` | `3ciMHwo1ApA` |
+|---------|---------------|---------------|---------------|---------------|
+| **Durée** | ~71 min | ~59 min | ~3 h 10 | **~1 h 1** |
+| **Structure** | 3 Hz fusionnés | 7 chakras + 999 Hz | 5 Hz empilés | **1 ambient** Om + bols |
+| **Visuel** | Art chaîne | Cosmos IA décoratif | Audio-first | **Ambient / symboles** — pas flight rings |
+| **Narratif** | Cœur / univers | Purification / lumière | Stack corps-esprit | **Ombre + lumière**, Om, stillness |
+| **Pour les Anneaux** | Dérive, `ritualHint` | 7 teintes, halo | 5 couches, pluie étoiles | **Seuil Om**, équilibre clair/sombre |
+
+Les neuf références utilisateur confirment une **traversée symbolique contemplative** dans le Verse — **aucune** ne remplace un gameplay « vol dans les anneaux » spatial.
+
+---
+
+## Cinq recommandations concrètes (vidéo 9)
+
+1. **Seuil Om (P1)** : à &lt; 6 m d’un tore, afficher une ligne `ritualHint` type respiration / pause — sans jouer le mantra ni promettre éveil spirituel.
+2. **Équilibre clair / sombre (P1)** : teinte HUD ou bordure minimap qui bascule doucement (indigo profond ↔ lavande clair) selon realms visités / non visités — métaphore shadow integration, pas thème horror.
+3. **Résonance de seuil (P2)** : one-shot ambiant très court (bol synthétique original) à l’entrée dans le tore — volume bas, désactivable, **interdit** Culture Capital.
+4. **Conserver P1-INS-7 à 11 et P2-INS-7 à 10** : focus portail, intention, 7 harmoniques, 5 couches, dérive passive restent valides ; la vidéo 9 **ajoute** seuil Om + dualité visuelle.
+5. **Audio (P2)** : boucle ambient ~432 **feel** (accords doux, pas ton pur) — jamais la composition « OM \| Deep Ambient… » ni vocals Om identifiables.
+
+---
+
+## Fichiers code liés (vidéo 9)
+
+- `docs/VERSE-COSMIC-NAV-DESIGN.md` — P1-INS-12, P2-INS-11 (distincts des vidéos 1–8)
+- `src/pages/WorldHub.jsx` — copy seuil / équilibre
+- `src/world/WorldScene.jsx` — atténuation lumière équilibre ombre-lumière
+- `src/world/realms.js` — `ritualHint` respiration / seuil
+
+---
+
+# Addendum — Vidéo 7 (7ᵉ référence « verse des anneaux »)
+
+**Lien :** [https://www.youtube.com/watch?v=oHMg7ZeWAxQ](https://www.youtube.com/watch?v=oHMg7ZeWAxQ)  
+**ID :** `oHMg7ZeWAxQ`  
+**Date de capture :** mai 2026  
+**Contexte utilisateur :** septième référence YouTube (après [`pSXgXAqomMY`](#verse--inspiration-youtube-référence-utilisateur), [`NxXzQLl2H5Y`](#addendum--vidéo-2-suite-verse-des-anneaux), [`OlV26ouCn5w`](#addendum--vidéo-3-suite-verse-des-anneaux), [`4mJc9A1yOx0`](#addendum--vidéo-4-suite-verse-des-anneaux), [`IFH1pi6xIk4`](#addendum--vidéo-5-suite-verse-des-anneaux), [`3OvM4ycNVL8`](#addendum--vidéo-6-6ᵉ-référence-verse-des-anneaux)) — **même chaîne** qu’Inner Lotus (vidéo 1) ; accent **852 Hz**, **Ajna / tiers œil**, clarté et intuition (~3 h 34).
+
+---
+
+## Ce que la vidéo est réellement
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *852 Hz Third Eye Activation \| Pineal Gland Awakening \| Intuition & Clarity Meditation & Sleep Music* |
+| **Chaîne** | Inner Lotus Music (Pierre Ynad) |
+| **Durée** | 3:33:33 (~3 h 34 min) |
+| **Vues** | ~124 K (au moment de la capture) |
+| **Publié** | 2026-03-11 |
+| **Catégorie** | Music |
+| **Composition** | *Ajna Awakening* — © 2026 Inner Lotus Music |
+| **Type** | Ton solfège **852 Hz** (LA) + copy **third eye / Ajna / pinéale** — méditation & sommeil — **pas** vol spatial, **pas** traversée d’anneaux, **pas** gameplay |
+
+### Mood visuel / audio
+
+| Dimension | Lecture produit |
+|-----------|-----------------|
+| **Visuel** | Miniature / art chaîne (cosmos méditatif typique Inner Lotus) — **pas** de rail, anneaux planétaires, ni séquence 3D de vol. Le Verse fournit le décor ; la vidéo est **audio-first** + branding. |
+| **Audio** | Piste continue composée **nativement** en 852 Hz (pas retune post-prod selon la chaîne) — casque modéré ou espace ouvert ; usage méditation **et** sommeil. |
+| **Structure** | **1 ton** prolongé (~3,5 h) — entre la session ~1 h (vidéo 4) et les marathons 6 h (vidéo 3) ; distinct du triptyque 963+639+396 (vidéo 1, même chaîne). |
+| **Narratif marketing** | Éveil intuition, vision intérieure, « gateway to the soul », dissipation brouillard mental — **discours bien-être, non preuve médicale**. |
+| **Transcript** | Pas de voix-off narrative structurante ; description longue (Ajna, pinéale, intention avant écoute) — inspiration = **clarté**, **regard intérieur**, **seuil avant traversée**. |
+
+### Note « verse des anneaux »
+
+Les **tores** du Verse Egor69 (`realms.js`) restent la métaphore utilisateur — alignée Codex (6ᵉ chakra / 852 Hz en lore interne). Cette URL **complète** la vidéo 1 (cœur / univers) par un fil **vision / clarté / horizon** avant d’entrer dans un portail — **sans** MGM, Tolkien, ni promesses d’éveil pinéal garanti.
+
+### Implémentation 3D (constat vidéo)
+
+| Élément recherché | Présent dans la vidéo ? | Note Verse |
+|-------------------|-------------------------|------------|
+| Traversée d’anneaux / rail | **Non** | P2-INS-1 inchangé — portail narratif |
+| Vol spatial / cockpit | **Non** | Third-person marche cosmique |
+| Hyperspace / warp | **Non** | Transitions fade/scale existantes |
+| Anneaux planétaires / échelle NASA | **Non** | Échelle via fog, étoiles, tores (`COSMIC_NAV_V2`) |
+| Gameplay arcade | **Non** | Clarté contemplative, pas runner |
+
+---
+
+## Emprunter (mood & UX — sans copier l’œuvre)
+
+| Idée | Application Egor69 Verse |
+|------|---------------------------|
+| **Clarté avant seuil** | Copy HUD « regarder l’horizon » + `ritualHint` focalisation — métaphore vision intérieure, pas claim pinéale |
+| **Intention simple** | Rappel une ligne avant tore (complète P1-INS-8) — formulation claire, pas promesse miracle |
+| **Session ~3,5 h** | Dérive passive + sauvegarde AFK (P2-INS-7) couvre cette durée sans pénalité |
+| **Brouillard qui se lève** | Brève baisse de `fog` à l’approche d’un tore non visité — métaphore « mental fog », distinct du halo post-visite (P2-INS-8) |
+| **Même famille Inner Lotus** | Palette indigo/violet/or et dérive lente (vidéo 1) — **ne pas** dupliquer les tâches P1-INS-1 à 3 |
+
+---
+
+## Ne pas copier (droits & promesses)
+
+| Risque | Action |
+|--------|--------|
+| **© 2026 Inner Lotus Music — *Ajna Awakening*** | Aucun extrait 852 Hz, miniature, texte chaîne, ni composition identifiable (même barrière que vidéo 1) |
+| **Third eye / pinéale / lucid dreaming** | Pas de claims santé, éveil garanti, ni sommeil programmé sur `/world` |
+| **852 Hz pur** | Pas de ton sine ni boucle reconnaissable — audio P2 original uniquement |
+| **Épilepsie / conduite** | Reprendre les disclaimers produit existants si copy méditation — pas les listes médicales YouTube mot pour mot |
+| **Gameplay inexistant** | Ne pas annoncer vol dans les anneaux sur cette URL |
+
+---
+
+## Comparaison (sélection — vidéo 1 même chaîne + 7)
+
+| Critère | `pSXgXAqomMY` (v1) | `oHMg7ZeWAxQ` (v7) |
+|---------|-------------------|-------------------|
+| **Chaîne** | Inner Lotus Music | **Inner Lotus Music** |
+| **Durée** | ~71 min | **~3 h 34** |
+| **Structure** | 3 Hz (963 + 639 + 396) | **1 ton** 852 Hz continu |
+| **Visuel** | Art chaîne | Art chaîne — **audio-first** |
+| **Narratif** | Cœur, Oneness, lâcher prise | **Ajna**, clarté, intuition, vision intérieure |
+| **Pour les Anneaux** | Dérive, `ritualHint` respiration | **Focalisation horizon**, brume qui s’éclaircit à l’approche |
+
+Les sept références documentées à ce stade confirment une **traversée symbolique contemplative** — **aucune** ne montre de gameplay « anneaux » spatial.
+
+---
+
+## Cinq recommandations concrètes (vidéo 7)
+
+1. **Focalisation clarté (P1)** : à l’approche d’un tore, HUD une ligne « regarder l’horizon » + variante `ritualHint` clarté — inspiré 852/Ajna (`oHMg7ZeWAxQ`), **sans** Hz ni pinéale (distinct de P1-INS-8 intention générale).
+2. **Éclaircissement d’approche (P2)** : première approche d’un tore non visité en session : `fog` density −8 % pendant 3 s — métaphore brouillard mental, **avant** entrée (distinct P2-INS-8 halo **après** visite).
+3. **Conserver P1-INS-1 à 3** : mode contemplation, prochain anneau, palette cœur/cosmos couvrent déjà Inner Lotus v1 — la v7 **affine** la couche clarté, ne remplace pas le triptyque cœur.
+4. **Conserver P2-INS-7** : session ~3,5 h = cas d’usage naturel de la dérive passive ; pas de ton 852 Hz en boucle.
+5. **Audio (P2)** : timbre ambiant « clair » (aigus doux, pas ton pur) — interdit *Ajna Awakening* et toute piste Inner Lotus identifiable.
+
+---
+
+## Fichiers code liés (vidéo 7)
+
+- `docs/VERSE-COSMIC-NAV-DESIGN.md` — P1-INS-13, P2-INS-12 (distincts des vidéos 1–6 et 9)
+- `src/pages/WorldHub.jsx` — copy focalisation / clarté
+- `src/world/WorldScene.jsx` — atténuation brume à l’approche
+- `src/world/realms.js` — `ritualHint` vision / horizon

@@ -53,6 +53,9 @@ Remplacer l’exploration « pawn vert sur terrain » par un **voyage immersif d
 | P1-INS-9 | **Sept harmoniques HUD** | Minimap ou bandeau « Harmonie 3/7 » : 7 groupes de realms avec teinte d’accent distincte — inspiré arc 7 chakras (`4mJc9A1yOx0`), **sans** nom chakra, Hz, aura cleansing ni promesse miracle |
 | P1-INS-10 | **Cinq couches de session** | HUD « Couche X/5 » sur visites cumulées ou segment d’arc — inspiré stack 5 Hz (`IFH1pi6xIk4`), **sans** fréquences, guérison corps/esprit ni claims santé |
 | P1-INS-11 | **Axes corps / esprit** | Deux compteurs discrets (pôles matière vs sens sur `WORLD_REALMS`) — dualité body/spirit (`IFH1pi6xIk4`, `3OvM4ycNVL8`), **sans** vocabulaire chakra ni Hz |
+| P1-INS-12 | **Équilibre clair / sombre** | Teinte HUD ou accent minimap bascule doucement (realm visité vs non visité) — inspiré shadow integration / lumière-ombre (`3ciMHwo1ApA`), **sans** trauma healing, horror, ni iconographie hindoue |
+| P1-INS-13 | **Seuil Om (respiration)** | À &lt; 6 m d’un tore : rappel `ritualHint` respiration / pause 1–2 s avant `E` — métaphore mantra Om, **sans** audio OM copié ni claim tiers œil |
+| P1-INS-14 | **Ancrage au sol** | À &lt; 12 m de l’anneau indigo au sol : HUD une ligne d’ancrage ou `ritualHint` grounding — inspiré résonance Schumann (`r9GYYKrrLAg`), **sans** Hz, pinéale, binaural ni claim santé |
 
 ### P2 — Galaxies & chapitres
 
@@ -75,6 +78,9 @@ Remplacer l’exploration « pawn vert sur terrain » par un **voyage immersif d
 | P2-INS-9 | **Pluie d’étoiles (contemplation)** | Si mode contemplation actif : particules verticales très légères (`Sparkles` ou équivalent, cap mobile) — inspiration pluie/white noise (`IFH1pi6xIk4`), pas fond tropical |
 | P2-INS-10 | **Glow empilé (max 5)** | +1 step emissive `CosmicTraveler` par tore visité en session (plafond 5, reset hors session) — métaphore stack 5 couches, sans audio solfège |
 | P2-INS-11 | **Mode nuit cosmique** | Toggle ou créneau soir local : luminosité scène −15 à 20 %, `Stars` factor réduit, vitesse marche défaut −10 % — sommeil profond (`3OvM4ycNVL8`), désactivable ; pas écran noir ni tons 528/432 |
+| P2-INS-12 | **Respiration anneau sol** | Pulse emissive ~8 s sur l’anneau au sol si joueur immobile ≥ 5 s à &lt; 12 m — ancrage Schumann (`r9GYYKrrLAg`) ; `prefers-reduced-motion` : intensité fixe ; pas audio binaural |
+| P2-INS-13 | **Résonance de seuil (bol original)** | One-shot ambiant très court à l’entrée du tore (timbre bol synthétique, volume bas, toggle) — mood Culture Capital (`3ciMHwo1ApA`), **interdit** extrait Om / piste YouTube |
+| P2-INS-14 | **Oscillation brume clair / sombre** | Près d’un portail non visité : `FogExp2` density alterne ±5 % sur 4 s (cycle lent) — équilibre ombre-lumière (`3ciMHwo1ApA`), pas strobe ; `prefers-reduced-motion` désactive |
 
 ### P3 — Météorites, comètes, énigmes
 
@@ -146,7 +152,7 @@ Référence croisée à ajouter dans `alliance-ia-egor69.md` (section agents) lo
 
 ## Références
 
-- **Inspiration YouTube (mood univers / anneaux)** : [VERSE-INSPIRATION-YOUTUBE.md](./VERSE-INSPIRATION-YOUTUBE.md) — `pSXgXAqomMY` (méditation cœur / univers), `NxXzQLl2H5Y` (9 paliers séquentiels, écran noir), `OlV26ouCn5w` (963 Hz long, intention / gratitude), `4mJc9A1yOx0` (7 harmoniques, clarté / halo), `IFH1pi6xIk4` (stack 5 Hz, corps/esprit, ~3 h — **audio-first**), `3OvM4ycNVL8` (528+432, sommeil profond, mode nuit — pas vol spatial ni anneaux gameplay)
+- **Inspiration YouTube (mood univers / anneaux)** : [VERSE-INSPIRATION-YOUTUBE.md](./VERSE-INSPIRATION-YOUTUBE.md) — `pSXgXAqomMY` (méditation cœur / univers), `NxXzQLl2H5Y` (9 paliers séquentiels, écran noir), `OlV26ouCn5w` (963 Hz long, intention / gratitude), `4mJc9A1yOx0` (7 harmoniques, clarté / halo), `IFH1pi6xIk4` (stack 5 Hz, corps/esprit, ~3 h — **audio-first**), `3OvM4ycNVL8` (528+432, sommeil profond, mode nuit), `r9GYYKrrLAg` (Schumann 7,83 + ancrage terrestre, pulse anneau sol — **audio-first**, pas vol spatial ni anneaux gameplay)
 - Manuel utilisateur : `src/content/manuel-utilisation-igor.md` (section Verse)
 - QA : `docs/MANUAL-QA-PROTOCOL.md` (explorateur cosmique)
 - Glossaire : entrée « Verse 3D » dans `src/data/glossaryCentral.js`
