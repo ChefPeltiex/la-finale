@@ -18,6 +18,7 @@
 | 12 | `Zocof7wZF4c` | Chakra Healing Frequencies | ~2 h 21 | **Audio** + **visuel** stock (Envato / Storyblocks) | **7 chakras** + **999 Hz** — nettoyage **corps entier** / aura | **Moyenne** — affine arc 7 | P1-INS-17 corps entier 7/7 · P2-INS-17 balayage lumière (renforce P1-INS-9 / P2-INS-8) |
 | 13 | `8kQgu2_1uEk` | Évangile Interdit | ~47 min | **Narratif** (documentaire FR, voix-off — **pas** solfège ni ambient) | **7 niveaux** âme / gardiens + copy immortalité (marketing gnostique) | **Basse** — arc seuils narratif | P1-INS-18 sept passages · P2-INS-18 silence post-portail |
 | 15 | `svKgmiSTpG4` | Abundant Vibe Frequencies | ~11 h 55 | **Audio** pur (keywords richesse / 432 / 888) | **LoA** + flux financier + gratitude — piste ~12 h | **Basse** — redondant (3, 4, 5, 6, 8) | **Aucune tâche nouvelle** — renforce P1-INS-8 (anti-LoA), P2-INS-7 (session extrême) |
+| 18 | `hmq72SLWBt8` | Brainwave Healing | ~3 h | **Audio-first** (sleep / brainwave keywords) | **3 Hz** empilés (432+741+963) + guérison corps & âme | **Basse** — redondant (1, 5, 6, 8) | **Aucune tâche nouvelle** — renforce P1-INS-11, P2-INS-7 ; anti-claims guérison |
 
 **Lecture priorité :** **Haute** = plusieurs URLs convergent (dérive lente, paliers, HUD minimal) — à traiter en P1 avant polish P2. **Moyenne** = affine un levier déjà couvert (session longue, nuit, stack, rituel). **Aucune** référence ne montre vol dans des anneaux ou rail spatial : priorité **jamais** sur gameplay arcade / hyperspace.
 
@@ -693,7 +694,7 @@ Les sept entrées documentées confirment une **traversée symbolique contemplat
 
 ## Fichiers code liés (vidéo 10)
 
-- `docs/VERSE-COSMIC-NAV-DESIGN.md` — rituel 60 s / transe (à numéroter ; distincts P1-INS-16/17 vidéos 7 et 12)
+- `docs/VERSE-COSMIC-NAV-DESIGN.md` — P1-INS-19, P2-INS-19 (distincts des vidéos 7, 12, 14)
 - `src/pages/WorldHub.jsx` — rituel 60 s, copy intuition
 - `src/world/WorldScene.jsx` — vignette transe, pulse tore lent
 - `src/world/realms.js` — `ritualHint` tiers œil / seuil
@@ -1471,4 +1472,119 @@ Les quinze références documentées confirment une **traversée symbolique cont
 | **P0 sprint** | P1-INS-1 | Mode contemplation (toggle vitesse) |
 | **P1 sprint** | P1-INS-4, P1-INS-8 | Constellations minimap + intention session (anti-LoA) |
 
-Le mood méditatif est **suffisamment documenté** ; la valeur utilisateur est dans le **Verse 3D** (`/world`), pas dans une 16ᵉ fiche audio redondante.
+Le mood méditatif est **suffisamment documenté** ; la valeur utilisateur est dans le **Verse 3D** (`/world`), pas dans une 18ᵉ fiche audio redondante.
+
+---
+
+# Addendum — Vidéo 17 (17ᵉ référence « verse des anneaux »)
+
+**Lien :** [https://www.youtube.com/watch?v=iehH5fGK80A](https://www.youtube.com/watch?v=iehH5fGK80A)  
+**ID :** `iehH5fGK80A`  
+**Date de capture :** mai 2026  
+**Contexte utilisateur :** dix-septième référence YouTube — accent **963 Hz** (« fréquence de Dieu »), **miracles / bénédictions / grande tranquillité**, **LoA** et bien-être (chaîne espagnole Lucid Dreaming Music) ; **pas** vol spatial, **pas** traversée d’anneaux, **pas** gameplay.
+
+---
+
+## Ce que la vidéo est réellement
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *FRECUENCIA DE DIOS 963 Hz \| ATRAER MILAGROS, BENDICIONES Y GRAN TRANQUILIDAD EN TODA TU VIDA #10* |
+| **Chaîne** | Lucid Dreaming Music |
+| **Durée** | 3:32:57 (~3 h 33 min) |
+| **Vues** | ~2,3 M (au moment de la capture) |
+| **Publié** | 2024-03-20 |
+| **Catégorie** | Music |
+| **Type** | Musique méditation / **963 Hz** prolongé + marketing **ley de atracción**, miracles, guérison âme — **pas** vol spatial, **pas** anneaux traversables, **pas** storyboard 3D |
+
+### Thèmes publics (description chaîne)
+
+- **963 Hz « fréquence de Dieu »** : symbolique tiers œil / glande pinéale — **même famille** que vidéo 3 (`OlV26ouCn5w`, Meditative Mind, ~6 h) et triptyque 963 Hz vidéo 1 (`pSXgXAqomMY`).
+- **Milagros / bendiciones / gran tranquilidad** : attraction de miracles, bénédictions, paix profonde — **discours bien-être**, non preuve médicale ; proche miracles vidéo 4 (`4mJc9A1yOx0`).
+- **LoA / numerología / hipnosis** (keywords) : manifestation, décrets, codes — **à ne pas reprendre** en promesses produit (cf. P1-INS-8 anti-LoA).
+- **Stack technique chaîne** : rythmes binauraux, tons isochrones, affirmations subliminales — **audio-first** ; le Verse ne simule pas binaural ni subliminal.
+- **Usage** : méditation, sommeil, étude, reiki, yoga — écoute passive **~3,5 h**, volume modéré, casque recommandé.
+
+### Mood visuel / audio
+
+| Dimension | Lecture produit |
+|-----------|-----------------|
+| **Visuel** | Miniature / branding chaîne (esthétique méditation / rêve lucide) — **pas** de séquence 3D, rail, anneaux planétaires ni vol spatial. **Pas** contenu cosmique cinématographique exploitable pour le Verse 3D. |
+| **Audio** | Piste longue continue centrée **963 Hz** — entre session ~1 h (vidéo 4) et marathon 6 h (vidéo 3). |
+| **Structure** | **1 ton** prolongé + série « #10 » (numérotation chaîne) — **pas** 9 chapitres YouTube ni stack 5 Hz. |
+| **Narratif marketing** | Amour, santé, argent, kundalini, géométrie sacrée, extraterrestres (keywords) — **bruit marketing**, hors scope Verse. |
+| **Transcript** | Notice fréquences (langue hy auto) + disclaimers bien-être — pas de voix-off narrative structurante ni storyboard UX. |
+
+### Note « verse des anneaux »
+
+Les **tores** du Verse Egor69 (`realms.js`) restent la métaphore utilisateur (« Anneaux du Verse »). Cette URL **ne change pas** la priorité produit : elle **renforce** intention longue + tranquillité + garde-fou anti-miracles/LoA — **sans** MGM, Tolkien, ni iconographie religieuse copiée.
+
+### Implémentation 3D (constat vidéo)
+
+| Élément recherché | Présent dans la vidéo ? | Note Verse |
+|-------------------|-------------------------|------------|
+| Traversée d’anneaux / rail | **Non** | P2-INS-1 inchangé — portail narratif |
+| Vol spatial / cockpit | **Non** | Third-person marche cosmique |
+| Hyperspace / warp | **Non** | Transitions fade/scale existantes |
+| Anneaux planétaires / échelle NASA | **Non** | Échelle via fog, étoiles, tores (`COSMIC_NAV_V2`) |
+| Visuels cosmos / space flight | **Non** | **Audio-first** — **priorité vol P1 : nulle** |
+
+**Priorité produit :** **basse** — **redondant** avec vidéo 3 (963 Hz + LoA + session longue) et vidéo 4 (miracles). **Aucune nouvelle tâche P1/P2** dans `VERSE-COSMIC-NAV-DESIGN.md`.
+
+---
+
+## Emprunter (mood & UX — sans copier l’œuvre)
+
+| Idée | Application Egor69 Verse |
+|------|---------------------------|
+| **Session ~3,5 h** | P2-INS-7 (dérive passive) + mode contemplation (P1-INS-1) couvrent déjà l’écoute prolongée |
+| **Intention honnête** | P1-INS-8 — formulation personnelle avant tore, **anti-LoA** explicite |
+| **Tranquillité** | Copy HUD sobre (« parcours apaisé ») — pas « miracles garantis » ni bendiciones |
+| **Gratitude sobre** | Toast une ligne post-visite (déjà P2 vidéo 3) — sans promesse universelle |
+| **Tiers œil (symbolique)** | `ritualHint` focalisation — déjà P1-INS-16 ; **sans** pinéale / DMT |
+
+---
+
+## Ne pas copier (droits & promesses)
+
+| Risque | Action |
+|--------|--------|
+| **© Lucid Dreaming Music** | Aucun extrait 963 Hz, miniature, affirmations subliminales ni branding chaîne |
+| **Milagros / bendiciones / attract miracles** | Pas de promesse miracles, bénédictions universelles, ni guérison garantie |
+| **LoA / numerología / hipnosis / argent** | Pas de manifestation, richesse, codes 888, ni copy « si cette vidéo apparaît… » |
+| **963 Hz / binaural / isochronic identifiables** | Pas de tons purs ni stack binaural — audio P2 original uniquement (P2-INS-4) |
+| **Pinéale / kundalini / extraterrestres** | Pas de claims neurochimiques ni ésotérisme marketing sur `/world` |
+| **Gameplay inexistant** | Ne pas annoncer vol dans les anneaux sur cette URL |
+
+---
+
+## Comparaison (sélection — redondance 963 Hz)
+
+| Critère | `OlV26ouCn5w` (v3) | `4mJc9A1yOx0` (v4) | `iehH5fGK80A` (v17) |
+|---------|-------------------|-------------------|---------------------|
+| **Chaîne** | Meditative Mind | Abundance Energy | Lucid Dreaming Music |
+| **Durée** | ~6 h | ~59 min | **~3 h 33** |
+| **Structure** | 1 ton **963 Hz** continu | 7 chakras + 999 Hz | 1 ton **963 Hz** continu |
+| **Visuel** | Branding | Cosmos IA décoratif | **Audio-first** (branding) |
+| **Narratif** | LoA / ask universe | Miracles / aura | **Miracles + bendiciones + tranquilidad** (ES) |
+| **Pour les Anneaux** | Intention, AFK 6 h | 7 teintes, halo | **Rien de nouveau** — P1-INS-8 + P2-INS-7 |
+
+Les dix-sept références documentées confirment une **traversée symbolique contemplative** — **aucune** ne montre de gameplay « anneaux » spatial ou vol cosmique.
+
+---
+
+## Cinq recommandations concrètes (vidéo 17)
+
+1. **Ne pas créer de tâches P1/P2 dédiées** : la vidéo 17 est **cataloguée pour traçabilité** uniquement ; implémenter d’abord P1-INS-1 à 17 et P2-INS-1 à 17 déjà listés.
+2. **Renforcer P1-INS-8 (anti-LoA)** : toute copy intention reste **honnête et non transactionnelle** — cette URL est un contre-exemple marketing (miracles, bendiciones).
+3. **Session ~3,5 h = P2-INS-7** : valider dérive passive et HUD atténué — pas de badge « miracle » ni « fréquence de Dieu ».
+4. **Ne pas afficher 963 Hz / miracles** : barrière commune aux refs solfège — inchangée.
+5. **Prioriser le sprint implémentation** : voir pied de page vidéo 15 — **pause catalogage** sauf URL avec **vol cosmique visuel** ou anneaux traversés réels.
+
+---
+
+## Fichiers code liés (vidéo 17)
+
+- `docs/VERSE-COSMIC-NAV-DESIGN.md` — **aucune** ligne ajoutée (redondance v3/v4)
+- `src/pages/WorldHub.jsx` — P1-INS-8 (intention anti-LoA)
+- `src/world/WorldScene.jsx` — P2-INS-7 (dérive passive)
