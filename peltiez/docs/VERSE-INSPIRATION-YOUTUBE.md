@@ -50,6 +50,7 @@
 | **vs `0WOsrKnRkZg` (#24)** | **1111 Hz** + miracles / « Frequency of God » (Frequency Harmony, ~3,5 h) — **ne supplante pas** le PRIMARY ni `BrHMdqe0vzM@3745s` ; **duplique** **#21** (autre chaîne 1111). **Maître style global : `hL-BvWLPseE`.** |
 | **vs `BrHMdqe0vzM` (#25 @ 1:02:25)** | Lien utilisateur @ **3745 s** — milieu session **963 Hz** ; visuel **statique** lotus (comme #1). **Ne supplante pas** le PRIMARY : affine **dérive** / session longue, pas vol ni anneaux filmés. |
 | **vs `Thji1yQksXI` (#26)** | Gaia **888 + 528 Hz** + LoA (~2 h) — **duplique #21** (même chaîne) et **#22** (888). **Ne supplante pas** `hL-BvWLPseE` ; palette Verse = crépuscule or/indigo (`VERSE_STYLE`), pas méditation Hz. |
+| **vs `xfBTpK1csas` (#27)** | Lovemotives **369 Hz Tesla + LoA** (~2 h) — **duplique #1**, **#3**, **#15**, **#20**. **Ne supplante pas** le PRIMARY. **Maître style global : `hL-BvWLPseE`.** |
 
 **Lecture priorité :** **Haute** = plusieurs URLs convergent (dérive lente, paliers, HUD minimal) — à traiter en P1 avant polish P2. **Moyenne** = affine un levier déjà couvert (session longue, nuit, stack, rituel). **Basse** = redondant (focus, binaural, session ~2 h) — cataloguer sans nouveaux IDs. **Aucune** référence ne montre vol dans des anneaux ou rail spatial : priorité **jamais** sur gameplay arcade / hyperspace.
 
@@ -57,7 +58,7 @@
 
 **Audio vs visuel :** la majorité des entrées sont **musique / méditation** ; le Verse apporte le **décor 3D** (fog, étoiles, tores). Ne pas intégrer pistes YouTube (P2-INS-4). Visuels chaîne (IA, miniature) = **palette uniquement**, pas d’assets repris.
 
-**Phase 2 (produit) — catalogue suffisant :** après **26** références playlist + **PRIMARY** `hL-BvWLPseE`, le corpus reste **solfège / méditation / LoA** (≈23/26). La **#26** (`Thji1yQksXI`, Gaia **888 + 528 Hz** ~2 h) **duplique** **#21** (Gaia 1111), **#22** (888) et **#6** (528) — **aucune** tâche P1/P2 ; **pas** de co-primary visuel. **Style maître :** `hL-BvWLPseE` — **#26** n’éclipse ni `mT4EB3fQ9lg` (#22) ni `BrHMdqe0vzM@3745s`. **Pause catalogage** sauf refs **visuelles** (vol cosmique, anneaux traversés). **Top 3 P1** : **P1-INS-2**, **P1-INS-6** + **P1-INS-7**, **P1-INS-1**. Tester **`/world`** (`VERSE_STYLE` + HUD). Détail : [`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md).
+**Phase 2 (produit) — catalogue suffisant :** après **27** références playlist + **PRIMARY** `hL-BvWLPseE`, le corpus reste **solfège / méditation / LoA** (≈24/27). La **#27** (`xfBTpK1csas`, Lovemotives **369 Tesla + LoA** ~2 h) **duplique** **#1**, **#3**, **#15**, **#20** — **aucune** tâche P1/P2. **Style maître :** `hL-BvWLPseE` — **#27** n’éclipse ni `mT4EB3fQ9lg` (#22) ni `BrHMdqe0vzM@3745s`. **Pause catalogage** sauf refs **visuelles** (vol cosmique, anneaux traversés). **Top 3 P1** : **P1-INS-2**, **P1-INS-6** + **P1-INS-7**, **P1-INS-1**. Tester **`/world`** (`VERSE_STYLE` + HUD). Détail : [`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md).
 
 ---
 
@@ -2300,7 +2301,7 @@ Après **22** références playlist + **PRIMARY** `hL-BvWLPseE`, le mood **médi
 
 ---
 
-# Addendum — Vidéo 24 (`xfBTpK1csas` · catalogage LoA Tesla)
+# Addendum — Vidéo 27 (`xfBTpK1csas` · catalogage LoA Tesla)
 
 **Lien :** [https://www.youtube.com/watch?v=xfBTpK1csas](https://www.youtube.com/watch?v=xfBTpK1csas)  
 **ID :** `xfBTpK1csas`  
@@ -2339,9 +2340,9 @@ Après **22** références playlist + **PRIMARY** `hL-BvWLPseE`, le mood **médi
 
 ---
 
-## Comparaison PRIMARY vs #24
+## Comparaison PRIMARY vs #27
 
-| Critère | `hL-BvWLPseE` (**PRIMARY**) | `xfBTpK1csas` (#24) |
+| Critère | `hL-BvWLPseE` (**PRIMARY**) | `xfBTpK1csas` (#27) |
 |---------|---------------------------|---------------------|
 | **Nature** | OST Planet Earth II — pacing **cinéma** | Méditation **369 Hz** + LoA Tesla |
 | **Vol cosmique anneaux** | **Non** (tores Verse) | **Non** |
@@ -2350,7 +2351,7 @@ Après **22** références playlist + **PRIMARY** `hL-BvWLPseE`, le mood **médi
 
 ---
 
-## Ne pas copier · recommandations (vidéo 24)
+## Ne pas copier · recommandations (vidéo 27)
 
 | Risque | Action |
 |--------|--------|
@@ -2359,12 +2360,12 @@ Après **22** références playlist + **PRIMARY** `hL-BvWLPseE`, le mood **médi
 | **Stack Hz affiché** | Ne pas afficher 369/432/963 sur le HUD — barrière commune solfège |
 
 1. **Aucune tâche P1/P2** — PRIMARY reste `hL-BvWLPseE`.  
-2. **Pas de tweak `WorldScene.jsx`** pour #24.  
+2. **Pas de tweak `WorldScene.jsx`** pour #27.  
 3. **Pause catalogage** — prochaine URL = vol/anneaux **visibles**, pas autre Hz LoA.
 
 ---
 
-## Fichiers code liés (vidéo 24)
+## Fichiers code liés (vidéo 27)
 
 - `src/config/cosmicNav.js` — PRIMARY `hL-BvWLPseE`, `VERSE_STYLE` inchangé
 - `src/world/WorldScene.jsx` — inchangé
