@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Sparkles, Volume2, VolumeX, ChevronDown, ChevronUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { getFrequencyProfile } from "@/lib/verseAudio";
+import { getRealmFrequencyMeta } from "@/lib/realmFrequency";
 
 const WELCOME_KEY = "egor69_verse_maitre_welcome";
 
@@ -12,9 +13,10 @@ const WELCOME_LINES = [
   "Approche un anneau, respire, puis traverse quand tu es prêt.",
 ];
 
-function pickPortalLine(realm, profile) {
+function pickPortalLine(realm) {
   if (!realm) return null;
-  return `Seuil « ${realm.label} » — résonance ${profile.label} (${profile.pole}), à titre métaphorique.`;
+  if (realm.maitreLine) return realm.maitreLine;
+  return getRealmFrequencyMeta(realm).maitreLine;
 }
 
 function pickNextRingLine(nextRing) {
@@ -45,15 +47,14 @@ export default function VerseMaitre({
   }, []);
 
   const line = useMemo(() => {
-    if (portalPulse && nearRealm) return pickPortalLine(nearRealm, profile);
+    if (portalPulse && nearRealm) return pickPortalLine(nearRealm);
     if (nearRealm) {
-      return nearRealm.ritualHint
-        ? `${pickPortalLine(nearRealm, profile)} ${nearRealm.ritualHint}`
-        : pickPortalLine(nearRealm, profile);
+      const portal = pickPortalLine(nearRealm);
+      return nearRealm.ritualHint ? `${portal} ${nearRealm.ritualHint}` : portal;
     }
     if (welcomeIdx < WELCOME_LINES.length) return WELCOME_LINES[welcomeIdx];
     return pickNextRingLine(nextRing);
-  }, [portalPulse, nearRealm, profile, welcomeIdx, nextRing]);
+  }, [portalPulse, nearRealm, welcomeIdx, nextRing]);
 
   useEffect(() => {
     if (nearRealm || portalPulse) return;
@@ -101,6 +102,11 @@ export default function VerseMaitre({
 
       {open ? (
         <div className="px-3 py-2.5 space-y-2">
+          {nearRealm ? (
+            <p className="text-[10px] font-bold tracking-wide text-[#FFD700]/90">
+              {profile.label} · {nearRealm.frequencyLabel ?? profile.pole}
+            </p>
+          ) : null}
           <p className="text-xs text-white/80 leading-relaxed">{line}</p>
           <p className="text-[10px] text-violet-200/75 leading-snug">
             {profile.hint}

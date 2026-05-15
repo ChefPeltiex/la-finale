@@ -62,7 +62,7 @@ export default function HomeSubjectBlocks() {
                   <span className="flex-1 min-w-0">
                     Entrer dans le Verse
                     <span className="block text-[10px] font-normal text-[#FFD700]/70">
-                      Cinéma nature · anneaux du Verse
+                      Cinéma nature · clés vibratoires par anneau
                     </span>
                   </span>
                   <ArrowRight className="h-4 w-4 shrink-0" />
@@ -70,7 +70,7 @@ export default function HomeSubjectBlocks() {
               )}
               {verseHighlight ? (
                 <p className="mb-3 text-[10px] text-violet-200/70 leading-snug">
-                  Le Verse résonne avec les fréquences du Codex (symbolique, non médical).
+                  Clés vibratoires par anneau (432, 528, 852… et pulse Terre 7,83 Hz) — symbolique, non médical.
                 </p>
               ) : null}
 

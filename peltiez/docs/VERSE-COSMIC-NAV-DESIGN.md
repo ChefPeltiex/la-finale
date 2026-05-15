@@ -118,6 +118,23 @@ Pas de moteur Unreal embarqué dans le bundle ; parallèle UE documenté dans `d
 
 ---
 
+## Clés vibratoires par realm (symbolique)
+
+Chaque entrée de `src/world/realms.js` reçoit `frequencyKey`, `frequencyHz`, `frequencyLabel`, `maitreLine` via `applyRealmFrequencyFields` (`src/lib/realmFrequency.js`). Audio procédural : `src/lib/verseAudio.js` · préférence `egor69_verse_audio`.
+
+| Profil (`frequencyKey`) | Hz | Exemples de realms (slug) |
+|-------------------------|-----|---------------------------|
+| `matter` | 432 | `accueil`, `market`, `feed`, `genome`, `pricing` |
+| `sens` | 528 | `well-*` (bien-être) |
+| `heart` | 852 | `div-*` (divinatoire) |
+| `myth` | 963 | `myth-*`, `atlas`, `bible`, `pantheon`, `cosmic`, `numerology`, `esoteric`, `magic` |
+| `verse` | 396 | autres salles (défaut) |
+| `earth` | 7,83 | couche de base permanente (pulse Schumann symbolique) |
+
+**Hors scope :** claims guérison, DNA, LoA, extraits YouTube. UI : `SymbolicDisclaimer` variante `frequency`.
+
+---
+
 ## Fichiers clés
 
 ```

@@ -20,6 +20,7 @@ import {
   isVerseAudioEnabled,
   setVerseAudioEnabled,
 } from "@/lib/verseAudio";
+import { formatRealmFrequencyBadge } from "@/lib/realmFrequency";
 import VerseMaitre from "@/components/world/VerseMaitre";
 import SymbolicDisclaimer from "@/components/ui/SymbolicDisclaimer";
 import { Button } from "@/components/ui/button";
@@ -113,12 +114,11 @@ export default function WorldHub() {
   useEffect(() => {
     const slug = nearRealm?.slug ?? null;
     if (slug === lastNearSlugRef.current) return;
-    const hadPrevious = lastNearSlugRef.current != null;
     lastNearSlugRef.current = slug;
     if (!slug) return;
     setPortalFocus(true);
     setMaitrePulse(true);
-    if (audioOn) void getVerseAudioEngine().playPortalChime();
+    if (audioOn) void getVerseAudioEngine().playPortalChime(getRealmFrequencyProfile(nearRealm));
     const tFocus = window.setTimeout(() => setPortalFocus(false), VERSE_STYLE.portalFocusMs);
     const tMaitre = window.setTimeout(() => setMaitrePulse(false), VERSE_STYLE.portalFocusMs);
     return () => {
@@ -193,7 +193,7 @@ export default function WorldHub() {
       </div>
 
       <div className={`transition-opacity duration-500 ${portalFocus ? "opacity-0 pointer-events-none" : "opacity-100"}`}>
-        <WorldMinimap telemetryRef={playerTelemetryRef} visitedSlugs={visitedSlugs} />
+        <WorldMinimap telemetryRef={playerTelemetryRef} visitedSlugs={visitedSlugs} nearRealm={nearRealm} />
       </div>
 
       <div
@@ -354,6 +354,17 @@ export default function WorldHub() {
                   <p className="text-[10px] font-bold uppercase tracking-widest text-white/50">
                     {portalFocus ? "Focus portail" : "Portail & narration"}
                   </p>
+                  {nearRealm && formatRealmFrequencyBadge(nearRealm) ? (
+                    <p
+                      className={`mt-1 inline-flex items-center rounded-full border px-2.5 py-0.5 text-[11px] font-bold tracking-wide ${
+                        COSMIC_NAV_V2
+                          ? "border-amber-400/50 bg-amber-950/40 text-amber-100"
+                          : "border-emerald-400/45 bg-emerald-950/35 text-emerald-100"
+                      }`}
+                    >
+                      {formatRealmFrequencyBadge(nearRealm)}
+                    </p>
+                  ) : null}
                   <p className="text-lg font-black tracking-tight">
                     {nearRealm ? nearRealm.label : "Anneaux du Verse — approche pour déplier la chambre"}
                   </p>

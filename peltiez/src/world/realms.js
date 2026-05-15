@@ -3,6 +3,8 @@
  * Chaque entrée relie géographie 3D, promesse produit honnête et continuité avec l’interface 2D.
  */
 
+import { applyRealmFrequencyFields } from "@/lib/realmFrequency";
+
 export const WORLD_REALMS = [
   {
     slug: "accueil",
@@ -671,5 +673,7 @@ export const WORLD_REALMS = [
     pledge: "Orientation trauma si répétition intrusive.",
   },
 ];
+
+applyRealmFrequencyFields(WORLD_REALMS);
 
 export const REALM_COUNT = WORLD_REALMS.length;

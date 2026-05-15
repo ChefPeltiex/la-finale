@@ -1,12 +1,13 @@
 import { useEffect, useRef } from "react";
 import { WORLD_REALMS } from "@/world/realms";
+import { formatRealmFrequencyBadge } from "@/lib/realmFrequency";
 
 const WORLD_LIMIT = 58;
 
 /**
  * Radar façon GTA + repères façon carte TotK — rendu canvas (pas de re-render React par frame).
  */
-export default function WorldMinimap({ telemetryRef, visitedSlugs = [] }) {
+export default function WorldMinimap({ telemetryRef, visitedSlugs = [], nearRealm = null }) {
   const visited = useRef(new Set(visitedSlugs));
   visited.current = new Set(visitedSlugs);
   const canvasRef = useRef(null);
@@ -98,10 +99,15 @@ export default function WorldMinimap({ telemetryRef, visitedSlugs = [] }) {
     };
   }, [telemetryRef, visitedSlugs]);
 
+  const freqBadge = nearRealm ? formatRealmFrequencyBadge(nearRealm) : null;
+
   return (
     <div className="pointer-events-none absolute bottom-24 right-4 sm:bottom-28 sm:right-6 z-[210]">
       <canvas ref={canvasRef} width={168} height={168} className="rounded-full border border-indigo-400/35 shadow-lg shadow-indigo-950/50" />
       <p className="mt-1 text-center text-[9px] font-bold uppercase tracking-widest text-white/45">Radar</p>
+      {freqBadge ? (
+        <p className="mt-1 text-center text-[10px] font-semibold text-amber-200/85 tracking-wide">{freqBadge}</p>
+      ) : null}
     </div>
   );
 }
