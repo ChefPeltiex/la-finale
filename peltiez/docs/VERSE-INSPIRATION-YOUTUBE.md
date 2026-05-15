@@ -23,6 +23,7 @@
 | 17 | `iehH5fGK80A` | Lucid Dreaming Music | ~3 h 33 | **Audio-first** (branding méditation) | **963 Hz** + miracles / LoA (ES) — piste ~3,5 h | **Basse** — redondant (3, 4) | **Aucune tâche nouvelle** — renforce P1-INS-8, P2-INS-7 |
 | 18 | `hmq72SLWBt8` | Brainwave Healing | ~3 h | **Audio-first** (sleep / brainwave keywords) | **3 Hz** empilés (432+741+963) + guérison corps & âme | **Basse** — redondant (1, 5, 6, 8) | **Aucune tâche nouvelle** — renforce P1-INS-11, P2-INS-7 ; anti-claims guérison |
 | 19 | `S-_vF1RxMR0` | Abundance Energy | ~54 min | **Audio** + **visuel** cosmos IA (MidJourney, description chaîne) | **7 chakras** + **999 Hz** — nettoyage corps entier / miracles | **Basse** — redondant (4, 12) | **Aucune tâche nouvelle** — renforce P1-INS-9, P2-INS-8 ; anti-miracles |
+| 20 | `SiiSBQErMMQ` | Circle of Attraction | ~1 h 11 | **Audio** pur (miniature / branding chaîne) | **432 + 777 Hz** + LoA millionnaire — rituel **7 min** (marketing) | **Basse** — redondant (3, 4, 5, 11, 15) | **Aucune tâche nouvelle** — renforce P1-INS-8 (anti-LoA), P2-INS-7 ; anti-claims richesse / 777 |
 
 **Lecture priorité :** **Haute** = plusieurs URLs convergent (dérive lente, paliers, HUD minimal) — à traiter en P1 avant polish P2. **Moyenne** = affine un levier déjà couvert (session longue, nuit, stack, rituel). **Basse** = redondant (focus, binaural, session ~2 h) — cataloguer sans nouveaux IDs. **Aucune** référence ne montre vol dans des anneaux ou rail spatial : priorité **jamais** sur gameplay arcade / hyperspace.
 
@@ -30,7 +31,7 @@
 
 **Audio vs visuel :** la majorité des entrées sont **musique / méditation** ; le Verse apporte le **décor 3D** (fog, étoiles, tores). Ne pas intégrer pistes YouTube (P2-INS-4). Visuels chaîne (IA, miniature) = **palette uniquement**, pas d’assets repris.
 
-**Phase 2 (produit) — catalogue suffisant :** après **19** références utilisateur, le corpus reste majoritairement **solfège / méditation / ambient / binaural** (≈16/19) ; la **#13** (`8kQgu2_1uEk`) reste le seul **documentaire narratif** hors Hz — pas une ref vol cosmique. La **#19** (`S-_vF1RxMR0`) **duplique** la **#4** et la **#12** (7 chakras + 999 Hz, Abundance Energy) — **aucune** tâche P1/P2 supplémentaire. **Aucune** URL ne montre vol dans des anneaux ou rail spatial. **Pause catalogage** YouTube sauf refs **visuelles** (vol cosmique, anneaux traversés, hyperspace). **Top 3 P1 à implémenter en code** : **P1-INS-2** (HUD « Prochain anneau »), **P1-INS-6** + **P1-INS-7** (palier X/9 + focus portail), **P1-INS-1** (mode contemplation). Détail : [`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md).
+**Phase 2 (produit) — catalogue suffisant :** après **19** références utilisateur, le corpus reste majoritairement **solfège / méditation / ambient / binaural** (≈16/19) ; la **#13** (`8kQgu2_1uEk`) reste le seul **documentaire narratif** hors Hz — pas une ref vol cosmique. La **#17** (`iehH5fGK80A`, Lucid Dreaming Music) **confirme** le motif **963 Hz + LoA / miracles** déjà couvert par la **#3** et la **#4** — **aucune** tâche P1/P2 supplémentaire. La **#19** (`S-_vF1RxMR0`) **duplique** la **#4** et la **#12** (7 chakras + 999 Hz, Abundance Energy) — **aucune** tâche P1/P2 supplémentaire. **Aucune** URL ne montre vol dans des anneaux ou rail spatial. **Pause catalogage** YouTube sauf refs **visuelles** (vol cosmique, anneaux traversés, hyperspace). **Top 3 P1 à implémenter en code** : **P1-INS-2** (HUD « Prochain anneau »), **P1-INS-6** + **P1-INS-7** (palier X/9 + focus portail), **P1-INS-1** (mode contemplation). Détail : [`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md).
 
 ---
 
@@ -1306,7 +1307,7 @@ Les **tores** du Verse Egor69 (`realms.js`) restent la métaphore utilisateur (�
 | Idée | Application Egor69 Verse |
 |------|---------------------------|
 | **Sept passages** | HUD « Passage 4/7 » sur session ou arc — métaphore sept niveaux **sans** gardiens, gnosticisme ni immortalité |
-| **Repos du silence** | 10–12 s HUD minimal au retour 3D→2D — franchissement symbolique, pas transe forcée |
+| **Repos du silence** | 10–12 s HUD minimal au retour 2D→3D — franchissement symbolique, pas transe forcée |
 | **Seuil avant portail** | Complète P1-INS-7/13 : une intention sobre, pas « phrase magique » |
 | **Parcours ~47 min** | Session médiane : contemplation + focus portail suffisent |
 | **Autonomie** | Copy HUD « ton chemin » — sans rejet d’institutions ni promesse éveil garanti |
