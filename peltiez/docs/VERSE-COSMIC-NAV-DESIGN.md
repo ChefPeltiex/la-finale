@@ -38,11 +38,31 @@ Remplacer l’exploration « pawn vert sur terrain » par un **voyage immersif d
 - Données : étendre `worldPersistence` (constellations débloquées).
 - **Alignement 2D :** les blocs sujets de `NAV_POLE_BLOCKS` (`docs/ARCHITECTURE-NAV-BLOCS.md`) préfigurent ces groupes — un bloc = future constellation dans le HUD.
 
+**P1 — inspiration mood « univers / anneaux »** ([VERSE-INSPIRATION-YOUTUBE.md](./VERSE-INSPIRATION-YOUTUBE.md)) :
+
+| ID | Tâche | Critère d’acceptation |
+|----|--------|------------------------|
+| P1-INS-1 | **Mode contemplation** (toggle ou défaut doux) | Vitesse marche −10 à 15 %, sprint optionnel ; caméra smoothing inchangé ou +5 % quand actif |
+| P1-INS-2 | **Bannière « Prochain anneau »** | HUD affiche label + `ritualHint` du realm non visité le plus proche (géométrie 3D) |
+| P1-INS-3 | **Palette cœur / cosmos** | Accents HUD indigo + rose doux sur proximité portail ; pas de copie visuelle YouTube |
+| P1-INS-4 | **Constellations par pôle** | Minimap regroupe mythologies / bien-être / divinatoire / cœur (~24 m) en arcs nommés |
+| P1-INS-5 | **Accessibilité mouvement** | `prefers-reduced-motion` : pas de pulsation agressive sur les tores ; étoiles déjà réduites |
+
 ### P2 — Galaxies & chapitres
 
 - Une **galaxie** = sujet (ex. mythologies, bien-être, divinatoire) avec **chapitres** = sous-ensembles de realms.
 - UI grimoire (`VerseGrimoire.jsx`) : onglets par galaxie, pas seulement par portail.
 - Liaison vers pages 2D existantes (déjà les `path` des realms).
+
+**P2 — vol symbolique & échelle (sans gameplay copié)** :
+
+| ID | Tâche | Critère d’acceptation |
+|----|--------|------------------------|
+| P2-INS-1 | **Traversée de tore** | À `E` / Entrée : 0,8 s scale/emissive pulse sur le portail puis navigation 2D |
+| P2-INS-2 | **Fil d’anneaux** | Trace discrète (arc ou particules) vers les 3 prochains realms sur la minimap |
+| P2-INS-3 | **Densité étoiles ∝ progression** | `Stars.count` ou `factor` augmente par paliers de visites (cap performance mobile) |
+| P2-INS-4 | **Ambiance audio originale** | Boucle ambiante libre de droits — **interdit** : piste Inner Lotus / solfège de la référence |
+| P2-INS-5 | **Anneaux décoratifs** | Tores secondaires non cliquables entre constellations (pure profondeur, pas de collision gameplay) |
 
 ### P3 — Météorites, comètes, énigmes
 
@@ -114,6 +134,7 @@ Référence croisée à ajouter dans `alliance-ia-egor69.md` (section agents) lo
 
 ## Références
 
+- **Inspiration YouTube (mood univers / anneaux)** : [VERSE-INSPIRATION-YOUTUBE.md](./VERSE-INSPIRATION-YOUTUBE.md) — `pSXgXAqomMY` (méditation cosmique, pas gameplay anneaux)
 - Manuel utilisateur : `src/content/manuel-utilisation-igor.md` (section Verse)
 - QA : `docs/MANUAL-QA-PROTOCOL.md` (explorateur cosmique)
 - Glossaire : entrée « Verse 3D » dans `src/data/glossaryCentral.js`

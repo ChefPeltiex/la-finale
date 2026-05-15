@@ -276,7 +276,7 @@ function SceneContent({
     <>
       <ImmersiveSleepMitigations maxDpr={maxCanvasDpr} />
       <color attach="background" args={[COSMIC_NAV_V2 ? "#020617" : "#030712"]} />
-      <fog attach="fog" args={[COSMIC_NAV_V2 ? "#0f172a" : "#030712", 40, COSMIC_NAV_V2 ? 140 : 120]} />
+      <fog attach="fog" args={[COSMIC_NAV_V2 ? "#0f172a" : "#030712", 32, COSMIC_NAV_V2 ? 158 : 120]} />
 
       <ambientLight intensity={0.28} />
       <directionalLight position={[50, 70, 28]} intensity={1.45} color="#fefce8" />
