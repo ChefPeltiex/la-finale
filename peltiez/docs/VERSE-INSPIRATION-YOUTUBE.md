@@ -28,6 +28,9 @@
 | 22 | `mT4EB3fQ9lg` | Inner Lotus Music | ~3 h 33 | **Audio** pur (art chaîne — **pas** vol cosmique filmé) | **888 + 88 + 8 Hz** pyramide abondance / endorphines (LoA) | **Basse** — redondant (1, 15, 20) | **Aucune tâche nouvelle** — renforce P1-INS-8 ; **pas** ref visuelle anneaux |
 | 23 | `4uR5yfLkxjA` | Inner Healing | ~71 min | **Audio-first** (branding bien-être / visuel décoratif) | **432 Hz** + **111 Hz** + LoA / miracles / abondance — piste ~71 min | **Basse** — redondant (8, 15, 20, 3) | **Aucune tâche nouvelle** — renforce P1-INS-8 (anti-LoA), P1-INS-14 (432, déjà #8) ; anti-miracles / richesse |
 | 24 | `0WOsrKnRkZg` | Frequency Harmony | ~3 h 34 | **Audio** pur (branding chaîne — **pas** vol cosmique) | **1111 Hz** « Frequency of God » + miracles / manifestation / guérison — piste ~3,5 h | **Basse** — redondant (3, 17, **21**, 23) | **Aucune tâche nouvelle** — renforce P1-INS-8, P2-INS-7 ; anti-miracles / 11:11 |
+| 25 | `BrHMdqe0vzM` | Inner Lotus Music | ~2 h 22 | **Audio** dominant + **visuel statique** (lotus / branding) | **963 Hz** + bol — tiers œil / couronne · **timestamp utilisateur `t=3745`** | **Moyenne** — mood milieu session · voir **@ 1:02:25** | P1 contemplation · palette lotus (secondaire) · **pas** co-primary visuel |
+| 26 | `Thji1yQksXI` | Gaia Meditation Healing Music | ~2 h 2 | **Audio** pur (branding chaîne / visuel décoratif) | **888 + 528 Hz** + LoA abondance infinie / prospérité — piste ~2 h | **Basse** — redondant (**#21**, **#22**, **#6**, **#15**) | **Aucune tâche nouvelle** — renforce P1-INS-8 (anti-LoA), P2-INS-7 ; **pas** ref visuelle anneaux |
+| 27 | `xfBTpK1csas` | Lovemotives Meditation Music | ~2 h | **Audio-first** (branding chaîne / visuel décoratif) | **369 Hz** Tesla + stack solfège + **LoA manifestation** — piste ~2 h | **Basse** — redondant (1, 3, 15, 20) | **Aucune tâche nouvelle** — renforce P1-INS-8 (anti-LoA), P2-INS-7 ; anti-Tesla / manifestation |
 
 ### Référence style PRIMARY — « style pour tout »
 
@@ -45,6 +48,8 @@
 | **vs `mT4EB3fQ9lg` (#22)** | Méditation **888 Hz + LoA** — **ne supplante pas** le PRIMARY. **Maître style global : `hL-BvWLPseE`.** |
 | **vs `4uR5yfLkxjA` (#23)** | Méditation **432 Hz + 111 Hz + LoA** (Inner Healing) — **ne supplante pas** le PRIMARY ; redondant **#8**. |
 | **vs `0WOsrKnRkZg` (#24)** | **1111 Hz** + miracles / « Frequency of God » (Frequency Harmony, ~3,5 h) — **ne supplante pas** le PRIMARY ni `BrHMdqe0vzM@3745s` ; **duplique** **#21** (autre chaîne 1111). **Maître style global : `hL-BvWLPseE`.** |
+| **vs `BrHMdqe0vzM` (#25 @ 1:02:25)** | Lien utilisateur @ **3745 s** — milieu session **963 Hz** ; visuel **statique** lotus (comme #1). **Ne supplante pas** le PRIMARY : affine **dérive** / session longue, pas vol ni anneaux filmés. |
+| **vs `Thji1yQksXI` (#26)** | Gaia **888 + 528 Hz** + LoA (~2 h) — **duplique #21** (même chaîne) et **#22** (888). **Ne supplante pas** `hL-BvWLPseE` ; palette Verse = crépuscule or/indigo (`VERSE_STYLE`), pas méditation Hz. |
 
 **Lecture priorité :** **Haute** = plusieurs URLs convergent (dérive lente, paliers, HUD minimal) — à traiter en P1 avant polish P2. **Moyenne** = affine un levier déjà couvert (session longue, nuit, stack, rituel). **Basse** = redondant (focus, binaural, session ~2 h) — cataloguer sans nouveaux IDs. **Aucune** référence ne montre vol dans des anneaux ou rail spatial : priorité **jamais** sur gameplay arcade / hyperspace.
 
@@ -52,7 +57,7 @@
 
 **Audio vs visuel :** la majorité des entrées sont **musique / méditation** ; le Verse apporte le **décor 3D** (fog, étoiles, tores). Ne pas intégrer pistes YouTube (P2-INS-4). Visuels chaîne (IA, miniature) = **palette uniquement**, pas d’assets repris.
 
-**Phase 2 (produit) — catalogue suffisant :** après **24** références playlist + **PRIMARY** `hL-BvWLPseE`, le corpus reste **solfège / méditation / LoA** (≈21/24). La **#24** (`0WOsrKnRkZg`, Frequency Harmony **1111 Hz** ~3,5 h) **duplique** **#21** (Gaia 1111) et le motif miracles/LoA (**#3**, **#17**, **#20**) — **aucune** tâche P1/P2 ; **pas** de co-primary visuel. **Style maître :** `hL-BvWLPseE` — **#24** n’éclipse ni `mT4EB3fQ9lg` (#22) ni `BrHMdqe0vzM@3745s`. **Pause catalogage** sauf refs **visuelles** (vol cosmique, anneaux traversés). **Top 3 P1** : **P1-INS-2**, **P1-INS-6** + **P1-INS-7**, **P1-INS-1**. Tester **`/world`** après landing **`be0f2a8e`** (`VERSE_STYLE` + HUD). Détail : [`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md).
+**Phase 2 (produit) — catalogue suffisant :** après **26** références playlist + **PRIMARY** `hL-BvWLPseE`, le corpus reste **solfège / méditation / LoA** (≈23/26). La **#26** (`Thji1yQksXI`, Gaia **888 + 528 Hz** ~2 h) **duplique** **#21** (Gaia 1111), **#22** (888) et **#6** (528) — **aucune** tâche P1/P2 ; **pas** de co-primary visuel. **Style maître :** `hL-BvWLPseE` — **#26** n’éclipse ni `mT4EB3fQ9lg` (#22) ni `BrHMdqe0vzM@3745s`. **Pause catalogage** sauf refs **visuelles** (vol cosmique, anneaux traversés). **Top 3 P1** : **P1-INS-2**, **P1-INS-6** + **P1-INS-7**, **P1-INS-1**. Tester **`/world`** (`VERSE_STYLE` + HUD). Détail : [`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md).
 
 ---
 
@@ -1846,7 +1851,7 @@ Les dix-huit références documentées confirment une **traversée symbolique co
 **Pause du catalogage** des références YouTube **sauf** si une future URL montre explicitement :
 
 - un **espace visuel** exploitable (cockpit, nébuleuse traversée, anneaux géants filmés en vol), ou  
-- du **vol / rail / traversée d’anneaux** comme référence gameplay (aucune des **22** entrées à ce jour, dont `0WOsrKnRkZg`).
+- du **vol / rail / traversée d’anneaux** comme référence gameplay (aucune des **24** entrées à ce jour, dont `0WOsrKnRkZg`).
 
 **Prochain sprint dev recommandé — bundle P1 (implémentation)** :
 
@@ -2295,6 +2300,168 @@ Après **22** références playlist + **PRIMARY** `hL-BvWLPseE`, le mood **médi
 
 ---
 
+# Addendum — Vidéo 24 (`xfBTpK1csas` · catalogage LoA Tesla)
+
+**Lien :** [https://www.youtube.com/watch?v=xfBTpK1csas](https://www.youtube.com/watch?v=xfBTpK1csas)  
+**ID :** `xfBTpK1csas`  
+**Date de capture :** mai 2026  
+**Contexte utilisateur :** lien partagé pour le Verse — comparé au **PRIMARY** `hL-BvWLPseE`.
+
+---
+
+## Ce que la vidéo est réellement
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *Nikola Tesla 369Hz Frequency⎢Manifest Anything You Want* |
+| **Chaîne** | Lovemotives Meditation Music |
+| **Durée** | ~2 h |
+| **Vues** | ~7,4 M (capture mai 2026) |
+| **Publié** | 2018-03-08 |
+| **Type** | Méditation **369 Hz** (marketing Tesla 3-6-9) + **LoA manifestation** — **pas** vol spatial, **pas** anneaux traversés, **pas** gameplay |
+
+### Audio vs visuel cosmique
+
+| Dimension | Constat |
+|-----------|---------|
+| **Audio** | Piste longue ambient / solfège empilé (description : 432, 963, 639, 369, 90, 63, 33 Hz) — casque, écoute passive, protocole « 15 min × 7 jours ». |
+| **Visuel** | Miniature / branding chaîne (cosmos décoratif, symboles Tesla) — **pas** séquence 3D, **pas** vol dans des anneaux. |
+| **Verdict** | **Audio-first** — le Verse fournit le décor 3D ; **pas** référence visuelle vol cosmique. |
+
+### Flag — contenu visuel espace / anneaux ?
+
+| Question | Réponse |
+|----------|---------|
+| **Vol spatial / rail ?** | **Non** |
+| **Anneaux planétaires filmés ?** | **Non** |
+| **Co-primary ou supplante `hL-BvWLPseE` ?** | **Non** |
+| **Priorité P1 vol / anneaux ?** | **Nulle** — **Basse**, redondant **#1**, **#3**, **#15**, **#20** |
+
+---
+
+## Comparaison PRIMARY vs #24
+
+| Critère | `hL-BvWLPseE` (**PRIMARY**) | `xfBTpK1csas` (#24) |
+|---------|---------------------------|---------------------|
+| **Nature** | OST Planet Earth II — pacing **cinéma** | Méditation **369 Hz** + LoA Tesla |
+| **Vol cosmique anneaux** | **Non** (tores Verse) | **Non** |
+| **Style pour tout le Verse** | **Oui — maître** | **Non** |
+| **WorldScene** | `VERSE_STYLE` déjà aligné | **Aucune** fusion palette recommandée |
+
+---
+
+## Ne pas copier · recommandations (vidéo 24)
+
+| Risque | Action |
+|--------|--------|
+| **© Lovemotives** | Aucun extrait 369 Hz ni miniature |
+| **Tesla / manifestation / key to universe** | Pas de promesses succès ou « clé de l’univers » sur `/world` (P1-INS-8) |
+| **Stack Hz affiché** | Ne pas afficher 369/432/963 sur le HUD — barrière commune solfège |
+
+1. **Aucune tâche P1/P2** — PRIMARY reste `hL-BvWLPseE`.  
+2. **Pas de tweak `WorldScene.jsx`** pour #24.  
+3. **Pause catalogage** — prochaine URL = vol/anneaux **visibles**, pas autre Hz LoA.
+
+---
+
+## Fichiers code liés (vidéo 24)
+
+- `src/config/cosmicNav.js` — PRIMARY `hL-BvWLPseE`, `VERSE_STYLE` inchangé
+- `src/world/WorldScene.jsx` — inchangé
+
+---
+
+# Référence timestamp `BrHMdqe0vzM` @ 1:02:25
+
+**Lien utilisateur :** [https://www.youtube.com/watch?v=BrHMdqe0vzM&t=3745s](https://www.youtube.com/watch?v=BrHMdqe0vzM&t=3745s)  
+**ID :** `BrHMdqe0vzM` · **#25** dans la table synthèse  
+**Timestamp :** `t=3745` s = **1:02:25** (~44 % de la piste)  
+**Date de capture :** mai 2026
+
+---
+
+## Ce que la vidéo est (entière)
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *963Hz Pineal Gland Activation \| Crown Chakra Awakening \| Open Third Eye \| Frequency of Gods* |
+| **Chaîne** | Inner Lotus Music (Pierre Ynad) |
+| **Durée** | **2:22:21** (8541 s) |
+| **Vues** | ~2,0 M · **Publié** 2020-08-04 |
+| **Catégorie** | Music |
+| **Type** | Méditation **963 Hz** + bol chantant — **pas** gameplay, **pas** vol spatial, **pas** anneaux traversés à l’écran |
+
+### Chapitres / description / commentaires @ 3745 s
+
+| Source | Résultat |
+|--------|----------|
+| **Chapitres YouTube** | **0** (yt-dlp : aucun chapitre public) |
+| **Description** | Piste **963 Hz** continue ; thèmes pinéale, tiers œil, couronne, Oneness — **aucun** repère à 62 min |
+| **Commentaires** | Non indexés à ce timestamp |
+| **Inférence @ 1:02:25** | **Même visuel statique** que le début : art chaîne (lotus, halo **or**, fond **indigo–violet**). Pas de cut « vol cosmique » ni anneaux planétaires. Intérêt du timestamp = **profondeur audio** (milieu de session ~2 h, ton stable, bol discret). |
+
+### Mood visuel inféré (miniature + famille #1)
+
+| Élément | @ 1:02:25 | Verse 3D (`VERSE_STYLE` + `WorldScene`) |
+|---------|-----------|----------------------------------------|
+| Ciel | Nuit indigo, étoiles modérées | `bg` `#01040f`, `starCount` 15200, `starSpeed` **0,44** |
+| Lumière | Halo **or** centre / lotus | `rimGold` `#fef3c7`, `sparkleGold` |
+| Brume | Violet profond, doux | `fog` `#1e1b4b`, `fogFar` 172 |
+| Anneaux | **Aucun** à l’écran — métaphore Verse = **tores** | Anneau sol + portails `realms.js` |
+| Mouvement | Image **fixe** ; mouvement = joueur dans la scène | Marche 12,8, rotation tore ~0,35 rad/s, particules lentes |
+| Échelle | Intimité + copy « univers » | Crépuscule **PRIMARY** `hL-BvWLPseE` (Planet Earth II), pas cette URL |
+
+**Verdict :** **pas** de vol cosmique ni traversée d’anneaux filmée — cosmos contemplatif **statique** + audio 963 Hz. **Ne pas** promouvoir en co-primary visuel.
+
+---
+
+## Comparaison PRIMARY · #22 · #25 (@ 1:02:25)
+
+| Critère | `hL-BvWLPseE` (**PRIMARY**) | `mT4EB3fQ9lg` (#22) | `BrHMdqe0vzM` (#25 @ 1:02:25) |
+|---------|----------------------------|---------------------|--------------------------------|
+| **Durée** | ~44 min | ~3 h 33 | ~2 h 22 |
+| **Visuel** | Pacing OST nature / twilight | Lotus statique, pyramide | Lotus statique (963 Hz) |
+| **Vol / anneaux spatiaux** | Non | Non | **Non** |
+| **Style pour tout le Verse (3D)** | **Oui — maître** | Non | **Non** (mood + dérive seulement) |
+| **Timestamp utilisateur** | N/A | N/A | **Audio** milieu session ; visuel = redondant **#1** |
+
+**« Ce style pour tout » :** appliquer **`hL-BvWLPseE`** à la scène ; **#25** renforce P1-INS-1 (contemplation) et P2-INS-7 (session longue), pas un nouveau look arcade.
+
+---
+
+## Spécification visuelle actionnable
+
+| Token | Valeur | Fichier |
+|-------|--------|---------|
+| Fond / fog / rim / fill | Voir PRIMARY (table ci-dessus) | `cosmicNav.js` → `VERSE_STYLE` |
+| Étoiles | count 15200, factor 4,6, speed **0,44** | `WorldScene` `<Stars>` |
+| Particules | violet speed **0,26**, or **0,16** | `WorldScene` `<Sparkles>` |
+| Anneau sol | `#a78bfa`, opacity 0,11, r 8–145 | `groundRing` |
+| Portail | focus 4200 ms | `portalFocusMs` |
+
+**Ne pas faire :** rail shooter, hyperspace, copy « Frequency of Gods », claims pinéale en UI.
+
+---
+
+## Emprunter / ne pas copier
+
+| Emprunter | Ne pas copier |
+|-----------|----------------|
+| Session longue sans punition (P2-INS-7) | © Inner Lotus — piste, bol, miniature |
+| Palette or/indigo/violet (déjà codée) | Claims médicaux / tiers œil |
+| P1-INS-1 contemplation | Remplacer PRIMARY par mood méditation seul |
+| `ritualHint` Oneness (lore) | Promettre vol dans anneaux YouTube |
+
+---
+
+## Fichiers code (#25 @ 1:02:25)
+
+- `src/config/cosmicNav.js` — `starSpeed`, `sparkleSpeed`, `sparkleGoldSpeed`
+- `src/world/WorldScene.jsx` — consomme `VERSE_STYLE`
+- `docs/VERSE-COSMIC-NAV-DESIGN.md` — P1-INS-1, P2-INS-7
+
+---
+
 # Addendum — Vidéo 24 (`0WOsrKnRkZg` · audio 1111 Hz — rejet PRIMARY)
 
 **Lien :** [https://www.youtube.com/watch?v=0WOsrKnRkZg](https://www.youtube.com/watch?v=0WOsrKnRkZg)  
@@ -2367,3 +2534,28 @@ Après **22** références playlist + **PRIMARY** `hL-BvWLPseE`, le mood **médi
 
 - `src/config/cosmicNav.js` — **inchangé** par #24
 - `src/world/WorldScene.jsx` — P2-INS-7 (dérive ~3,5 h)
+
+---
+
+# Addendum — Vidéo 26 (`Thji1yQksXI` · Gaia 888 + 528 Hz)
+
+**Lien :** [https://www.youtube.com/watch?v=Thji1yQksXI](https://www.youtube.com/watch?v=Thji1yQksXI)  
+**ID :** `Thji1yQksXI` · **Chaîne :** Gaia Meditation Healing Music · **Durée :** ~2 h 2 (7322 s) · **Chapitres :** 0
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *888 Hz + 528 Hz Débloquez l’Abondance Infinie (Fréquences Puissantes)* |
+| **Audio vs visuel** | **Audio** dominant — méditation LoA / prospérité ; visuel chaîne **décoratif** (pas vol, pas anneaux, pas rail). |
+| **Priorité** | **Basse** — redondant **#21** (Gaia), **#22** (888), **#6** (528), **#15** (888/432). |
+| **P1/P2** | **Aucune** nouvelle tâche. |
+
+## Comparaison PRIMARY vs #26
+
+| Critère | `hL-BvWLPseE` (**PRIMARY** · `VERSE_STYLE`) | `Thji1yQksXI` (#26) |
+|---------|-------------------------------------------|---------------------|
+| **Genre** | OST documentaire (orchestre, crépuscule) | Solfège **888 + 528** + marketing abondance |
+| **Visuel exploitable** | Tempo / teintes **hors images BBC** | Branding Gaia — **palette seule** si besoin |
+| **Vol / anneaux** | **Non** (tores 3D = métaphore) | **Non** |
+| **Verdict** | **Maître style global** | **Ne supplante pas** le PRIMARY |
+
+- `src/config/cosmicNav.js` — **inchangé** (PRIMARY `hL-BvWLPseE`).
