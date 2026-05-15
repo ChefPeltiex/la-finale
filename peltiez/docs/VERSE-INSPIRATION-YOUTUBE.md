@@ -12,8 +12,8 @@
 | 6 | `3OvM4ycNVL8` | Dreamy Flow | ~2 h 53 | **Audio** + miniature **sommeil / lune** | Duo 528 + 432 Hz — nuit réparatrice | **Moyenne** — mode nuit | P1 axes (partagé 5) · P2 mode nuit cosmique |
 | 8 | `r9GYYKrrLAg` | Inner Healing | ~71 min | **Audio-first** (branding bien-être) | Schumann **7,83 Hz** + 432 + binaural — ancrage Terre | **Moyenne** — ancrage sol | P1-INS-14 ancrage HUD · P2-INS-12 pulse anneau sol |
 | 9 | `3ciMHwo1ApA` | Culture Capital | ~1 h 1 | **Audio** + ambient décoratif | **Om** + ombre / lumière, shadow integration | **Moyenne** — seuil / dualité | P1-INS-12/13 équilibre, respiration · P2 bol seuil (spec) |
-| 7 | `oHMg7ZeWAxQ` | Inner Lotus Music | ~3 h 34 | **Audio-first** (art chaîne) | **852 Hz** / Ajna — clarté, intuition | **Moyenne** — regard intérieur | P1 (complète INS-8) · aligné tiers œil symbolique |
-| 10 | `deFpiq6EYzE` | Inner Eye Awakening | ~2 h 55 | **Audio** dominant (pas de gameplay 3D) | Transe chamanique / **tiers œil** — seuil « 1 min » (marketing) | **Moyenne** — rituel seuil | P1-INS-16 rituel 60 s · P2-INS-16 transe profonde 60 s |
+| 7 | `oHMg7ZeWAxQ` | Inner Lotus Music | ~3 h 34 | **Audio-first** (art chaîne) | **852 Hz** / Ajna — clarté, intuition | **Moyenne** — regard intérieur | P1-INS-16 focalisation · P2-INS-16 brume approche |
+| 10 | `deFpiq6EYzE` | Inner Eye Awakening | ~2 h 55 | **Audio** dominant (pas de gameplay 3D) | Transe chamanique / **tiers œil** — seuil « 1 min » (marketing) | **Moyenne** — rituel seuil | P1 rituel 60 s · P2 transe 60 s (spec, distinct INS-16/17) |
 | 11 | `admhD1UCmI8` | 136Hz - Find Your Inner Peace | ~71 min | **Audio** dominant (miniature / branding chaîne) | **Theta 4–8 Hz** — subconscious, créativité / « billionaire » (marketing abondance) | **Moyenne** — flux créatif | P1-INS-15 seuil theta créatif · P2-INS-15 vague theta visuelle |
 | 12 | `Zocof7wZF4c` | Chakra Healing Frequencies | ~2 h 21 | **Audio** + **visuel** stock (Envato / Storyblocks) | **7 chakras** + **999 Hz** — nettoyage **corps entier** / aura | **Moyenne** — affine arc 7 | P1-INS-17 corps entier 7/7 · P2-INS-17 balayage lumière (renforce P1-INS-9 / P2-INS-8) |
 | 15 | `svKgmiSTpG4` | Abundant Vibe Frequencies | ~11 h 55 | **Audio** pur (keywords richesse / 432 / 888) | **LoA** + flux financier + gratitude — piste ~12 h | **Basse** — redondant (3, 4, 5, 6, 8) | **Aucune tâche nouvelle** — renforce P1-INS-8 (anti-LoA), P2-INS-7 (session extrême) |
@@ -22,7 +22,7 @@
 
 **Audio vs visuel :** la majorité des entrées sont **musique / méditation** ; le Verse apporte le **décor 3D** (fog, étoiles, tores). Ne pas intégrer pistes YouTube (P2-INS-4). Visuels chaîne (IA, miniature) = **palette uniquement**, pas d’assets repris.
 
-**Phase 2 (produit)** : après **13** références utilisateur, le corpus est majoritairement **solfège / méditation / ambient** (≈11/13) ; la **#13** (`8kQgu2_1uEk`) est un **documentaire narratif** hors Hz — pas une ref vol cosmique. **Aucune** URL ne montre vol dans des anneaux ou rail spatial. Prioriser l’implémentation **P1 HUD + arc** ([`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md)) plutôt que d’ajouter des entrées YouTube, sauf refs **visuelles** (vol cosmique, anneaux traversés, hyperspace).
+**Phase 2 (produit)** : après **17** références utilisateur, le corpus reste majoritairement **solfège / méditation / ambient** (≈14/17) ; la **#13** (`8kQgu2_1uEk`) reste le seul **documentaire narratif** hors Hz — pas une ref vol cosmique. La **#17** (`iehH5fGK80A`) **confirme** le motif 963 Hz + LoA déjà couvert par la **#3** — **aucune** tâche P1/P2 supplémentaire. **Aucune** URL ne montre vol dans des anneaux ou rail spatial. Prioriser l’implémentation **P1 HUD + arc** ([`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md)) plutôt que d’ajouter des entrées YouTube, sauf refs **visuelles** (vol cosmique, anneaux traversés, hyperspace).
 
 ---
 
@@ -682,9 +682,9 @@ Les sept entrées documentées confirment une **traversée symbolique contemplat
 
 ## Cinq recommandations concrètes (vidéo 10)
 
-1. **Rituel seuil 60 s (P1-INS-17)** : à &lt; 5 m d’un tore non visité, proposer option « une minute de présence » (respiration + `ritualHint`) avant activation `E` — miroir « after 1 minute », **sans** mind control ni promesse DMT.
-2. **Indicateur intuition (P1-INS-17)** : flèche ou halo discret vers le prochain realm aligné intention localStorage (complète P1-INS-8) — tiers œil = **direction**, pas glande.
-3. **Transe cosmique profonde (P2-INS-17)** : à 60 s sans input (avant les 90 s de P2-INS-7) : vignette + pulsation tore très lente — distinct de la dérive passive complète.
+1. **Rituel seuil 60 s (P1-INS-19)** : à &lt; 5 m d’un tore non visité, proposer option « une minute de présence » (respiration + `ritualHint`) avant activation `E` — miroir « after 1 minute », **sans** mind control ni promesse DMT.
+2. **Indicateur intuition (P1-INS-19)** : flèche ou halo discret vers le prochain realm aligné intention localStorage (complète P1-INS-8) — tiers œil = **direction**, pas glande.
+3. **Transe cosmique profonde (P2-INS-19)** : à 60 s sans input (avant les 90 s de P2-INS-7) : vignette + pulsation tore très lente — distinct de la dérive passive complète.
 4. **Conserver P1-INS-7/8 et P2-INS-7/11** : focus portail, intention, dérive longue et nuit restent valides ; la vidéo 10 **ajoute** le seuil minute + couche transe, ne remplace pas les arcs 9/7/5.
 5. **Audio (P2)** : nappes ambiantes graves très douces — interdit Inner Eye Awakening et tons « third eye » identifiables.
 
@@ -692,7 +692,7 @@ Les sept entrées documentées confirment une **traversée symbolique contemplat
 
 ## Fichiers code liés (vidéo 10)
 
-- `docs/VERSE-COSMIC-NAV-DESIGN.md` — P1-INS-16, P2-INS-16 (distincts des vidéos 1–9 et des tâches Om/ombre/Schumann/theta)
+- `docs/VERSE-COSMIC-NAV-DESIGN.md` — rituel 60 s / transe (à numéroter ; distincts P1-INS-16/17 vidéos 7 et 12)
 - `src/pages/WorldHub.jsx` — rituel 60 s, copy intuition
 - `src/world/WorldScene.jsx` — vignette transe, pulse tore lent
 - `src/world/realms.js` — `ritualHint` tiers œil / seuil

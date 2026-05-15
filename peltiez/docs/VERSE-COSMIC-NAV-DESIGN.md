@@ -57,6 +57,10 @@ Remplacer l’exploration « pawn vert sur terrain » par un **voyage immersif d
 | P1-INS-13 | **Seuil Om (respiration)** | À &lt; 6 m d’un tore : rappel `ritualHint` respiration / pause 1–2 s avant `E` — métaphore mantra Om, **sans** audio OM copié ni claim tiers œil |
 | P1-INS-14 | **Ancrage au sol** | À &lt; 12 m de l’anneau indigo au sol : HUD une ligne d’ancrage ou `ritualHint` grounding — inspiré résonance Schumann (`r9GYYKrrLAg`), **sans** Hz, pinéale, binaural ni claim santé |
 | P1-INS-15 | **Seuil theta (créativité)** | En mode contemplation, à &lt; 8 m d’un tore : une ligne HUD « laissez une intention créative émerger » — inspiré theta / visionnaires (`admhD1UCmI8`), **sans** billionaire, richesse, manifestation, ni Hz theta affichés |
+| P1-INS-16 | **Focalisation clarté (horizon)** | À &lt; 8 m d’un tore : HUD « regarder l’horizon » + `ritualHint` variante clarté — inspiré 852 / Ajna (`oHMg7ZeWAxQ`, Inner Lotus), **sans** Hz, pinéale ni promesse d’éveil |
+| P1-INS-17 | **Corps entier 7/7 (session)** | Bandeau « Aligné X/7 » : chaque groupe des 7 harmoniques (P1-INS-9) a ≥1 visite en session — inspiré whole body cleansing (`Zocof7wZF4c`), **sans** chakra, 999 Hz, aura healing ni promesse santé |
+| P1-INS-18 | **Sept passages (arc narratif)** | HUD « Passage X/7 » sur progression de session ou segment d’arc — inspiré sept niveaux / gardiens (`8kQgu2_1uEk`), **distinct** de P1-INS-9 (harmoniques) ; **sans** gnosticisme, immortalité, Évangile, Vatican ni iconographie religieuse |
+| P1-INS-19 | **Rituel seuil 60 s** | À &lt; 5 m d’un tore non visité : option « une minute de présence » (respiration + `ritualHint`) avant `E` ; indicateur discret vers prochain realm si intention en localStorage — inspiré seuil « 1 min » (`deFpiq6EYzE`), **sans** mind control, DMT, pinéale ni promesse de transe forcée |
 
 ### P2 — Galaxies & chapitres
 
@@ -83,6 +87,9 @@ Remplacer l’exploration « pawn vert sur terrain » par un **voyage immersif d
 | P2-INS-13 | **Résonance de seuil (bol original)** | One-shot ambiant très court à l’entrée du tore (timbre bol synthétique, volume bas, toggle) — mood Culture Capital (`3ciMHwo1ApA`), **interdit** extrait Om / piste YouTube |
 | P2-INS-14 | **Oscillation brume clair / sombre** | Près d’un portail non visité : `FogExp2` density alterne ±5 % sur 4 s (cycle lent) — équilibre ombre-lumière (`3ciMHwo1ApA`), pas strobe ; `prefers-reduced-motion` désactive |
 | P2-INS-15 | **Vague theta (visuelle)** | Si mode contemplation + immobile ≥ 20 s : modulation très lente (`Stars` factor ou particules, période ~4–8 s) — mood theta (`admhD1UCmI8`), désactivable ; **sans** audio theta identifiable ni promesse abondance |
+| P2-INS-16 | **Brume qui s’éclaircit (approche)** | Première approche (&lt; 10 m) d’un tore **non visité** en session : `FogExp2` density −8 % pendant 3 s — mood clarté / brouillard mental (`oHMg7ZeWAxQ`), distinct P2-INS-8 (halo **après** visite) et P2-INS-14 (oscillation) |
+| P2-INS-17 | **Balayage lumière voyageur** | À 7/7 harmoniques en session (P1-INS-17) : animation emissive bas→haut sur `CosmicTraveler` (2 s, une fois) — whole body cleansing (`Zocof7wZF4c`) ; `prefers-reduced-motion` : halo fixe ; complète P2-INS-8, pas ton 999 Hz |
+| P2-INS-18 | **Silence post-traversée** | Au retour 3D après une visite 2D : HUD minimal (minimap + stats masqués) 10–12 s — métaphore « repos du silence » (`8kQgu2_1uEk`), désactivable ; pas promesse d’éveil, transe ni immortalité |
 
 ### P3 — Météorites, comètes, énigmes
 
@@ -154,7 +161,7 @@ Référence croisée à ajouter dans `alliance-ia-egor69.md` (section agents) lo
 
 ## Références
 
-- **Inspiration YouTube (mood univers / anneaux)** : [VERSE-INSPIRATION-YOUTUBE.md](./VERSE-INSPIRATION-YOUTUBE.md) — `pSXgXAqomMY` (méditation cœur / univers), `NxXzQLl2H5Y` (9 paliers séquentiels, écran noir), `OlV26ouCn5w` (963 Hz long, intention / gratitude), `4mJc9A1yOx0` (7 harmoniques, clarté / halo), `IFH1pi6xIk4` (stack 5 Hz, corps/esprit, ~3 h — **audio-first**), `3OvM4ycNVL8` (528+432, sommeil profond, mode nuit), `oHMg7ZeWAxQ` (852 Hz Inner Lotus, focalisation / brume à l’approche — **audio-first**), `r9GYYKrrLAg` (Schumann 7,83 + ancrage terrestre, pulse anneau sol — **audio-first**), `3ciMHwo1ApA` (Om ambient ~1 h, ombre-lumière, seuil respiration — **pas** vol spatial ni anneaux traversables)
+- **Inspiration YouTube (mood univers / anneaux)** : [VERSE-INSPIRATION-YOUTUBE.md](./VERSE-INSPIRATION-YOUTUBE.md) — synthèse en tête de fichier ; `pSXgXAqomMY`, `NxXzQLl2H5Y`, `OlV26ouCn5w`, `4mJc9A1yOx0`, `IFH1pi6xIk4`, `3OvM4ycNVL8`, `oHMg7ZeWAxQ` (852 Hz, clarté), `r9GYYKrrLAg` (Schumann, ancrage sol), `3ciMHwo1ApA` (Om, ombre-lumière), `deFpiq6EYzE` (rituel 60 s, transe profonde — **audio-first**, pas vol spatial ni anneaux gameplay), `Zocof7wZF4c` (999 Hz + 7 chakras corps entier ~2 h 21 — **renforce** P1-INS-9 / P2-INS-8 ; stock footage décoratif, pas flight rings), `8kQgu2_1uEk` (documentaire FR Évangile Marie — 7 passages narratifs, **pas** solfège ni vol cosmique)
 - Manuel utilisateur : `src/content/manuel-utilisation-igor.md` (section Verse)
 - QA : `docs/MANUAL-QA-PROTOCOL.md` (explorateur cosmique)
 - Glossaire : entrée « Verse 3D » dans `src/data/glossaryCentral.js`
