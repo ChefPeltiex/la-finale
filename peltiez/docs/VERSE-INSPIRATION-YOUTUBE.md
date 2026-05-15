@@ -242,3 +242,110 @@ Toujours les **tores** du Verse Egor69 (`realms.js`), pas les Anneaux de Tolkien
 - `docs/VERSE-COSMIC-NAV-DESIGN.md` — P1-INS-8, P2-INS-7 (distincts des vidéos 1–2)
 - `src/pages/WorldHub.jsx` — copy intention (micro-tweak P0)
 - `src/world/realms.js` — `ritualHint` déjà alignés « intention / question »
+
+---
+
+# Addendum — Vidéo 4 (suite « verse des anneaux »)
+
+**Lien :** [https://www.youtube.com/watch?v=4mJc9A1yOx0](https://www.youtube.com/watch?v=4mJc9A1yOx0)  
+**ID :** `4mJc9A1yOx0`  
+**Date de capture :** mai 2026  
+**Contexte utilisateur :** quatrième référence YouTube après [`pSXgXAqomMY`](#verse--inspiration-youtube-référence-utilisateur), [`NxXzQLl2H5Y`](#addendum--vidéo-2-suite-verse-des-anneaux) et [`OlV26ouCn5w`](#addendum--vidéo-3-suite-verse-des-anneaux) — accent **7 chakras**, **aura / purification**, **999 Hz** et visuels IA (MidJourney).
+
+---
+
+## Ce que la vidéo est réellement
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *Remove ALL Negative Energy • Attract Miracles & Good Luck • 7 Chakra Balance & Aura Cleansing* |
+| **Chaîne** | Abundance Energy |
+| **Durée** | 59:08 (~59 min) |
+| **Vues** | ~2,3 M (au moment de la capture) |
+| **Publié** | 2025-09-10 |
+| **Catégorie** | People & Blogs |
+| **Type** | Musique méditation / **999 Hz** + marketing **7 chakras**, aura, miracles — **pas** vol spatial, **pas** traversée d’anneaux cinématographiques, **pas** gameplay |
+
+### Thèmes publics (description chaîne)
+
+- **Purification énergétique** : « remove negative energy », nettoyage d’aura, dissolution de blocages — discours bien-être, **non** preuve médicale.
+- **7 chakras** : équilibre des centres d’énergie, harmonie corps/esprit — structure **à 7** (distincte des 9 paliers MindfulMed et du triptyque 3 Hz d’Inner Lotus).
+- **999 Hz** : ton mis en avant (miracles, haute vibration) — symbolique manifestation, pas science.
+- **Miracles & good luck** : attraction d’abondance, protection spirituelle — **à ne pas reprendre** en promesses produit.
+- **Visuel** : production Adobe Premiere / After Effects, images **MidJourney** — fond cosmique décoratif probable (contrairement à l’écran noir de la vidéo 2) ; toujours **sans** mécanique de jeu montrée.
+- **Usage** : casque, yeux fermés, respiration, visualisation de **lumière radiante** autour du corps.
+
+### Transcript
+
+Pas de narration structurante exploitable ; le contenu est **audio + visuels stock/IA** et copy marketing (liste de bénéfices aura/chakra). L’inspiration produit = **clarté**, **harmonie visuelle douce**, **arc à 7 seuils symboliques** — pas storyboard de vol dans les anneaux.
+
+### Note « verse des anneaux »
+
+Les **tores** du Verse Egor69 (`realms.js`) restent la métaphore utilisateur. Cette URL complète la série mood : après cœur/univers (1), 9 paliers (2) et intention longue (3), elle apporte **purification / lumière / septuple harmonie** — toujours **sans** copier MGM, Tolkien, ni promesses miracles.
+
+### Implémentation 3D (constat vidéo)
+
+| Élément recherché | Présent dans la vidéo ? | Note Verse |
+|-------------------|-------------------------|------------|
+| Traversée d’anneaux / rail | **Non** | Conserver P2-INS-1 (pulse tore) — portail narratif, pas runner |
+| Hyperspace / warp | **Non** | Pas de saut FTL ; transitions = fade/scale existants |
+| Échelle planétaire / anneaux géants | **Non** | Échelle déjà via fog, étoiles, tores (`COSMIC_NAV_V2`) |
+| Vol spatial / cockpit | **Non** | Third-person marche cosmique inchangé |
+
+---
+
+## Emprunter (mood & UX — sans copier l’œuvre)
+
+| Idée | Application Egor69 Verse |
+|------|---------------------------|
+| **Clarté après seuil** | Brume qui s’éclaircit brièvement près d’un portail visité — métaphore « aura cleansed », pas claim santé |
+| **Sept harmoniques visuelles** | 7 teintes douces sur HUD / minimap (groupes de realms), distinct des 9 paliers (vidéo 2) |
+| **Lumière radiante** | Halo lavande-or sur `CosmicTraveler` après visite — visualisation sobre, pas particules agressives |
+| **Ton positif sobre** | Copy HUD encourageant (« passage lumineux ») — jamais « miracles garantis » |
+| **Fonds cosmiques IA** | Inspiration **palette** dégradés ciel (indigo→violet) — **interdit** : reprendre visuels MidJourney de la chaîne |
+
+---
+
+## Ne pas copier (droits & promesses)
+
+| Risque | Action |
+|--------|--------|
+| **© Abundance Energy** | Aucun extrait audio 999 Hz, miniature, ni visuels MidJourney/Premiere de la vidéo |
+| **Miracles / good luck / manifestation** | Pas de promesse richesse, chance, ni « attract miracles » sur `/world` |
+| **7 chakras / aura cleansing / guérison** | Pas de claims médicaux, activation chakra, ni detox énergétique |
+| **999 Hz identifiable** | Pas de ton pur ni boucle reconnaissable — audio P2 original uniquement |
+| **Gameplay inexistant** | Ne pas annoncer vol dans les anneaux, hyperspace ou quête arcade sur cette URL |
+
+---
+
+## Comparaison vidéo 1 vs 2 vs 3 vs 4
+
+| Critère | `pSXgXAqomMY` | `NxXzQLl2H5Y` | `OlV26ouCn5w` | `4mJc9A1yOx0` |
+|---------|---------------|---------------|---------------|---------------|
+| **Chaîne** | Inner Lotus Music | MindfulMed | Meditative Mind | Abundance Energy |
+| **Durée** | ~71 min | ~46 min | ~6 h | **~59 min** |
+| **Structure** | 3 Hz (cœur / lâcher prise / univers) | **9 chapitres** | 1 ton 963 Hz continu | **7 chakras** + 999 Hz |
+| **Visuel** | Art chaîne | **Écran noir** | Branding / miniature | **Cosmos IA** (MidJourney) |
+| **Narratif** | Oneness, chakra cœur | Restauration par paliers | Question + LoA + gratitude | **Purification**, aura, miracles (marketing) |
+| **Pour les Anneaux** | Dérive, palette, `ritualHint` | Palier X/9, focus HUD | Intention, dérive AFK | **7 teintes**, clarté brume, halo voyageur |
+
+Les quatre vidéos confirment une **traversée symbolique ordonnée** dans l’univers Egor69 — mood méditatif et seuils narratifs — **aucune** ne montre de gameplay « anneaux » ou vol spatial.
+
+---
+
+## Cinq recommandations concrètes (vidéo 4)
+
+1. **Arc 7 harmoniques (P1)** : regrouper les realms en **7 segments** HUD (ou 7 couleurs d’accent sur la minimap) — miroir symbolique des 7 chakras **sans** nommer Hz, chakra ni guérison (distinct du X/9 de MindfulMed).
+2. **Clarté de brume (P2)** : à la première visite d’un tore dans une session, `fog`/`FogExp2` density −10 % pendant 2 s puis retour — métaphore purification, pas power-up gameplay.
+3. **Halo voyageur (P2)** : émissive `CosmicTraveler` +15 % pendant 12 s après retour 2D→3D — « radiant light » sans copier la vidéo.
+4. **Conserver P1-INS-6 à 8 et P2-INS-6/7** : paliers 9, focus portail, intention et dérive passive restent valides ; la vidéo 4 **ajoute** la couche 7-teintes + clarté, ne remplace pas l’arc 9 seuils.
+5. **Audio (P2)** : éviter ton 999 Hz ; boucle ambiante originale — interdit Abundance Energy et toute piste solfège identifiable (cf. P2-INS-4).
+
+---
+
+## Fichiers code liés (vidéo 4)
+
+- `docs/VERSE-COSMIC-NAV-DESIGN.md` — P1-INS-9, P2-INS-8 (distincts des vidéos 1–3)
+- `src/world/WorldScene.jsx` — fog, halo post-visite
+- `src/components/world/CosmicNavControls.jsx` — `CosmicTraveler` emissive
+- `src/pages/WorldHub.jsx` — segments 7 harmoniques HUD
