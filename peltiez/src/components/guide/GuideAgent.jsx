@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Compass, X, BookOpen, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -81,6 +81,14 @@ export default function GuideAgent() {
               <BookOpen className="h-3.5 w-3.5" />
               {COMPANION_DOC_PATH}
             </a>
+            <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-[11px]">
+              <Link to="/docs/investisseur" className="text-amber-300/90 hover:underline" onClick={() => setOpen(false)}>
+                Codex investisseur
+              </Link>
+              <Link to="/docs/rituel" className="text-[#D4AF37]/90 hover:underline" onClick={() => setOpen(false)}>
+                Codex rituel
+              </Link>
+            </div>
             <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between gap-2">
               <span className="text-[10px] text-white/50 uppercase tracking-wider">Affichage</span>
               <Button

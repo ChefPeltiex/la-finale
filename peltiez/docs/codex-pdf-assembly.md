@@ -143,5 +143,29 @@ npm run encyclopedie:placeholder-pdf
 
 - Fichier servi par Vite : `peltiez/public/encyclopedie.pdf` → URL **`/encyclopedie.pdf`**.
 - Bouton d’accueil : `peltiez/src/pages/Home.jsx` (libellé français, style codex noir/or).
+- **Codex web** : `/docs/investisseur` · `/docs/rituel` (sources `docs/codex-*.md` + miroir `public/docs/`).
 
 Voir aussi `codex-pdf-blueprint.md` §6 pour le schéma d’URL Vercel.
+
+---
+
+## 6. Export PDF — éditions investisseur et rituel (optionnel)
+
+Sources Markdown :
+
+| Édition | Source dépôt | URL statique |
+|---------|--------------|--------------|
+| Investisseur | `peltiez/docs/codex-investisseur.md` | `/docs/codex-investisseur.md` |
+| Rituel | `peltiez/docs/codex-rituel.md` | `/docs/codex-rituel.md` |
+
+**Export rapide (sans bloquer la release)** :
+
+1. **Pandoc** (si installé) — depuis `peltiez/` :
+   ```bash
+   pandoc docs/codex-investisseur.md -o public/docs/codex-investisseur.pdf --pdf-engine=xelatex -V geometry:margin=2cm
+   pandoc docs/codex-rituel.md -o public/docs/codex-rituel.pdf --pdf-engine=xelatex -V geometry:margin=2cm
+   ```
+2. **Canva / Word / Google Docs** — coller le Markdown ou importer le `.md`, mise en page **fond noir / titres or** pour le rituel, **sobre crème/or** pour l’investisseur (~2 pages).
+3. **Impression navigateur** — ouvrir `https://<domaine>/docs/investisseur` ou le fichier `.md` brut, **Imprimer → Enregistrer en PDF**.
+
+Après génération, servir les PDF depuis `public/docs/` si besoin de liens directs (ex. `/docs/codex-investisseur.pdf`). Les routes SPA restent la référence principale.

@@ -39,6 +39,16 @@ export function getGuideHintsForPath(pathname) {
       ],
     };
   }
+  if (pathname.startsWith("/docs/investisseur") || pathname.startsWith("/docs/rituel")) {
+    return {
+      title: "Codex",
+      steps: [
+        "Édition investisseur : résumé pour partenaires et pilote 90 jours.",
+        "Édition rituel : pratique personnelle — optionnelle, non imposée.",
+        "Télécharge l’encyclopédie PDF depuis l’accueil ou le bandeau de cette page.",
+      ],
+    };
+  }
   if (pathname.startsWith("/profil") || pathname.startsWith("/mon-univers")) {
     return {
       title: "Univers & profil",

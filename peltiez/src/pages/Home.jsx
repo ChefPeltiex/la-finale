@@ -2,6 +2,7 @@ import { useState, useEffect, lazy, Suspense } from "react";
 import SEOMeta from "@/components/SEOMeta";
 import { Link, useLocation } from "react-router-dom";
 import HomeHeroCards from "@/components/home/HomeHeroCards";
+import HomeEncyclopediasSection from "@/components/home/HomeEncyclopediasSection";
 import useDisplayMode from "@/hooks/useDisplayMode";
 import SovereigntyLaws from "@/components/SovereigntyLaws";
 import { useQuery } from "@tanstack/react-query";
@@ -16,7 +17,8 @@ import InteractiveMap from "@/components/InteractiveMap";
 import { SITE_ORIGIN, SITE_TAGLINE } from "@/lib/site";
 import { Package, ArrowRight, Recycle, Wrench, Gift, RefreshCw,
   Users, Star, Shield, Heart, Globe, CheckCircle,
-  Sparkles, HandHeart, MapPin, Crown, Earth, Building2, GraduationCap, Cpu, Infinity, Download
+  Sparkles, HandHeart, MapPin, Crown, Earth, Building2, GraduationCap, Cpu, Infinity, Download,
+  FileText, ScrollText
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -173,6 +175,8 @@ export default function Home() {
 
       <HomeHeroCards />
 
+      <HomeEncyclopediasSection />
+
       {/* Mur de la Victoire (Radar temps réel) */}
       <div id="accueil-radar" className="scroll-mt-28 lg:scroll-mt-8">
         <VictoryWall />
@@ -327,6 +331,12 @@ export default function Home() {
                   <span className="font-semibold tracking-tight">Télécharger l’encyclopédie (PDF)</span>
                 </a>
               </Button>
+              <Button asChild size="sm" variant="ghost" className="rounded-lg text-amber-200/80 hover:text-amber-100 text-xs">
+                <Link to="/docs/investisseur">Codex investisseur</Link>
+              </Button>
+              <Button asChild size="sm" variant="ghost" className="rounded-lg text-[#D4AF37]/80 hover:text-[#FFD700] text-xs">
+                <Link to="/docs/rituel">Codex rituel</Link>
+              </Button>
               <Button asChild size="lg" variant="outline" className="rounded-xl text-white hover:bg-white/10 text-base"
                 style={{ borderColor: "rgba(255,255,255,0.15)" }}>
                 <Link to="/marketplace">Explorer les annonces</Link>
@@ -339,6 +349,25 @@ export default function Home() {
                 style={{ borderColor: "rgba(167,139,250,0.35)" }}>
                 <Link to="/world"><Sparkles className="mr-2 h-4 w-4" /> Verse 3D · gameplay WebGL</Link>
               </Button>
+            </div>
+
+            <div id="accueil-codex" className="mb-8 grid gap-3 sm:grid-cols-2 max-w-2xl">
+              <Link
+                to="/docs/investisseur"
+                className="group rounded-xl border border-amber-500/40 bg-zinc-950/80 p-4 text-left transition hover:border-amber-400/70 hover:shadow-[0_0_24px_rgba(212,175,55,0.12)]"
+              >
+                <FileText className="h-5 w-5 text-amber-400 mb-2" aria-hidden />
+                <p className="font-semibold text-amber-100 text-sm">Codex investisseur</p>
+                <p className="text-xs text-white/55 mt-1 leading-relaxed">Résumé exécutif · pilote 90 jours · preuves vérifiables.</p>
+              </Link>
+              <Link
+                to="/docs/rituel"
+                className="group rounded-xl border border-[#D4AF37]/35 bg-black/60 p-4 text-left transition hover:border-[#FFD700]/50 hover:shadow-[0_0_20px_rgba(255,215,0,0.1)]"
+              >
+                <ScrollText className="h-5 w-5 text-[#FFD700] mb-2" aria-hidden />
+                <p className="font-semibold text-[#FFD700] text-sm">Codex rituel</p>
+                <p className="text-xs text-white/55 mt-1 leading-relaxed">Rituels courts · chants · Egor baisse la manette.</p>
+              </Link>
             </div>
 
             <div className="flex flex-wrap gap-6 text-white/35 text-xs font-bold">

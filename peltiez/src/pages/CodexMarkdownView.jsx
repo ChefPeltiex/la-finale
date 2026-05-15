@@ -1,0 +1,139 @@
+import { useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import { Link } from "react-router-dom";
+import SEOMeta from "@/components/SEOMeta";
+import { SITE_ORIGIN } from "@/lib/site";
+import { BookOpen, Download, FileText, Sparkles } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+const THEMES = {
+  investisseur: {
+    wrapper: "from-amber-950/30 via-zinc-950 to-emerald-950/20",
+    border: "border-amber-500/25",
+    accent: "text-amber-400",
+    badge: "Investisseur",
+    prose: "prose-invert prose-headings:text-amber-100 prose-a:text-emerald-400",
+  },
+  rituel: {
+    wrapper: "from-zinc-950 via-black to-amber-950/15",
+    border: "border-[#D4AF37]/30",
+    accent: "text-[#FFD700]",
+    badge: "Rituel",
+    prose: "prose-invert prose-headings:text-[#FFD700] prose-a:text-amber-300/90 prose-p:text-white/80",
+  },
+  magique: {
+    wrapper: "from-violet-950/25 via-zinc-950 to-amber-950/20",
+    border: "border-[#BF00FF]/30",
+    accent: "text-violet-300",
+    badge: "Magique · companion",
+    prose: "prose-invert prose-headings:text-violet-200 prose-a:text-[#FFD700]",
+  },
+};
+
+export default function CodexMarkdownView({
+  slug,
+  variant,
+  title,
+  description,
+  canonicalPath,
+}) {
+  const theme = THEMES[variant] ?? THEMES.investisseur;
+  const [md, setMd] = useState("");
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let cancelled = false;
+    setLoading(true);
+    setError(null);
+    fetch(`/docs/codex-${slug}.md`)
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.text();
+      })
+      .then((text) => {
+        if (!cancelled) setMd(text);
+      })
+      .catch((err) => {
+        if (!cancelled) setError(err.message);
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [slug]);
+
+  return (
+    <div className={cn("min-h-[70vh] bg-gradient-to-b pb-24", theme.wrapper)}>
+      <div className="container max-w-3xl py-8">
+        <SEOMeta title={title} description={description} canonicalUrl={`${SITE_ORIGIN}${canonicalPath}`} />
+
+        <div
+          className={cn(
+            "mb-8 flex flex-wrap items-center gap-3 rounded-2xl border bg-zinc-950/80 px-4 py-4 backdrop-blur-sm",
+            theme.border
+          )}
+        >
+          <BookOpen className={cn("h-8 w-8 shrink-0", theme.accent)} aria-hidden />
+          <div className="flex-1 min-w-[12rem]">
+            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">Codex · {theme.badge}</p>
+            <p className="text-sm text-white/70 leading-relaxed">{description}</p>
+          </div>
+          <div className="flex flex-wrap gap-2 text-xs">
+            <Link
+              to={variant === "investisseur" ? "/docs/rituel" : "/docs/investisseur"}
+              className="rounded-lg border border-white/15 px-3 py-1.5 text-white/80 hover:bg-white/10"
+            >
+              {variant === "investisseur" ? "Édition rituel" : "Édition investisseur"}
+            </Link>
+            <a
+              href="/encyclopedie.pdf"
+              download="encyclopedie.pdf"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-amber-500/40 px-3 py-1.5 text-amber-200 hover:bg-amber-500/10"
+            >
+              <Download className="h-3.5 w-3.5" />
+              Encyclopédie PDF
+            </a>
+            <a
+              href={`/docs/codex-${slug}.md`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 px-3 py-1.5 text-white/70 hover:bg-white/10"
+            >
+              <FileText className="h-3.5 w-3.5" />
+              Markdown brut
+            </a>
+          </div>
+        </div>
+
+        {loading && (
+          <p className="text-sm text-white/50 animate-pulse flex items-center gap-2">
+            <Sparkles className={cn("h-4 w-4", theme.accent)} />
+            Chargement du codex…
+          </p>
+        )}
+        {error && (
+          <p className="text-sm text-red-400">
+            Impossible de charger le document ({error}). Vérifier{" "}
+            <code className="text-xs">public/docs/codex-{slug}.md</code>.
+          </p>
+        )}
+
+        {!loading && !error && (
+          <article
+            className={cn(
+              "prose max-w-none rounded-2xl border p-6 sm:p-8 bg-black/40 backdrop-blur-sm",
+              theme.border,
+              theme.prose
+            )}
+          >
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{md}</ReactMarkdown>
+          </article>
+        )}
+      </div>
+    </div>
+  );
+}

@@ -155,6 +155,9 @@ const EnterpriseLearningHub = lazy(() => import("./pages/EnterpriseLearningHub.j
 const SovereignEcoHub = lazy(() => import("./pages/SovereignEcoHub.jsx"));
 const UeAiouyHub = lazy(() => import("./pages/UeAiouyHub.jsx"));
 const ManuelPlateforme = lazy(() => import("./pages/ManuelPlateforme.jsx"));
+const CodexInvestisseur = lazy(() => import("./pages/CodexInvestisseur.jsx"));
+const CodexRituel = lazy(() => import("./pages/CodexRituel.jsx"));
+const CodexMagique = lazy(() => import("./pages/CodexMagique.jsx"));
 const IntegrationsOutilsHub = lazy(() => import("./pages/IntegrationsOutilsHub.jsx"));
 const CarteSiteEtLiens = lazy(() => import("./pages/CarteSiteEtLiens.jsx"));
 const RepairHub = lazy(() => import("./pages/RepairHub.jsx"));
@@ -329,6 +332,9 @@ const AuthenticatedApp = () => {
         <Route path="/mon-univers" element={<MyUniverse />} />
         <Route path="/ue-aiouy" element={<UeAiouyHub />} />
         <Route path="/manuel" element={<ManuelPlateforme />} />
+        <Route path="/docs/investisseur" element={<CodexInvestisseur />} />
+        <Route path="/docs/rituel" element={<CodexRituel />} />
+        <Route path="/docs/magique" element={<CodexMagique />} />
         <Route path="/outils-integration" element={<IntegrationsOutilsHub />} />
         <Route path="/carte-site" element={<CarteSiteEtLiens />} />
         <Route path="/hub-fondations" element={<EnterpriseLearningHub />} />
