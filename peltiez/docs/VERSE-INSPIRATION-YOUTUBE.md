@@ -17,16 +17,20 @@
 | 11 | `admhD1UCmI8` | 136Hz - Find Your Inner Peace | ~71 min | **Audio** dominant (miniature / branding chaîne) | **Theta 4–8 Hz** — subconscious, créativité / « billionaire » (marketing abondance) | **Moyenne** — flux créatif | P1-INS-15 seuil theta créatif · P2-INS-15 vague theta visuelle |
 | 12 | `Zocof7wZF4c` | Chakra Healing Frequencies | ~2 h 21 | **Audio** + **visuel** stock (Envato / Storyblocks) | **7 chakras** + **999 Hz** — nettoyage **corps entier** / aura | **Moyenne** — affine arc 7 | P1-INS-17 corps entier 7/7 · P2-INS-17 balayage lumière (renforce P1-INS-9 / P2-INS-8) |
 | 13 | `8kQgu2_1uEk` | Évangile Interdit | ~47 min | **Narratif** (documentaire FR, voix-off — **pas** solfège ni ambient) | **7 niveaux** âme / gardiens + copy immortalité (marketing gnostique) | **Basse** — arc seuils narratif | P1-INS-18 sept passages · P2-INS-18 silence post-portail |
+| 14 | `1MGhGrKnGAk` | Hyper Focus | ~2 h 2 | **Audio** + **visuel nul** (protocole casque, binaural gamma 40 Hz) | **6 paliers** focus / deep work (timestamps ~20 min) | **Basse** — redondant (2, 5, 8, 10) | **Aucune tâche nouvelle** — renforce P1-INS-2/6/7/8, P2-INS-7 ; anti-claims ADHD / cognitive |
 | 15 | `svKgmiSTpG4` | Abundant Vibe Frequencies | ~11 h 55 | **Audio** pur (keywords richesse / 432 / 888) | **LoA** + flux financier + gratitude — piste ~12 h | **Basse** — redondant (3, 4, 5, 6, 8) | **Aucune tâche nouvelle** — renforce P1-INS-8 (anti-LoA), P2-INS-7 (session extrême) |
 | 16 | `HRCfnvxpYP8` | Malte Marten | ~1 h 2 | **Audio** dominant (handpan live) + **visuel** performance | **Handpan** acoustique + 999 Hz (titre) — silence / reset nerveux | **Basse** — redondant (4, 12, 7) | **Aucune tâche nouvelle** — renforce P1-INS-1/7, P2-INS-4/13 |
 | 17 | `iehH5fGK80A` | Lucid Dreaming Music | ~3 h 33 | **Audio-first** (branding méditation) | **963 Hz** + miracles / LoA (ES) — piste ~3,5 h | **Basse** — redondant (3, 4) | **Aucune tâche nouvelle** — renforce P1-INS-8, P2-INS-7 |
 | 18 | `hmq72SLWBt8` | Brainwave Healing | ~3 h | **Audio-first** (sleep / brainwave keywords) | **3 Hz** empilés (432+741+963) + guérison corps & âme | **Basse** — redondant (1, 5, 6, 8) | **Aucune tâche nouvelle** — renforce P1-INS-11, P2-INS-7 ; anti-claims guérison |
+| 19 | `S-_vF1RxMR0` | Abundance Energy | ~54 min | **Audio** + **visuel** cosmos IA (MidJourney, description chaîne) | **7 chakras** + **999 Hz** — nettoyage corps entier / miracles | **Basse** — redondant (4, 12) | **Aucune tâche nouvelle** — renforce P1-INS-9, P2-INS-8 ; anti-miracles |
 
-**Lecture priorité :** **Haute** = plusieurs URLs convergent (dérive lente, paliers, HUD minimal) — à traiter en P1 avant polish P2. **Moyenne** = affine un levier déjà couvert (session longue, nuit, stack, rituel). **Aucune** référence ne montre vol dans des anneaux ou rail spatial : priorité **jamais** sur gameplay arcade / hyperspace.
+**Lecture priorité :** **Haute** = plusieurs URLs convergent (dérive lente, paliers, HUD minimal) — à traiter en P1 avant polish P2. **Moyenne** = affine un levier déjà couvert (session longue, nuit, stack, rituel). **Basse** = redondant (focus, binaural, session ~2 h) — cataloguer sans nouveaux IDs. **Aucune** référence ne montre vol dans des anneaux ou rail spatial : priorité **jamais** sur gameplay arcade / hyperspace.
+
+**Motif playlist utilisateur :** les URLs partagées forment une série **mood homogène** (solfège, binaural, sommeil, focus). **Recommandation :** **pause** sur les nouvelles entrées doc YouTube et **implémentation P1** depuis la table [`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md) (arc HUD palier X/9, focus portail, minimap constellations) — **sauf** vidéo avec **contenu visuel espace / anneaux réel** (vol, rail, anneaux planétaires traversés). La **#14** (`1MGhGrKnGAk`) n’en apporte **pas**.
 
 **Audio vs visuel :** la majorité des entrées sont **musique / méditation** ; le Verse apporte le **décor 3D** (fog, étoiles, tores). Ne pas intégrer pistes YouTube (P2-INS-4). Visuels chaîne (IA, miniature) = **palette uniquement**, pas d’assets repris.
 
-**Phase 2 (produit)** : après **17** références utilisateur, le corpus reste majoritairement **solfège / méditation / ambient** (≈14/17) ; la **#13** (`8kQgu2_1uEk`) reste le seul **documentaire narratif** hors Hz — pas une ref vol cosmique. La **#17** (`iehH5fGK80A`) **confirme** le motif 963 Hz + LoA déjà couvert par la **#3** — **aucune** tâche P1/P2 supplémentaire. **Aucune** URL ne montre vol dans des anneaux ou rail spatial. Prioriser l’implémentation **P1 HUD + arc** ([`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md)) plutôt que d’ajouter des entrées YouTube, sauf refs **visuelles** (vol cosmique, anneaux traversés, hyperspace).
+**Phase 2 (produit)** : après **18** références utilisateur (dont **#14** focus gamma), le corpus reste majoritairement **solfège / méditation / ambient / binaural** ; la **#13** (`8kQgu2_1uEk`) reste le seul **documentaire narratif** hors Hz — pas une ref vol cosmique. Les **#14** et **#17** **confirment** des motifs déjà couverts (focus / paliers, 963 Hz + LoA) — **aucune** tâche P1/P2 supplémentaire. **Aucune** URL ne montre vol dans des anneaux ou rail spatial. Prioriser l’implémentation **P1 HUD + arc** ([`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md)) plutôt que d’ajouter des entrées YouTube, sauf refs **visuelles** (vol cosmique, anneaux traversés, hyperspace).
 
 ---
 
@@ -1474,7 +1478,122 @@ Les quinze références documentées confirment une **traversée symbolique cont
 | **P0 sprint** | P1-INS-1 | Mode contemplation (toggle vitesse) |
 | **P1 sprint** | P1-INS-4, P1-INS-8 | Constellations minimap + intention session (anti-LoA) |
 
-Le mood méditatif est **suffisamment documenté** ; la valeur utilisateur est dans le **Verse 3D** (`/world`), pas dans une 18ᵉ fiche audio redondante.
+Le mood méditatif est **suffisamment documenté** ; la valeur utilisateur est dans le **Verse 3D** (`/world`), pas dans une 19ᵉ fiche audio redondante.
+
+---
+
+# Addendum — Vidéo 16 (16ᵉ référence « verse des anneaux »)
+
+**Lien :** [https://www.youtube.com/watch?v=HRCfnvxpYP8](https://www.youtube.com/watch?v=HRCfnvxpYP8)  
+**ID :** `HRCfnvxpYP8`  
+**Date de capture :** mai 2026  
+**Contexte utilisateur :** seizième référence YouTube — **handpan live** (Malte Marten), marketing **999 Hz** et **régulation du système nerveux** ; accent **silence**, moins d’input, retour intérieur — **pas** vol spatial ni traversée d’anneaux cinématographiques.
+
+---
+
+## Ce que la vidéo est réellement
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *Nervous System Regulation (999 Hz) \| 1 hour handpan music* |
+| **Chaîne** | Malte Marten |
+| **Durée** | 1:02:01 (~1 h 2 min) |
+| **Vues** | ~1,6 M (au moment de la capture) |
+| **Publié** | 2026-04-24 |
+| **Catégorie** | Music |
+| **Instrument** | Handpan **C Aegean** (Ayasa Instruments) — performance acoustique live |
+| **Type** | Musique contemplative **handpan** (~1 h) — titre marketing **999 Hz** + copy **nervous system regulation** — **pas** gameplay, **pas** anneaux spatiaux, **pas** décor cosmique 3D montré en vol |
+
+### Mood visuel / audio
+
+| Dimension | Lecture produit |
+|-----------|-----------------|
+| **Visuel** | Performance **handpan** (musicien + instrument) — cadre naturel / intime typique Malte Marten. **Aucun** vol dans anneaux spatiaux, rail, cockpit, anneaux planétaires ni hyperspace. **Priorité vol / anneaux cosmiques : nulle** (pas une ref space rings). |
+| **Audio** | **Dominant** — percussion métallique douce, harmoniques acoustiques, réverbération naturelle ; écoute passive ~1 h, volume modéré. Le « 999 Hz » du titre est **marketing** (comme vidéos 4 et 12), pas un ton pur mesurable dans la performance handpan. |
+| **Structure** | **Piste continue** ~1 h — pas de chapitres YouTube, pas de stack Hz empilés ; variations mélodiques organiques au fil du morceau. |
+| **Narratif (description)** | Moins de bruit, moins d’action, moins d’input ; **silence** comme plein (retour, reset, calme mental) — **discours bien-être, non preuve médicale**. |
+| **Transcript** | Auto-transcription bruitée (« Heat », fragments musicaux) — pas de voix-off narrative ; inspiration = **rythme apaisant** et **réduction sensorielle**, pas storyboard 3D. |
+
+### Note « verse des anneaux »
+
+Les **tores** du Verse Egor69 (`realms.js`) restent la métaphore utilisateur (« Anneaux du Verse »). Cette URL **ne montre pas** d’anneaux cosmiques à traverser : elle renforce le mood **contemplatif**, **HUD minimal** et **audio original** (timbre percussion douce) — **sans** copier la performance Malte Marten ni promettre régulation nerveuse garantie.
+
+### Flag — espace / anneaux spatiaux ?
+
+| Question | Réponse |
+|----------|---------|
+| **Vol spatial / anneaux géants / rail ?** | **Non** — performance handpan, même famille que les refs méditation déjà cataloguées. |
+| **Visuel exploitable pour `/world` ?** | **Palette** chaude (or cuivré, nature) optionnelle — **pas** mécanique de vol ni assets chaîne. |
+| **Priorité impl. vol / space rings** | **Basse / nulle** — traiter comme catalogage mood, pas sprint gameplay. |
+
+### Implémentation 3D (constat vidéo)
+
+| Élément recherché | Présent dans la vidéo ? | Note Verse |
+|-------------------|-------------------------|------------|
+| Traversée d’anneaux / rail | **Non** | P2-INS-1 inchangé — portail narratif |
+| Vol spatial / cockpit | **Non** | Third-person marche cosmique |
+| Hyperspace / warp | **Non** | Transitions fade/scale existantes |
+| Anneaux planétaires / échelle NASA | **Non** | Échelle via fog, étoiles, tores (`COSMIC_NAV_V2`) |
+| Gameplay arcade | **Non** | Stillness, percussion douce — pas runner |
+
+**Priorité produit :** **basse** — redondant avec **999 Hz** (vidéos 4, 12), **focus / silence** (P1-INS-7, P2-INS-7), **percussion seuil** (P2-INS-13 bol). **Aucune nouvelle tâche P1/P2** dans `VERSE-COSMIC-NAV-DESIGN.md`.
+
+---
+
+## Emprunter (mood & UX — sans copier l’œuvre)
+
+| Idée | Application Egor69 Verse |
+|------|---------------------------|
+| **Moins d’input** | P1-INS-7 focus portail + P1-INS-1 contemplation — HUD réduit, pas « mode vide » plein écran |
+| **Silence productif** | P2-INS-18 silence post-portail (vidéo 13) ou dérive P2-INS-7 — métaphore repos après seuil |
+| **Session ~1 h** | Entre vidéo 9 (~1 h) et vidéo 4 (~59 min) — contemplation standard suffit |
+| **Timbre métallique doux** | P2-INS-13 bol original à l’approche du tore — **inspiration handpan**, jamais extrait Malte Marten |
+| **999 Hz (marketing)** | Déjà couvert P1-INS-9 / P2-INS-8 / P1-INS-17 — **ne pas** dupliquer |
+
+---
+
+## Ne pas copier (droits & promesses)
+
+| Risque | Action |
+|--------|--------|
+| **© Malte Marten** | Aucun extrait handpan, performance filmée, miniature, ni branding chaîne |
+| **Nervous system regulation / reset nerveux** | Pas de claims santé, thérapie, ni promesse régulation garantie sur `/world` |
+| **999 Hz** | Pas d’affichage Hz, ton pur, ni marketing « high vibration » |
+| **Ayasa / handpan visuel** | Pas de modèle 3D handpan ni photo instrument repris |
+| **Gameplay inexistant** | Ne pas annoncer vol dans les anneaux sur cette URL |
+
+---
+
+## Comparaison (sélection — redondance 999 Hz / silence)
+
+| Critère | `4mJc9A1yOx0` (v4) | `Zocof7wZF4c` (v12) | `HRCfnvxpYP8` (v16) |
+|---------|-------------------|---------------------|---------------------|
+| **999 Hz** | Titre / marketing | Titre + aura | **Titre** (handpan live, pas sine wave) |
+| **Durée** | ~59 min | ~2 h 21 | **~1 h 2** |
+| **Audio** | Solfège + cosmos IA | Solfège + stock visuel | **Handpan acoustique** live |
+| **Visuel** | Cosmos IA décoratif | Stock Envato | **Musicien + handpan** — pas space rings |
+| **Narratif** | Purification / miracles | Corps entier 7/7 | **Silence**, moins d’input, reset |
+| **Pour les Anneaux** | 7 teintes, halo | 7/7 + balayage lumière | **Rien de nouveau** — P1-INS-1/7, P2-INS-4/13 |
+
+Les seize références documentées à ce stade confirment une **traversée symbolique contemplative** dans le Verse — **aucune** ne montre de gameplay « anneaux » spatial ou vol cosmique.
+
+---
+
+## Cinq recommandations concrètes (vidéo 16)
+
+1. **Ne pas créer de tâches P1/P2 dédiées** : catalogage **traçabilité** uniquement ; le handpan affine le mood de P2-INS-13 (bol), pas une mécanique nouvelle.
+2. **Implémenter le bundle P1 sur `/world`** : P1-INS-2, P1-INS-6, P1-INS-7, P1-INS-1 en priorité — valeur utilisateur > 19ᵉ fiche YouTube.
+3. **Pause catalogage** (sauf ref visuelle gameplay) : même recommandation que vidéo 15 — mood méditatif **suffisant**.
+4. **Audio P2-INS-4** : si percussion douce, synthèse **originale** type bol/handpan — **interdit** piste Malte Marten.
+5. **Ne pas sur-prioriser vol P1** : cette URL n’apporte **aucune** ref anneaux spatiaux — priorité **nulle** pour space rings / rail shooter.
+
+---
+
+## Fichiers code liés (vidéo 16)
+
+- `docs/VERSE-COSMIC-NAV-DESIGN.md` — **aucune** ligne ajoutée (redondance)
+- `src/pages/WorldHub.jsx` — P1-INS-1, P1-INS-7 (déjà spécifiés)
+- `src/world/WorldScene.jsx` — P2-INS-7, P2-INS-13 (dérive + résonance seuil)
 
 ---
 
@@ -1589,4 +1708,112 @@ Les dix-sept références documentées confirment une **traversée symbolique co
 
 - `docs/VERSE-COSMIC-NAV-DESIGN.md` — **aucune** ligne ajoutée (redondance v3/v4)
 - `src/pages/WorldHub.jsx` — P1-INS-8 (intention anti-LoA)
+- `src/world/WorldScene.jsx` — P2-INS-7 (dérive passive)
+
+---
+
+# Addendum — Vidéo 14 (14ᵉ référence « verse des anneaux »)
+
+**Lien :** [https://www.youtube.com/watch?v=1MGhGrKnGAk](https://www.youtube.com/watch?v=1MGhGrKnGAk)  
+**ID :** `1MGhGrKnGAk`  
+**Date de capture :** mai 2026  
+**Contexte utilisateur :** quatorzième référence YouTube — accent **anti-procrastination**, **deep work**, **binaural gamma 40 Hz** (Hyper Focus) ; **pas** vol spatial ni traversée d’anneaux cinématographiques.
+
+---
+
+## Ce que la vidéo est réellement
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *Stop Procrastinating – Restore Focus & Start Working (2 Hours)* |
+| **Chaîne** | Hyper Focus |
+| **Durée** | 2:02:18 (~2 h 2 min) |
+| **Vues** | ~204 K (au moment de la capture) |
+| **Publié** | 2026-04-01 |
+| **Catégorie** | Music |
+| **Type** | **Protocole cognitif** audio — binaural **40 Hz gamma** (porteur 220–260 Hz) pour focus / deep work — **pas** gameplay, **pas** anneaux spatiaux, **pas** décor 3D montré |
+
+### Mood visuel / audio
+
+| Dimension | Lecture produit |
+|-----------|-----------------|
+| **Visuel** | **Aucun** décor narratif exploitable (protocole casque) — le Verse fournit la scène 3D ; la vidéo fournit **environnement de travail** audio uniquement. |
+| **Audio** | Piste continue ~120 min ; **casque obligatoire** (binaural) ; volume 15–20 % recommandé par la chaîne ; mots-clés procrastination, deep work, ADHD-friendly. |
+| **Structure** | **6 paliers** (~20 min) via timestamps : initiation → réduction résistance → attention stable → deep work → momentum → focus soutenu — proche du chapitrage MindfulMed (vidéo 2) mais angle **productivité**, pas restauration santé. |
+| **Narratif marketing** | « Cognitive protocol », initiation de tâche, clarté cognitive — **discours bien-être / productivité, non preuve médicale** ; mention ADHD-friendly sans diagnostic. |
+| **Transcript** | Description + timestamps ; pas de voix-off storyboard — inspiration = **démarrer l’action**, **soutenir l’attention**, pas vol dans les anneaux. |
+
+### Note « verse des anneaux »
+
+Les **tores** du Verse Egor69 (`realms.js`) restent la métaphore utilisateur. Cette URL renforce **commencer la traversée** (premier anneau / realm évité) et **maintenir le fil** sur ~2 h — **sans** copier le protocole Hyper Focus ni promettre guérison cognitive.
+
+### Flag — contenu visuel espace / anneaux ?
+
+| Question | Réponse |
+|----------|---------|
+| **Vol spatial / anneaux traversables / rail ?** | **Non** — audio-first, protocole casque. |
+| **Visuels cosmiques cinématographiques ?** | **Non** — pas de séquence spatiale. |
+| **Nouveau levier P1/P2 ?** | **Non** — convergence P1-INS-2 (prochain anneau), P1-INS-6 (paliers), P1-INS-7 (focus HUD), P1-INS-8 (intention honnête), P2-INS-7 (session ~2 h). |
+
+### Implémentation 3D (constat vidéo)
+
+| Élément recherché | Présent dans la vidéo ? | Note Verse |
+|-------------------|-------------------------|------------|
+| Traversée d’anneaux / rail | **Non** | P2-INS-1 inchangé — portail narratif |
+| Vol spatial / cockpit | **Non** | Third-person marche cosmique |
+| Hyperspace / warp | **Non** | Transitions fade/scale existantes |
+| Gameplay arcade | **Non** | Mood focus, pas runner |
+
+---
+
+## Emprunter (mood & UX — sans copier l’œuvre)
+
+| Idée | Application Egor69 Verse |
+|------|---------------------------|
+| **Commencer la traversée** | Bannière « Prochain anneau » (P1-INS-2) — métaphore anti-procrastination avant le premier `E` |
+| **Paliers ~20 min** | Arc X/6 ou réutilisation X/9 (P1-INS-6) — structure timestamps sans copy « cognitive protocol » |
+| **Focus portail** | HUD minimal à l’approche (P1-INS-7) — une seule intention, équivalent « notifications off » |
+| **Session ~2 h** | Dérive passive + sauvegarde (P2-INS-7) — pas pénalité AFK |
+| **Intention honnête** | Rappel localStorage (P1-INS-8) — **sans** promesse deep work garanti ni label ADHD |
+
+---
+
+## Ne pas copier (droits & promesses)
+
+| Risque | Action |
+|--------|--------|
+| **© Hyper Focus** | Aucun extrait binaural 40 Hz, miniature, ni branding chaîne |
+| **ADHD-friendly / cognitive protocol** | Pas de claim diagnostic, traitement TDAH, ni « protocole cognitif » certifié sur `/world` |
+| **40 Hz gamma / 220–260 Hz identifiables** | Pas de binaural simulé ni tons purs — audio P2 original uniquement (P2-INS-4) |
+| **Deep work garanti / anti-procrastination magique** | Pas de promesse productivité, momentum forcé, ni résultat travail |
+| **Gameplay inexistant** | Ne pas annoncer vol dans les anneaux sur cette URL |
+
+---
+
+## Comparaison (sélection — focus / paliers)
+
+| Critère | `NxXzQLl2H5Y` (v2) | `deFpiq6EYzE` (v10) | `1MGhGrKnGAk` (v14) |
+|---------|-------------------|---------------------|---------------------|
+| **Durée** | ~46 min | ~2 h 55 | **~2 h 2** |
+| **Structure** | **9 chapitres** séquentiels | Seuil 1 min + transe longue | **6 paliers** focus (~20 min) |
+| **Visuel** | **Écran noir** | Audio-first | **Audio-first** (casque) |
+| **Narratif** | Restauration paliers | Tiers œil / transe | **Anti-procrastination**, deep work |
+| **Pour les Anneaux** | Palier X/9, focus HUD | Rituel 60 s | **Rien de nouveau** — P1-INS-2/6/7/8, P2-INS-7 |
+
+---
+
+## Cinq recommandations concrètes (vidéo 14)
+
+1. **Ne pas créer de tâches P1/P2 dédiées** : catalogage **#14** pour traçabilité ; implémenter d’abord P1-INS-2, 6, 7, 8 et P2-INS-7 déjà listés.
+2. **Pause catalogage playlist** : voir note **motif playlist** en tête de fichier — prioriser HUD arc / focus portail / minimap constellations.
+3. **Anti-claims productivité** : pas de copy « stop procrastinating », « deep work mode », ni ADHD sur `/world`.
+4. **Session 120 min = P2-INS-7** : valider dérive passive et HUD atténué — pas badge « focus activé ».
+5. **Audio (P2-INS-4)** : ambiante originale très basse — interdit Hyper Focus et binaural 40 Hz reconnaissables.
+
+---
+
+## Fichiers code liés (vidéo 14)
+
+- `docs/VERSE-COSMIC-NAV-DESIGN.md` — **aucune** ligne P1/P2 ajoutée (redondance v2/v10)
+- `src/pages/WorldHub.jsx` — P1-INS-2, P1-INS-6, P1-INS-7, P1-INS-8
 - `src/world/WorldScene.jsx` — P2-INS-7 (dérive passive)
