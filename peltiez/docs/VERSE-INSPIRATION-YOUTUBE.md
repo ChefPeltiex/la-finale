@@ -16,6 +16,7 @@
 | 10 | `deFpiq6EYzE` | Inner Eye Awakening | ~2 h 55 | **Audio** dominant (pas de gameplay 3D) | Transe chamanique / **tiers œil** — seuil « 1 min » (marketing) | **Moyenne** — rituel seuil | P1 rituel 60 s · P2 transe 60 s (spec, distinct INS-16/17) |
 | 11 | `admhD1UCmI8` | 136Hz - Find Your Inner Peace | ~71 min | **Audio** dominant (miniature / branding chaîne) | **Theta 4–8 Hz** — subconscious, créativité / « billionaire » (marketing abondance) | **Moyenne** — flux créatif | P1-INS-15 seuil theta créatif · P2-INS-15 vague theta visuelle |
 | 12 | `Zocof7wZF4c` | Chakra Healing Frequencies | ~2 h 21 | **Audio** + **visuel** stock (Envato / Storyblocks) | **7 chakras** + **999 Hz** — nettoyage **corps entier** / aura | **Moyenne** — affine arc 7 | P1-INS-17 corps entier 7/7 · P2-INS-17 balayage lumière (renforce P1-INS-9 / P2-INS-8) |
+| 13 | `8kQgu2_1uEk` | Évangile Interdit | ~47 min | **Narratif** (documentaire FR, voix-off — **pas** solfège ni ambient) | **7 niveaux** âme / gardiens + copy immortalité (marketing gnostique) | **Basse** — arc seuils narratif | P1-INS-18 sept passages · P2-INS-18 silence post-portail |
 | 15 | `svKgmiSTpG4` | Abundant Vibe Frequencies | ~11 h 55 | **Audio** pur (keywords richesse / 432 / 888) | **LoA** + flux financier + gratitude — piste ~12 h | **Basse** — redondant (3, 4, 5, 6, 8) | **Aucune tâche nouvelle** — renforce P1-INS-8 (anti-LoA), P2-INS-7 (session extrême) |
 
 **Lecture priorité :** **Haute** = plusieurs URLs convergent (dérive lente, paliers, HUD minimal) — à traiter en P1 avant polish P2. **Moyenne** = affine un levier déjà couvert (session longue, nuit, stack, rituel). **Aucune** référence ne montre vol dans des anneaux ou rail spatial : priorité **jamais** sur gameplay arcade / hyperspace.
@@ -699,6 +700,119 @@ Les sept entrées documentées confirment une **traversée symbolique contemplat
 
 ---
 
+# Addendum — Vidéo 11 (11ᵉ référence « verse des anneaux »)
+
+**Lien :** [https://www.youtube.com/watch?v=admhD1UCmI8](https://www.youtube.com/watch?v=admhD1UCmI8)  
+**ID :** `admhD1UCmI8`  
+**Date de capture :** mai 2026  
+**Contexte utilisateur :** onzième référence YouTube — accent **ondes theta 4–8 Hz**, **subconscious reprogramming**, marketing **« billionaire brain wave »** / abondance / prospérité (chaîne 136Hz — Find Your Inner Peace).
+
+---
+
+## Ce que la vidéo est réellement
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *Theta Billionaire Brain Wave 💎 Unlock Abundance, Genius & Prosperity* |
+| **Chaîne** | 136Hz - Find Your Inner Peace |
+| **Durée** | 1:11:10 (~71 min) |
+| **Vues** | ~475,8 K (au moment de la capture) |
+| **Type** | Musique méditation / **theta brain waves** (4–8 Hz) + copy richesse, génie, prospérité — **pas** vol spatial, **pas** traversée d’anneaux cinématographiques, **pas** gameplay |
+
+### Mood visuel / audio
+
+| Dimension | Lecture produit |
+|-----------|-----------------|
+| **Visuel** | Miniature / branding chaîne (bien-être, gemmes 💎 en titre) — **audio-first** ; pas de séquence 3D, rail spatial, ni anneaux planétaires traversables. Le Verse fournit le décor cosmique ; la vidéo fournit **rythme theta** et intention marketing. |
+| **Audio** | Soundscape long ; ondes theta (4–8 Hz) comme « portail subconscient » ; casque recommandé ; volume modéré ; mots-clés créativité, intuition, visionnaires, stress release. |
+| **Structure** | **Piste continue** ~71 min — même ordre de durée que vidéos 1 et 8 ; distincte des 9 chapitres (2), du ton 6 h (3), des stacks 5/7 Hz (4–5), du duo nuit (6), Schumann (8), Om (9), transe 1 min (10). |
+| **Narratif marketing** | Reprogrammation subconsciente pour richesse / succès, états « genius », magnet abondance — **discours bien-être + manifestation, non preuve médicale**. |
+| **Transcript** | Pas de voix-off narrative structurante — inspiration = **état theta**, **créativité fluide**, **confiance au processus** — pas storyboard de vol dans les anneaux. |
+
+### Note « verse des anneaux »
+
+Les **tores** du Verse Egor69 (`realms.js`) restent la métaphore utilisateur. Cette URL complète la série par un fil **subconscient ouvert / créativité** avant ou pendant la traversée d’un portail — **sans** MGM, Tolkien, ni promesses billionaire / richesse.
+
+### Flag — première référence « espace / anneaux » réels ?
+
+| Question | Réponse |
+|----------|---------|
+| **Vol spatial / cockpit / traversée d’anneaux géants ?** | **Non** — même famille que les références 1–10 (méditation, mood, Hz symboliques). |
+| **Visuels cosmiques décoratifs type anneaux spatiaux ?** | **Non** — miniature bien-être / gemmes, pas cinématique Saturne ou rail. |
+| **Priorité P1 vol / anneaux gameplay** | **Basse** — ne pas marquer **Haute** pour implémentation flight/rings sur cette URL. |
+| **Conclusion** | **Ce n’est pas** la référence attendue avec **anneaux spatiaux traversables** ; le Verse 3D reste la seule scène où l’utilisateur **marche vers les tores**. |
+
+### Implémentation 3D (constat vidéo)
+
+| Élément recherché | Présent dans la vidéo ? | Note Verse |
+|-------------------|-------------------------|------------|
+| Traversée d’anneaux / rail | **Non** | P2-INS-1 inchangé — portail narratif |
+| Vol spatial / cockpit | **Non** | Third-person marche cosmique |
+| Hyperspace / warp | **Non** | Transitions fade/scale existantes |
+| Anneaux planétaires / échelle NASA | **Non** | Échelle via fog, étoiles, tores (`COSMIC_NAV_V2`) |
+| Gameplay arcade | **Non** | Theta = stillness + créativité, pas runner |
+
+**Priorité produit :** mood theta, session ~70 min, flux créatif — **pas** recommandations vol / traversée arcade.
+
+---
+
+## Emprunter (mood & UX — sans copier l’œuvre)
+
+| Idée | Application Egor69 Verse |
+|------|---------------------------|
+| **État theta / créativité** | Renforcer mode contemplation (P1-INS-1) + copy « intention créative » près du tore — métaphore subconscious ouvert, pas billionaire |
+| **Visionnaires / intuition** | `ritualHint` orientés résolution / horizon — équivalent « genius state » sans promesse richesse |
+| **Session ~71 min** | Compatible dérive passive (P2-INS-7) et focus portail (P1-INS-7) — même durée que vidéos 1 et 8 |
+| **Confiance au processus** | Pas de punition AFK ; progression douce — miroir « abundance flows naturally » sans LoA |
+| **Calme profond** | Respiration + marche lente — stress release traduit en UX, pas Hz |
+
+---
+
+## Ne pas copier (droits & promesses)
+
+| Risque | Action |
+|--------|--------|
+| **© 136Hz - Find Your Inner Peace** | Aucun extrait « Theta Billionaire Brain Wave », miniature, ni branding chaîne |
+| **Billionaire / wealth / prosperity / manifest** | Pas de promesse richesse, génie garanti, magnet abondance, ni reprogrammation subconsciente sur `/world` |
+| **Theta 4–8 Hz identifiable** | Pas de ton pur theta, binaural simulé, ni affichage Hz sur HUD |
+| **Subconscious reprogramming** | Pas de claims modification croyances / habitudes par le jeu |
+| **Gameplay inexistant** | Ne pas annoncer vol dans les anneaux sur cette URL |
+
+---
+
+## Comparaison (sélection — vidéos 1, 8, 10, 11)
+
+| Critère | `pSXgXAqomMY` | `r9GYYKrrLAg` | `deFpiq6EYzE` | `admhD1UCmI8` |
+|---------|---------------|---------------|---------------|---------------|
+| **Durée** | ~71 min | ~71 min | ~2 h 55 | **~71 min** |
+| **Structure** | 3 Hz fusionnés (cœur / univers) | Schumann 7,83 + binaural | Seuil 1 min + transe longue | **Theta 4–8 Hz** continu |
+| **Visuel** | Art chaîne | Audio-first (bien-être) | Audio-first | **Audio-first** (gemmes / branding) |
+| **Narratif** | Oneness, chakra cœur | Ancrage Terre, grounding | Tiers œil / transe | **Subconscious**, créativité, abundance (marketing) |
+| **Pour les Anneaux** | Dérive, `ritualHint` | Pulse anneau sol, ancrage | Rituel 60 s, transe | **Seuil theta créatif**, vague visuelle lente |
+
+Les onze références documentées à ce stade confirment une **traversée symbolique contemplative** dans le Verse — **aucune** ne montre de gameplay « vol dans les anneaux » spatial.
+
+---
+
+## Cinq recommandations concrètes (vidéo 11)
+
+1. **Seuil theta créatif (P1-INS-15)** : en mode contemplation, à &lt; 8 m d’un tore, HUD une ligne « laissez une intention créative émerger » — miroir theta / visionnaires, **sans** billionaire ni manifestation.
+2. **Vague theta visuelle (P2-INS-15)** : immobile ≥ 20 s en contemplation : modulation très lente des étoiles (période ~4–8 s) — mood theta, `prefers-reduced-motion` désactive.
+3. **Conserver P1-INS-1 et P2-INS-7** : contemplation et dérive couvrent la session ~71 min ; la vidéo 11 **affine** le flux créatif, ne remplace pas l’arc 9 paliers ni l’ancrage Schumann (8).
+4. **Ne pas sur-prioriser vol P1** : cette URL n’ajoute **pas** de référence visuelle vol/anneaux spatiaux — priorité implémentation = mood + seuil créatif, pas rail shooter.
+5. **Audio (P2-INS-4)** : boucle ambiante originale, timbre doux évolutif — interdit 136Hz et theta 4–8 Hz reconnaissables.
+
+---
+
+## Fichiers code liés (vidéo 11)
+
+- `docs/VERSE-COSMIC-NAV-DESIGN.md` — P1-INS-15, P2-INS-15 (distincts des vidéos 1–10)
+- `src/pages/WorldHub.jsx` — copy seuil theta créatif
+- `src/world/WorldScene.jsx` — modulation `Stars` mode contemplation
+- `src/world/realms.js` — `ritualHint` créativité / horizon
+
+---
+
 # Addendum — Vidéo 8 (8ᵉ référence « verse des anneaux »)
 
 **Lien :** [https://www.youtube.com/watch?v=r9GYYKrrLAg](https://www.youtube.com/watch?v=r9GYYKrrLAg)  
@@ -1347,7 +1461,7 @@ Les quinze références documentées confirment une **traversée symbolique cont
 **Pause du catalogage** des références YouTube **sauf** si une future URL montre explicitement :
 
 - un **espace visuel** exploitable (cockpit, nébuleuse traversée, anneaux géants filmés en vol), ou  
-- du **vol / rail / traversée d’anneaux** comme référence gameplay (aucune des 15 entrées à ce jour).
+- du **vol / rail / traversée d’anneaux** comme référence gameplay (aucune des 17 entrées à ce jour).
 
 **Prochain sprint dev recommandé :** **implémenter** les tâches **P1-INS** déjà spécifiées dans `VERSE-COSMIC-NAV-DESIGN.md`, en priorité :
 

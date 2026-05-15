@@ -90,6 +90,7 @@ Remplacer l’exploration « pawn vert sur terrain » par un **voyage immersif d
 | P2-INS-16 | **Brume qui s’éclaircit (approche)** | Première approche (&lt; 10 m) d’un tore **non visité** en session : `FogExp2` density −8 % pendant 3 s — mood clarté / brouillard mental (`oHMg7ZeWAxQ`), distinct P2-INS-8 (halo **après** visite) et P2-INS-14 (oscillation) |
 | P2-INS-17 | **Balayage lumière voyageur** | À 7/7 harmoniques en session (P1-INS-17) : animation emissive bas→haut sur `CosmicTraveler` (2 s, une fois) — whole body cleansing (`Zocof7wZF4c`) ; `prefers-reduced-motion` : halo fixe ; complète P2-INS-8, pas ton 999 Hz |
 | P2-INS-18 | **Silence post-traversée** | Au retour 3D après une visite 2D : HUD minimal (minimap + stats masqués) 10–12 s — métaphore « repos du silence » (`8kQgu2_1uEk`), désactivable ; pas promesse d’éveil, transe ni immortalité |
+| P2-INS-19 | **Transe cosmique profonde** | Après **60 s** sans input (avant palier 90 s de P2-INS-7) : vignette légère + pulse emissive tore ~0,5 Hz + HUD minimal — mood transe (`deFpiq6EYzE`), désactivable ; pas copy « DMT », pas audio third-eye identifiable |
 
 ### P3 — Météorites, comètes, énigmes
 
