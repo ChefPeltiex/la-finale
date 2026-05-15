@@ -27,6 +27,7 @@
 | 21 | `QIHBDFEZFoI` | Gaia Meditation Healing Music | ~1 h 11 | **Audio** pur (branding chaîne / visuel décoratif) | **1111 Hz** + synchronicité + LoA / miracles instantanés — piste continue | **Basse** — redondant (3, 4, 5, 17, 20) | **Aucune tâche nouvelle** — renforce P1-INS-8 (anti-LoA), P2-INS-7 ; anti-claims miracles / 1111 |
 | 22 | `mT4EB3fQ9lg` | Inner Lotus Music | ~3 h 33 | **Audio** pur (art chaîne — **pas** vol cosmique filmé) | **888 + 88 + 8 Hz** pyramide abondance / endorphines (LoA) | **Basse** — redondant (1, 15, 20) | **Aucune tâche nouvelle** — renforce P1-INS-8 ; **pas** ref visuelle anneaux |
 | 23 | `4uR5yfLkxjA` | Inner Healing | ~71 min | **Audio-first** (branding bien-être / visuel décoratif) | **432 Hz** + **111 Hz** + LoA / miracles / abondance — piste ~71 min | **Basse** — redondant (8, 15, 20, 3) | **Aucune tâche nouvelle** — renforce P1-INS-8 (anti-LoA), P1-INS-14 (432, déjà #8) ; anti-miracles / richesse |
+| 24 | `0WOsrKnRkZg` | Frequency Harmony | ~3 h 34 | **Audio** pur (branding chaîne — **pas** vol cosmique) | **1111 Hz** « Frequency of God » + miracles / manifestation / guérison — piste ~3,5 h | **Basse** — redondant (3, 17, **21**, 23) | **Aucune tâche nouvelle** — renforce P1-INS-8, P2-INS-7 ; anti-miracles / 11:11 |
 
 ### Référence style PRIMARY — « style pour tout »
 
@@ -43,6 +44,7 @@
 | **Éléments scène** | Nébuleuse → fog indigo · étoiles → champ dense · anneaux → tore portail + anneau sol (`WorldScene`). |
 | **vs `mT4EB3fQ9lg` (#22)** | Méditation **888 Hz + LoA** — **ne supplante pas** le PRIMARY. **Maître style global : `hL-BvWLPseE`.** |
 | **vs `4uR5yfLkxjA` (#23)** | Méditation **432 Hz + 111 Hz + LoA** (Inner Healing) — **ne supplante pas** le PRIMARY ; redondant **#8**. |
+| **vs `0WOsrKnRkZg` (#24)** | **1111 Hz** + miracles / « Frequency of God » (Frequency Harmony, ~3,5 h) — **ne supplante pas** le PRIMARY ni `BrHMdqe0vzM@3745s` ; **duplique** **#21** (autre chaîne 1111). **Maître style global : `hL-BvWLPseE`.** |
 
 **Lecture priorité :** **Haute** = plusieurs URLs convergent (dérive lente, paliers, HUD minimal) — à traiter en P1 avant polish P2. **Moyenne** = affine un levier déjà couvert (session longue, nuit, stack, rituel). **Basse** = redondant (focus, binaural, session ~2 h) — cataloguer sans nouveaux IDs. **Aucune** référence ne montre vol dans des anneaux ou rail spatial : priorité **jamais** sur gameplay arcade / hyperspace.
 
@@ -50,7 +52,7 @@
 
 **Audio vs visuel :** la majorité des entrées sont **musique / méditation** ; le Verse apporte le **décor 3D** (fog, étoiles, tores). Ne pas intégrer pistes YouTube (P2-INS-4). Visuels chaîne (IA, miniature) = **palette uniquement**, pas d’assets repris.
 
-**Phase 2 (produit) — catalogue suffisant :** après **23** références playlist + **PRIMARY** `hL-BvWLPseE`, le corpus reste **solfège / méditation / LoA** (≈20/23). La **#23** (`4uR5yfLkxjA`, Inner Healing **432 + LoA**) **duplique** **#8**, **#15**, **#20** — **aucune** tâche P1/P2 ; **pas** de co-primary « vol cosmique anneaux ». **Style maître pour tout le Verse :** `hL-BvWLPseE` (Planet Earth II OST), pas les URLs Hz. **Aucune** URL playlist ne montre vol dans des anneaux ou rail spatial. **Pause catalogage** sauf refs **visuelles** (vol cosmique, anneaux traversés, hyperspace). **Top 3 P1** : **P1-INS-2**, **P1-INS-6** + **P1-INS-7**, **P1-INS-1**. Détail : [`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md).
+**Phase 2 (produit) — catalogue suffisant :** après **24** références playlist + **PRIMARY** `hL-BvWLPseE`, le corpus reste **solfège / méditation / LoA** (≈21/24). La **#24** (`0WOsrKnRkZg`, Frequency Harmony **1111 Hz** ~3,5 h) **duplique** **#21** (Gaia 1111) et le motif miracles/LoA (**#3**, **#17**, **#20**) — **aucune** tâche P1/P2 ; **pas** de co-primary visuel. **Style maître :** `hL-BvWLPseE` — **#24** n’éclipse ni `mT4EB3fQ9lg` (#22) ni `BrHMdqe0vzM@3745s`. **Pause catalogage** sauf refs **visuelles** (vol cosmique, anneaux traversés). **Top 3 P1** : **P1-INS-2**, **P1-INS-6** + **P1-INS-7**, **P1-INS-1**. Tester **`/world`** après landing **`be0f2a8e`** (`VERSE_STYLE` + HUD). Détail : [`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md).
 
 ---
 
@@ -2290,3 +2292,78 @@ Après **22** références playlist + **PRIMARY** `hL-BvWLPseE`, le mood **médi
 
 - `src/config/cosmicNav.js` — PRIMARY `hL-BvWLPseE`, `VERSE_STYLE`
 - `src/world/WorldScene.jsx` — inchangé
+
+---
+
+# Addendum — Vidéo 24 (`0WOsrKnRkZg` · audio 1111 Hz — rejet PRIMARY)
+
+**Lien :** [https://www.youtube.com/watch?v=0WOsrKnRkZg](https://www.youtube.com/watch?v=0WOsrKnRkZg)  
+**ID :** `0WOsrKnRkZg`  
+**Date de capture :** mai 2026  
+**Contexte utilisateur :** lien partagé pour style Verse — **classé audio méditation**, pas visuel cosmique.
+
+---
+
+## Ce que la vidéo est réellement
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *Just Listen! Frequency Of God 1111 Hz: Unexplainable Miracles Will Extend To Your Entire Life* |
+| **Chaîne** | Frequency Harmony |
+| **Durée** | 3:33:32 (~3 h 34) |
+| **Vues** | ~8,2 M (capture mai 2026) |
+| **Publié** | 2024-09-18 |
+| **Type** | Méditation **1111 Hz** + miracles / manifestation / guérison divine — **pas** vol spatial, **pas** anneaux, **pas** gameplay |
+
+### Audio vs visuel cosmique
+
+| Dimension | Constat |
+|-----------|---------|
+| **Audio** | **Dominant** — piste ~3,5 h, écoute passive « Just Listen », marketing « Frequency of God ». |
+| **Visuel** | Miniature / branding spiritualité — **pas** vol, rail, anneaux planétaires, cockpit, hyperspace. |
+| **Verdict** | **Méditation audio** — **pas** référence « style pour tout » visuel. |
+
+### Flag — supplante PRIMARY / co-primary ?
+
+| Question | Réponse |
+|----------|---------|
+| **Vol spatial / anneaux filmés ?** | **Non** |
+| **Supplante `hL-BvWLPseE` ?** | **Non** |
+| **Supplante `mT4EB3fQ9lg` (#22) ou `BrHMdqe0vzM@3745s` ?** | **Non** |
+| **Tweak `VERSE_STYLE` ?** | **Non** |
+
+**Priorité :** **Basse** — redondant **#21** (1111 Hz, ~1 h), **#3**, **#17**, **#20**.
+
+---
+
+## Comparaison — redondance 1111 Hz
+
+| Critère | `QIHBDFEZFoI` (#21) | `0WOsrKnRkZg` (#24) |
+|---------|---------------------|---------------------|
+| **Chaîne** | Gaia Meditation | **Frequency Harmony** |
+| **Durée** | ~1 h 11 | **~3 h 34** |
+| **Narratif** | 1111 + miracles instantanés | **Frequency of God** + miracles / 11:11 |
+| **Pour le Verse** | Anti-LoA, dérive | **P2-INS-7** session longue uniquement |
+
+---
+
+## Ne pas copier · recommandations (vidéo 24)
+
+| Risque | Action |
+|--------|--------|
+| **© Frequency Harmony** | Aucun extrait 1111 Hz ni miniature |
+| **Miracles / Frequency of God / divine healing** | Pas de claims sur `/world` (P1-INS-8) |
+| **11:11 / wealth keywords** | Pas de codes anges en UI |
+
+1. **PRIMARY inchangé** — `hL-BvWLPseE` + `VERSE_STYLE` existant.  
+2. **Aucune tâche P1/P2** — catalogage **#24** traçabilité.  
+3. **Tester `/world`** après commit **`be0f2a8e`** (impl. palette + HUD P1) — cette URL n’ajoute **aucun** levier visuel.  
+4. **Pause catalogage** — prochaine URL = vol/anneaux **visibles**.  
+5. **Sprint code** P1-INS-2 → 6 → 7 → 1, pas une 25ᵉ piste Hz.
+
+---
+
+## Fichiers code liés (vidéo 24)
+
+- `src/config/cosmicNav.js` — **inchangé** par #24
+- `src/world/WorldScene.jsx` — P2-INS-7 (dérive ~3,5 h)
