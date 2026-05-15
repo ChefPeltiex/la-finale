@@ -60,6 +60,7 @@ function layoutIsFullBleed(pathname) {
 const NAV_ITEMS = [
   // Core
   { path: "/", label: "Accueil", icon: Home, color: "text-emerald-400" },
+  { path: "/", label: "Encyclopédies & Codex", icon: BookOpen, color: "text-[#FFD700]", hash: "accueil-encyclopedies" },
   { path: "/world", label: "🌐 Verse 3D", icon: Sparkles, color: "text-cyan-300" },
   { path: "/marketplace", label: "Marketplace", icon: ShoppingBag, color: "text-blue-400" },
   { path: "/profil", label: "Mon Profil", icon: User, color: "text-pink-400" },

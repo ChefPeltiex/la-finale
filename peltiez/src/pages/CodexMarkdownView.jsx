@@ -83,12 +83,24 @@ export default function CodexMarkdownView({
             <p className="text-sm text-white/70 leading-relaxed">{description}</p>
           </div>
           <div className="flex flex-wrap gap-2 text-xs">
-            <Link
-              to={variant === "investisseur" ? "/docs/rituel" : "/docs/investisseur"}
-              className="rounded-lg border border-white/15 px-3 py-1.5 text-white/80 hover:bg-white/10"
-            >
-              {variant === "investisseur" ? "Édition rituel" : "Édition investisseur"}
-            </Link>
+            {variant !== "magique" && (
+              <Link
+                to={variant === "investisseur" ? "/docs/rituel" : "/docs/investisseur"}
+                className="rounded-lg border border-white/15 px-3 py-1.5 text-white/80 hover:bg-white/10"
+              >
+                {variant === "investisseur" ? "Édition rituel" : "Édition investisseur"}
+              </Link>
+            )}
+            {variant === "magique" && (
+              <>
+                <Link to="/docs/investisseur" className="rounded-lg border border-white/15 px-3 py-1.5 text-white/80 hover:bg-white/10">
+                  Investisseur
+                </Link>
+                <Link to="/docs/rituel" className="rounded-lg border border-white/15 px-3 py-1.5 text-white/80 hover:bg-white/10">
+                  Rituel
+                </Link>
+              </>
+            )}
             <a
               href="/encyclopedie.pdf"
               download="encyclopedie.pdf"

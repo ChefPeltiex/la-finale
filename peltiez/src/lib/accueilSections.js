@@ -3,6 +3,7 @@
  * Utiliser avec React Router : `to={linkToHomeSection('accueil-radar')}` ou `to={linkToHomeSection('#accueil-radar')}`.
  */
 export const ACCUEIL_SECTION_LINKS = [
+  { id: "accueil-encyclopedies", label: "Encyclopédies & Codex" },
   { id: "accueil-radar", label: "Mur radar" },
   { id: "accueil-planete", label: "Planète 3D" },
   { id: "accueil-cosmos", label: "Cosmos de valeurs" },

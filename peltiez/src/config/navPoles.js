@@ -70,6 +70,7 @@ const PATH_POLE_RULES = [
   { prefix: "/contact", pole: "explorer" },
   { prefix: "/outils-integration", pole: "explorer" },
   { prefix: "/encyclopedie-biblique", pole: "explorer" },
+  { prefix: "/docs", pole: "explorer" },
   { prefix: "/world", pole: "explorer" },
   { prefix: "/pantheon", pole: "explorer" },
   { prefix: "/fauna-hub", pole: "explorer" },
