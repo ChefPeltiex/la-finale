@@ -1824,7 +1824,7 @@ Les dix-huit références documentées confirment une **traversée symbolique co
 **Pause du catalogage** des références YouTube **sauf** si une future URL montre explicitement :
 
 - un **espace visuel** exploitable (cockpit, nébuleuse traversée, anneaux géants filmés en vol), ou  
-- du **vol / rail / traversée d’anneaux** comme référence gameplay (aucune des **18** entrées à ce jour, dont `hmq72SLWBt8`).
+- du **vol / rail / traversée d’anneaux** comme référence gameplay (aucune des **20** entrées à ce jour, dont `SiiSBQErMMQ`).
 
 **Prochain sprint dev recommandé — bundle P1 (implémentation)** :
 
@@ -1945,3 +1945,135 @@ Les **tores** du Verse Egor69 (`realms.js`) restent la métaphore utilisateur. C
 - `docs/VERSE-COSMIC-NAV-DESIGN.md` — **aucune** ligne P1/P2 ajoutée (redondance v2/v10)
 - `src/pages/WorldHub.jsx` — P1-INS-2, P1-INS-6, P1-INS-7, P1-INS-8
 - `src/world/WorldScene.jsx` — P2-INS-7 (dérive passive)
+
+---
+
+# Addendum — Vidéo 19 (19ᵉ référence « verse des anneaux »)
+
+**Lien :** [https://www.youtube.com/watch?v=S-_vF1RxMR0](https://www.youtube.com/watch?v=S-_vF1RxMR0)  
+**ID :** `S-_vF1RxMR0`  
+**Date de capture :** mai 2026  
+**Contexte utilisateur :** dix-neuvième référence YouTube — **999 Hz** + **7 chakras**, nettoyage corps entier / miracles (Abundance Energy, même famille que vidéo 4) ; **pas** vol spatial, **pas** traversée d’anneaux, **pas** gameplay.
+
+---
+
+## Ce que la vidéo est réellement
+
+| Champ | Valeur |
+|-------|--------|
+| **Titre** | *Frequency 999Hz Opens All 7 Chakras, attracts miracles, Whole Body Energy Cleansing, Chakra Healing* |
+| **Chaîne** | Abundance Energy |
+| **Durée** | 54:14 (~54 min) |
+| **Vues** | ~4,7 M (au moment de la capture) |
+| **Publié** | 2025-08-12 |
+| **Catégorie** | People & Blogs |
+| **Type** | Musique méditation / **999 Hz** + marketing **7 chakras**, aura, miracles, nettoyage corps entier — **pas** vol spatial, **pas** traversée d’anneaux cinématographiques, **pas** gameplay |
+
+### Thèmes publics (description chaîne)
+
+- **999 Hz** : fréquence de « complétion », transformation, connexion divine (symbolique marketing) — **même ton** que vidéo 4 (`4mJc9A1yOx0`) et vidéo 12 (`Zocof7wZF4c`, Chakra Healing Frequencies).
+- **7 chakras** : ouverture et alignement des sept centres — structure **à 7** déjà couverte par P1-INS-9 (harmoniques 7).
+- **Whole body energy cleansing** : nettoyage aura / blocages — discours bien-être, **non** preuve médicale.
+- **Attract miracles / divine opportunities** : manifestation, bénédictions — **à ne pas reprendre** en promesses produit (cf. P1-INS-8 anti-LoA).
+- **Visuel** : production **Adobe Premiere / After Effects**, images **Photoshop / MidJourney** (description chaîne) — fond **cosmos IA décoratif** (palette), **sans** mécanique de vol ni anneaux traversables filmés.
+- **Usage** : position assise ou allongée, yeux fermés, visualisation de chaque chakra qui « s’illumine » — écoute passive ~54 min, casque recommandé.
+
+### Transcript
+
+Pas de narration structurante exploitable ; contenu **audio + visuels stock/IA** et copy marketing (liste bénéfices chakra / miracles). L’inspiration produit = **harmonie 7 teintes**, **clarté brume**, **halo voyageur** — déjà spécifiés pour la vidéo 4 — **pas** storyboard de vol dans les anneaux.
+
+### Note « verse des anneaux »
+
+Les **tores** du Verse Egor69 (`realms.js`) restent la métaphore utilisateur (« Anneaux du Verse »). Cette URL **ne change pas** la priorité produit : elle **duplique** la vidéo 4 (même chaîne, même arc 7+999) avec un titre orienté « whole body cleansing » — **sans** MGM, Tolkien, ni promesses miracles.
+
+### Flag — contenu visuel espace / anneaux ?
+
+| Question | Réponse |
+|----------|---------|
+| **Vol spatial / cockpit / rail ?** | **Non** — méditation audio + décor IA statique. |
+| **Anneaux planétaires / traversée filmée ?** | **Non** — métaphore chakra, pas anneaux spatiaux. |
+| **Hyperspace / warp ?** | **Non** |
+| **Priorité vol P1 (space rings) ?** | **Nulle** — **Basse** ; redondant v4 + v12 |
+
+### Implémentation 3D (constat vidéo)
+
+| Élément recherché | Présent dans la vidéo ? | Note Verse |
+|-------------------|-------------------------|------------|
+| Traversée d’anneaux / rail | **Non** | P2-INS-1 inchangé — portail narratif |
+| Vol spatial / cockpit | **Non** | Third-person marche cosmique |
+| Hyperspace / warp | **Non** | Transitions fade/scale existantes |
+| Anneaux planétaires / échelle NASA | **Non** | Échelle via fog, étoiles, tores (`COSMIC_NAV_V2`) |
+| Visuels cosmos / space flight | **Non** (décor IA passif) | **Palette** indigo/violet uniquement — pas flight sim |
+
+**Priorité produit :** **basse** — **redondant** avec vidéo 4 (Abundance Energy, 7 chakras + 999 Hz) et vidéo 12 (7 chakras + 999 Hz, corps entier). **Aucune nouvelle tâche P1/P2** dans `VERSE-COSMIC-NAV-DESIGN.md`.
+
+---
+
+## Emprunter (mood & UX — sans copier l’œuvre)
+
+| Idée | Application Egor69 Verse |
+|------|---------------------------|
+| **Sept harmoniques** | P1-INS-9 — 7 teintes HUD / minimap (déjà vidéo 4) |
+| **Clarté / purification** | P2-INS-8 — brume −10 % près portail visité (déjà vidéo 4) |
+| **Corps entier 7/7** | P1-INS-17 — balayage symbolique post-arc (déjà vidéo 12) |
+| **Intention honnête** | P1-INS-8 — **anti-miracles** / anti-LoA explicite |
+| **Session ~1 h** | Mode contemplation (P1-INS-1) + focus portail (P1-INS-7) |
+
+---
+
+## Ne pas copier (droits & promesses)
+
+| Risque | Action |
+|--------|--------|
+| **© Abundance Energy** | Aucun extrait 999 Hz, miniature, ni visuels MidJourney/Premiere de la vidéo |
+| **Miracles / attract miracles / divine healing** | Pas de promesse miracles, guérison divine, ni « whole body cleansing » sur `/world` |
+| **7 chakras / aura / energy cleansing** | Pas de claims médicaux, activation chakra, ni detox énergétique |
+| **999 Hz identifiable** | Pas de ton pur ni boucle reconnaissable — audio P2 original uniquement (P2-INS-4) |
+| **Gameplay inexistant** | Ne pas annoncer vol dans les anneaux, hyperspace ou quête arcade sur cette URL |
+
+---
+
+## Comparaison (sélection — redondance 7 chakras + 999 Hz)
+
+| Critère | `4mJc9A1yOx0` (v4) | `Zocof7wZF4c` (v12) | `S-_vF1RxMR0` (v19) |
+|---------|-------------------|----------------------|----------------------|
+| **Chaîne** | Abundance Energy | Chakra Healing Frequencies | **Abundance Energy** |
+| **Durée** | ~59 min | ~2 h 21 | **~54 min** |
+| **Structure** | **7 chakras** + 999 Hz | **7 chakras** + 999 Hz, corps entier | **7 chakras** + 999 Hz, corps entier |
+| **Visuel** | Cosmos IA (MidJourney) | Stock Envato / Storyblocks | **Cosmos IA** (MidJourney, description) |
+| **Narratif** | Purification, miracles | Nettoyage aura | **Whole body cleansing**, miracles |
+| **Pour les Anneaux** | 7 teintes, halo, brume | Corps entier 7/7 | **Rien de nouveau** — P1-INS-9, P2-INS-8, P1-INS-17 |
+
+Les dix-neuf références documentées confirment une **traversée symbolique contemplative** — **aucune** ne montre de gameplay « anneaux » spatial ou vol cosmique.
+
+---
+
+## Cinq recommandations concrètes (vidéo 19)
+
+1. **Ne pas créer de tâches P1/P2 dédiées** : catalogage **#19** pour traçabilité uniquement ; implémenter le **top 3 P1** en tête de fichier.
+2. **Catalogue suffisant** : ≈16/19 entrées méditation/solfège — **pause** sur nouvelles URLs audio sauf ref **visuelle** vol/anneaux réels.
+3. **Renforcer P1-INS-8 (anti-LoA)** : « attracts miracles » = contre-exemple marketing — intention sobre avant tore.
+4. **Ne pas afficher 999 Hz / chakra** : barrière commune aux refs solfège — inchangée.
+5. **Prioriser le sprint code** : P1-INS-2 → P1-INS-6/7 → P1-INS-1 sur `/world` — pas une 20ᵉ fiche redondante.
+
+---
+
+## Fichiers code liés (vidéo 19)
+
+- `docs/VERSE-COSMIC-NAV-DESIGN.md` — **aucune** ligne ajoutée (redondance v4/v12)
+- `src/pages/WorldHub.jsx` — P1-INS-9, P1-INS-17, P1-INS-8 (déjà spécifiés)
+- `src/world/WorldScene.jsx` — P2-INS-8 (clarté brume)
+
+---
+
+## Pied de page — catalogue suffisant (#19)
+
+Après **19** références utilisateur, le mood **méditation / Hz / ambient** est **documenté**. **Pause catalogage** sauf URL avec **vol cosmique visuel** ou **traversée d’anneaux** gameplay.
+
+**Top 3 P1 — implémentation immédiate :**
+
+| # | Tâche | Livrable |
+|---|-------|----------|
+| 1 | **P1-INS-2** | HUD « Prochain anneau » + `ritualHint` |
+| 2 | **P1-INS-6** + **P1-INS-7** | Palier X/9 + focus portail |
+| 3 | **P1-INS-1** | Mode contemplation (toggle vitesse) |
