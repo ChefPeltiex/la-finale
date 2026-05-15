@@ -11,6 +11,8 @@ import WorldMinimap from "@/components/world/WorldMinimap";
 import WorldLorePanel from "@/components/world/WorldLorePanel";
 import VerseGrimoire from "@/components/world/VerseGrimoire";
 import { loadUniversePreferences } from "@/lib/universePreferences";
+import { useWorldKeyboard } from "@/components/world/CosmicNavControls";
+import { COSMIC_NAV_V2 } from "@/config/cosmicNav";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
@@ -27,9 +29,9 @@ export default function WorldHub() {
 
   const controls = useMemo(
     () => [
-      { k: "Clic", d: "capturer la souris pour regarder autour" },
-      { k: "W A S D", d: "déplacement" },
-      { k: "Shift", d: "sprint" },
+      { k: "Clic canvas", d: "verrouiller la souris (regard FPS / orbite)" },
+      { k: "W A S D · ↑ ↓ ← →", d: "avancer / reculer / strafe (↑ = vers l’horizon, pas vers le bas)" },
+      { k: "Shift", d: "sprint cosmique" },
       { k: "Espace", d: "saut ; maintenir = glisse" },
       { k: "E / Entrée", d: "traverser un portail quand vous êtes proche" },
       { k: "Interface 2D", d: "retour à la navigation classique" },
@@ -37,20 +39,7 @@ export default function WorldHub() {
     []
   );
 
-  useEffect(() => {
-    const down = (e) => {
-      keysRef.current[e.code] = true;
-    };
-    const up = (e) => {
-      keysRef.current[e.code] = false;
-    };
-    window.addEventListener("keydown", down);
-    window.addEventListener("keyup", up);
-    return () => {
-      window.removeEventListener("keydown", down);
-      window.removeEventListener("keyup", up);
-    };
-  }, []);
+  useWorldKeyboard(keysRef);
 
   useEffect(() => {
     const refreshProgress = () => setVisitedCount(getVisitedRealmCount());
@@ -145,7 +134,8 @@ export default function WorldHub() {
               </div>
             ) : null}
             <p className="mt-2 text-sm text-white/80 leading-snug">
-              Open world · clic canvas pour la souris · <span className="text-white font-semibold">W A S D</span> ·{" "}
+              {COSMIC_NAV_V2 ? "Voyage cosmique · " : "Open world · "}
+              clic canvas pour la souris · <span className="text-white font-semibold">W A S D</span> ou flèches ·{" "}
               <span className="text-emerald-300">Shift</span> sprint · <span className="text-sky-300">Espace</span> saut /
               maintien en l’air (glisse) · <span className="text-amber-300">E</span> portail
             </p>

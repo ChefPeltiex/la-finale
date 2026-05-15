@@ -7,10 +7,17 @@ import { terrainHeight, createTerrainGeometry } from "./terrain";
 import { maybePersistPlayer } from "@/lib/worldPersistence";
 import { useWakeLock } from "@/hooks/useWakeLock";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
+import { COSMIC_NAV_V2, COSMIC_WALK_SPEED, COSMIC_SPRINT_MULT } from "@/config/cosmicNav";
+import {
+  PlayerAvatar,
+  usePointerLockLook,
+  movementVectorsFromYaw,
+  collectMoveInput,
+} from "@/components/world/CosmicNavControls";
 
 const EYE_GROUND = 0.96;
-const WALK_SPEED = 15;
-const SPRINT_MULT = 1.95;
+const WALK_SPEED = COSMIC_WALK_SPEED;
+const SPRINT_MULT = COSMIC_SPRINT_MULT;
 const WORLD_LIMIT = 58;
 const PROXIMITY_RAD = 5.8;
 const CAM_DIST = 9.2;
@@ -135,21 +142,6 @@ function ProximityWatcher({ playerPosRef, onProximityChange }) {
   return null;
 }
 
-function PlayerAvatar({ playerPosRef }) {
-  const mesh = useRef(null);
-  useFrame(() => {
-    if (!mesh.current) return;
-    mesh.current.position.copy(playerPosRef.current);
-    mesh.current.position.y -= EYE_GROUND * 0.35;
-  });
-  return (
-    <mesh ref={mesh} castShadow>
-      <capsuleGeometry args={[0.38, 1.05, 6, 12]} />
-      <meshStandardMaterial color="#34d399" metalness={0.35} roughness={0.45} emissive="#064e3b" emissiveIntensity={0.25} />
-    </mesh>
-  );
-}
-
 function OpenWorldController({ keysRef, initialCheckpoint, playerPosRef, playerTelemetryRef }) {
   const { camera, gl } = useThree();
   const velY = useRef(0);
@@ -173,34 +165,14 @@ function OpenWorldController({ keysRef, initialCheckpoint, playerPosRef, playerT
     yaw.current = initialCheckpoint.rotY ?? 0;
   }, [initialCheckpoint]);
 
-  useEffect(() => {
-    const canvas = gl.domElement;
-    const lock = () => canvas.requestPointerLock();
-    canvas.addEventListener("click", lock);
-    const onMove = (e) => {
-      if (document.pointerLockElement !== canvas) return;
-      yaw.current -= e.movementX * 0.0021;
-      pitch.current -= e.movementY * 0.00165;
-      pitch.current = THREE.MathUtils.clamp(pitch.current, 0.14, 1.28);
-    };
-    document.addEventListener("mousemove", onMove);
-    return () => {
-      canvas.removeEventListener("click", lock);
-      document.removeEventListener("mousemove", onMove);
-    };
-  }, [gl]);
+  usePointerLockLook(gl, yaw, pitch);
 
   useFrame((_, delta) => {
     const k = keysRef.current;
     let speed = WALK_SPEED * (k.ShiftLeft || k.ShiftRight ? SPRINT_MULT : 1);
 
-    const forward = new THREE.Vector3(-Math.sin(yaw.current), 0, -Math.cos(yaw.current));
-    const right = new THREE.Vector3(Math.cos(yaw.current), 0, -Math.sin(yaw.current));
-    const move = new THREE.Vector3(0, 0, 0);
-    if (k.KeyW || k.ArrowUp) move.add(forward);
-    if (k.KeyS || k.ArrowDown) move.sub(forward);
-    if (k.KeyD || k.ArrowRight) move.add(right);
-    if (k.KeyA || k.ArrowLeft) move.sub(right);
+    const { forward, right } = movementVectorsFromYaw(yaw.current);
+    const move = collectMoveInput(k, forward, right);
 
     if (move.lengthSq() > 0) {
       move.normalize().multiplyScalar(speed * delta);
@@ -303,8 +275,8 @@ function SceneContent({
   return (
     <>
       <ImmersiveSleepMitigations maxDpr={maxCanvasDpr} />
-      <color attach="background" args={["#030712"]} />
-      <fog attach="fog" args={["#030712", 35, 120]} />
+      <color attach="background" args={[COSMIC_NAV_V2 ? "#020617" : "#030712"]} />
+      <fog attach="fog" args={[COSMIC_NAV_V2 ? "#0f172a" : "#030712", 40, COSMIC_NAV_V2 ? 140 : 120]} />
 
       <ambientLight intensity={0.28} />
       <directionalLight position={[50, 70, 28]} intensity={1.45} color="#fefce8" />
@@ -320,8 +292,23 @@ function SceneContent({
         turbidity={7}
         rayleigh={1.25}
       />
-      <Stars radius={320} depth={85} count={reducedMotion ? 3200 : 11000} factor={3.8} saturation={0.12} fade speed={0.55} />
-      <Sparkles count={reducedMotion ? 140 : 520} scale={[100, 28, 100]} size={3.2} speed={0.38} opacity={0.5} color="#a7f3d0" />
+      <Stars
+        radius={COSMIC_NAV_V2 ? 380 : 320}
+        depth={85}
+        count={reducedMotion ? 3200 : COSMIC_NAV_V2 ? 14000 : 11000}
+        factor={COSMIC_NAV_V2 ? 4.2 : 3.8}
+        saturation={COSMIC_NAV_V2 ? 0.22 : 0.12}
+        fade
+        speed={COSMIC_NAV_V2 ? 0.72 : 0.55}
+      />
+      <Sparkles
+        count={reducedMotion ? 140 : COSMIC_NAV_V2 ? 680 : 520}
+        scale={[100, 28, 100]}
+        size={COSMIC_NAV_V2 ? 3.6 : 3.2}
+        speed={0.38}
+        opacity={0.5}
+        color={COSMIC_NAV_V2 ? "#c4b5fd" : "#a7f3d0"}
+      />
 
       <Environment preset="night" environmentIntensity={0.88} />
 
@@ -329,7 +316,12 @@ function SceneContent({
 
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.04, 0]}>
         <ringGeometry args={[8, 145, 128]} />
-        <meshBasicMaterial color="#10b981" transparent opacity={0.06} depthWrite={false} />
+        <meshBasicMaterial
+          color={COSMIC_NAV_V2 ? "#6366f1" : "#10b981"}
+          transparent
+          opacity={COSMIC_NAV_V2 ? 0.09 : 0.06}
+          depthWrite={false}
+        />
       </mesh>
 
       {WORLD_REALMS.map((realm) => (
