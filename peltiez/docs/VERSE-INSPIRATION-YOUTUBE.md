@@ -24,6 +24,7 @@
 | 18 | `hmq72SLWBt8` | Brainwave Healing | ~3 h | **Audio-first** (sleep / brainwave keywords) | **3 Hz** empilés (432+741+963) + guérison corps & âme | **Basse** — redondant (1, 5, 6, 8) | **Aucune tâche nouvelle** — renforce P1-INS-11, P2-INS-7 ; anti-claims guérison |
 | 19 | `S-_vF1RxMR0` | Abundance Energy | ~54 min | **Audio** + **visuel** cosmos IA (MidJourney, description chaîne) | **7 chakras** + **999 Hz** — nettoyage corps entier / miracles | **Basse** — redondant (4, 12) | **Aucune tâche nouvelle** — renforce P1-INS-9, P2-INS-8 ; anti-miracles |
 | 20 | `SiiSBQErMMQ` | Circle of Attraction | ~1 h 11 | **Audio** pur (miniature / branding chaîne) | **432 + 777 Hz** + LoA millionnaire — rituel **7 min** (marketing) | **Basse** — redondant (3, 4, 5, 11, 15) | **Aucune tâche nouvelle** — renforce P1-INS-8 (anti-LoA), P2-INS-7 ; anti-claims richesse / 777 |
+| 21 | `QIHBDFEZFoI` | Gaia Meditation Healing Music | ~1 h 11 | **Audio** pur (branding chaîne / visuel décoratif) | **1111 Hz** + synchronicité + LoA / miracles instantanés — piste continue | **Basse** — redondant (3, 4, 5, 17, 20) | **Aucune tâche nouvelle** — renforce P1-INS-8 (anti-LoA), P2-INS-7 ; anti-claims miracles / 1111 |
 
 **Lecture priorité :** **Haute** = plusieurs URLs convergent (dérive lente, paliers, HUD minimal) — à traiter en P1 avant polish P2. **Moyenne** = affine un levier déjà couvert (session longue, nuit, stack, rituel). **Basse** = redondant (focus, binaural, session ~2 h) — cataloguer sans nouveaux IDs. **Aucune** référence ne montre vol dans des anneaux ou rail spatial : priorité **jamais** sur gameplay arcade / hyperspace.
 
@@ -31,7 +32,7 @@
 
 **Audio vs visuel :** la majorité des entrées sont **musique / méditation** ; le Verse apporte le **décor 3D** (fog, étoiles, tores). Ne pas intégrer pistes YouTube (P2-INS-4). Visuels chaîne (IA, miniature) = **palette uniquement**, pas d’assets repris.
 
-**Phase 2 (produit) — catalogue suffisant :** après **19** références utilisateur, le corpus reste majoritairement **solfège / méditation / ambient / binaural** (≈16/19) ; la **#13** (`8kQgu2_1uEk`) reste le seul **documentaire narratif** hors Hz — pas une ref vol cosmique. La **#17** (`iehH5fGK80A`, Lucid Dreaming Music) **confirme** le motif **963 Hz + LoA / miracles** déjà couvert par la **#3** et la **#4** — **aucune** tâche P1/P2 supplémentaire. La **#19** (`S-_vF1RxMR0`) **duplique** la **#4** et la **#12** (7 chakras + 999 Hz, Abundance Energy) — **aucune** tâche P1/P2 supplémentaire. **Aucune** URL ne montre vol dans des anneaux ou rail spatial. **Pause catalogage** YouTube sauf refs **visuelles** (vol cosmique, anneaux traversés, hyperspace). **Top 3 P1 à implémenter en code** : **P1-INS-2** (HUD « Prochain anneau »), **P1-INS-6** + **P1-INS-7** (palier X/9 + focus portail), **P1-INS-1** (mode contemplation). Détail : [`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md).
+**Phase 2 (produit) — catalogue suffisant :** après **21** références utilisateur, le corpus reste majoritairement **solfège / méditation / ambient / binaural** (≈18/21) ; la **#13** (`8kQgu2_1uEk`) reste le seul **documentaire narratif** hors Hz — pas une ref vol cosmique. La **#21** (`QIHBDFEZFoI`, Gaia Meditation) **confirme** le motif **LoA + miracles + Hz marketing** (1111) déjà couvert par **#3**, **#4**, **#17**, **#20** — **aucune** tâche P1/P2 supplémentaire. **Aucune** URL ne montre vol dans des anneaux ou rail spatial. **Pause catalogage** YouTube sauf refs **visuelles** (vol cosmique, anneaux traversés, hyperspace). **Top 3 P1 à implémenter en code** : **P1-INS-2** (HUD « Prochain anneau »), **P1-INS-6** + **P1-INS-7** (palier X/9 + focus portail), **P1-INS-1** (mode contemplation). Détail : [`VERSE-COSMIC-NAV-DESIGN.md`](./VERSE-COSMIC-NAV-DESIGN.md).
 
 ---
 
@@ -1825,7 +1826,7 @@ Les dix-huit références documentées confirment une **traversée symbolique co
 **Pause du catalogage** des références YouTube **sauf** si une future URL montre explicitement :
 
 - un **espace visuel** exploitable (cockpit, nébuleuse traversée, anneaux géants filmés en vol), ou  
-- du **vol / rail / traversée d’anneaux** comme référence gameplay (aucune des **20** entrées à ce jour, dont `SiiSBQErMMQ`).
+- du **vol / rail / traversée d’anneaux** comme référence gameplay (aucune des **21** entrées à ce jour, dont `QIHBDFEZFoI`).
 
 **Prochain sprint dev recommandé — bundle P1 (implémentation)** :
 
@@ -2191,4 +2192,4 @@ Les dix-neuf références documentées confirment une **traversée symbolique co
 
 ## Pied de page — catalogue suffisant (#19)
 
-Après **19** références utilisateur, le mood **méditation / Hz / ambient** est **documenté**. **Pause catalogage** sauf URL avec **vol cosmique visuel** ou **traversée d’anneaux** gameplay. Voir **#20** (`SiiSBQErMMQ`) et section **« Catalogue suffisant — prioriser implémentation »** en tête de fichier (top 5 P1).
+Après **21** références utilisateur, le mood **méditation / Hz / ambient** est **documenté**. **Pause catalogage** sauf URL avec **vol cosmique visuel** ou **traversée d’anneaux** gameplay. Voir **#21** (`QIHBDFEZFoI`) et section **« Catalogue suffisant — prioriser implémentation »** en tête de fichier (top 3 P1).
