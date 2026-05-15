@@ -2,7 +2,6 @@
   "name": "egor69",
   "private": true,
   "version": "0.0.0",
-  "packageManager": "pnpm@9.0.0",
   "description": "**Welcome to IGOR**",
   "main": "eslint.config.js",
   "directories": {
