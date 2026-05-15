@@ -80,29 +80,62 @@ Les sections **8–12** du blueprint (chapitres IV–VII, glossaire, annexes, co
 2. Importer les PNG par page dans l’ordre du §1.
 3. Exporter en PDF **standard** ou **impression** selon l’usage ; vérifier le poids (compression) pour Vercel.
 
-### Option C — Script Node (placeholder uniquement dans ce dépôt)
+### Option C — Script Node (recommandé pour `public/encyclopedie.pdf`)
 
-Le dépôt inclut **`peltiez/scripts/generate-codex-encyclopedie-placeholder-pdf.mjs`** : il régénère un PDF **minimal** (fond noir, texte or) dans `peltiez/public/encyclopedie.pdf` via **pdfkit** (déjà en `devDependencies`). Cela sert à valider l’URL `/encyclopedie.pdf` sur Vercel jusqu’au remplacement par l’export InDesign/Canva.
+| Script | Rôle | Sortie |
+|--------|------|--------|
+| **`assemble-codex-encyclopedie-full.mjs`** | Texte Codex Magique + fiches `companion.md` + PNG (ordre blueprint) | `public/encyclopedie.pdf` |
+| **`assemble-codex-pdf.mjs`** | PNG seuls (aperçu rapide) | `docs/encyclopedie/codex-assembled-preview.pdf` |
+| **`generate-codex-encyclopedie-placeholder-pdf.mjs`** | Placeholder minimal (1 page) | `public/encyclopedie.pdf` |
 
-**Ne pas** monter une chaîne lourde d’assemblage image-par-image ici sans besoin : pour un PDF final à partir des PNG, InDesign/Affinity restent le chemin le plus fiable ; un script maison pourrait s’appuyer sur `sharp` + `pdfkit` (déjà présents) pour une **automatisation future**, documentée séparément si l’équipe la mandate.
+**Texte source** : `peltiez/docs/codex-magique-egor69.md` (formules, protocoles IA, mapping [IMAGE n] → PNG).
 
 ---
 
-## 4. Commande utile
+## 4. Commandes utiles
+
+### Encyclopédie complète (texte + images)
 
 ```bash
 cd peltiez
-pnpm run encyclopedie:placeholder-pdf
+npm run encyclopedie:assemble-full
 ```
 
-Sans pnpm (ou si Corepack échoue) :
+Équivalent :
 
 ```bash
 cd peltiez
-node ./scripts/generate-codex-encyclopedie-placeholder-pdf.mjs
+node ./scripts/assemble-codex-encyclopedie-full.mjs
 ```
 
-Puis remplacer manuellement `public/encyclopedie.pdf` par le PDF final avant une release « contenu figé ».
+Options :
+
+```bash
+# Test rapide (3 planches + pages texte)
+node ./scripts/assemble-codex-encyclopedie-full.mjs --limit 3
+
+# Fiches texte seulement (sans pages image plein écran)
+node ./scripts/assemble-codex-encyclopedie-full.mjs --skip-images
+
+# Dossier PNG / sortie personnalisés
+node ./scripts/assemble-codex-encyclopedie-full.mjs --input "../assets/codex-encyclopedie" --output "./public/encyclopedie.pdf"
+```
+
+L’ancien `public/encyclopedie.pdf` est copié vers `encyclopedie.pdf.bak` avant écrasement.
+
+### Aperçu PNG seul
+
+```bash
+cd peltiez
+npm run docs:assemble-codex-pdf
+```
+
+### Placeholder minimal (URL Vercel)
+
+```bash
+cd peltiez
+npm run encyclopedie:placeholder-pdf
+```
 
 ---
 
