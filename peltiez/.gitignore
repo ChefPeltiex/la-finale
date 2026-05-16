@@ -51,3 +51,6 @@ blob-report/
 
 # Assemblage Codex (aperçu PDF local depuis scripts/assemble-codex-pdf.mjs)
 docs/encyclopedie/codex-assembled-preview.pdf
+
+# Réservoir de contenu — collages locaux / sensibles (voir content-reservoir/README.md)
+content-reservoir/inbox/private-*.md

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local/peltiez/content-reservoir/schemas/nature-portal-entry.schema.json",
+  "title": "Entrée portail nature (stub)",
+  "description": "Schéma minimal pour brouillons JSON avant promotion vers src/data/. Étendre les champs au fil des besoins.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["id", "title"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}
