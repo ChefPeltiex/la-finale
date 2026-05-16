@@ -1,13 +1,20 @@
 import SEOMeta from "./SEOMeta";
-import { SITE_ORIGIN, SITE_TAGLINE } from "@/lib/site";
+import {
+  SITE_ORIGIN,
+  CIRCULAI_SEO_TITLE,
+  CIRCULAI_SEO_DESCRIPTION,
+  SITE_SEO_KEYWORDS,
+  CIRCULAI_BRAND,
+} from "@/lib/site";
 
 export const DOMAIN_SEO_CONFIG = {
   home: {
-    title: "Egor69",
-    description: SITE_TAGLINE,
-    keywords: "igor, économie circulaire, don objet, troc, réparation, radar, golden nuggets, encyclopédie vivante, planète",
+    title: CIRCULAI_SEO_TITLE,
+    description: CIRCULAI_SEO_DESCRIPTION,
+    keywords: SITE_SEO_KEYWORDS,
     canonicalUrl: SITE_ORIGIN,
-    type: "WebSite"
+    type: "WebSite",
+    compact: true,
   },
   marketplace: {
     title: "Marketplace Circulaire — Don, Échange, Réparation | Egor69",
@@ -80,6 +87,7 @@ export function PageSEOWrapper({ children, pageType = "home" }) {
         keywords={config.keywords}
         canonicalUrl={config.canonicalUrl}
         schemaData={schemaData}
+        compact={config.compact}
       />
       {children}
     </>

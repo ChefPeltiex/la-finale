@@ -56,7 +56,7 @@ export default function VictoryWall() {
       ? Math.max(atlasLive.fiches_vivantes_count, strategicFiches)
       : strategicFiches;
 
-  const memberLabel = sovereignContributor ? "Contributeur Souverain" : "Membres (POC)";
+  const memberLabel = sovereignContributor ? "Contributeur Souverain" : "Activité (démo)";
 
   return (
     <div

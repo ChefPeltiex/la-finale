@@ -11,7 +11,9 @@ export default function SEOMeta({
   ogType = "website",
   canonicalUrl = SITE_ORIGIN,
   schemaData = null,
-  twitterCard = "summary_large_image"
+  twitterCard = "summary_large_image",
+  /** Titres/descriptions marketing sans suffixe manifeste (SEO Google). */
+  compact = false,
 }) {
   useEffect(() => {
     const origin = typeof window !== "undefined" ? window.location.origin : SITE_ORIGIN;
@@ -35,9 +37,21 @@ export default function SEOMeta({
     };
 
     // Update standard meta tags
-    const finalTitle = title?.includes("DOMINIC PELLETIER") ? title : `${title} — ${MANIFESTO_SIGNATURE}`;
-    const finalDesc = description?.includes("DE MOI, PAR MOI, POUR MOI") ? description : `${description} ${MANIFESTO_SIGNATURE}`;
-    const finalKeywords = keywords?.includes("Dominic") ? keywords : `${keywords}, de moi par moi pour moi, dominic pelletier`;
+    const finalTitle = compact
+      ? title
+      : title?.includes("DOMINIC PELLETIER")
+        ? title
+        : `${title} — ${MANIFESTO_SIGNATURE}`;
+    const finalDesc = compact
+      ? description
+      : description?.includes("DE MOI, PAR MOI, POUR MOI")
+        ? description
+        : `${description} ${MANIFESTO_SIGNATURE}`;
+    const finalKeywords = compact
+      ? keywords
+      : keywords?.includes("Dominic")
+        ? keywords
+        : `${keywords}, de moi par moi pour moi, dominic pelletier`;
     const finalCanonical = normalizeCanonical(canonicalUrl);
 
     document.title = finalTitle;
@@ -96,7 +110,7 @@ export default function SEOMeta({
       }
       schema.textContent = JSON.stringify(schemaData);
     }
-  }, [title, description, keywords, ogImage, ogType, canonicalUrl, schemaData, twitterCard]);
+  }, [title, description, keywords, ogImage, ogType, canonicalUrl, schemaData, twitterCard, compact]);
 
   return null;
 }

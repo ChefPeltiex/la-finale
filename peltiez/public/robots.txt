@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+# Pages marketing prioritaires : voir sitemap.xml
 Sitemap: https://egor69.ca/sitemap.xml

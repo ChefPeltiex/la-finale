@@ -17,7 +17,13 @@ import SovereigntyMatrix from "@/components/SovereigntyMatrix";
 import ImpactCharts from "@/components/ImpactCharts";
 import JoinTheRevolution from "@/components/JoinTheRevolution";
 import InteractiveMap from "@/components/InteractiveMap";
-import { SITE_ORIGIN, SITE_TAGLINE } from "@/lib/site";
+import {
+  SITE_ORIGIN,
+  CIRCULAI_SEO_TITLE,
+  CIRCULAI_SEO_DESCRIPTION,
+  SITE_SEO_KEYWORDS,
+  CIRCULAI_BRAND,
+} from "@/lib/site";
 import { Package, ArrowRight, Recycle, Wrench, Gift, RefreshCw,
   Users, Star, Shield, Heart, Globe, CheckCircle,
   Sparkles, HandHeart, MapPin, Crown, Earth, Building2, GraduationCap, Cpu, Infinity, Download,
@@ -160,25 +166,33 @@ export default function Home() {
 
   const seoSchema = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Egor69",
-    "description": SITE_TAGLINE,
+    "@type": "WebSite",
+    "name": CIRCULAI_BRAND,
+    "alternateName": "Egor69",
+    "description": CIRCULAI_SEO_DESCRIPTION,
     "url": SITE_ORIGIN,
+    "inLanguage": "fr-CA",
+    "publisher": {
+      "@type": "Organization",
+      "name": CIRCULAI_BRAND,
+      "url": SITE_ORIGIN,
+    },
   };
 
   return (
     <div className="space-y-20 pb-20">
       <SEOMeta
-        title="Egor69"
-        description={SITE_TAGLINE}
-        keywords="igor, économie circulaire, don, échange, réparation, radar, golden nuggets, encyclopédie vivante, planète"
+        title={CIRCULAI_SEO_TITLE}
+        description={CIRCULAI_SEO_DESCRIPTION}
+        keywords={SITE_SEO_KEYWORDS}
         canonicalUrl={SITE_ORIGIN}
         schemaData={seoSchema}
+        compact
       />
 
-      <HomeGeminiBridgeStrip />
-
       <HomeHeroCards />
+
+      <HomeGeminiBridgeStrip />
 
       <HomeEncyclopediasSection />
 

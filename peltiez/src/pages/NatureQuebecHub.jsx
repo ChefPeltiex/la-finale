@@ -1,9 +1,10 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { BookOpen, ChevronDown, Leaf, Search, Sparkles } from "lucide-react";
+import { BookOpen, ChevronDown, Crown, Leaf, Search, Sparkles, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import SEOMeta from "@/components/SEOMeta";
 import SymbolicDisclaimer from "@/components/ui/SymbolicDisclaimer";
-import { SITE_ORIGIN } from "@/lib/site";
+import { SITE_ORIGIN, CIRCULAI_BRAND } from "@/lib/site";
 import {
   NATURE_QUEBEC_DOMAINS,
   NATURE_QUEBEC_HUB_META,
@@ -57,7 +58,22 @@ export default function NatureQuebecHub() {
           Douze portails fiction (archétypes, quêtes-mères, branches de compétences symboliques) et huit domaines
           atlas vers les hubs réels. Tout est cadre de jeu / métaphore : pas de mécanique de quête implémentée ici.
         </p>
-        <div className="flex flex-wrap justify-center gap-3 text-sm">
+        <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center justify-center gap-4 max-w-lg mx-auto pt-2">
+          <Button
+            asChild
+            size="lg"
+            className="w-full sm:flex-1 rounded-2xl h-14 font-black border-0 text-white shadow-[0_0_32px_rgba(16,185,129,0.3)]"
+            style={{ background: "linear-gradient(135deg, hsl(158,65%,38%), hsl(160,55%,28%))" }}
+          >
+            <Link to="/pricing" className="inline-flex items-center justify-center gap-2">
+              <Crown className="h-5 w-5 shrink-0" aria-hidden />
+              S&apos;abonner à {CIRCULAI_BRAND}
+              <ArrowRight className="h-5 w-5 shrink-0" aria-hidden />
+            </Link>
+          </Button>
+        </div>
+        <p className="text-[11px] text-white/40">egor69.ca — même plateforme</p>
+        <div className="flex flex-wrap justify-center gap-3 text-sm pt-2">
           <Link
             to="/docs/nature-quebec-portail"
             className="inline-flex items-center gap-2 rounded-xl border border-sky-500/45 bg-sky-950/40 px-4 py-2 font-semibold text-sky-100 hover:bg-sky-500/15"

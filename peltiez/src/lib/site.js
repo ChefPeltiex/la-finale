@@ -1,20 +1,54 @@
-/** Domaine canonique unique pour SEO, canonicals et liens officiels. */
-export const SITE_ORIGIN = "https://egor69.ca";
+/** Domaine canonique — `VITE_SITE_URL` en build (ex. circulai.com plus tard), sinon egor69.ca. */
+function resolveSiteOrigin() {
+  const raw =
+    typeof import.meta !== "undefined" && import.meta.env?.VITE_SITE_URL
+      ? String(import.meta.env.VITE_SITE_URL).trim()
+      : "";
+  if (!raw) return "https://egor69.ca";
+  try {
+    const u = new URL(raw.startsWith("http") ? raw : `https://${raw}`);
+    return u.origin;
+  } catch {
+    return "https://egor69.ca";
+  }
+}
+
+export const SITE_ORIGIN = resolveSiteOrigin();
 export const SUPPORT_EMAIL = "support@egor69.ca";
 
-/** Nom court de la plateforme (marque publique). */
+/** Marque produit (acquisition, SEO, CTA). */
+export const CIRCULAI_BRAND = "CirculAI";
+
+/** Nom court de l'univers technique (sous-marque). */
 export const SITE_NAME = "Egor69";
 
-/** Slogan officiel — même formulation pour SEO, CRM et surfaces publiques. */
+/** Slogan historique — surfaces internes ; SEO public = CIRCULAI_* ci-dessous. */
 export const SITE_TAGLINE =
   "Egor69 — fidèle serviteur de l'humanité pour le service de la planète et de tout l'univers entier";
 
+/** Titre SEO accueil / partages (sans manifeste long). */
+export const CIRCULAI_SEO_TITLE = "CirculAI — économie circulaire, pilote Québec";
+
+/** Description SEO accueil — circularité, Québec, pilote 90 jours. */
+export const CIRCULAI_SEO_DESCRIPTION =
+  "CirculAI : intelligence circulaire au Québec — don, échange, réparation, atlas vivant et pilote 90 jours avec preuves vérifiables. Rejoignez le hub ou explorez l'univers Egor69 (Verse 3D).";
+
 /**
- * Mots-clés SEO (méta `keywords`) — thématiques alignées sur le produit réel.
+ * Mots-clés SEO (méta `keywords`) — courts, alignés CirculAI + Québec + pilote.
  * Google dépriorise cette balise ; sitemap + titres + contenu restent prioritaires.
  */
 export const SITE_SEO_KEYWORDS =
-  "egor69, igor, intelligence circulaire, économie circulaire, québec, canada, don d'objets, troc, échange local, réparation, seconde vie, marketplace durable, golden nuggets, radar circulaire, atlas vivant, fiches vivantes, verse 3D, monde webgl, open world, souveraineté numérique, données personnelles, PWA, pass souverain, abonnement stripe, atlas cartographique, encyclopédie biblique, hub souverain, écologie numérique, impact CO2, communauté circulaire, web3 éthique, créateurs 3D, territoire vivant";
+  "circulai, économie circulaire, québec, pilote 90 jours, don d'objets, troc, réparation, atlas vivant, egor69, intelligence circulaire, pass souverain";
+
+/** Routes marketing indexables (sitemap statique). */
+export const SITEMAP_MARKETING_PATHS = [
+  "/",
+  "/pricing",
+  "/pilote",
+  "/docs/preuves",
+  "/portail/nature-quebec",
+  "/world",
+];
 
 /** Fil conducteur narratif et éthique — réutilisable dans SEO, onboarding et HUD. */
 export const WORLD_ETHOS = {
