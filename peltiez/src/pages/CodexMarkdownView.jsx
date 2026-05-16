@@ -44,6 +44,13 @@ const THEMES = {
     badge: "Preuves · 2 min",
     prose: "prose-invert prose-headings:text-sky-100 prose-a:text-emerald-400",
   },
+  nature: {
+    wrapper: "from-emerald-950/30 via-zinc-950 to-sky-950/20",
+    border: "border-emerald-500/25",
+    accent: "text-emerald-300",
+    badge: "Nature Québec · portails",
+    prose: "prose-invert prose-headings:text-emerald-100 prose-a:text-sky-300",
+  },
 };
 
 export default function CodexMarkdownView({
@@ -53,6 +60,7 @@ export default function CodexMarkdownView({
   title,
   description,
   canonicalPath,
+  disclaimerVariant,
 }) {
   const theme = THEMES[variant] ?? THEMES.investisseur;
   const [md, setMd] = useState("");
@@ -123,7 +131,29 @@ export default function CodexMarkdownView({
                 Codex investisseur
               </Link>
             )}
-            {variant !== "magique" && variant !== "preuves" && (
+            {variant === "nature" && (
+              <>
+                <Link
+                  to="/portail/nature-quebec"
+                  className="rounded-lg border border-emerald-500/40 px-3 py-1.5 text-emerald-200 hover:bg-emerald-500/10"
+                >
+                  Hub 12 portails
+                </Link>
+                <Link
+                  to="/docs/nature-quebec-kit"
+                  className="rounded-lg border border-white/15 px-3 py-1.5 text-white/80 hover:bg-white/10"
+                >
+                  Kit activation
+                </Link>
+                <Link
+                  to="/docs/preuves"
+                  className="rounded-lg border border-sky-500/40 px-3 py-1.5 text-sky-200 hover:bg-sky-500/10"
+                >
+                  Preuves 2 min
+                </Link>
+              </>
+            )}
+            {variant !== "magique" && variant !== "preuves" && variant !== "nature" && (
               <Link
                 to={variant === "investisseur" ? "/docs/rituel" : "/docs/investisseur"}
                 className="rounded-lg border border-white/15 px-3 py-1.5 text-white/80 hover:bg-white/10"
@@ -167,7 +197,7 @@ export default function CodexMarkdownView({
           </div>
         </div>
 
-        <SymbolicDisclaimer className="mb-6" />
+        <SymbolicDisclaimer className="mb-6" variant={disclaimerVariant ?? "default"} />
 
         {loading && (
           <p className="text-sm text-white/50 animate-pulse flex items-center gap-2">

@@ -15,9 +15,16 @@ const EXTRA_APP_ROUTES = [
     pilot: true,
   },
   {
-    title: "Grand Portail Naturel du Québec",
+    title: "Grand Portail Nature Québec",
     path: "/portail/nature-quebec",
-    keywords: "activation nature québec portail nature qc mycologie insectes minéraux atlas patrimoine",
+    keywords:
+      "activation nature québec portail nature qc mycologie insectes minéraux atlas patrimoine quête mycélium arbres de compétences carapaces portails fiction",
+    pilot: true,
+  },
+  {
+    title: "Codex — Grand Portail Nature Québec (table)",
+    path: "/docs/nature-quebec-portail",
+    keywords: "codex nature québec portails quête mycélium carapaces arbres de compétences table épreuve objet sacré",
     pilot: true,
   },
   {
@@ -44,12 +51,6 @@ const EXTRA_APP_ROUTES = [
   { title: "Ésotérisme", path: "/esotericism" },
   { title: "Arts divinatoires", path: "/arts-divinatoires" },
   { title: "Hub magie", path: "/magic-hub" },
-  {
-    title: "Grand Portail Naturel du Québec",
-    path: "/portail/nature-quebec",
-    keywords: "portail nature quebec quebec mycelium mycélium flore faune insectes mineraux remedes patrimoine boreal",
-    pilot: true,
-  },
   { title: "Génome", path: "/genome" },
   { title: "Mentions légales", path: "/legal" },
   { title: "Intro", path: "/intro" },
@@ -75,7 +76,7 @@ const PILOT_PATH_BOOST = (() => {
     "/docs/promesses",
     "/portail/nature-quebec",
     "/docs/nature-quebec-kit",
-    "/portail/nature-quebec",
+    "/docs/nature-quebec-portail",
     "/reporters",
     "/fact-check",
     "/sentinelle",

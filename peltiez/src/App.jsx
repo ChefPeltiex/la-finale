@@ -164,6 +164,7 @@ const PromessesCharpente = lazy(() => import("./pages/PromessesCharpente.jsx"));
 const NatureQuebecHub = lazy(() => import("./pages/NatureQuebecHub.jsx"));
 const CodexAlliance = lazy(() => import("./pages/CodexAlliance.jsx"));
 const NatureQuebecKitDoc = lazy(() => import("./pages/NatureQuebecKitDoc.jsx"));
+const CodexNatureQuebec = lazy(() => import("./pages/CodexNatureQuebec.jsx"));
 const IntegrationsOutilsHub = lazy(() => import("./pages/IntegrationsOutilsHub.jsx"));
 const CarteSiteEtLiens = lazy(() => import("./pages/CarteSiteEtLiens.jsx"));
 const RepairHub = lazy(() => import("./pages/RepairHub.jsx"));
@@ -348,6 +349,7 @@ const AuthenticatedApp = () => {
         <Route path="/docs/promesses" element={<PromessesCharpente />} />
         <Route path="/docs/alliance" element={<CodexAlliance />} />
         <Route path="/docs/nature-quebec-kit" element={<NatureQuebecKitDoc />} />
+        <Route path="/docs/nature-quebec-portail" element={<CodexNatureQuebec />} />
         <Route path="/outils-integration" element={<IntegrationsOutilsHub />} />
         <Route path="/carte-site" element={<CarteSiteEtLiens />} />
         <Route path="/hub-fondations" element={<EnterpriseLearningHub />} />

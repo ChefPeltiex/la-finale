@@ -958,11 +958,20 @@ Ces huit promesses ne manifestent ni richesse ni miracles : elles **charpentent 
 
 ## Annexe — Grand Portail Naturel du Québec (slice plateforme)
 
-**Rôle.** Cartographier huit domaines (mycologie, insectes, minéraux, remèdes oraux, astuces maison/cuisine, savoirs populaires, symboles) vers les **routes existantes** de l’app, avec disclaimers **patrimoine / non médical**.
+**Rôle.** Cartographier huit domaines atlas (mycologie, insectes, minéraux, remèdes oraux, astuces maison/cuisine, savoirs populaires, symboles) vers les **routes existantes** de l’app, avec disclaimers **patrimoine / non médical**.
 
-**Hub UI.** `/portail/nature-quebec` · données : `src/data/natureQuebecPortail.js`.
+**Hub UI.** `/portail/nature-quebec` · données : `src/data/natureQuebecPortail.js` (`NATURE_QUEBEC_DOMAINS` + `natureQuebecPortails`).
 
-**Douze portails narratifs** (horizon créatif, table complète dans `public/docs/codex-magique.md` §8) se projettent comme des **anneaux** du Verse (`/world`) — métaphore d’orientation, pas de douze niveaux 3D imposés.
+**Douze portails fiction** (archétypes, quêtes-mères, pouvoirs symboliques max 3, objets sacrés narratifs, épreuves, trois branches de compétences en lecture seule) — **Codex table** : `/docs/nature-quebec-portail` · fichier Markdown `docs/grand-portail-nature-quebec.md` (miroir servi : `public/docs/grand-portail-nature-quebec.md`).
+
+| Portail (aperçu) | Quête-mère | Objet sacré (fiction) | Épreuve |
+| --- | --- | --- | --- |
+| Mycélium | La quête du fil souterrain | Fil de spores sur verre dépoli | Réseau à partir de trois fragments sans nom |
+| Insectes | Les messagers du seuil | Aile de papier calque | Trois messagers fictifs sans espèce réelle à risque |
+| Carapaces | La quête de la lenteur armée | Fragment céramique | Trois phrases défense + une brèche |
+| … | *(voir table complète dans le Codex web)* | … | … |
+
+Les douze portails se projettent comme des **anneaux** du Verse (`/world`) — métaphore d’orientation, pas de douze niveaux 3D imposés.
 
 ---
 

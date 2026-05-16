@@ -116,6 +116,7 @@ export const NAV_POLE_BLOCKS = {
         { to: "/docs/preuves", label: "Preuves en 2 min" },
         { to: "/docs/promesses", label: "Charpente (8 lois)" },
         { to: "/portail/nature-quebec", label: "Portail Nature (QC)" },
+        { to: "/docs/nature-quebec-portail", label: "Nature QC — table Codex" },
       ],
     },
     {

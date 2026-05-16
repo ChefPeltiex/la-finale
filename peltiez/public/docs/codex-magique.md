@@ -279,24 +279,13 @@ Voir aussi : `docs/codex-pdf-assembly.md`, `docs/codex-pdf-blueprint.md`, `docs/
 
 **Objectif.** Une **carte d’orientation** vers les hubs déjà sur la plateforme (flore, insectes, minéraux, patrimoine, outils, chimie, atlas, mythologies) — **sans** promesse médicale ni identification terrain.
 
-**Hub interactif (UI).** `/portail/nature-quebec` — données source : `src/data/natureQuebecPortail.js`.
+**Hub interactif (UI).** `/portail/nature-quebec` — données : `src/data/natureQuebecPortail.js` (`natureQuebecPortails` + `NATURE_QUEBEC_DOMAINS`).
 
-### Douze portails (horizon narratif — noms poétiques)
+**Codex table (quête / objet / épreuve).** `/docs/nature-quebec-portail` — Markdown `grand-portail-nature-quebec.md`.
 
-| # | Portail | Archétype |
-|---|---------|-----------|
-| 1 | Réseau filamenteux boréal | Le Mycologue du sous-bois |
-| 2 | Ailes et pattes de lisière | L’Entomologiste des lisières |
-| 3 | Socle cristallin du bouclier | Le Géologue contemplatif |
-| 4 | Jarres du conte et cheminée | L’Herboriste du conte |
-| 5 | Loquet qui tient encore | L’Artisan du seuil |
-| 6 | Casserole et alchimie douce | L’Alchimiste de la casserole |
-| 7 | Histoires sans GPS | Le Conteur du rang |
-| 8 | Signes dans l’eau et le vent | Le Symbologique des rives |
-| 9 | Atlas des migrations d’ombre | Le Cartographe des saisons |
-| 10 | Ruche d’images (métaphore) | L’Apiculteur symbolique |
-| 11 | Veines vertes du Saint-Laurent | Le Limnologue poétique |
-| 12 | Anneau d’orientation Verse | Le Pilote des anneaux |
+### Douze portails (données applicatives — fiction / jeu)
+
+Les douze fiches complètes (cinématique de portail, quête-mère, pouvoirs symboliques ×3, faiblesses, branches) sont dans le hub et dans le tableau Codex ; la liste courte ci-dessous est remplacée par la **table unique** du document `grand-portail-nature-quebec.md` servi en ligne.
 
 **Verse (métaphore).** Ces portails se lisent comme des **anneaux d’orientation** à relier au parcours 3D `/world` — **sans** obligation de douze scènes dédiées dans le moteur.
 

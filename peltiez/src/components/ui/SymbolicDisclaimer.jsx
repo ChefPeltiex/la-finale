@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 
 export default function SymbolicDisclaimer({ className, compact = false, variant = "default" }) {
   const frequency = variant === "frequency";
+  const naturePortail = variant === "naturePortail";
   const natureHeritage = variant === "natureHeritage";
 
   return (
@@ -20,6 +21,14 @@ export default function SymbolicDisclaimer({ className, compact = false, variant
           ambiance générée (432, 528, 852, 963, 7,83 Hz) à titre métaphorique ;{" "}
           <span className="text-white/75">non médical</span>, sans piste YouTube ni promesse de
           guérison.
+        </>
+      ) : naturePortail ? (
+        <>
+          <span className="font-semibold text-emerald-300/95">Univers de jeu · fiction symbolique</span>
+          {" — "}
+          pas de médecine, pas d&apos;écologie normative, pas de promesses réelles. Les archétypes, quêtes et
+          « pouvoirs » sont des <span className="text-white/80">accessoires de récit</span> pour parcourir le site ;
+          aucun rituel ni mécanique magique n&apos;est activé ici.
         </>
       ) : natureHeritage ? (
         <>
