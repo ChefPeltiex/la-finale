@@ -163,6 +163,7 @@ const CodexMagique = lazy(() => import("./pages/CodexMagique.jsx"));
 const PromessesCharpente = lazy(() => import("./pages/PromessesCharpente.jsx"));
 const NatureQuebecHub = lazy(() => import("./pages/NatureQuebecHub.jsx"));
 const CodexAlliance = lazy(() => import("./pages/CodexAlliance.jsx"));
+const NatureQuebecKitDoc = lazy(() => import("./pages/NatureQuebecKitDoc.jsx"));
 const IntegrationsOutilsHub = lazy(() => import("./pages/IntegrationsOutilsHub.jsx"));
 const CarteSiteEtLiens = lazy(() => import("./pages/CarteSiteEtLiens.jsx"));
 const RepairHub = lazy(() => import("./pages/RepairHub.jsx"));
@@ -256,6 +257,8 @@ const AuthenticatedApp = () => {
       <Route path="/communautes" element={<MicroCommunautes />} />
       <Route path="/conseil-jedi" element={<ConseilJedi />} />
       <Route path="/portails-mondiaux" element={<PortailsMondiaux />} />
+      <Route path="/nature-quebec" element={<Navigate to="/portail/nature-quebec" replace />} />
+      <Route path="/portail/nature-quebec" element={<NatureQuebecHub />} />
       <Route path="/artisans" element={<ArtisansHub />} />
       <Route path="/smart-contrats" element={<SmartContrats />} />
       <Route path="/micro-outils" element={<MicroOutils />} />
@@ -285,7 +288,6 @@ const AuthenticatedApp = () => {
       <Route path="/blog" element={<BlogHub />} />
       <Route path="/daily-challenges" element={<DailyChallenges />} />
       <Route path="/sync-mystical-marketplace" element={<SyncMysticalMarketplace />} />
-      <Route path="/portail/nature-quebec" element={<NatureQuebecHub />} />
       <Route path="/flora-hub" element={<FloraHub />} />
       <Route path="/fauna-hub" element={<FaunaHub />} />
       <Route path="/insects-hub" element={<InsectsHub />} />
@@ -345,6 +347,7 @@ const AuthenticatedApp = () => {
         <Route path="/docs/magique" element={<CodexMagique />} />
         <Route path="/docs/promesses" element={<PromessesCharpente />} />
         <Route path="/docs/alliance" element={<CodexAlliance />} />
+        <Route path="/docs/nature-quebec-kit" element={<NatureQuebecKitDoc />} />
         <Route path="/outils-integration" element={<IntegrationsOutilsHub />} />
         <Route path="/carte-site" element={<CarteSiteEtLiens />} />
         <Route path="/hub-fondations" element={<EnterpriseLearningHub />} />

@@ -15,7 +15,7 @@ const KIT_IMAGE_PROMPTS = [
   },
   {
     label: "2 — Lisière entomologique",
-    text: `Macro poétique d'ailes et de pollens en suspension au soleil couchant, Quebec été, profondeur de champ courte, couleurs ambrées et vert mousse, ambiance atlas naturaliste sans étiquettes d'espèces ni promesse « bienfaits ».`,
+    text: `Macro poétique d'ailes et de pollens en suspension au soleil couchant, Québec été, profondeur de champ courte, couleurs ambrées et vert mousse, ambiance atlas naturaliste sans étiquettes d'espèces ni promesse « bienfaits ».`,
   },
   {
     label: "3 — Socle du bouclier",
