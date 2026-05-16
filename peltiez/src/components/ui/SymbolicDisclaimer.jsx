@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 
 export default function SymbolicDisclaimer({ className, compact = false, variant = "default" }) {
   const frequency = variant === "frequency";
+  const natureHeritage = variant === "natureHeritage";
 
   return (
     <p
@@ -19,6 +20,17 @@ export default function SymbolicDisclaimer({ className, compact = false, variant
           ambiance générée (432, 528, 852, 963, 7,83 Hz) à titre métaphorique ;{" "}
           <span className="text-white/75">non médical</span>, sans piste YouTube ni promesse de
           guérison.
+        </>
+      ) : natureHeritage ? (
+        <>
+          <span className="font-semibold text-[#D4AF37]/90">Patrimoine oral, symbolique et culturel</span>
+          {" — "}
+          Ne constitue pas un <span className="text-white/75">avis médical</span>, une identification
+          fongique ou entomologique sûre des espèces, ni une recommandation de consommation ou de
+          cueillette. Les noms « traditionnels » ou « de terroir » renvoient au{" "}
+          <span className="text-white/75">folklore et à l&apos;histoire</span>, pas à l&apos;efficacité
+          thérapeutique. Pour la santé, la toxicologie ou la légalité, consultez un{" "}
+          <span className="text-white/75">professionnel qualifié</span> et des sources officielles.
         </>
       ) : (
         <>

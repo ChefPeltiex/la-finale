@@ -956,6 +956,16 @@ Ces huit promesses ne manifestent ni richesse ni miracles : elles **charpentent 
 
 ---
 
+## Annexe — Grand Portail Naturel du Québec (slice plateforme)
+
+**Rôle.** Cartographier huit domaines (mycologie, insectes, minéraux, remèdes oraux, astuces maison/cuisine, savoirs populaires, symboles) vers les **routes existantes** de l’app, avec disclaimers **patrimoine / non médical**.
+
+**Hub UI.** `/portail/nature-quebec` · données : `src/data/natureQuebecPortail.js`.
+
+**Douze portails narratifs** (horizon créatif, table complète dans `public/docs/codex-magique.md` §8) se projettent comme des **anneaux** du Verse (`/world`) — métaphore d’orientation, pas de douze niveaux 3D imposés.
+
+---
+
 ## Disclaimer
 
 Ce document est **symbolique et pédagogique**. Il ne constitue pas un avis juridique, médical, financier ou scientifique. Les équations sont des **modèles de travail à calibrer** ; les rituels sont des **aides à l'attention**, pas des garanties de résultat. L'IA doit rester **sous supervision humaine** pour toute décision à enjeu. Les visuels sont interprétés depuis leurs rôles éditoriaux et noms de fichiers — une relecture œil nu peut affiner les descriptions. Pour les textes légaux, voir `LICENSE` / `NOTICE` à la racine du dépôt.
