@@ -1,39 +1,50 @@
-import { useState, useMemo, useCallback } from 'react'
+import { useState, useMemo, useCallback, useEffect } from 'react'
 import StarField from './components/StarField'
 import IntroCrawl from './components/IntroCrawl'
 import ChooseDestiny from './components/ChooseDestiny'
 import CrystalPage from './components/CrystalPage'
-import { crystals } from './data/crystals'
+import Navigation from './components/Navigation'
 import type { Crystal } from './data/crystals'
 
-type Phase = 'crawl' | 'hub' | 'list' | 'crystal'
+type Phase = 'crawl' | 'hub' | 'nav' | 'crystal'
 
 export default function App() {
+  const [allCrystals, setAllCrystals] = useState<Crystal[]>([])
   const [phase, setPhase] = useState<Phase>('crawl')
-  const [domain, setDomain] = useState<string>('all')
+  const [filter, setFilter] = useState<string>('all')
   const [crystalIndex, setCrystalIndex] = useState(0)
 
+  // Load crystals.json from public/
+  useEffect(() => {
+    fetch('/crystals.json')
+      .then(r => r.json())
+      .then((data: Crystal[]) => setAllCrystals(data))
+      .catch(console.error)
+  }, [])
+
   const filtered = useMemo(() => {
-    if (domain === 'all') return crystals
-    return crystals.filter(c => c.domain === domain)
-  }, [domain])
+    if (filter === 'all') return allCrystals
+    return allCrystals.filter(c => c.source === filter)
+  }, [allCrystals, filter])
 
   const handleCrawlFinish = useCallback(() => setPhase('hub'), [])
 
-  const handleDoorSelect = useCallback((d: string) => {
-    if (d === 'random') {
-      const idx = Math.floor(Math.random() * crystals.length)
-      setDomain('all')
-      setCrystalIndex(idx)
+  const handleDoorSelect = useCallback((id: string) => {
+    if (id === 'random') {
+      if (!allCrystals.length) return
+      setFilter('all')
+      setCrystalIndex(Math.floor(Math.random() * allCrystals.length))
       setPhase('crystal')
+    } else if (id === 'all') {
+      setFilter('all')
+      setPhase('nav')
     } else {
-      setDomain(d)
-      setCrystalIndex(0)
-      setPhase('list')
+      setFilter(id)
+      setPhase('nav')
     }
-  }, [])
+  }, [allCrystals])
 
-  const handleListCrystalSelect = useCallback((idx: number) => {
+  const handleNavSelect = useCallback((idx: number) => {
     setCrystalIndex(idx)
     setPhase('crystal')
   }, [])
@@ -46,27 +57,22 @@ export default function App() {
     setCrystalIndex(i => (i + 1) % filtered.length)
   }, [filtered.length])
 
-  const handleBackToHub = useCallback(() => setPhase('hub'), [])
-  const handleBackToList = useCallback(() => setPhase('list'), [])
+  const backToHub = useCallback(() => setPhase('hub'), [])
+  const backToNav = useCallback(() => setPhase('nav'), [])
 
   return (
     <>
       <StarField />
 
-      {phase === 'crawl' && (
-        <IntroCrawl onFinish={handleCrawlFinish} />
-      )}
+      {phase === 'crawl' && <IntroCrawl onFinish={handleCrawlFinish} />}
 
-      {phase === 'hub' && (
-        <ChooseDestiny onSelect={handleDoorSelect} />
-      )}
+      {phase === 'hub' && <ChooseDestiny onSelect={handleDoorSelect} />}
 
-      {phase === 'list' && (
-        <ListPage
-          crystals={filtered}
-          domain={domain}
-          onSelect={handleListCrystalSelect}
-          onBack={handleBackToHub}
+      {phase === 'nav' && (
+        <Navigation
+          crystals={filter === 'all' ? allCrystals : filtered}
+          onSelect={handleNavSelect}
+          onBack={backToHub}
         />
       )}
 
@@ -77,108 +83,23 @@ export default function App() {
           total={filtered.length}
           onPrev={handlePrev}
           onNext={handleNext}
-          onBack={handleBackToList}
+          onBack={backToNav}
         />
       )}
+
+      {/* Loading indicator */}
+      {allCrystals.length === 0 && phase !== 'crawl' && (
+        <div style={{
+          position: 'fixed', inset: 0, zIndex: 30,
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          background: '#050a1a',
+        }}>
+          <p style={{
+            fontFamily: 'Cormorant Garamond, serif',
+            color: '#d4a843', letterSpacing: '0.3em', fontSize: '1rem',
+          }}>Chargement du Bréviaire…</p>
+        </div>
+      )}
     </>
-  )
-}
-
-// Inline list page component
-interface ListPageProps {
-  crystals: Crystal[]
-  domain: string
-  onSelect: (idx: number) => void
-  onBack: () => void
-}
-
-function ListPage({ crystals, domain, onSelect, onBack }: ListPageProps) {
-  const domainColor: Record<string, string> = {
-    formule: '#d4af37', science: '#7eb8d4', art: '#c47ab3',
-    musique: '#89d4a0', loisir: '#d4a07e', all: '#e8dcc8', default: '#e8dcc8',
-  }
-  const color = domainColor[domain] ?? domainColor['default']
-
-  return (
-    <div style={{
-      position: 'relative', zIndex: 5,
-      minHeight: '100vh',
-      padding: '5rem 2rem 3rem',
-      maxWidth: 900,
-      margin: '0 auto',
-    }}>
-      <button
-        onClick={onBack}
-        style={{
-          position: 'fixed', top: 24, left: 28, zIndex: 20,
-          background: 'none', border: '1px solid #d4af3733',
-          borderRadius: 4, padding: '0.4rem 1rem',
-          color: '#d4af37', cursor: 'pointer',
-          fontFamily: 'Cormorant Garamond, serif',
-          letterSpacing: '0.15em', fontSize: '0.85rem',
-        }}
-      >← Portails</button>
-
-      <h2 style={{
-        fontFamily: 'Cormorant Garamond, serif',
-        color,
-        fontSize: '2rem',
-        fontWeight: 300,
-        letterSpacing: '0.2em',
-        textTransform: 'uppercase',
-        marginBottom: '2.5rem',
-        textAlign: 'center',
-      }}>
-        {domain === 'all' ? 'Tous les Cristaux' : domain.charAt(0).toUpperCase() + domain.slice(1)}
-        <span style={{ color: '#60504a', fontSize: '0.9rem', marginLeft: '1rem' }}>
-          ({crystals.length})
-        </span>
-      </h2>
-
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))',
-        gap: '1rem',
-      }}>
-        {crystals.map((c, i) => (
-          <button
-            key={c.id}
-            onClick={() => onSelect(i)}
-            style={{
-              background: 'rgba(255,255,255,0.03)',
-              border: `1px solid ${color}33`,
-              borderRadius: 8,
-              padding: '1.2rem',
-              cursor: 'pointer',
-              textAlign: 'left',
-              transition: 'border-color 0.2s, background 0.2s',
-            }}
-            onMouseEnter={e => {
-              (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.07)'
-              ;(e.currentTarget as HTMLButtonElement).style.borderColor = `${color}77`
-            }}
-            onMouseLeave={e => {
-              (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.03)'
-              ;(e.currentTarget as HTMLButtonElement).style.borderColor = `${color}33`
-            }}
-          >
-            <p style={{
-              fontFamily: 'Cormorant Garamond, serif',
-              color: '#e8dcc8',
-              fontSize: '1rem',
-              fontWeight: 500,
-              marginBottom: '0.3rem',
-            }}>{c.title}</p>
-            <p style={{
-              fontFamily: 'Cormorant Garamond, serif',
-              color: '#7a6a5a',
-              fontSize: '0.78rem',
-              letterSpacing: '0.12em',
-              textTransform: 'uppercase',
-            }}>{c.category}</p>
-          </button>
-        ))}
-      </div>
-    </div>
   )
 }

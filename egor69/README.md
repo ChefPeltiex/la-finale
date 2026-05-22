@@ -1,73 +1,58 @@
-# React + TypeScript + Vite
+﻿# EGOR69 — Le Bréviaire Universel
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> *638 cristaux de savoir contemplatif. Un outil pour penser, pas pour croire.*
 
-Currently, two official plugins are available:
+## Vision
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Un sanctuaire numérique où chaque écran devient une page de manuscrit vivant :
+équations flottantes sur fond cosmique, portraits de maîtres gravés comme des saints laïcs,
+constantes mystiques pulsant comme des mantras.
 
-## React Compiler
+## Cristaux
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Corpus | Entrées | Contenu |
+|--------|---------|---------|
+| Équations | 110 | Formules Wikipedia avec LaTeX, toutes disciplines |
+| Disciplines | 150 | Sciences, arts, humanités |
+| Arts & Culture | ~220 | Loisirs, culture générale |
+| Musique | 130 | Théorie, instruments, genres, compositeurs |
+| **Total** | **638** | |
 
-## Expanding the ESLint configuration
+## Navigation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Crawl d'intro** — Star Wars scroll (skippable, mémorisé via localStorage)
+- **Hub 6 portes** — Équations · Disciplines · Arts & Culture · Musique · Tout · Aléatoire
+- **Navigation** — Par discipline, par corpus, recherche plein texte, aléatoire
+- **Cristal** — Titre + formule KaTeX (si applicable) + définition + lien Wikipedia
+- **Clavier** — ← → pour naviguer, Echap pour retour
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- React 19 + TypeScript + Vite 8
+- Three.js (fond étoilé)
+- Framer Motion (animations)
+- KaTeX (rendu LaTeX)
+- Cormorant Garamond (Google Fonts)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Dev
+
+```bash
+cd egor69
+node scripts/build-corpus.mjs   # régénère public/crystals.json depuis les corpus
+npm run dev                      # développement
+npm run build                    # production (dist/)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Palette
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Rôle | Hex |
+|------|-----|
+| Fond cosmique | `#050a1a` |
+| Bleu nuit | `#0a1628` |
+| Or vieilli | `#d4a843` |
+| Texte | `#f0f0f0` |
+| Gris lunaire | `#8892a4` |
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+*Dominic · 2026 · "Mathematics = ?" — La question qui contient toutes les réponses.*

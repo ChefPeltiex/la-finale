@@ -3,13 +3,12 @@ import { motion } from 'framer-motion'
 interface Props { onSelect: (domain: string) => void }
 
 const DOORS = [
-  { id: 'formule', label: 'Formules',           subtitle: '25 cristaux',       glyph: 'Σ', color: '#d4af37' },
-  { id: 'science', label: 'Sciences',           subtitle: '50 cristaux',       glyph: '⚛', color: '#7eb8d4' },
-  { id: 'art',     label: 'Arts',               subtitle: '15 cristaux',       glyph: '◈', color: '#c47ab3' },
-  { id: 'musique', label: 'Musique',            subtitle: '10 cristaux',       glyph: '♫', color: '#89d4a0' },
-  { id: 'loisir',  label: 'Loisirs',            subtitle: '15 cristaux',       glyph: '✦', color: '#d4a07e' },
-  { id: 'all',     label: 'Tout voir',          subtitle: 'tous les cristaux', glyph: '∞', color: '#e8dcc8' },
-  { id: 'random',  label: 'Cristal aléatoire',  subtitle: 'surprise',          glyph: '?', color: '#9a9aff' },
+  { id: 'equations',  label: 'Équations',        subtitle: '110 formules',      glyph: 'Σ', color: '#d4a843' },
+  { id: 'discipline', label: 'Disciplines',      subtitle: '150 sciences',      glyph: '⚛', color: '#7eb8d4' },
+  { id: 'culturel',   label: 'Arts & Culture',   subtitle: '220+ entrées',      glyph: '◈', color: '#c47ab3' },
+  { id: 'musique',    label: 'Musique',          subtitle: '130 articles',      glyph: '♫', color: '#89d4a0' },
+  { id: 'all',        label: 'Tout le Bréviaire','subtitle': '638 cristaux',    glyph: '∞', color: '#f0f0f0' },
+  { id: 'random',     label: 'Cristal aléatoire','subtitle': 'contemplation',   glyph: '?', color: '#9a9aff' },
 ]
 
 export default function ChooseDestiny({ onSelect }: Props) {

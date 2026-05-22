@@ -3,16 +3,18 @@
 html, body, #root {
   width: 100%;
   min-height: 100vh;
-  background: #000005;
-  color: #e8dcc8;
+  background: #050a1a;
+  color: #f0f0f0;
   font-family: 'Cormorant Garamond', Georgia, serif;
   overflow-x: hidden;
 }
 
 button { font-family: inherit; }
+input  { font-family: inherit; }
 
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: #0d0a1a; }
-::-webkit-scrollbar-thumb { background: #d4af3744; border-radius: 2px; }
+::-webkit-scrollbar-track { background: #0a1628; }
+::-webkit-scrollbar-thumb { background: #d4a84340; border-radius: 2px; }
 
 .katex-display { overflow-x: auto; }
+.katex { color: #d4a843; }

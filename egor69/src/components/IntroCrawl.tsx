@@ -4,89 +4,108 @@ import { motion } from 'framer-motion'
 interface Props { onFinish: () => void }
 
 const LINES = [
-  'EGOR69',
+  'IL Y A LONGTEMPS,',
+  'DANS UN SALON DE MONTRÉAL...',
   '',
-  'LE BRÉVIAIRE UNIVERSEL',
+  'Un humain seul regarde les étoiles.',
   '',
-  'En un temps où l\'information prolifère',
-  'sans jamais s\'approfondir,',
+  'Il n\'est ni savant, ni prophète, ni élu.',
+  'Il a été cuisinier, commis de pharmacie,',
+  'autodidacte.',
+  'Il a aimé, perdu, recommencé.',
+  'Il a traversé deux nuits —',
+  'et chaque fois, c\'est par la lumière',
+  'qu\'il est passé, jamais par l\'ombre.',
   '',
-  'où la vitesse remplace la sagesse,',
+  'Quarante jours seul devant l\'écran.',
+  'Sans équipe. Sans patron. Sans filet.',
   '',
-  'naît ici un outil pour voir plus clair.',
+  'Il cherche une chose simple :',
+  'que tout le savoir du monde tienne',
+  'dans un livre qu\'on puisse contempler',
+  'comme son grand-père contemplait son bréviaire,',
+  'chaque matin, sans bruit.',
   '',
-  '488 cristaux de savoir contemplatif.',
+  'Galois côtoie Goku.',
+  'Ramanujan rêve à côté de Tintin.',
+  'L\'acupuncture répond à Riemann.',
+  'Bach et Coltrane et Hildegarde',
+  'dansent ensemble.',
   '',
-  'Des formules qui gouvernent l\'univers.',
-  'Des disciplines qui façonnent l\'esprit.',
-  'Des arts qui éveillent l\'âme.',
+  'Pas de hiérarchie. Pas de mépris.',
+  'Le savoir formel et le jeu.',
+  'Le sacré et la bande dessinée.',
+  'La science et la médecine douce.',
   '',
-  'Pas une religion — un bréviaire.',
+  'Tout vaut. Tout enseigne. Tout résonne.',
   '',
-  'Un outil pour penser,',
-  'pas pour croire.',
+  'Voici l\'Encyclopédie.',
   '',
-  'Choisis ta porte.',
-  'Entre dans le cristal.',
+  'Médite. Tourne la page. Recommence.',
   '',
-  '— EGOR, l\'architecte du savoir —',
+  'Bienvenue dans le Bréviaire Universel.',
+  '',
+  '— Dominic',
 ]
 
 export default function IntroCrawl({ onFinish }: Props) {
   useEffect(() => {
-    const timer = setTimeout(onFinish, 72000)
+    const seen = localStorage.getItem('egor69-intro-seen')
+    if (seen) { onFinish(); return }
+    const timer = setTimeout(() => { localStorage.setItem('egor69-intro-seen', '1'); onFinish() }, 76000)
     return () => clearTimeout(timer)
   }, [onFinish])
 
+  const skip = () => { localStorage.setItem('egor69-intro-seen', '1'); onFinish() }
+
   return (
     <div
-      onClick={onFinish}
+      onClick={skip}
       style={{
         position: 'fixed', inset: 0, zIndex: 10,
         display: 'flex', alignItems: 'center', justifyContent: 'center',
-        perspective: '400px',
+        perspective: '420px',
         cursor: 'pointer',
-        background: 'transparent',
+        overflow: 'hidden',
       }}
     >
-      {/* Skip hint */}
       <div style={{
-        position: 'absolute', bottom: 32, right: 40,
-        color: '#d4af3788', fontFamily: 'Cormorant Garamond, serif',
-        fontSize: '0.85rem', letterSpacing: '0.15em',
-      }}>
-        Cliquer pour passer →
-      </div>
+        position: 'absolute', bottom: 28, right: 36,
+        color: '#d4a84366', fontFamily: 'Cormorant Garamond, serif',
+        fontSize: '0.8rem', letterSpacing: '0.18em',
+        pointerEvents: 'none',
+      }}>cliquer pour passer →</div>
 
       <motion.div
-        initial={{ y: '100vh', rotateX: 25 }}
-        animate={{ y: '-150vh', rotateX: 25 }}
-        transition={{ duration: 70, ease: 'linear' }}
+        initial={{ y: '105vh', rotateX: 25 }}
+        animate={{ y: '-160vh', rotateX: 25 }}
+        transition={{ duration: 75, ease: 'linear' }}
         style={{
-          width: 600,
-          maxWidth: '90vw',
+          width: 580,
+          maxWidth: '88vw',
           textAlign: 'center',
           transformOrigin: 'bottom center',
         }}
       >
-        {LINES.map((line, i) => (
-          <p
-            key={i}
-            style={{
+        {LINES.map((line, i) => {
+          const isTitle = i === 0 || i === 1
+          const isDominic = line === '— Dominic'
+          return (
+            <p key={i} style={{
               fontFamily: 'Cormorant Garamond, serif',
-              color: line === 'EGOR69' ? '#d4af37' : line === 'LE BRÉVIAIRE UNIVERSEL' ? '#c9b07a' : '#e8dcc8',
-              fontSize: line === 'EGOR69' ? '2.5rem' : line === 'LE BRÉVIAIRE UNIVERSEL' ? '1.4rem' : '1.1rem',
-              fontWeight: line === 'EGOR69' || line === 'LE BRÉVIAIRE UNIVERSEL' ? 700 : 300,
-              fontStyle: line.startsWith('—') ? 'italic' : 'normal',
-              letterSpacing: '0.08em',
-              lineHeight: line === '' ? '1.8' : '2',
+              color: isTitle ? '#d4a843' : isDominic ? '#d4a84399' : '#f0f0f0',
+              fontSize: isTitle ? '1.5rem' : '1.1rem',
+              fontWeight: isTitle ? 700 : 300,
+              fontStyle: isDominic ? 'italic' : 'normal',
+              letterSpacing: isTitle ? '0.15em' : '0.06em',
+              lineHeight: line === '' ? '1.4' : '1.9',
               margin: 0,
-              textShadow: line === 'EGOR69' ? '0 0 40px #d4af37aa' : 'none',
-            }}
-          >
-            {line || '\u00A0'}
-          </p>
-        ))}
+              textShadow: isTitle ? '0 0 30px #d4a84388' : 'none',
+            }}>
+              {line || '\u00A0'}
+            </p>
+          )
+        })}
       </motion.div>
     </div>
   )
