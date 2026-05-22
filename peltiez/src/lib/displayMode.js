@@ -4,9 +4,9 @@ export const DISPLAY_MODE_KEY = "egor69_display_mode";
 export function loadDisplayMode() {
   try {
     const v = localStorage.getItem(DISPLAY_MODE_KEY);
-    return v === "simple" ? "simple" : "deep";
+    return v === "deep" ? "deep" : "simple";
   } catch {
-    return "deep";
+    return "simple";
   }
 }
 

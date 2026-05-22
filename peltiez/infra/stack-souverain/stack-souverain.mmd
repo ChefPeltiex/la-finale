@@ -1,0 +1,19 @@
+flowchart TB
+  subgraph Dev["Développement"]
+    Cursor[Cursor]
+    GH[GitHub · la-finale]
+  end
+  subgraph Docker["Docker · stack-souverain"]
+    WebUI[Open WebUI :3000]
+    Ollama[Ollama :11434]
+    Qdrant[Qdrant :6333]
+  end
+  subgraph Phase2["Phase 2 · optionnel"]
+    Crew[CrewAI · venv local]
+  end
+  Cursor --> GH
+  Cursor --> WebUI
+  WebUI --> Ollama
+  Crew --> Ollama
+  Crew --> Qdrant
+  WebUI -.->|docs montés| Docs[(docs/circulai)]

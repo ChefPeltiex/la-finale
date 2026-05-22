@@ -1,0 +1,103 @@
+{
+  "title": "Encyclopédie Totale — Dont vous êtes le héros",
+  "subtitle": "Atlas hybride humain · machine — pour tous",
+  "edition": "1.0",
+  "pageMinimum": 1000,
+  "tomeCount": 7,
+  "etre": {
+    "id": "etre",
+    "title": "L'Être",
+    "subtitle": "Souveraineté du lecteur · héros de la boucle",
+    "description": "Un seul être central : vous, relié à Dominic-Igor comme co-auteur praticien — pas divinité, pas oracle."
+  },
+  "natures": [
+    { "id": "matiere", "title": "Nature Matière", "symbol": "△M", "monde": "concret" },
+    { "id": "reve", "title": "Nature Rêve", "symbol": "Ψ", "monde": "fantaisiste" },
+    { "id": "lien", "title": "Nature Lien", "symbol": "φ", "monde": "pont" }
+  ],
+  "mondes": [
+    { "id": "circulai", "title": "Monde CirculAI", "role": "Territoire mesurable" },
+    { "id": "egor", "title": "Monde Egor69", "role": "Culture · Verse · codex" },
+    { "id": "quebec", "title": "Monde Québec", "role": "Capitale · pilote type" },
+    { "id": "codex", "title": "Monde Codex", "role": "Symbolique nommé · or & noir" },
+    { "id": "pilote", "title": "Monde Pilote", "role": "90 jours · 3 preuves" }
+  ],
+  "domaines": [
+    { "id": "circulaire", "title": "Économie circulaire", "code": "D01" },
+    { "id": "gouvernance", "title": "Gouvernance & preuves", "code": "D02" },
+    { "id": "culture", "title": "Culture & encyclopédie", "code": "D03" },
+    { "id": "technologie", "title": "Technologie & code", "code": "D04" },
+    { "id": "territoire", "title": "Territoire & municipal", "code": "D05" },
+    { "id": "obnl", "title": "OBNL & communauté", "code": "D06" },
+    { "id": "environnement", "title": "Nature & environnement", "code": "D07" },
+    { "id": "reparation", "title": "Réparation & savoir-faire", "code": "D08" },
+    { "id": "ethique", "title": "Éthique & Loi 25", "code": "D09" },
+    { "id": "narration", "title": "Narration & Verse", "code": "D10" },
+    { "id": "equations", "title": "Équations & mesure", "code": "D11" },
+    { "id": "transmission", "title": "Transmission & édition", "code": "D12" },
+    { "id": "loisirs", "title": "Loisirs, jeu & temps libre", "code": "D13" },
+    { "id": "sports", "title": "Sports, mouvement & équipement", "code": "D14" }
+  ],
+  "sujets": [
+    { "id": "flux", "title": "Objets & flux", "code": "S01" },
+    { "id": "confiance", "title": "Confiance", "code": "S02" },
+    { "id": "matching", "title": "Matching & besoins", "code": "S03" },
+    { "id": "pilote90", "title": "Pilote 90 jours", "code": "S04" },
+    { "id": "marketplace", "title": "Marketplace", "code": "S05" },
+    { "id": "institutions", "title": "Lettres & institutions", "code": "S06" },
+    { "id": "reve_psy", "title": "Rêves & psyché", "code": "S07" },
+    { "id": "symboles", "title": "Formules & symboles", "code": "S08" },
+    { "id": "posterite", "title": "Avenir & postérité", "code": "S09" }
+  ],
+  "tomes": [
+    {
+      "num": 1,
+      "slug": "tome-I-etre-heros",
+      "title": "Tome I — L'Être · Dont vous êtes le héros",
+      "includes": ["etre", "cyoa", "volume-0"],
+      "targetPages": 140
+    },
+    {
+      "num": 2,
+      "slug": "tome-II-trois-natures",
+      "title": "Tome II — Les 3 Natures",
+      "includes": ["natures", "volume-0-partial"],
+      "targetPages": 150
+    },
+    {
+      "num": 3,
+      "slug": "tome-III-monde-circulai",
+      "title": "Tome III — Monde CirculAI",
+      "includes": ["circulai", "volume-1", "volume-3-partial"],
+      "targetPages": 160
+    },
+    {
+      "num": 4,
+      "slug": "tome-IV-monde-egor",
+      "title": "Tome IV — Monde Egor69",
+      "includes": ["egor", "volume-0-egor", "volume-4-partial"],
+      "targetPages": 160
+    },
+    {
+      "num": 5,
+      "slug": "tome-V-monde-quebec",
+      "title": "Tome V — Monde Québec",
+      "includes": ["quebec", "volume-1", "loisirs", "sports"],
+      "targetPages": 150
+    },
+    {
+      "num": 6,
+      "slug": "tome-VI-monde-codex",
+      "title": "Tome VI — Monde Codex & systèmes",
+      "includes": ["codex", "volume-2", "volume-3", "volume-4", "equations"],
+      "targetPages": 150
+    },
+    {
+      "num": 7,
+      "slug": "tome-VII-atlas-pour-tous",
+      "title": "Tome VII — Atlas · Index · Pour tous",
+      "includes": ["planches", "index", "langues", "braille", "sources"],
+      "targetPages": 120
+    }
+  ]
+}

@@ -23,6 +23,7 @@ export const PILOT_ROUTES = [
   "/vision",
   "/profil",
   "/pilote",
+  "/boutique",
 ];
 
 const PILOT_PATH_PREFIXES = [

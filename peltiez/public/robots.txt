@@ -1,5 +1,3 @@
 User-agent: *
 Allow: /
-
-# Pages marketing prioritaires : voir sitemap.xml
-Sitemap: https://egor69.ca/sitemap.xml
+Sitemap: https://circulai-demo.vercel.app/sitemap.xml

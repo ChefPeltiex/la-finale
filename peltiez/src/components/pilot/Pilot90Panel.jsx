@@ -9,6 +9,7 @@ import {
   formatMay21PilotNote,
   getMay21CalendarState,
   getPilot90Progress,
+  getPilotLeidenfrostHint,
   loadBirthdayRitual,
   saveBirthdayRitual,
 } from "@/lib/geminiBridge";
@@ -57,6 +58,7 @@ export default function Pilot90Panel({ className, compact = false }) {
   };
 
   const ritualDone = RITUAL_ITEMS.filter((i) => ritual[i.id]).length;
+  const leidenfrost = getPilotLeidenfrostHint(progress, ritual);
 
   return (
     <section
@@ -105,6 +107,20 @@ export default function Pilot90Panel({ className, compact = false }) {
             Démarrer le compteur pilote (aujourd’hui)
           </Button>
         )}
+        {leidenfrost ? (
+          <div
+            className={cn(
+              "rounded-xl border px-3 py-2.5 text-[11px] leading-snug",
+              leidenfrost.level === "warn"
+                ? "border-amber-500/45 bg-amber-500/10 text-amber-100/90"
+                : "border-sky-500/35 bg-sky-500/8 text-sky-100/85"
+            )}
+            role="status"
+          >
+            <p className="font-semibold">{leidenfrost.title}</p>
+            <p className="mt-1 text-white/60">{leidenfrost.body}</p>
+          </div>
+        ) : null}
       </div>
 
       <div
@@ -161,6 +177,13 @@ export default function Pilot90Panel({ className, compact = false }) {
           </div>
         ))}
       </div>
+
+      <Link
+        to="/docs/circulai-kit-regional"
+        className="block rounded-xl border border-sky-500/30 bg-sky-950/25 px-3 py-2.5 text-xs text-sky-200/90 hover:bg-sky-500/10 transition-colors"
+      >
+        Kit régional — lettre, plan d&apos;affaires v2, démo 10 min
+      </Link>
 
       <SymbolicDisclaimer variant="frequency" compact className="text-[10px]" />
     </section>

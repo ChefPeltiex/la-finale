@@ -217,6 +217,9 @@ export default function IntegrationsOutilsHub() {
             <Link to="/hub-fondations">Hub fondations</Link>
           </Button>
           <Button asChild size="sm" variant="outline" className="rounded-full border-white/20 text-white hover:bg-white/10">
+            <Link to="/boutique">Boutique numérique</Link>
+          </Button>
+          <Button asChild size="sm" variant="outline" className="rounded-full border-white/20 text-white hover:bg-white/10">
             <Link to="/pricing">Abonnements</Link>
           </Button>
           <Button asChild size="sm" variant="outline" className="rounded-full border-white/20 text-white hover:bg-white/10">

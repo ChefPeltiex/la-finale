@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { WORLD_REALMS } from "@/world/realms";
 import { formatRealmFrequencyBadge } from "@/lib/realmFrequency";
+import { TAU } from "@/lib/circleConstants";
 
 const WORLD_LIMIT = 58;
 
@@ -34,13 +35,13 @@ export default function WorldMinimap({ telemetryRef, visitedSlugs = [], nearReal
 
       ctx.fillStyle = "rgba(6, 12, 28, 0.88)";
       ctx.beginPath();
-      ctx.arc(cx, cy, mapR, 0, Math.PI * 2);
+      ctx.arc(cx, cy, mapR, 0, TAU);
       ctx.fill();
 
       ctx.strokeStyle = "rgba(167, 139, 250, 0.5)";
       ctx.lineWidth = 2;
       ctx.beginPath();
-      ctx.arc(cx, cy, mapR, 0, Math.PI * 2);
+      ctx.arc(cx, cy, mapR, 0, TAU);
       ctx.stroke();
 
       ctx.strokeStyle = "rgba(255,255,255,0.08)";
@@ -59,7 +60,7 @@ export default function WorldMinimap({ telemetryRef, visitedSlugs = [], nearReal
         ctx.fillStyle = realm.color;
         ctx.globalAlpha = done ? 1 : 0.45;
         ctx.beginPath();
-        ctx.arc(mx, my, done ? 5 : 4, 0, Math.PI * 2);
+        ctx.arc(mx, my, done ? 5 : 4, 0, TAU);
         ctx.fill();
         if (done) {
           ctx.strokeStyle = "rgba(251, 191, 36, 0.75)";

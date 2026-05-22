@@ -1,6 +1,6 @@
 # Réservoir de contenu (backstage)
 
-Espace **hors bundle** pour collecter et structurer du contenu (collages utilisateur, specs, JSON) avant intégration dans l’app. Rien ici n’est importé par Vite : le dossier est à côté de `src/`.
+Espace **hors bundle** pour collecter et structurer du contenu (collages utilisateur, specs, JSON) avant intégration dans l’app. Rien ici n’est importé par Vite : le dossier est à côté de `src/`. **Plan de restructuration (vitrine / réservoir / données)** : voir [`../docs/ROADMAP-RESTRUCTURATION.md`](../docs/ROADMAP-RESTRUCTURATION.md).
 
 ## Dossiers
 

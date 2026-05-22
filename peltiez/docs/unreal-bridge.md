@@ -32,6 +32,7 @@ Si vous adoptez UE pour le rendu : documentez dans **votre** infra (URLs signall
 - Hubs 3D : `src/pages/WorldHub.jsx`, `src/pages/Pantheon3D.jsx`, données monde `src/world/realms.js`.
 - **Hub UEAIOUY** (navigateur) : `src/pages/UeAiouyHub.jsx` — route `/ue-aiouy`, registre glTF/localStorage, prévisualisation, option iframe Pixel Streaming via `VITE_UEAIOUY_PIXEL_STREAM_PLAYER_URL`.
 - **Exemple JSON « univers »** (pont futur plugin / outillage UE) : `public/ue-aiouy/universe-config.sample.json` — scènes, POI, bloc `unreal` ; non consommé par le bundle web actuel.
+- **Attracteur de Rössler** (pont symbolique web → spline UE) : onglet **Attracteur → UE** sur `/ue-aiouy` ; export `rossler-bridge.json` ; échantillon `public/ue-aiouy/rossler-bridge.sample.json`. Code : `src/lib/rosslerAttractor.js`, `src/components/ueAiouy/RosslerBridgePreview.jsx`.
 
 ## Programme UEAIOUY
 
@@ -104,3 +105,24 @@ npx gltf-pipeline -i univers_brut.gltf -o univers_optimise.glb -d
 L’option `-d` applique la compression Draco au maillage. Vérifier le rendu dans le navigateur après décodage (coût CPU côté client).
 
 **Fichier réseau opérateur (P2P / limites)** : voir `egor-network.json` à la racine du dépôt applicatif et `scripts/egor-network-setup.sh` pour validation et rappels Docker / `ulimit`.
+
+---
+
+## Attracteur de Rössler (pont Verse ↔ Unreal)
+
+Système chaotique 3D (spirale + « saut ») utilisé comme **même signature visuelle** entre le navigateur (Three.js) et Unreal (spline / Niagara) :
+
+```
+dx/dt = -y - z
+dy/dt = x + a·y
+dz/dt = b + z·(x - c)     (a≈0.2, b≈0.2, c≈5.7)
+```
+
+### Workflow
+
+1. **Web** : `/ue-aiouy` → onglet **Attracteur → UE** → prévisualisation + bouton **Exporter rossler-bridge.json**.
+2. **Unreal** : importer le JSON (tableau `{ x, y, z }` normalisé). Sous-échantillonner (1 point / 5) avant `Add Spline Point`.
+3. **Niagara** : ruban / particules le long de la spline ; matériaux or/rouge alignés Codex.
+4. **Pixel Streaming** (optionnel) : même univers « premium » que le Verse, sans prétendre que l’éditeur tourne dans le navigateur.
+
+Métaphore produit : spirale = cycles (CirculAI) ; boucle ascendante = passage Egor / Outworld. Ce n’est **pas** le moteur du maillage encyclopédique (graphe fini 126 fiches).

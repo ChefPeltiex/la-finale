@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Signalement de vulnérabilité (privé)
+    url: https://github.com/ChefPeltiex/la-finale/security/advisories/new
+    about: Ne pas ouvrir une issue publique pour un problème de sécurité exploitable — voir SECURITY.md.

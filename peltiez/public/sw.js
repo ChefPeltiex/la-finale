@@ -1,9 +1,4 @@
-const CACHE_NAME = 'egor69-v8';
-const urlsToCache = [
-  '/',
-  '/index.html',
-  '/manifest.json'
-];
+const CACHE_NAME = 'circulai-v12';
 
 function isBundledAsset(url) {
   const p = url.pathname;
@@ -16,13 +11,7 @@ function isBundledAsset(url) {
 }
 
 self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(urlsToCache).catch(() => {
-        // Silently fail if some resources aren't available
-      });
-    })
-  );
+  // Activation immédiate, pas de pré-cache d'index.html (évite les versions périmées).
   self.skipWaiting();
 });
 
@@ -36,23 +25,22 @@ self.addEventListener('activate', event => {
           }
         })
       );
-    })
+    }).then(() => self.clients.claim())
   );
-  self.clients.claim();
+});
+
+self.addEventListener('message', event => {
+  if (event.data === 'SKIP_WAITING') self.skipWaiting();
 });
 
 self.addEventListener('fetch', event => {
-  if (event.request.method !== 'GET') {
-    return;
-  }
+  if (event.request.method !== 'GET') return;
 
   const url = new URL(event.request.url);
+  if (url.origin !== self.location.origin) return;
+  if (url.pathname.includes('/api/')) return;
 
-  if (url.pathname.includes('/api/')) {
-    return;
-  }
-
-  // Chunks Vite : jamais de fallback HTML (sinon le navigateur « exécute » du HTML → React cassé / hooks null).
+  // Chunks Vite : network-only, jamais de fallback HTML.
   if (isBundledAsset(url)) {
     event.respondWith(
       fetch(event.request).catch(() => new Response('', { status: 503, statusText: 'Offline' }))
@@ -60,32 +48,30 @@ self.addEventListener('fetch', event => {
     return;
   }
 
+  // Navigation HTML : network-first, fallback cache uniquement hors-ligne.
+  const accept = event.request.headers.get('accept') || '';
+  const isNavigation =
+    event.request.mode === 'navigate' || accept.includes('text/html');
+
+  if (isNavigation) {
+    event.respondWith(
+      fetch(event.request).then(response => {
+        const copy = response.clone();
+        caches.open(CACHE_NAME).then(cache => cache.put('/index.html', copy)).catch(() => {});
+        return response;
+      }).catch(() => caches.match('/index.html').then(r => r || new Response('', { status: 503 })))
+    );
+    return;
+  }
+
+  // Autres assets : cache-first léger.
   event.respondWith(
-    caches.match(event.request).then(response => {
-      if (response) {
-        return response;
+    caches.match(event.request).then(cached => cached || fetch(event.request).then(response => {
+      if (response && response.status === 200 && response.type !== 'error') {
+        const copy = response.clone();
+        caches.open(CACHE_NAME).then(cache => cache.put(event.request, copy)).catch(() => {});
       }
-
-      return fetch(event.request).then(response => {
-        if (!response || response.status !== 200 || response.type === 'error') {
-          return response;
-        }
-
-        const responseToCache = response.clone();
-        caches.open(CACHE_NAME).then(cache => {
-          cache.put(event.request, responseToCache);
-        });
-
-        return response;
-      }).catch(() => {
-        const accept = event.request.headers.get('accept') || '';
-        const wantsHtml =
-          event.request.mode === 'navigate' || accept.includes('text/html');
-        if (wantsHtml) {
-          return caches.match('/index.html');
-        }
-        return new Response('', { status: 503, statusText: 'Offline' });
-      });
-    })
+      return response;
+    }).catch(() => new Response('', { status: 503 })))
   );
 });

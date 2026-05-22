@@ -1,5 +1,18 @@
 # Assemblage PDF — Encyclopédie visuelle CirculAI (Codex)
 
+**Série complète :** [`volumes-series.md`](./volumes-series.md)
+
+| Vol. | Texte |
+|------|--------|
+| 0 Fondations | [`volume-0/index.md`](./volume-0/index.md) ✅ |
+| 1 Territoire | [`volume-1/index.md`](./volume-1/index.md) ✅ |
+| 2 Formules du cœur | [`volume-2/index.md`](./volume-2/index.md) ✅ |
+| 3 Unité et partage | [`volume-3/index.md`](./volume-3/index.md) ✅ |
+| 4 Paix et flux | [`volume-4/index.md`](./volume-4/index.md) ✅ |
+| 5–6 | Plans dans [`volume-5`](./volume-5/index.md) · [`volume-6`](./volume-6/index.md) |
+
+**Plan éditorial Vol. 0 :** [`volume-0-fondations.md`](./volume-0-fondations.md)
+
 Ce guide opérationnalise le gabarit unique de vérité : [`../codex-pdf-blueprint.md`](../codex-pdf-blueprint.md). Toute dérogation doit être documentée (édition, impression, diffusion web).
 
 ## Emplacement des images

@@ -4,6 +4,9 @@
  */
 export const UNREAL_BRIDGE_DOC_RELATIVE = "docs/unreal-bridge.md";
 
+/** JSON export attracteur → spline / Niagara UE */
+export const ROSSLER_BRIDGE_SAMPLE_PATH = "/ue-aiouy/rossler-bridge.sample.json";
+
 /** Charter-tab paragraph (French), text after the bold “Unreal Engine :” label. */
 export const UNREAL_CHARTER_BODY_FR =
   "pour une ville Age-of-Empires niveau AAA, Unreal est pertinent — mais hors bundle web actuel. Garde le Verse Three.js comme prototype ; migre les assets vers UE si tu passes desktop / streamed pixels (pixel streaming).";

@@ -33,6 +33,15 @@
     "start:prod": "node ./server/index.js",
     "start:server": "node ./server/index.js",
     "encyclopedie:placeholder-pdf": "node ./scripts/generate-codex-encyclopedie-placeholder-pdf.mjs",
+    "encyclopedie:generate": "node ./scripts/generate-encyclopedie-ensemble.mjs",
+    "encyclopedie:planches": "node ./scripts/generate-codex-planche-placeholders.mjs",
+    "encyclopedie:assemble": "node ./scripts/assemble-encyclopedie-ensemble.mjs",
+    "encyclopedie:public": "node ./scripts/copy-encyclopedie-public.mjs && node ./scripts/generate-curve-bridge-samples.mjs",
+    "encyclopedie:import-images": "node ./scripts/import-encyclopedie-planches.mjs",
+    "codex-metaphores:refs": "node ./scripts/copy-codex-metaphores-refs.mjs",
+    "curves:samples": "node ./scripts/generate-curve-bridge-samples.mjs",
+    "encyclopedie:build": "npm run encyclopedie:generate && npm run encyclopedie:planches && npm run encyclopedie:public && node ./scripts/assemble-encyclopedie-ensemble.mjs",
+    "encyclopedie:build:fast": "npm run encyclopedie:generate && node ./scripts/assemble-encyclopedie-ensemble.mjs --skip-planches",
     "encyclopedie:assemble-full": "node ./scripts/assemble-codex-encyclopedie-full.mjs",
     "docs:assemble-codex-pdf": "node ./scripts/assemble-codex-pdf.mjs",
     "docs:dossier-pdf": "node ./scripts/generate-strategy-dossier-pdf.mjs",
@@ -47,7 +56,8 @@
     "guardian:ps:daemon": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/guardian.ps1 -Daemon",
     "repair:npm-ci": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/repair-npm-ci-eperm.ps1",
     "dev:clean": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/dev-universal.ps1",
-    "dev:clean:no-dev": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/dev-universal.ps1 -NoDev"
+    "dev:clean:no-dev": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/dev-universal.ps1 -NoDev",
+    "setup:env": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/setup-env.ps1"
   },
   "dependencies": {
     "@hookform/resolvers": "^4.1.2",
@@ -80,6 +90,7 @@
     "@radix-ui/react-tooltip": "^1.1.8",
     "@react-three/drei": "^9.114.3",
     "@react-three/fiber": "^8.17.14",
+    "@react-three/postprocessing": "^2.16.3",
     "@sentry/react": "^10.52.0",
     "@stripe/react-stripe-js": "^3.0.0",
     "@stripe/stripe-js": "^5.2.0",

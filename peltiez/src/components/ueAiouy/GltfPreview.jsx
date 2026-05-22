@@ -1,4 +1,4 @@
-/* eslint-disable react/no-unknown-property -- @react-three/fiber étend le JSX (primitive, lights, etc.) */
+ 
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF, Stage } from "@react-three/drei";

@@ -1,0 +1,41 @@
+URGENCE deep links casses a nouveau.
+
+Test live a l instant:
+- / -> 200 OK
+- /circulai/equation-pilote -> 404 (CASSE)
+- /circulai/hub -> 404 (CASSE)
+- /robots.txt -> 200 OK
+- /sitemap.xml -> 200 OK
+
+La config SPA fallback a ete cassee par un deploy intermediaire.
+
+ACTION IMMEDIATE:
+
+1) Verifier le contenu de C:\Users\CHEFP\OneDrive\Desktop\la finale\peltiez\dist\vercel.json
+   Il DOIT contenir EXACTEMENT cette structure:
+   {"rewrites": [{"source": "/(.*)", "destination": "/index.html"}]}
+   
+   PAS de cleanUrls (cause connue du bug, deja debug avant).
+   PAS de routes complexes.
+   PAS de api routes.
+   Juste le rewrites SPA fallback.
+
+2) Si le contenu est different, REECRIRE via Node writeFileSync (PAS Set-Content - BOM issue connu):
+   node -e "require(\"fs\").writeFileSync(\"C:/Users/CHEFP/OneDrive/Desktop/la finale/peltiez/dist/vercel.json\", JSON.stringify({rewrites:[{source:\"/(.*)\",destination:\"/index.html\"}]}))"
+
+3) Verifier aussi peltiez/vercel.json a la racine - meme contenu safe.
+
+4) Redeployer depuis dist:
+   cmd /c "cd /d C:\Users\CHEFP\OneDrive\Desktop\la finale\peltiez\dist && vercel deploy --prod --yes"
+
+5) Tester avec node https GET:
+   - / status 200
+   - /circulai/equation-pilote status 200
+   - /circulai/hub status 200
+   - /circulai/plan-action-quebec status 200
+   - /robots.txt status 200
+   - /sitemap.xml status 200
+
+6) Si tout passe RAPPORTER les status codes pour confirmation.
+
+NE PAS toucher a autre chose. Juste restaurer le SPA fallback et redeployer. PRIORITE MAX.

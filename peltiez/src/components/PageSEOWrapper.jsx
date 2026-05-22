@@ -4,7 +4,6 @@ import {
   CIRCULAI_SEO_TITLE,
   CIRCULAI_SEO_DESCRIPTION,
   SITE_SEO_KEYWORDS,
-  CIRCULAI_BRAND,
 } from "@/lib/site";
 
 export const DOMAIN_SEO_CONFIG = {
@@ -64,6 +63,15 @@ export const DOMAIN_SEO_CONFIG = {
     keywords: "impact, CO₂, environnement, statistiques, mesure d'impact, écologie, développement durable",
     canonicalUrl: `${SITE_ORIGIN}/impact`,
     type: "DataCatalog"
+  },
+  boutique: {
+    title: "Boutique numérique — Encyclopédie, Codex & Nature QC | CirculAI",
+    description:
+      "Produits numériques honnêtes dérivés des actifs Egor69 : aperçu gratuit, édition complète PDF, bundles Codex, kit Nature Québec et pilote entreprise.",
+    keywords:
+      "boutique numérique, encyclopédie pdf, codex circulai, nature québec, économie circulaire, québec, produits numériques",
+    canonicalUrl: `${SITE_ORIGIN}/boutique`,
+    type: "Store",
   },
 };
 

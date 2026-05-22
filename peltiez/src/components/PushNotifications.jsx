@@ -2,6 +2,12 @@ import { useEffect, useState } from 'react';
 import { Bell, CheckCircle, MapPin, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { base44 } from '@/api/base44Client';
+import {
+  isNotificationSupported,
+  getNotificationPermission,
+  requestNotificationPermission,
+  safeNewNotification,
+} from '@/lib/safeNotification';
 
 export default function PushNotifications() {
   const [permissionStatus, setPermissionStatus] = useState('default');
@@ -10,8 +16,8 @@ export default function PushNotifications() {
   const [proximityEnabled, setProximityEnabled] = useState(false);
 
   useEffect(() => {
-    if ('Notification' in window) {
-      setPermissionStatus(Notification.permission);
+    if (isNotificationSupported()) {
+      setPermissionStatus(getNotificationPermission());
     } else {
       setSupported(false);
     }
@@ -46,7 +52,7 @@ export default function PushNotifications() {
         
         if (isNearby) {
           sendNotification(
-            `📍 ${event.data.title}`,
+            `\uD83D\uDCCD ${event.data.title}`,
             {
               body: `Nouvel objet près de chez vous! ${event.data.location}`,
               tag: `listing-${event.data.id}`,
@@ -66,18 +72,14 @@ export default function PushNotifications() {
     const onFicheProx = (ev) => {
       const d = ev.detail;
       if (!d || typeof d.delta !== 'number') return;
-      try {
-        new Notification('📡 Fiche vivante · Atlas', {
-          icon: '🌱',
-          body:
-            d.delta === 1
-              ? 'Une nouvelle fiche vivante — ouvre Fiches vivantes dans l’Atlas.'
-              : `${d.delta} nouvelles fiches — ouvre l’Atlas vivant.`,
-          tag: `igor-fiche-vivante-${d.count ?? 'x'}`,
-        });
-      } catch (e) {
-        if (import.meta.env.DEV) console.warn("Notification fiche vivante:", e);
-      }
+      const body = d.delta === 1
+        ? 'Une nouvelle fiche vivante — ouvre Fiches vivantes dans l\u2019Atlas.'
+        : `${d.delta} nouvelles fiches — ouvre l\u2019Atlas vivant.`;
+      safeNewNotification('\uD83D\uDCE1 Fiche vivante \u00B7 Atlas', {
+        icon: '\uD83C\uDF31',
+        body,
+        tag: `igor-fiche-vivante-${d.count ?? 'x'}`,
+      });
     };
     window.addEventListener('igor:fiches-vivantes-proximite', onFicheProx);
     return () => window.removeEventListener('igor:fiches-vivantes-proximite', onFicheProx);
@@ -87,20 +89,15 @@ export default function PushNotifications() {
     if (!supported) return;
     
     try {
-      const permission = await Notification.requestPermission();
+      const permission = await requestNotificationPermission();
       setPermissionStatus(permission);
       
       if (permission === 'granted') {
-        // Test notification
-        try {
-          new Notification('Egor69 — notifications activées', {
-            icon: '🌱',
-            body: 'Tu recevras des alertes liées à la plateforme lorsque le navigateur les autorise.',
-            tag: 'launch-notification',
-          });
-        } catch (notifError) {
-          if (import.meta.env.DEV) console.warn('Notification test échouée (peut être normal):', notifError);
-        }
+        safeNewNotification('Egor69 \u2014 notifications activ\u00E9es', {
+          icon: '\uD83C\uDF31',
+          body: 'Tu recevras des alertes li\u00E9es \u00E0 la plateforme lorsque le navigateur les autorise.',
+          tag: 'launch-notification',
+        });
       }
     } catch (error) {
       console.error('Erreur permission notifications:', error);
@@ -109,15 +106,11 @@ export default function PushNotifications() {
 
   const sendNotification = (title, options = {}) => {
     if (permissionStatus === 'granted' && supported) {
-      try {
-        new Notification(title, {
-          icon: '🌱',
-          ...options,
-          tag: options.tag || 'circul-ai',
-        });
-      } catch (error) {
-        if (import.meta.env.DEV) console.warn('Erreur notification:', error);
-      }
+      safeNewNotification(title, {
+        icon: '\uD83C\uDF31',
+        ...options,
+        tag: options.tag || 'circul-ai',
+      });
     }
   };
   
@@ -132,18 +125,20 @@ export default function PushNotifications() {
     ).then(r => r[0]);
     
     if (ecoProfile) {
-      sendNotification('📊 Rapport d\'impact', {
-        body: `${ecoProfile.total_co2_saved}kg CO₂ économisé · ${ecoProfile.total_objects_saved} objets sauvés`,
+      sendNotification('\uD83D\uDCCA Rapport d\'impact', {
+        body: `${ecoProfile.total_co2_saved}kg CO\u2082 \u00E9conomis\u00E9 \u00B7 ${ecoProfile.total_objects_saved} objets sauv\u00E9s`,
         tag: 'impact-report',
       });
     }
   };
 
-  // Export functions for external use
-  window.sendCirculAINotification = sendNotification;
-  window.requestCirculAINotifications = requestPermission;
-  window.sendImpactReport = sendImpactReport;
-  window.getProximityNotificationsStatus = () => proximityEnabled;
+  // Export functions for external use — guarded: window may be undefined in FB/IG in-app WebViews
+  if (typeof window !== 'undefined') {
+    window.sendCirculAINotification = sendNotification;
+    window.requestCirculAINotifications = requestPermission;
+    window.sendImpactReport = sendImpactReport;
+    window.getProximityNotificationsStatus = () => proximityEnabled;
+  }
 
   if (!supported) return null;
 
@@ -170,7 +165,7 @@ export default function PushNotifications() {
               onClick={() => setPermissionStatus('denied')}
               className="text-muted-foreground hover:text-foreground p-1 flex-shrink-0"
             >
-              ×
+              &times;
             </button>
           </div>
         </div>

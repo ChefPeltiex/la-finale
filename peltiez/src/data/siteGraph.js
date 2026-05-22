@@ -25,14 +25,16 @@ export const SITE_GROUPS = {
 
 /** @type {Array<{ id: string, path: string, label: string, groupId: keyof SITE_GROUPS, relatedPaths?: string[] }>} */
 export const SITE_NODES = [
-  { id: "accueil", path: "/", label: "Accueil", groupId: "coeur", relatedPaths: ["/world", "/marketplace", "/manuel", "/carte-site"] },
+  { id: "accueil", path: "/", label: "Accueil", groupId: "coeur", relatedPaths: ["/world", "/boutique", "/marketplace", "/manuel", "/carte-site"] },
   { id: "carte", path: "/carte-site", label: "Carte du site & liens", groupId: "coeur", relatedPaths: ["/manuel", "/outils-integration"] },
   { id: "manuel", path: "/manuel", label: "Manuel plateforme", groupId: "coeur", relatedPaths: ["/carte-site", "/hub-souverain", "/security"] },
   { id: "vision", path: "/vision", label: "Vision", groupId: "coeur", relatedPaths: ["/about", "/charte", "/pricing"] },
   { id: "about", path: "/about", label: "À propos", groupId: "coeur", relatedPaths: ["/contact", "/legal"] },
   { id: "contact", path: "/contact", label: "Contact", groupId: "coeur", relatedPaths: ["/soutien", "/security"] },
 
-  { id: "marketplace", path: "/marketplace", label: "Marketplace", groupId: "marche", relatedPaths: ["/publier", "/profil", "/atlas"] },
+  { id: "marketplace", path: "/marketplace", label: "Marketplace", groupId: "marche", relatedPaths: ["/publier", "/profil", "/atlas", "/seconde-main"] },
+  { id: "seconde-main", path: "/seconde-main", label: "Seconde main Québec", groupId: "marche", relatedPaths: ["/marketplace", "/publier", "/circulai", "/codex-metaphores"] },
+  { id: "codex-metaphores", path: "/codex-metaphores", label: "Codex métaphores", groupId: "atlas_doctrine", relatedPaths: ["/seconde-main", "/encyclopedie", "/circulai/equation-pilote"] },
   { id: "publier", path: "/publier", label: "Publier une annonce", groupId: "marche", relatedPaths: ["/marketplace", "/profil"] },
   { id: "profil", path: "/profil", label: "Mon profil", groupId: "marche", relatedPaths: ["/mon-univers", "/vault", "/alerts"] },
   { id: "mon-univers", path: "/mon-univers", label: "Mon univers", groupId: "marche", relatedPaths: ["/avatar-creator", "/world", "/manuel"] },
@@ -69,7 +71,9 @@ export const SITE_NODES = [
   { id: "jeu", path: "/jeu", label: "Games", groupId: "communaute", relatedPaths: ["/wellness", "/world"] },
   { id: "sanctuary", path: "/sanctuary", label: "Sanctuary animaux", groupId: "communaute", relatedPaths: ["/wellness", "/cosmic-portal"] },
 
-  { id: "pricing", path: "/pricing", label: "Pricing", groupId: "pilotage", relatedPaths: ["/soutien", "/abonnement", "/dashboard-royal"] },
+  { id: "circulaiHub", path: "/circulai", label: "CirculAI — portail décideurs", groupId: "pilotage", relatedPaths: ["/docs/circulai-kit-regional", "/entreprises", "/pilote"] },
+  { id: "boutique", path: "/boutique", label: "Boutique numérique", groupId: "pilotage", relatedPaths: ["/pricing", "/pilote", "/docs/investisseur"] },
+  { id: "pricing", path: "/pricing", label: "Pricing", groupId: "pilotage", relatedPaths: ["/boutique", "/soutien", "/abonnement", "/dashboard-royal"] },
   { id: "soutien", path: "/soutien", label: "Soutien", groupId: "pilotage", relatedPaths: ["/pricing", "/contact"] },
   { id: "abonnement", path: "/abonnement", label: "Abonnement", groupId: "pilotage", relatedPaths: ["/pricing", "/profil"] },
   { id: "dash", path: "/dashboard-royal", label: "Dashboard royal", groupId: "pilotage", relatedPaths: ["/pricing", "/plateforme/temps-reel"] },

@@ -3,6 +3,12 @@ import { Link } from "react-router-dom";
 import { base44 } from "@/api/base44Client";
 import { Bell, BellRing, X, MapPin, Share2, CheckCheck } from "lucide-react";
 import { cn } from "@/lib/utils";
+import {
+  isNotificationSupported,
+  getNotificationPermission,
+  requestNotificationPermission,
+  safeNewNotification,
+} from "@/lib/safeNotification";
 
 const SHARE_QUEST_INTERVAL = 4 * 60 * 60 * 1000; // every 4h
 const SHARE_QUEST_MESSAGES = [
@@ -15,20 +21,20 @@ function fireNotification(title, body, link, onAdd) {
   // In-app
   onAdd({ id: Date.now(), title, body, link, time: new Date(), read: false });
 
-  // Browser push
-  if (Notification.permission === "granted") {
-    const n = new Notification(title, {
-      body,
-      icon: "/favicon.ico",
-      badge: "/favicon.ico",
-      tag: link,
-    });
+  // Browser push — safe: Notification peut être absent dans les WebViews in-app
+  const n = safeNewNotification(title, {
+    body,
+    icon: "/favicon.ico",
+    badge: "/favicon.ico",
+    tag: link,
+  });
+  if (n) {
     n.onclick = () => { window.focus(); window.location.href = link; n.close(); };
   }
 }
 
 export default function NotificationCenter() {
-  const [permission, setPermission] = useState(Notification.permission);
+  const [permission, setPermission] = useState(() => getNotificationPermission());
   const [notifs, setNotifs] = useState([]);
   const [open, setOpen] = useState(false);
   const [userLocation, setUserLocation] = useState(null);
@@ -39,7 +45,7 @@ export default function NotificationCenter() {
 
   // Request permission once
   const requestPermission = async () => {
-    const result = await Notification.requestPermission();
+    const result = await requestNotificationPermission();
     setPermission(result);
   };
 

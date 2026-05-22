@@ -1,0 +1,37 @@
+name: Idée / évolution
+description: Proposition de fonctionnalité ou d’amélioration (non prioritaire tant que non validée).
+title: "[feat] "
+labels: ["enhancement", "triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problème ou opportunité
+      description: Quel besoin utilisateur ou technique cette évolution adresse-t-elle ?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposition
+      description: Comportement souhaité, API, UX, périmètre (`peltiez`, codex-usb, etc.).
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives envisagées
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Périmètre probable
+      options:
+        - label: Frontend / UX (`peltiez/src`, etc.)
+        - label: API / serveur (`peltiez/server`)
+        - label: Codex USB (`scripts/codex-usb`)
+        - label: CI / gouvernance (`.github`, docs racine)

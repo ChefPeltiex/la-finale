@@ -209,6 +209,13 @@ export default function Pricing() {
         <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
           Choisis le pass aligné avec ton rythme : exploration, place de marché, ou souveraineté Outworld.
         </p>
+        <p className="text-zinc-500 text-sm max-w-2xl mx-auto">
+          Produits numériques à l&apos;unité (encyclopédie, Codex, Nature QC) :{" "}
+          <Link to="/boutique" className="text-emerald-400 hover:text-emerald-300 font-semibold underline-offset-2 hover:underline">
+            boutique CirculAI
+          </Link>
+          .
+        </p>
         <p className="text-zinc-500 text-sm max-w-3xl mx-auto leading-relaxed">
           Prix indicatifs ; les fonctions listées sont soumises à disponibilité et aux évolutions du produit ; aucune promesse de gain
           financier ou autre.
@@ -218,6 +225,20 @@ export default function Pricing() {
             Paiement désactivé tant que `VITE_STRIPE_CHECKOUT_ENDPOINT` n’est pas configuré.
           </p>
         )}
+      </div>
+
+      <div className="rounded-3xl border border-emerald-500/25 bg-gradient-to-br from-emerald-950/40 via-zinc-950 to-black/80 p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div className="text-left max-w-xl">
+          <p className="text-xs font-bold uppercase tracking-widest text-emerald-300/90 mb-1">Achats ponctuels</p>
+          <h2 className="font-display text-xl font-bold text-white">PDF, Codex & kits — boutique numérique</h2>
+          <p className="text-sm text-white/60 mt-2 leading-relaxed">
+            Les passes ci-dessous sont des abonnements récurrents. Pour l’encyclopédie complète (19 $), les bundles
+            Codex ou le kit Nature QC, ouvrez la boutique — Stripe ou courriel selon configuration.
+          </p>
+        </div>
+        <Button asChild size="lg" className="shrink-0 rounded-xl bg-emerald-600 hover:bg-emerald-500 font-bold">
+          <Link to="/boutique">Ouvrir la boutique</Link>
+        </Button>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">

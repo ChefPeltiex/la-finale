@@ -60,7 +60,9 @@ export default function RelatedContent({ contentId, contentType = "blog", limit 
         }
         return items;
       } catch (e) {
-        console.error("Related content fetch error:", e.message);
+        if (import.meta.env.DEV) {
+          console.error("Related content fetch error:", e.message);
+        }
         return [];
       }
     },

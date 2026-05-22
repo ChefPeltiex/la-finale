@@ -1,7 +1,8 @@
 import { useEffect, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
+import { Sparkles } from "@react-three/drei";
 import * as THREE from "three";
-import { COSMIC_NAV_V2 } from "@/config/cosmicNav";
+import { COSMIC_NAV_V2, VERSE_STYLE } from "@/config/cosmicNav";
 
 export const NAV_LOOK_SENSITIVITY = { yaw: 0.0021, pitch: 0.00165 };
 export const NAV_PITCH_LIMITS = { min: 0.14, max: 1.28 };
@@ -121,10 +122,21 @@ export function CosmicTravelerAvatar({ playerPosRef }) {
 function SparklesTrail() {
   if (!COSMIC_NAV_V2) return null;
   return (
-    <mesh>
-      <sphereGeometry args={[0.08, 8, 8]} />
-      <meshBasicMaterial color="#67e8f9" transparent opacity={0.35} />
-    </mesh>
+    <>
+      <mesh position={[0, -0.12, 0.35]}>
+        <sphereGeometry args={[0.1, 8, 8]} />
+        <meshBasicMaterial color="#67e8f9" transparent opacity={0.48} />
+      </mesh>
+      <Sparkles
+        count={48}
+        scale={[1.8, 0.9, 2.4]}
+        position={[0, -0.2, 0.55]}
+        size={1.6}
+        speed={0.35}
+        opacity={0.52}
+        color={VERSE_STYLE.sparkleGold}
+      />
+    </>
   );
 }
 

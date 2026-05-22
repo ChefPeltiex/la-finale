@@ -51,6 +51,13 @@ const THEMES = {
     badge: "Nature Québec · portails",
     prose: "prose-invert prose-headings:text-emerald-100 prose-a:text-sky-300",
   },
+  circulai: {
+    wrapper: "from-sky-950/25 via-zinc-950 to-emerald-950/25",
+    border: "border-sky-500/30",
+    accent: "text-sky-300",
+    badge: "Kit régional CirculAI",
+    prose: "prose-invert prose-headings:text-sky-100 prose-a:text-emerald-400",
+  },
 };
 
 export default function CodexMarkdownView({
@@ -92,7 +99,7 @@ export default function CodexMarkdownView({
 
   return (
     <div className={cn("min-h-[70vh] bg-gradient-to-b pb-24", theme.wrapper)}>
-      <div className="container max-w-3xl py-8">
+      <div className="container max-w-3xl py-6 sm:py-8 px-4 sm:px-6">
         <SEOMeta title={title} description={description} canonicalUrl={`${SITE_ORIGIN}${canonicalPath}`} />
 
         <div
@@ -153,7 +160,41 @@ export default function CodexMarkdownView({
                 </Link>
               </>
             )}
-            {variant !== "magique" && variant !== "preuves" && variant !== "nature" && (
+            {variant === "circulai" && (
+              <>
+                <Link
+                  to="/docs/circulai-kit-regional"
+                  className="rounded-lg border border-sky-500/40 px-3 py-1.5 text-sky-200 hover:bg-sky-500/10"
+                >
+                  Hub kit régional
+                </Link>
+                <Link
+                  to="/docs/circulai/equations-systeme"
+                  className="rounded-lg border border-amber-500/35 px-3 py-1.5 text-amber-200 hover:bg-amber-500/10"
+                >
+                  Équations → produit
+                </Link>
+                <Link
+                  to="/docs/circulai/plan-action-quebec"
+                  className="rounded-lg border border-white/15 px-3 py-1.5 text-white/80 hover:bg-white/10"
+                >
+                  Plan action QC
+                </Link>
+                <Link
+                  to="/pilote"
+                  className="rounded-lg border border-emerald-500/40 px-3 py-1.5 text-emerald-200 hover:bg-emerald-500/10"
+                >
+                  Pilote 90 j
+                </Link>
+                <Link
+                  to="/entreprises"
+                  className="rounded-lg border border-white/15 px-3 py-1.5 text-white/80 hover:bg-white/10"
+                >
+                  Entreprises
+                </Link>
+              </>
+            )}
+            {variant !== "magique" && variant !== "preuves" && variant !== "nature" && variant !== "circulai" && (
               <Link
                 to={variant === "investisseur" ? "/docs/rituel" : "/docs/investisseur"}
                 className="rounded-lg border border-white/15 px-3 py-1.5 text-white/80 hover:bg-white/10"
@@ -215,7 +256,7 @@ export default function CodexMarkdownView({
         {!loading && !error && (
           <article
             className={cn(
-              "prose max-w-none rounded-2xl border p-6 sm:p-8 bg-black/40 backdrop-blur-sm",
+              "prose-circulai-responsive rounded-2xl border p-4 sm:p-8 bg-black/40 backdrop-blur-sm",
               theme.border,
               theme.prose
             )}

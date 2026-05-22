@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { PlusCircle, ShoppingBag, BookOpen, Sparkles, ArrowRight, Crown, Globe2 } from "lucide-react";
+import { PlusCircle, ShoppingBag, BookOpen, Sparkles, ArrowRight, Crown, Globe2, Building2, Store } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { CIRCULAI_BRAND, SITE_NAME } from "@/lib/site";
@@ -12,6 +12,14 @@ const CARDS = [
     icon: PlusCircle,
     accent: "from-[#FFD700]/20 to-[#D4AF37]/5 border-[#D4AF37]/50 hover:shadow-[0_0_20px_rgba(255,215,0,0.15)]",
     iconColor: "text-[#FFD700]",
+  },
+  {
+    title: "Boutique",
+    desc: "PDF, Codex et kits numériques — achats uniques ou gratuits.",
+    to: "/boutique",
+    icon: Store,
+    accent: "from-emerald-500/20 to-transparent border-emerald-500/45 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)]",
+    iconColor: "text-emerald-400",
   },
   {
     title: "Marketplace",
@@ -44,7 +52,7 @@ export default function HomeHeroCards() {
     <section id="accueil-hero-cards" className="scroll-mt-28 lg:scroll-mt-8 max-w-6xl mx-auto px-4 lg:px-8 space-y-8">
       <CirculAIHeroBandContent />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
         {CARDS.map((card) => {
           const Icon = card.icon;
           return (
@@ -84,28 +92,33 @@ function CirculAIHeroBandContent() {
       <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-emerald-400/90 mb-3">
         Intelligence circulaire · Québec
       </p>
-      <h1 className="font-display text-5xl sm:text-6xl md:text-7xl font-black text-white tracking-tight">
+      <h1 className="font-display text-3xl sm:text-5xl md:text-7xl font-black text-white tracking-tight">
         <span className="bg-gradient-to-r from-emerald-300 via-[#FFD700] to-cyan-300 bg-clip-text text-transparent">
           {CIRCULAI_BRAND}
         </span>
       </h1>
       <p className="mt-3 text-base sm:text-lg text-white/70 font-semibold">
-        L&apos;univers <span className="text-amber-200/95">{SITE_NAME}</span> — économie circulaire, atlas et pilote mesuré
+        <span className="text-emerald-200/95">{CIRCULAI_BRAND}</span> — territoire & pilote mesuré ·{" "}
+        <span className="text-amber-200/95">{SITE_NAME}</span> — jumeau numérique & divertissement (Verse, encyclopédie)
       </p>
       <p className="mt-2 text-sm text-white/50 max-w-xl mx-auto leading-relaxed">
         Rejoignez le hub pour agir tout de suite, ou entrez dans le Verse 3D pour explorer l&apos;univers complet.
+      </p>
+      <p className="mt-3 text-xs sm:text-sm text-emerald-200/85 max-w-lg mx-auto leading-relaxed font-medium italic">
+        Manifeste · demain on circule mieux, aujourd&apos;hui on s&apos;ouvre l&apos;accès — avec amour du réel, sans
+        promesse vide.
       </p>
 
       <div className="mt-8 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center justify-center gap-4 max-w-2xl mx-auto">
         <Button
           asChild
           size="lg"
-          className="w-full sm:flex-1 sm:min-w-[220px] rounded-2xl h-14 text-base font-black uppercase tracking-wide border-0 shadow-[0_0_40px_rgba(16,185,129,0.35)] text-white"
+          className="w-full sm:flex-1 sm:min-w-0 rounded-2xl h-14 text-base font-black uppercase tracking-wide border-0 shadow-[0_0_40px_rgba(16,185,129,0.35)] text-white"
           style={{ background: "linear-gradient(135deg, hsl(158,65%,38%), hsl(160,55%,28%))" }}
         >
-          <Link to="/pricing" className="inline-flex items-center justify-center gap-2">
-            <Crown className="h-5 w-5 shrink-0" aria-hidden />
-            Rejoindre {CIRCULAI_BRAND}
+          <Link to="/boutique" className="inline-flex items-center justify-center gap-2">
+            <Store className="h-5 w-5 shrink-0" aria-hidden />
+            Boutique & offres
             <ArrowRight className="h-5 w-5 shrink-0" aria-hidden />
           </Link>
         </Button>
@@ -113,7 +126,18 @@ function CirculAIHeroBandContent() {
           asChild
           size="lg"
           variant="outline"
-          className="w-full sm:flex-1 sm:min-w-[220px] rounded-2xl h-14 text-base font-bold border-2 border-violet-400/50 bg-violet-950/40 text-violet-100 hover:bg-violet-500/15 hover:border-violet-300/70"
+          className="w-full sm:flex-1 sm:min-w-0 rounded-2xl h-14 text-base font-bold border-amber-500/40 text-amber-100 hover:bg-amber-500/10"
+        >
+          <Link to="/pricing" className="inline-flex items-center justify-center gap-2">
+            <Crown className="h-5 w-5 shrink-0" aria-hidden />
+            Passes Verse
+          </Link>
+        </Button>
+        <Button
+          asChild
+          size="lg"
+          variant="outline"
+          className="w-full sm:flex-1 sm:min-w-0 rounded-2xl h-14 text-base font-bold border-2 border-violet-400/50 bg-violet-950/40 text-violet-100 hover:bg-violet-500/15 hover:border-violet-300/70"
         >
           <Link to="/world" className="inline-flex items-center justify-center gap-2">
             <Globe2 className="h-5 w-5 shrink-0" aria-hidden />
@@ -123,7 +147,17 @@ function CirculAIHeroBandContent() {
         </Button>
       </div>
 
-      <p className="mt-5 text-[11px] text-white/40 tracking-wide">
+      <p className="mt-4">
+        <Link
+          to="/entreprises"
+          className="inline-flex items-center justify-center gap-1.5 text-sm font-semibold text-emerald-300/90 hover:text-emerald-200 transition-colors"
+        >
+          <Building2 className="h-4 w-4" aria-hidden />
+          Entreprises — déposez votre idée, on bâtit ensemble
+          <ArrowRight className="h-3.5 w-3.5" aria-hidden />
+        </Link>
+      </p>
+      <p className="mt-2 text-[11px] text-white/40 tracking-wide">
         egor69.ca — même plateforme, un seul compte
       </p>
     </div>

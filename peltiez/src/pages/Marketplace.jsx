@@ -1,11 +1,12 @@
 import { useState, useMemo, useDeferredValue } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { base44 } from "@/api/base44Client";
-import { Search, SlidersHorizontal, Package, Gift, Wrench, RefreshCw, LayoutGrid } from "lucide-react";
+import { Search, SlidersHorizontal, Package, Gift, Wrench, RefreshCw, LayoutGrid, ArrowRight, Recycle } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import PlatformPageHeader from "@/components/platform/PlatformPageHeader";
 
 const TYPE_CONFIG = {
   all:        { label: "Tout",       icon: LayoutGrid },
@@ -86,10 +87,32 @@ export default function Marketplace() {
 
   return (
     <div className="space-y-5 pb-20">
-      <div>
-        <h1 className="font-display text-2xl font-bold text-foreground">Marketplace</h1>
-        <p className="text-sm text-muted-foreground mt-1">Découvrez des annonces près de chez vous</p>
-      </div>
+      <Link
+        to="/seconde-main"
+        className="block platform-card-emerald rounded-2xl p-4 sm:p-5 hover:border-emerald-400 transition group"
+      >
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <p className="text-[10px] font-bold uppercase tracking-widest text-emerald-500 flex items-center gap-1.5">
+              <Recycle className="h-3.5 w-3.5" />
+              Seconde main · Québec
+            </p>
+            <p className="font-semibold text-foreground mt-1 group-hover:text-emerald-600 transition">
+              Consommez responsable sans vous ruiner — ΔM = entrée − sortie − stock
+            </p>
+            <p className="text-xs text-muted-foreground mt-1">Inscription en moins de 60 secondes</p>
+          </div>
+          <span className="inline-flex items-center gap-1 text-sm font-semibold text-emerald-600">
+            Découvrir <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
+          </span>
+        </div>
+      </Link>
+
+      <PlatformPageHeader
+        eyebrow="Marché local"
+        title="Marketplace"
+        description="Vente, don, échange et réparation — annonces près de chez vous, en français."
+      />
 
       {/* Search */}
       <div className="relative">

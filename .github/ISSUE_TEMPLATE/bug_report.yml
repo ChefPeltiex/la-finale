@@ -1,0 +1,60 @@
+name: Bug
+description: Comportement incorrect ou régression (hors sécurité exploitable — voir SECURITY.md).
+title: "[bug] "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de décrire le bug avec assez de détail pour qu’on puisse le reproduire.
+        **Périmètre** : `peltiez/` (IGOR), `scripts/codex-usb/`, racine CI — précise lequel.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Résumé
+      description: En 1–3 phrases, que se passe-t-il ?
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Étapes pour reproduire
+      description: Commandes, URL, clics, version de Node, OS si pertinent.
+      placeholder: |
+        1. cd peltiez && npm ci --legacy-peer-deps
+        2. npm run dev
+        3. …
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportement attendu
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Comportement observé
+    validations:
+      required: true
+
+  - type: input
+    id: commit
+    attributes:
+      label: Commit / branche (optionnel)
+      description: SHA court ou nom de branche.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: verify
+    attributes:
+      label: Vérifications
+      options:
+        - label: J’ai lancé `npm run verify` dans `peltiez/` (si le bug touche l’app) et je note le résultat ci-dessous si utile.
+          required: false

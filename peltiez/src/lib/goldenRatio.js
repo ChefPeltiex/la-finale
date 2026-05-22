@@ -1,4 +1,4 @@
-/** Nombre d'or φ — proportions, spirales, recherche sans dérivée (1D). */
+/** Nombre d'or φ — proportions, spirales, recherche sans dérivée (1D). Angles : voir `circleConstants.js` (τ = tour complet). */
 
 export const PHI = (1 + Math.sqrt(5)) / 2;
 export const INV_PHI = 1 / PHI;

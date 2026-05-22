@@ -1,4 +1,6 @@
 import { useMemo, useRef, useState, useEffect, lazy, Suspense } from "react";
+import useTouchDevice from "@/hooks/useTouchDevice";
+import { buildVerseControlsHelp } from "@/lib/verseControlsHelp";
 import { useNavigate, Link } from "react-router-dom";
 
 const WorldScene = lazy(() => import("@/world/WorldScene"));
@@ -22,6 +24,7 @@ import {
 } from "@/lib/verseAudio";
 import { formatRealmFrequencyBadge } from "@/lib/realmFrequency";
 import VerseMaitre from "@/components/world/VerseMaitre";
+import WorldHubBoutiqueBanner from "@/components/world/WorldHubBoutiqueBanner";
 import SymbolicDisclaimer from "@/components/ui/SymbolicDisclaimer";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -40,6 +43,7 @@ export default function WorldHub() {
   const [audioOn, setAudioOn] = useState(() => isVerseAudioEnabled());
   const [profileId, setProfileId] = useState("earth");
   const [maitrePulse, setMaitrePulse] = useState(false);
+  const [traversePulse, setTraversePulse] = useState(null);
   const lastNearSlugRef = useRef(null);
   const navigate = useNavigate();
 
@@ -50,17 +54,8 @@ export default function WorldHub() {
     return findNearestUnvisitedRealm(t?.x, t?.z, visitedSlugs);
   }, [visitedSlugs, nearRealm, hudTick]);
 
-  const controls = useMemo(
-    () => [
-      { k: "Clic canvas", d: "verrouiller la souris (regard FPS / orbite)" },
-      { k: "W A S D · ↑ ↓ ← →", d: "avancer / reculer / strafe (↑ = vers l’horizon, pas vers le bas)" },
-      { k: "Shift", d: "sprint cosmique" },
-      { k: "Espace", d: "saut ; maintenir = glisse" },
-      { k: "E / Entrée", d: "traverser un portail quand vous êtes proche" },
-      { k: "Interface 2D", d: "retour à la navigation classique" },
-    ],
-    []
-  );
+  const touchDevice = useTouchDevice();
+  const controls = useMemo(() => buildVerseControlsHelp(touchDevice), [touchDevice]);
 
   useWorldKeyboard(keysRef);
 
@@ -145,9 +140,10 @@ export default function WorldHub() {
     const onPortalKey = (e) => {
       if ((e.code === "Enter" || e.code === "KeyE") && nearRealm) {
         e.preventDefault();
+        setTraversePulse({ slug: nearRealm.slug, at: performance.now() });
         recordRealmVisit(nearRealm.slug);
         setVisitedCount(getVisitedRealmCount());
-        navigate(nearRealm.path);
+        window.setTimeout(() => navigate(nearRealm.path), VERSE_STYLE.portalTraverseMs * 0.55);
       }
     };
     window.addEventListener("keydown", onPortalKey);
@@ -160,7 +156,7 @@ export default function WorldHub() {
     : "border-emerald-400/50 shadow-[0_0_40px_rgba(52,211,153,0.25)]";
 
   return (
-    <div className="fixed inset-0 z-[200] bg-[#01040f] text-white">
+    <div className="fixed inset-0 z-[200] bg-[#01040f] text-white pt-[env(safe-area-inset-top,0px)] pb-[env(safe-area-inset-bottom,0px)]">
       {COSMIC_NAV_V2 ? (
         <>
           <div className="pointer-events-none absolute inset-x-0 top-0 z-[210] h-[5vh] min-h-[28px] bg-gradient-to-b from-black/85 to-transparent" aria-hidden />
@@ -188,6 +184,7 @@ export default function WorldHub() {
             onProximityChange={setNearRealm}
             initialCheckpoint={checkpoint}
             playerTelemetryRef={playerTelemetryRef}
+            traversePulse={traversePulse}
           />
         </Suspense>
       </div>
@@ -196,8 +193,17 @@ export default function WorldHub() {
         <WorldMinimap telemetryRef={playerTelemetryRef} visitedSlugs={visitedSlugs} nearRealm={nearRealm} />
       </div>
 
+      {nearRealm && COSMIC_NAV_V2 ? (
+        <p
+          className="pointer-events-none absolute bottom-[18%] left-1/2 z-[215] -translate-x-1/2 rounded-full border border-amber-400/35 bg-black/55 px-4 py-1.5 text-xs font-semibold tracking-wide text-amber-100/90 backdrop-blur-md"
+          aria-live="polite"
+        >
+          <kbd className="font-mono text-amber-300">E</kbd> · franchir le portail
+        </p>
+      ) : null}
+
       <div
-        className={`absolute left-4 bottom-24 z-[220] transition-opacity duration-500 sm:bottom-6 ${
+        className={`absolute left-2 sm:left-4 bottom-[max(6rem,18%)] z-[220] transition-opacity duration-500 sm:bottom-6 max-w-[min(100%,20rem)] ${
           portalFocus ? "opacity-90" : "opacity-100"
         }`}
       >
@@ -212,14 +218,14 @@ export default function WorldHub() {
         <SymbolicDisclaimer variant="frequency" compact className="mt-2 max-w-[20rem]" />
       </div>
 
-      <div className="pointer-events-none absolute inset-0 flex flex-col justify-between p-4 sm:p-6">
+      <div className="pointer-events-none absolute inset-0 flex flex-col justify-between p-3 sm:p-6">
         <div
-          className={`pointer-events-auto flex flex-wrap items-start justify-between gap-3 transition-opacity duration-500 ${
+          className={`pointer-events-auto flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-start justify-between gap-2 sm:gap-3 transition-opacity duration-500 max-h-[42vh] sm:max-h-none overflow-y-auto sm:overflow-visible overscroll-contain ${
             portalFocus ? "opacity-0" : "opacity-100"
           }`}
         >
           <div
-            className={`rounded-2xl border px-4 py-3 backdrop-blur-xl max-w-md ${
+            className={`rounded-2xl border px-3 sm:px-4 py-3 backdrop-blur-xl w-full sm:max-w-md shrink-0 ${
               COSMIC_NAV_V2 ? "border-indigo-400/20" : "border-white/10"
             }`}
             style={{
@@ -272,6 +278,8 @@ export default function WorldHub() {
               </div>
             ) : null}
 
+            <WorldHubBoutiqueBanner className="mt-3 max-w-md" />
+
             <p className="mt-2 text-sm text-white/80 leading-snug">
               {COSMIC_NAV_V2
                 ? "Dérive lente · anneaux du Verse · regard vers l’horizon avant chaque seuil · "
@@ -295,7 +303,25 @@ export default function WorldHub() {
                 ))}
               </ul>
             ) : null}
+            {COSMIC_NAV_V2 ? (
+              <Link
+                to="/boutique?product=pass-explorateur-verse"
+                className="mt-2 block rounded-xl border border-emerald-500/35 bg-emerald-950/40 px-3 py-2 text-[11px] font-semibold text-emerald-200/95 hover:bg-emerald-900/50 transition-colors pointer-events-auto"
+              >
+                Soutenir le Verse · boutique & passes →
+              </Link>
+            ) : null}
           </div>
+
+          <Link
+            to="/boutique"
+            className={`pointer-events-auto inline-flex items-center gap-2 rounded-xl border border-emerald-500/35 bg-emerald-950/60 px-4 py-2.5 text-sm font-semibold text-emerald-100 backdrop-blur-md hover:bg-emerald-900/50 transition-colors ${
+              COSMIC_NAV_V2 ? "hover:border-amber-400/40" : "hover:border-emerald-400/60"
+            }`}
+          >
+            <Sparkles className="h-4 w-4 shrink-0" />
+            Soutenir le Verse
+          </Link>
 
           <Link
             to="/"

@@ -18,12 +18,28 @@ const EDITIONS = [
   {
     id: "pdf",
     icon: BookOpen,
-    label: "Encyclopédie visuelle",
-    labelSimple: "Encyclopédie",
-    desc: "PDF principal — planches, atlas et savoirs CirculAI.",
+    label: "Aperçu encyclopédie (PDF)",
+    labelSimple: "Aperçu PDF",
+    desc: "PDF maître ≥1000 p. — 7 tomes, 126 fiches (loisirs & sports inclus), A4.",
     href: "/encyclopedie.pdf",
     external: true,
-    download: true,
+    download: false,
+  },
+  {
+    id: "hub-tomes",
+    icon: BookOpen,
+    label: "Hub téléchargements · 7 tomes",
+    labelSimple: "7 tomes PDF",
+    desc: "Contenant, dos fondateur, index — page /encyclopedie.",
+    to: "/encyclopedie",
+  },
+  {
+    id: "pdf-complet",
+    icon: BookOpen,
+    label: "Édition complète · 19 $ CA",
+    labelSimple: "Édition complète",
+    desc: "PDF assemblé complet — soutien direct au projet CirculAI.",
+    to: "/boutique?product=encyclopedie-complete",
   },
   {
     id: "magique",
@@ -93,12 +109,13 @@ function EditionTile({ edition, simple }) {
   );
 
   if (edition.href) {
+    const isLargePdf = edition.href.endsWith(".pdf");
     return (
       <a
         href={edition.href}
-        {...(edition.download ? { download: "encyclopedie.pdf" } : {})}
-        target={edition.external ? "_blank" : undefined}
-        rel={edition.external ? "noopener noreferrer" : undefined}
+        {...(edition.download && !isLargePdf ? { download: "encyclopedie.pdf" } : {})}
+        target={edition.external || isLargePdf ? "_blank" : undefined}
+        rel={edition.external || isLargePdf ? "noopener noreferrer" : undefined}
         className={tileClass}
       >
         {inner}
@@ -142,26 +159,47 @@ export default function HomeEncyclopediasSection() {
               </h2>
               <p className="text-sm text-white/60 mt-2 max-w-xl">
                 {simple
-                  ? "PDF principal et éditions à lire en ligne."
-                  : "Le PDF visuel, le codex magique et les éditions investisseur & rituel — accessibles en un clic."}
+                  ? "Aperçu gratuit et édition complète — Codex en ligne."
+                  : "Aperçu PDF gratuit, édition complète à prix accessible, Codex investisseur & rituel — sans promesse creuse."}
               </p>
             </div>
-            <Button
-              asChild
-              size="lg"
-              className="shrink-0 rounded-xl border-2 border-[#FFD700]/70 bg-black font-bold text-amber-100 shadow-[0_0_28px_rgba(255,215,0,0.15)] hover:border-[#FFD700] hover:bg-zinc-950"
-            >
-              <a
-                href="/encyclopedie.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2"
+            <div className="flex flex-col sm:flex-row gap-2 shrink-0">
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="rounded-xl border-2 border-[#FFD700]/70 bg-black font-bold text-amber-100 shadow-[0_0_28px_rgba(255,215,0,0.15)] hover:border-[#FFD700] hover:bg-zinc-950"
               >
-                <Download className="h-4 w-4 text-[#FFD700]" aria-hidden />
-                {simple ? "PDF encyclopédie" : "Télécharger / ouvrir l'encyclopédie PDF"}
-              </a>
-            </Button>
+                <a
+                  href="/encyclopedie.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2"
+                >
+                  <Download className="h-4 w-4 text-[#FFD700]" aria-hidden />
+                  {simple ? "Aperçu gratuit" : "Aperçu gratuit (PDF)"}
+                </a>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                className="rounded-xl border-0 bg-emerald-600 font-bold text-white hover:bg-emerald-500"
+              >
+                <Link to="/boutique?product=encyclopedie-complete" className="inline-flex items-center gap-2">
+                  {simple ? "Édition complète" : "Édition complète · 19 $ CA"}
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
           </div>
+
+          <p className="text-[11px] text-amber-200/75 mb-4 max-w-2xl leading-relaxed">
+            <Link to="/encyclopedie" className="text-[#FFD700] hover:underline">
+              Hub encyclopédie
+            </Link>
+            {" "}· PDF maître <span className="font-mono text-[10px]">encyclopedie.pdf</span> + tomes I–VII ·
+            soutien boutique (19&nbsp;$ CA) optionnel.
+          </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
             {EDITIONS.map((edition) => (

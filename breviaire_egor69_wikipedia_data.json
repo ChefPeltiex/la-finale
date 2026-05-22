@@ -1,0 +1,406 @@
+{
+  "meta": {
+    "projet": "BRÉVIAIRE EGOR69",
+    "source": "Wikipédia FR (fr.wikipedia.org)",
+    "date_collecte": "2026-05-22",
+    "total_articles": 57
+  },
+
+  "domaine1_nombre": [
+    {
+      "titre": "Nombre premier",
+      "definition": "Un nombre premier est un entier naturel qui admet exactement deux diviseurs distincts entiers et positifs : 1 et le nombre considéré lui-même. Les entiers 2, 3, 5, 7, 11 sont les premiers exemples de cette suite infinie. Par convention, 1 n'est pas considéré comme un nombre premier.",
+      "formule": "2^136,279,841 − 1  (plus grand nombre premier connu, découvert le 21 octobre 2024)",
+      "contexte": "Euclide (~300 av. J.-C.) dans ses Éléments (livres VII–IX) fournit la première trace incontestable de l'étude des nombres premiers. Les origines remontent à l'Os d'Ishango (>20 000 ans av. J.-C.) et aux tablettes mésopotamiennes (IIe millénaire av. J.-C.). Le crible d'Ératosthène (~240 av. J.-C.) reste l'un des premiers algorithmes de détection.",
+      "url": "https://fr.wikipedia.org/wiki/Nombre_premier"
+    },
+    {
+      "titre": "Spirale d'Ulam",
+      "definition": "La spirale d'Ulam est une méthode de représentation visuelle des nombres premiers. Les entiers naturels sont disposés en spirale (sens inverse des aiguilles d'une montre) et les nombres premiers sont mis en évidence, révélant des alignements diagonaux, horizontaux et verticaux inattendus.",
+      "formule": "f(n) = an² + bn + c  (polynômes du second degré générant une densité remarquable de nombres premiers le long des diagonales)",
+      "contexte": "Découverte en 1963 par Stanislaw Ulam (mathématicien connu pour ses travaux sur la bombe H) alors qu'il griffonnait pendant un exposé scientifique ennuyeux. Développée avec Myron Stein et Mark Wells au laboratoire de Los Alamos (Maniac II, 100 000 points). Publiée par Martin Gardner en mars 1964 dans Scientific American.",
+      "url": "https://fr.wikipedia.org/wiki/Spirale_d%27Ulam"
+    },
+    {
+      "titre": "Fonction zêta de Riemann",
+      "definition": "La fonction zêta de Riemann est une fonction analytique complexe méromorphe définie pour les complexes s de partie réelle strictement supérieure à 1 par une série de Dirichlet. Elle joue un rôle central en théorie analytique des nombres, notamment dans la distribution des nombres premiers.",
+      "formule": "ζ(s) = Σ(n=1 à ∞) 1/nˢ = 1 + 1/2ˢ + 1/3ˢ + 1/4ˢ + …",
+      "contexte": "Leonhard Euler en calcule les valeurs aux entiers pairs positifs (problème de Bâle). Bernhard Riemann publie en 1859 l'article fondateur reliant cette fonction à la distribution des nombres premiers et formule la célèbre hypothèse de Riemann (encore non résolue). Roger Apéry démontre en 1978 que ζ(3) est irrationnel.",
+      "url": "https://fr.wikipedia.org/wiki/Fonction_z%C3%AAta_de_Riemann"
+    },
+    {
+      "titre": "Répunit",
+      "definition": "Un répunit est un entier naturel dont l'écriture, dans une certaine base entière, ne comporte que des chiffres 1. C'est un cas particulier de nombre uniforme. En base 10, les répunits sont 1, 11, 111, 1111, etc.",
+      "formule": "Rₙ = (10ⁿ − 1) / 9  (base 10) ;  Rₙ⁽ᵇ⁾ = (bⁿ − 1) / (b − 1)  (base b ≥ 2)",
+      "contexte": "Les répunits en base dix sont étudiés dès le XIXe siècle pour leurs propriétés de périodicité décimale. William Shanks publie des tables en 1870. Oscar Hoppe prouve la primalité de R₁₉ en 1916 ; Lehmer et Kraïtchik prouvent celle de R₂₃ en 1929. Le terme « repunit » est créé par Albert H. Beiler en 1966.",
+      "url": "https://fr.wikipedia.org/wiki/Repunit"
+    }
+  ],
+
+  "domaine2_forme": [
+    {
+      "titre": "Surface de Dini",
+      "definition": "La surface de Dini est une surface de courbure gaussienne constante négative obtenue à partir d'une pseudosphère par déformation hélicoïdale. Elle est construite en enroulant en spirale une tractrice autour d'un axe.",
+      "formule": "x = a·cos(u)·sin(v) ;  y = a·sin(u)·sin(v) ;  z = a·(cos(v) + ln tan(v/2)) + b·u ;  K = −1/(a² + b²)",
+      "contexte": "Surface nommée en l'honneur du mathématicien italien Ulisse Dini (1845–1918), professeur à l'Université de Pise. Elle constitue une variante hélicoïdale de la pseudosphère et illustre concrètement la géométrie hyperbolique de Lobatchevski.",
+      "url": "https://fr.wikipedia.org/wiki/Surface_de_Dini"
+    },
+    {
+      "titre": "Pseudosphère",
+      "definition": "La pseudosphère est une surface dont la courbure gaussienne est constante et négative, égale à −1/R² (par analogie à la sphère de rayon R dont la courbure vaut +1/R²). Elle constitue un modèle local de géométrie hyperbolique.",
+      "formule": "Courbure de Gauss : K = −1/R²  ;  Aire de la tractricoïde = 4πR²  ;  Volume = (2/3)πR³",
+      "contexte": "Christian Huygens démontre au début des années 1630 que la tractricoïde, malgré son extension infinie, possède un volume et une aire finis. Eugenio Beltrami introduit le terme et l'utilise en 1868 dans son article fondateur sur la géométrie hyperbolique pour modéliser le plan de Lobatchevski.",
+      "url": "https://fr.wikipedia.org/wiki/Pseudosph%C3%A8re"
+    },
+    {
+      "titre": "Ruban de Möbius",
+      "definition": "Le ruban de Möbius est, en topologie, une surface compacte non orientable possédant une seule face et un seul bord, homéomorphe à un cercle. Il peut être visualisé en tordant une bande de papier d'un demi-tour et en collant ses extrémités.",
+      "formule": "x = (1 + (t/2)·cos(v/2))·cos(v) ;  y = (1 + (t/2)·cos(v/2))·sin(v) ;  z = (t/2)·sin(v/2)  avec −1 ≤ t ≤ 1 et 0 < v ≤ 2π",
+      "contexte": "Découvert formellement en 1858 indépendamment par August Ferdinand Möbius (1790–1868) et Johann Benedict Listing (1808–1882). Des représentations antérieures existent dès le IIIe siècle dans des mosaïques romaines (Sentinum). Une application pratique est décrite en 1206 par Ismail al-Jazari pour les courroies de transmission.",
+      "url": "https://fr.wikipedia.org/wiki/Ruban_de_M%C3%B6bius"
+    },
+    {
+      "titre": "Hyperboloïde",
+      "definition": "Un hyperboloïde est une surface du second degré (quadrique) de l'espace euclidien, possédant un centre de symétrie et s'étendant à l'infini. Il en existe deux types : l'hyperboloïde à une nappe (connexe, en forme de tour de refroidissement) et l'hyperboloïde à deux nappes (non connexe).",
+      "formule": "À une nappe : x²/a² + y²/b² − z²/c² = 1  ;  À deux nappes : x²/a² + y²/b² − z²/c² = −1  ;  Volume (une nappe, hauteur h) : V = 2πabh(1 + h²/(3c²))",
+      "contexte": "Défini dans le cadre de la géométrie analytique classique comme cas particulier des quadriques. L'hyperboloïde à une nappe est une surface réglée non développable, ce qui lui confère d'importantes applications architecturales (châteaux d'eau, tours hyperboloïdes de Vladimir Choukhov, fin XIXe – début XXe siècle).",
+      "url": "https://fr.wikipedia.org/wiki/Hyperbolo%C3%AFde"
+    },
+    {
+      "titre": "Cercle des neuf points",
+      "definition": "Le cercle des neuf points (ou cercle d'Euler) est l'unique cercle passant par neuf points remarquables d'un triangle : les trois milieux des côtés, les trois pieds des hauteurs, et les trois milieux des segments joignant chaque sommet à l'orthocentre.",
+      "formule": "Rayon du cercle des neuf points = R/2  (où R est le rayon du cercle circonscrit)  ;  Centre Ω = milieu du segment [HO] (orthocentre–centre du cercle circonscrit)",
+      "contexte": "Leonhard Euler aborde séparément deux cercles en 1763 (mémoire E325) sans noter leur coïncidence. Brianchon et Poncelet démontrent en 1821 que six points sont cocycliques. Karl Wilhelm Feuerbach redécouvre le résultat en 1822 et prouve le théorème de Feuerbach (tangence aux cercles inscrit et exinscrits). Olry Terquem ajoute les trois derniers points et forge le terme « cercle des neuf points ».",
+      "url": "https://fr.wikipedia.org/wiki/Cercle_des_neuf_points"
+    },
+    {
+      "titre": "Théorème de Pythagore",
+      "definition": "Le théorème de Pythagore est un théorème de géométrie euclidienne qui établit que dans un triangle rectangle, le carré de la longueur de l'hypoténuse est égal à la somme des carrés des longueurs des deux autres côtés. C'est l'un des théorèmes les plus démontrés de l'histoire des mathématiques.",
+      "formule": "a² + b² = c²  (où c est l'hypoténuse)",
+      "contexte": "Connu en Mésopotamie plus de 1000 ans avant Pythagore (tablette Plimpton 322, vers 1800 av. J.-C. ; tablette Si.427, 1900–1600 av. J.-C.). Pythagore de Samos (VIe siècle av. J.-C.) lui donne son nom bien qu'il ne l'ait pas découvert. Euclide (~300 av. J.-C.) en fournit la plus ancienne démonstration conservée dans ses Éléments.",
+      "url": "https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_de_Pythagore"
+    }
+  ],
+
+  "domaine3_calcul": [
+    {
+      "titre": "Intégrale de Dirichlet",
+      "definition": "L'intégrale de Dirichlet est l'intégrale de la fonction sinus cardinal (sin(x)/x) sur la demi-droite des réels positifs. C'est une intégrale impropre semi-convergente : elle converge vers π/2 mais n'est pas absolument convergente.",
+      "formule": "∫₀^(+∞) sin(x)/x dx = π/2",
+      "contexte": "Mentionnée par Peter Gustav Lejeune Dirichlet dans un article de 1829 sur les séries de Fourier. Elle peut être calculée par plusieurs méthodes : critère de convergence des séries alternées, théorème des résidus (analyse complexe), transformée de Laplace, ou intégrales paramétriques.",
+      "url": "https://fr.wikipedia.org/wiki/Int%C3%A9grale_de_Dirichlet"
+    },
+    {
+      "titre": "Dérivée",
+      "definition": "La dérivée d'une fonction en un point mesure l'ampleur du changement de la valeur de la fonction par rapport à un petit changement de son argument. Géométriquement, elle représente la pente de la tangente au graphe de la fonction en ce point.",
+      "formule": "f′(x₀) = lim(h→0, h≠0) [f(x₀+h) − f(x₀)] / h",
+      "contexte": "Développée au XVIIe siècle par Isaac Newton (qui l'appelle « fluxion ») et Gottfried Wilhelm Leibniz, en s'appuyant sur des travaux précurseurs de Pierre de Fermat et Isaac Barrow. Joseph-Louis Lagrange crée la notation f′(x) à la fin du XVIIIe siècle.",
+      "url": "https://fr.wikipedia.org/wiki/D%C3%A9riv%C3%A9e"
+    },
+    {
+      "titre": "Intégrale",
+      "definition": "L'intégrale est l'une des deux branches du calcul infinitésimal (avec la dérivée). L'intégrale d'une fonction positive continue sur un intervalle représente l'aire du domaine délimité par la courbe représentative, l'axe des abscisses et deux droites verticales.",
+      "formule": "∫ₐᵇ f(x) dx = F(b) − F(a)  (Théorème fondamental de l'analyse, où F est une primitive de f, c'est-à-dire F′ = f)",
+      "contexte": "Les origines remontent à la méthode d'exhaustion de la Grèce antique. Leibniz pose les bases de la théorie en 1686 (Geometria recondita) ; Newton développe le calcul intégral indépendamment. Bernhard Riemann formalise l'intégrale en 1854 et Henri-Léon Lebesgue l'étend en 1902.",
+      "url": "https://fr.wikipedia.org/wiki/Int%C3%A9grale"
+    },
+    {
+      "titre": "Différentielle",
+      "definition": "La différentielle d'une fonction est la partie linéaire de l'accroissement de cette fonction entre deux points lorsque l'écart tend vers zéro. Elle généralise la notion de dérivée aux fonctions de plusieurs variables et facilite les approximations locales.",
+      "formule": "df = (∂f/∂x)·dx + (∂f/∂y)·dy  (pour une fonction de deux variables)",
+      "contexte": "Le concept est introduit par Gottfried Wilhelm Leibniz comme « accroissement infinitésimal ». La formalisation rigoureuse moderne, basée sur les limites et la linéarité, se développe au XIXe siècle. La notion est centrale en analyse différentielle, géométrie différentielle et physique mathématique.",
+      "url": "https://fr.wikipedia.org/wiki/Diff%C3%A9rentielle"
+    }
+  ],
+
+  "domaine4_symbole": [
+    {
+      "titre": "Pi (π)",
+      "definition": "Pi (π), aussi appelée constante d'Archimède, est le rapport de la circonférence d'un cercle à son diamètre dans un plan euclidien — rapport identique pour tous les cercles. On peut également le définir comme le rapport de l'aire d'un disque au carré de son rayon.",
+      "formule": "π = C/d ≈ 3,14159265358979…  ;  Formule de Leibniz-Madhava : π/4 = 1 − 1/3 + 1/5 − 1/7 + …  ;  Identité d'Euler : e^(iπ) + 1 = 0",
+      "contexte": "Archimède (~250 av. J.-C.) effectue le premier calcul théorique rigoureux par polygones à 96 côtés. Connu des Babyloniens, Égyptiens, Chinois et Indiens depuis l'Antiquité. Le symbole π est adopté par Leonhard Euler en 1737. Le nombre est irrationnel (Lambert, 1761) et transcendant (Lindemann, 1882).",
+      "url": "https://fr.wikipedia.org/wiki/Pi"
+    },
+    {
+      "titre": "Nombre d'or (φ)",
+      "definition": "Le nombre d'or est une proportion définie géométriquement comme l'unique rapport a/b entre deux longueurs telles que le rapport de leur somme à la plus grande égale le rapport de la plus grande à la plus petite. Il est noté φ (phi) et vaut approximativement 1,618.",
+      "formule": "φ = (1 + √5) / 2 ≈ 1,6180339887…  ;  Équation caractéristique : x² − x − 1 = 0  ;  Propriété : φ = 1 + 1/φ",
+      "contexte": "Mentionné pour la première fois dans les Éléments d'Euclide sous le nom « extrême et moyenne raison ». Luca Pacioli (moine franciscain, XVe–XVIe siècle) le popularise sous le nom « divine proportion ». Les termes « section dorée » et « nombre d'or » s'imposent aux XIXe–XXe siècles.",
+      "url": "https://fr.wikipedia.org/wiki/Nombre_d%27or"
+    },
+    {
+      "titre": "E (nombre d'Euler)",
+      "definition": "Le nombre e, aussi appelé nombre d'Euler ou constante de Néper, est la base des logarithmes naturels, défini par ln(e) = 1. C'est un nombre irrationnel et transcendant d'une importance fondamentale en analyse mathématique.",
+      "formule": "e = Σ(n=0 à +∞) 1/n! = 1 + 1/1! + 1/2! + 1/3! + … ≈ 2,71828182845904…",
+      "contexte": "Identifié comme base du logarithme naturel vers 1690 par Leibniz dans une correspondance avec Huygens. Leonhard Euler l'adopte et le note « e » en 1727–1728, en démontre l'irrationalité en 1737. Charles Hermite prouve sa transcendance en 1873.",
+      "url": "https://fr.wikipedia.org/wiki/E_(nombre)"
+    },
+    {
+      "titre": "Constante d'Euler-Mascheroni (γ)",
+      "definition": "La constante d'Euler-Mascheroni est une constante mathématique définie comme la limite de la différence entre la somme partielle de la série harmonique et le logarithme naturel. Notée γ (gamma), sa valeur approchée est 0,5772…",
+      "formule": "γ = lim(n→∞) [Σ(k=1 à n) 1/k − ln(n)] ≈ 0,5772156649…",
+      "contexte": "Découverte et calculée par Leonhard Euler à 16 décimales. Lorenzo Mascheroni (1790) tente 32 décimales mais commet une erreur à la 20e, corrigée par Johann Georg von Soldner (1809). Sa rationalité ou irrationalité reste à ce jour une question ouverte. En 2020, Seungmin Kim et Ian Cutress atteignent 600 milliards de décimales.",
+      "url": "https://fr.wikipedia.org/wiki/Constante_d%27Euler-Mascheroni"
+    },
+    {
+      "titre": "Unité imaginaire (i)",
+      "definition": "L'unité imaginaire, notée i (ou j en physique et en électronique), est le nombre complexe dont le carré vaut −1. Ses multiples réels constituent les nombres imaginaires purs, fondements de l'ensemble des nombres complexes.",
+      "formule": "i² = −1  (ou de façon équivalente : i² + 1 = 0)  ;  Identité d'Euler : e^(iπ) + 1 = 0",
+      "contexte": "Première apparition en 1545 chez Girolamo Cardano sous la forme √(−15). Rafaele Bombelli (~1570) établit les règles de calcul. René Descartes forge le terme « imaginaire » (souvent péjoratif à l'époque). Leonhard Euler adopte la notation i en 1777. Carl Friedrich Gauss popularise le terme « unité imaginaire » (1801). William Rowan Hamilton donne en 1833 une légitimité algébrique rigoureuse.",
+      "url": "https://fr.wikipedia.org/wiki/Unit%C3%A9_imaginaire"
+    }
+  ],
+
+  "domaine5_maitres": [
+    {
+      "titre": "Archimède de Syracuse",
+      "definition": "Archimède de Syracuse est un grand scientifique grec de Sicile de l'Antiquité, né vers 287 av. J.-C. à Syracuse et mort en 212 av. J.-C. lors du siège de la même ville. Physicien, astronome, mathématicien et ingénieur, il est considéré comme l'un des plus grands scientifiques de l'Antiquité.",
+      "formule": "Principe d'Archimède : F_poussée = ρ_fluide × V_immergé × g  ;  Encadrement de π : 223/71 < π < 22/7  ;  Rapport volume sphère/cylindre = 2/3",
+      "contexte": "Né vers 287 av. J.-C. à Syracuse (Sicile, époque hellénistique). Il étudie à Alexandrie auprès des élèves d'Euclide. Il est tué lors de la prise de Syracuse par le général romain Marcellus (212 av. J.-C.) durant la deuxième guerre punique. Son œuvre est redécouverte à la Renaissance et influence profondément Galilée et Newton.",
+      "url": "https://fr.wikipedia.org/wiki/Archim%C3%A8de"
+    },
+    {
+      "titre": "Pythagore",
+      "definition": "Pythagore est un philosophe présocratique grec né à Samos vers 580 av. J.-C. et mort vers 495 av. J.-C. à Métaponte. Fondateur du mouvement pythagoricien, il est associé à des contributions mathématiques majeures, notamment le théorème qui porte son nom, et à une philosophie des nombres.",
+      "formule": "Théorème de Pythagore : a² + b² = c²  (dans un triangle rectangle, c désignant l'hypoténuse)",
+      "contexte": "Né vers 580 av. J.-C. sur l'île de Samos. Il fonde une communauté philosophico-religieuse à Crotone (Italie du Sud) dont les membres croient que les nombres sont la réalité ultime. Ses disciples (pythagoriciens) développent l'arithmétique, la géométrie et la théorie musicale. Son influence s'étend jusqu'à Platon, Cicéron et bien au-delà.",
+      "url": "https://fr.wikipedia.org/wiki/Pythagore"
+    },
+    {
+      "titre": "Isaac Newton",
+      "definition": "Isaac Newton est un mathématicien, physicien, philosophe, alchimiste, astronome et théologien anglais, né le 25 décembre 1642 à Woolsthorpe et mort le 20 mars 1727 à Kensington. Il est l'un des scientifiques les plus influents de tous les temps, auteur du calcul infinitésimal et des lois universelles de la gravitation.",
+      "formule": "Loi de la gravitation universelle : F = G·m₁·m₂ / r²  ;  Deuxième loi : F = ma  ;  Binôme de Newton : (a+b)ⁿ = Σ C(n,k) aᵏ bⁿ⁻ᵏ",
+      "contexte": "Né le 25 décembre 1642 (calendrier julien) à Woolsthorpe, Lincolnshire. Il étudie à Cambridge (Trinity College). Son œuvre maîtresse Philosophiae Naturalis Principia Mathematica (1687) unifie la mécanique terrestre et céleste. Développe le calcul infinitésimal indépendamment de Leibniz. Président de la Royal Society (1703–1727).",
+      "url": "https://fr.wikipedia.org/wiki/Isaac_Newton"
+    },
+    {
+      "titre": "Leonhard Euler",
+      "definition": "Leonhard Euler est un mathématicien et physicien suisse né le 15 avril 1707 à Bâle, qui passa la plus grande partie de sa vie dans l'Empire russe et en Allemagne. Il est considéré comme le plus grand mathématicien du XVIIIe siècle et l'un des plus prolifiques de l'histoire.",
+      "formule": "Identité d'Euler : e^(iπ) + 1 = 0  ;  Formule d'Euler : e^(ix) = cos(x) + i·sin(x)  ;  Identité de Polyhèdre : V − A + F = 2",
+      "contexte": "Né le 15 avril 1707 à Bâle (Suisse). Formé par Johann Bernoulli à l'Université de Bâle. Rejoint l'Académie de Saint-Pétersbourg (1727), puis l'Académie de Berlin (1741), retour à Saint-Pétersbourg (1766). Perd la vue quasi totalement mais continue de produire. Laplace dit de lui : « Lisez Euler, c'est notre maître à tous. » Mort le 18 septembre 1783.",
+      "url": "https://fr.wikipedia.org/wiki/Leonhard_Euler"
+    },
+    {
+      "titre": "Carl Friedrich Gauss",
+      "definition": "Carl Friedrich Gauss est un mathématicien, astronome et physicien allemand né le 30 avril 1777 à Brunswick et mort le 23 février 1855 à Göttingen. Surnommé « le prince des mathématiciens », il est considéré comme l'un des plus grands mathématiciens de tous les temps.",
+      "formule": "Loi normale (courbe de Gauss) : f(x) = (1/σ√2π)·e^(−(x−μ)²/2σ²)  ;  Théorème fondamental de l'algèbre : tout polynôme de degré n a exactement n racines complexes",
+      "contexte": "Né le 30 avril 1777 à Brunswick dans une famille modeste. Prodige précoce, il démontre à 19 ans la constructibilité du polygone régulier à 17 côtés. Thèse de doctorat (1798) prouvant le théorème fondamental de l'algèbre. Directeur de l'observatoire de Göttingen (1807 jusqu'à sa mort). Contributions à l'astronomie, la géodésie, l'électromagnétisme et la statistique.",
+      "url": "https://fr.wikipedia.org/wiki/Carl_Friedrich_Gauss"
+    },
+    {
+      "titre": "Joseph Fourier",
+      "definition": "Jean Baptiste Joseph Fourier est un mathématicien et physicien français né le 21 mars 1768 à Auxerre et mort le 17 mai 1830 à Paris. Il est célèbre pour ses travaux sur la propagation de la chaleur et pour avoir introduit la décomposition des fonctions en séries trigonométriques.",
+      "formule": "Série de Fourier : f(x) = a₀/2 + Σ[aₙ·cos(nx) + bₙ·sin(nx)]  ;  Transformée de Fourier : F(ω) = ∫₋∞^(+∞) f(t)·e^(−iωt) dt",
+      "contexte": "Né le 21 mars 1768 à Auxerre. Participe à la Révolution française. Accompagne Napoléon en Égypte (1798–1802). Nommé préfet de l'Isère (1802–1814). Publie sa Théorie analytique de la chaleur en 1822. Élu à l'Académie des sciences (1817) puis à l'Académie française (1826). Son travail sur les séries trigonométriques révolutionne l'analyse mathématique.",
+      "url": "https://fr.wikipedia.org/wiki/Joseph_Fourier"
+    },
+    {
+      "titre": "Évariste Galois",
+      "definition": "Évariste Galois est un mathématicien français né le 25 octobre 1811 à Bourg-la-Reine et mort le 31 mai 1832 à Paris à seulement 20 ans. Il est le fondateur de la théorie de Galois, qui établit le lien entre la résolubilité des équations algébriques et la théorie des groupes.",
+      "formule": "Théorie de Galois : une équation polynomiale est résoluble par radicaux si et seulement si son groupe de Galois est un groupe résoluble",
+      "contexte": "Né le 25 octobre 1811 à Bourg-la-Reine. Famille bourgeoise cultivée (père maire). Passion précoce pour les mathématiques ; refusé deux fois à l'École polytechnique. S'engage dans le mouvement républicain sous la Restauration. Rédige ses résultats mathématiques fondamentaux la veille d'un duel. Mort le 31 mai 1832 à l'âge de 20 ans. Ses manuscrits, publiés en 1846 par Liouville, fondent l'algèbre moderne.",
+      "url": "https://fr.wikipedia.org/wiki/%C3%89variste_Galois"
+    },
+    {
+      "titre": "Bernhard Riemann",
+      "definition": "Georg Friedrich Bernhard Riemann est un mathématicien allemand né le 17 septembre 1826 à Breselenz et mort le 20 juillet 1866 à Selasca. Influent sur le plan théorique, il apporte des contributions majeures à l'analyse, à la géométrie différentielle et à la théorie des nombres.",
+      "formule": "Hypothèse de Riemann : tous les zéros non triviaux de ζ(s) ont leur partie réelle égale à 1/2  ;  Intégrale de Riemann : ∫ₐᵇ f(x) dx = lim(||P||→0) Σ f(xᵢ*)·Δxᵢ",
+      "contexte": "Né le 17 septembre 1826 en Basse-Saxe. Étudie à Göttingen sous Gauss, puis à Berlin avec Dirichlet. Sa thèse d'habilitation (1854) introduit la géométrie riemannienne, qui fondera plus tard la relativité générale d'Einstein. Publie en 1859 son article fondateur sur la distribution des nombres premiers. Mort prématurément de tuberculose à 39 ans.",
+      "url": "https://fr.wikipedia.org/wiki/Bernhard_Riemann"
+    },
+    {
+      "titre": "Georg Cantor",
+      "definition": "Georg Cantor est un mathématicien allemand né le 3 mars 1845 à Saint-Pétersbourg et mort le 6 janvier 1918 à Halle. Il est le créateur de la théorie des ensembles et a démontré que certains infinis sont strictement plus grands que d'autres, révolutionnant les fondements des mathématiques.",
+      "formule": "Théorème de Cantor : |P(A)| > |A|  (tout ensemble a strictement moins d'éléments que son ensemble des parties)  ;  Diagonale de Cantor : preuve que |ℝ| > |ℕ|  ;  Cardinal : ℵ₀ < ℵ₁ < ℵ₂ < …",
+      "contexte": "Né le 3 mars 1845 à Saint-Pétersbourg d'une famille d'origine juive ashkénaze. Étudie à Zurich et Berlin. Enseigne à l'Université de Halle à partir de 1870. Ses travaux sur les infinis multiples provoquent l'hostilité de Kronecker et les réserves de Poincaré. David Hilbert le défend vigoureusement. Victime de dépressions répétées à partir de 1884, il meurt en 1918 dans un sanatorium.",
+      "url": "https://fr.wikipedia.org/wiki/Georg_Cantor"
+    },
+    {
+      "titre": "Srinivasa Ramanujan",
+      "definition": "Srinivasa Ramanujan est un mathématicien indien né le 22 décembre 1887 à Erode et mort le 26 avril 1920 à Kumbakonam. Issu d'une famille modeste de brahmanes tamouls orthodoxes, autodidacte de génie, il a découvert des milliers de formules et théorèmes d'une profondeur extraordinaire.",
+      "formule": "Formule de Ramanujan pour π : 1/π = (2√2/9801)·Σ [(4n)!·(1103+26390n)] / [(n!)⁴·396⁴ⁿ]  ;  Nombre de Hardy-Ramanujan : 1729 = 1³ + 12³ = 9³ + 10³",
+      "contexte": "Né le 22 décembre 1887 à Erode (Raj britannique, Présidence de Madras). Autodidacte, il envoie ses résultats à G. H. Hardy à Cambridge en 1913. Hardy l'invite en Angleterre (1914–1919). Malgré des problèmes de santé chroniques (tuberculose), il produit des milliers de formules sans démonstrations formelles. Élu Fellow de la Royal Society à 30 ans. Mort le 26 avril 1920 à 32 ans.",
+      "url": "https://fr.wikipedia.org/wiki/Srinivasa_Ramanujan"
+    },
+    {
+      "titre": "Alan Turing",
+      "definition": "Alan Turing est un mathématicien et cryptologue britannique né le 23 juin 1912 à Londres et mort le 7 juin 1954 à Wilmslow. Auteur de travaux qui fondent scientifiquement l'informatique, il est également considéré comme un des pionniers de l'intelligence artificielle.",
+      "formule": "Machine de Turing : M = (Q, Γ, b, Σ, δ, q₀, F) — modèle formel universel de calcul  ;  Test de Turing (1950) : critère comportemental de l'intelligence artificielle",
+      "contexte": "Né le 23 juin 1912 à Londres. Étudie à Cambridge (King's College) et Princeton. En 1936, publie « On Computable Numbers » fondant la calculabilité et la machine de Turing. Durant la Seconde Guerre mondiale, dirige les travaux de décryptage d'Enigma à Bletchley Park, écourtant significativement le conflit. Condamné en 1952 pour homosexualité, il décède en 1954 dans des circonstances jamais totalement élucidées.",
+      "url": "https://fr.wikipedia.org/wiki/Alan_Turing"
+    },
+    {
+      "titre": "Kurt Gödel",
+      "definition": "Kurt Gödel est un logicien et mathématicien autrichien naturalisé américain né le 28 avril 1906 à Brünn (Autriche-Hongrie) et mort le 14 janvier 1978 à Princeton. Il est célèbre pour ses théorèmes d'incomplétude qui ont profondément ébranlé les fondements des mathématiques.",
+      "formule": "Premier théorème d'incomplétude (1931) : dans tout système formel cohérent suffisamment expressif, il existe des propositions vraies qui ne peuvent être ni démontrées ni réfutées dans ce système",
+      "contexte": "Né le 28 avril 1906 à Brünn. Étudie à Vienne, membre du Cercle de Vienne (1926–1928). Publie ses théorèmes d'incomplétude en 1931 à 25 ans, répondant négativement au programme de Hilbert. Fuit l'Autriche après l'Anschluss (1938) et émigre aux États-Unis. Rejoint l'Institut für Advanced Study à Princeton avec Einstein. Mort le 14 janvier 1978.",
+      "url": "https://fr.wikipedia.org/wiki/Kurt_G%C3%B6del"
+    },
+    {
+      "titre": "Emmy Noether",
+      "definition": "Emmy Noether est une mathématicienne allemande née le 23 mars 1882 à Erlangen et morte le 14 avril 1935 à Bryn Mawr (Pennsylvanie). Spécialiste d'algèbre abstraite et de physique théorique, Einstein la qualifia de « génie mathématique le plus significatif produit jusqu'ici depuis que l'enseignement supérieur a été ouvert aux femmes ».",
+      "formule": "Théorème de Noether (1915/1918) : à toute symétrie continue d'un système physique correspond une loi de conservation — invariance par translation → conservation de l'impulsion ; invariance temporelle → conservation de l'énergie",
+      "contexte": "Née le 23 mars 1882 à Erlangen, Bavière. Père mathématicien (Max Noether). Surmonte les obstacles institutionnels pour enseigner à Göttingen (sous le nom de Hilbert, 1915–1919). Ses travaux révolutionnent l'algèbre abstraite (anneaux, idéaux, modules). Exilée en 1933 suite aux lois nazies ; rejoint Bryn Mawr College (Pennsylvanie). Morte d'une opération en 1935 à 53 ans.",
+      "url": "https://fr.wikipedia.org/wiki/Emmy_Noether"
+    },
+    {
+      "titre": "Sophie Germain",
+      "definition": "Sophie Germain est une mathématicienne, physicienne et philosophe française née le 1er avril 1776 à Paris et morte le 27 juin 1831 à Paris. Pionnière des femmes en sciences, elle apporta des contributions fondamentales à la théorie de l'élasticité et au dernier théorème de Fermat.",
+      "formule": "Théorème de Sophie Germain : pour un nombre premier p tel que 2p+1 soit aussi premier, l'équation xᵖ + yᵖ = zᵖ n'a pas de solution entière avec xyz non divisible par p",
+      "contexte": "Née le 1er avril 1776 à Paris dans une famille bourgeoise cultivée. Passionnée de mathématiques depuis la Révolution française. Correspond avec Gauss sous le pseudonyme masculin « Antoine Auguste Le Blanc ». Gauss, ayant découvert son identité réelle, la défend vigoureusement. Prix de l'Académie des sciences pour ses travaux sur les surfaces vibrantes (1816). Morte le 27 juin 1831 à Paris.",
+      "url": "https://fr.wikipedia.org/wiki/Sophie_Germain"
+    }
+  ],
+
+  "domaine6_applications": [
+    {
+      "titre": "Réseau de neurones artificiels",
+      "definition": "Un réseau de neurones artificiels est un système informatique dont la conception est inspirée à l'origine du fonctionnement des neurones biologiques, mais qui s'est rapproché des méthodes statistiques. Il apprend à exécuter des tâches en s'entraînant sur des exemples, sans être explicitement programmé.",
+      "formule": "Sortie d'un neurone formel : y = f(Σ wᵢ·xᵢ + b)  où f est la fonction d'activation, wᵢ les poids synaptiques, xᵢ les entrées et b le biais  ;  Rétropropagation : ΔW = −η·∇L(W)",
+      "contexte": "McCulloch et Pitts publient le premier modèle de neurone formel en 1943. Donald Hebb propose la règle d'apprentissage synaptique en 1949. Frank Rosenblatt crée le perceptron en 1958. Minsky et Papert critiquent ses limites en 1969. La rétropropagation est formalisée par Rumelhart, Hinton et Williams en 1986, relançant le domaine. Le deep learning émerge dans les années 2010.",
+      "url": "https://fr.wikipedia.org/wiki/R%C3%A9seau_de_neurones_artificiels"
+    },
+    {
+      "titre": "Blockchain",
+      "definition": "Une blockchain (ou chaîne de blocs) est une technologie numérique de stockage et de transmission d'informations sans autorité centrale. Il s'agit d'une base de données distribuée dont les informations sont vérifiées, groupées en blocs et sécurisées par cryptographie.",
+      "formule": "Structure d'un bloc : bloc = {index, horodatage, données, hash_précédent, hash}  ;  Lien cryptographique : hash(blocₙ) = SHA256(données + hash(blocₙ₋₁))",
+      "contexte": "Première étude théorique par Haber et Stornetta en 1991 sur les documents horodatés. Intégration de l'arbre de Merkle en 1992. Système Surety de certification décentralisée (1995). Conceptualisée et implémentée pour Bitcoin par Satoshi Nakamoto en 2008–2009. Étendue aux contrats intelligents et à d'autres applications à partir de 2015.",
+      "url": "https://fr.wikipedia.org/wiki/Blockchain"
+    },
+    {
+      "titre": "Informatique quantique",
+      "definition": "L'informatique quantique est le sous-domaine de l'informatique qui traite des calculateurs quantiques et des modèles de calcul associés. Elle exploite les phénomènes de la mécanique quantique (superposition d'états, intrication) pour effectuer des calculs impossibles à réaliser efficacement par des ordinateurs classiques.",
+      "formule": "Qubit : |ψ⟩ = α|0⟩ + β|1⟩  avec |α|² + |β|² = 1  ;  Porte de Hadamard : H|0⟩ = (|0⟩ + |1⟩)/√2  ;  Algorithme de Shor (1994) : factorisation en O((log N)³)",
+      "contexte": "Années 1980 : débuts théoriques avec Benioff, Feynman et Deutsch. 1994 : algorithme de Shor (Peter Shor) pour la factorisation en temps polynomial. 1995 : algorithme de Grover (Lov Grover) pour la recherche en O(√N). 2019 : Google revendique la suprématie quantique sur processeur Sycamore. Les années 2020 voient la diversification des approches (superconducteurs, ions piégés, photons).",
+      "url": "https://fr.wikipedia.org/wiki/Informatique_quantique"
+    },
+    {
+      "titre": "Cryptographie",
+      "definition": "La cryptographie est une des disciplines de la cryptologie s'attachant à protéger des messages (assurant confidentialité, authenticité et intégrité) en s'aidant souvent de secrets ou de clés. Elle se distingue de la stéganographie qui dissimule le message, tandis que la cryptographie le rend inintelligible.",
+      "formule": "RSA (Rivest-Shamir-Adleman, 1977) : chiffrement C = Mᵉ mod n  ;  déchiffrement M = Cᵈ mod n  ;  avec n = p·q (produit de deux grands nombres premiers), e·d ≡ 1 (mod φ(n))",
+      "contexte": "Utilisée depuis l'Antiquité (chiffre de César, ~50 av. J.-C. ; scytale spartiate). La cryptographie symétrique moderne naît avec le DES (1977). La cryptographie asymétrique (à clé publique) est inventée par Diffie et Hellman en 1976, implémentée en RSA en 1977. La cryptographie quantique (BB84) est proposée par Bennett et Brassard en 1984.",
+      "url": "https://fr.wikipedia.org/wiki/Cryptographie"
+    },
+    {
+      "titre": "Algorithme",
+      "definition": "Un algorithme est une suite finie et non ambiguë d'instructions et d'opérations permettant de résoudre une classe de problèmes. C'est un concept fondamental en informatique et en mathématiques, décrivant toute procédure de calcul systématique.",
+      "formule": "Critères de Knuth : finitude, définition, entrées, sorties, effectivité  ;  Complexité algorithmique : notation O(f(n)) mesurant le temps ou l'espace en fonction de la taille de l'entrée n",
+      "contexte": "Le terme vient du nom latinisé du mathématicien perse al-Khwârizmî (IXe siècle), auteur de traités d'arithmétique et d'algèbre traduits en latin médiéval. Joannes de Sacrobosco popularise le terme en 1221. Ada Lovelace écrit en 1842 le premier programme pour la machine analytique de Babbage. La théorie formelle moderne naît avec Church et Turing dans les années 1930–1936.",
+      "url": "https://fr.wikipedia.org/wiki/Algorithme"
+    }
+  ],
+
+  "domaine7_sens": [
+    {
+      "titre": "Philosophie des mathématiques",
+      "definition": "La philosophie des mathématiques est une branche de la philosophie des sciences qui tente de répondre aux interrogations sur les fondements et l'usage des mathématiques. Elle s'interroge notamment sur la nature des objets mathématiques, leur existence, leur vérité et leur remarquable efficacité à décrire le monde physique.",
+      "formule": "Question centrale de Wigner (1960) : « L'irraisonnable efficacité des mathématiques dans les sciences naturelles » — pourquoi les structures mathématiques abstraites décrivent-elles si précisément la réalité physique ?",
+      "contexte": "Origines dans la philosophie grecque (Platon : les mathématiques donnent accès aux Idées ; Aristote : elles sont des abstractions logiques). Grandes écoles modernes : logicisme (Frege, Russell, début XXe siècle), formalisme (Hilbert, 1900–1931), intuitionnisme (Brouwer), structuralisme. La crise des fondements (fin XIXe – début XXe siècle) bouleverse profondément le domaine.",
+      "url": "https://fr.wikipedia.org/wiki/Philosophie_des_math%C3%A9matiques"
+    },
+    {
+      "titre": "Suite de Fibonacci",
+      "definition": "En mathématiques, la suite de Fibonacci est une suite de nombres entiers dans laquelle chaque nombre est la somme des deux nombres qui le précèdent. Elle commence par 0 et 1, puis se poursuit : 1, 2, 3, 5, 8, 13, 21, 34, 55, 89…",
+      "formule": "Relation de récurrence : F₀ = 0, F₁ = 1, Fₙ = Fₙ₋₁ + Fₙ₋₂  (pour n ≥ 2)  ;  Formule de Binet (forme close) : Fₙ = (φⁿ − ψⁿ) / √5  où φ = (1+√5)/2 ≈ 1,618 (nombre d'or)",
+      "contexte": "Connue en Inde depuis le VIe siècle av. J.-C. (Pingala), développée par Virahanka et Hemachandra (XIIe siècle) dans l'étude de la prosodie. Introduite en Occident en 1202 par Leonardo Fibonacci dans son Liber abaci via le célèbre problème des lapins. Le terme « suite de Fibonacci » est forgé au XIXe siècle par Édouard Lucas.",
+      "url": "https://fr.wikipedia.org/wiki/Suite_de_Fibonacci"
+    },
+    {
+      "titre": "Fractale",
+      "definition": "Une figure fractale est un objet mathématique qui présente une structure similaire à toutes les échelles — c'est un objet géométrique infiniment morcelé dont on peut observer des détails à une échelle arbitrairement choisie. La propriété clé est l'autosimilarité : en zoomant sur une partie, on retrouve la figure entière.",
+      "formule": "Dimension fractale : d = ln(n) / ln(h)  où n = nombre de répliques et h = facteur de réduction  ;  Flocon de Koch : d ≈ 1,262  ;  Triangle de Sierpiński : d ≈ 1,585",
+      "contexte": "Précurseurs : ensemble de Cantor (1874/1883), courbe de Koch (Helge von Koch, 1904), tapis de Sierpiński (1916). Benoît Mandelbrot popularise et nomme les fractales en 1975 dans Les Objets fractals (du latin fractus = brisé). L'ensemble de Mandelbrot est défini en 1979–1980. Les fractales trouvent des applications en géophysique, biologie et infographie.",
+      "url": "https://fr.wikipedia.org/wiki/Fractale"
+    },
+    {
+      "titre": "Théorèmes d'incomplétude de Gödel",
+      "definition": "Les théorèmes d'incomplétude de Gödel sont deux théorèmes fondamentaux de logique mathématique publiés par Kurt Gödel en 1931. Ils établissent que dans tout système formel cohérent et suffisamment expressif, il existe des propositions vraies qui ne peuvent être ni démontrées ni réfutées.",
+      "formule": "1er théorème : dans toute théorie T récursivement axiomatisable, cohérente et capable de formaliser l'arithmétique, il existe un énoncé G (la phrase de Gödel) tel que ni G ni ¬G ne sont démontrables dans T  ;  2e théorème : la cohérence de T n'est pas démontrable dans T",
+      "contexte": "Publiés en 1931 dans Über formal unentscheidbare Sätze der Principia Mathematica… (Gödel avait 25 ans). Réponse négative décisive au programme de Hilbert (fondements complets et cohérents des mathématiques, posé en 1900). Accueillis par von Neumann, Bernays, Church et Kleene. Ces théorèmes ébranlent définitivement l'idée que les mathématiques peuvent être totalement formalisées.",
+      "url": "https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_d%27incompl%C3%A9tude_de_G%C3%B6del"
+    }
+  ],
+
+  "domaine8_formules": [
+    {
+      "titre": "Identité d'Euler",
+      "definition": "L'identité d'Euler est une relation mathématique entre cinq constantes fondamentales de l'analyse : e (base des logarithmes naturels), i (unité imaginaire), π (rapport circonférence/diamètre), 1 (élément neutre de la multiplication) et 0 (élément neutre de l'addition). Elle est souvent qualifiée de « plus belle formule des mathématiques ».",
+      "formule": "e^(iπ) + 1 = 0  (ou de façon équivalente : e^(iπ) = −1)",
+      "contexte": "Découle de la formule d'Euler e^(ix) = cos(x) + i·sin(x) publiée dans l'Introductio in analysin infinitorum de Leonhard Euler (Lausanne, 1748). Roger Cotes avait approché le résultat avant sa mort en 1716. L'identité est régulièrement citée dans les enquêtes auprès des mathématiciens comme la relation la plus élégante des mathématiques.",
+      "url": "https://fr.wikipedia.org/wiki/Identit%C3%A9_d%27Euler"
+    },
+    {
+      "titre": "Équation de Schrödinger",
+      "definition": "L'équation de Schrödinger est une équation fondamentale en mécanique quantique décrivant l'évolution dans le temps de la fonction d'onde d'une particule massive non relativiste. Elle remplit le même rôle que la relation fondamentale de la dynamique F = ma en mécanique classique.",
+      "formule": "Forme dépendante du temps : iℏ·∂Ψ/∂t = −(ℏ²/2m)·ΔΨ + V(r)·Ψ  ;  Forme stationnaire : ĤΨ = EΨ  (équation aux valeurs propres de l'opérateur hamiltonien Ĥ)",
+      "contexte": "Proposée en 1925 par le physicien autrichien Erwin Schrödinger, inspiré par l'hypothèse de dualité onde-corpuscule de Louis de Broglie (1923). S'appuie sur l'analogie Hamilton-Jacobi/optique géométrique (Hamilton, 1834). Max Born fournit l'interprétation probabiliste de |Ψ|² en 1926. Les débats Bohr–Einstein sur l'interprétation quantique marquent les années 1920–1930.",
+      "url": "https://fr.wikipedia.org/wiki/%C3%89quation_de_Schr%C3%B6dinger"
+    },
+    {
+      "titre": "Relativité restreinte et E = mc²",
+      "definition": "La relativité restreinte est une théorie élaborée par Albert Einstein en 1905 tirant toutes les conséquences physiques du principe de relativité galiléenne et du principe d'invariance de la vitesse de la lumière. Elle implique l'équivalence masse-énergie, résumée dans la formule E = mc².",
+      "formule": "Équivalence masse-énergie : E = mc²  ;  Transformations de Lorentz : t' = γ(t − vx/c²), x' = γ(x − vt)  avec γ = 1/√(1 − v²/c²)  ;  Énergie relativiste totale : E² = (pc)² + (mc²)²",
+      "contexte": "Einstein publie « De l'électrodynamique des corps en mouvement » en 1905 (annus mirabilis). S'appuie sur les équations de Maxwell, l'expérience de Michelson-Morley (1887) et les transformations de Lorentz (1904). La formule E = mc² apparaît dans un article complémentaire la même année. Einstein reçoit le prix Nobel en 1921 (pour l'effet photoélectrique, pas pour la relativité).",
+      "url": "https://fr.wikipedia.org/wiki/Relativit%C3%A9_restreinte"
+    },
+    {
+      "titre": "Théorème de Noether (physique)",
+      "definition": "Le théorème de Noether exprime l'équivalence fondamentale qui existe entre les symétries continues d'un système physique et les lois de conservation. Chaque invariance du lagrangien correspond à une grandeur physique qui se conserve.",
+      "formule": "Énoncé : à toute transformation infinitésimale laissant invariante l'intégrale d'action S = ∫L dt correspond une grandeur conservée  ;  Exemples : invariance par translation spatiale → conservation de l'impulsion p  ;  invariance temporelle → conservation de l'énergie E  ;  invariance rotationnelle → conservation du moment cinétique L",
+      "contexte": "Démontré en 1915 et publié en 1918 par Emmy Noether à Göttingen, à la demande de Felix Klein et David Hilbert pour résoudre un problème lié à la relativité générale d'Einstein. Einstein lui-même écrit à Hilbert pour souligner la profondeur du résultat. Le théorème est aujourd'hui considéré comme l'un des résultats les plus profonds de la physique théorique.",
+      "url": "https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_de_Noether_(physique)"
+    },
+    {
+      "titre": "Méthode de Monte-Carlo",
+      "definition": "Une méthode de Monte-Carlo est une méthode algorithmique visant à calculer une valeur numérique approchée en utilisant des procédés aléatoires, c'est-à-dire des techniques probabilistes. Elle est utilisée pour calculer des intégrales, simuler des systèmes complexes et analyser des risques.",
+      "formule": "Estimateur de Monte-Carlo : μₙ = (1/n)·Σ(k=1 à n) Xₖ  →  μₙ → E[X]  par la loi des grands nombres  ;  Intervalle de confiance à 95% : μₙ ± 1,96·σ/√n  ;  Calcul de π : π ≈ 4 × (points dans le cercle) / (points totaux)",
+      "contexte": "Développée sous l'impulsion de John von Neumann et Stanislaw Ulam durant la Seconde Guerre mondiale dans le cadre du Projet Manhattan (recherches sur la bombe atomique). Le nom « Monte-Carlo » est inventé en 1947 par Nicholas Metropolis (allusion au casino de Monte-Carlo). Première publication dans un article de Metropolis et Ulam en 1949.",
+      "url": "https://fr.wikipedia.org/wiki/M%C3%A9thode_de_Monte-Carlo"
+    }
+  ],
+
+  "domaine9_musique": [
+    {
+      "titre": "Série harmonique (musique)",
+      "definition": "La série harmonique est l'ensemble des partiels harmoniques d'un son. En acoustique musicale, un harmonique est une composante d'un son périodique dont la fréquence est un multiple entier d'une fréquence fondamentale. Elle constitue le fondement naturel de l'harmonie musicale occidentale.",
+      "formule": "Pour une fréquence fondamentale N, les harmoniques sont : N, 2N, 3N, 4N, 5N… (progression arithmétique de multiples entiers). Exemple : la 3 = 440 Hz → 880, 1320, 1760 Hz…",
+      "contexte": "La série harmonique est connue depuis l'Antiquité et formalisée par l'acoustique moderne. Elle explique pourquoi certains intervalles (octave, quinte, tierce) sont perçus comme consonants : leurs harmoniques coïncident. La hauteur perçue d'un son est déterminée par la fondamentale, tandis que le timbre dépend de l'amplitude relative des harmoniques supérieurs.",
+      "url": "https://fr.wikipedia.org/wiki/S%C3%A9rie_harmonique_(musique)"
+    },
+    {
+      "titre": "Tempérament égal",
+      "definition": "Le tempérament égal est un système d'accord qui divise l'octave en douze intervalles chromatiques égaux, de sorte que le rapport des fréquences de deux notes adjacentes est toujours identique. Il permet les modulations à toutes les tonalités sans réaccordage.",
+      "formule": "Rapport du demi-ton : r = ¹²√2 = 2^(1/12) ≈ 1,059463.  Fréquence de la n-ième note : f(n) = f₀ × 2^(n/12).",
+      "contexte": "Les premiers usages du tempérament égal apparaissent au début du XVIe siècle sur les instruments à frettes (luth, guitare). Le mathématicien flamand Simon Stevin (1548–1620) en formalise la division en 12 demi-tons égaux. Sa popularisation s'étend des périodes baroque et classique jusqu'aux XIXe–XXe siècles, où il devient le standard universel malgré le fait que tous ses intervalles, sauf l'octave, sont acoustiquement légèrement approximatifs.",
+      "url": "https://fr.wikipedia.org/wiki/Temp%C3%A9rament_%C3%A9gal"
+    },
+    {
+      "titre": "Accord (musique)",
+      "definition": "Un accord est un ensemble d'au moins trois notes jouées simultanément, considéré comme formant un tout du point de vue de l'harmonie tonale. Les accords sont construits par superposition de tierces et classifiés selon leur qualité (majeur, mineur, diminué, augmenté).",
+      "formule": "Construction par superposition de tierces : accord parfait majeur = tierce majeure (4 demi-tons) + tierce mineure (3 demi-tons), ex. do–mi–sol.  Rapports pythagoriciens : octave 2/1, quinte 3/2, quarte 4/3, tierce majeure 5/4, tierce mineure 6/5.",
+      "contexte": "Jusqu'à la Renaissance, les superpositions de notes ne sont pas encore théorisées comme accords. Dès la fin du XIVe siècle, l'attention se porte sur les trichords consonants. Au XVIe siècle, la basse continue émerge. En 1610–1612, Johannes Lippius formalise les concepts de renversement d'accord et de « racine » (radix), fondant la théorie harmonique tonale moderne.",
+      "url": "https://fr.wikipedia.org/wiki/Accord_(musique)"
+    },
+    {
+      "titre": "Gamme (musique)",
+      "definition": "Une gamme (ou échelle musicale) est un ensemble ordonné de sons appelés degrés, formant le cadre tonal dans lequel se bâtit une œuvre musicale. Elle est caractérisée par les intervalles entre ses degrés successifs.",
+      "formule": "Structure intervallique de la gamme majeure (do) : 2–2–1–2–2–2–1 demi-tons.  Trois systèmes : accord pythagoricien (quintes pures, rapport 3/2), gammes naturelles (rapports harmoniques entiers), gamme tempérée (intervalles égaux, 2^(n/12)).",
+      "contexte": "La mesure des hauteurs sonores et de leurs rapports remonte à l'Antiquité grecque. Au XVIIe siècle, Marin Mersenne documente les fréquences et les gammes. Les gammes varient selon les cultures (pentatoniques à 5 notes, heptatoniques à 7 notes, microtonales) et ont évolué en Occident depuis l'accord pythagoricien vers la gamme tempérée moderne.",
+      "url": "https://fr.wikipedia.org/wiki/Gamme_(musique)"
+    },
+    {
+      "titre": "Acoustique musicale",
+      "definition": "L'acoustique musicale est le domaine de l'acoustique consacré à l'étude des sons musicaux et de leur mode de production par les instruments de musique et la voix. Elle englobe la mécanique des corps vibrants, la propagation des ondes sonores et la psychoacoustique.",
+      "formule": "Rapports fondamentaux de consonance (longueurs de corde / fréquences) : octave = 1/2, quinte = 2/3, quarte = 3/4, tierce majeure = 4/5, tierce mineure = 5/6.",
+      "contexte": "Pythagore est le premier à établir empiriquement la relation entre la longueur d'une corde et la hauteur du son produit, via le monocorde. Au XVIe siècle, le lien entre fréquence et hauteur est formalisé. Jean-Philippe Rameau (1722) codifie les principes mathématiques de l'harmonie. Pierre Schaeffer (1966) questionne les fondements du terme dans le cadre de la musique concrète.",
+      "url": "https://fr.wikipedia.org/wiki/Acoustique_musicale"
+    },
+    {
+      "titre": "Intervalle (musique)",
+      "definition": "L'intervalle est la distance entre deux notes musicales. Il est dit « harmonique » si les deux notes sont simultanées, « mélodique » si elles sont entendues l'une après l'autre. Les intervalles se mesurent en demi-tons et se qualifient (majeur, mineur, juste, augmenté, diminué).",
+      "formule": "Rapports de fréquences des intervalles justes : octave = 2/1, quinte = 3/2, quarte = 4/3, tierce majeure = 5/4, tierce mineure = 6/5.  En tempérament égal : intervalle de n demi-tons = 2^(n/12).",
+      "contexte": "Pythagore établit les rapports d'intervalles via les fractions du monocorde (6/12, 8/12, 9/12). Boèce lui attribue la découverte de ces consonances mathématiques. Zarlino (1558) étend le système aux six premiers nombres entiers. Entre le XVIe et le XVIIe siècle, la théorie évolue vers les rapports de fréquences, aboutissant à la nomenclature (seconde, tierce, quarte, quinte, sixte, septième, octave) encore en usage aujourd'hui.",
+      "url": "https://fr.wikipedia.org/wiki/Intervalle_(musique)"
+    }
+  ]
+}

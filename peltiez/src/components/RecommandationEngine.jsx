@@ -5,6 +5,7 @@ import { Sparkles, Loader2, ArrowRight, Gift, RefreshCw, Wrench, Package, Star, 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
+import AiEnergyFootprintNotice from "@/components/ui/AiEnergyFootprintNotice";
 
 // Score proximité géographique
 function geoScore(userCity, listingLocation) {
@@ -170,6 +171,7 @@ Génère aussi 3 conseils personnalisés.`,
             {loading ? <Loader2 className="h-3 w-3 animate-spin" /> : <Sparkles className="h-3 w-3" />}
           </Button>
         </div>
+        <AiEnergyFootprintNotice />
         {recommandations && recommandations.length > 0 && (
           <div className="space-y-2">
             {recommandations.slice(0, 3).map((r, i) => {
@@ -219,6 +221,7 @@ Génère aussi 3 conseils personnalisés.`,
             {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <><Sparkles className="h-4 w-4" /> Trouver</>}
           </Button>
         </div>
+        <AiEnergyFootprintNotice />
 
         {/* Suggestions rapides */}
         {!recommandations && !loading && (

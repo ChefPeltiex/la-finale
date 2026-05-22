@@ -33,6 +33,7 @@ dist-ssr
 
 # Rapport local généré par scripts/dev-universal.ps1
 reports/dev-universal-last-run.md
+reports/bob-tour-last-run.md
 
 # Rapport HTML généré par scripts/guardian.ps1
 reports/guardian-scan.html
@@ -54,3 +55,9 @@ docs/encyclopedie/codex-assembled-preview.pdf
 
 # Réservoir de contenu — collages locaux / sensibles (voir content-reservoir/README.md)
 content-reservoir/inbox/private-*.md
+
+# Scrapes / brouillons scripts (YouTube, etc.)
+scripts/_yt_*
+scripts/_yt_*/
+
+.vercel

@@ -42,12 +42,18 @@ export const SITE_SEO_KEYWORDS =
 
 /** Routes marketing indexables (sitemap statique). */
 export const SITEMAP_MARKETING_PATHS = [
+  "/entrer",
   "/",
+  "/boutique",
   "/pricing",
   "/pilote",
   "/docs/preuves",
   "/portail/nature-quebec",
   "/world",
+  "/entreprises",
+  "/circulai",
+  "/docs/circulai-kit-regional",
+  "/docs/circulai/plan-affaires",
 ];
 
 /** Fil conducteur narratif et éthique — réutilisable dans SEO, onboarding et HUD. */

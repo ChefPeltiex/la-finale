@@ -1,0 +1,8 @@
+# Default owners — ajuste les handles si ton équipe GitHub utilise d’autres comptes ou équipes.
+# Doc : https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+* @ChefPeltiex
+
+/peltiez/ @ChefPeltiex
+/scripts/ @ChefPeltiex
+.github/ @ChefPeltiex

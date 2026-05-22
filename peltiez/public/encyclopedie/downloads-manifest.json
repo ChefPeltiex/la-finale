@@ -1,0 +1,18 @@
+{
+  "title": "Encyclopédie Totale — Dont vous êtes le héros",
+  "pageCount": 1658,
+  "generatedAt": "2026-05-19T19:14:58.164Z",
+  "downloads": {
+    "master": "/encyclopedie.pdf",
+    "tomes": [
+      "/encyclopedie/tome-I.pdf",
+      "/encyclopedie/tome-II.pdf",
+      "/encyclopedie/tome-III.pdf",
+      "/encyclopedie/tome-IV.pdf",
+      "/encyclopedie/tome-V.pdf",
+      "/encyclopedie/tome-VI.pdf",
+      "/encyclopedie/tome-VII.pdf"
+    ],
+    "braille": "/encyclopedie/braille/extrait-fr-utf8.txt"
+  }
+}

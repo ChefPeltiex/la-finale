@@ -164,6 +164,9 @@
   }
 }
 
+/* ── KaTeX: inherit text color so equations render on dark backgrounds ── */
+.katex, .katex-display > .katex { color: inherit; }
+
 /* ══════════════════════════════════════════
    MAGICAL UTILITY CLASSES
 ══════════════════════════════════════════ */
@@ -602,7 +605,54 @@ a, button {
 }
 
 .pole-mobile-nav {
-  padding-bottom: env(safe-area-inset-bottom, 0px);
+  padding-bottom: max(0.5rem, env(safe-area-inset-bottom, 0px));
+}
+
+/* Espace pour la barre de pôles mobile + encoches */
+.app-main-with-mobile-nav {
+  padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+}
+@media (min-width: 1024px) {
+  .app-main-with-mobile-nav {
+    padding-bottom: 0;
+  }
+}
+
+.app-footer-with-mobile-nav {
+  margin-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px));
+}
+@media (min-width: 1024px) {
+  .app-footer-with-mobile-nav {
+    margin-bottom: 0;
+  }
+}
+
+.mobile-header-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+/* Docs CirculAI / Codex : tableaux scrollables sur petit écran */
+.prose-circulai-responsive {
+  max-width: none;
+  overflow-wrap: anywhere;
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+@media (min-width: 640px) {
+  .prose-circulai-responsive {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+}
+.prose-circulai-responsive :where(table) {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.prose-circulai-responsive :where(pre) {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 html.dark .cosmic-bg,
@@ -614,5 +664,77 @@ html.dark .cosmic-bg,
   .pilot-card {
     @apply rounded-2xl border border-[#D4AF37]/40 bg-zinc-950/95;
     box-shadow: 0 0 24px rgba(212, 175, 55, 0.08);
+  }
+
+  /* ── Plateforme crédible (CirculAI / marché) ── */
+  .platform-layout-pro {
+    @apply bg-zinc-50 text-foreground;
+  }
+  .platform-layout-pro .platform-sidebar {
+    background: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 20% 97%) 100%);
+    border-right: 1px solid hsl(var(--border));
+  }
+  .platform-layout-pro .platform-sidebar .nav-link-pro {
+    @apply text-foreground/70 hover:text-foreground hover:bg-zinc-100;
+  }
+  .platform-layout-pro .platform-sidebar .nav-link-pro-active {
+    @apply text-emerald-800 bg-emerald-50 border border-emerald-200/80 shadow-sm;
+  }
+  .platform-layout-pro .platform-main {
+    @apply bg-zinc-50;
+  }
+  .platform-surface {
+    @apply bg-white shadow-sm;
+  }
+  .platform-card-emerald {
+    @apply platform-surface border border-emerald-200/80;
+  }
+  .platform-card-violet {
+    @apply platform-surface border border-violet-200/80;
+  }
+  .platform-btn-primary {
+    @apply bg-emerald-600 hover:bg-emerald-700 text-white font-semibold;
+    transition: background-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .platform-btn-primary:hover {
+    box-shadow: 0 4px 16px rgba(5, 150, 105, 0.28);
+  }
+  .platform-btn-primary:focus-visible {
+    outline: 2px solid hsl(158 65% 28%);
+    outline-offset: 2px;
+  }
+  .platform-home {
+    @apply pb-8;
+  }
+
+  /* ── Page transitions fade ── */
+  .page-fade-enter {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  .page-fade-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+
+  /* ── Focus ring global accessible (complément :focus-visible) ── */
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+  }
+
+  /* ── Hub module card ── */
+  .hub-module-card {
+    @apply platform-surface rounded-xl border border-zinc-200/80 p-4;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  }
+  .hub-module-card:hover {
+    @apply border-emerald-300;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    transform: translateY(-1px);
+  }
+  .hub-module-card:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
   }
 }

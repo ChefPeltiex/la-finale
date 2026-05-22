@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CirculAI — Démo technique (standalone)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            sky: { 200:'#bae6fd', 300:'#7dd3fc', 400:'#38bdf8', 600:'#0284c7', 800:'#075985', 950:'#0c1a2e' },
+            emerald: { 200:'#a7f3d0', 400:'#34d399', 600:'#059669', 950:'#022c22' },
+            amber: { 200:'#fde68a', 400:'#fbbf24', 500:'#f59e0b', 950:'#1a0d00' },
+            zinc: { 800:'#27272a', 900:'#18181b', 950:'#09090b' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #09090b; color: #f4f4f5; font-family: system-ui, sans-serif; }
+    .mono { font-family: 'Menlo', 'Consolas', monospace; }
+    .card { background: rgba(0,0,0,0.45); border: 1px solid rgba(255,255,255,0.09); border-radius: 1rem; padding: 1.25rem; }
+    .badge { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.15rem 0.55rem; border-radius: 9999px; }
+    canvas { display: block; }
+  </style>
+</head>
+<body class="dark min-h-screen">
+
+<!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
+<div style="background: linear-gradient(to bottom, rgba(12,26,46,0.7) 0%, #09090b 100%);">
+  <div class="max-w-3xl mx-auto px-4 pt-10 pb-6">
+    <span class="badge" style="color:#38bdf8; background:rgba(56,189,248,0.12); border:1px solid rgba(56,189,248,0.3);">
+      Démo technique · fichier standalone
+    </span>
+    <h1 class="text-4xl font-bold mt-3" style="color:#f0f9ff;">CirculAI</h1>
+    <p class="mt-2 text-base" style="color:rgba(255,255,255,0.65); max-width:52ch; line-height:1.65;">
+      Plateforme web React/Vite · cadre de mesure honnête pour des pilotes municipaux
+      d'économie circulaire (objets / heures bénévoles) · distincte du divertissement Egor69.
+    </p>
+    <div class="mt-4 flex flex-wrap gap-2">
+      <span class="badge" style="background:rgba(5,150,105,0.15); color:#34d399; border:1px solid rgba(52,211,153,0.25);">React 18</span>
+      <span class="badge" style="background:rgba(56,189,248,0.1); color:#7dd3fc; border:1px solid rgba(125,211,252,0.2);">Vite + Tailwind</span>
+      <span class="badge" style="background:rgba(139,92,246,0.12); color:#c4b5fd; border:1px solid rgba(196,181,253,0.2);">Radix UI</span>
+      <span class="badge" style="background:rgba(245,158,11,0.1); color:#fbbf24; border:1px solid rgba(251,191,36,0.2);">Three.js 3D</span>
+      <span class="badge" style="background:rgba(239,68,68,0.1); color:#fca5a5; border:1px solid rgba(252,165,165,0.2);">Stripe</span>
+      <span class="badge" style="background:rgba(100,116,139,0.15); color:#94a3b8; border:1px solid rgba(148,163,184,0.2);">TanStack Query</span>
+    </div>
+  </div>
+</div>
+
+<div class="max-w-3xl mx-auto px-4 pb-20 space-y-8">
+
+  <!-- ═══════════════════════════ AVERTISSEMENT HONNÊTE ═══════════════ -->
+  <div style="border:1px solid rgba(245,158,11,0.35); background:rgba(120,50,0,0.22); border-radius:0.75rem; padding:1rem; display:flex; gap:0.75rem;">
+    <span style="color:#fbbf24; font-size:1.1rem; flex-shrink:0;">⚠</span>
+    <div style="font-size:0.85rem; color:rgba(253,230,138,0.88); line-height:1.6;">
+      <strong style="color:#fde68a;">Pour le programmeur</strong> — Ce n'est pas une certification
+      universitaire ni une garantie de résultat. C'est un cadre pour un <strong>pilote limité</strong> :
+      un site, des flux réels documentés, <strong>trois preuves</strong> à la fin. Si les chiffres
+      sont faibles, on les dit tels quels.
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════ LANCER L'APP ═══════════════════════ -->
+  <section>
+    <h2 class="text-lg font-bold mb-4" style="color:#7dd3fc;">Lancer la vraie application</h2>
+    <div class="space-y-3">
+
+      <div class="card" style="border-color:rgba(52,211,153,0.3);">
+        <div class="flex items-start gap-3">
+          <span class="badge" style="background:rgba(5,150,105,0.2); color:#34d399; border:1px solid rgba(52,211,153,0.3); flex-shrink:0;">Option A · zéro install</span>
+        </div>
+        <p class="text-sm mt-2" style="color:rgba(255,255,255,0.6);">Vous lisez ce fichier — c'est l'Option A. Démo authentique, zero serveur, zero npm.</p>
+      </div>
+
+      <div class="card" style="border-color:rgba(56,189,248,0.25);">
+        <span class="badge" style="background:rgba(2,132,199,0.15); color:#38bdf8; border:1px solid rgba(56,189,248,0.25);">Option B · build existant (recommandée)</span>
+        <p class="text-sm mt-2 mb-2" style="color:rgba(255,255,255,0.6);">Le dossier <code class="mono" style="color:#7dd3fc;">dist/</code> est déjà compilé. Seul <code class="mono" style="color:#7dd3fc;">npx</code> requis (inclus avec Node.js).</p>
+        <pre class="mono text-xs p-3 rounded-lg mt-2" style="background:rgba(0,0,0,0.5); color:#a5f3fc; overflow-x:auto;">cd peltiez
+npx serve dist
+# → http://localhost:3000</pre>
+        <p class="text-xs mt-2" style="color:rgba(255,255,255,0.4);">Routes: <code class="mono">/circulai</code> · <code class="mono">/circulai/equation-pilote</code> · <code class="mono">/pilote</code></p>
+      </div>
+
+      <div class="card">
+        <span class="badge" style="background:rgba(100,116,139,0.15); color:#94a3b8; border:1px solid rgba(148,163,184,0.2);">Option C · dev complet</span>
+        <p class="text-sm mt-2 mb-2" style="color:rgba(255,255,255,0.5);">Rechargement à chaud, modifications en temps réel.</p>
+        <pre class="mono text-xs p-3 rounded-lg mt-2" style="background:rgba(0,0,0,0.5); color:#cbd5e1; overflow-x:auto;">cd peltiez
+npm install
+npm run dev
+# → http://localhost:5173</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ ÉQUATION DU PILOTE ═════════════════ -->
+  <section>
+    <h2 class="text-lg font-bold mb-1" style="color:#7dd3fc;">Équation du pilote</h2>
+    <p class="text-xs mb-4" style="color:rgba(255,255,255,0.4); text-transform:uppercase; letter-spacing:0.1em;">Outil de lecture · pas un rapport IQ</p>
+
+    <div class="space-y-4">
+
+      <div class="card">
+        <h3 class="font-semibold text-sm mb-2" style="color:#a5f3fc;">1. Impact cumulé (intention du pilote)</h3>
+        <p class="mono text-sm" style="color:rgba(110,231,183,0.9);">dI/dt = μ_flux − λ_fuite + ε_terrain</p>
+        <p class="text-xs mt-1" style="color:rgba(255,255,255,0.45);">(tendance mesurée + pertes + variation normale du terrain)</p>
+        <ul class="mt-3 text-sm space-y-1" style="color:rgba(255,255,255,0.6); list-style:disc; padding-left:1.25rem;">
+          <li><strong style="color:rgba(255,255,255,0.85);">μ_flux</strong> — dons, réparations, matchings comptés honnêtement</li>
+          <li><strong style="color:rgba(255,255,255,0.85);">λ_fuite</strong> — abandons, doublons, erreurs de saisie</li>
+          <li><strong style="color:rgba(255,255,255,0.85);">ε_terrain</strong> — météo, vacances, charge bénévole (normal)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 class="font-semibold text-sm mb-2" style="color:#a5f3fc;">2. Tendance + imprévu (SDE)</h3>
+        <p class="mono text-sm" style="color:rgba(186,230,253,0.9);">dX_t = μ dt + σ dW_t</p>
+        <p class="text-xs mt-1" style="color:rgba(255,255,255,0.5);">Chaque semaine : direction claire (μ) + imprévu honnête (σ) — pas une promesse de précision absolue.</p>
+
+        <!-- GRAPHIQUE SIMULÉ SDE -->
+        <div class="mt-4">
+          <canvas id="sdeChart" width="600" height="160" style="width:100%; height:auto; border-radius:0.5rem;"></canvas>
+          <p class="text-xs mt-2 text-center" style="color:rgba(255,255,255,0.3);">Simulation SDE discrète · non certifiée · illustrative · 90 jours</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 class="font-semibold text-sm mb-2" style="color:#a5f3fc;">3. Deux flux, un ratio (Beta)</h3>
+        <p class="text-sm" style="color:rgba(255,255,255,0.7);">B(z₁,z₂) = Γ(z₁)Γ(z₂)/Γ(z₁+z₂) — utile pour un ratio composite quand les volumes sont petits (pilote).</p>
+        <p class="text-sm mt-2" style="color:rgba(255,255,255,0.5);">Ex. combiner « objets circulés » et « heures bénévoles » sans gonfler un seul indicateur.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="font-semibold text-sm mb-2" style="color:#a5f3fc;">4. Rythme 90 jours (algoRYTHME)</h3>
+        <ul class="mt-2 space-y-2 text-sm">
+          <li class="flex gap-3">
+            <span class="mono flex-shrink-0" style="color:#38bdf8;">J0–J7</span>
+            <span style="color:rgba(255,255,255,0.7);">Site · référent · indicateur de base</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="mono flex-shrink-0" style="color:#38bdf8;">J8–J45</span>
+            <span style="color:rgba(255,255,255,0.7);">Journal des flux — données réelles</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="mono flex-shrink-0" style="color:#38bdf8;">J46–J90</span>
+            <span style="color:rgba(255,255,255,0.7);">3 preuves : flux · matching · confiance partenaire</span>
+          </li>
+        </ul>
+        <p class="text-xs mt-3" style="color:rgba(255,255,255,0.35);">7^n mod 10 → cycle 4 (ex. 7¹⁰⁰ finit par 1) — rappel : petits pas répétés.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ STRUCTURE TECHNIQUE ════════════════ -->
+  <section>
+    <h2 class="text-lg font-bold mb-4" style="color:#7dd3fc;">Structure technique réelle</h2>
+    <div class="card">
+      <div class="grid gap-4" style="grid-template-columns: 1fr 1fr;">
+        <div>
+          <p class="text-xs font-bold mb-2" style="color:#94a3b8; text-transform:uppercase; letter-spacing:0.08em;">Pages CirculAI</p>
+          <ul class="text-sm space-y-1" style="color:rgba(255,255,255,0.65);">
+            <li><code class="mono text-xs" style="color:#7dd3fc;">/circulai</code> — Hub décideurs</li>
+            <li><code class="mono text-xs" style="color:#7dd3fc;">/circulai/equation-pilote</code> — Graphique SDE</li>
+            <li><code class="mono text-xs" style="color:#7dd3fc;">/pilote</code> — Tableau 90 jours</li>
+            <li><code class="mono text-xs" style="color:#7dd3fc;">/docs/circulai/lettre-municipale</code></li>
+            <li><code class="mono text-xs" style="color:#7dd3fc;">/docs/circulai/plan-affaires</code></li>
+            <li><code class="mono text-xs" style="color:#7dd3fc;">/docs/circulai/plan-action-quebec</code></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-xs font-bold mb-2" style="color:#94a3b8; text-transform:uppercase; letter-spacing:0.08em;">Stack complète</p>
+          <ul class="text-sm space-y-1" style="color:rgba(255,255,255,0.65);">
+            <li>React 18 · Vite 6</li>
+            <li>Tailwind CSS 3</li>
+            <li>Radix UI (composants)</li>
+            <li>Three.js (Verse 3D)</li>
+            <li>TanStack Query v5</li>
+            <li>Stripe (paiements)</li>
+            <li>Sentry (monitoring)</li>
+            <li>Express (backend)</li>
+            <li>Recharts (graphiques)</li>
+            <li>KaTeX (formules)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-4 pt-4" style="border-top:1px solid rgba(255,255,255,0.07);">
+        <p class="text-xs font-bold mb-2" style="color:#94a3b8; text-transform:uppercase; letter-spacing:0.08em;">Structure dossiers</p>
+        <pre class="mono text-xs" style="color:rgba(255,255,255,0.55); line-height:1.7;">peltiez/
+├── src/
+│   ├── pages/          (CirculaiHub, CirculaiEquationPilote, etc.)
+│   ├── components/     (circulai/, platform/, ui/)
+│   └── lib/
+│       ├── math/       (pilotEquations.js — formules réelles)
+│       ├── site.js     (CIRCULAI_BRAND, SEO)
+│       └── circulaiEgorBrand.js
+├── server/             (Express backend)
+├── dist/               (build produit — PRÉSENT)
+└── node_modules/       (dépendances — PRÉSENTES)</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ CIRCULAI vs EGOR69 ══════════════════ -->
+  <section>
+    <h2 class="text-lg font-bold mb-4" style="color:#7dd3fc;">Distinction CirculAI / Egor69</h2>
+    <div class="grid gap-4" style="grid-template-columns: 1fr 1fr;">
+      <div class="card" style="border-color:rgba(56,189,248,0.3);">
+        <p class="text-xs font-bold mb-2" style="color:#38bdf8; text-transform:uppercase; letter-spacing:0.08em;">CirculAI</p>
+        <p class="text-sm font-semibold mb-2" style="color:rgba(255,255,255,0.9);">Intelligence circulaire · pilotes territoriaux</p>
+        <p class="text-sm" style="color:rgba(255,255,255,0.6); line-height:1.6;">Hub mesurable : économie circulaire, Nature Québec, marketplace, preuves en 90 jours — pour municipalités, OBNL et entreprises locales.</p>
+        <p class="text-xs mt-3" style="color:rgba(56,189,248,0.7);">→ C'est la partie sérieuse</p>
+      </div>
+      <div class="card" style="border-color:rgba(139,92,246,0.25);">
+        <p class="text-xs font-bold mb-2" style="color:#c4b5fd; text-transform:uppercase; letter-spacing:0.08em;">Egor69</p>
+        <p class="text-sm font-semibold mb-2" style="color:rgba(255,255,255,0.9);">Jumeau numérique · divertissement & culture</p>
+        <p class="text-sm" style="color:rgba(255,255,255,0.6); line-height:1.6;">Verse 3D, encyclopédie, codex et univers narratif — pour le public qui explore, pas pour la slide mairie.</p>
+        <p class="text-xs mt-3" style="color:rgba(139,92,246,0.6);">→ Divertissement séparé</p>
+      </div>
+    </div>
+    <p class="text-xs mt-3" style="color:rgba(255,255,255,0.35);">
+      Limoilou · Québec — CirculAI reste séparé du divertissement Egor69 dans le code (routes, brand, lib).
+    </p>
+  </section>
+
+  <!-- ═══════════════════════════ VALEUR FACTUELLE ═══════════════════ -->
+  <section>
+    <h2 class="text-lg font-bold mb-4" style="color:#7dd3fc;">5 points clés (faits vérifiables)</h2>
+    <div class="space-y-3">
+      <div class="card flex gap-3">
+        <span style="color:#34d399; font-size:1.1rem; flex-shrink:0;">✓</span>
+        <div>
+          <p class="text-sm font-semibold" style="color:rgba(255,255,255,0.9);">App web complète, multi-pages, déjà buildable</p>
+          <p class="text-sm" style="color:rgba(255,255,255,0.55);">dist/ présent, node_modules/ présent, npm run preview fonctionne sans re-build.</p>
+        </div>
+      </div>
+      <div class="card flex gap-3">
+        <span style="color:#34d399; font-size:1.1rem; flex-shrink:0;">✓</span>
+        <div>
+          <p class="text-sm font-semibold" style="color:rgba(255,255,255,0.9);">Architecture moderne (composants, contexts, math libs séparées)</p>
+          <p class="text-sm" style="color:rgba(255,255,255,0.55);">src/lib/math/pilotEquations.js — fonctions pures testables. Composants Radix headless. Recharts pour les graphiques.</p>
+        </div>
+      </div>
+      <div class="card flex gap-3">
+        <span style="color:#34d399; font-size:1.1rem; flex-shrink:0;">✓</span>
+        <div>
+          <p class="text-sm font-semibold" style="color:rgba(255,255,255,0.9);">Distinction explicite produit sérieux / divertissement</p>
+          <p class="text-sm" style="color:rgba(255,255,255,0.55);">Séparés au niveau du code (circulaiEgorBrand.js), des routes, de la typographie et du ton rédactionnel.</p>
+        </div>
+      </div>
+      <div class="card flex gap-3">
+        <span style="color:#34d399; font-size:1.1rem; flex-shrink:0;">✓</span>
+        <div>
+          <p class="text-sm font-semibold" style="color:rgba(255,255,255,0.9);">Modèle math humble (tendance/variation/3 preuves) plutôt qu'hyperbole</p>
+          <p class="text-sm" style="color:rgba(255,255,255,0.55);">SDE simple (μ·dt + σ·dW), intégrale discrète, ratio Beta — pas de Monte-Carlo certifié, disclaimer dans le code.</p>
+        </div>
+      </div>
+      <div class="card flex gap-3">
+        <span style="color:#34d399; font-size:1.1rem; flex-shrink:0;">✓</span>
+        <div>
+          <p class="text-sm font-semibold" style="color:rgba(255,255,255,0.9);">Prêt pour un pilote 90 jours sur un site réel</p>
+          <p class="text-sm" style="color:rgba(255,255,255,0.55);">Plan d'action 13 semaines, lettre municipale type, tableau de bord pilote — tout est dans les routes de l'app.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ PITCH 30 SECONDES ══════════════════ -->
+  <section>
+    <div style="border:1px solid rgba(56,189,248,0.3); background:rgba(12,26,46,0.6); border-radius:1rem; padding:1.5rem;">
+      <p class="text-xs font-bold mb-3" style="color:#38bdf8; text-transform:uppercase; letter-spacing:0.12em;">Pitch 30 secondes</p>
+      <blockquote style="color:rgba(255,255,255,0.82); line-height:1.8; font-size:0.95rem;">
+        "C'est une application web React/Vite construite seul en ~40 jours. Elle propose un cadre de mesure
+        honnête pour des pilotes d'économie circulaire dans les municipalités québécoises : dons d'objets,
+        heures bénévoles, preuves vérifiables en 90 jours. Le code est propre, le build est présent, la stack
+        est standard. Il y a une partie divertissement (Egor69) séparée clairement dans le code — ça ne se mélange
+        pas avec la partie sérieuse. On cherche un programmeur pour continuer à construire, pas pour valider
+        un miracle."
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ FOOTER ════════════════════════════ -->
+  <footer class="text-center pt-4">
+    <p class="text-xs" style="color:rgba(255,255,255,0.25);">
+      CirculAI · Limoilou · Québec · fichier DEMO-CIRCULAI.html — standalone, aucun serveur requis
+    </p>
+    <p class="text-xs mt-1" style="color:rgba(255,255,255,0.18);">
+      Données authentiques extraites de src/lib/math/pilotEquations.js · src/lib/site.js · src/lib/circulaiEgorBrand.js
+    </p>
+  </footer>
+
+</div>
+
+<!-- ═══════════════════════════ SCRIPT GRAPHIQUE SDE ═════════════════ -->
+<script>
+(function() {
+  const canvas = document.getElementById('sdeChart');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+
+  // Simulation SDE discrète (même algo que simulatePilotSde dans pilotEquations.js)
+  function simulateSde(mu, sigma, steps, x0) {
+    const xs = [x0];
+    let x = x0;
+    for (let i = 1; i <= steps; i++) {
+      const dW = (Math.random() + Math.random() + Math.random() + Math.random() - 2) * 1;
+      x += mu + sigma * dW;
+      xs.push(x);
+    }
+    return xs;
+  }
+
+  const steps = 90;
+  const series1 = simulateSde(0.035, 0.09, steps, 0);
+  const series2 = simulateSde(0.02, 0.07, steps, 0);
+  const series3 = simulateSde(0.045, 0.11, steps, 0);
+
+  // Tendance déterministe (μ·t)
+  const trend = Array.from({length: steps + 1}, (_, i) => 0.035 * i);
+
+  const allVals = [...series1, ...series2, ...series3, ...trend];
+  const minV = Math.min(...allVals);
+  const maxV = Math.max(...allVals);
+  const pad = { top: 18, right: 20, bottom: 28, left: 30 };
+  const gW = W - pad.left - pad.right;
+  const gH = H - pad.top - pad.bottom;
+
+  function toX(i) { return pad.left + (i / steps) * gW; }
+  function toY(v) { return pad.top + (1 - (v - minV) / (maxV - minV)) * gH; }
+
+  ctx.clearRect(0, 0, W, H);
+  ctx.fillStyle = 'rgba(0,0,0,0.0)';
+  ctx.fillRect(0, 0, W, H);
+
+  // Grille légère
+  ctx.strokeStyle = 'rgba(255,255,255,0.06)';
+  ctx.lineWidth = 1;
+  for (let i = 0; i <= 4; i++) {
+    const y = pad.top + (i / 4) * gH;
+    ctx.beginPath(); ctx.moveTo(pad.left, y); ctx.lineTo(W - pad.right, y); ctx.stroke();
+  }
+  for (let i = 0; i <= 9; i++) {
+    const x = pad.left + (i / 9) * gW;
+    ctx.beginPath(); ctx.moveTo(x, pad.top); ctx.lineTo(x, H - pad.bottom); ctx.stroke();
+  }
+
+  // Axes
+  ctx.strokeStyle = 'rgba(255,255,255,0.15)';
+  ctx.beginPath(); ctx.moveTo(pad.left, pad.top); ctx.lineTo(pad.left, H - pad.bottom); ctx.lineTo(W - pad.right, H - pad.bottom); ctx.stroke();
+
+  // Trajectoires SDE (bruit)
+  function drawLine(series, color, alpha, width) {
+    ctx.strokeStyle = color;
+    ctx.globalAlpha = alpha;
+    ctx.lineWidth = width;
+    ctx.beginPath();
+    series.forEach((v, i) => { i === 0 ? ctx.moveTo(toX(i), toY(v)) : ctx.lineTo(toX(i), toY(v)); });
+    ctx.stroke();
+    ctx.globalAlpha = 1;
+  }
+
+  drawLine(series1, '#7dd3fc', 0.35, 1.2);
+  drawLine(series2, '#34d399', 0.28, 1.2);
+  drawLine(series3, '#7dd3fc', 0.22, 1.0);
+
+  // Tendance μ·t (ligne principale)
+  drawLine(trend, '#38bdf8', 0.9, 2.2);
+
+  // Labels axes
+  ctx.globalAlpha = 1;
+  ctx.fillStyle = 'rgba(255,255,255,0.4)';
+  ctx.font = '9px Menlo, monospace';
+  ctx.fillText('J0', pad.left - 4, H - pad.bottom + 12);
+  ctx.fillText('J45', pad.left + gW / 2 - 8, H - pad.bottom + 12);
+  ctx.fillText('J90', W - pad.right - 14, H - pad.bottom + 12);
+
+  // Légende
+  ctx.fillStyle = '#38bdf8';
+  ctx.fillRect(pad.left + 4, pad.top + 4, 16, 2);
+  ctx.fillStyle = 'rgba(255,255,255,0.5)';
+  ctx.fillText('tendance μ·t', pad.left + 24, pad.top + 10);
+
+  ctx.fillStyle = 'rgba(125,211,252,0.5)';
+  ctx.fillRect(pad.left + 100, pad.top + 4, 16, 1);
+  ctx.fillStyle = 'rgba(255,255,255,0.35)';
+  ctx.fillText('+σ·dW (imprévu)', pad.left + 120, pad.top + 10);
+
+  // Points J0/J7/J45/J90 (jalons pilote)
+  [[0, 'J0'], [7, 'J7'], [45, 'J45'], [90, 'J90']].forEach(([day, label]) => {
+    const x = toX(day);
+    const y = toY(trend[day]);
+    ctx.fillStyle = '#38bdf8';
+    ctx.globalAlpha = 0.85;
+    ctx.beginPath();
+    ctx.arc(x, y, 3.5, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.globalAlpha = 1;
+  });
+})();
+</script>
+</body>
+</html>

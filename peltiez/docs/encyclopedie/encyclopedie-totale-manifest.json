@@ -1,0 +1,67 @@
+{
+  "title": "Encyclopédie Totale — Atlas hybride CirculAI & Egor69",
+  "edition": "v1.0-brouillon",
+  "author": "Dominic Pelletier",
+  "locale": "fr-CA",
+  "phi": 1.6180339887,
+  "domains": [
+    { "id": "territoire", "label": "Territoire & municipal", "tome": 1 },
+    { "id": "circulai", "label": "Économie circulaire mesurable", "tome": 1 },
+    { "id": "coeur", "label": "Intention & éthique (Codex I)", "tome": 2 },
+    { "id": "unite", "label": "Liens & gouvernance (Codex II)", "tome": 3 },
+    { "id": "flux", "label": "Paix & systèmes (Codex III)", "tome": 4 },
+    { "id": "symbolique", "label": "Symbolique nommé (Egor)", "tomes": [0, 2, 4] },
+    { "id": "planches", "label": "Planches visuelles Codex", "section": "atlas" }
+  ],
+  "tomes": [
+    {
+      "id": 0,
+      "title": "Fondations",
+      "subtitle": "Grammaire des deux mondes",
+      "dir": "volume-0",
+      "chapters": ["00-seuil.md", "01-origine.md", "02-deux-mondes.md", "03-circulai.md", "04-egor.md", "05-systeme-nerveux.md", "06-transmission.md", "annexes.md"]
+    },
+    {
+      "id": 1,
+      "title": "Territoire",
+      "subtitle": "Québec · pilote · OBNL",
+      "dir": "volume-1",
+      "chapters": ["00-seuil.md", "01-quebec-ville.md", "02-nature-quebec.md", "03-acteurs-terrain.md", "04-journal-pilote.md", "05-ecosysteme.md", "06-cloture.md", "annexes.md"]
+    },
+    {
+      "id": 2,
+      "title": "Formules du cœur",
+      "subtitle": "Codex — chapitre I",
+      "dir": "volume-2",
+      "chapters": ["00-seuil.md", "01-intention.md", "02-transparence.md", "03-lux.md", "04-chaos.md", "05-alliance.md", "06-cloture.md"]
+    },
+    {
+      "id": 3,
+      "title": "Unité et partage",
+      "subtitle": "Codex — chapitre II",
+      "dir": "volume-3",
+      "chapters": ["00-seuil.md", "01-nexus.md", "02-richesse-phi.md", "03-scale.md", "04-solve-coagula.md", "05-temps.md", "06-cloture.md"]
+    },
+    {
+      "id": 4,
+      "title": "Paix et flux",
+      "subtitle": "Codex — chapitre III",
+      "dir": "volume-4",
+      "chapters": ["00-seuil.md", "01-pic-colegam.md", "02-respiration.md", "03-diagramme-phi.md", "04-reseau-radial.md", "05-medailles.md", "06-cloture.md"]
+    }
+  ],
+  "sourceLayers": {
+    "municipal": ["Ville de Québec (contexte)", "Lettre pilote CirculAI", "Plan démo 10 min"],
+    "regional": ["RECYC-QUÉBEC (veille)", "Nature Québec (portail)", "OBNL Capitale-Nationale"],
+    "national": ["Statistique Canada (ordres de grandeur)", "Loi 25 (Québec)"],
+    "international": ["Ellen MacArthur Foundation (contexte circularité)", "Wikipédia (fiches factuelles citées)"],
+    "numerique": ["Dépôt Git la finale / peltiez", "Routes /circulai, /pilote, /world"],
+    "fictif_symbolique": ["Codex Magique Egor69", "Verse 3D", "Équations comme métaphores"]
+  },
+  "downloads": {
+    "master": "encyclopedie.pdf",
+    "tomesPrefix": "encyclopedie/tome-",
+    "brailleExtrait": "encyclopedie/braille/extrait-fr-utf8.txt",
+    "manifest": "encyclopedie/encyclopedie-totale-manifest.json"
+  }
+}

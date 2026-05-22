@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
 import { base44 } from '@/api/base44Client';
+import { isNotificationSupported, getNotificationPermission, safeNewNotification } from '@/lib/safeNotification';
 
 export default function useProximityNotifications(userLocation, enabled = true) {
   useEffect(() => {
-    if (!enabled || !userLocation || Notification.permission !== 'granted') return;
+    if (!enabled || !userLocation || !isNotificationSupported() || getNotificationPermission() !== 'granted') return;
 
     // S'abonner aux nouvelles annonces en temps réel
     const unsubscribe = base44.entities.Listing.subscribe((event) => {
@@ -49,11 +50,11 @@ export default function useProximityNotifications(userLocation, enabled = true) 
       };
 
       // Envoyer la notification
-      if ('Notification' in window && Notification.permission === 'granted') {
-        const notification = new Notification(title, options);
+      if (isNotificationSupported() && getNotificationPermission() === 'granted') {
+        const notification = safeNewNotification(title, options);
         
         // Au clic, naviguer vers l'annonce
-        notification.onclick = () => {
+        if (notification) notification.onclick = () => {
           window.open(`/annonce/${listing.id}`, '_blank');
           notification.close();
         };

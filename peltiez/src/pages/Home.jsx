@@ -2,8 +2,11 @@ import { useState, useEffect, lazy, Suspense } from "react";
 import SEOMeta from "@/components/SEOMeta";
 import { Link, useLocation } from "react-router-dom";
 import HomeHeroCards from "@/components/home/HomeHeroCards";
+import HomeQuickPath from "@/components/home/HomeQuickPath";
 import HomeGeminiBridgeStrip from "@/components/home/HomeGeminiBridgeStrip";
 import HomeEncyclopediasSection from "@/components/home/HomeEncyclopediasSection";
+import HomeOffresSavoirsSection from "@/components/home/HomeOffresSavoirsSection";
+import HomeBoutiqueTeaser from "@/components/home/HomeBoutiqueTeaser";
 import HomeSubjectBlocks from "@/components/home/HomeSubjectBlocks";
 import SymbolicDisclaimer from "@/components/ui/SymbolicDisclaimer";
 import useDisplayMode from "@/hooks/useDisplayMode";
@@ -33,6 +36,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import VictoryWall from "@/components/VictoryWall";
 import ValuesCosmos from "@/components/ValuesCosmos";
+import PlatformHome from "@/components/platform/PlatformHome";
+import { EXPERIENCE_FLAGS } from "@/lib/experienceFlags";
 
 const MathematicsMonument = lazy(() => import("@/components/MathematicsMonument.jsx"));
 const PlanetStage = lazy(() => import("@/components/PlanetStage"));
@@ -179,8 +184,24 @@ export default function Home() {
     },
   };
 
+  if (EXPERIENCE_FLAGS.platformCleanHome && !EXPERIENCE_FLAGS.homeLegacySections) {
+    return (
+      <>
+        <SEOMeta
+          title={CIRCULAI_SEO_TITLE}
+          description={CIRCULAI_SEO_DESCRIPTION}
+          keywords={SITE_SEO_KEYWORDS}
+          canonicalUrl={SITE_ORIGIN}
+          schemaData={seoSchema}
+          compact
+        />
+        <PlatformHome />
+      </>
+    );
+  }
+
   return (
-    <div className="space-y-20 pb-20">
+    <div className="space-y-16 sm:space-y-20">
       <SEOMeta
         title={CIRCULAI_SEO_TITLE}
         description={CIRCULAI_SEO_DESCRIPTION}
@@ -192,9 +213,14 @@ export default function Home() {
 
       <HomeHeroCards />
 
-      <HomeGeminiBridgeStrip />
+      <HomeQuickPath />
 
+      {!simpleMode && <HomeGeminiBridgeStrip />}
+
+      <HomeBoutiqueTeaser />
       <HomeEncyclopediasSection />
+
+      {!simpleMode && <HomeOffresSavoirsSection />}
 
       <HomeSubjectBlocks />
 
@@ -203,6 +229,8 @@ export default function Home() {
         <VictoryWall />
       </div>
 
+      {!simpleMode && (
+      <>
       {/* Planète au premier plan (3D + son opt-in) */}
       <div id="accueil-planete" className="max-w-6xl mx-auto scroll-mt-28 px-4 lg:scroll-mt-8 lg:px-8">
         <Suspense
@@ -245,7 +273,7 @@ export default function Home() {
                 textShadow: "0 0 30px rgba(251,191,36,0.15)",
               }}
             >
-              DE MOI, PAR MOI, POUR MOI. DOMINIC PELLETIER.
+              DE MOI, PAR MOI, POUR MOI.
             </p>
             <p className="text-sm sm:text-base text-white/70 max-w-3xl mx-auto leading-relaxed">
               Mon histoire n’est pas une plainte. C’est un carburant. Ici, chaque pixel refuse la médiocrité et choisit le soin, la vitesse, et la souveraineté.
@@ -297,7 +325,7 @@ export default function Home() {
           <div className="absolute bottom-0 right-10 h-40 w-40 opacity-10 pointer-events-none"
             style={{ background: "radial-gradient(circle, hsla(30,80%,60%,1), transparent 70%)", filter: "blur(40px)" }} />
 
-          <div className="relative z-10 px-8 py-16 sm:py-24">
+          <div className="relative z-10 px-4 sm:px-8 py-12 sm:py-24">
             {/* Live badge */}
             <div className="inline-flex items-center gap-2 mb-8 px-5 py-2 rounded-full text-xs font-bold"
               style={{ background: "rgba(16,185,129,0.15)", border: "2px solid rgba(16,185,129,0.4)", color: "rgba(16,185,129,1)" }}>
@@ -308,7 +336,7 @@ export default function Home() {
               {simpleMode ? "Réseau circulaire · en direct" : "✦ SANCTUAIRE CIRCULAIRE · PRÉSENCE GLOBALE · EN DIRECT"}
             </div>
 
-            <h1 className="font-display text-6xl sm:text-8xl font-black text-white leading-none mb-3 tracking-tight" itemProp="headline">
+            <h1 className="font-display text-4xl sm:text-6xl md:text-8xl font-black text-white leading-none mb-3 tracking-tight" itemProp="headline">
               <span className="text-rainbow">Egor69</span><br />
               <span style={{ background: "linear-gradient(135deg, #FFD700, #39FF14, #BF00FF)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
                 {simpleMode ? "Économie circulaire, ici." : "LA vérité du présent."}
@@ -335,24 +363,35 @@ export default function Home() {
               )}
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-8">
-              <Button asChild size="lg" className="rounded-xl font-bold shadow-2xl px-10 text-base border-0 text-white uppercase tracking-wide"
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 mb-8">
+              <Button asChild size="lg" className="w-full sm:w-auto rounded-xl font-bold shadow-2xl px-6 sm:px-10 text-base border-0 text-white uppercase tracking-wide min-h-[48px]"
                 style={{ background: "linear-gradient(135deg, hsl(158,60%,35%), hsl(260,70%,40%))" }}>
                 <Link to="/publier">👑 Entrer dans le sanctuaire <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
               <Button
                 asChild
                 size="lg"
-                className="rounded-xl border-2 border-amber-500/85 bg-black px-8 text-base font-bold uppercase tracking-[0.14em] text-amber-100 shadow-[0_0_32px_rgba(212,175,55,0.14)] transition-colors hover:border-amber-300 hover:bg-zinc-950 hover:text-amber-50"
+                className="w-full sm:w-auto min-h-[48px] rounded-xl border-2 border-amber-500/85 bg-black px-8 text-base font-bold uppercase tracking-[0.14em] text-amber-100 shadow-[0_0_32px_rgba(212,175,55,0.14)] transition-colors hover:border-amber-300 hover:bg-zinc-950 hover:text-amber-50"
               >
                 <a
                   href="/encyclopedie.pdf"
-                  download="encyclopedie.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 font-serif normal-case tracking-normal"
                 >
                   <Download className="h-4 w-4 shrink-0 text-amber-400" aria-hidden />
-                  <span className="font-semibold tracking-tight">Télécharger l’encyclopédie (PDF)</span>
+                  <span className="font-semibold tracking-tight">Aperçu gratuit (PDF)</span>
                 </a>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="w-full sm:w-auto min-h-[48px] rounded-xl border-emerald-500/50 text-emerald-100 hover:bg-emerald-500/10 text-base font-semibold normal-case tracking-normal"
+              >
+                <Link to="/boutique?product=encyclopedie-complete">
+                  Édition complète · 19&nbsp;$ CA
+                </Link>
               </Button>
               <Button asChild size="sm" variant="ghost" className="rounded-lg text-amber-200/80 hover:text-amber-100 text-xs">
                 <Link to="/docs/investisseur">Codex investisseur</Link>
@@ -360,15 +399,15 @@ export default function Home() {
               <Button asChild size="sm" variant="ghost" className="rounded-lg text-[#D4AF37]/80 hover:text-[#FFD700] text-xs">
                 <Link to="/docs/rituel">Codex rituel</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-xl text-white hover:bg-white/10 text-base"
+              <Button asChild size="lg" variant="outline" className="w-full sm:w-auto min-h-[48px] rounded-xl text-white hover:bg-white/10 text-base"
                 style={{ borderColor: "rgba(255,255,255,0.15)" }}>
                 <Link to="/marketplace">Explorer les annonces</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-xl text-cyan-400 hover:bg-cyan-500/10 text-base"
+              <Button asChild size="lg" variant="outline" className="w-full sm:w-auto min-h-[48px] rounded-xl text-cyan-400 hover:bg-cyan-500/10 text-base"
                 style={{ borderColor: "rgba(34,211,238,0.3)" }}>
                 <Link to="/vision"><Infinity className="mr-2 h-4 w-4" /> Vision Universelle</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-xl text-violet-300 hover:bg-violet-500/10 text-base"
+              <Button asChild size="lg" variant="outline" className="w-full sm:w-auto min-h-[48px] rounded-xl text-violet-300 hover:bg-violet-500/10 text-base"
                 style={{ borderColor: "rgba(167,139,250,0.35)" }}>
                 <Link to="/world"><Sparkles className="mr-2 h-4 w-4" /> Verse 3D · gameplay WebGL</Link>
               </Button>
@@ -420,6 +459,8 @@ export default function Home() {
         </div>
       </CosmicHero>
       </div>
+      </>
+      )}
 
       {/* ── PRESS ── */}
       <section id="accueil-presse" className="scroll-mt-28 lg:scroll-mt-8">

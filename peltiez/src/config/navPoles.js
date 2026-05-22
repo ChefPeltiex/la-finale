@@ -58,6 +58,17 @@ export const NAV_POLES = [
 export const NAV_POLE_BLOCKS = {
   echanger: [
     {
+      id: "boutique",
+      label: "Boutique numérique",
+      descriptionSimple: "PDF, Codex et kits — achats uniques.",
+      descriptionDeep: "Offres & savoirs · Stripe ou courriel.",
+      pilot: true,
+      routes: [
+        { to: "/boutique", label: "Boutique" },
+        { to: "/pricing", label: "Abonnements" },
+      ],
+    },
+    {
       id: "circulation",
       label: "Marketplace",
       descriptionSimple: "Dons, trocs, réparations et ventes.",
@@ -111,12 +122,9 @@ export const NAV_POLE_BLOCKS = {
       pilot: true,
       routes: [
         { to: { pathname: "/", hash: "#accueil-encyclopedies" }, label: "Encyclopédies" },
-        { to: "/encyclopedie-biblique", label: "Encyclopédie biblique" },
-        { to: "/docs/investisseur", label: "Codex investisseur" },
-        { to: "/docs/preuves", label: "Preuves en 2 min" },
-        { to: "/docs/promesses", label: "Charpente (8 lois)" },
-        { to: "/portail/nature-quebec", label: "Portail Nature (QC)" },
-        { to: "/docs/nature-quebec-portail", label: "Nature QC — table Codex" },
+        { to: "/encyclopedie-biblique", label: "Biblique" },
+        { to: "/docs/preuves", label: "Preuves" },
+        { to: "/portail/nature-quebec", label: "Nature QC" },
       ],
     },
     {
@@ -135,15 +143,27 @@ export const NAV_POLE_BLOCKS = {
   ],
   agir: [
     {
+      id: "circulai",
+      label: "CirculAI QC",
+      descriptionSimple: "Kit municipal · pilote 90 j.",
+      descriptionDeep: "Plans, preuves, partenaires terrain.",
+      pilot: true,
+      routes: [
+        { to: "/docs/circulai-kit-regional", label: "Kit régional" },
+        { to: "/docs/circulai/equations-systeme", label: "Équations" },
+        { to: "/pilote", label: "Pilote 90 j." },
+        { to: "/boutique", label: "Boutique" },
+      ],
+    },
+    {
       id: "radar",
       label: "Radar",
       descriptionSimple: "Signaux forts, sources vérifiables.",
       descriptionDeep: "Mur de la victoire · reporters.",
       pilot: true,
       routes: [
-        { to: { pathname: "/", hash: "#accueil-radar" }, label: "Mur Radar (accueil)" },
         { to: "/reporters", label: "Reporters" },
-        { to: "/paparazzi", label: "Paparazzi" },
+        { to: "/fact-check", label: "Fact-check" },
       ],
     },
     {
@@ -154,30 +174,19 @@ export const NAV_POLE_BLOCKS = {
       pilot: true,
       routes: [
         { to: "/sentinelle", label: "Sentinelle" },
-        { to: "/authenticity", label: "Authenticity" },
-        { to: "/transparency-log", label: "Transparency" },
-        { to: "/security", label: "Sécurité" },
+        { to: "/docs/preuves", label: "Preuves" },
       ],
-    },
-    {
-      id: "fact-check",
-      label: "Fact-check",
-      descriptionSimple: "Vérifier avant de partager.",
-      descriptionDeep: "Vérité avec garde-fous.",
-      pilot: true,
-      routes: [{ to: "/fact-check", label: "Fact Check" }],
     },
     {
       id: "impact",
       label: "Impact & soin",
       descriptionSimple: "Bien-être et campagnes.",
-      descriptionDeep: "Wellness · impact · soutien.",
+      descriptionDeep: "Wellness · impact · campagnes.",
       pilot: false,
       routes: [
         { to: "/wellness", label: "Wellness" },
         { to: "/impact", label: "Impact global" },
         { to: "/campaigns", label: "Campagnes" },
-        { to: "/soutien", label: "Soutien" },
       ],
     },
   ],
@@ -197,11 +206,7 @@ export const NAV_POLE_BLOCKS = {
       descriptionSimple: "Arcade et défis rapides.",
       descriptionDeep: "Jeux circulaires · playtime.",
       pilot: true,
-      routes: [
-        { to: "/jeu", label: "Hub jeux" },
-        { to: "/game", label: "Arcade" },
-        { to: "/playtime", label: "Playtime" },
-      ],
+      routes: [{ to: "/jeu", label: "Hub jeux" }],
     },
     {
       id: "quetes",
@@ -235,11 +240,9 @@ export const NAV_POLE_BLOCKS = {
       descriptionDeep: "Investisseur · rituel · magique · preuves.",
       pilot: true,
       routes: [
-        { to: "/docs/investisseur", label: "Codex investisseur" },
-        { to: "/docs/rituel", label: "Codex rituel" },
-        { to: "/docs/magique", label: "Codex magique" },
+        { to: "/docs/investisseur", label: "Investisseur" },
         { to: "/docs/preuves", label: "Preuves" },
-        { to: "/docs/promesses", label: "Charpente (8 lois)" },
+        { to: "/docs/promesses", label: "8 lois" },
       ],
     },
     {
@@ -249,9 +252,7 @@ export const NAV_POLE_BLOCKS = {
       descriptionDeep: "Docs alliance · hubs souverains.",
       pilot: true,
       routes: [
-        { to: "/docs/alliance", label: "Alliance IA (doc)" },
-        { to: "/alliance", label: "Alliance mondiale" },
-        { to: "/hub-souverain", label: "Hub souverain" },
+        { to: "/docs/alliance", label: "Alliance IA" },
         { to: "/profil", label: "Mon profil" },
       ],
     },
@@ -280,14 +281,14 @@ export const HOME_POLE_CARDS = NAV_POLES.map((pole) => {
   }
   const tagline =
     pole.id === "jouer"
-      ? "Verse cinéma — dérive lente entre les anneaux, comme un voyage Planet Earth."
+      ? "Verse 3D · exploration cosmique."
       : pole.id === "echanger"
-        ? "Circule, publie, partage — l’économie vivante."
+        ? "Marketplace · publier · boutique."
         : pole.id === "explorer"
-          ? "Savoirs, atlas, encyclopédies qui respirent."
+          ? "Atlas · encyclopédies · Nature QC."
           : pole.id === "agir"
-            ? "Radar, vérité, impact mesurable."
-            : "Vision souveraine et Codex de confiance.";
+            ? "CirculAI · radar · preuves."
+            : "Vision · codex · alliance.";
 
   return {
     poleId: pole.id,
@@ -358,6 +359,10 @@ const PATH_POLE_RULES = [
   { prefix: "/manuel", pole: "explorer" },
   { prefix: "/carte-site", pole: "explorer" },
   { prefix: "/encyclopedie-biblique", pole: "explorer" },
+  { prefix: "/docs/circulai-kit-regional", pole: "agir" },
+  { prefix: "/docs/circulai", pole: "agir" },
+  { prefix: "/entreprises", pole: "agir" },
+  { prefix: "/pilote", pole: "agir" },
   { prefix: "/docs", pole: "explorer" },
   { prefix: "/pantheon", pole: "explorer" },
   { prefix: "/fauna-hub", pole: "explorer" },
@@ -375,6 +380,7 @@ const PATH_POLE_RULES = [
   { prefix: "/impact", pole: "agir" },
   { prefix: "/campaigns", pole: "agir" },
   { prefix: "/soutien", pole: "agir" },
+  { prefix: "/boutique", pole: "agir" },
   { prefix: "/pricing", pole: "agir" },
   { prefix: "/donations", pole: "agir" },
   { prefix: "/security", pole: "agir" },

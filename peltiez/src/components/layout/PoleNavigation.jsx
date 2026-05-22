@@ -54,7 +54,7 @@ const PoleNavLink = memo(function PoleNavLink({ item, isActive, onClick, feature
   );
 });
 
-export const PoleNavSidebar = memo(function PoleNavSidebar({ navItems, NavLinkComponent }) {
+export const PoleNavSidebar = memo(function PoleNavSidebar({ navItems, NavLinkComponent, onNavigate, proShell = false }) {
   const location = useLocation();
   const { pilotMode } = usePilotMode();
   const [simple, setSimple] = useState(() => loadDisplayMode() === "simple");
@@ -129,8 +129,12 @@ export const PoleNavSidebar = memo(function PoleNavSidebar({ navItems, NavLinkCo
         className={cn(
           "flex items-center gap-2.5 px-3 py-2.5 mb-2 rounded-xl text-sm font-semibold transition-all border",
           location.pathname === "/" && !location.hash
-            ? "text-[#FFD700] bg-[#FFD700]/10 border-[#D4AF37]/45"
-            : "text-white/75 hover:text-white border-transparent hover:bg-white/5"
+            ? proShell
+              ? "text-emerald-800 bg-emerald-50 border-emerald-200/80"
+              : "text-[#FFD700] bg-[#FFD700]/10 border-[#D4AF37]/45"
+            : proShell
+              ? "text-foreground/70 hover:text-foreground border-transparent hover:bg-zinc-100"
+              : "text-white/75 hover:text-white border-transparent hover:bg-white/5"
         )}
       >
         <HubIcon className="h-4 w-4 shrink-0 text-emerald-400" />
@@ -150,21 +154,25 @@ export const PoleNavSidebar = memo(function PoleNavSidebar({ navItems, NavLinkCo
               className={cn(
                 "w-full flex items-center gap-2 px-3 py-2.5 rounded-xl text-sm font-semibold transition-all",
                 poleActive
-                  ? "text-[#FFD700] bg-[#FFD700]/10 border border-[#D4AF37]/40"
-                  : "text-white/70 hover:text-white hover:bg-white/5 border border-transparent"
+                  ? proShell
+                    ? "text-emerald-800 bg-emerald-50 border border-emerald-200/80"
+                    : "text-[#FFD700] bg-[#FFD700]/10 border border-[#D4AF37]/40"
+                  : proShell
+                    ? "text-foreground/70 hover:text-foreground hover:bg-zinc-100 border border-transparent"
+                    : "text-white/70 hover:text-white hover:bg-white/5 border border-transparent"
               )}
             >
               <PoleIcon className={cn("h-4 w-4 shrink-0", pole.color)} />
               <span className="flex-1 text-left truncate">{poleLabel(pole, simple)}</span>
               {isPoleOpen ? (
-                <ChevronDown className="h-3.5 w-3.5 text-white/40" />
+                <ChevronDown className={cn("h-3.5 w-3.5", proShell ? "text-foreground/40" : "text-white/40")} />
               ) : (
-                <ChevronRight className="h-3.5 w-3.5 text-white/40" />
+                <ChevronRight className={cn("h-3.5 w-3.5", proShell ? "text-foreground/40" : "text-white/40")} />
               )}
             </button>
 
             {isPoleOpen && (
-              <div className="mt-1 ml-1 pl-2 border-l border-[#D4AF37]/15 space-y-1">
+              <div className={cn("mt-1 ml-1 pl-2 border-l space-y-1", proShell ? "border-emerald-200/60" : "border-[#D4AF37]/15")}>
                 {visibleBlocks.map((block) => {
                   const blockKey = `${pole.id}:${block.id}`;
                   const isBlockOpen = expandedBlocks.has(blockKey);
@@ -178,24 +186,28 @@ export const PoleNavSidebar = memo(function PoleNavSidebar({ navItems, NavLinkCo
                         className={cn(
                           "w-full flex items-start gap-2 px-2.5 py-2 rounded-lg text-left transition-all",
                           blockActive
-                            ? "bg-[#FFD700]/8 border border-[#D4AF37]/35"
-                            : "hover:bg-white/[0.04] border border-transparent"
+                            ? proShell
+                              ? "bg-emerald-50 border border-emerald-200/60"
+                              : "bg-[#FFD700]/8 border border-[#D4AF37]/35"
+                            : proShell
+                              ? "hover:bg-zinc-100 border border-transparent"
+                              : "hover:bg-white/[0.04] border border-transparent"
                         )}
                       >
                         <span className="flex-1 min-w-0">
-                          <span className="block text-[11px] font-bold text-[#FFD700]/95 tracking-wide">
+                          <span className={cn("block text-[11px] font-bold tracking-wide", proShell ? "text-emerald-800" : "text-[#FFD700]/95")}>
                             {block.label}
                           </span>
                           {isBlockOpen && (
-                            <span className="block text-[10px] text-white/40 mt-0.5 leading-snug">
+                            <span className={cn("block text-[10px] mt-0.5 leading-snug", proShell ? "text-muted-foreground" : "text-white/40")}>
                               {blockDescription(block, simple)}
                             </span>
                           )}
                         </span>
                         {isBlockOpen ? (
-                          <ChevronDown className="h-3 w-3 text-[#D4AF37]/60 shrink-0 mt-0.5" />
+                          <ChevronDown className={cn("h-3 w-3 shrink-0 mt-0.5", proShell ? "text-emerald-600/60" : "text-[#D4AF37]/60")} />
                         ) : (
-                          <ChevronRight className="h-3 w-3 text-white/30 shrink-0 mt-0.5" />
+                          <ChevronRight className={cn("h-3 w-3 shrink-0 mt-0.5", proShell ? "text-foreground/30" : "text-white/30")} />
                         )}
                       </button>
 
@@ -221,6 +233,7 @@ export const PoleNavSidebar = memo(function PoleNavSidebar({ navItems, NavLinkCo
                                 key={routeKey(route.to)}
                                 item={syntheticItem}
                                 isActive={isActive}
+                                onClick={onNavigate}
                               />
                             ) : (
                               <PoleNavLink
@@ -228,6 +241,7 @@ export const PoleNavSidebar = memo(function PoleNavSidebar({ navItems, NavLinkCo
                                 item={syntheticItem}
                                 isActive={isActive}
                                 featured={featured}
+                                onClick={onNavigate}
                               />
                             );
                           })}
@@ -241,7 +255,12 @@ export const PoleNavSidebar = memo(function PoleNavSidebar({ navItems, NavLinkCo
                   <button
                     type="button"
                     onClick={() => toggleAdvanced(pole.id)}
-                    className="mt-1 flex w-full items-center gap-2 px-3 py-2 rounded-lg text-[11px] font-medium text-[#FFD700]/80 hover:text-[#FFD700] hover:bg-[#FFD700]/10 transition-colors"
+                    className={cn(
+                      "mt-1 flex w-full items-center gap-2 px-3 py-2 rounded-lg text-[11px] font-medium transition-colors",
+                      proShell
+                        ? "text-emerald-700 hover:text-emerald-800 hover:bg-emerald-50"
+                        : "text-[#FFD700]/80 hover:text-[#FFD700] hover:bg-[#FFD700]/10"
+                    )}
                   >
                     <Layers className="h-3.5 w-3.5 shrink-0" />
                     Tout voir (avancé) · {hiddenCount} blocs
@@ -251,7 +270,10 @@ export const PoleNavSidebar = memo(function PoleNavSidebar({ navItems, NavLinkCo
                   <button
                     type="button"
                     onClick={() => toggleAdvanced(pole.id)}
-                    className="mt-0.5 flex w-full items-center gap-2 px-3 py-1.5 rounded-lg text-[10px] text-white/40 hover:text-white/60"
+                    className={cn(
+                      "mt-0.5 flex w-full items-center gap-2 px-3 py-1.5 rounded-lg text-[10px] transition-colors",
+                      proShell ? "text-muted-foreground hover:text-foreground" : "text-white/40 hover:text-white/60"
+                    )}
                   >
                     Replier le menu avancé
                   </button>
@@ -284,7 +306,7 @@ export const PoleMobileBottomNav = memo(function PoleMobileBottomNav({ location,
 
   return (
     <nav
-      className="lg:hidden fixed bottom-0 left-0 right-0 flex justify-around py-2 z-50 pole-mobile-nav"
+      className="lg:hidden fixed bottom-0 left-0 right-0 flex justify-around items-stretch py-2 z-50 pole-mobile-nav min-h-[56px]"
       style={{
         background: "rgba(8,8,12,0.96)",
         backdropFilter: "blur(20px)",
@@ -295,7 +317,7 @@ export const PoleMobileBottomNav = memo(function PoleMobileBottomNav({ location,
         to="/"
         onClick={onNavigate}
         className={cn(
-          "flex flex-col items-center gap-0.5 py-1 px-1 rounded-xl transition-all min-w-0",
+          "flex flex-col items-center justify-center gap-0.5 py-2 px-1.5 rounded-xl transition-all min-w-0 min-h-[44px]",
           location.pathname === "/" && !location.hash ? "text-[#FFD700]" : "text-white/35"
         )}
       >
@@ -311,7 +333,7 @@ export const PoleMobileBottomNav = memo(function PoleMobileBottomNav({ location,
             to={pole.defaultPath}
             onClick={onNavigate}
             className={cn(
-              "flex flex-col items-center gap-0.5 py-1 px-1 rounded-xl transition-all min-w-0 max-w-[4rem]",
+              "flex flex-col items-center justify-center gap-0.5 py-2 px-1.5 rounded-xl transition-all min-w-0 max-w-[4.25rem] min-h-[44px]",
               isActive ? "text-[#FFD700]" : "text-white/35"
             )}
           >

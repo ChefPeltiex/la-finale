@@ -1,0 +1,67 @@
+# Stack souveraine CirculAI / Egor69
+# Cursor (dev) · GitHub (audit) · Docker (isolation) · Ollama · Open WebUI · Qdrant
+# Usage : voir README.md — `docker compose up -d`
+
+name: circulai-souverain
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: circulai-ollama
+    restart: unless-stopped
+    volumes:
+      - ollama_data:/root/.ollama
+    ports:
+      - "${OLLAMA_HOST_PORT:-11434}:11434"
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:${OPEN_WEBUI_TAG:-main}
+    container_name: circulai-open-webui
+    restart: unless-stopped
+    depends_on:
+      ollama:
+        condition: service_healthy
+      qdrant:
+        condition: service_started
+    ports:
+      - "${OPEN_WEBUI_HOST_PORT:-3000}:8080"
+    environment:
+      OLLAMA_BASE_URL: http://ollama:11434
+      WEBUI_SECRET_KEY: ${WEBUI_SECRET_KEY:?Définir WEBUI_SECRET_KEY dans .env}
+      WEBUI_NAME: ${WEBUI_NAME:-CirculAI · centre de contrôle}
+      WEBUI_URL: ${WEBUI_URL:-http://localhost:3000}
+      DEFAULT_USER_ROLE: ${DEFAULT_USER_ROLE:-user}
+      ENABLE_SIGNUP: ${ENABLE_SIGNUP:-true}
+      ENABLE_LOGIN_FORM: ${ENABLE_LOGIN_FORM:-true}
+      # Premier compte = admin ; RAG : importer docs via Workspace → Knowledge
+    volumes:
+      - open_webui_data:/app/backend/data
+      # Docs CirculAI en lecture seule — import « Knowledge » depuis l’UI ou scripts
+      - ../../docs/circulai:/docs/circulai:ro
+      - ../../public/docs/circulai:/docs/circulai-public:ro
+      - ../../docs/alliance-ia-egor69.md:/docs/alliance-ia-egor69.md:ro
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: circulai-qdrant
+    restart: unless-stopped
+    ports:
+      - "${QDRANT_HOST_PORT:-6333}:6333"
+      - "${QDRANT_GRPC_PORT:-6334}:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    environment:
+      QDRANT__SERVICE__GRPC_PORT: 6334
+
+volumes:
+  ollama_data:
+  open_webui_data:
+  qdrant_data:

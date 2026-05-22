@@ -9,7 +9,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border bg-card/50 backdrop-blur-sm mt-20">
+    <footer className="border-t border-border bg-card/50 backdrop-blur-sm mt-20 app-footer-with-mobile-nav lg:ml-64">
       <div className="border-b border-emerald-500/20 bg-gradient-to-r from-emerald-950/40 via-zinc-950/50 to-violet-950/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <p className="text-sm font-semibold text-white/90">
@@ -17,10 +17,16 @@ export default function Footer() {
           </p>
           <div className="flex flex-wrap gap-2">
             <Link
-              to="/pricing"
+              to="/boutique"
               className="inline-flex items-center justify-center rounded-full bg-emerald-500 px-4 py-2 text-xs font-bold text-zinc-950 shadow hover:bg-emerald-400"
             >
-              Voir les abonnements
+              Boutique numérique
+            </Link>
+            <Link
+              to="/pricing"
+              className="inline-flex items-center justify-center rounded-full border border-emerald-500/50 px-4 py-2 text-xs font-semibold text-emerald-200 hover:bg-emerald-950/50"
+            >
+              Abonnements
             </Link>
             <Link
               to="/soutien"
@@ -59,14 +65,17 @@ export default function Footer() {
             <p className="text-xs font-bold text-foreground uppercase tracking-wider">Navigation</p>
             <ul className="space-y-1 text-xs">
               <li><Link to="/" className="text-muted-foreground hover:text-foreground transition">Accueil</Link></li>
+              <li><Link to="/boutique" className="text-muted-foreground hover:text-foreground transition">Boutique numérique</Link></li>
               <li><Link to="/world" className="text-muted-foreground hover:text-foreground transition">Verse 3D · open world</Link></li>
               <li><Link to="/arene-virtuelle" className="text-muted-foreground hover:text-foreground transition">Arène virtuelle · coop</Link></li>
-              <li><Link to="/hub-fondations" className="text-muted-foreground hover:text-foreground transition">Fondations · entreprises & éducation</Link></li>
+              <li><Link to="/entreprises" className="text-muted-foreground hover:text-foreground transition">Entreprises · pilote & idée</Link></li>
+              <li><Link to="/hub-fondations" className="text-muted-foreground hover:text-foreground transition">Fondations · éducation</Link></li>
               <li><Link to="/hub-souverain" className="text-muted-foreground hover:text-foreground transition">Hub souverain · noyau & éco-UI</Link></li>
               <li><Link to="/avatar-creator" className="text-muted-foreground hover:text-foreground transition">Studio Avatar · forge locale & cloud</Link></li>
               <li><Link to="/mon-univers" className="text-muted-foreground hover:text-foreground transition">Mon univers · personnalisation</Link></li>
               <li><Link to="/atlas" className="text-muted-foreground hover:text-foreground transition">Atlas vivant</Link></li>
               <li><Link to="/encyclopedie-biblique" className="text-muted-foreground hover:text-foreground transition">Encyclopédie biblique</Link></li>
+              <li><Link to="/boutique" className="text-muted-foreground hover:text-emerald-400 transition font-medium">Boutique numérique</Link></li>
               <li><Link to="/marketplace" className="text-muted-foreground hover:text-foreground transition">Marketplace</Link></li>
               <li><Link to="/manuel" className="text-muted-foreground hover:text-foreground transition">Manuel</Link></li>
               <li><Link to="/docs/preuves" className="text-muted-foreground hover:text-foreground transition">Preuves en 2 minutes</Link></li>

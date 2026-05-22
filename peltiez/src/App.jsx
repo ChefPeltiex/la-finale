@@ -26,6 +26,7 @@ import UniversePreferencesSync from "@/components/UniversePreferencesSync";
 import CheatCodeGateway from "@/components/CheatCodeGateway";
 import ConciergeOrb from "@/components/ConciergeOrb";
 import PersonalRealmGuard from "@/components/PersonalRealmGuard";
+import NavRouteFallback from "@/components/NavRouteFallback";
 
 import React, { Suspense, lazy } from "react";
 
@@ -139,6 +140,7 @@ const Atlas = lazy(() => import("./pages/Atlas"));
 const CardPage = lazy(() => import("./pages/CardPage"));
 const Sentinelle = lazy(() => import("./pages/Sentinelle"));
 const Pricing = lazy(() => import("./pages/Pricing.jsx"));
+const Boutique = lazy(() => import("./pages/Boutique.jsx"));
 const Soutien = lazy(() => import("./pages/Soutien.jsx"));
 const PantheonRenders = lazy(() => import("./pages/PantheonRenders.jsx"));
 const PantheonRenderDetail = lazy(() => import("./pages/PantheonRenderDetail.jsx"));
@@ -165,6 +167,30 @@ const NatureQuebecHub = lazy(() => import("./pages/NatureQuebecHub.jsx"));
 const CodexAlliance = lazy(() => import("./pages/CodexAlliance.jsx"));
 const NatureQuebecKitDoc = lazy(() => import("./pages/NatureQuebecKitDoc.jsx"));
 const CodexNatureQuebec = lazy(() => import("./pages/CodexNatureQuebec.jsx"));
+const CirculaiHub = lazy(() => import("./pages/CirculaiHub.jsx"));
+const WorldGateway = lazy(() => import("./pages/WorldGateway.jsx"));
+const EncyclopedieHub = lazy(() => import("./pages/EncyclopedieHub.jsx"));
+const EncyclopedieLivre = lazy(() => import("./pages/EncyclopedieLivre.jsx"));
+const EncyclopedieArticle = lazy(() => import("./pages/EncyclopedieArticle.jsx"));
+const EncyclopediePeanoAtlas = lazy(() => import("./pages/EncyclopediePeanoAtlas.jsx"));
+const EncyclopedieMaillageFiche = lazy(() => import("./pages/EncyclopedieMaillageFiche.jsx"));
+const CirculaiEquationPilote = lazy(() => import("./pages/CirculaiEquationPilote.jsx"));
+const SecondeMainLanding = lazy(() => import("./pages/SecondeMainLanding.jsx"));
+const CodexMetaphoresHub = lazy(() => import("./pages/CodexMetaphoresHub.jsx"));
+const CirculaiPromptsIa = lazy(() => import("./pages/CirculaiPromptsIa.jsx"));
+const CirculaiEquationPiloteMunicipal = lazy(() => import("./pages/CirculaiEquationPiloteMunicipal.jsx"));
+const CirculaiKitRegional = lazy(() => import("./pages/CirculaiKitRegional.jsx"));
+const CirculaiLettreMunicipale = lazy(() => import("./pages/CirculaiLettreMunicipale.jsx"));
+const CirculaiPlanAffaires = lazy(() => import("./pages/CirculaiPlanAffaires.jsx"));
+const CirculaiPlanActionQuebec = lazy(() => import("./pages/CirculaiPlanActionQuebec.jsx"));
+const CirculaiPlanDemonstration = lazy(() => import("./pages/CirculaiPlanDemonstration.jsx"));
+const CirculaiValeurEcoEnv = lazy(() => import("./pages/CirculaiValeurEcoEnv.jsx"));
+const CirculaiMainOeuvre = lazy(() => import("./pages/CirculaiMainOeuvre.jsx"));
+const CirculaiPartenaires = lazy(() => import("./pages/CirculaiPartenaires.jsx"));
+const CirculaiReferencesCulturelles = lazy(() => import("./pages/CirculaiReferencesCulturelles.jsx"));
+const CirculaiArtifactsCopilot = lazy(() => import("./pages/CirculaiArtifactsCopilot.jsx"));
+const CirculaiEquationsSysteme = lazy(() => import("./pages/CirculaiEquationsSysteme.jsx"));
+const CirculaiInspirationScience = lazy(() => import("./pages/CirculaiInspirationScience.jsx"));
 const IntegrationsOutilsHub = lazy(() => import("./pages/IntegrationsOutilsHub.jsx"));
 const CarteSiteEtLiens = lazy(() => import("./pages/CarteSiteEtLiens.jsx"));
 const RepairHub = lazy(() => import("./pages/RepairHub.jsx"));
@@ -317,11 +343,13 @@ const AuthenticatedApp = () => {
       <Route path="/card/:kind/:id" element={<CardPage />} />
       <Route path="/world" element={<WorldHub />} />
       <Route path="/pricing" element={<Pricing />} />
+      <Route path="/boutique" element={<Boutique />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/commits" element={<GitCommits />} />
       <Route path="/artisan-workshop" element={<ArtisanWorkshop />} />
-      <Route path="/corporate-partners" element={<CorporatePartners />} />
+      <Route path="/entreprises" element={<CorporatePartners />} />
+      <Route path="/corporate-partners" element={<Navigate to="/entreprises" replace />} />
       <Route path="/arts-divinatoires" element={<DivinatoryArts />} />
       <Route path="/arts-divinatoires-lexique" element={<DivinatoryLexiqueHub />} />
       <Route path="/global-dashboard" element={<GlobalDashboard />} />
@@ -333,6 +361,13 @@ const AuthenticatedApp = () => {
       <Route path="/piliers-classique" element={<PiliersLegacy />} />
       <Route path="/reputation" element={<ReputationSystem />} />
         <Route path="/atlas" element={<Atlas />} />
+        <Route path="/entrer" element={<WorldGateway />} />
+        <Route path="/porte" element={<Navigate to="/entrer" replace />} />
+        <Route path="/encyclopedie" element={<EncyclopedieLivre />} />
+        <Route path="/encyclopedie/lire/:id" element={<EncyclopedieArticle />} />
+        <Route path="/encyclopedie/atlas-peano" element={<EncyclopediePeanoAtlas />} />
+        <Route path="/encyclopedie/maillage/:ficheId" element={<EncyclopedieMaillageFiche />} />
+        <Route path="/encyclopedie/telecharger" element={<EncyclopedieHub />} />
         <Route path="/" element={<Home />} />
         <Route path="/marketplace" element={<Marketplace />} />
         <Route path="/publier" element={<PostItem />} />
@@ -350,6 +385,29 @@ const AuthenticatedApp = () => {
         <Route path="/docs/alliance" element={<CodexAlliance />} />
         <Route path="/docs/nature-quebec-kit" element={<NatureQuebecKitDoc />} />
         <Route path="/docs/nature-quebec-portail" element={<CodexNatureQuebec />} />
+        <Route path="/circulai" element={<CirculaiHub />} />
+        <Route path="/circulai/hub" element={<CirculaiHub />} />
+        <Route path="/circulai/equation-pilote" element={<CirculaiEquationPilote />} />
+        <Route path="/circulai/seconde-main" element={<SecondeMainLanding />} />
+        <Route path="/seconde-main" element={<SecondeMainLanding />} />
+        <Route path="/circulai/codex-metaphores" element={<CodexMetaphoresHub />} />
+        <Route path="/codex-metaphores" element={<CodexMetaphoresHub />} />
+        <Route path="/circulai/prompts-ia" element={<CirculaiPromptsIa />} />
+        <Route path="/decideur" element={<Navigate to="/circulai" replace />} />
+        <Route path="/partenaire" element={<Navigate to="/circulai" replace />} />
+        <Route path="/docs/circulai-kit-regional" element={<CirculaiKitRegional />} />
+        <Route path="/docs/circulai/lettre-municipale" element={<CirculaiLettreMunicipale />} />
+        <Route path="/docs/circulai/plan-affaires" element={<CirculaiPlanAffaires />} />
+        <Route path="/docs/circulai/plan-demonstration" element={<CirculaiPlanDemonstration />} />
+        <Route path="/docs/circulai/plan-action-quebec" element={<CirculaiPlanActionQuebec />} />
+        <Route path="/docs/circulai/valeur-economie-environnement" element={<CirculaiValeurEcoEnv />} />
+        <Route path="/docs/circulai/main-oeuvre" element={<CirculaiMainOeuvre />} />
+        <Route path="/docs/circulai/partenaires" element={<CirculaiPartenaires />} />
+        <Route path="/docs/circulai/references-culturelles" element={<CirculaiReferencesCulturelles />} />
+        <Route path="/docs/circulai/artifacts-copilot" element={<CirculaiArtifactsCopilot />} />
+        <Route path="/docs/circulai/equations-systeme" element={<CirculaiEquationsSysteme />} />
+        <Route path="/docs/circulai/equation-pilote-municipal" element={<CirculaiEquationPiloteMunicipal />} />
+        <Route path="/docs/circulai/inspiration-science-2026" element={<CirculaiInspirationScience />} />
         <Route path="/outils-integration" element={<IntegrationsOutilsHub />} />
         <Route path="/carte-site" element={<CarteSiteEtLiens />} />
         <Route path="/hub-fondations" element={<EnterpriseLearningHub />} />
@@ -386,10 +444,10 @@ function App() {
                 <OfflineIndicator />
                 {EXPERIENCE_FLAGS.sovereigntyBanner ? <SovereigntyBanner /> : null}
                 {EXPERIENCE_FLAGS.launchIntro ? <LaunchIntro /> : null}
+                {EXPERIENCE_FLAGS.conciergeOrb ? <ConciergeOrb /> : null}
                 <TorusTransactionSigil />
                 <UniversePreferencesSync />
                 <CheatCodeGateway />
-                <ConciergeOrb />
                 <WarpZoneProvider>
                   <PersonalRealmGuard />
                   <AuthenticatedApp />

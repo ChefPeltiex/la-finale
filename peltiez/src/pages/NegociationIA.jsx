@@ -5,6 +5,7 @@ import { Zap, Brain, ArrowRight, ArrowLeftRight, Loader2, CheckCircle, TrendingU
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
+import AiEnergyFootprintNotice from "@/components/ui/AiEnergyFootprintNotice";
 
 const EXEMPLES = [
   { emoji: "💻", objet: "MacBook Pro 2019", valeur: "800$", besoin: "Vélo de route ou équipement photo" },
@@ -198,6 +199,7 @@ Génère une analyse complète en JSON avec :
         >
           {loading ? <><Loader2 className="h-4 w-4 animate-spin" /> Circulia analyse...</> : <><Brain className="h-4 w-4" /> Lancer l'analyse IA</>}
         </Button>
+        <AiEnergyFootprintNotice className="mt-2" />
 
         {/* Exemples */}
         <div>

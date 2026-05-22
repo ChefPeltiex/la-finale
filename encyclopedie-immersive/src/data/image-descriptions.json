@@ -1,0 +1,192 @@
+{
+  "codex-encyclopedie-1A-couverture": {
+    "title": "Couverture du Codex",
+    "description": "Un grimoire relié en cuir noir s'ouvre pour révéler ses deux plats : la face porte un médaillon central gravé de cercles concentriques et de glyphes alchimiques en or — cercles, triangles, flèches entrelacés sur une plaque rectangulaire. Deux bossages dorés ornent le sommet et la base de la couverture comme des fermoirs sacrés. Le dos présente une rose des vents géométrique, symbole de navigation intérieure. La tranche, ponctuée d'un losange et de boussoles dorées, relie les deux mondes du codex.",
+    "category": "couverture"
+  },
+  "codex-encyclopedie-1B-cadre-or": {
+    "title": "Cadre d'Or",
+    "description": "Un cadre rectangulaire entièrement doré sur fond de nuit absolue marie l'ornement baroque et la précision des circuits imprimés. Aux quatre coins, des feuilles d'acanthe s'enroulent en volutes rococo tandis que les bordures tracent des lignes tectoniques et des connecteurs dorés. En leur centre de chaque côté, un médaillon en forme d'engrenage ou de compas marque les points cardinaux. Ce cadre vide est une invitation : l'œuvre à venir s'y inscrira.",
+    "category": "ornement"
+  },
+  "codex-encyclopedie-1C-fractal-circulaire": {
+    "title": "Fractal Circulaire",
+    "description": "Un mandala d'or parfaitement symétrique rayonne sur le fond noir comme une étoile fixe. En son cœur, un orbe lumineux doré pulse vers l'extérieur à travers des anneaux concentriques mêlant tracés de circuits, points rythmiques et arcs segmentés. Une rose des vents à quatre branches souligne les axes cardinaux, chaque branche se terminant en nœud circulaire. L'esthétique hybride — géométrie sacrée et cyberpunk — évoque un diagramme cosmique autant qu'une carte de navigation intérieure.",
+    "category": "ornement"
+  },
+  "codex-encyclopedie-1D-texture-noir-dorures": {
+    "title": "Texture Nuit et Dorures",
+    "description": "Une surface sombre — cuir vieilli, pierre ancienne ou bois charbon — est sillonnée de veines d'or et d'ambre qui courent verticalement et en diagonale comme des fractures de lumière dans la matière. Des paillettes dorées constellent l'ensemble, pareilles à une poussière d'étoiles déposée sur un minerai précieux. Cette texture est le fond même du Codex : la nuit habitée, la noirceur fertile où l'or affleure.",
+    "category": "ornement"
+  },
+  "codex-encyclopedie-2A-titre": {
+    "title": "Sceau du Titre",
+    "description": "Un monogramme calligraphique de grande taille, d'or pur sur fond noir, forme un sigle ambigramme entouré d'un halo d'arcs géométriques — boussole ou réticule de précision. Une lame verticale traverse le centre du bas vers le haut, se terminant en ornements décoratifs. Des volutes baroques s'épanouissent à la base, et des secteurs d'engrenages en quarts de cercle encadrent les coins. Ce sceau est la signature même de l'encyclopédie.",
+    "category": "couverture"
+  },
+  "codex-encyclopedie-2B-sous-titre": {
+    "title": "Séparateur Sous-Titre",
+    "description": "Un bandeau séparateur doré et symétrique traverse l'espace sur fond noir, ses deux extrémités s'achevant en ornements élaborés : motifs floraux, diamants, cercles et filigranes Art Déco en ambre. En leur centre, un petit médaillon circulaire accentue chaque ligne horizontale. La sobriété du tracé contraste avec la richesse des extrémités — l'économie du geste qui délimite les chapitres du Codex.",
+    "category": "ornement"
+  },
+  "codex-encyclopedie-2C-ligne-editoriale": {
+    "title": "Ligne Éditoriale",
+    "description": "Un séparateur d'une finesse extrême parcourt l'image en son centre : une ligne d'or tendue sur toute la largeur, ornée en son milieu d'un petit médaillon circulaire en rose des vents et de branches de circuits imprimés s'étendant symétriquement. L'esthétique fusionne le futuriste et l'Art Déco en une même respiration délicate. Cette ligne est la ponctuation invisible entre les mots du Codex.",
+    "category": "ornement"
+  },
+  "codex-encyclopedie-3A-sommaire-ornement": {
+    "title": "Sommaire — Portail des Sept",
+    "description": "Un gabarit vertical richement encadré d'or Art Déco présente sept cercles équidistants reliés chacun à une flèche pointant vers la droite — les sept tomes du Codex attendant leur contenu. Une rose des vents orne le sommet, son pendant décoratif ferme le bas. Le fond noir et la bordure à volutes courbées évoquent une fiche de personnage ou un menu de navigation mystique. Ici se trouve la carte du territoire de l'encyclopédie.",
+    "category": "ornement"
+  },
+  "codex-encyclopedie-3B-index-visuel": {
+    "title": "Index Visuel — Arbre des Savoirs",
+    "description": "Un arbre hiérarchique doré se déploie sur fond noir comme un organigramme vivant ou un arbre généalogique du savoir. Un nœud racine unique à la base se ramifie vers le haut en plusieurs niveaux de branches courbes, chacune se terminant en cercles qui engendrent de nouveaux sous-nœuds — feuilles ou points terminaux. La structure est rigoureusement symétrique, miroir gauche-droite parfait. En arrière-plan, de fines lignes concentriques tracent l'espace cosmique de la connaissance.",
+    "category": "ornement"
+  },
+  "codex-encyclopedie-3C-ornements": {
+    "title": "Ornements — Coins et Médaillon",
+    "description": "Trois coins baroques dorés ornent les angles d'une composition — haut-gauche, haut-droite, bas-gauche — avec leurs volutes d'acanthe et lignes géométriques. Au centre, un médaillon en losange présente une étoile à quatre branches, un cercle intérieur et des détails floraux, évoquant une rose des vents ou un emblème héraldique. Le coin bas-droit est absent, comme une porte laissée ouverte. Ces ornements sont les gardiens des seuils du texte.",
+    "category": "ornement"
+  },
+  "codex-encyclopedie-4A-chapitre1-opening.png": {
+    "title": "Ouverture Chapitre I — L'Arc Radiant",
+    "description": "Un grand arc circulaire doré surgit du coin inférieur gauche, irradiant une lumière intense et des rayons dramatiques qui traversent diagonalement l'image. L'intérieur de l'arc contient de fines lignes concentriques et un réticule en croix avec des nœuds de mesure. L'effet de lumière évoque un instrument céleste — orrery, astrolabe ou diagramme solaire. Cette planche est l'aurore du premier chapitre, la naissance de la lumière dans le Codex.",
+    "category": "chapitre"
+  },
+  "codex-encyclopedie-4A-chapitre1-opening": {
+    "title": "Ouverture Chapitre I — L'Arc Radiant",
+    "description": "Un grand arc circulaire doré surgit du coin inférieur gauche, irradiant une lumière intense et des rayons dramatiques qui traversent diagonalement l'image. L'intérieur de l'arc contient de fines lignes concentriques et un réticule en croix avec des nœuds de mesure. L'effet de lumière évoque un instrument céleste — orrery, astrolabe ou diagramme solaire. Cette planche est l'aurore du premier chapitre, la naissance de la lumière dans le Codex.",
+    "category": "chapitre"
+  },
+  "codex-encyclopedie-4B-chapitre1-divider": {
+    "title": "Séparateur Chapitre I — L'Épée-Bannière",
+    "description": "Une épée ou rapière d'or élaboré sert de barre horizontale entre deux zones parchemin. La lame, droite et longue, est flanquée de garde et pommeau finement ouvragés en entrelacs celtiques et filigrane. Au-dessus et en dessous, des séparateurs en étoiles à quatre branches ponctuent le silence. Dans les zones parchemin, de fines lignes de diagrammes en circuits sont à peine visibles, comme des notes de marge d'un alchimiste.",
+    "category": "chapitre"
+  },
+  "codex-encyclopedie-4C-chapitre1-icons": {
+    "title": "Cinq Icônes du Codex",
+    "description": "Cinq symboles d'or sur fond noir forment un alphabet visuel : un Œil stylisé à l'iris concentrique, une Cible aux anneaux épais, un Compteur en demi-arc avec aiguille, un Nœud de réseau à quatre branches, une Porte formée de deux piliers ouverts. Chaque icône incarne un principe — perception, précision, mesure, connexion, passage. Ensemble, ils sont les cinq clés de lecture du Codex Magique.",
+    "category": "chapitre"
+  },
+  "codex-encyclopedie-5A-chapitre2-opening": {
+    "title": "Ouverture Chapitre II — L'Infini Cosmique",
+    "description": "Un signe infini (lemniscate) d'or massif trône au centre d'une composition cosmique, le chiffre romain II inscrit en son cœur. Des lignes orbitales concentriques et des grilles géométriques l'entourent, tandis que des sphères dorées se positionnent sur les axes horizontal et vertical, évoquant des corps célestes. Des étoiles et étincelles parsèment l'espace, et un axe vertical mesure le temps. Cette planche est le cœur battant du second chapitre — l'éternité comme équation.",
+    "category": "chapitre"
+  },
+  "codex-encyclopedie-5B-chapitre2-divider": {
+    "title": "Bannière Chapitre II — Le Nœud Celtique",
+    "description": "Le titre CHAPTER II en lettres or espacées et capitales sobres surplombe un grand nœud tressé celtique qui court sur toute la longueur de la bannière verticale. Des ornements en fleur de lys encadrent le texte en haut et en bas. Ce tressage d'or sur fond noir évoque la continuité sans fin de la transmission — chaque fil une vie, chaque croisement une rencontre. La bannière est à la fois frontispice et frontière.",
+    "category": "chapitre"
+  },
+  "codex-encyclopedie-5C-chapitre2-footer": {
+    "title": "Pied de Page Chapitre II",
+    "description": "Une bande ornementale dorée et géométrique traverse la partie inférieure de l'image : losanges, chevrons et motifs Art Déco s'enchaînent en une frise continue sur fond noir. Le motif, répété et rythmé, crée une cadence visuelle régulière, frontière basse du chapitre. Cette frise est le sol sur lequel repose le texte — une fondation de symboles.",
+    "category": "chapitre"
+  },
+  "codex-encyclopedie-6A-chapitre3-opening": {
+    "title": "Ouverture Chapitre III — La Révélation des Triangles",
+    "description": "Des triangles d'or concentriques convergent vers un apex lumineux dans une architecture mystique dramatique. Des piliers monolithiques flanquent la composition, ornés de marques circulaires géométriques. À la base, un livre ouvert irradie la lumière — la connaissance comme source. Des symboles de géométrie sacrée (cercles, triangles, grilles) peuplent le triangle intérieur. Cette scène évoque l'illumination, la salle des mystères ou le temple de l'encyclopédie.",
+    "category": "chapitre"
+  },
+  "codex-encyclopedie-6B-chapitre3-margin": {
+    "title": "Marge Chapitre III — La Vigne Numérique",
+    "description": "Le long d'une bordure verticale gauche, une vigne dorée mêle feuilles botaniques, bourgeons floraux et tracés de circuits imprimés en une montée organique-technologique. En son centre, un écusson encadré porte le chiffre romain III. Le reste de l'image est nuit pure, offrant un espace de respiration au texte. Cette vigne est la métaphore du projet même : la nature et le code, entrelacés.",
+    "category": "chapitre"
+  },
+  "codex-encyclopedie-6C-chapitre3-corners": {
+    "title": "Coin Chapitre III — Gardien Baroque",
+    "description": "Un coin ornamental baroque en or tridimensionnel occupe l'angle supérieur droit, déployant ses feuilles d'acanthe et volutes victoriennes autour d'une rosette centrale. La modélisation 3D lui confère une profondeur et des ombres riches, comme un véritable ornement de reliure précieuse. L'espace restant est noir absolu — la présence totale de l'ornement dans le vide. Ce gardien marque les quatre angles du savoir codifié.",
+    "category": "chapitre"
+  },
+  "codex-encyclopedie-7A-diagramme-abstract": {
+    "title": "Diagramme Abstrait — Les Trois Niveaux",
+    "description": "Trois panneaux horizontaux reliés par des canaux verticaux forment un système hiérarchique de géométrie sacrée. Chaque panneau contient des symboles dans des nœuds circulaires : le premier niveau abrite losanges et cibles concentriques, le second des polyèdres et pyramides, le troisième des cubes et primes hexagonaux. L'ensemble, tracé en ligne d'or sur fond noir, évoque un système de classification ou une taxonomie mystique du monde matériel.",
+    "category": "diagramme"
+  },
+  "codex-encyclopedie-7B-diagramme-reseau": {
+    "title": "Diagramme Réseau — La Constellation",
+    "description": "Des nœuds circulaires dorés de tailles variées sont reliés par des lignes droites sur un champ d'étoiles noir, formant une carte de constellation ou un graphe de réseau. Certains nœuds émettent des rayons en étoile, signalant les hubs de connexion. Des pointillés tracent des liens secondaires ou potentiels. Cette carte du réseau est le maillage vivant du Codex — chaque nœud un concept, chaque ligne une résonance φ.",
+    "category": "diagramme"
+  },
+  "codex-encyclopedie-7C-diagramme-radial": {
+    "title": "Diagramme Radial — Rose des Vents",
+    "description": "Une rose des vents à huit branches rayonne en or depuis le centre sur fond noir : quatre pointes longues et acérées aux points cardinaux, quatre pointes plus courtes aux intercardinalaux. Des cercles concentriques en pointillés et des lignes radiales de mesure créent un quadrillage de navigation. Ce symbole sans labels directionnels est une boussole intérieure — il indique non pas le nord géographique, mais la direction du sens.",
+    "category": "diagramme"
+  },
+  "codex-encyclopedie-8A-medallions": {
+    "title": "Cinq Médaillons du Glossaire",
+    "description": "Trois médaillons de bronze et d'or sont disposés horizontalement, chacun portant un langage symbolique distinct. Le premier présente une rose des vents sur astrolabe avec des axes rayonnants. Le second arbore une flèche descendante entourée d'un orbe doré et de bandes graduées. Le troisième allie croissant lunaire, sphère et ramifications en circuits futuristes, son bord extérieur gravé de signes runiques ou de lettres fictives. Ces trois pièces sont les médaillons des cinq lois du Codex.",
+    "category": "medallion"
+  },
+  "codex-encyclopedie-8B-bordures": {
+    "title": "Bordures — Cadre Simple",
+    "description": "Un cadre rectangulaire élégant d'or fin double ses lignes sur fond noir, les quatre coins ornés d'un trèfle ou quatrefoil délicat. L'intérieur est entièrement vide — noir pur — comme une page blanche dans un livre précieux. Ce cadre est l'un des éléments fondamentaux du vocabulaire visuel du Codex : sobre, précis, prêt à accueillir tout ce qui mérite d'être encadré.",
+    "category": "ornement"
+  },
+  "codex-encyclopedie-8C-textures": {
+    "title": "Textures — Trois Matières",
+    "description": "Trois panneaux de textures se côtoient : à gauche, un hachage lin-croisé en lignes d'or sur noir ; au centre, un demi-teinte de points qui se densifient vers le haut ; à droite, des vagues fluides en or sur fond sombre. Chaque panneau est souligné d'une frise différente. Ces trois matières sont les textures du Codex — la rigueur, la densité, le flux.",
+    "category": "ornement"
+  },
+  "codex-encyclopedie-9A-annexes-tabs": {
+    "title": "Annexes — Onglets Financiers",
+    "description": "Un graphique à barres horizontales dorées, aux terminaisons en escalier, s'étend sur fond noir avec un style de plan technique. Sur le côté gauche, un arc partiel de cercle concentrique aux lignes pointillées évoque un schéma de navigation ou de mesure. Des marques d'angle dorées et une fine bordure encadrent la composition. Ce graphique symbolique représente les flux et métriques du pilote CirculAI.",
+    "category": "annexe"
+  },
+  "codex-encyclopedie-9B-annexes-grille": {
+    "title": "Annexes — Grille du Pilote",
+    "description": "Une grille uniforme de petits carrés dorés couvre l'intégralité de l'image, délicate et précise comme du papier millimétré pour l'or. Quatre équerre en L aux coins rappellent un viseur de caméra ou un cadre de mesure. La grille est le substrat même de la preuve dans le pilote — chaque case, une donnée possible, un terrain à arpenter honnêtement.",
+    "category": "annexe"
+  },
+  "codex-encyclopedie-9C-annexes-sceaux": {
+    "title": "Annexes — Sceaux SCALE",
+    "description": "Une rangée d'environ onze hexagones dorés se déploie horizontalement, chacun portant en son centre un motif de diamant avec des ramifications rayonnantes — à la fois circuit tribal et sceau de wax. Les badges alternent légèrement en orientation, créant un rythme visuel. Ces sceaux hexagonaux sont les emblèmes des nœuds du réseau CirculAI, les marqueurs d'une économie circulaire cartographiée.",
+    "category": "annexe"
+  },
+  "codex-encyclopedie-10A-credits-header": {
+    "title": "En-tête Crédits",
+    "description": "L'arc en or d'un portail Art Déco encadre les mots « · CREDITS · » en capitales serif espacées et dorées. L'arche, formée d'un bandeau à gradient doré avec volutes latérales, est surmontée d'une étoile à quatre branches. Des lignes horizontales avec points s'étendent depuis le centre comme des bras ouverts. C'est le seuil des remerciements — une entrée cérémonielle dans la liste de ceux qui ont rendu le Codex possible.",
+    "category": "colophon"
+  },
+  "codex-encyclopedie-10B-colophon-divider": {
+    "title": "Diviseur Colophon",
+    "description": "Une ligne d'or unique et ténue traverse l'image en son exact milieu, ponctuée en son centre d'un losange double contour et de deux petits points circulaires. La simplicité est totale — une respiration entre les pages, un silence doré. Ce diviseur est la ponctuation ultime du colophon, la ligne qui sépare le texte de la fin.",
+    "category": "colophon"
+  },
+  "codex-encyclopedie-10C-colophon-footer": {
+    "title": "Pied Colophon — Filigranes Fleuris",
+    "description": "Une bordure inférieure de filigrane baroque s'épanouit en feuilles d'acanthe et vrilles symétriques depuis un fleur de lys central, toute en or sur fond noir. De petites étoiles et étincelles dorées constellent l'espace au-dessus. Le haut de l'image est nuit pure, laissant place au texte du colophon. Ces filigranes sont la signature décorative finale du Codex — la main de l'auteur en ornement.",
+    "category": "colophon"
+  },
+  "codex-encyclopedie-11A-dos-spine": {
+    "title": "Dos du Livre — Frise Verticale",
+    "description": "Un panneau vertical étroit et noir accueille six cadres rectangulaires à bordures dorées aux coins biseautés, disposés en colonne comme les étiquettes d'un carnet ou d'une bande de film. Des ornements en éventail dorés marquent le haut et le bas du panneau, et des lignes horizontales séparent les cadres. Ce gabarit de dos est le lieu du titre, de l'auteur, du numéro de tome — la face publique du livre sur l'étagère.",
+    "category": "reliure"
+  },
+  "codex-encyclopedie-11B-tranche": {
+    "title": "Tranche du Codex",
+    "description": "Une large bande horizontale présente des lignes verticales dorées de longueurs variables sur fond noir, dont la densité et l'éclat croissent de gauche — épars et sombre — vers la droite — dense et fulgurant — comme un dégradé d'or en fondu. Les bordures horizontales haut et bas sont deux fils d'or tendus. Cette tranche est la coupe du livre vu de côté, là où se lit la mémoire accumulée des pages.",
+    "category": "reliure"
+  },
+  "codex-encyclopedie-11C-tranche-top": {
+    "title": "Tranche Haute — Frise Mince",
+    "description": "Une frise horizontale élancée présente un motif répété de petits losanges alternant avec de microscopiques points sur une ligne centrale dorée. Les extrémités se rétrécissent légèrement, donnant à la bande une silhouette courbée, presque tressée. Cette tranche haute est l'extrémité supérieure du livre — le premier contact du lecteur avec le Codex lorsqu'il le retire de l'étagère.",
+    "category": "reliure"
+  },
+  "codex-encyclopedie-12A-fermeture-sceau": {
+    "title": "Sceau de Fermeture — Mandala Final",
+    "description": "Un mandala d'or pur se déploie en symétrie absolue sur fond noir : des anneaux concentriques, des motifs de pétales de lotus sur le pourtour, et au centre une étoile géométrique aux lignes croisées et formes en larmes. Des rayons de lumière irradient vers l'extérieur comme un soleil mystique. Quatre médaillons circulaires marquent les points cardinaux. Ce mandala est le sceau final du Codex — la signature cosmique de l'œuvre complète.",
+    "category": "fermeture"
+  },
+  "codex-encyclopedie-12B-fermeture-rubans": {
+    "title": "Fermeture — Rubans Croisés",
+    "description": "Deux larges bandes métalliques dorées se croisent en X au centre de l'image sur fond noir, leur texture brossée et mate reflétant une lumière subtile. À l'intersection, un médaillon circulaire à anneaux concentriques rappelle un bouton ou une boucle. Cette croix de Saint-André en or est la fermeture physique du grimoire — les rubans qui ligaturent les secrets à l'intérieur.",
+    "category": "fermeture"
+  },
+  "codex-encyclopedie-12C-fermeture-vignette": {
+    "title": "Vignette de Clôture — Le Trou de Serrure",
+    "description": "Sur un fond de nuit constellée de poussière dorée, un simple trou de serrure doré luit au centre d'une lumière diffuse et mystérieuse, entouré de deux cercles concentriques et d'un réticule en croix. Des milliers de minuscules points lumineux parsèment l'obscurité environnante comme des étoiles. Cette vignette finale est la dernière image du Codex : la serrure dont la clé vous appartient. Ce qui se trouve de l'autre côté de la porte n'appartient qu'à vous.",
+    "category": "fermeture"
+  }
+}

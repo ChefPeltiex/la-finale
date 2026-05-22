@@ -1,11 +1,30 @@
 {
   "framework": "vite",
-  "installCommand": "npm ci",
+  "installCommand": "npm ci --legacy-peer-deps",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/$1" },
-    { "source": "/(.*)", "destination": "/index.html" }
+  "routes": [
+    { "src": "/api/health", "dest": "/api/health.js" },
+    { "src": "/api/platform/metrics-live", "dest": "/api/platform/metrics-live.js" },
+    { "src": "/api/atlas/fiches-vivantes-count", "dest": "/api/atlas/fiches-vivantes-count.js" },
+    { "src": "/api/atlas/fiches-vivantes-preview", "dest": "/api/atlas/fiches-vivantes-preview.js" },
+    { "src": "/api/atlas/fiche-vivante/([^/]+)", "dest": "/api/atlas/fiche-vivante.js?scanId=$1" },
+    { "src": "/api/atlas/convert-scans-to-live-sheets", "dest": "/api/atlas/convert-scans-to-live-sheets.js" },
+    { "src": "/api/stripe/checkout", "dest": "/api/stripe/checkout.js" },
+    { "src": "/api/stripe/payment-intent", "dest": "/api/stripe/payment-intent.js" },
+    { "src": "/api/stripe/webhook", "dest": "/api/stripe/webhook.js" },
+    { "src": "/api/crm/lead", "dest": "/api/crm/lead.js" },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/(.*)\\.(?:js|css|png|svg|ico|json|webp|woff2|woff|ttf|map|txt|xml)",
+      "dest": "/$1.$2"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
-

@@ -31,6 +31,7 @@ export const LAYOUT_NAV_ITEMS = [
   { path: "/contact", label: "Contact", icon: Mail, color: "text-teal-300" },
   { path: "/hub-fondations", label: "Hub fondations", icon: Building2, color: "text-sky-200" },
   { path: "/hub-souverain", label: "Hub souverain", icon: Leaf, color: "text-emerald-300" },
+  { path: "/boutique", label: "Boutique numérique", icon: DollarSign, color: "text-emerald-300" },
   { path: "/pricing", label: "💳 Pricing", icon: DollarSign, color: "text-amber-300" },
   { path: "/soutien", label: "Soutien", icon: HeartHandshake, color: "text-rose-300" },
   { path: "/pantheon-renders", label: "🏛️ Panthéon (Renders)", icon: Sparkles, color: "text-violet-300" },

@@ -22,6 +22,7 @@ import { GltfLoadErrorBoundary } from "@/components/ueAiouy/GltfLoadErrorBoundar
 
 const GltfPreview = lazy(() => import("@/components/ueAiouy/GltfPreview"));
 import { Cuboid, Download, ExternalLink, Plus, Trash2, Upload } from "lucide-react";
+import CurvesBridgeHub from "@/components/ueAiouy/CurvesBridgeHub";
 
 const SOURCE_OPTS = [
   { id: "quixel", label: "Quixel / Megascans" },
@@ -149,6 +150,11 @@ export default function UeAiouyHub() {
           Documentation hors bundle Vite — voir dans le dépôt : <code className="rounded bg-muted px-1">{UNREAL_BRIDGE_DOC_RELATIVE}</code>{" "}
           (programme UEAIOUY en bas de fichier). Référence : <code className="rounded bg-muted px-1">{UEAIOUY_DOC_ANCHOR}</code>
         </p>
+        <p className="text-sm">
+          <Link to="/boutique" className="font-semibold text-emerald-400 hover:text-emerald-300">
+            Boutique numérique — encyclopédie & Codex →
+          </Link>
+        </p>
       </header>
 
       <Tabs defaultValue="registry" className="w-full">
@@ -156,6 +162,7 @@ export default function UeAiouyHub() {
           <TabsTrigger value="registry">Registre & prévisualisation</TabsTrigger>
           <TabsTrigger value="pipeline">Pipeline Quixel → UE → web</TabsTrigger>
           <TabsTrigger value="stream">Pixel Streaming</TabsTrigger>
+          <TabsTrigger value="courbes">3 courbes → UE</TabsTrigger>
         </TabsList>
 
         <TabsContent value="registry" className="space-y-6 mt-6">
@@ -300,6 +307,10 @@ export default function UeAiouyHub() {
               pas une intégration Epic « certifiée » sans binaire/serveur correspondants.
             </p>
           </div>
+        </TabsContent>
+
+        <TabsContent value="courbes" className="mt-6">
+          <CurvesBridgeHub />
         </TabsContent>
 
         <TabsContent value="stream" className="space-y-4 mt-6">

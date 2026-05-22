@@ -8,7 +8,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // https://vite.dev/config/
 export default defineConfig({
-  logLevel: 'error', // Suppress warnings, only show errors
+  logLevel: process.env.VITE_QUIET === '1' ? 'error' : 'info',
   resolve: {
     /** Évite « Invalid hook call » / useEffect null quand deux copies de React sont résolues (p.ex. R3F + éditeurs). */
     dedupe: ['react', 'react-dom', 'scheduler'],
@@ -26,10 +26,14 @@ export default defineConfig({
       'react',
       'react-dom',
       'react/jsx-runtime',
+      'react/jsx-dev-runtime',
       '@tanstack/react-query',
+      'react-router-dom',
       'recharts',
       '@react-three/fiber',
       '@react-three/drei',
+      '@react-three/postprocessing',
+      'lucide-react',
     ],
   },
   /**
@@ -51,6 +55,10 @@ export default defineConfig({
     }),
   ],
   server: {
+    host: '127.0.0.1',
+    port: 5173,
+    strictPort: true,
+    open: false,
     // In local dev, you can run an API server on :8787 and keep using /api/... in the frontend.
     proxy: {
       "/api": {
@@ -62,6 +70,10 @@ export default defineConfig({
     hmr: {
       protocol: 'ws',
       host: 'localhost',
+    },
+    /** Évite des chunks React obsolètes après purge de cache Vite. */
+    headers: {
+      'Cache-Control': 'no-store',
     },
   },
 });

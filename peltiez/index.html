@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr-CA">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -16,12 +16,13 @@
     <meta name="application-name" content="CirculAI" />
     <link rel="apple-touch-icon" href="/icon-192.png" />
 
-    <title>CirculAI — économie circulaire, pilote Québec | Egor69</title>
-    <meta name="description" content="CirculAI : intelligence circulaire au Québec — don, échange, réparation, atlas vivant et pilote 90 jours avec preuves vérifiables. Rejoignez le hub ou explorez l'univers Egor69." />
-    <meta name="keywords" content="circulai, économie circulaire, québec, pilote 90 jours, don d'objets, troc, réparation, atlas vivant, egor69, intelligence circulaire, pass souverain" />
-    <meta name="author" content="CirculAI · Egor69" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <link rel="canonical" href="https://egor69.ca" />
+    <!-- SEO Principal -->
+    <title>CirculAI - Plateforme d'économie circulaire pour municipalités du Québec</title>
+    <meta name="description" content="CirculAI est une plateforme d'intelligence circulaire pour les villes du Québec. Équation pilote, plan d'action municipal, et copilote d'artefacts pour transformer la gestion des matières résiduelles. Créé par Dominic Pelletier." />
+    <meta name="keywords" content="economie circulaire, Quebec, municipalite, gestion matieres residuelles, intelligence artificielle, equation pilote, CirculAI, ville durable, developpement durable" />
+    <meta name="author" content="Dominic Pelletier" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://circulai-demo.vercel.app/" />
 
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,12 +32,12 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="manifest" href="/manifest.json" />
 
-    <!-- Open Graph (Social Media) -->
+    <!-- Open Graph (Facebook / LinkedIn) -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://egor69.ca" />
-    <meta property="og:title" content="CirculAI — économie circulaire, pilote Québec" />
-    <meta property="og:description" content="Rejoignez CirculAI : hub circulaire au Québec, pilote mesuré et preuves vérifiables. Même plateforme sur egor69.ca." />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1200&h=630&fit=crop" />
+    <meta property="og:url" content="https://circulai-demo.vercel.app/" />
+    <meta property="og:title" content="CirculAI - Plateforme d'économie circulaire pour municipalités du Québec" />
+    <meta property="og:description" content="CirculAI est une plateforme d'intelligence circulaire pour les villes du Québec. Équation pilote, plan d'action municipal, et copilote d'artefacts pour transformer la gestion des matières résiduelles. Créé par Dominic Pelletier." />
+    <meta property="og:image" content="https://circulai-demo.vercel.app/og-image.svg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="fr_CA" />
@@ -44,29 +45,25 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Egor69_ca" />
-    <meta name="twitter:title" content="CirculAI — économie circulaire, pilote Québec" />
-    <meta name="twitter:description" content="Intelligence circulaire au Québec : don, échange, réparation, pilote 90 jours. Univers Egor69 sur egor69.ca." />
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1200&h=630&fit=crop" />
+    <meta name="twitter:title" content="CirculAI - Plateforme d'économie circulaire pour municipalités du Québec" />
+    <meta name="twitter:description" content="CirculAI est une plateforme d'intelligence circulaire pour les villes du Québec. Équation pilote, plan d'action municipal, et copilote d'artefacts pour transformer la gestion des matières résiduelles. Créé par Dominic Pelletier." />
+    <meta name="twitter:image" content="https://circulai-demo.vercel.app/og-image.svg" />
 
-    <!-- Structured Data: Organization (CirculAI · Egor69) -->
+    <!-- Structured Data: Organization -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "CirculAI",
-      "alternateName": "Egor69",
-      "url": "https://egor69.ca",
-      "logo": "https://egor69.ca/favicon.svg",
-      "description": "Intelligence circulaire au Québec : don, échange, réparation, atlas vivant et pilote 90 jours avec preuves vérifiables.",
+      "url": "https://circulai-demo.vercel.app/",
+      "logo": "https://circulai-demo.vercel.app/favicon.svg",
+      "description": "Plateforme d'intelligence circulaire pour les municipalités du Québec — équation pilote, plan d'action et copilote d'artefacts.",
+      "founder": {
+        "@type": "Person",
+        "name": "Dominic Pelletier"
+      },
       "areaServed": { "@type": "AdministrativeArea", "name": "Québec" },
-      "knowsAbout": ["Économie circulaire", "Intelligence circulaire", "Pilote 90 jours", "Atlas vivant"],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer support",
-        "email": "support@egor69.ca",
-        "availableLanguage": ["fr", "en"]
-      }
+      "knowsAbout": ["Économie circulaire", "Gestion des matières résiduelles", "Intelligence artificielle municipale", "Développement durable"]
     }
     </script>
 
@@ -76,17 +73,50 @@
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "CirculAI",
-      "alternateName": "Egor69",
-      "url": "https://egor69.ca",
+      "url": "https://circulai-demo.vercel.app/",
       "inLanguage": "fr-CA",
-      "description": "Hub circulaire au Québec — abonnement, pilote mesuré, Verse 3D et marketplace.",
-      "publisher": { "@type": "Organization", "name": "CirculAI" },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://egor69.ca/marketplace?q={search_term_string}",
-        "query-input": "required name=search_term_string"
+      "description": "Plateforme d'économie circulaire pour les villes du Québec — équation pilote, plan d'action municipal, gestion des matières résiduelles.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "CirculAI"
       }
     }
+    </script>
+    <script>
+      // Kill-switch SW v12 : désinscrit tout SW antérieur + purge caches stale.
+      // Une seule passe — flag stocké pour éviter boucle de rechargement.
+      (function () {
+        try {
+          var KEY = 'sw-killswitch-v12';
+          if (!('serviceWorker' in navigator)) return;
+          if (sessionStorage.getItem(KEY)) return;
+          navigator.serviceWorker.getRegistrations().then(function (regs) {
+            var hadOld = false;
+            var ps = regs.map(function (r) {
+              if (r.active && r.active.scriptURL && r.active.scriptURL.indexOf('sw.js') !== -1) {
+                // SW présent — on tente unregister puis re-register (le nouveau sw.js du build)
+                hadOld = true;
+                return r.unregister();
+              }
+              return Promise.resolve();
+            });
+            return Promise.all(ps).then(function () {
+              if (!('caches' in window)) return hadOld;
+              return caches.keys().then(function (names) {
+                return Promise.all(names.filter(function (n) {
+                  return n.indexOf('egor69') !== -1 || n.indexOf('circulai') !== -1;
+                }).map(function (n) { return caches.delete(n); }));
+              }).then(function () { return hadOld; });
+            });
+          }).then(function (hadOld) {
+            sessionStorage.setItem(KEY, '1');
+            if (hadOld) {
+              // Un seul reload pour récupérer la version fraîche.
+              location.reload();
+            }
+          }).catch(function () {});
+        } catch (e) {}
+      })();
     </script>
   </head>
   <body>

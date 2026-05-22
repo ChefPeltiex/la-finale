@@ -181,3 +181,38 @@ export function formatMay21PilotNote() {
   }
   return `Prochain jalon anniversaire · 21 mai dans ${daysUntil} jours — une revue honnête du pilote 90 jours.`;
 }
+
+const RITUAL_KEYS = ["proofs", "engagements", "testimonials"];
+
+function countRitualDone(ritual) {
+  return RITUAL_KEYS.filter((k) => ritual?.[k]).length;
+}
+
+/**
+ * Métaphore Leidenfrost : beaucoup de « chaleur » (temps qui passe) sans transfert (preuves).
+ * @param {ReturnType<typeof getPilot90Progress>} progress
+ * @param {ReturnType<typeof loadBirthdayRitual>} ritual
+ */
+export function getPilotLeidenfrostHint(progress, ritual) {
+  if (!progress?.started) return null;
+  const done = countRitualDone(ritual);
+  if (progress.day >= 21 && done === 0) {
+    return {
+      level: "warn",
+      title: "Alerte « mode Lédenfrost »",
+      body:
+        "Le pilote avance dans le temps mais aucune preuve n’est cochée. Risque d’activité sans transfert réel — comme une goutte qui lévite sans évacuer la chaleur. Documentez au moins une preuve cette semaine.",
+    };
+  }
+  if (progress.day >= 14 && done <= 1) {
+    return {
+      level: "info",
+      title: "Transfert thermique faible",
+      body:
+        "Peu de preuves cochées pour le jour " +
+        progress.day +
+        ". Vérifiez marketplace, témoignages ou /docs/preuves avant d’ajouter de nouvelles promesses.",
+    };
+  }
+  return null;
+}

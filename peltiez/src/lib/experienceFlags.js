@@ -1,13 +1,22 @@
+import { isDevNavLite } from "@/lib/devPerformance";
+
 export const EXPERIENCE_FLAGS = Object.freeze({
+  /** Accueil épuré (deux portes, confiance) — sections « spectacle » en repli. */
+  platformCleanHome: true,
+  /** Sidebar + contenu clairs sur routes CirculAI / marché. */
+  platformProShell: true,
   // Popups / overlays / distracting layers
   launchIntro: false,
   globalLaunchAlert: false,
-  /** Bandeau fixe bas d’écran : CTA pricing / soutien / alerte CRM (SEO + conversion). */
-  strategicConversionStrip: true,
-  /** Décompte fixe jusqu’au déploiement (21 mai 8 h Québec) — voir deployLaunch.js */
-  deploymentCountdown: true,
+  /** Bandeau fixe bas d’écran — désactivé pour crédibilité (réactiver si campagne). */
+  strategicConversionStrip: false,
+  deploymentCountdown: false,
+  /** Particules — off sur shell pro ; home culture peut garder léger. */
+  layoutCanvasEffects: false,
+  /** Orbe concierge flottant */
+  conciergeOrb: !isDevNavLite,
   /** Portée d’accueil obligatoire + son au premier geste (voir public/audio/README.txt) */
-  firstVisitWelcomeGate: true,
+  firstVisitWelcomeGate: false,
   sovereigntyBanner: false,
   circuliaWidget: false,
   audioControl: false,
@@ -23,6 +32,14 @@ export const EXPERIENCE_FLAGS = Object.freeze({
    */
   grosCalinUnlocked: true,
   /** Liens contextuels sous le contenu (données `siteGraph.js`). */
-  contextualLinksPanel: true,
+  contextualLinksPanel: false,
+  /** Lien « Changer de monde » → /entrer (CirculAI concret vs Egor fantaisiste). */
+  worldRealmSwitcher: true,
+  /** Harpon / onboarding flottants — lourd en dev sur OneDrive */
+  scorpionHarpoon: false,
+  onboardingFlow: false,
+  guideAgent: false,
+  /** Sections legacy accueil (planète, matrix, témoignages globaux…) */
+  homeLegacySections: false,
 });
 
