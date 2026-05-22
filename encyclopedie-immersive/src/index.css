@@ -15,9 +15,6 @@
 
 html { scroll-behavior: smooth; }
 
-/* Custom cursor - hide default when JS cursor active */
-body.has-gold-cursor, body.has-gold-cursor * { cursor: none !important; }
-
 body {
   background-color: var(--cosmos);
   color: var(--parchment);
