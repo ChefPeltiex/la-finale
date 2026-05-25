@@ -8,8 +8,10 @@ import { defineConfig, devices } from "@playwright/test";
  *   Binaires Playwright : `PLAYWRIGHT_USE_PLAYWRIGHT_BROWSER=1` puis `npx playwright install chromium`.
  * - URL : `PLAYWRIGHT_BASE_URL` ou `http://localhost:${PLAYWRIGHT_E2E_PORT}` (défaut 5174).
  */
+// Default: use Playwright's downloaded Chromium.
+// Set PLAYWRIGHT_USE_PLAYWRIGHT_BROWSER=0 to force system Chrome/Edge via PLAYWRIGHT_CHANNEL.
 const usePlaywrightDownloadedBrowser =
-  !!process.env.CI || process.env.PLAYWRIGHT_USE_PLAYWRIGHT_BROWSER === "1";
+  process.env.PLAYWRIGHT_USE_PLAYWRIGHT_BROWSER !== "0";
 
 const e2ePort = Number(process.env.PLAYWRIGHT_E2E_PORT || "5174") || 5174;
 const baseURL = process.env.PLAYWRIGHT_BASE_URL || `http://localhost:${e2ePort}`;
@@ -61,10 +63,14 @@ export default defineConfig({
     },
   ],
   webServer: {
-    /** Port dédié + `--force` : évite 504 « Outdated Optimize Dep » et un vieux Vite sur :5173. */
-    command: `npm run dev -- --force --port ${e2ePort}`,
+    /**
+     * Use `vite preview` (built dist) instead of `vite dev --force` to avoid
+     * OneDrive cloud-file timeouts during dep pre-bundling on this machine.
+     * Run `npm run build` once before running tests if dist is stale.
+     */
+    command: `npm run preview -- --port ${e2ePort}`,
     url: `http://localhost:${e2ePort}`,
     reuseExistingServer: !process.env.CI,
-    timeout: 120_000,
+    timeout: 30_000,
   },
 });

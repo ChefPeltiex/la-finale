@@ -10,6 +10,7 @@ import {
   Info,
   Mail,
   Eye,
+  HelpCircle,
 } from "lucide-react";
 
 /** Liens sidebar / recherche globale — source unique pour Layout et l’index de recherche. */
@@ -24,6 +25,7 @@ export const LAYOUT_NAV_ITEMS = [
   { path: "/alerts", label: "📬 Mes Alertes", icon: Bell, color: "text-blue-400" },
   { path: "/atlas", label: "📚 Atlas Vivant", icon: BookOpen, color: "text-violet-300" },
   { path: "/manuel", label: "Manuel", icon: FileText, color: "text-emerald-300" },
+  { path: "/aide", label: "Aide", icon: HelpCircle, color: "text-emerald-400" },
   { path: "/outils-integration", label: "Outils & intégrations", icon: Plug, color: "text-sky-300" },
   { path: "/carte-site", label: "Carte & parcours", icon: Map, color: "text-lime-300" },
   { path: "/vision", label: "Vision", icon: Eye, color: "text-sky-300" },

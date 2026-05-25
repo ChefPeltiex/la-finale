@@ -168,6 +168,7 @@ const CodexAlliance = lazy(() => import("./pages/CodexAlliance.jsx"));
 const NatureQuebecKitDoc = lazy(() => import("./pages/NatureQuebecKitDoc.jsx"));
 const CodexNatureQuebec = lazy(() => import("./pages/CodexNatureQuebec.jsx"));
 const CirculaiHub = lazy(() => import("./pages/CirculaiHub.jsx"));
+const AidePage = lazy(() => import("./pages/AidePage.jsx"));
 const WorldGateway = lazy(() => import("./pages/WorldGateway.jsx"));
 const EncyclopedieHub = lazy(() => import("./pages/EncyclopedieHub.jsx"));
 const EncyclopedieLivre = lazy(() => import("./pages/EncyclopedieLivre.jsx"));
@@ -377,6 +378,7 @@ const AuthenticatedApp = () => {
         <Route path="/mon-univers" element={<MyUniverse />} />
         <Route path="/ue-aiouy" element={<UeAiouyHub />} />
         <Route path="/manuel" element={<ManuelPlateforme />} />
+        <Route path="/aide" element={<AidePage />} />
         <Route path="/docs/investisseur" element={<CodexInvestisseur />} />
         <Route path="/docs/preuves" element={<CodexPreuves />} />
         <Route path="/docs/rituel" element={<CodexRituel />} />
@@ -385,6 +387,7 @@ const AuthenticatedApp = () => {
         <Route path="/docs/alliance" element={<CodexAlliance />} />
         <Route path="/docs/nature-quebec-kit" element={<NatureQuebecKitDoc />} />
         <Route path="/docs/nature-quebec-portail" element={<CodexNatureQuebec />} />
+        <Route path="/aide" element={<AidePage />} />
         <Route path="/circulai" element={<CirculaiHub />} />
         <Route path="/circulai/hub" element={<CirculaiHub />} />
         <Route path="/circulai/equation-pilote" element={<CirculaiEquationPilote />} />

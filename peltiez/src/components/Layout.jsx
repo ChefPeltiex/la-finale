@@ -2,7 +2,7 @@ import { memo, useEffect, useRef, useState, useCallback, lazy, Suspense } from "
 import { Outlet, Link, useLocation } from "react-router-dom";
 import MagicParticles from "./MagicParticles";
 import StardustLayer from "./StardustLayer";
-import { Menu, X, Recycle, ChevronRight } from "lucide-react";
+import { Menu, X, Recycle, ChevronRight, HelpCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import LanguageSwitcher from "./LanguageSwitcher";
 import NotificationCenter from "./NotificationCenter";
@@ -25,7 +25,8 @@ import ContextualLinksPanel from "./ContextualLinksPanel";
 import { initGodModeSpeed, setGodModeSpeed } from "@/lib/godMode";
 import AudienceWayfinder from "./AudienceWayfinder";
 import WorldRealmSwitcher from "./WorldRealmSwitcher";
-
+import GlobalNavCirculai from "./GlobalNavCirculai";
+import HelpFab from "./HelpFab";
 /** KaTeX uniquement dans un chunk async (pas dans le shell Layout + index). */
 const SovereigntyFormulaRibbon = lazy(() => import("./SovereigntyFormulaRibbon"));
 import { filterNavItemsForPreferences, loadUniversePreferences } from "@/lib/universePreferences";
@@ -449,6 +450,7 @@ export default function Layout() {
           proShell && "text-foreground"
         )}
       >
+        {proShell ? <GlobalNavCirculai /> : null}
         {EXPERIENCE_FLAGS.deploymentCountdown && !proShell ? <DeploymentCountdownBanner /> : null}
         <div
           className={cn(
@@ -483,6 +485,9 @@ export default function Layout() {
 
       {EXPERIENCE_FLAGS.onboardingFlow ? <OnboardingFlow /> : null}
       {EXPERIENCE_FLAGS.guideAgent && !location.pathname.startsWith("/world") ? <GuideAgent /> : null}
+
+      {/* ── Floating Help FAB (panneau contextuel + lien /aide) ── */}
+      <HelpFab />
     </div>
   );
 }

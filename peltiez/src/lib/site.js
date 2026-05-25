@@ -19,6 +19,26 @@ export const SUPPORT_EMAIL = "support@egor69.ca";
 /** Marque produit (acquisition, SEO, CTA). */
 export const CIRCULAI_BRAND = "CirculAI";
 
+/** Tagline vivante — plateforme vivante, pas corporate. */
+export const CIRCULAI_TAGLINE =
+  "la plateforme vivante où chaque contribution trouve sa place.";
+
+/** Phrase d'accueil hero — ton inclusif, mot directeur VIVANT. */
+export const CIRCULAI_HERO_HEADLINE =
+  "Ici, chaque contribution circule et trouve sa place.";
+
+/** Sous-titre hero — sobre, territorial, inclusif. */
+export const CIRCULAI_HERO_SUBTEXT =
+  "Ensemble, nous faisons germer une économie circulaire au Québec — citoyens, OBNL, élus, entreprises locales. Chaque geste résonne dans la communauté.";
+
+/** Invitation de bas de page hero — avant les 4 portes. */
+export const CIRCULAI_HERO_INVITATION =
+  "Où te situes-tu dans cette symphonie ?";
+
+/** Footer narratif court — ancrage territorial + coopératif. */
+export const CIRCULAI_FOOTER_NOTE =
+  "CirculAI · Québec · Structure coopérative en devenir · Pilote 90 jours · Données honnêtes";
+
 /** Nom court de l'univers technique (sous-marque). */
 export const SITE_NAME = "Egor69";
 

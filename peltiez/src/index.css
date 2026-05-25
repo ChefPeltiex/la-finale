@@ -418,8 +418,58 @@
 }
 
 /* ══════════════════════════════════════════
+   CIRCULAI — ESTHÉTIQUE VIVANTE
+   Terre / Eau / Lumière — PAS cosmique-doré
+   (réservé à Egor69)
+══════════════════════════════════════════ */
+@layer utilities {
+
+  /* Respiration douce — hero et éléments de fond */
+  .breathe {
+    animation: breathe 7s ease-in-out infinite;
+  }
+  .breathe-slow {
+    animation: breathe 12s ease-in-out infinite;
+  }
+
+  /* Fond vivant de la landing CirculAI */
+  .living-bg {
+    background:
+      radial-gradient(ellipse at 20% 30%, hsla(158, 55%, 94%, 0.7) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 70%, hsla(185, 45%, 93%, 0.6) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 95%, hsla(100, 40%, 94%, 0.4) 0%, transparent 45%),
+      hsl(var(--background));
+  }
+
+  /* Ondulation organique — séparateur de section */
+  .organic-divider {
+    height: 3px;
+    border-radius: 99px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(158, 55%, 75%) 30%,
+      hsl(185, 50%, 70%) 60%,
+      transparent 100%
+    );
+    opacity: 0.45;
+    animation: dividerPulse 6s ease-in-out infinite;
+  }
+}
+
+/* ══════════════════════════════════════════
    KEYFRAMES
 ══════════════════════════════════════════ */
+@keyframes breathe {
+  0%, 100% { transform: scale(1);    opacity: 1; }
+  50%       { transform: scale(1.015); opacity: 0.92; }
+}
+
+@keyframes dividerPulse {
+  0%, 100% { opacity: 0.3; }
+  50%       { opacity: 0.6; }
+}
+
 @keyframes aurora {
   0%   { background-position: 0% 50%; }
   50%  { background-position: 100% 50%; }
