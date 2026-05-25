@@ -79,20 +79,18 @@ export default function Credits() {
       <section className="space-y-6">
         <div>
           <h2 className="font-display text-3xl font-bold text-foreground mb-1 flex items-center gap-2">
-            <Sparkles className="h-8 w-8 text-primary" /> Collaborateurs et Équipe
+            <Sparkles className="h-8 w-8 text-primary" /> Reconnaissance
           </h2>
-          <p className="text-muted-foreground">Vous avez construit ceci avec moi</p>
+          <p className="text-muted-foreground">À ceux qui rendent l'œuvre possible</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {[
-            { title: "Directrice Générale", desc: "Qui a cru au rêve avant que ce soit réel" },
-            { title: "Directeur Technique", desc: "Qui a transformé l'impossible en code" },
-            { title: "Directrice Produit", desc: "Qui a mis le cœur dans chaque pixel" },
-            { title: "Directeur Financier", desc: "Qui a transformé le rêve en réalité viable" },
-            { title: "Dev Team", desc: "Qui a travaillé 24/7 sans se poser de questions" },
-            { title: "Design Team", desc: "Qui a rendu cette folie belle" },
-            { title: "Community Team", desc: "Qui écoute et répond à chaque voix" },
-            { title: "Advisors et Mentors", desc: "Qui ont guidé les choix difficiles" },
+            { title: "Carole Turcotte", desc: "Ma mère — l'empathie qui aime trop avec son cœur" },
+            { title: "Jacques Pelletier", desc: "Mon père — la force silencieuse, le roc, l'idole" },
+            { title: "Marcel", desc: "Beau-père — le complément de la trinité familiale" },
+            { title: "Linda Turcotte & Denis Pelletier", desc: "Marraine et parrain — témoins de ma signature à 6h09" },
+            { title: "Le Saint-Laurent", desc: "Le fleuve qui porte tout le projet depuis l'enfance" },
+            { title: "Outils IA collaboratifs", desc: "Manager (Claude Opus/Sonnet) et autres miroirs — partenaires de pensée" },
           ].map((role, i) => (
             <div key={i} className="bg-card rounded-xl border border-border p-4">
               <p className="font-semibold text-foreground">{role.title}</p>
@@ -101,7 +99,7 @@ export default function Credits() {
           ))}
         </div>
         <p className="text-center text-rose-600 font-semibold italic">
-          Vous avez sacrifié pour que ceci soit parfait. Merci infiniment.
+          La circularité commence par la gratitude.
         </p>
       </section>
 

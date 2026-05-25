@@ -23,10 +23,7 @@ const milestones = [
 ];
 
 const team = [
-  { name: 'Directrice Générale', role: 'PDG & Co-fondatrice', desc: "Experte en économie circulaire et stratégie ESG. 12 ans d'expérience en développement durable.", img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face' },
-  { name: 'Directeur Technique', role: 'CTO & Co-fondateur', desc: 'Architecte IA senior. Ancien Google et Shopify. Expert en systèmes distribués et blockchain.', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face' },
-  { name: 'Directrice Produit', role: 'CPO', desc: "Designer UX primée. Ancienne Ubisoft. Passionnée par l'expérience utilisateur éthique.", img: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face' },
-  { name: 'Directeur Financier', role: 'CFO', desc: "MBA HEC Montréal. 15 ans en capital-risque et financement d'entreprises technologiques.", img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face' },
+  { name: 'Dominic Pelletier', role: 'Fondateur — Québec', desc: "42 ans, né le 21 mai 1984 à Québec. 15 ans en cuisine, école terminée, illumination en cours. CirculAI naît d'une intuition simple : la circularité au service du vivant, sans filtre, sans Big Tech.", img: '' },
 ];
 
 export default function About() {
@@ -222,10 +219,10 @@ export default function About() {
       <section className="py-20 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <span className="text-xs font-semibold tracking-widest text-primary uppercase mb-4 block">L'équipe fondatrice</span>
-            <h2 className="font-display text-4xl font-bold text-foreground">Derrière Egor69</h2>
+            <span className="text-xs font-semibold tracking-widest text-primary uppercase mb-4 block">Le fondateur</span>
+            <h2 className="font-display text-4xl font-bold text-foreground">Derrière CirculAI</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 gap-6 max-w-md mx-auto">
             {team.map((member, i) => (
               <motion.div
                 key={i}
@@ -234,11 +231,17 @@ export default function About() {
                 transition={{ delay: i * 0.1 }}
                 className="bg-card rounded-2xl border border-border p-6 text-center hover:shadow-md transition-all"
               >
-                <img
-                  src={member.img}
-                  alt={member.name}
-                  className="w-20 h-20 rounded-2xl object-cover mx-auto mb-4"
-                />
+                {member.img ? (
+                  <img
+                    src={member.img}
+                    alt={member.name}
+                    className="w-20 h-20 rounded-2xl object-cover mx-auto mb-4"
+                  />
+                ) : (
+                  <div className="w-20 h-20 rounded-2xl bg-primary/20 flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-primary">
+                    {member.name.split(' ').map(s => s[0]).join('').slice(0,2)}
+                  </div>
+                )}
                 <h3 className="font-semibold text-foreground">{member.name}</h3>
                 <p className="text-xs text-primary font-medium mt-1 mb-3">{member.role}</p>
                 <p className="text-xs text-muted-foreground leading-relaxed">{member.desc}</p>
