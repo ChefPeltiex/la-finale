@@ -1,0 +1,1491 @@
+{
+  "meta": {
+    "projet": "INDEX MUSIQUE - DOMINIC",
+    "description": "Index encyclopédique de 130 articles Wikipedia FR sur le domaine de la musique.",
+    "date_collecte": "2026-05-22",
+    "total_articles": 130,
+    "total_categories": 10,
+    "categories_liste": [
+      "Généralités",
+      "Théorie musicale",
+      "Instruments",
+      "Genres musicaux",
+      "Compositeurs",
+      "Histoire",
+      "Acoustique",
+      "Notation",
+      "Voix et chant",
+      "Musique et société"
+    ]
+  },
+  "categories": {
+    "Généralités": [
+      {
+        "titre": "Musique",
+        "url": "https://fr.wikipedia.org/wiki/Musique",
+        "statut": "ok",
+        "apercu": "La musique est un art et une activité culturelle consistant à combiner sons et silences au cours du temps. Les paramètres principaux sont le rythme (façon de combiner les sons dans le temps), la haute…"
+      }
+    ],
+    "Théorie musicale": [
+      {
+        "titre": "Théorie musicale",
+        "url": "https://fr.wikipedia.org/wiki/Th%C3%A9orie_musicale",
+        "statut": "ok",
+        "apercu": null
+      },
+      {
+        "titre": "Note de musique",
+        "url": "https://fr.wikipedia.org/wiki/Note_de_musique",
+        "statut": "ok",
+        "apercu": "En musique, une note est un symbole ou une lettre permettant de représenter un fragment de musique par une convention d'écriture de la hauteur et de la durée d'un son."
+      },
+      {
+        "titre": "Gamme musicale",
+        "url": "https://fr.wikipedia.org/wiki/Gamme_musicale",
+        "statut": "ok",
+        "apercu": null
+      },
+      {
+        "titre": "Accord (musique)",
+        "url": "https://fr.wikipedia.org/wiki/Accord_(musique)",
+        "statut": "ok",
+        "apercu": "En musique, un accord est un ensemble de notes considéré comme formant un tout du point de vue de l'harmonie. Le plus souvent, ces notes sont entendues simultanément, superposées en un même moment ; m…"
+      },
+      {
+        "titre": "Harmonie (musique)",
+        "url": "https://fr.wikipedia.org/wiki/Harmonie_(musique)",
+        "statut": "ok",
+        "apercu": null
+      },
+      {
+        "titre": "Contrepoint",
+        "url": "https://fr.wikipedia.org/wiki/Contrepoint",
+        "statut": "ok",
+        "apercu": null
+      },
+      {
+        "titre": "Rythme (musique)",
+        "url": "https://fr.wikipedia.org/wiki/Rythme_(musique)",
+        "statut": "ok",
+        "apercu": "Le rythme en musique est l'organisation dans le temps des événements musicaux. Il comporte tous les éléments qui permettent de repérer une structure temporelle : espacement, durée, accentuation des so…"
+      },
+      {
+        "titre": "Tempo",
+        "url": "https://fr.wikipedia.org/wiki/Tempo",
+        "statut": "ok",
+        "apercu": "En musique, le tempo (en italien : tempo « temps » ; au pl. tempos, ou, plus rare, tempi, selon le pluriel italien), appelé aussi mouvement, est la vitesse d'exécution d'une œuvre ou, plus exactement,…"
+      },
+      {
+        "titre": "Tonalité",
+        "url": "https://fr.wikipedia.org/wiki/Tonalit%C3%A9",
+        "statut": "ok",
+        "apercu": "En musique, le mot tonalité peut prendre deux significations. En un sens général, il est synonyme de l'expression système tonal, qui désigne « le langage musical prédominant dans le monde occidental a…"
+      },
+      {
+        "titre": "Mode (musique)",
+        "url": "https://fr.wikipedia.org/wiki/Mode_(musique)",
+        "statut": "ok",
+        "apercu": "Un mode, en musique, est un type d'échelle musicale couplé avec un ensemble de comportements mélodiques caractéristiques, notamment en relation avec une note de référence (appelée aussi « finale », « …"
+      },
+      {
+        "titre": "Intervalle (musique)",
+        "url": "https://fr.wikipedia.org/wiki/Intervalle_(musique)",
+        "statut": "ok",
+        "apercu": "L'intervalle est la distance entre deux notes musicales. Il est dit « harmonique » si les deux notes sont simultanées, « mélodique » si elles sont entendues l'une après l'autre. En acoustique, il se d…"
+      },
+      {
+        "titre": "Octave",
+        "url": "https://fr.wikipedia.org/wiki/Octave",
+        "statut": "ok",
+        "apercu": "Octave est un prénom masculin qui a pour formes féminines Octavia et Octavie.\n\nPour l'ensemble des articles sur les personnes portant ce prénom, consulter :\nla liste des articles dont le titre commenc…"
+      },
+      {
+        "titre": "Gamme pentatonique",
+        "url": "https://fr.wikipedia.org/wiki/Gamme_pentatonique",
+        "statut": "ok",
+        "apercu": "Les gammes pentatoniques (du grec πέντε / pénte, « cinq ») sont des échelles musicales constituées de cinq notes (= hauteurs de son) différentes. Elles peuvent être ou non basées sur le système du tem…"
+      },
+      {
+        "titre": "Gamme diatonique",
+        "url": "https://fr.wikipedia.org/wiki/Gamme_diatonique",
+        "statut": "ok",
+        "apercu": null
+      },
+      {
+        "titre": "Mélodie",
+        "url": "https://fr.wikipedia.org/wiki/M%C3%A9lodie",
+        "statut": "ok",
+        "apercu": "La mélodie est une succession de sons ordonnés selon des rapports de rythme et de modulation par opposition à l'harmonie consistant dans l'accord de plusieurs sons exécutés simultanément.\nLe terme « m…"
+      },
+      {
+        "titre": "Polyphonie",
+        "url": "https://fr.wikipedia.org/wiki/Polyphonie",
+        "statut": "ok",
+        "apercu": "En musique, la polyphonie est la combinaison de plusieurs mélodies, ou de parties musicales, chantées ou jouées en même temps.\nDans la musique occidentale, la polyphonie désigne le système de composit…"
+      },
+      {
+        "titre": "Timbre (acoustique)",
+        "url": "https://fr.wikipedia.org/wiki/Timbre_(acoustique)",
+        "statut": "ok",
+        "apercu": null
+      },
+      {
+        "titre": "Solfège",
+        "url": "https://fr.wikipedia.org/wiki/Solf%C3%A8ge",
+        "statut": "ok",
+        "apercu": "Le solfège est une méthode d'apprentissage de la musique, faite d'exercices de lecture et d'audition musicales. Dans la pratique, cette méthode est centrée sur l'apprentissage du système de notation e…"
+      },
+      {
+        "titre": "Partition (musique)",
+        "url": "https://fr.wikipedia.org/wiki/Partition_(musique)",
+        "statut": "ok",
+        "apercu": "Une partition musicale est un document (en papier, en parchemin, ou en format électronique) qui porte la transcription d'une œuvre musicale. Cette transcription peut être faite avec plusieurs sortes d…"
+      }
+    ],
+    "Instruments": [
+      {
+        "titre": "Instrument de musique",
+        "url": "https://fr.wikipedia.org/wiki/Instrument_de_musique",
+        "statut": "ok",
+        "apercu": "Un instrument de musique est un objet pouvant produire un son contrôlé par un musicien — que cet objet soit conçu dans cet objectif, ou bien qu'il soit modifié ou écarté de son usage premier. La voix …"
+      },
+      {
+        "titre": "Piano",
+        "url": "https://fr.wikipedia.org/wiki/Piano",
+        "statut": "ok",
+        "apercu": "Le piano est un instrument de musique polyphonique, à clavier, de la famille des cordes frappées. Le son est produit lorsque l'on appuie sur des touches noires ou blanches, grâce à l'action d'un marte…"
+      },
+      {
+        "titre": "Guitare",
+        "url": "https://fr.wikipedia.org/wiki/Guitare",
+        "statut": "ok",
+        "apercu": "La guitare est un instrument de musique à cordes pincées. Les cordes sont disposées parallèlement à la table d'harmonie et au manche, généralement coupé de frettes, qui ont sur elles des cases sur les…"
+      },
+      {
+        "titre": "Violon",
+        "url": "https://fr.wikipedia.org/wiki/Violon",
+        "statut": "ok",
+        "apercu": "Le violon est un instrument à cordes frottées, constitué de plus de  70 pièces de bois (érable, épicéa, ébène) collées ou assemblées les unes aux autres. Le violon possède quatre cordes accordées géné…"
+      },
+      {
+        "titre": "Trompette",
+        "url": "https://fr.wikipedia.org/wiki/Trompette",
+        "statut": "ok",
+        "apercu": "La trompette est un instrument de musique à vent de la famille des cuivres clairs. Elle est fabriquée dans un tube de 1,50 m de long comme le cornet. Le métal utilisé pour fabriquer la trompette est s…"
+      },
+      {
+        "titre": "Flûte traversière",
+        "url": "https://fr.wikipedia.org/wiki/Fl%C3%BBte_traversi%C3%A8re",
+        "statut": "ok",
+        "apercu": "La flûte traversière est un instrument à vent de la famille des bois. Jusqu'au XIXe siècle, elle était effectivement en bois, lequel a été peu à peu remplacé par le métal en Europe. Le terme traversiè…"
+      },
+      {
+        "titre": "Saxophone",
+        "url": "https://fr.wikipedia.org/wiki/Saxophone",
+        "statut": "ok",
+        "apercu": "Le saxophone  est un instrument de musique à vent, appartenant à la famille des bois. Il a été inventé par le Belge Adolphe Sax et breveté à Paris le 21 mars 1846.\nIl ne doit pas être confondu avec le…"
+      },
+      {
+        "titre": "Tambour",
+        "url": "https://fr.wikipedia.org/wiki/Tambour",
+        "statut": "ok",
+        "apercu": "Tambour peut faire référence à :"
+      },
+      {
+        "titre": "Orgue",
+        "url": "https://fr.wikipedia.org/wiki/Orgue",
+        "statut": "ok",
+        "apercu": "L'orgue est un instrument à vent multiforme dont la caractéristique est de produire les sons à l’aide d’ensembles de tuyaux sonores accordés suivant une gamme définie et alimentés par une soufflerie, …"
+      },
+      {
+        "titre": "Harpe",
+        "url": "https://fr.wikipedia.org/wiki/Harpe",
+        "statut": "ok",
+        "apercu": "La harpe est un instrument de musique à cordes pincées de forme le plus souvent triangulaire, muni de cordes tendues de longueurs variables dont les plus courtes donnent les notes les plus aiguës. C'e…"
+      },
+      {
+        "titre": "Violoncelle",
+        "url": "https://fr.wikipedia.org/wiki/Violoncelle",
+        "statut": "ok",
+        "apercu": "Le violoncelle est un instrument à cordes frottées (mises en vibration par l'action de l'archet), pincées (pizzicato) ou plus rarement frappées avec le bois de l'archet (col legno), de la famille des …"
+      },
+      {
+        "titre": "Contrebasse",
+        "url": "https://fr.wikipedia.org/wiki/Contrebasse",
+        "statut": "ok",
+        "apercu": "La contrebasse est un instrument grave de la famille des instruments à cordes. Avant l'octobasse, la contrebasse est le plus grand (entre 1,60 m et 2,05 m) et l'un des plus graves instruments de cette…"
+      },
+      {
+        "titre": "Clarinette",
+        "url": "https://fr.wikipedia.org/wiki/Clarinette",
+        "statut": "ok",
+        "apercu": "La clarinette (du provençal clarin désignant un hautbois) est un instrument de musique à vent de la famille des bois caractérisé par son anche simple et sa perce quasi cylindrique. Elle aurait été cré…"
+      },
+      {
+        "titre": "Hautbois",
+        "url": "https://fr.wikipedia.org/wiki/Hautbois",
+        "statut": "ok",
+        "apercu": "Le hautbois est un instrument de musique à vent de la famille des bois, de perce conique et dont le son est créé par la vibration d'une anche double au passage du souffle. Son timbre peut être puissan…"
+      },
+      {
+        "titre": "Cor (instrument)",
+        "url": "https://fr.wikipedia.org/wiki/Cor_(instrument)",
+        "statut": "ok",
+        "apercu": "Le cor est le nom générique de plusieurs instruments de musique à vent."
+      },
+      {
+        "titre": "Trombone",
+        "url": "https://fr.wikipedia.org/wiki/Trombone",
+        "statut": "ok",
+        "apercu": "Le mot trombone peut désigner :\n\nun trombone, un instrument de musique,\nun trombone, un petit objet métallique recourbé des deux côtés utilisé généralement pour attacher ou unir des feuilles de papier…"
+      },
+      {
+        "titre": "Tuba (instrument)",
+        "url": "https://fr.wikipedia.org/wiki/Tuba_(instrument)",
+        "statut": "ok",
+        "apercu": "Le tuba est un instrument de musique appartenant à la famille des cuivres. Par la variété de ses tailles et de ses formes, il constitue une sous-famille des cuivres.\nLe mot « tuba » provient du latin …"
+      },
+      {
+        "titre": "Luth",
+        "url": "https://fr.wikipedia.org/wiki/Luth",
+        "statut": "ok",
+        "apercu": "Le luth est un instrument à cordes pincées. Dans le système Hornbostel-Sachs, le terme désigne aussi de manière générale tout instrument ayant les cordes parallèles à un manche.\nBien que voisin de la …"
+      },
+      {
+        "titre": "Clavecin",
+        "url": "https://fr.wikipedia.org/wiki/Clavecin",
+        "statut": "ok",
+        "apercu": "Le clavecin est un instrument de musique à cordes pincées muni d'un ou plusieurs claviers. Chacune des cordes est pincée par un dispositif nommé sautereau.\nCe terme générique désigne différents instru…"
+      },
+      {
+        "titre": "Banjo",
+        "url": "https://fr.wikipedia.org/wiki/Banjo",
+        "statut": "ok",
+        "apercu": "Le banjo est un instrument de musique à cordes pincées nord-américain. Avec sa table d'harmonie à membrane, on le distingue facilement de la guitare. Cet instrument serait un dérivé du luth ouest-afri…"
+      }
+    ],
+    "Genres musicaux": [
+      {
+        "titre": "Musique classique",
+        "url": "https://fr.wikipedia.org/wiki/Musique_classique",
+        "statut": "ok",
+        "apercu": "La musique classique ou, plus précisément, la musique classique occidentale, est le nom habituellement donné à la musique occidentale « savante » de tradition écrite. \nOn appelle couramment « musique …"
+      },
+      {
+        "titre": "Jazz",
+        "url": "https://fr.wikipedia.org/wiki/Jazz",
+        "statut": "ok",
+        "apercu": "Le jazz est un genre musical originaire du Sud des États-Unis, créé à la fin du XIXe siècle et au début du XXe siècle au sein des communautés afro-américaines. Avec plus de cent ans d'existence, du ra…"
+      },
+      {
+        "titre": "Blues",
+        "url": "https://fr.wikipedia.org/wiki/Blues",
+        "statut": "ok",
+        "apercu": "Le blues [bluz] (de l'anglais :[bluːz]) est un genre musical, vocal et instrumental dérivé des chants de travail des populations afro-américaines subissant la ségrégation raciale aux États-Unis. Le bl…"
+      },
+      {
+        "titre": "Rock",
+        "url": "https://fr.wikipedia.org/wiki/Rock",
+        "statut": "ok",
+        "apercu": "Le rock est un genre musical apparu dans les années 1950 aux États-Unis et qui se développe en différents sous-genres à partir des années 1960, notamment aux États-Unis et au Royaume-Uni.\nIl prend ses…"
+      },
+      {
+        "titre": "Pop (musique)",
+        "url": "https://fr.wikipedia.org/wiki/Pop_(musique)",
+        "statut": "ok",
+        "apercu": "La musique pop (ou simplement la pop) est un genre musical, apparu au milieu du XXe siècle au Royaume-Uni et aux États-Unis, où cette musique populaire (« popular music ») est vite qualifiée de « pop …"
+      },
+      {
+        "titre": "Hip-hop",
+        "url": "https://fr.wikipedia.org/wiki/Hip-hop",
+        "statut": "ok",
+        "apercu": "Le hip-hop est un mouvement culturel et artistique, caractérisé en premier lieu par son genre musical et l'expression de formes artistiques à l'esthétique propre et commune : graffiti, danse, language…"
+      },
+      {
+        "titre": "Reggae",
+        "url": "https://fr.wikipedia.org/wiki/Reggae",
+        "statut": "ok",
+        "apercu": "Le reggae est un genre musical issu du ska et du rocksteady qui est né au début des années 1960 en Jamaïque dont il est l'une des expressions musicales les plus populaires. Le nom de cette musique est…"
+      },
+      {
+        "titre": "Musique électronique",
+        "url": "https://fr.wikipedia.org/wiki/Musique_%C3%A9lectronique",
+        "statut": "ok",
+        "apercu": "La musique électronique est un groupe de genres musicaux dont la particularité est d'être générée essentiellement par des instruments électroniques de type synthétiseurs, claviers ou orgues électroniq…"
+      },
+      {
+        "titre": "Opéra",
+        "url": "https://fr.wikipedia.org/wiki/Op%C3%A9ra",
+        "statut": "ok",
+        "apercu": "Un opéra est, dans la musique classique occidentale, une œuvre musicale et théâtrale pour un orchestre et des chanteurs. L'opéra est l’une des formes de l'art lyrique du théâtre musical occidental.\nL'…"
+      },
+      {
+        "titre": "Symphonie",
+        "url": "https://fr.wikipedia.org/wiki/Symphonie",
+        "statut": "ok",
+        "apercu": "Une symphonie est une œuvre musicale instrumentale savante, de proportions généralement vastes, comprenant plusieurs mouvements joints ou disjoints et faisant appel aux ressources de l'orchestre symph…"
+      },
+      {
+        "titre": "Sonate",
+        "url": "https://fr.wikipedia.org/wiki/Sonate",
+        "statut": "ok",
+        "apercu": "Une sonate est une composition instrumentale de musique classique à plusieurs mouvements (par opposition à la cantate qui est chantée). Il ne faut pas confondre le nom de sonate avec celui de l'une de…"
+      },
+      {
+        "titre": "Concerto",
+        "url": "https://fr.wikipedia.org/wiki/Concerto",
+        "statut": "ok",
+        "apercu": "Le concerto (mot français d'origine italienne ; pluriel : concertos ou parfois concerti) est un genre musical composé généralement de trois mouvements (un rapide, un lent, un rapide), où un ou plusieu…"
+      },
+      {
+        "titre": "Fugue",
+        "url": "https://fr.wikipedia.org/wiki/Fugue",
+        "statut": "ok",
+        "apercu": "Une fugue est une technique d'écriture musicale, née au XVIIe siècle, du nom de « fuga » (du latin : fugere, « fuir »), une composition entièrement fondée sur ce procédé : « fuir », parce que l'audite…"
+      },
+      {
+        "titre": "Musique baroque",
+        "url": "https://fr.wikipedia.org/wiki/Musique_baroque",
+        "statut": "ok",
+        "apercu": "La musique baroque est une période qui apparaît avec le baroque au xviie siècle et évolue jusqu'à la fin du siècle suivant. Divisée en plusieurs périodes, la musique baroque recouvre différents genres…"
+      },
+      {
+        "titre": "Musique romantique",
+        "url": "https://fr.wikipedia.org/wiki/Musique_romantique",
+        "statut": "ok",
+        "apercu": "La musique romantique est un type de musique qui domine en Europe tout au long du XIXe siècle. Ce courant musical aux formes variées, qui met au premier plan l'expression de l'émotion, s'inscrit dans …"
+      },
+      {
+        "titre": "Musique contemporaine",
+        "url": "https://fr.wikipedia.org/wiki/Musique_contemporaine",
+        "statut": "ok",
+        "apercu": "La musique contemporaine est l'ensemble des courants de musique savante apparus après la fin de la Seconde Guerre mondiale. À partir des années 1950, l’émergence de mutations dans l'écriture musicale …"
+      },
+      {
+        "titre": "Musique de chambre",
+        "url": "https://fr.wikipedia.org/wiki/Musique_de_chambre",
+        "statut": "ok",
+        "apercu": "Une œuvre de musique de chambre est une composition musicale destinée à un petit ensemble de cordes, bois, cuivres ou percussions, qui traditionnellement et avant l'affirmation des concerts publics, p…"
+      },
+      {
+        "titre": "Musique folklorique",
+        "url": "https://fr.wikipedia.org/wiki/Musique_folklorique",
+        "statut": "ok",
+        "apercu": "Étymologiquement, une musique folklorique est une musique propre à un pays, une culture, un peuple, utilisant des instruments typiques de ceux-ci. Il existe de la musique folklorique polonaise, irland…"
+      },
+      {
+        "titre": "Musique traditionnelle",
+        "url": "https://fr.wikipedia.org/wiki/Musique_traditionnelle",
+        "statut": "ok",
+        "apercu": "L’expression « musiques traditionnelles » désigne des pratiques musicales issues de la tradition orale d’aires géographiques et culturelles définies.\nBien qu’elles se distinguent nécessairement des mu…"
+      },
+      {
+        "titre": "Punk (musique)",
+        "url": "https://fr.wikipedia.org/wiki/Punk_(musique)",
+        "statut": "ok",
+        "apercu": null
+      }
+    ],
+    "Compositeurs": [
+      {
+        "titre": "Ludwig van Beethoven",
+        "url": "https://fr.wikipedia.org/wiki/Ludwig_van_Beethoven",
+        "statut": "ok",
+        "apercu": "Ludwig van Beethoven (/ludvig van betɔvœn/ ; en allemand : /ˈluːtvɪç fan ˈbeːtˌhoːfn̩/ ) est un compositeur, pianiste et chef d'orchestre allemand  né le 15 ou le 16 décembre 1770 à Bonn et mort le 26…"
+      },
+      {
+        "titre": "Wolfgang Amadeus Mozart",
+        "url": "https://fr.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart",
+        "statut": "ok",
+        "apercu": "Wolfgang Amadeus Mozart ou Johannes Chrysostomus Wolfgangus Theophilus Mozart, né le 27 janvier 1756 à Salzbourg (principauté archiépiscopale de Salzbourg) et mort le 5 décembre 1791 à Vienne, est un …"
+      },
+      {
+        "titre": "Johann Sebastian Bach",
+        "url": "https://fr.wikipedia.org/wiki/Johann_Sebastian_Bach",
+        "statut": "ok",
+        "apercu": null
+      },
+      {
+        "titre": "Frédéric Chopin",
+        "url": "https://fr.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Chopin",
+        "statut": "ok",
+        "apercu": "Frédéric Chopin, né Fryderyk Franciszek Chopin le 1er mars 1810 à Żelazowa Wola (duché de Varsovie) et mort le 17 octobre 1849 dans le 2e arrondissement de Paris (Seine), est un compositeur et pianist…"
+      },
+      {
+        "titre": "Franz Schubert",
+        "url": "https://fr.wikipedia.org/wiki/Franz_Schubert",
+        "statut": "ok",
+        "apercu": "Franz Schubert ([fʁɑ̃t͡s ʃubɛʁ], en allemand : [ˈfʁant͡s ˈʃuːbɐt]), né le 31 janvier 1797 à Lichtental (dans la banlieue de Vienne) et mort le 19 novembre 1828 à Vienne, est un compositeur autrichien.…"
+      },
+      {
+        "titre": "Johannes Brahms",
+        "url": "https://fr.wikipedia.org/wiki/Johannes_Brahms",
+        "statut": "ok",
+        "apercu": "Johannes Brahms, né le 7 mai 1833 à Hambourg et mort le 3 avril 1897 à Vienne, est un compositeur, pianiste et chef d'orchestre allemand. Johannes Brahms est l'un des plus importants musiciens de la p…"
+      },
+      {
+        "titre": "Claude Debussy",
+        "url": "https://fr.wikipedia.org/wiki/Claude_Debussy",
+        "statut": "ok",
+        "apercu": "Claude Debussy est un compositeur français né le 22 août 1862 à Saint-Germain-en-Laye et mort le 25 mars 1918 à Paris.\nEn posant en 1894 avec Prélude à l'Après-midi d'un faune le premier jalon de la m…"
+      },
+      {
+        "titre": "Igor Stravinsky",
+        "url": "https://fr.wikipedia.org/wiki/Igor_Stravinsky",
+        "statut": "ok",
+        "apercu": "Igor Fiodorovitch Stravinsky (en russe : Игорь Фёдорович Стравинский), né le 17 juin 1882 à Oranienbaum en Russie et mort le 6 avril 1971 à New York aux États-Unis, est un compositeur, chef d'orchestr…"
+      },
+      {
+        "titre": "Giuseppe Verdi",
+        "url": "https://fr.wikipedia.org/wiki/Giuseppe_Verdi",
+        "statut": "ok",
+        "apercu": "Giuseppe Fortunino Francesco Verdi (/dʒuˈzɛppe fortuˈniːno franˈt͡ʃesko ˈverdi/), né Joseph Fortunin François Verdi le 10 octobre 1813 à Roncole et mort le 27 janvier 1901 à Milan, est un compositeur …"
+      },
+      {
+        "titre": "Richard Wagner",
+        "url": "https://fr.wikipedia.org/wiki/Richard_Wagner",
+        "statut": "ok",
+        "apercu": "Wilhelm Richard Wagner [ˈʁɪçaʁt ˈvaːɡnɐ] , né le 22 mai 1813 à Leipzig et mort le 13 février 1883 à Venise, est un compositeur, directeur de théâtre, écrivain et chef d'orchestre allemand de la périod…"
+      },
+      {
+        "titre": "Franz Liszt",
+        "url": "https://fr.wikipedia.org/wiki/Franz_Liszt",
+        "statut": "ok",
+        "apercu": "Franz Liszt (Liszt Ferenc en hongrois) est un compositeur, transcripteur et pianiste virtuose hongrois né le 22 octobre 1811 à Doborján en Hongrie (empire d'Autriche) et mort le 31 juillet 1886 à Bayr…"
+      },
+      {
+        "titre": "Pyotr Ilyich Tchaikovsky",
+        "url": "https://fr.wikipedia.org/wiki/Pyotr_Ilyich_Tchaikovsky",
+        "statut": "ok",
+        "apercu": null
+      },
+      {
+        "titre": "Antonio Vivaldi",
+        "url": "https://fr.wikipedia.org/wiki/Antonio_Vivaldi",
+        "statut": "ok",
+        "apercu": "Antonio Lucio Vivaldi [anˈtɔːnjo ˈluːtʃo viˈvaldi] , né le 4 mars 1678 à Venise et mort le 28 juillet 1741 à Vienne, est un violoniste et compositeur de musique baroque italien. Il était également prê…"
+      },
+      {
+        "titre": "Georg Friedrich Haendel",
+        "url": "https://fr.wikipedia.org/wiki/Georg_Friedrich_Haendel",
+        "statut": "ok",
+        "apercu": "Georg Friedrich Haendel [ˈɡeːɔʁk ˈfʁiːdʁɪç ˈhɛndəl]  ou Georg Friederich  Händel (en anglais  George Frideric Handel [dʒɔː(ɹ)dʒ ˈfɹɛd(ə)ɹɪk ˈhændəl]) est un compositeur saxon, devenu sujet anglais, né…"
+      },
+      {
+        "titre": "Joseph Haydn",
+        "url": "https://fr.wikipedia.org/wiki/Joseph_Haydn",
+        "statut": "ok",
+        "apercu": "Franz Joseph Haydn (/ˈhaɪdən/) () — il n'utilisait jamais son premier prénom —, né le 31 mars 1732 à Rohrau sur la Leitha en Basse-Autriche et mort le 31 mai 1809 à Vienne, est un compositeur autrichi…"
+      },
+      {
+        "titre": "Hector Berlioz",
+        "url": "https://fr.wikipedia.org/wiki/Hector_Berlioz",
+        "statut": "ok",
+        "apercu": "Hector Berlioz (/bɛʁ.ljoz/ en français, /'bɛr.ʎo/ en arpitan) est un compositeur, chef d'orchestre, critique musical et écrivain français, né le 11 décembre 1803 à La Côte-Saint-André (Isère) et mort …"
+      },
+      {
+        "titre": "Dmitri Chostakovitch",
+        "url": "https://fr.wikipedia.org/wiki/Dmitri_Chostakovitch",
+        "statut": "ok",
+        "apercu": "Dmitri Dmitrievitch Chostakovitch (en russe : Дмитрий Дмитриевич Шостакович, /ˈdmʲitrʲɪj ˈdmʲitrʲɪɪvʲɪtɕ ʂəstɐˈkovʲɪtɕ/ ), né le 12 septembre 1906 (25 septembre 1906 dans le calendrier grégorien) à Sa…"
+      },
+      {
+        "titre": "Sergueï Prokofiev",
+        "url": "https://fr.wikipedia.org/wiki/Sergue%C3%AF_Prokofiev",
+        "statut": "ok",
+        "apercu": "Sergueï Sergueïevitch Prokofiev, généralement appelé Serge Prokofiev en France, est un compositeur, pianiste et chef d'orchestre russe, né le 11 avril 1891 (23 avril dans le calendrier grégorien) à So…"
+      },
+      {
+        "titre": "Maurice Ravel",
+        "url": "https://fr.wikipedia.org/wiki/Maurice_Ravel",
+        "statut": "ok",
+        "apercu": "Maurice Ravel est un compositeur français né à Ciboure le 7 mars 1875 et mort à Paris 16e le 28 décembre 1937.\nAvec son aîné Claude Debussy, Ravel fut la figure la plus influente de la musique françai…"
+      },
+      {
+        "titre": "Erik Satie",
+        "url": "https://fr.wikipedia.org/wiki/Erik_Satie",
+        "statut": "ok",
+        "apercu": "Erik Satie, né le 17 mai 1866 à Honfleur et mort le 1er juillet 1925 à Paris 14e, est un compositeur et pianiste français.\nInclassable, associé un temps au symbolisme, il est reconnu comme précurseur …"
+      }
+    ],
+    "Histoire": [
+      {
+        "titre": "Histoire de la musique",
+        "url": "https://fr.wikipedia.org/wiki/Histoire_de_la_musique",
+        "statut": "ok",
+        "apercu": "L'histoire de la musique est l'étude de l'évolution de tous les types de musiques de toutes les régions du monde.\nLa musique existe dans toutes les sociétés humaines, depuis la Préhistoire, probableme…"
+      },
+      {
+        "titre": "Musique de la Grèce antique",
+        "url": "https://fr.wikipedia.org/wiki/Musique_de_la_Gr%C3%A8ce_antique",
+        "statut": "ok",
+        "apercu": "La musique tient une place importante dans la vie sociale, politique et religieuse de la Grèce antique. Pour les Grecs, la musique est le plus beau des arts, en même temps qu'une science, objet des pl…"
+      },
+      {
+        "titre": "Musique médiévale",
+        "url": "https://fr.wikipedia.org/wiki/Musique_m%C3%A9di%C3%A9vale",
+        "statut": "ok",
+        "apercu": "La musique médiévale concerne une période couvrant à peu près 800 ans de l'histoire religieuse et profane, que l'on fait commencer avec les premières musiques chrétiennes d'avant la réforme grégorienn…"
+      },
+      {
+        "titre": "Musique de la Renaissance",
+        "url": "https://fr.wikipedia.org/wiki/Musique_de_la_Renaissance",
+        "statut": "ok",
+        "apercu": "On désigne par musique de la Renaissance la musique européenne composée entre le XVe siècle, fin de la musique médiévale, et le XVIIe siècle, qui marque le début de la période baroque. Il s'agit d'une…"
+      },
+      {
+        "titre": "Classicisme viennois",
+        "url": "https://fr.wikipedia.org/wiki/Classicisme_viennois",
+        "statut": "ok",
+        "apercu": "Le classicisme viennois appelé aussi Première école viennoise  prend forme à Vienne avec Haydn (1732-1809), Mozart (1756-1791) et Beethoven (1770-1827) dans la seconde moitié du XVIIIe siècle. Schuber…"
+      },
+      {
+        "titre": "Romantisme musical",
+        "url": "https://fr.wikipedia.org/wiki/Romantisme_musical",
+        "statut": "ok",
+        "apercu": null
+      },
+      {
+        "titre": "Atonalité",
+        "url": "https://fr.wikipedia.org/wiki/Atonalit%C3%A9",
+        "statut": "ok",
+        "apercu": null
+      },
+      {
+        "titre": "Chant grégorien",
+        "url": "https://fr.wikipedia.org/wiki/Chant_gr%C3%A9gorien",
+        "statut": "ok",
+        "apercu": "Le chant grégorien est le chant liturgique officiel et ordinaire de l'Église catholique. Issu du chant vieux-romain et du chant gallican, il reste pratiqué de nos jours dans un certain nombre d'église…"
+      },
+      {
+        "titre": "Troubadour",
+        "url": "https://fr.wikipedia.org/wiki/Troubadour",
+        "statut": "ok",
+        "apercu": "Un troubadour (de l'occitan trobador) est un compositeur, poète, et musicien médiéval de langue d'oc qui interprétait ses œuvres poétiques ou les faisait interpréter par des jongleurs ou des ménestrel…"
+      },
+      {
+        "titre": "Ars nova",
+        "url": "https://fr.wikipedia.org/wiki/Ars_nova",
+        "statut": "ok",
+        "apercu": "L'Ars nova est un courant de la musique médiévale occidentale, centré sur la France, et qui englobe une période comprise entre l'écriture du Roman de Fauvel (1310-1314) et la mort de Guillaume de Mach…"
+      }
+    ],
+    "Acoustique": [
+      {
+        "titre": "Son (physique)",
+        "url": "https://fr.wikipedia.org/wiki/Son_(physique)",
+        "statut": "ok",
+        "apercu": null
+      },
+      {
+        "titre": "Acoustique musicale",
+        "url": "https://fr.wikipedia.org/wiki/Acoustique_musicale",
+        "statut": "ok",
+        "apercu": "L'acoustique musicale est le domaine de l'acoustique consacré à l'étude des sons musicaux et leur mode de production par les instruments de musique et la voix.\n\n« La musique est une science qui doit a…"
+      },
+      {
+        "titre": "Fréquence",
+        "url": "https://fr.wikipedia.org/wiki/Fr%C3%A9quence",
+        "statut": "ok",
+        "apercu": "En physique, la fréquence est le nombre de fois qu'un phénomène périodique se reproduit par unité de temps. Dans le Système international d'unités, la fréquence s'exprime en hertz (Hz).\n\nLorsque le ph…"
+      },
+      {
+        "titre": "Hauteur (musique)",
+        "url": "https://fr.wikipedia.org/wiki/Hauteur_(musique)",
+        "statut": "ok",
+        "apercu": "En musique, la hauteur est l'une des caractéristiques essentielles d'un son ou note, les autres étant la durée, l'intensité, le timbre et l'expression.\nEn musique occidentale, on désigne la hauteur pa…"
+      },
+      {
+        "titre": "Harmonique",
+        "url": "https://fr.wikipedia.org/wiki/Harmonique",
+        "statut": "ok",
+        "apercu": "Un harmonique  est un élément constitutif d'un phénomène périodique ou vibratoire. Le mot « harmonique » est masculin, mais il est parfois utilisé improprement au féminin, en sous-entendant la fréquen…"
+      },
+      {
+        "titre": "Résonance",
+        "url": "https://fr.wikipedia.org/wiki/R%C3%A9sonance",
+        "statut": "ok",
+        "apercu": "La résonance est un phénomène selon lequel certains systèmes physiques (électriques, mécaniques, etc.) sont sensibles à certaines fréquences. Un système résonant peut accumuler une énergie, si celle-c…"
+      },
+      {
+        "titre": "Vibration",
+        "url": "https://fr.wikipedia.org/wiki/Vibration",
+        "statut": "ok",
+        "apercu": "Une vibration est un mouvement d'oscillation mécanique autour d'une position d'équilibre stable ou d'une trajectoire moyenne. La vibration d'un système peut être libre ou forcée."
+      },
+      {
+        "titre": "Onde sonore",
+        "url": "https://fr.wikipedia.org/wiki/Onde_sonore",
+        "statut": "ok",
+        "apercu": "Une onde sonore est une onde longitudinale produite par une perturbation suffisamment rapide de la pression atmosphérique pour être perçue par des êtres vivants, oscillation ou impulsion. Dans le cas …"
+      },
+      {
+        "titre": "Décibel",
+        "url": "https://fr.wikipedia.org/wiki/D%C3%A9cibel",
+        "statut": "ok",
+        "apercu": "Le décibel, de symbole dB, est une unité de mesure égale à un dixième de bel permettant à l'origine d'exprimer le rapport entre deux puissances comme dix fois le logarithme décimal de ce rapport. Depu…"
+      },
+      {
+        "titre": "Psychoacoustique",
+        "url": "https://fr.wikipedia.org/wiki/Psychoacoustique",
+        "statut": "ok",
+        "apercu": "La psychoacoustique est la branche de la psychophysique qui étudie les rapports entre les perceptions auditives de l'être humain et les sons qui parviennent à ses oreilles. Elle fait appel à l'acousti…"
+      }
+    ],
+    "Notation": [
+      {
+        "titre": "Notation musicale",
+        "url": "https://fr.wikipedia.org/wiki/Notation_musicale",
+        "statut": "ok",
+        "apercu": "La notation musicale est la transcription sur un support d'une œuvre musicale afin de la conserver, de la diffuser et de l'interpréter ultérieurement.\nD'une manière générale, quelles que soient les ép…"
+      },
+      {
+        "titre": "Portée (musique)",
+        "url": "https://fr.wikipedia.org/wiki/Port%C3%A9e_(musique)",
+        "statut": "ok",
+        "apercu": "Dans le solfège, la portée est un ensemble de cinq lignes horizontales et de quatre interlignes permettant de représenter les hauteurs. Elle est destinée à recevoir les figures de notes et de silences…"
+      },
+      {
+        "titre": "Clé (musique)",
+        "url": "https://fr.wikipedia.org/wiki/Cl%C3%A9_(musique)",
+        "statut": "ok",
+        "apercu": null
+      },
+      {
+        "titre": "Mesure (musique)",
+        "url": "https://fr.wikipedia.org/wiki/Mesure_(musique)",
+        "statut": "ok",
+        "apercu": "La mesure recouvre, dans la terminologie solfégique francophone, plusieurs aspects musicaux intrinsèquement liés les uns aux autres, d'une part, la segmentation et d'autre part, la métrique. \nDans un …"
+      },
+      {
+        "titre": "Nuance (musique)",
+        "url": "https://fr.wikipedia.org/wiki/Nuance_(musique)",
+        "statut": "ok",
+        "apercu": "Dans la musique occidentale, une nuance est un signe noté sur une partition qui indique l'intensité relative d'une note, d'une phrase, ou encore d'un passage entier d'une œuvre musicale. Les nuances p…"
+      },
+      {
+        "titre": "Barre de mesure",
+        "url": "https://fr.wikipedia.org/wiki/Barre_de_mesure",
+        "statut": "ok",
+        "apercu": "En notation musicale, une barre de mesure est un trait vertical permettant de matérialiser sur la partition les cycles de temps que sont les mesures. En conséquence, une mesure est la période comprise…"
+      },
+      {
+        "titre": "Tablature",
+        "url": "https://fr.wikipedia.org/wiki/Tablature",
+        "statut": "ok",
+        "apercu": "En musique, la tablature (ou plutôt les tablatures, car il en existe différents types) est un système de notation d'une pièce instrumentale indiquant, par une représentation schématisée des parties d'…"
+      },
+      {
+        "titre": "Chiffrage des accords",
+        "url": "https://fr.wikipedia.org/wiki/Chiffrage_des_accords",
+        "statut": "ok",
+        "apercu": "Le chiffrage des accords est une notation représentant les accords dans la musique tonale.\nUtilisé à l'origine à la période baroque (XVIIe et XVIIIe siècles) pour construire la basse continue, il sert…"
+      },
+      {
+        "titre": "Articulation (musique)",
+        "url": "https://fr.wikipedia.org/wiki/Articulation_(musique)",
+        "statut": "ok",
+        "apercu": "L'articulation est l'art d'imiter les inflexions de la voix humaine, dans la pratique d'un instrument de musique. L'articulation consiste essentiellement dans la maîtrise des attaques, ainsi que dans …"
+      },
+      {
+        "titre": "Phrasé",
+        "url": "https://fr.wikipedia.org/wiki/Phras%C3%A9",
+        "statut": "ok",
+        "apercu": "Un phrasé indique la façon d'exécuter les différentes phrases musicales."
+      }
+    ],
+    "Voix et chant": [
+      {
+        "titre": "Voix chantée",
+        "url": "https://fr.wikipedia.org/wiki/Voix_chant%C3%A9e",
+        "statut": "ok",
+        "apercu": null
+      },
+      {
+        "titre": "Soprano",
+        "url": "https://fr.wikipedia.org/wiki/Soprano",
+        "statut": "ok",
+        "apercu": "Dans la musique occidentale, au sein de la musique classique, le terme soprano (ou soprane) désigne avant tout le pupitre dont la tessiture se situe « au-dessus » (de celui des altos, ténors et basses…"
+      },
+      {
+        "titre": "Alto (voix)",
+        "url": "https://fr.wikipedia.org/wiki/Alto_(voix)",
+        "statut": "ok",
+        "apercu": "Dans la musique classique, un alto (au pluriel, des altos ou alti) désigne avant tout le pupitre de chœur dont la tessiture se situe en dessous des sopranos et au-dessus des ténors."
+      },
+      {
+        "titre": "Ténor",
+        "url": "https://fr.wikipedia.org/wiki/T%C3%A9nor",
+        "statut": "ok",
+        "apercu": "Dans la musique occidentale, le mot ténor (du latin tenere « tenir ») désigne la tessiture d'une voix ou le registre d'un instrument situés entre l'alto et la basse. Dans la musique vocale (baroque ex…"
+      },
+      {
+        "titre": "Basse (voix)",
+        "url": "https://fr.wikipedia.org/wiki/Basse_(voix)",
+        "statut": "ok",
+        "apercu": "Dans la musique occidentale, une basse est un chanteur à la voix grave, chargé à l'origine d'exécuter la partie « basse » d'un chant polyphonique."
+      },
+      {
+        "titre": "Chœur (musique)",
+        "url": "https://fr.wikipedia.org/wiki/Ch%C5%93ur_(musique)",
+        "statut": "ok",
+        "apercu": "Le chœur (/kœʁ/, du latin : chorus, lui-même du grec ancien : χορός / khorós) désignait dans la haute Antiquité grecque une danse de cérémonial ou des danseurs cérémoniaux. Puis, ce fut un petit group…"
+      },
+      {
+        "titre": "Technique vocale",
+        "url": "https://fr.wikipedia.org/wiki/Technique_vocale",
+        "statut": "ok",
+        "apercu": "La technique vocale regroupe un ensemble de connaissances (anatomiques notamment) et de pratiques ayant pour but de développer et préserver la voix d'un chanteur ou d'un professionnel de la voix parlé…"
+      },
+      {
+        "titre": "Chant lyrique",
+        "url": "https://fr.wikipedia.org/wiki/Chant_lyrique",
+        "statut": "ok",
+        "apercu": "Le chant lyrique est une technique de chant largement employée dans la musique classique et en particulier dans les œuvres de l'art lyrique (opéras, lieder, cantates)."
+      },
+      {
+        "titre": "Aria",
+        "url": "https://fr.wikipedia.org/wiki/Aria",
+        "statut": "ok",
+        "apercu": "Une aria est une pièce de musique écrite pour une voix seule dans un opéra ou dans toute autre forme musicale italienne (ou se référant à une inspiration d'origine italienne : cantate, oratorio) de l'…"
+      },
+      {
+        "titre": "Lied",
+        "url": "https://fr.wikipedia.org/wiki/Lied",
+        "statut": "ok",
+        "apercu": "Un lied, prononcé [lid] (mot allemand signifiant littéralement « chanson » ; au pluriel : lieder [li.dœʁ] ou quelquefois lieds qui se prononce comme le singulier), est un poème germanique chanté et ac…"
+      }
+    ],
+    "Musique et société": [
+      {
+        "titre": "Industrie musicale",
+        "url": "https://fr.wikipedia.org/wiki/Industrie_musicale",
+        "statut": "ok",
+        "apercu": "L'industrie musicale (appelée également industrie du disque) est l'ensemble des activités qui contribuent à l'offre de produits musicaux obtenus par un processus industriel de reproduction (en général…"
+      },
+      {
+        "titre": "Droit d'auteur",
+        "url": "https://fr.wikipedia.org/wiki/Droit_d%27auteur",
+        "statut": "ok",
+        "apercu": "Le droit d'auteur est l'ensemble des droits dont dispose un auteur ou ses ayants droit (héritiers, sociétés de production), sur ses œuvres originales. Il définit notamment les règles et conditions d'u…"
+      },
+      {
+        "titre": "Musicologie",
+        "url": "https://fr.wikipedia.org/wiki/Musicologie",
+        "statut": "ok",
+        "apercu": "La musicologie (en allemand : Musikwissenschaft) est l'étude scientifique de la musique. Elle forme un domaine des sciences humaines. Un chercheur qui participe à cette étude est un musicologue. Le te…"
+      },
+      {
+        "titre": "Ethnomusicologie",
+        "url": "https://fr.wikipedia.org/wiki/Ethnomusicologie",
+        "statut": "ok",
+        "apercu": "L’ethnomusicologie est une science humaine qui étudie les rapports entre musique et société.\nD'abord appelée « musicologie comparée », cette discipline proche de la sociologie de la musique issue de l…"
+      },
+      {
+        "titre": "Éducation musicale",
+        "url": "https://fr.wikipedia.org/wiki/%C3%89ducation_musicale",
+        "statut": "ok",
+        "apercu": "L'éducation musicale est, d'une part, l'enseignement et l'apprentissage de la musique (académique, populaire et du monde) à un niveau débutant et, d'autre part, l'éducation aux aspects sociaux et cult…"
+      },
+      {
+        "titre": "Conservatoire national supérieur de musique et de danse de Paris",
+        "url": "https://fr.wikipedia.org/wiki/Conservatoire_national_sup%C3%A9rieur_de_musique_et_de_danse_de_Paris",
+        "statut": "ok",
+        "apercu": "Le Conservatoire national supérieur de musique et de danse de Paris (CNSMD de Paris ou Conservatoire de Paris) est un établissement public à caractère administratif classé conservatoire national supér…"
+      },
+      {
+        "titre": "Concert",
+        "url": "https://fr.wikipedia.org/wiki/Concert",
+        "statut": "ok",
+        "apercu": "Un concert est une représentation musicale d'un ou plusieurs musiciens — chanteurs ou instrumentistes —, en public, dans un lieu aménagé à cette occasion — une salle, un jardin, une église, une place,…"
+      },
+      {
+        "titre": "Festival de musique",
+        "url": "https://fr.wikipedia.org/wiki/Festival_de_musique",
+        "statut": "ok",
+        "apercu": "Un festival de musique est une manifestation artistique annuelle ou ponctuelle pouvant se dérouler sur plusieurs jours durant lesquels des artistes évoluent selon un programme ou une thématique défini…"
+      },
+      {
+        "titre": "Enregistrement sonore",
+        "url": "https://fr.wikipedia.org/wiki/Enregistrement_sonore",
+        "statut": "ok",
+        "apercu": "L'enregistrement sonore est l'opération qui consiste à garder une trace durable d'un son en vue de l'écouter plus tard. L'objectif de conserver une mémoire fiable des sons s'inscrit dans l'histoire de…"
+      },
+      {
+        "titre": "Phonogramme (support audio)",
+        "url": "https://fr.wikipedia.org/wiki/Phonogramme",
+        "statut": "ok",
+        "apercu": "Un phonogramme est une fixation sur un support matériel de sons provenant d'une interprétation musicale ou d'une composition sonore. Les supports de phonogrammes ont évolué du cylindre de cire (Edison…"
+      }
+    ]
+  },
+  "liste_alphabetique": [
+    {
+      "titre": "Accord (musique)",
+      "categorie": "Théorie musicale",
+      "url": "https://fr.wikipedia.org/wiki/Accord_(musique)"
+    },
+    {
+      "titre": "Acoustique musicale",
+      "categorie": "Acoustique",
+      "url": "https://fr.wikipedia.org/wiki/Acoustique_musicale"
+    },
+    {
+      "titre": "Alto (voix)",
+      "categorie": "Voix et chant",
+      "url": "https://fr.wikipedia.org/wiki/Alto_(voix)"
+    },
+    {
+      "titre": "Antonio Vivaldi",
+      "categorie": "Compositeurs",
+      "url": "https://fr.wikipedia.org/wiki/Antonio_Vivaldi"
+    },
+    {
+      "titre": "Aria",
+      "categorie": "Voix et chant",
+      "url": "https://fr.wikipedia.org/wiki/Aria"
+    },
+    {
+      "titre": "Ars nova",
+      "categorie": "Histoire",
+      "url": "https://fr.wikipedia.org/wiki/Ars_nova"
+    },
+    {
+      "titre": "Articulation (musique)",
+      "categorie": "Notation",
+      "url": "https://fr.wikipedia.org/wiki/Articulation_(musique)"
+    },
+    {
+      "titre": "Atonalité",
+      "categorie": "Histoire",
+      "url": "https://fr.wikipedia.org/wiki/Atonalit%C3%A9"
+    },
+    {
+      "titre": "Banjo",
+      "categorie": "Instruments",
+      "url": "https://fr.wikipedia.org/wiki/Banjo"
+    },
+    {
+      "titre": "Barre de mesure",
+      "categorie": "Notation",
+      "url": "https://fr.wikipedia.org/wiki/Barre_de_mesure"
+    },
+    {
+      "titre": "Basse (voix)",
+      "categorie": "Voix et chant",
+      "url": "https://fr.wikipedia.org/wiki/Basse_(voix)"
+    },
+    {
+      "titre": "Blues",
+      "categorie": "Genres musicaux",
+      "url": "https://fr.wikipedia.org/wiki/Blues"
+    },
+    {
+      "titre": "Chant grégorien",
+      "categorie": "Histoire",
+      "url": "https://fr.wikipedia.org/wiki/Chant_gr%C3%A9gorien"
+    },
+    {
+      "titre": "Chant lyrique",
+      "categorie": "Voix et chant",
+      "url": "https://fr.wikipedia.org/wiki/Chant_lyrique"
+    },
+    {
+      "titre": "Chiffrage des accords",
+      "categorie": "Notation",
+      "url": "https://fr.wikipedia.org/wiki/Chiffrage_des_accords"
+    },
+    {
+      "titre": "Chœur (musique)",
+      "categorie": "Voix et chant",
+      "url": "https://fr.wikipedia.org/wiki/Ch%C5%93ur_(musique)"
+    },
+    {
+      "titre": "Clarinette",
+      "categorie": "Instruments",
+      "url": "https://fr.wikipedia.org/wiki/Clarinette"
+    },
+    {
+      "titre": "Classicisme viennois",
+      "categorie": "Histoire",
+      "url": "https://fr.wikipedia.org/wiki/Classicisme_viennois"
+    },
+    {
+      "titre": "Claude Debussy",
+      "categorie": "Compositeurs",
+      "url": "https://fr.wikipedia.org/wiki/Claude_Debussy"
+    },
+    {
+      "titre": "Clavecin",
+      "categorie": "Instruments",
+      "url": "https://fr.wikipedia.org/wiki/Clavecin"
+    },
+    {
+      "titre": "Clé (musique)",
+      "categorie": "Notation",
+      "url": "https://fr.wikipedia.org/wiki/Cl%C3%A9_(musique)"
+    },
+    {
+      "titre": "Concert",
+      "categorie": "Musique et société",
+      "url": "https://fr.wikipedia.org/wiki/Concert"
+    },
+    {
+      "titre": "Concerto",
+      "categorie": "Genres musicaux",
+      "url": "https://fr.wikipedia.org/wiki/Concerto"
+    },
+    {
+      "titre": "Conservatoire national supérieur de musique et de danse de Paris",
+      "categorie": "Musique et société",
+      "url": "https://fr.wikipedia.org/wiki/Conservatoire_national_sup%C3%A9rieur_de_musique_et_de_danse_de_Paris"
+    },
+    {
+      "titre": "Contrebasse",
+      "categorie": "Instruments",
+      "url": "https://fr.wikipedia.org/wiki/Contrebasse"
+    },
+    {
+      "titre": "Contrepoint",
+      "categorie": "Théorie musicale",
+      "url": "https://fr.wikipedia.org/wiki/Contrepoint"
+    },
+    {
+      "titre": "Cor (instrument)",
+      "categorie": "Instruments",
+      "url": "https://fr.wikipedia.org/wiki/Cor_(instrument)"
+    },
+    {
+      "titre": "Décibel",
+      "categorie": "Acoustique",
+      "url": "https://fr.wikipedia.org/wiki/D%C3%A9cibel"
+    },
+    {
+      "titre": "Dmitri Chostakovitch",
+      "categorie": "Compositeurs",
+      "url": "https://fr.wikipedia.org/wiki/Dmitri_Chostakovitch"
+    },
+    {
+      "titre": "Droit d'auteur",
+      "categorie": "Musique et société",
+      "url": "https://fr.wikipedia.org/wiki/Droit_d%27auteur"
+    },
+    {
+      "titre": "Éducation musicale",
+      "categorie": "Musique et société",
+      "url": "https://fr.wikipedia.org/wiki/%C3%89ducation_musicale"
+    },
+    {
+      "titre": "Enregistrement sonore",
+      "categorie": "Musique et société",
+      "url": "https://fr.wikipedia.org/wiki/Enregistrement_sonore"
+    },
+    {
+      "titre": "Erik Satie",
+      "categorie": "Compositeurs",
+      "url": "https://fr.wikipedia.org/wiki/Erik_Satie"
+    },
+    {
+      "titre": "Ethnomusicologie",
+      "categorie": "Musique et société",
+      "url": "https://fr.wikipedia.org/wiki/Ethnomusicologie"
+    },
+    {
+      "titre": "Festival de musique",
+      "categorie": "Musique et société",
+      "url": "https://fr.wikipedia.org/wiki/Festival_de_musique"
+    },
+    {
+      "titre": "Flûte traversière",
+      "categorie": "Instruments",
+      "url": "https://fr.wikipedia.org/wiki/Fl%C3%BBte_traversi%C3%A8re"
+    },
+    {
+      "titre": "Franz Liszt",
+      "categorie": "Compositeurs",
+      "url": "https://fr.wikipedia.org/wiki/Franz_Liszt"
+    },
+    {
+      "titre": "Franz Schubert",
+      "categorie": "Compositeurs",
+      "url": "https://fr.wikipedia.org/wiki/Franz_Schubert"
+    },
+    {
+      "titre": "Frédéric Chopin",
+      "categorie": "Compositeurs",
+      "url": "https://fr.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Chopin"
+    },
+    {
+      "titre": "Fréquence",
+      "categorie": "Acoustique",
+      "url": "https://fr.wikipedia.org/wiki/Fr%C3%A9quence"
+    },
+    {
+      "titre": "Fugue",
+      "categorie": "Genres musicaux",
+      "url": "https://fr.wikipedia.org/wiki/Fugue"
+    },
+    {
+      "titre": "Gamme diatonique",
+      "categorie": "Théorie musicale",
+      "url": "https://fr.wikipedia.org/wiki/Gamme_diatonique"
+    },
+    {
+      "titre": "Gamme musicale",
+      "categorie": "Théorie musicale",
+      "url": "https://fr.wikipedia.org/wiki/Gamme_musicale"
+    },
+    {
+      "titre": "Gamme pentatonique",
+      "categorie": "Théorie musicale",
+      "url": "https://fr.wikipedia.org/wiki/Gamme_pentatonique"
+    },
+    {
+      "titre": "Georg Friedrich Haendel",
+      "categorie": "Compositeurs",
+      "url": "https://fr.wikipedia.org/wiki/Georg_Friedrich_Haendel"
+    },
+    {
+      "titre": "Giuseppe Verdi",
+      "categorie": "Compositeurs",
+      "url": "https://fr.wikipedia.org/wiki/Giuseppe_Verdi"
+    },
+    {
+      "titre": "Guitare",
+      "categorie": "Instruments",
+      "url": "https://fr.wikipedia.org/wiki/Guitare"
+    },
+    {
+      "titre": "Harmonie (musique)",
+      "categorie": "Théorie musicale",
+      "url": "https://fr.wikipedia.org/wiki/Harmonie_(musique)"
+    },
+    {
+      "titre": "Harmonique",
+      "categorie": "Acoustique",
+      "url": "https://fr.wikipedia.org/wiki/Harmonique"
+    },
+    {
+      "titre": "Harpe",
+      "categorie": "Instruments",
+      "url": "https://fr.wikipedia.org/wiki/Harpe"
+    },
+    {
+      "titre": "Hautbois",
+      "categorie": "Instruments",
+      "url": "https://fr.wikipedia.org/wiki/Hautbois"
+    },
+    {
+      "titre": "Hauteur (musique)",
+      "categorie": "Acoustique",
+      "url": "https://fr.wikipedia.org/wiki/Hauteur_(musique)"
+    },
+    {
+      "titre": "Hector Berlioz",
+      "categorie": "Compositeurs",
+      "url": "https://fr.wikipedia.org/wiki/Hector_Berlioz"
+    },
+    {
+      "titre": "Hip-hop",
+      "categorie": "Genres musicaux",
+      "url": "https://fr.wikipedia.org/wiki/Hip-hop"
+    },
+    {
+      "titre": "Histoire de la musique",
+      "categorie": "Histoire",
+      "url": "https://fr.wikipedia.org/wiki/Histoire_de_la_musique"
+    },
+    {
+      "titre": "Igor Stravinsky",
+      "categorie": "Compositeurs",
+      "url": "https://fr.wikipedia.org/wiki/Igor_Stravinsky"
+    },
+    {
+      "titre": "Industrie musicale",
+      "categorie": "Musique et société",
+      "url": "https://fr.wikipedia.org/wiki/Industrie_musicale"
+    },
+    {
+      "titre": "Instrument de musique",
+      "categorie": "Instruments",
+      "url": "https://fr.wikipedia.org/wiki/Instrument_de_musique"
+    },
+    {
+      "titre": "Intervalle (musique)",
+      "categorie": "Théorie musicale",
+      "url": "https://fr.wikipedia.org/wiki/Intervalle_(musique)"
+    },
+    {
+      "titre": "Jazz",
+      "categorie": "Genres musicaux",
+      "url": "https://fr.wikipedia.org/wiki/Jazz"
+    },
+    {
+      "titre": "Johann Sebastian Bach",
+      "categorie": "Compositeurs",
+      "url": "https://fr.wikipedia.org/wiki/Johann_Sebastian_Bach"
+    },
+    {
+      "titre": "Johannes Brahms",
+      "categorie": "Compositeurs",
+      "url": "https://fr.wikipedia.org/wiki/Johannes_Brahms"
+    },
+    {
+      "titre": "Joseph Haydn",
+      "categorie": "Compositeurs",
+      "url": "https://fr.wikipedia.org/wiki/Joseph_Haydn"
+    },
+    {
+      "titre": "Lied",
+      "categorie": "Voix et chant",
+      "url": "https://fr.wikipedia.org/wiki/Lied"
+    },
+    {
+      "titre": "Ludwig van Beethoven",
+      "categorie": "Compositeurs",
+      "url": "https://fr.wikipedia.org/wiki/Ludwig_van_Beethoven"
+    },
+    {
+      "titre": "Luth",
+      "categorie": "Instruments",
+      "url": "https://fr.wikipedia.org/wiki/Luth"
+    },
+    {
+      "titre": "Maurice Ravel",
+      "categorie": "Compositeurs",
+      "url": "https://fr.wikipedia.org/wiki/Maurice_Ravel"
+    },
+    {
+      "titre": "Mélodie",
+      "categorie": "Théorie musicale",
+      "url": "https://fr.wikipedia.org/wiki/M%C3%A9lodie"
+    },
+    {
+      "titre": "Mesure (musique)",
+      "categorie": "Notation",
+      "url": "https://fr.wikipedia.org/wiki/Mesure_(musique)"
+    },
+    {
+      "titre": "Mode (musique)",
+      "categorie": "Théorie musicale",
+      "url": "https://fr.wikipedia.org/wiki/Mode_(musique)"
+    },
+    {
+      "titre": "Musicologie",
+      "categorie": "Musique et société",
+      "url": "https://fr.wikipedia.org/wiki/Musicologie"
+    },
+    {
+      "titre": "Musique",
+      "categorie": "Généralités",
+      "url": "https://fr.wikipedia.org/wiki/Musique"
+    },
+    {
+      "titre": "Musique baroque",
+      "categorie": "Genres musicaux",
+      "url": "https://fr.wikipedia.org/wiki/Musique_baroque"
+    },
+    {
+      "titre": "Musique classique",
+      "categorie": "Genres musicaux",
+      "url": "https://fr.wikipedia.org/wiki/Musique_classique"
+    },
+    {
+      "titre": "Musique contemporaine",
+      "categorie": "Genres musicaux",
+      "url": "https://fr.wikipedia.org/wiki/Musique_contemporaine"
+    },
+    {
+      "titre": "Musique de chambre",
+      "categorie": "Genres musicaux",
+      "url": "https://fr.wikipedia.org/wiki/Musique_de_chambre"
+    },
+    {
+      "titre": "Musique de la Grèce antique",
+      "categorie": "Histoire",
+      "url": "https://fr.wikipedia.org/wiki/Musique_de_la_Gr%C3%A8ce_antique"
+    },
+    {
+      "titre": "Musique de la Renaissance",
+      "categorie": "Histoire",
+      "url": "https://fr.wikipedia.org/wiki/Musique_de_la_Renaissance"
+    },
+    {
+      "titre": "Musique électronique",
+      "categorie": "Genres musicaux",
+      "url": "https://fr.wikipedia.org/wiki/Musique_%C3%A9lectronique"
+    },
+    {
+      "titre": "Musique folklorique",
+      "categorie": "Genres musicaux",
+      "url": "https://fr.wikipedia.org/wiki/Musique_folklorique"
+    },
+    {
+      "titre": "Musique médiévale",
+      "categorie": "Histoire",
+      "url": "https://fr.wikipedia.org/wiki/Musique_m%C3%A9di%C3%A9vale"
+    },
+    {
+      "titre": "Musique romantique",
+      "categorie": "Genres musicaux",
+      "url": "https://fr.wikipedia.org/wiki/Musique_romantique"
+    },
+    {
+      "titre": "Musique traditionnelle",
+      "categorie": "Genres musicaux",
+      "url": "https://fr.wikipedia.org/wiki/Musique_traditionnelle"
+    },
+    {
+      "titre": "Notation musicale",
+      "categorie": "Notation",
+      "url": "https://fr.wikipedia.org/wiki/Notation_musicale"
+    },
+    {
+      "titre": "Note de musique",
+      "categorie": "Théorie musicale",
+      "url": "https://fr.wikipedia.org/wiki/Note_de_musique"
+    },
+    {
+      "titre": "Nuance (musique)",
+      "categorie": "Notation",
+      "url": "https://fr.wikipedia.org/wiki/Nuance_(musique)"
+    },
+    {
+      "titre": "Octave",
+      "categorie": "Théorie musicale",
+      "url": "https://fr.wikipedia.org/wiki/Octave"
+    },
+    {
+      "titre": "Onde sonore",
+      "categorie": "Acoustique",
+      "url": "https://fr.wikipedia.org/wiki/Onde_sonore"
+    },
+    {
+      "titre": "Opéra",
+      "categorie": "Genres musicaux",
+      "url": "https://fr.wikipedia.org/wiki/Op%C3%A9ra"
+    },
+    {
+      "titre": "Orgue",
+      "categorie": "Instruments",
+      "url": "https://fr.wikipedia.org/wiki/Orgue"
+    },
+    {
+      "titre": "Partition (musique)",
+      "categorie": "Théorie musicale",
+      "url": "https://fr.wikipedia.org/wiki/Partition_(musique)"
+    },
+    {
+      "titre": "Phonogramme (support audio)",
+      "categorie": "Musique et société",
+      "url": "https://fr.wikipedia.org/wiki/Phonogramme"
+    },
+    {
+      "titre": "Phrasé",
+      "categorie": "Notation",
+      "url": "https://fr.wikipedia.org/wiki/Phras%C3%A9"
+    },
+    {
+      "titre": "Piano",
+      "categorie": "Instruments",
+      "url": "https://fr.wikipedia.org/wiki/Piano"
+    },
+    {
+      "titre": "Polyphonie",
+      "categorie": "Théorie musicale",
+      "url": "https://fr.wikipedia.org/wiki/Polyphonie"
+    },
+    {
+      "titre": "Pop (musique)",
+      "categorie": "Genres musicaux",
+      "url": "https://fr.wikipedia.org/wiki/Pop_(musique)"
+    },
+    {
+      "titre": "Portée (musique)",
+      "categorie": "Notation",
+      "url": "https://fr.wikipedia.org/wiki/Port%C3%A9e_(musique)"
+    },
+    {
+      "titre": "Psychoacoustique",
+      "categorie": "Acoustique",
+      "url": "https://fr.wikipedia.org/wiki/Psychoacoustique"
+    },
+    {
+      "titre": "Punk (musique)",
+      "categorie": "Genres musicaux",
+      "url": "https://fr.wikipedia.org/wiki/Punk_(musique)"
+    },
+    {
+      "titre": "Pyotr Ilyich Tchaikovsky",
+      "categorie": "Compositeurs",
+      "url": "https://fr.wikipedia.org/wiki/Pyotr_Ilyich_Tchaikovsky"
+    },
+    {
+      "titre": "Reggae",
+      "categorie": "Genres musicaux",
+      "url": "https://fr.wikipedia.org/wiki/Reggae"
+    },
+    {
+      "titre": "Résonance",
+      "categorie": "Acoustique",
+      "url": "https://fr.wikipedia.org/wiki/R%C3%A9sonance"
+    },
+    {
+      "titre": "Richard Wagner",
+      "categorie": "Compositeurs",
+      "url": "https://fr.wikipedia.org/wiki/Richard_Wagner"
+    },
+    {
+      "titre": "Rock",
+      "categorie": "Genres musicaux",
+      "url": "https://fr.wikipedia.org/wiki/Rock"
+    },
+    {
+      "titre": "Romantisme musical",
+      "categorie": "Histoire",
+      "url": "https://fr.wikipedia.org/wiki/Romantisme_musical"
+    },
+    {
+      "titre": "Rythme (musique)",
+      "categorie": "Théorie musicale",
+      "url": "https://fr.wikipedia.org/wiki/Rythme_(musique)"
+    },
+    {
+      "titre": "Saxophone",
+      "categorie": "Instruments",
+      "url": "https://fr.wikipedia.org/wiki/Saxophone"
+    },
+    {
+      "titre": "Sergueï Prokofiev",
+      "categorie": "Compositeurs",
+      "url": "https://fr.wikipedia.org/wiki/Sergue%C3%AF_Prokofiev"
+    },
+    {
+      "titre": "Solfège",
+      "categorie": "Théorie musicale",
+      "url": "https://fr.wikipedia.org/wiki/Solf%C3%A8ge"
+    },
+    {
+      "titre": "Son (physique)",
+      "categorie": "Acoustique",
+      "url": "https://fr.wikipedia.org/wiki/Son_(physique)"
+    },
+    {
+      "titre": "Sonate",
+      "categorie": "Genres musicaux",
+      "url": "https://fr.wikipedia.org/wiki/Sonate"
+    },
+    {
+      "titre": "Soprano",
+      "categorie": "Voix et chant",
+      "url": "https://fr.wikipedia.org/wiki/Soprano"
+    },
+    {
+      "titre": "Symphonie",
+      "categorie": "Genres musicaux",
+      "url": "https://fr.wikipedia.org/wiki/Symphonie"
+    },
+    {
+      "titre": "Tablature",
+      "categorie": "Notation",
+      "url": "https://fr.wikipedia.org/wiki/Tablature"
+    },
+    {
+      "titre": "Tambour",
+      "categorie": "Instruments",
+      "url": "https://fr.wikipedia.org/wiki/Tambour"
+    },
+    {
+      "titre": "Technique vocale",
+      "categorie": "Voix et chant",
+      "url": "https://fr.wikipedia.org/wiki/Technique_vocale"
+    },
+    {
+      "titre": "Tempo",
+      "categorie": "Théorie musicale",
+      "url": "https://fr.wikipedia.org/wiki/Tempo"
+    },
+    {
+      "titre": "Ténor",
+      "categorie": "Voix et chant",
+      "url": "https://fr.wikipedia.org/wiki/T%C3%A9nor"
+    },
+    {
+      "titre": "Théorie musicale",
+      "categorie": "Théorie musicale",
+      "url": "https://fr.wikipedia.org/wiki/Th%C3%A9orie_musicale"
+    },
+    {
+      "titre": "Timbre (acoustique)",
+      "categorie": "Théorie musicale",
+      "url": "https://fr.wikipedia.org/wiki/Timbre_(acoustique)"
+    },
+    {
+      "titre": "Tonalité",
+      "categorie": "Théorie musicale",
+      "url": "https://fr.wikipedia.org/wiki/Tonalit%C3%A9"
+    },
+    {
+      "titre": "Trombone",
+      "categorie": "Instruments",
+      "url": "https://fr.wikipedia.org/wiki/Trombone"
+    },
+    {
+      "titre": "Trompette",
+      "categorie": "Instruments",
+      "url": "https://fr.wikipedia.org/wiki/Trompette"
+    },
+    {
+      "titre": "Troubadour",
+      "categorie": "Histoire",
+      "url": "https://fr.wikipedia.org/wiki/Troubadour"
+    },
+    {
+      "titre": "Tuba (instrument)",
+      "categorie": "Instruments",
+      "url": "https://fr.wikipedia.org/wiki/Tuba_(instrument)"
+    },
+    {
+      "titre": "Vibration",
+      "categorie": "Acoustique",
+      "url": "https://fr.wikipedia.org/wiki/Vibration"
+    },
+    {
+      "titre": "Violon",
+      "categorie": "Instruments",
+      "url": "https://fr.wikipedia.org/wiki/Violon"
+    },
+    {
+      "titre": "Violoncelle",
+      "categorie": "Instruments",
+      "url": "https://fr.wikipedia.org/wiki/Violoncelle"
+    },
+    {
+      "titre": "Voix chantée",
+      "categorie": "Voix et chant",
+      "url": "https://fr.wikipedia.org/wiki/Voix_chant%C3%A9e"
+    },
+    {
+      "titre": "Wolfgang Amadeus Mozart",
+      "categorie": "Compositeurs",
+      "url": "https://fr.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart"
+    }
+  ],
+  "statistiques": {
+    "par_categorie": {
+      "Généralités": 1,
+      "Théorie musicale": 19,
+      "Instruments": 20,
+      "Genres musicaux": 20,
+      "Compositeurs": 20,
+      "Histoire": 10,
+      "Acoustique": 10,
+      "Notation": 10,
+      "Voix et chant": 10,
+      "Musique et société": 10
+    },
+    "taux_succes": "100%",
+    "total_articles_scrapes": 130
+  }
+}

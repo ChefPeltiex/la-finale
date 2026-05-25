@@ -1,0 +1,2128 @@
+{
+  "meta": {
+    "projet": "CORPUS MUSIQUE - DOMINIC",
+    "source": "Wikipédia FR (fr.wikipedia.org)",
+    "date_collecte": "2026-05-22",
+    "total_articles_cibles": 130,
+    "total_reussis": 130,
+    "total_non_trouves": 0,
+    "total_erreurs": 0,
+    "categories_couvertes": [
+      "Généralités",
+      "Théorie musicale",
+      "Instruments",
+      "Genres musicaux",
+      "Compositeurs",
+      "Histoire",
+      "Acoustique",
+      "Notation",
+      "Voix et chant",
+      "Musique et société"
+    ],
+    "description": "Corpus encyclopédique en langue française sur la musique : théorie musicale, instruments, genres, compositeurs, histoire, acoustique, notation, voix, et musique & société.",
+    "date_mise_a_jour": "2026-05-22"
+  },
+  "articles": [
+    {
+      "titre": "Musique",
+      "categorie_dominic": "Généralités",
+      "pageid": 1938,
+      "definition": "La musique est un art et une activité culturelle consistant à combiner sons et silences au cours du temps. Les paramètres principaux sont le rythme (façon de combiner les sons dans le temps), la hauteur (combinaison dans les fréquences), les nuances et le timbre ainsi que la mélodie (ce qui rend agréable l'écoute). Elle est aujourd'hui considérée comme une forme de poésie moderne.\nLa musique donne lieu à des créations (des œuvres d'art créées par des compositeurs), des représentations. Elle utilise généralement certaines règles ou systèmes de composition, des plus simples aux plus complexes (souvent les notes de musique, les gammes et autres). Elle peut utiliser divers objets, le corps, mais aussi des instruments de musique spécialement conçus, et de plus en plus tous les sons (concrets, de synthèses, abstraits…).\nLa musique existe dans toutes les sociétés humaines, depuis la Préhistoire, probablement avant même l'époque de ses premières traces historiques. Elle est à la fois forme d'expression individuelle (notamment l'expression des sentiments), source de rassemblement collectif et de plaisir (fête, chant, danse) et symbole d'une communauté culturelle, nationale (hymne national,…",
+      "categories_wiki": [
+        "Art sonore",
+        "Article avec une section vide ou incomplète",
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en bachkir"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Musique",
+      "longueur_extrait": 1706,
+      "statut": "ok"
+    },
+    {
+      "titre": "Théorie musicale",
+      "categorie_dominic": "Théorie musicale",
+      "pageid": 295287,
+      "definition": "Une théorie de la musique est un ensemble de règles décrivant le système musical d'une culture particulière.",
+      "categories_wiki": [],
+      "url": "https://fr.wikipedia.org/wiki/Th%C3%A9orie_musicale",
+      "longueur_extrait": 0,
+      "statut": "ok"
+    },
+    {
+      "titre": "Note de musique",
+      "categorie_dominic": "Théorie musicale",
+      "pageid": 17706,
+      "definition": "En musique, une note est un symbole ou une lettre permettant de représenter un fragment de musique par une convention d'écriture de la hauteur et de la durée d'un son.",
+      "categories_wiki": [
+        "Article avec source à lier",
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Fréquence",
+        "Note de musique"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Note_de_musique",
+      "longueur_extrait": 167,
+      "statut": "ok"
+    },
+    {
+      "titre": "Gamme musicale",
+      "categorie_dominic": "Théorie musicale",
+      "pageid": 15908297,
+      "definition": "En musique, une gamme est un ensemble de sons, appelés degrés, formant le cadre dans lequel se forme une tonalité et se bâtit une œuvre musicale. Elle est caractérisée par les intervalles des degrés voisins, indépendamment de toute idée de tonalité et de tonique.",
+      "categories_wiki": [],
+      "url": "https://fr.wikipedia.org/wiki/Gamme_musicale",
+      "longueur_extrait": 0,
+      "statut": "ok"
+    },
+    {
+      "titre": "Accord (musique)",
+      "categorie_dominic": "Théorie musicale",
+      "pageid": 52587,
+      "definition": "En musique, un accord est un ensemble de notes considéré comme formant un tout du point de vue de l'harmonie. Le plus souvent, ces notes sont entendues simultanément, superposées en un même moment ; mais les accords peuvent aussi s'exprimer par des notes successives, par exemple dans des arpèges.\nEn harmonie tonale, le terme accord désigne une combinaison d'au moins trois notes simultanées (deux notes émises simultanément ne constituent pas un accord : il s'agit seulement d'un intervalle ; un accord est donc une superposition de plusieurs intervalles). Il existe plusieurs classements des accords et plusieurs modes de description de leur formation ; les accords correspondant à ces descriptions sont dits « accords classés ».\nLes superpositions de notes non classées comme accords sont appelées « agrégats » ; un ensemble de notes contiguës est un cluster.",
+      "categories_wiki": [
+        "Accord",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article à référence nécessaire",
+        "Page pointant vers des bases externes",
+        "Page pointant vers des dictionnaires ou encyclopédies généralistes"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Accord_(musique)",
+      "longueur_extrait": 863,
+      "statut": "ok"
+    },
+    {
+      "titre": "Harmonie (musique)",
+      "categorie_dominic": "Théorie musicale",
+      "pageid": 2615784,
+      "definition": "En musique, l'harmonie est le fait que divers sons perçus ensemble concordent ou vont bien ensemble : par exemple, lorsque la musique jouée par plusieurs instruments semble harmonieuse. De manière plus générale, c'est l'étude des relations note par note entre les diverses lignes mélodiques d'un morceau.",
+      "categories_wiki": [],
+      "url": "https://fr.wikipedia.org/wiki/Harmonie_(musique)",
+      "longueur_extrait": 0,
+      "statut": "ok"
+    },
+    {
+      "titre": "Contrepoint",
+      "categorie_dominic": "Théorie musicale",
+      "pageid": 1675868,
+      "definition": "En musique, le contrepoint est une forme d'écriture musicale, qui trouve ses origines avec la polyphonie, née au Moyen Âge, et qui consiste en la superposition organisée de lignes mélodiques distinctes.",
+      "categories_wiki": [
+        "Redirections connectées à un élément Wikidata"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Contrepoint",
+      "longueur_extrait": 0,
+      "statut": "ok"
+    },
+    {
+      "titre": "Rythme (musique)",
+      "categorie_dominic": "Théorie musicale",
+      "pageid": 124508,
+      "definition": "Le rythme en musique est l'organisation dans le temps des événements musicaux. Il comporte tous les éléments qui permettent de repérer une structure temporelle : espacement, durée, accentuation des sons musicaux. La perception d'un rythme musical implique une forme de répétition de la structure.\nEn musique occidentale, le rythme détermine la durée des notes et le moment où on doit les entendre. Dans la musique classique, une pulsation régulière détermine des temps. Elle permet de mesurer les différentes figures de notes et de silences. Le rythme, la mélodie, le tempo et la nuance sont les quatre principaux éléments de la partition écrite.\nDans les traditions musicales hors de l'Europe, le rythme peut se fonder sur des principes différents et impliquer des différences de hauteur ou de timbre des sons, plutôt que leur simple présence ou absence. L'unité de base du rythme est parfois proche de ce qu'on appelle en théorie de la musique occidentale un motif.",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en allemand",
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article utilisant l'infobox Monument via Modèle:Infobox",
+        "Article utilisant une Infobox"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Rythme_(musique)",
+      "longueur_extrait": 967,
+      "statut": "ok"
+    },
+    {
+      "titre": "Tempo",
+      "categorie_dominic": "Théorie musicale",
+      "pageid": 223287,
+      "definition": "En musique, le tempo (en italien : tempo « temps » ; au pl. tempos, ou, plus rare, tempi, selon le pluriel italien), appelé aussi mouvement, est la vitesse d'exécution d'une œuvre ou, plus exactement, la fréquence de la pulsation, ce battement régulier « qui sert d'étalon pour construire les différentes valeurs rythmiques ». L'indication du tempo ou l'indication de mouvement, suivant l'époque musicale, peut être précisée ou non par le compositeur sur la partition autographe. En l'absence d'indication, on utilise l'expression « sans indication de tempo », laissant le choix de la vitesse d'exécution au libre arbitre au musicien.\nSon unité de mesure est le battement par minute (BPM).",
+      "categories_wiki": [
+        "Article de Wikipédia avec notice d'autorité",
+        "Notation musicale",
+        "Page pointant vers des bases externes",
+        "Page pointant vers des dictionnaires ou encyclopédies généralistes",
+        "Page utilisant P1417"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Tempo",
+      "longueur_extrait": 689,
+      "statut": "ok"
+    },
+    {
+      "titre": "Tonalité",
+      "titre_original": "Tonalité (musique)",
+      "categorie_dominic": "Théorie musicale",
+      "pageid": 41946,
+      "definition": "En musique, le mot tonalité peut prendre deux significations. En un sens général, il est synonyme de l'expression système tonal, qui désigne « le langage musical prédominant dans le monde occidental aux XVIIIe et XIXe siècles ». Ce langage se caractérise notamment par des phénomènes d'attractions (en particulier autour d'un degré principal : la tonique) et des alternances tension-détente. En cela, il s'oppose au système modal, fondé sur des gammes diatoniques qui, la plupart ne comportant pas de sensible, ne présente pas les mêmes tensions-détentes ; une œuvre modale reste dans son mode, dont elle explore harmoniquement la couleur.\nDans son sens particulier, qui est l'objet de cette page, une tonalité est « une échelle majeure ou mineure utilisée dans une œuvre ».",
+      "categories_wiki": [
+        "Article de Wikipédia avec notice d'autorité",
+        "Page pointant vers des bases externes",
+        "Page pointant vers des dictionnaires ou encyclopédies généralistes",
+        "Page utilisant P1417",
+        "Page utilisant P8313"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Tonalit%C3%A9",
+      "longueur_extrait": 774,
+      "statut": "ok"
+    },
+    {
+      "titre": "Mode (musique)",
+      "categorie_dominic": "Théorie musicale",
+      "pageid": 53394,
+      "definition": "Un mode, en musique, est un type d'échelle musicale couplé avec un ensemble de comportements mélodiques caractéristiques, notamment en relation avec une note de référence (appelée aussi « finale », « tonique », ou « note nominale »).\nSelon François Picard, Trần Văn Khê « énumère, outre l'échelle, d'autres critères associés à la définition d'un mode : hiérarchie des degrés, formule mélodique, sentiment modal ». Le terme « mode » ne semble pas avoir été utilisé, au sens où on l'entend aujourd'hui, avant le XVIIIe siècle siècle. Gui d'Arezzo, au XIe siècle siècle, utilise l'expression modi vocum (« mode des notes ») pour désigner des caractéristiques de notes individuelles.\nAu XXe siècle, « mode » a été utilisé pour décrire des caractéristiques\n\ndu chant grégorien ;\nde la polyphonie de la Renaissance ;\nde la musique tonale.\nSa signification a été étendue, toujours au XXe siècle siècle, pour la description de caractéristiques de musiques de Méditerranée orientale, notamment le maqâm, puis d'Asie : râga indien, dastgâh perse, patet javanais, etc.. Aujourd'hui, il est aussi utilisé dans la théorie de musiques occidentales modernes, notamment du jazz.",
+      "categories_wiki": [
+        "Article avec une section vide ou incomplète",
+        "Article contenant un appel à traduction en anglais",
+        "Article manquant de références/Liste complète",
+        "Article manquant de références depuis janvier 2010",
+        "Article à référence insuffisante"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Mode_(musique)",
+      "longueur_extrait": 1162,
+      "statut": "ok"
+    },
+    {
+      "titre": "Intervalle (musique)",
+      "categorie_dominic": "Théorie musicale",
+      "pageid": 1655632,
+      "definition": "L'intervalle est la distance entre deux notes musicales. Il est dit « harmonique » si les deux notes sont simultanées, « mélodique » si elles sont entendues l'une après l'autre. En acoustique, il se définit comme le rapport de leurs fréquences.",
+      "categories_wiki": [
+        "Article avec source à lier",
+        "Article avec une section vide ou incomplète",
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article utilisant l'infobox Monument via Modèle:Infobox"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Intervalle_(musique)",
+      "longueur_extrait": 244,
+      "statut": "ok"
+    },
+    {
+      "titre": "Octave",
+      "categorie_dominic": "Théorie musicale",
+      "pageid": 42988,
+      "definition": "Octave est un prénom masculin qui a pour formes féminines Octavia et Octavie.\n\nPour l'ensemble des articles sur les personnes portant ce prénom, consulter :\nla liste des articles dont le titre commence par ce prénom\nles listes produites par Wikidata : Liste des personnes de prénom « Octave » — même liste en incluant les éventuels prénoms composés qui contiennent « Octave ».",
+      "categories_wiki": [
+        "Homonymie",
+        "Homonymie de nom de famille",
+        "Homonymie de prénom",
+        "Homonymie de titre"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Octave",
+      "longueur_extrait": 376,
+      "statut": "ok"
+    },
+    {
+      "titre": "Gamme pentatonique",
+      "categorie_dominic": "Théorie musicale",
+      "pageid": 11743082,
+      "definition": "Les gammes pentatoniques (du grec πέντε / pénte, « cinq ») sont des échelles musicales constituées de cinq notes (= hauteurs de son) différentes. Elles peuvent être ou non basées sur le système du tempérament égal.\nLes gammes pentatoniques existent dans divers genres musicaux du monde entier, dans un grand nombre de cultures musicales.\nLes gammes pentatoniques ont été développées indépendamment par de nombreuses civilisations anciennes et sont encore utilisées aujourd'hui dans différents styles musicaux. Comme l'a dit Leonard Bernstein : « L'universalité de cette gamme est si bien connue que je suis sûr que vous pourriez m'en donner des exemples des quatre coins du monde, en Écosse, en Chine, en Afrique, dans les cultures amérindiennes, dans les cultures des Indes orientales, en Amérique centrale et en Amérique du Sud, en Australie, en Finlande... Voilà un véritable universel musico-linguistique ».\nLes gammes pentatoniques sont, entre autres, abondamment utilisées dans les genres de musique populaire américaine tels que le blues, le jazz et le rock 'n' roll, ou encore dans les musiques traditionnelles asiatiques.\nLes gammes pentatoniques les plus courantes en musique occidentale…",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en anglais",
+        "Article à référence souhaitée",
+        "Musique japonaise",
+        "Page utilisant Score",
+        "Portail:Blues/Articles liés"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Gamme_pentatonique",
+      "longueur_extrait": 1473,
+      "statut": "ok"
+    },
+    {
+      "titre": "Gamme diatonique",
+      "categorie_dominic": "Théorie musicale",
+      "pageid": 3774898,
+      "definition": "Une échelle diatonique ou gamme diatonique est une échelle musicale heptatonique, composée de 5 tons et 2 demi-tons, les deux demi-tons étant toujours séparés par 2 ou 3 tons. Cette forme d'échelle est à l'origine de la musique savante occidentale.",
+      "categories_wiki": [],
+      "url": "https://fr.wikipedia.org/wiki/Gamme_diatonique",
+      "longueur_extrait": 0,
+      "statut": "ok"
+    },
+    {
+      "titre": "Mélodie",
+      "categorie_dominic": "Théorie musicale",
+      "pageid": 196271,
+      "definition": "La mélodie est une succession de sons ordonnés selon des rapports de rythme et de modulation par opposition à l'harmonie consistant dans l'accord de plusieurs sons exécutés simultanément.\nLe terme « mélodie » vient du latin melodia issu du grec ancien μελῳδία / melôidía, « chant », composé de μέλος / mélos, « arrangement musical », et ᾠδή / ôidế, « chant ».",
+      "categories_wiki": [
+        "Article de Wikipédia avec notice d'autorité",
+        "Forme musicale",
+        "Mélodie",
+        "Page pointant vers des bases externes",
+        "Page pointant vers des dictionnaires ou encyclopédies généralistes"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/M%C3%A9lodie",
+      "longueur_extrait": 359,
+      "statut": "ok"
+    },
+    {
+      "titre": "Polyphonie",
+      "categorie_dominic": "Théorie musicale",
+      "pageid": 113731,
+      "definition": "En musique, la polyphonie est la combinaison de plusieurs mélodies, ou de parties musicales, chantées ou jouées en même temps.\nDans la musique occidentale, la polyphonie désigne le système de composition musicale, créé à l'église à partir du IXe siècle environ et qui connut un brillant développement, depuis un premier apogée aux XIIe et XIIIe siècles, jusqu'à la fin de la Renaissance (fin du XVIe siècle) et au-delà. À partir de la deuxième moitié du XVIe siècle, la pensée et le sentiment harmonique naissants prirent une place de plus en plus importante. Un désir de simplification joint au développement de l'individualité et du chant soliste feront qu'on passera progressivement du contrepoint linéaire à l'enchaînement vertical des accords (un texte musical contrapuntique se déroule horizontalement, chaque voix ayant sa propre vie à l'intérieur de l'ensemble, alors qu'un texte harmonique enchaîne des accords). Le nouveau système, toutefois, n'a pas remplacé le précédent : ces deux types d'écriture ont pu subsister parallèlement et aussi se mêler, pendant les siècles qui suivirent jusqu'à aujourd'hui.\nPar extension, c'est la simple capacité de jouer plusieurs notes à la fois ; on…",
+      "categories_wiki": [
+        "Article avec une section vide ou incomplète",
+        "Musique médiévale",
+        "Musique traditionnelle",
+        "Polyphonie",
+        "Portail:Culture/Articles liés"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Polyphonie",
+      "longueur_extrait": 2154,
+      "statut": "ok"
+    },
+    {
+      "titre": "Timbre (acoustique)",
+      "categorie_dominic": "Théorie musicale",
+      "pageid": 15766142,
+      "definition": "En musique, le timbre est l'ensemble de caractéristiques du son qui permet de reconnaître un instrument ou une voix — par opposition à la note ou aux mots. En musique comme dans les autres domaines, le « timbre » d'une voix humaine est l'ensemble de ses caractères distinctifs.",
+      "categories_wiki": [],
+      "url": "https://fr.wikipedia.org/wiki/Timbre_(acoustique)",
+      "longueur_extrait": 0,
+      "statut": "ok"
+    },
+    {
+      "titre": "Solfège",
+      "categorie_dominic": "Théorie musicale",
+      "pageid": 30549,
+      "definition": "Le solfège est une méthode d'apprentissage de la musique, faite d'exercices de lecture et d'audition musicales. Dans la pratique, cette méthode est centrée sur l'apprentissage du système de notation et constitue la base de l'éducation musicale dans la musique occidentale.\nLe solfège sert à la pratique du chant ou d'un instrument, à l'étude théorique des œuvres musicales et à la composition. L'interprétation d'une partition tout particulièrement passe par la lecture à vue, l'écoute intérieure, la reproduction des hauteurs et la réalisation des rythmes, des nuances et des modes de jeu. Dans la théorie, le solfège étudie les dimensions rythmiques, mélodiques et harmoniques.\nLe solfège commence à partir du 1C1(premier cycle première année) et va jusqu'au 3C4 (troisième cycle quatrième année) voir cycle supérieur. Les durées et/ou noms des cycles varient selon l'école/conservatoire de musique. Avant le premier cycle il est souvent proposé des années d'éveil pour les plus jeunes. \nDans les écoles de musique et conservatoires français, le terme solfège a été remplacé en 1977 par l'intitulé formation musicale (FM), changement qui a accompagné une réforme de son enseignement fondée sur…",
+      "categories_wiki": [
+        "Article de Wikipédia avec notice d'autorité",
+        "Enseignement de la musique",
+        "Méthode d'éducation",
+        "Page pointant vers des bases externes",
+        "Page pointant vers des dictionnaires ou encyclopédies généralistes"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Solf%C3%A8ge",
+      "longueur_extrait": 1568,
+      "statut": "ok"
+    },
+    {
+      "titre": "Partition (musique)",
+      "categorie_dominic": "Théorie musicale",
+      "pageid": 125991,
+      "definition": "Une partition musicale est un document (en papier, en parchemin, ou en format électronique) qui porte la transcription d'une œuvre musicale. Cette transcription peut être faite avec plusieurs sortes de notations : notation neumatique, notation mesurée, notations plus modernes adaptées à la musique contemporaine.\nLa partition sert à traduire les quatre caractéristiques du son musical : la hauteur, la durée, l'intensité, et le timbre, ainsi que de leurs combinaisons appelées à former l'ossature de l'œuvre musicale dans son déroulement temporel, à la fois diachronique (succession des instants, ce qui constitue en musique la mélodie) et synchronique (simultanéité des sons, c'est-à-dire l'harmonie).\nLe terme est devenu au fil du temps par métonymie, le synonyme de l'œuvre musicale elle-même.",
+      "categories_wiki": [
+        "Article de Wikipédia avec notice d'autorité",
+        "Article utilisant l'infobox Objet",
+        "Article utilisant une Infobox",
+        "Catégorie Commons avec lien local identique sur Wikidata",
+        "Notation musicale"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Partition_(musique)",
+      "longueur_extrait": 797,
+      "statut": "ok"
+    },
+    {
+      "titre": "Instrument de musique",
+      "categorie_dominic": "Instruments",
+      "pageid": 1521,
+      "definition": "Un instrument de musique est un objet pouvant produire un son contrôlé par un musicien — que cet objet soit conçu dans cet objectif, ou bien qu'il soit modifié ou écarté de son usage premier. La voix ou les mains, même si elles ne sont pas des objets à proprement parler, sont considérées comme des instruments de musique dès lors qu'elles participent à une œuvre musicale.\nHector Berlioz commence son Traité d'instrumentation et d'orchestration (1843) en déclarant que « tout corps sonore mis en œuvre par le compositeur est un instrument de musique ».\nL'ensemble des instruments utilisés pour une œuvre mais aussi, et surtout, dans une société donnée ou une époque est appelé « instrumentarium ». L'étude académique des instruments de musique est appelée organologie et prend le plus souvent ses sources dans l'ethnomusicologie.\nL'histoire des instruments de musique remonte aux débuts de l'humanité. Il est possible que les premiers instruments de musique aient été utilisés pour des rituels. Par exemple, un cor signalant le succès d'une chasse, ou un tambour lors d'une cérémonie religieuse. Ensuite, la composition et l'interprétation de mélodies ont été étendus aux divertissement. Puis, les…",
+      "categories_wiki": [
+        "Article avec une section vide ou incomplète",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité dans une autre langue",
+        "Article à référence insuffisante",
+        "Article à référence nécessaire"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Instrument_de_musique",
+      "longueur_extrait": 1280,
+      "statut": "ok"
+    },
+    {
+      "titre": "Piano",
+      "categorie_dominic": "Instruments",
+      "pageid": 12306,
+      "definition": "Le piano est un instrument de musique polyphonique, à clavier, de la famille des cordes frappées. Le son est produit lorsque l'on appuie sur des touches noires ou blanches, grâce à l'action d'un marteau tapant la corde correspondant au placement de la touche et au son désiré. Il comporte 52 touches blanches et 36 touches noires, soit un total de 88 touches. Il y a deux sortes de pianos : \n\nles pianos droits, avec les cordes verticales, intégrant les pianos girafes (en) ;\nles pianos à queue, avec les cordes horizontales.\nIl existe également des pianos numériques, qui ne possèdent pas de cordes.\nLe nom de l'instrument provient d'une abréviation de piano-forte, son ancêtre du XVIIIe siècle, décrit par Scipione Maffei comme un « gravecembalo col piano e forte », c'est-à-dire un clavicorde ayant la possibilité de nuancer en intensité le son directement par la frappe des touches. Jouer progressivement de la nuance piano (doucement) à la nuance forte (fort) n'est pas possible avec des instruments comme le clavecin, l'épinette ou l'orgue.\n« Roi des instruments » de l'ère moderne, il est employé dans une très large part de la production musicale contemporaine, de la musique classique à de…",
+      "categories_wiki": [
+        "Article avec source à lier",
+        "Article contenant un appel à traduction en allemand",
+        "Article contenant un appel à traduction en anglais",
+        "Article contenant un appel à traduction en espagnol",
+        "Article de Wikipédia avec notice d'autorité"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Piano",
+      "longueur_extrait": 1457,
+      "statut": "ok"
+    },
+    {
+      "titre": "Guitare",
+      "categorie_dominic": "Instruments",
+      "pageid": 3356698,
+      "definition": "La guitare est un instrument de musique à cordes pincées. Les cordes sont disposées parallèlement à la table d'harmonie et au manche, généralement coupé de frettes, qui ont sur elles des cases sur lesquelles on appuie les cordes, d'une main, pour produire les notes. L'autre main pince les cordes, soit avec les ongles et le bout des doigts, soit avec un plectre (ou médiator). La guitare a le plus souvent six cordes.\nLa guitare est la version européenne la plus courante de la catégorie organologique des luths en forme de boîte, cordophones avec caisse et manche distincts et plan des cordes parallèle à la table. Elle se différencie des instruments similaires (balalaïka, bouzouki, charango, luth, mandoline, oud, théorbe, ukulele) principalement par son fond à peu près plat, sa forme en huit, et secondairement par le nombre de cordes et leur accord le plus habituel. Des variantes de guitare sont appelées, régionalement, par des noms particuliers : viola, violão, cavaco et cavaquinho (Portugal) ; tiple et requinto (Amérique latine)…\nLe corps creux de la guitare, généralement appelé caisse de résonance, transforme la vibration des cordes en ondes sonores. On fabrique plusieurs types de…",
+      "categories_wiki": [
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en frison septentrional",
+        "Article de qualité en macédonien",
+        "Article manquant de références/Liste complète",
+        "Article manquant de références depuis décembre 2017"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Guitare",
+      "longueur_extrait": 2724,
+      "statut": "ok"
+    },
+    {
+      "titre": "Violon",
+      "categorie_dominic": "Instruments",
+      "pageid": 6642,
+      "definition": "Le violon est un instrument à cordes frottées, constitué de plus de  70 pièces de bois (érable, épicéa, ébène) collées ou assemblées les unes aux autres. Le violon possède quatre cordes accordées généralement à la quinte, que l'instrumentiste, appelé violoniste, frotte avec un archet ou pince avec l'index ou le pouce (en pizzicato).\nDans les formations de musique classique comme le quatuor à cordes ou l'orchestre symphonique, le violon est l'instrument le plus petit et de tessiture la plus aiguë parmi sa famille ; celle-ci inclut l'alto, le violoncelle et la contrebasse.\nSa création remonte au XVIe siècle. Très vite popularisé, il occupe une place prépondérante dans la musique classique occidentale : de grands compositeurs ont écrit pour cet instrument (concertos, musique de chambre, pièces symphoniques) voire en jouaient eux-mêmes (Vivaldi, Bach, Mozart). Des violonistes, compositeurs du XVIIIe siècle tels Niccolò Paganini, Eugène Ysaÿe ou Jean Sibelius au XXe siècle, ont acquis une grande renommée.",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en bachkir",
+        "Article de qualité en hongrois",
+        "Article de qualité en mazandarani"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Violon",
+      "longueur_extrait": 1015,
+      "statut": "ok"
+    },
+    {
+      "titre": "Trompette",
+      "categorie_dominic": "Instruments",
+      "pageid": 563838,
+      "definition": "La trompette est un instrument de musique à vent de la famille des cuivres clairs. Elle est fabriquée dans un tube de 1,50 m de long comme le cornet. Le métal utilisé pour fabriquer la trompette est surtout le laiton (en moyenne 70 % de la trompette est fabriquée avec du laiton). Pour en jouer, on utilise souvent 3 pistons (parfois 4 dans la piccolo) ainsi que de l'air (colonne d'air).",
+      "categories_wiki": [
+        "Article avec une section vide ou incomplète",
+        "Article contenant un appel à traduction en allemand",
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article manquant de références/Liste complète"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Trompette",
+      "longueur_extrait": 388,
+      "statut": "ok"
+    },
+    {
+      "titre": "Flûte traversière",
+      "categorie_dominic": "Instruments",
+      "pageid": 144437,
+      "definition": "La flûte traversière est un instrument à vent de la famille des bois. Jusqu'au XIXe siècle, elle était effectivement en bois, lequel a été peu à peu remplacé par le métal en Europe. Le terme traversière provient du jeu latéral du musicien par rapport à l'instrument.\nLa flûte traversière en ut est l'instrument éponyme de la famille des flûtes traversières ainsi que son instrument principal. La famille des flûtes traversières modernes est une famille d'instruments destinés à être joués dans un orchestre contemporain. Cependant, il existe un très grand nombre d'autres flûtes traversières (à jeu latéral) avec par exemple en Asie les bansurî, ryūteki et nōkan et en Europe les fifres.  Le traverso  est l’ancêtre de la traversière moderne, qui est encore joué selon les effets, la sonorité recherchés ou le répertoire exploré (baroque notamment).\nLes plus anciennes flûtes traversières à nous être parvenues ont été découvertes en Extrême-Orient. Il s'agit notamment d'instruments en os datant du IXe siècle av. J.-C. retrouvés en Chine. L'instrument s'implante et se généralise en Europe à la faveur de la renaissance du XIIe siècle sous la forme d'un instrument en bois bouché par les doigts et…",
+      "categories_wiki": [
+        "Article avec une section vide ou incomplète",
+        "Article contenant un appel à traduction en allemand",
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article utilisant une Infobox"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Fl%C3%BBte_traversi%C3%A8re",
+      "longueur_extrait": 2481,
+      "statut": "ok"
+    },
+    {
+      "titre": "Saxophone",
+      "categorie_dominic": "Instruments",
+      "pageid": 17320,
+      "definition": "Le saxophone  est un instrument de musique à vent, appartenant à la famille des bois. Il a été inventé par le Belge Adolphe Sax et breveté à Paris le 21 mars 1846.\nIl ne doit pas être confondu avec le saxhorn, de la famille des cuivres, mis au point, lui aussi, par Adolphe Sax. Le saxophone est généralement en laiton, bien qu'il en existe certains en cuivre, en argent, en plastique ou plaqués en or.",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en anglais",
+        "Article contenant un appel à traduction en néerlandais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article utilisant une Infobox",
+        "Catégorie Commons avec lien local différent sur Wikidata"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Saxophone",
+      "longueur_extrait": 402,
+      "statut": "ok"
+    },
+    {
+      "titre": "Tambour",
+      "categorie_dominic": "Instruments",
+      "pageid": 152786,
+      "definition": "Tambour peut faire référence à :",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en allemand",
+        "Homonymie"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Tambour",
+      "longueur_extrait": 32,
+      "statut": "ok"
+    },
+    {
+      "titre": "Orgue",
+      "categorie_dominic": "Instruments",
+      "pageid": 6755,
+      "definition": "L'orgue est un instrument à vent multiforme dont la caractéristique est de produire les sons à l’aide d’ensembles de tuyaux sonores accordés suivant une gamme définie et alimentés par une soufflerie, chaque tuyau émettant un son de hauteur et de timbre uniques. L'orgue est joué majoritairement à l’aide d’un ou plusieurs claviers incluant souvent un pédalier (clavier actionné par les pieds).\nIl existe une autre catégorie d'instruments populaires appelés orgues mécaniques car l'émission sonore est assurée par des tuyaux ou flûtes, mais l'activation se fait par un système automatique de reproduction (cylindres, cartons, mémoire électronique). Certains de ces orgues disposent aussi d'un clavier ou d'un pédalier plus ou moins étendus.",
+      "categories_wiki": [
+        "Article avec une section vide ou incomplète",
+        "Article contenant un lien mort",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en allemand",
+        "Article de qualité en espéranto"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Orgue",
+      "longueur_extrait": 739,
+      "statut": "ok"
+    },
+    {
+      "titre": "Harpe",
+      "categorie_dominic": "Instruments",
+      "pageid": 3122876,
+      "definition": "La harpe est un instrument de musique à cordes pincées de forme le plus souvent triangulaire, muni de cordes tendues de longueurs variables dont les plus courtes donnent les notes les plus aiguës. C'est un instrument asymétrique, contrairement à la lyre dont les cordes sont tendues entre deux montants parallèles. L'instrumentiste qui joue de la harpe est appelé harpiste.",
+      "categories_wiki": [
+        "Article de Wikipédia avec notice d'autorité",
+        "Article utilisant une Infobox",
+        "Catégorie Commons avec lien local identique sur Wikidata",
+        "Harpe",
+        "Instrument de musique classique"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Harpe",
+      "longueur_extrait": 373,
+      "statut": "ok"
+    },
+    {
+      "titre": "Violoncelle",
+      "categorie_dominic": "Instruments",
+      "pageid": 10822,
+      "definition": "Le violoncelle est un instrument à cordes frottées (mises en vibration par l'action de l'archet), pincées (pizzicato) ou plus rarement frappées avec le bois de l'archet (col legno), de la famille des cordes frottées, qui compte aussi notamment le violon, l'alto et la contrebasse. Il se joue assis et tenu entre les jambes ; il repose maintenant sur une pique escamotable, mais fut longtemps joué posé entre les jambes, sur les mollets ou sur la poitrine.\nSes quatre cordes sont généralement accordées en quintes : do1, sol1, ré2 et la2 (du grave vers l'aigu), comme pour l'alto. Le violoncelle est accordé une octave en dessous de ce dernier, soit une douzième (une octave plus une quinte) en dessous du violon. C'est l'un des instruments ayant la tessiture la plus grande. Sa gamme de fréquences fondamentales va approximativement de 65 à 1 000 Hz (voire 2 000 Hz dans certaines œuvres virtuoses). On dit souvent que c'est l'instrument le plus proche de la voix humaine.\nLe joueur de violoncelle est un violoncelliste.",
+      "categories_wiki": [
+        "Article de qualité en allemand",
+        "Article de qualité en bavarois",
+        "Article de qualité en espagnol",
+        "Article manquant de références/Liste complète",
+        "Article manquant de références depuis avril 2020"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Violoncelle",
+      "longueur_extrait": 1020,
+      "statut": "ok"
+    },
+    {
+      "titre": "Contrebasse",
+      "categorie_dominic": "Instruments",
+      "pageid": 52011,
+      "definition": "La contrebasse est un instrument grave de la famille des instruments à cordes. Avant l'octobasse, la contrebasse est le plus grand (entre 1,60 m et 2,05 m) et l'un des plus graves instruments de cette famille. À la différence des autres instruments de la famille (violon, alto, violoncelle), qui s'accordent en quintes, elle s'accorde aujourd’hui en quartes (du grave vers l'aigu : mi -1, la-1, ré1 et sol1 en notation française ou E1, A1, D2, G2 en notation anglo-saxonne), essentiellement pour des raisons de facilité de doigté.\nElle peut se jouer en frottant les cordes avec l'archet (arco) ou en les pinçant avec les doigts (pizzicato). La contrebasse est très utilisée en musique classique au sein des orchestres symphoniques, en musique contemporaine et dans la musique électronique en tant que contrebasse synthétique. En jazz, elle fait partie de la section rythmique. La contrebasse est également utilisée dans les autres styles comme le blues, le bluegrass, le rock 'n' roll, le rockabilly, le psychobilly, le jazz rap et le tango.",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en anglais",
+        "Article manquant de références/Liste complète",
+        "Article manquant de références depuis novembre 2022",
+        "Article utilisant une Infobox",
+        "Article à référence nécessaire"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Contrebasse",
+      "longueur_extrait": 1041,
+      "statut": "ok"
+    },
+    {
+      "titre": "Clarinette",
+      "categorie_dominic": "Instruments",
+      "pageid": 48179,
+      "definition": "La clarinette (du provençal clarin désignant un hautbois) est un instrument de musique à vent de la famille des bois caractérisé par son anche simple et sa perce quasi cylindrique. Elle aurait été créée vers 1690 par Johann Christoph Denner (1655-1707) à Nuremberg sur la base d'un instrument à anche simple plus ancien : le chalumeau. La clarinette soprano (en si ) est le modèle le plus commun.\nLa perce cylindrique de la clarinette la distingue du hautbois et du saxophone, tous deux à perce conique, et lui confère une aptitude au quintoiement. Son timbre, chaud dans le registre grave, peut s'avérer extrêmement brillant voire perçant dans l'aigu.\nDe tous les instruments à vent de sa famille, la clarinette possède la plus grande tessiture avec trois octaves plus une sixte mineure, soit 45 notes en tout. Elle se décline en une famille d'instruments presque tous transpositeurs, depuis la clarinette contrebasse jusqu'à la clarinette piccolo, couvrant ainsi toute l'étendue d'un orchestre symphonique. À l'exception des percussions, la clarinette est l'instrument qui possède la plus grande famille.\nCet instrument est utilisé dans la musique classique et traditionnelle ainsi qu'en jazz et…",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en allemand",
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en allemand",
+        "Article manquant de références/Liste complète"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Clarinette",
+      "longueur_extrait": 1407,
+      "statut": "ok"
+    },
+    {
+      "titre": "Hautbois",
+      "categorie_dominic": "Instruments",
+      "pageid": 17973,
+      "definition": "Le hautbois est un instrument de musique à vent de la famille des bois, de perce conique et dont le son est créé par la vibration d'une anche double au passage du souffle. Son timbre peut être puissant et sonore ou doux et charmeur, clair ou plein de rondeur et de chaleur. Le musicien jouant de cet instrument est un hautboïste.\nConnu dès l'Antiquité, l'instrument a évolué dans l'espace et dans le temps avec une diversité qui n'a d'égale que la créativité des civilisations et cultures dans lesquelles cet instrument est encore utilisé de nos jours. Les hautbois traditionnels (bombarde, duduk, gaïta, hichiriki, zurna) et les hautbois modernes (musette, hautbois, hautbois d'amour, cor anglais, hautbois baryton, hautbois baroque, hautbois classique) forment une grande famille aux multiples facettes.\nOn l'utilise en solo, musique concertante, musique de chambre, orchestre symphonique, orchestre d'harmonie ou bande de hautbois. Le terme « hautbois moderne » désigne, dans l'orchestre, l'ensemble de la famille.\nSi le hautboïste utilise suffisamment d'air et de technique, il peut faire en sorte que son instrument atteigne entre 80 et 102 décibels.\nLes œuvres pour hautbois sont…",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en espagnol",
+        "Article utilisant une Infobox",
+        "Article à référence nécessaire"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Hautbois",
+      "longueur_extrait": 1525,
+      "statut": "ok"
+    },
+    {
+      "titre": "Cor (instrument)",
+      "categorie_dominic": "Instruments",
+      "pageid": 1640255,
+      "definition": "Le cor est le nom générique de plusieurs instruments de musique à vent.",
+      "categories_wiki": [
+        "Article avec source à lier",
+        "Article contenant un appel à traduction en anglais",
+        "Instrument à vent de la famille des bois",
+        "Instrument à vent de la famille des cuivres",
+        "Page pointant vers des bases externes"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Cor_(instrument)",
+      "longueur_extrait": 71,
+      "statut": "ok"
+    },
+    {
+      "titre": "Trombone",
+      "categorie_dominic": "Instruments",
+      "pageid": 984869,
+      "definition": "Le mot trombone peut désigner :\n\nun trombone, un instrument de musique,\nun trombone, un petit objet métallique recourbé des deux côtés utilisé généralement pour attacher ou unir des feuilles de papier.",
+      "categories_wiki": [
+        "Homonymie"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Trombone",
+      "longueur_extrait": 201,
+      "statut": "ok"
+    },
+    {
+      "titre": "Tuba (instrument)",
+      "categorie_dominic": "Instruments",
+      "pageid": 55402,
+      "definition": "Le tuba est un instrument de musique appartenant à la famille des cuivres. Par la variété de ses tailles et de ses formes, il constitue une sous-famille des cuivres.\nLe mot « tuba » provient du latin et désignait à l'époque romaine une grande trompette incurvée (tuba curva) utilisée dans le contexte militaire.\nLe terme générique « tuba » englobe aujourd'hui une grande diversité d'instruments distincts, dont les caractéristiques sont sensiblement différentes en fonction de paramètres liés à une facture instable depuis les débuts.",
+      "categories_wiki": [
+        "Article avec une section vide ou incomplète",
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en limbourgeois",
+        "Article utilisant une Infobox"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Tuba_(instrument)",
+      "longueur_extrait": 534,
+      "statut": "ok"
+    },
+    {
+      "titre": "Luth",
+      "categorie_dominic": "Instruments",
+      "pageid": 17971,
+      "definition": "Le luth est un instrument à cordes pincées. Dans le système Hornbostel-Sachs, le terme désigne aussi de manière générale tout instrument ayant les cordes parallèles à un manche.\nBien que voisin de la guitare, le luth a connu une histoire différente et distincte, les deux instruments ayant coexisté au cours des périodes principales de la musique. Il est d'origine persane (oud) pour la forme générale et arabe pour la caisse en lamellé-collé.",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en anglais",
+        "Article utilisant une Infobox",
+        "Catégorie Commons avec lien local différent sur Wikidata",
+        "Instrument de musique baroque",
+        "Instrument de musique de la Renaissance"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Luth",
+      "longueur_extrait": 443,
+      "statut": "ok"
+    },
+    {
+      "titre": "Clavecin",
+      "categorie_dominic": "Instruments",
+      "pageid": 17972,
+      "definition": "Le clavecin est un instrument de musique à cordes pincées muni d'un ou plusieurs claviers. Chacune des cordes est pincée par un dispositif nommé sautereau.\nCe terme générique désigne différents instruments d'une même famille, distincts par leur structure, leur forme, leurs dimensions ou leur timbre, chacun d'entre eux ayant souvent un nom spécifique. Le mot « clavecin », au sens restrictif, désigne alors le plus grand, le plus complet et le plus techniquement développé d'entre eux, généralement appelé « grand clavecin » [réf. nécessaire].\nInstruments spécifiques de la musique européenne, les clavecins connaissent un apogée et suscitent un très large répertoire au cours des XVIIe et XVIIIe siècles, avant de connaître une longue éclipse pendant tout le XIXe siècle. Ils retrouvent la faveur des musiciens et du public de façon progressive depuis le début du XXe siècle.\nComme pour l'orgue, la puissance des sons émis ne dépend pas de la force avec laquelle le claveciniste touche le clavier. La présence de registres affectés à chacun des claviers, ainsi que le toucher et la manière de jouer permettent de varier les timbres. Pendant toute la période baroque, le clavecin a été l'un des…",
+      "categories_wiki": [
+        "Article avec une référence non conforme",
+        "Article contenant un appel à traduction en allemand",
+        "Article contenant un appel à traduction en espagnol",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en macédonien"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Clavecin",
+      "longueur_extrait": 2753,
+      "statut": "ok"
+    },
+    {
+      "titre": "Banjo",
+      "categorie_dominic": "Instruments",
+      "pageid": 5941,
+      "definition": "Le banjo est un instrument de musique à cordes pincées nord-américain. Avec sa table d'harmonie à membrane, on le distingue facilement de la guitare. Cet instrument serait un dérivé du luth ouest-africain ekonting apporté par les esclaves noirs (ou plus vraisemblablement recréé par certains d'entre eux) et qui aurait suscité la création des premiers gourd-banjos (« banjo en gourde »). Le banjo représente désormais toute une famille d'instruments.\nL'origine de l'instrument moderne remonte d'abord aux années 1830-1840 durant lesquelles ont commencé l'industrialisation et la commercialisation d'un instrument plus ancien (XVIIe siècle) utilisé par les esclaves africains déportés aux États-Unis. La source iconographique la plus ancienne se trouve dans un récit de voyage écrit par Sir Hans Sloane en 1688 et publié à Londres en 1707. Les musiciens noirs exploitèrent l'aspect rythmique de l'instrument avec un tel succès que les blancs du Sud des États-Unis s'y intéressèrent. À partir de la dernière décennie du XIXe siècle, le banjo se distingua dans le style de pré-jazz appelé « Dixieland », vogue qui continua jusque dans les années 1930. Ce banjo connut à nouveau le succès après la…",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article manquant de références/Liste complète",
+        "Article manquant de références depuis décembre 2016",
+        "Article utilisant une Infobox"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Banjo",
+      "longueur_extrait": 1429,
+      "statut": "ok"
+    },
+    {
+      "titre": "Musique classique",
+      "categorie_dominic": "Genres musicaux",
+      "pageid": 69570,
+      "definition": "La musique classique ou, plus précisément, la musique classique occidentale, est le nom habituellement donné à la musique occidentale « savante » de tradition écrite. \nOn appelle couramment « musique classique » les musiques qui vont de la musique médiévale européenne (chants grégoriens ou système écrit de Guido d'Arezzo) à l'actuelle musique contemporaine (avant-gardes expérimentales en cours depuis la deuxième moitié du XXe siècle). Cependant, l'adjectif « classique » sert également à définir une période de ladite musique, dont les œuvres sont produites entre 1750 (date de la mort de Jean-Sébastien Bach) et les années 1800-1810 (notamment, en 1808, par la création de la Symphonie no 6 « Pastorale » de Beethoven). Certains auteurs préfèrent donc l'utilisation du terme de « musique savante ».\nUne frange immense de la production musicale occidentale peut y être intégrée, et de nombreux sous-genres existent en ce sein. On intègre en priorité dans ce terme :\n\nles musiques considérées comme nobles, solennelles ou vouées à des franges dominantes de la société (en témoignent l'acceptation en son sein des chants liturgiques et, plus généralement, des harmonies jugées complexes en…",
+      "categories_wiki": [
+        "Article avec source à lier",
+        "Article avec une section vide ou incomplète",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en basque",
+        "Article utilisant l'infobox Monument via Modèle:Infobox"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Musique_classique",
+      "longueur_extrait": 1738,
+      "statut": "ok"
+    },
+    {
+      "titre": "Jazz",
+      "categorie_dominic": "Genres musicaux",
+      "pageid": 15779,
+      "definition": "Le jazz est un genre musical originaire du Sud des États-Unis, créé à la fin du XIXe siècle et au début du XXe siècle au sein des communautés afro-américaines. Avec plus de cent ans d'existence, du ragtime au jazz actuel, il recouvre de nombreux sous-genres marqués par un héritage de la musique euro-américaine et afro-américaine, et conçus pour être joués en public. Il émerge à partir d'autres genres musicaux, dont le ragtime, la marche, le negro spiritual et le blues, et comporte des caractéristiques telles que l'utilisation fréquente de l'improvisation, de la polyrythmie, de la syncope, du shuffle, du scat et des notes bleues. En route, il emprunte de nombreux éléments à la musique populaire américaine (en) et à la tradition des brass bands. Couramment associé aux cinq instruments emblématiques du jazz — le saxophone, la trompette, le trombone, la clarinette et le piano —, le jazz mobilise cependant un grand nombre d'instruments différents, dont la guitare, la batterie, et la contrebasse.\nAu cours du XXe siècle, le jazz a acquis une large popularité au-delà des frontières des États-Unis et s'est répandu dans le monde, donnant naissance à de très nombreux styles et sous-genres…",
+      "categories_wiki": [
+        "Article avec une section vide ou incomplète",
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article manquant de références/Liste complète",
+        "Article manquant de références depuis mars 2017"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Jazz",
+      "longueur_extrait": 4200,
+      "statut": "ok"
+    },
+    {
+      "titre": "Blues",
+      "categorie_dominic": "Genres musicaux",
+      "pageid": 434,
+      "definition": "Le blues [bluz] (de l'anglais :[bluːz]) est un genre musical, vocal et instrumental dérivé des chants de travail des populations afro-américaines subissant la ségrégation raciale aux États-Unis. Le blues est apparu dans le sud des États-Unis au cours du XIXe siècle. C'est un style où le chanteur exprime sa tristesse, ses amours et ses envies.",
+      "categories_wiki": [
+        "Article avec source à lier",
+        "Article avec une section vide ou incomplète",
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en coréen"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Blues",
+      "longueur_extrait": 344,
+      "statut": "ok"
+    },
+    {
+      "titre": "Rock",
+      "categorie_dominic": "Genres musicaux",
+      "pageid": 324110,
+      "definition": "Le rock est un genre musical apparu dans les années 1950 aux États-Unis et qui se développe en différents sous-genres à partir des années 1960, notamment aux États-Unis et au Royaume-Uni.\nIl prend ses racines dans le rock 'n' roll des années 1940 et 1950, lui-même grandement influencé par le rhythm and blues et la country. Le rock incorpore également des éléments provenant d'autres genres, dont la folk, le blues, le jazz et la musique classique. Le terme « rock » est aujourd'hui parfois utilisé comme un terme générique incluant des formes artistiques comme la pop music, la musique soul. Son influence culturelle est désormais prééminente dans l'industrie musicale, et se diffuse également dans d'autres arts (cinéma, bande dessinée, mode vestimentaire).\nDepuis les années 1960, définies comme la période « classique » du rock, de nombreux sous-genres hybrides ont peu à peu émergé. Cette décennie voit déjà éclore le rock psychédélique et le garage rock, ainsi que des rapprochements avec d'autres genres musicaux, donnant naissance au folk rock, au jazz fusion et au blues rock. Au début des années 1970, le rock progressif manifeste une volonté d'expérimentation ; le glam rock met l'accent…",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en anglais",
+        "Article contenant un appel à traduction en italien",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article utilisant une Infobox",
+        "Article à référence nécessaire"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Rock",
+      "longueur_extrait": 2743,
+      "statut": "ok"
+    },
+    {
+      "titre": "Pop (musique)",
+      "categorie_dominic": "Genres musicaux",
+      "pageid": 145677,
+      "definition": "La musique pop (ou simplement la pop) est un genre musical, apparu au milieu du XXe siècle au Royaume-Uni et aux États-Unis, où cette musique populaire (« popular music ») est vite qualifiée de « pop music ». \nAu début, dans les années 1950 et 1960, la musique pop englobe le rock and roll et les styles orientés jeunesse[évasif]. Ce n'est qu'à la fin des années 1960 que le terme « pop » qualifie une musique dite plus « commerciale », se concentrant sur des mélodies accrocheuses et une idée d'accessibilité, et prenant souvent la forme de morceaux courts et « dansants ». Son évolution doit beaucoup à l'apparition de l'enregistrement sonore à pistes multiples, vers la fin des années 1960, et à celle du synthétiseur, dans les années 1970 et 1980.",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en limbourgeois",
+        "Article manquant de références/Liste complète",
+        "Article manquant de références depuis novembre 2016"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Pop_(musique)",
+      "longueur_extrait": 751,
+      "statut": "ok"
+    },
+    {
+      "titre": "Hip-hop",
+      "categorie_dominic": "Genres musicaux",
+      "pageid": 2702287,
+      "definition": "Le hip-hop est un mouvement culturel et artistique, caractérisé en premier lieu par son genre musical et l'expression de formes artistiques à l'esthétique propre et commune : graffiti, danse, language, codes vestimentaires, comportementaux et moraux. Il s'agit d'un mouvement populaire, qui se nourrit de l'ensemble des cultures urbaines et artistiques présentes dans le contexte économique, historique et social qui l'entourent lors de son émergence.\nNé à New York dans le South Bronx à la toute fin des années 1960 et au début des années 1970, la culture hip-hop reconnaît 5 disciplines : le rap (ou MCing), le DJing, le breakdance (ou b-boying), le graffiti et le beatboxing. C'est néanmoins par son expression musicale qu'il est le plus connu à partir de la fin du XXe siècle, bien que cela n'ait pas été le cas à ses débuts, mais de ce fait, le hip-hop est souvent réduit à la musique rap ou musique hip-hop.\nOriginaire des ghettos noirs et latinos de New York, il se répand dans l'ensemble du pays puis gagne progressivement les quartiers populaires du monde entier à partir des années 1980 et 1990, au point de devenir une culture urbaine des plus importantes, et même dominante.\nSon…",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en anglais",
+        "Article contenant un lien mort",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article utilisant une Infobox",
+        "Article à référence insuffisante"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Hip-hop",
+      "longueur_extrait": 2485,
+      "statut": "ok"
+    },
+    {
+      "titre": "Reggae",
+      "categorie_dominic": "Genres musicaux",
+      "pageid": 2614,
+      "definition": "Le reggae est un genre musical issu du ska et du rocksteady qui est né au début des années 1960 en Jamaïque dont il est l'une des expressions musicales les plus populaires. Le nom de cette musique est issu du titre d'une chanson de Toots and the Maytals intitulée Do the Reggay (1967). Le reggae devient mondialement connu dans les années 1970, dans le sillage du succès de Bob Marley, et s'impose comme un style musical porteur d'une culture qui lui est propre.\nAlors que la mode du rocksteady, ancêtre du reggae, se termine en 1968, dès sa naissance, en Jamaïque, le reggae évolue et de nouveaux sous-genres émergent. Entre 1968 et 1970 émerge le early reggae (tempo rapide, dû aux influences du mento local encore très rythmé, prédominance de la basse). Entre 1970 et 1976 émerge le one-drop (tempo medium, rythme plus lent, temps fort de la caisse claire sur le 3e temps). Entre 1977 et 1980 émerge le rockers, parfois décliné stepper (avec les 4 temps frappés à la batterie, ainsi qu'une caisse claire très tonique). En 1981, c'est au tour du early dancehall ou rub-a-dub (tempo lent, prédominance de la basse et de la batterie avec balance entre un coup de grosse caisse sur le premier temps…",
+      "categories_wiki": [
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en japonais",
+        "Article manquant de références/Liste complète",
+        "Article manquant de références depuis juin 2020",
+        "Article utilisant une Infobox"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Reggae",
+      "longueur_extrait": 2200,
+      "statut": "ok"
+    },
+    {
+      "titre": "Musique électronique",
+      "categorie_dominic": "Genres musicaux",
+      "pageid": 56734,
+      "definition": "La musique électronique est un groupe de genres musicaux dont la particularité est d'être générée essentiellement par des instruments électroniques de type synthétiseurs, claviers ou orgues électroniques, et dans laquelle le son tient une place prépondérante dans le processus de composition. Elle émerge dans les années 1950 lorsque les instruments électroniques se développent, dans le même temps que les techniques de studio pour l'enregistrement et le traitement du son. Avant de pouvoir être générée en temps réel (voire informatique musicale), la musique électronique fait appel aux techniques de studio et d'enregistrement sur bande magnétique, permettant aux compositeurs de manier et combiner les sons, par exemple en confectionnant des boucles répétitives superposées, etc. Des précurseurs ont pu ainsi bénéficier de studios spécialement équipés, comme Pierre Schaeffer pour sa « musique concrète », où la démarche de composition part du matériau sonore, traité et manipulé de façon créative, et non pas de notes écrites sur une partition destinée à être interprétée.",
+      "categories_wiki": [
+        "Article avec source à lier",
+        "Article contenant un appel à traduction en allemand",
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article manquant de références/Liste complète"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Musique_%C3%A9lectronique",
+      "longueur_extrait": 1077,
+      "statut": "ok"
+    },
+    {
+      "titre": "Opéra",
+      "categorie_dominic": "Genres musicaux",
+      "pageid": 7437,
+      "definition": "Un opéra est, dans la musique classique occidentale, une œuvre musicale et théâtrale pour un orchestre et des chanteurs. L'opéra est l’une des formes de l'art lyrique du théâtre musical occidental.\nL'œuvre, chantée par des interprètes possédant un registre vocal déterminé en fonction du rôle et accompagnés par un orchestre, parfois symphonique, parfois de chambre, parfois destiné au seul répertoire d'opéra, est constituée d'un livret mis en musique sous forme d'airs, de récitatifs, de chœurs et d'intermèdes souvent précédés d'une ouverture et parfois agrémentés de ballets. Comme pour le théâtre, le livret met en scène les personnages et leur histoire, mais les rôles sont chantés.\nLe genre musical est décliné selon les pays et les époques et recouvre des œuvres d’appellations et de formes différentes. Aujourd’hui, les œuvres sont jouées dans des salles d’opéra spécifiquement affectées ou tout simplement sur des scènes de théâtre ou dans des salles de concerts, voire en plein air.\nLes représentations sont organisées par des institutions du secteur public ou privé, parfois désignées sous le vocable de « maison d'opéra », qui peuvent regrouper les compagnies d’artistes (orchestre,…",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en latin",
+        "Article de qualité en malais",
+        "Article à référence nécessaire"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Op%C3%A9ra",
+      "longueur_extrait": 1311,
+      "statut": "ok"
+    },
+    {
+      "titre": "Symphonie",
+      "categorie_dominic": "Genres musicaux",
+      "pageid": 28605,
+      "definition": "Une symphonie est une œuvre musicale instrumentale savante, de proportions généralement vastes, comprenant plusieurs mouvements joints ou disjoints et faisant appel aux ressources de l'orchestre symphonique.\nProvenant étymologiquement du grec ancien σύν / sún, « ensemble, en même temps », et φωνή / phônế, « voix, son », le terme fait référence à la consonance des sons. Au Moyen Âge, la chifonie (ou chifoine) désigne un instrument, ancêtre de la vielle à roue, qui fait intervenir plusieurs cordes (donc plusieurs notes) simultanément. Au début du XVIe siècle, le terme s'étend aux œuvres polyphoniques destinées aux instruments, puis s'applique à toutes compositions instrumentales par opposition à la musique vocale.\nCe n'est que dans le deuxième tiers du XVIIIe siècle, en pleine période de classicisme, que le genre est fixé dans son acception actuelle.\nEn 2025, BBC Music Magazine effectue un sondage auprès de 151 chefs d'orchestre d'envergure afin de déterminer une liste des « meilleures symphonies de tous les temps » ; le top 10 inclut les no 3 « Héroïque » et no 9 de Beethoven, la no 41 « Jupiter » de Mozart, les no 9, no 2 et no 3 de Mahler, les no 4 et no 1 de Brahms, la…",
+      "categories_wiki": [
+        "Article avec source à lier",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en russe",
+        "Genre musical classique",
+        "Page pointant vers des bases externes"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Symphonie",
+      "longueur_extrait": 1261,
+      "statut": "ok"
+    },
+    {
+      "titre": "Sonate",
+      "categorie_dominic": "Genres musicaux",
+      "pageid": 57963,
+      "definition": "Une sonate est une composition instrumentale de musique classique à plusieurs mouvements (par opposition à la cantate qui est chantée). Il ne faut pas confondre le nom de sonate avec celui de l'une des formes musicales les plus importantes, la forme sonate. Certains mouvements d'une sonate sont, d'ailleurs, souvent écrits en respectant la forme sonate.",
+      "categories_wiki": [
+        "Article avec source à lier",
+        "Article de Wikipédia avec notice d'autorité",
+        "Clavecin",
+        "Flûte traversière",
+        "Genre musical classique"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Sonate",
+      "longueur_extrait": 354,
+      "statut": "ok"
+    },
+    {
+      "titre": "Concerto",
+      "categorie_dominic": "Genres musicaux",
+      "pageid": 44585,
+      "definition": "Le concerto (mot français d'origine italienne ; pluriel : concertos ou parfois concerti) est un genre musical composé généralement de trois mouvements (un rapide, un lent, un rapide), où un ou plusieurs solistes dialoguent avec un orchestre. D'origine italienne, il se développa pendant la période baroque et fut une des formes musicales les plus prisées pendant les périodes classique et romantique.",
+      "categories_wiki": [
+        "Article de Wikipédia avec notice d'autorité",
+        "Concerto",
+        "Page pointant vers des bases externes",
+        "Page pointant vers des dictionnaires ou encyclopédies généralistes",
+        "Page utilisant P1417"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Concerto",
+      "longueur_extrait": 400,
+      "statut": "ok"
+    },
+    {
+      "titre": "Fugue",
+      "titre_original": "Fugue (musique)",
+      "categorie_dominic": "Genres musicaux",
+      "pageid": 25112,
+      "definition": "Une fugue est une technique d'écriture musicale, née au XVIIe siècle, du nom de « fuga » (du latin : fugere, « fuir »), une composition entièrement fondée sur ce procédé : « fuir », parce que l'auditeur a l'impression que le thème ou sujet de la fugue fuit d'une voix à l'autre. C’est une forme de composition parmi les plus exigeantes, exploitant les ressources du contrepoint et le principe de l'imitation.\nLa fugue est caractérisée en son début, le plus souvent, par l'entrée successive des voix requises, par l'alternance régulière du sujet et de sa réponse, dans une section appelée exposition. Le sujet (parfois déjà organisme complexe et constitué d'une tête, d'un corps et d'une terminaison) est la base intime de la construction qu'il engendre. Selon sa nature (diatonique, chromatique, conjoint, disjoint, bref ou long), le résultat peut être très différent (simple, virtuose, dramatique, solennel…) ; propice ou non à des effets (strettes, renversements, diminutions, augmentations, à reculons). Il peut apparaître également un second élément thématique appelé contre-sujet et bien plus rarement encore, plusieurs sujets ou contre-sujets (double ou triple fugue). Une fugue peut avoir de…",
+      "categories_wiki": [
+        "Article avec une section vide ou incomplète",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en hébreu",
+        "Article utilisant une Infobox",
+        "Article à référence souhaitée"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Fugue",
+      "longueur_extrait": 2812,
+      "statut": "ok"
+    },
+    {
+      "titre": "Musique baroque",
+      "categorie_dominic": "Genres musicaux",
+      "pageid": 26960,
+      "definition": "La musique baroque est une période qui apparaît avec le baroque au xviie siècle et évolue jusqu'à la fin du siècle suivant. Divisée en plusieurs périodes, la musique baroque recouvre différents genres musicaux, depuis la musique instrumentale jusqu'à l'opéra, qui est à l'origine de ce dernier. La musique baroque s'étend géographiquement sur une bonne partie de l'Europe de l'ouest, dont les principaux pays représentants sont la France et l'Italie, et trouve un écho remarquable dans les pays germaniques. Des figures majeures de la musique baroque font aujourd'hui partie des compositeurs de premier plan au sein de la musique savante, tels que Jean-Sébastien Bach, Georg Friedrich Haendel, Jean-Baptiste Lully, Marc-Antoine Charpentier, Marin Marais, François Couperin, Jean-Philippe Rameau, Claudio Monteverdi, Girolamo Frescobaldi, Alessandro Scarlatti, Arcangelo Corelli, Antonio Vivaldi, Domenico Scarlatti, Heinrich Schütz, Dietrich Buxtehude, Johann Pachelbel, Georg Philipp Telemann et Henry Purcell.\nLa musique baroque se caractérise par l'enrichissement de l'harmonie et l'apport d'une basse continue avec en parallèle le développement des effets vocaux au sein des œuvres. Certains…",
+      "categories_wiki": [
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en allemand",
+        "Article de qualité en finnois",
+        "Article de qualité en norvégien",
+        "Musique baroque"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Musique_baroque",
+      "longueur_extrait": 1834,
+      "statut": "ok"
+    },
+    {
+      "titre": "Musique romantique",
+      "categorie_dominic": "Genres musicaux",
+      "pageid": 43284,
+      "definition": "La musique romantique est un type de musique qui domine en Europe tout au long du XIXe siècle. Ce courant musical aux formes variées, qui met au premier plan l'expression de l'émotion, s'inscrit dans le mouvement esthétique européen du romantisme. Celui-ci touche les arts et la littérature sous l'influence de l'Angleterre et de l'Allemagne, où s'approfondit une nouvelle sensibilité à partir de la fin du XVIIIe siècle. De nombreux compositeurs s'illustreront dans cette longue période aussi bien dans la musique instrumentale et orchestrale que dans l'art lyrique et vocal.\nLe piano-forte, en remplaçant le clavecin, permet désormais d'exploiter de puissants contrastes de dynamique. De la même façon, l'orchestration devient de plus en plus audacieuse et élaborée, d'autant plus que certains instruments, comme le cor, sont modifiés par les facteurs d'instruments de manière à devenir plus maniables. Les sonorités inventées par les romantiques sont particulièrement colorées et évocatrices, davantage en tout cas que chez des classiques comme Joseph Haydn ou Wolfgang Amadeus Mozart. À la jonction de ces deux courants se situe la puissante personnalité de Ludwig van Beethoven, dont les…",
+      "categories_wiki": [
+        "Article de qualité en norvégien",
+        "Article manquant de références/Liste complète",
+        "Article manquant de références depuis juin 2018",
+        "Article à référence nécessaire",
+        "Musique de la période romantique"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Musique_romantique",
+      "longueur_extrait": 1962,
+      "statut": "ok"
+    },
+    {
+      "titre": "Musique contemporaine",
+      "categorie_dominic": "Genres musicaux",
+      "pageid": 52810,
+      "definition": "La musique contemporaine est l'ensemble des courants de musique savante apparus après la fin de la Seconde Guerre mondiale. À partir des années 1950, l’émergence de mutations dans l'écriture musicale laisse entrevoir une nouvelle tendance de la composition. Ces mutations sont en fait des caractéristiques du siècle de l'ordinateur, de l'enregistrement sonore et du synthétiseur : un langage musical en crise (indétermination d’un côté, sérialisme généralisé de l’autre), et des recherches qui développent de nouvelles formes d’expression (musique électronique, mixte), pour aboutir à de nouveaux concepts (notions fondamentales d’acoustique, notions d’objets sonores et musicaux). Certains de ces courants ont emprunté des voies nouvelles en dehors du système tonal.\nUn autre apport, des instrumentistes eux-mêmes, est celui des modes de jeu qui sur la base de la lutherie traditionnelle développe également l'espace du timbre instrumental.",
+      "categories_wiki": [
+        "Article de Wikipédia avec notice d'autorité",
+        "Musique classique de la période contemporaine",
+        "Page pointant vers des bases externes",
+        "Page pointant vers des dictionnaires ou encyclopédies généralistes",
+        "Page utilisant P3219"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Musique_contemporaine",
+      "longueur_extrait": 941,
+      "statut": "ok"
+    },
+    {
+      "titre": "Musique de chambre",
+      "categorie_dominic": "Genres musicaux",
+      "pageid": 44670,
+      "definition": "Une œuvre de musique de chambre est une composition musicale destinée à un petit ensemble de cordes, bois, cuivres ou percussions, qui traditionnellement et avant l'affirmation des concerts publics, pouvait tenir dans la « grande chambre » d'un palais. Chaque partie est écrite pour un seul instrumentiste sans qu'il y ait à l'origine ni chef d'orchestre ni soliste attitré. Si certaines voix sont doublées ou triplées, particulièrement dans les cordes, on parle d'orchestre de chambre ; au-delà, on parle d'orchestre, avec le qualificatif de sa composition instrumentale (symphonique, à cordes, d'harmonie, de fanfare).\nLa conception de ces ensembles -  duos, trios, quatuors, quintettes, sextuors, septuors, octuors, nonettes et dixtuors - demande aux compositeurs une connaissance de l'harmonie, de la polyphonie, du contrepoint, de l'organologie. En musique classique, la composition de quatuors à cordes est le plus souvent considérée comme l'un des summums de l'écriture musicale.\nCes ensembles de quelques solistes, menant leur voix indépendamment des autres, ont le plus souvent comme « meneur » l'instrument le plus aigu (le premier violon dans le quatuor à cordes, le flûtiste dans le…",
+      "categories_wiki": [
+        "Article avec source à lier",
+        "Article avec une section vide ou incomplète",
+        "Article de Wikipédia avec notice d'autorité",
+        "Catégorie Commons avec lien local identique sur Wikidata",
+        "Musique de chambre"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Musique_de_chambre",
+      "longueur_extrait": 2299,
+      "statut": "ok"
+    },
+    {
+      "titre": "Musique folklorique",
+      "categorie_dominic": "Genres musicaux",
+      "pageid": 467433,
+      "definition": "Étymologiquement, une musique folklorique est une musique propre à un pays, une culture, un peuple, utilisant des instruments typiques de ceux-ci. Il existe de la musique folklorique polonaise, irlandaise, alsacienne, suisse, auvergnate, portugaise…\nCependant, l'expression est surtout employée pour désigner des musiques populaires traditionnelles après qu'elles ont été quelque peu codifiées et édulcorées par des intellectuels (régionalistes, nationalistes) ou la classe au pouvoir (comme ce fut le cas en URSS), et cela à la fin du XIXe siècle et au début du XXe siècle.",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en allemand",
+        "Article contenant un appel à traduction en anglais",
+        "Article contenant un appel à traduction en espagnol",
+        "Article contenant un appel à traduction en italien",
+        "Article contenant un appel à traduction en portugais"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Musique_folklorique",
+      "longueur_extrait": 574,
+      "statut": "ok"
+    },
+    {
+      "titre": "Musique traditionnelle",
+      "categorie_dominic": "Genres musicaux",
+      "pageid": 161988,
+      "definition": "L’expression « musiques traditionnelles » désigne des pratiques musicales issues de la tradition orale d’aires géographiques et culturelles définies.\nBien qu’elles se distinguent nécessairement des musiques dites savantes, les deux mondes musicaux se sont inévitablement interpénétrés depuis toujours. On peut notamment citer ici l’exemple de Béla Bartók, influencé par les musiques traditionnelles hongroises et plus généralement d’Europe de l’Est\nEn France, on distingue aujourd’hui deux catégories dans ce champ : l’expression  « musiques du monde » désigne les pratiques musicales issues de cultures traditionnelles étrangères, tandis que l’expression « musiques traditionnelles » tend à désigner plus spécifiquement les musiques issues des traditions populaires françaises.\nCet article traite principalement des musiques issues de la tradition orale française, c’est-à-dire à la fois les musiques recueillies auprès du monde paysan, et les musiques réinterprétées ou créées par des artistes contemporains que l’on range dans ce genre musical.",
+      "categories_wiki": [
+        "Article de Wikipédia avec notice d'autorité",
+        "Article soupçonné de non pertinence",
+        "Article utilisant l'infobox Monument via Modèle:Infobox",
+        "Article utilisant une Infobox",
+        "Article à référence nécessaire"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Musique_traditionnelle",
+      "longueur_extrait": 1047,
+      "statut": "ok"
+    },
+    {
+      "titre": "Punk (musique)",
+      "categorie_dominic": "Genres musicaux",
+      "pageid": 2071929,
+      "definition": "Le punk rock est un genre musical dérivé du rock, ayant émergé au milieu des années 1970 et associé au mouvement punk de cette même époque. Précédé par une variété de musique protopunk des années 1960 et du début des années 1970, le punk rock se développe surtout entre 1974 et 1976 aux États-Unis, au Royaume-Uni et en Australie. Des groupes comme les Ramones, les Sex Pistols et The Saints sont reconnus comme les pionniers d'un nouveau mouvement musical. Les groupes de punk rock, s'opposant à la lourdeur qu'ils jugent excessive, essentiellement anti disco et anti funk, appréciant la musique d'origine jamaïcaine, créent une musique intense et énergique, généralement servie par des chansons de courte durée, une instrumentation simplifiée et des paroles souvent chargées de messages politiques ou nihilistes. Le mouvement punk, associé au genre, exprime une rébellion jeune et est caractérisé par des styles vestimentaires distinctifs, une variété d'idéologies anti-autoritaires et une attitude do it yourself.",
+      "categories_wiki": [],
+      "url": "https://fr.wikipedia.org/wiki/Punk_(musique)",
+      "longueur_extrait": 0,
+      "statut": "ok"
+    },
+    {
+      "titre": "Ludwig van Beethoven",
+      "categorie_dominic": "Compositeurs",
+      "pageid": 15890,
+      "definition": "Ludwig van Beethoven (/ludvig van betɔvœn/ ; en allemand : /ˈluːtvɪç fan ˈbeːtˌhoːfn̩/ ) est un compositeur, pianiste et chef d'orchestre allemand  né le 15 ou le 16 décembre 1770 à Bonn et mort le 26 mars 1827 à Vienne.\nDernier grand représentant du classicisme viennois (après Gluck, Haydn et Mozart), Beethoven a préparé l'évolution vers le romantisme en musique et influencé la musique occidentale pendant une grande partie du XIXe siècle. Inclassable (« Vous me faites l'impression d'un homme qui a plusieurs têtes, plusieurs cœurs, plusieurs âmes » lui dit Haydn vers 1793), son art s'est exprimé à travers différents genres musicaux, et bien que sa musique symphonique soit la principale source de sa popularité, il a eu une influence également considérable dans l'écriture pianistique et dans la musique de chambre.\nSurmontant à force de volonté les épreuves d'une vie marquée par la surdité qui le frappe à l'âge de vingt-sept ans, célébrant dans sa musique le triomphe de l'héroïsme et de la joie quand le destin lui imposait l'isolement et la misère, il est récompensé post mortem par cette affirmation de Romain Rolland : « Il est bien davantage que le premier des musiciens. Il est la…",
+      "categories_wiki": [
+        "Article avec une section vide ou incomplète",
+        "Article contenant un appel à traduction en allemand",
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en arabe"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Ludwig_van_Beethoven",
+      "longueur_extrait": 1461,
+      "statut": "ok"
+    },
+    {
+      "titre": "Wolfgang Amadeus Mozart",
+      "categorie_dominic": "Compositeurs",
+      "pageid": 7435,
+      "definition": "Wolfgang Amadeus Mozart ou Johannes Chrysostomus Wolfgangus Theophilus Mozart, né le 27 janvier 1756 à Salzbourg (principauté archiépiscopale de Salzbourg) et mort le 5 décembre 1791 à Vienne, est un compositeur germano-autrichien de la période classique. Il est considéré comme l'un des plus grands compositeurs de l'histoire de la musique. Avec Joseph Haydn et Ludwig van Beethoven, il porte à son apogée l'école classique viennoise.\nEnfant prodige et compositeur précoce, il est produit en public dès l'âge de sept ans à travers l'Europe, où il subjugue les assistances avec sa sœur Maria Anna. Mort à trente-cinq ans, il laisse une œuvre considérable : 893 œuvres sont répertoriées dans le catalogue Köchel.\nSelon le témoignage de ses contemporains, il est, au piano comme au violon, un virtuose. Il écrit dans tous les genres musicaux de son époque, et excelle dans chacun d'eux. Il est reconnu qu'il porte à un point de perfection le concerto, la symphonie et la sonate, et qu'il est l'un des plus grands maîtres de l'opéra.\nSon nom passe dans le langage courant comme synonyme de talent, sinon de génie précoce.",
+      "categories_wiki": [
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en espagnol",
+        "Article de qualité en hongrois",
+        "Article de qualité en hébreu",
+        "Article de qualité en letton"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart",
+      "longueur_extrait": 1118,
+      "statut": "ok"
+    },
+    {
+      "titre": "Johann Sebastian Bach",
+      "categorie_dominic": "Compositeurs",
+      "pageid": 10557206,
+      "definition": "Jean-Sébastien Bach est un compositeur et musicien allemand né le 21 mars 1685 à Eisenach dans le duché de Saxe-Eisenach et mort le 28 juillet 1750 à Leipzig. Il est souvent surnommé le « Cantor de Leipzig ».",
+      "categories_wiki": [],
+      "url": "https://fr.wikipedia.org/wiki/Johann_Sebastian_Bach",
+      "longueur_extrait": 0,
+      "statut": "ok"
+    },
+    {
+      "titre": "Frédéric Chopin",
+      "categorie_dominic": "Compositeurs",
+      "pageid": 2504722,
+      "definition": "Frédéric Chopin, né Fryderyk Franciszek Chopin le 1er mars 1810 à Żelazowa Wola (duché de Varsovie) et mort le 17 octobre 1849 dans le 2e arrondissement de Paris (Seine), est un compositeur et pianiste d'ascendance franco-polonaise.\nAprès sa formation à la Haute École de musique de Varsovie et un début de carrière en Pologne et à Vienne, il quitte la Pologne et, à l'âge de vingt-et-un ans, il s'installe en France : son père était d'une famille lorraine. En France, il développe son inspiration dans l'effervescence du monde pianistique parisien et dans le souvenir de sa patrie meurtrie. Il y rencontre George Sand, qui sera sa compagne pendant neuf ans.\nReconnu comme l'un des plus grands compositeurs de la période romantique, Frédéric Chopin est aussi l'un des plus célèbres pianistes du XIXe siècle. Sa musique est encore aujourd'hui l'une des plus jouées et demeure un passage indispensable à la compréhension du répertoire pianistique universel. Avec Franz Liszt, il est le père de la technique moderne de son instrument et influence toute une lignée de compositeurs modernes, dont Claude Debussy, Alexandre Scriabine, Maurice Ravel et Sergueï Rachmaninov. Depuis 1927, l'un des plus…",
+      "categories_wiki": [
+        "Article avec passages non neutres",
+        "Article avec section à délister",
+        "Article contenant un appel à traduction en anglais",
+        "Article contenant un appel à traduction en italien",
+        "Article contenant un appel à traduction en polonais"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Chopin",
+      "longueur_extrait": 1271,
+      "statut": "ok"
+    },
+    {
+      "titre": "Franz Schubert",
+      "categorie_dominic": "Compositeurs",
+      "pageid": 25018,
+      "definition": "Franz Schubert ([fʁɑ̃t͡s ʃubɛʁ], en allemand : [ˈfʁant͡s ˈʃuːbɐt]), né le 31 janvier 1797 à Lichtental (dans la banlieue de Vienne) et mort le 19 novembre 1828 à Vienne, est un compositeur autrichien.\nCompositeur emblématique de la musique romantique allemande, il est reconnu comme le maître incontesté du lied. Il s'est particulièrement consacré à la musique de chambre, et a aussi écrit de nombreuses œuvres pour piano, une dizaine de symphonies, ainsi que de la musique chorale et sacrée.\nBien qu'il soit mort précocement, à 31 ans, Schubert est l'un des compositeurs les plus prolifiques du XIXe siècle. Le catalogue de ses œuvres compte plus de mille compositions, dont une partie importante est publiée après sa mort et révèle des chefs-d'œuvre qui contribuent à sa renommée posthume.",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en allemand",
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en espagnol",
+        "Article de qualité en latin"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Franz_Schubert",
+      "longueur_extrait": 791,
+      "statut": "ok"
+    },
+    {
+      "titre": "Johannes Brahms",
+      "categorie_dominic": "Compositeurs",
+      "pageid": 24887,
+      "definition": "Johannes Brahms, né le 7 mai 1833 à Hambourg et mort le 3 avril 1897 à Vienne, est un compositeur, pianiste et chef d'orchestre allemand. Johannes Brahms est l'un des plus importants musiciens de la période romantique. Certains le considèrent comme le « successeur » de Beethoven dont Hans von Bülow qui décrit sa première symphonie (composée entre 1862 et 1876) comme étant « la Dixième symphonie de Beethoven ».\nBrahms fait la plus grande partie de sa carrière à Vienne, où il est l'une des figures importantes sur la scène musicale. Il compose pour piano, musique de chambre, orchestre symphonique, voix et chœurs. À la différence d'autres grands compositeurs de musique classique, Johannes Brahms ne compose jamais d'opéra. Étant également un pianiste virtuose, il donne la première audition de beaucoup de ses compositions ; il travaille aussi avec les musiciens célèbres de son époque, dont la pianiste et compositrice Clara Schumann et le violoniste Joseph Joachim. Brahms est un perfectionniste intransigeant qui détruit beaucoup de ses travaux et en laisse quelques-uns non publiés.\nBrahms est à la fois un traditionaliste et un novateur. Sa musique utilise largement les structures et…",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article manquant de références/Liste complète",
+        "Article manquant de références depuis juin 2021",
+        "Article utilisant une Infobox"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Johannes_Brahms",
+      "longueur_extrait": 1708,
+      "statut": "ok"
+    },
+    {
+      "titre": "Claude Debussy",
+      "categorie_dominic": "Compositeurs",
+      "pageid": 30272,
+      "definition": "Claude Debussy est un compositeur français né le 22 août 1862 à Saint-Germain-en-Laye et mort le 25 mars 1918 à Paris.\nEn posant en 1894 avec Prélude à l'Après-midi d'un faune le premier jalon de la musique moderne, Debussy place d'emblée son œuvre sous le sceau de l'avant-garde musicale. Il est brièvement wagnérien en 1889, puis anticonformiste le reste de sa vie, en rejetant tous les académismes esthétiques. Avec La Mer, il renouvelle la forme symphonique ; avec Pelléas et Mélisande, l’opéra français sort des ornières de la tradition du drame lyrique, tandis qu’il confère à la musique de chambre, avec son quatuor à cordes, des accents impressionnistes inspirés.\nUne part importante de son œuvre est pour le piano et utilise une palette sonore particulièrement riche et évocatrice. Claude Debussy laisse l’image d’un créateur original. Son influence sera décisive dans l’histoire de la musique.",
+      "categories_wiki": [
+        "Article avec une section vide ou incomplète",
+        "Article contenant un lien mort",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en anglais",
+        "Article de qualité en espagnol"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Claude_Debussy",
+      "longueur_extrait": 903,
+      "statut": "ok"
+    },
+    {
+      "titre": "Igor Stravinsky",
+      "categorie_dominic": "Compositeurs",
+      "pageid": 72009,
+      "definition": "Igor Fiodorovitch Stravinsky (en russe : Игорь Фёдорович Стравинский), né le 17 juin 1882 à Oranienbaum en Russie et mort le 6 avril 1971 à New York aux États-Unis, est un compositeur, chef d'orchestre et pianiste russe, naturalisé français en 1934 puis américain en 1945, de musique moderne. Il est considéré comme l'un des compositeurs les plus influents du XXe siècle.\nL'œuvre de Stravinsky s'étend sur près de soixante-dix années. Elle se caractérise par sa grande diversité de styles. Le compositeur accède à la célébrité par la création de trois ballets dont il compose la musique pour les Ballets russes de Diaghilev : L'Oiseau de feu (1910), Petrouchka (1911) et son œuvre maîtresse Le Sacre du printemps (1913) qui ont eu une influence considérable sur la façon d'aborder le rythme en musique classique. Dans les années 1920, sa production musicale prend un virage néoclassique et renoue avec des formes traditionnelles (concerto grosso, fugue et symphonie). Dans les années 1950 enfin, Igor Stravinsky explore les possibilités de la musique sérielle.",
+      "categories_wiki": [
+        "Article avec une section vide ou incomplète",
+        "Article contenant un appel à traduction en anglais",
+        "Article contenant un appel à traduction en russe",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en anglais"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Igor_Stravinsky",
+      "longueur_extrait": 1060,
+      "statut": "ok"
+    },
+    {
+      "titre": "Giuseppe Verdi",
+      "categorie_dominic": "Compositeurs",
+      "pageid": 43464,
+      "definition": "Giuseppe Fortunino Francesco Verdi (/dʒuˈzɛppe fortuˈniːno franˈt͡ʃesko ˈverdi/), né Joseph Fortunin François Verdi le 10 octobre 1813 à Roncole et mort le 27 janvier 1901 à Milan, est un compositeur romantique italien. Son œuvre, composée essentiellement d'opéras, unissant le pouvoir mélodique à la profondeur psychologique et légendaire, est l'une des plus importantes de l'histoire du théâtre musical.\nVerdi est l'un des compositeurs d'opéras italiens les plus influents du XIXe siècle, son influence comparable à celle de Gioachino Rossini, Vincenzo Bellini, Gaetano Donizetti et Giacomo Puccini. Ses œuvres sont fréquemment jouées dans les opéras du monde entier et, dépassant les frontières du genre, certains de ses thèmes sont depuis longtemps inscrits dans la culture populaire comme « La donna è mobile » de Rigoletto, le « Brindisi » de La traviata, le « Va, pensiero » de Nabucco ou la « Marche triomphale » d'Aida. Les opéras de Verdi dominent encore le répertoire de l'art lyrique un siècle et demi après leur création.\nPeu engagé politiquement, il a cependant autorisé l'utilisation de son image et de ses œuvres dans le processus de réunification de la péninsule italienne et…",
+      "categories_wiki": [
+        "Article avec une section vide ou incomplète",
+        "Article contenant un appel à traduction en anglais",
+        "Article contenant un appel à traduction en italien",
+        "Article contenant un appel à traduction lié à Wikidata",
+        "Article de Wikipédia avec notice d'autorité"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Giuseppe_Verdi",
+      "longueur_extrait": 1307,
+      "statut": "ok"
+    },
+    {
+      "titre": "Richard Wagner",
+      "categorie_dominic": "Compositeurs",
+      "pageid": 31608,
+      "definition": "Wilhelm Richard Wagner [ˈʁɪçaʁt ˈvaːɡnɐ] , né le 22 mai 1813 à Leipzig et mort le 13 février 1883 à Venise, est un compositeur, directeur de théâtre, écrivain et chef d'orchestre allemand de la période romantique. Il est particulièrement connu pour ses quatorze opéras et drames lyriques, dont les dix principaux sont régulièrement joués lors du Festival annuel, qu'il a créé en 1876, qui se déroule chaque été dans le palais des festivals de Bayreuth, conçu par lui-même pour l'exécution de ses œuvres. Il est par ailleurs, auteur de plus d'une vingtaine d'ouvrages philosophiques et théoriques.\nIl compose lui-même la musique et écrit en stabreim les livrets de ses opéras, dont Tristan und Isolde, considéré comme le point de départ des principales avancées que connaîtra la musique au XXe siècle, et L'Anneau du Nibelung, festival scénique en un prologue (L'Or du Rhin) et trois journées (La Walkyrie, Siegfried et Le Crépuscule des dieux), dont la conception bouscule délibérément les habitudes de l'époque pour aller, selon les propres termes de Wagner, vers un « art total », une œuvre d'art totale, un spectacle complet qui mêle danse, théâtre, poésie et arts plastiques, dans une mélodie…",
+      "categories_wiki": [
+        "Antisémitisme",
+        "Article avec une référence non conforme",
+        "Article contenant un appel à traduction en allemand",
+        "Article contenant un appel à traduction en anglais",
+        "Article contenant un appel à traduction en italien"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Richard_Wagner",
+      "longueur_extrait": 2239,
+      "statut": "ok"
+    },
+    {
+      "titre": "Franz Liszt",
+      "categorie_dominic": "Compositeurs",
+      "pageid": 63403,
+      "definition": "Franz Liszt (Liszt Ferenc en hongrois) est un compositeur, transcripteur et pianiste virtuose hongrois né le 22 octobre 1811 à Doborján en Hongrie (empire d'Autriche) et mort le 31 juillet 1886 à Bayreuth en Bavière (Empire allemand).\nLiszt est le père de la technique pianistique moderne et du récital. Avec lui naissent l'impressionnisme au piano, le piano orchestral — Mazeppa, la quatrième Étude d'exécution transcendante — et le piano littéraire — les Années de pèlerinage. Innovateur et promoteur de l'« œuvre d'art de l'avenir » (la « musique de l'avenir » étant une invention des journalistes de l'époque), Liszt influence et soutient plusieurs figures majeures du XIXe siècle musical : Frédéric Chopin, Hector Berlioz, Richard Wagner, César Franck, Camille Saint-Saëns, Bedřich Smetana, Edvard Grieg et Alexandre Borodine. Aussi féconde que diverse, son œuvre a inspiré plusieurs courants majeurs de la musique moderne, qu'il s'agisse de l'impressionnisme, de la renaissance du folklore, de la musique de film ou du dodécaphonisme sériel.",
+      "categories_wiki": [
+        "Article avec passages non neutres",
+        "Article avec source à lier",
+        "Article avec une section vide ou incomplète",
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Franz_Liszt",
+      "longueur_extrait": 1047,
+      "statut": "ok"
+    },
+    {
+      "titre": "Pyotr Ilyich Tchaikovsky",
+      "categorie_dominic": "Compositeurs",
+      "pageid": 3601418,
+      "definition": "Piotr Ilitch Tchaïkovski ou Tchaïkovsky est un compositeur russe de l’époque romantique né le 25 avril 1840 à Votkinsk et mort le 25 octobre 1893 à Saint-Pétersbourg.",
+      "categories_wiki": [
+        "Cacographie (accent)"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Pyotr_Ilyich_Tchaikovsky",
+      "longueur_extrait": 0,
+      "statut": "ok"
+    },
+    {
+      "titre": "Antonio Vivaldi",
+      "categorie_dominic": "Compositeurs",
+      "pageid": 42825,
+      "definition": "Antonio Lucio Vivaldi [anˈtɔːnjo ˈluːtʃo viˈvaldi] , né le 4 mars 1678 à Venise et mort le 28 juillet 1741 à Vienne, est un violoniste et compositeur de musique baroque italien. Il était également prêtre de l'Église catholique.\nVivaldi a été l’un des virtuoses du violon les plus célèbres et les plus admirés de son temps (« incomparable virtuose du violon » selon un témoignage contemporain) ; il est également reconnu comme l’un des plus importants compositeurs de la période baroque, en tant qu'initiateur principal du concerto de soliste, genre dérivé du concerto grosso. Son influence, en Italie comme dans toute l’Europe, a été considérable, et peut se mesurer au fait que Bach a adapté et transcrit plus d’œuvres de Vivaldi que de n'importe quel autre musicien.\nSon activité s’est exercée dans les domaines de la musique instrumentale, particulièrement au violon mais également dédiée à une exceptionnelle variété d'instruments, de la musique religieuse et de la musique lyrique. Elle a donné lieu à la création d’un nombre considérable de concertos, sonates, opéras, pièces religieuses : il se targuait de pouvoir composer un concerto plus vite que le copiste ne pouvait le transcrire.…",
+      "categories_wiki": [
+        "Antonio Vivaldi",
+        "Article contenant un appel à traduction en allemand",
+        "Article contenant un appel à traduction en anglais",
+        "Article contenant un appel à traduction en italien",
+        "Article de Wikipédia avec notice d'autorité"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Antonio_Vivaldi",
+      "longueur_extrait": 2249,
+      "statut": "ok"
+    },
+    {
+      "titre": "Georg Friedrich Haendel",
+      "categorie_dominic": "Compositeurs",
+      "pageid": 31036,
+      "definition": "Georg Friedrich Haendel [ˈɡeːɔʁk ˈfʁiːdʁɪç ˈhɛndəl]  ou Georg Friederich  Händel (en anglais  George Frideric Handel [dʒɔː(ɹ)dʒ ˈfɹɛd(ə)ɹɪk ˈhændəl]) est un compositeur saxon, devenu sujet anglais, né le 23 février 1685 à Halle-sur-Saale et mort le 14 avril 1759 à Westminster.\nHaendel personnifie souvent de nos jours l'apogée de la musique baroque aux côtés de Jean-Sébastien Bach, Antonio Vivaldi, Georg Philipp Telemann et Jean-Philippe Rameau, et l'on peut considérer que l'ère de la musique baroque européenne prend fin avec l'achèvement de l’œuvre de Haendel. Né et formé en Saxe, installé quelques mois à Hambourg avant un séjour initiatique et itinérant de trois ans en Italie, revenu brièvement à Hanovre avant de s'établir définitivement en Angleterre, il réalisa dans son œuvre une synthèse magistrale des traditions musicales de l'Allemagne, de l'Italie, de la France et de l'Angleterre.\nVirtuose hors pair à l'orgue et au clavecin, Haendel dut à quelques-unes de ses œuvres très connues — notamment son oratorio Le Messie, ses concertos pour orgue et concerti grossi, ses suites pour clavecin (avec sa célèbre sarabande de Haendel), ses musiques de plein air (Water Music et Music for…",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en allemand",
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en galicien",
+        "Article de qualité en polonais"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Georg_Friedrich_Haendel",
+      "longueur_extrait": 1567,
+      "statut": "ok"
+    },
+    {
+      "titre": "Joseph Haydn",
+      "categorie_dominic": "Compositeurs",
+      "pageid": 1453918,
+      "definition": "Franz Joseph Haydn (/ˈhaɪdən/) () — il n'utilisait jamais son premier prénom —, né le 31 mars 1732 à Rohrau sur la Leitha en Basse-Autriche et mort le 31 mai 1809 à Vienne, est un compositeur autrichien. Il incarne le classicisme viennois au même titre que Mozart et Beethoven, les trois compositeurs étant regroupés par la postérité sous le vocable de « trinité classique viennoise ».\nLa carrière musicale de Joseph Haydn couvre toute la période classique, allant de la fin de la musique baroque aux débuts du romantisme. Il est à la fois le pont et le moteur qui a permis cette évolution. L'image du « papa Haydn » ne vient pas des titres de « père de la symphonie » ou « père du quatuor à cordes » généreusement décernés au XIXe siècle et même de nos jours. La création de ces genres relève d'une genèse un peu plus complexe, mais Haydn a très largement contribué à leur émergence et leur consolidation.\nDeux de ses frères furent également musiciens, Michael Haydn également compositeur et collègue de Mozart à Salzbourg et Johann Evangelist Haydn, ténor que Joseph fit venir à Esterhaza en 1763.",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en allemand",
+        "Article contenant un appel à traduction en anglais",
+        "Article contenant un lien mort",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en bosnien"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Joseph_Haydn",
+      "longueur_extrait": 1099,
+      "statut": "ok"
+    },
+    {
+      "titre": "Hector Berlioz",
+      "categorie_dominic": "Compositeurs",
+      "pageid": 28416,
+      "definition": "Hector Berlioz (/bɛʁ.ljoz/ en français, /'bɛr.ʎo/ en arpitan) est un compositeur, chef d'orchestre, critique musical et écrivain français, né le 11 décembre 1803 à La Côte-Saint-André (Isère) et mort le 8 mars 1869 à Paris.\nReprenant, immédiatement après Beethoven, la forme symphonique créée par Haydn, Berlioz la renouvelle en profondeur par le biais de la symphonie à programme (Symphonie fantastique), de la symphonie concertante (Harold en Italie) et en créant la « symphonie dramatique » (Roméo et Juliette).\nL'échec de Benvenuto Cellini lui ferme les portes de l'Opéra de Paris, en 1838. En conséquence, l'opéra-comique Béatrice et Bénédict est créé à Baden-Baden en 1862, et son chef-d'œuvre lyrique, Les Troyens, ne connaît qu'une création partielle à l'Opéra-Comique, en 1863. Berlioz invente les genres du « monodrame lyrique », avec Lélio ou le Retour à la vie, de la « légende dramatique », avec La Damnation de Faust, et de la « trilogie sacrée », avec L'Enfance du Christ, œuvres conçues pour le concert, entre l'opéra et l'oratorio.\nFaisant souvent appel à des effectifs considérables dans sa musique symphonique (Symphonie funèbre et triomphale), religieuse (Requiem, Te Deum) et…",
+      "categories_wiki": [
+        "Académie des beaux-arts (France)",
+        "Article avec une section vide ou incomplète",
+        "Article contenant un appel à traduction en allemand",
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Hector_Berlioz",
+      "longueur_extrait": 3404,
+      "statut": "ok"
+    },
+    {
+      "titre": "Dmitri Chostakovitch",
+      "categorie_dominic": "Compositeurs",
+      "pageid": 275398,
+      "definition": "Dmitri Dmitrievitch Chostakovitch (en russe : Дмитрий Дмитриевич Шостакович, /ˈdmʲitrʲɪj ˈdmʲitrʲɪɪvʲɪtɕ ʂəstɐˈkovʲɪtɕ/ ), né le 12 septembre 1906 (25 septembre 1906 dans le calendrier grégorien) à Saint-Pétersbourg dans l'Empire russe et mort le 9 août 1975 à Moscou en URSS, est un compositeur russe de la période soviétique.\nChostakovitch devient célèbre en Union soviétique sous le patronage du chef d'état-major Mikhaïl Toukhatchevski, mais a ensuite entretenu des relations complexes avec le gouvernement, qui lui décerna prix et privilèges d'État. Tout au long de sa vie Chostakovitch a participé à des fonctions et des délégations bureaucratiques, notamment au Soviet suprême de la RSFSR (1947) et au Soviet suprême de l'Union soviétique (de 1962 à sa mort).\nSon œuvre se caractérise par sa force et son dramatisme souvent exacerbé, des éléments grotesques et une tonalité ambivalente ; il a également été fortement influencé par le style néoclassique d'Igor Stravinsky et (surtout dans ses symphonies) par le romantisme de Gustav Mahler. Son œuvre, accusée de formalisme par le pouvoir soviétique, fait de Chostakovitch une figure majeure de la musique du XXe siècle.\nIl est l'auteur de…",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en anglais",
+        "Article contenant un appel à traduction en russe",
+        "Article contenant un lien mort",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en bulgare"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Dmitri_Chostakovitch",
+      "longueur_extrait": 1468,
+      "statut": "ok"
+    },
+    {
+      "titre": "Sergueï Prokofiev",
+      "categorie_dominic": "Compositeurs",
+      "pageid": 56276,
+      "definition": "Sergueï Sergueïevitch Prokofiev, généralement appelé Serge Prokofiev en France, est un compositeur, pianiste et chef d'orchestre russe, né le 11 avril 1891 (23 avril dans le calendrier grégorien) à Sontsovka (Ukraine, alors dans l'Empire russe) et mort le 5 mars 1953 à Moscou (URSS).\nIl est l'auteur de nombreuses œuvres musicales allant de la symphonie au concerto, de la musique de film à des opéras ou des ballets et a été reconnu de son vivant comme un artiste d'avant-garde très créatif. \nÉlève au conservatoire de Saint-Pétersbourg, il remporte le prix Anton Rubinstein en tant que meilleur étudiant en piano.\nNé en Russie tsariste, il émigre en Occident de 1918 à 1936, avant de se laisser convaincre de revenir en URSS où il est à la fois honoré et persécuté. Il meurt le même jour que Joseph Staline.",
+      "categories_wiki": [
+        "Article avec source à lier",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en espagnol",
+        "Article de qualité en galicien",
+        "Article manquant de références/Liste complète"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Sergue%C3%AF_Prokofiev",
+      "longueur_extrait": 810,
+      "statut": "ok"
+    },
+    {
+      "titre": "Maurice Ravel",
+      "categorie_dominic": "Compositeurs",
+      "pageid": 3872545,
+      "definition": "Maurice Ravel est un compositeur français né à Ciboure le 7 mars 1875 et mort à Paris 16e le 28 décembre 1937.\nAvec son aîné Claude Debussy, Ravel fut la figure la plus influente de la musique française au début du XXe siècle. Son œuvre, modeste en quantité (quatre-vingt-six œuvres originales, vingt-cinq œuvres orchestrées ou transcrites), est le fruit d'influences variées s'étendant de Couperin et Rameau jusqu'aux couleurs et rythmes du jazz, dont celle, récurrente, de l'Espagne.\nCaractérisée par sa grande diversité de genres, la production musicale de Ravel respecte dans son ensemble la tradition classique et s'étale sur une période créatrice de plus de quarante années qui la rendent contemporaine de celles de Fauré, Debussy, Stravinsky, Prokofiev, Bartók ou Gershwin. La grande majorité de ses œuvres a intégré le répertoire de concert. Parmi celles-ci le ballet symphonique Daphnis et Chloé (1909-1912), le Boléro (1928), les deux concertos pour piano et orchestre pour la main gauche (1929-1930) et en sol majeur (1929-1931) et l’orchestration des Tableaux d'une exposition de Moussorgski (1922) sont celles qui ont le plus contribué à sa renommée internationale. Reconnu comme un…",
+      "categories_wiki": [
+        "Ambulancier de la Première Guerre mondiale",
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité",
+        "Article de qualité en anglais"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Maurice_Ravel",
+      "longueur_extrait": 1517,
+      "statut": "ok"
+    },
+    {
+      "titre": "Erik Satie",
+      "categorie_dominic": "Compositeurs",
+      "pageid": 24956,
+      "definition": "Erik Satie, né le 17 mai 1866 à Honfleur et mort le 1er juillet 1925 à Paris 14e, est un compositeur et pianiste français.\nInclassable, associé un temps au symbolisme, il est reconnu comme précurseur de plusieurs mouvements, dont le néoclassicisme, le surréalisme, le minimalisme, la musique répétitive et le théâtre de l'absurde.",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article utilisant une Infobox",
+        "Ballets russes",
+        "Compositeur français de ballet"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Erik_Satie",
+      "longueur_extrait": 330,
+      "statut": "ok"
+    },
+    {
+      "titre": "Histoire de la musique",
+      "categorie_dominic": "Histoire",
+      "pageid": 365213,
+      "definition": "L'histoire de la musique est l'étude de l'évolution de tous les types de musiques de toutes les régions du monde.\nLa musique existe dans toutes les sociétés humaines, depuis la Préhistoire, probablement avant même l'époque de ses premières traces historiques. Elle est à la fois forme d'expression individuelle (notamment l'expression des sentiments), source de rassemblement collectif et de plaisir (fête, chant, danse) et symbole d'une communauté culturelle, nationale (hymne national, musique traditionnelle, musique folklorique, musique militaire) ou spirituelle (musique religieuse). Il n'est pas de civilisation qui, tôt ou tard, n'ait développé son propre système musical ou n'en ait adopté un en l'adaptant à ses nécessités et à ses goûts.",
+      "categories_wiki": [
+        "Article avec une section vide ou incomplète",
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article utilisant le modèle Dictionnaires inactif",
+        "Histoire de la musique"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Histoire_de_la_musique",
+      "longueur_extrait": 747,
+      "statut": "ok"
+    },
+    {
+      "titre": "Musique de la Grèce antique",
+      "categorie_dominic": "Histoire",
+      "pageid": 1037486,
+      "definition": "La musique tient une place importante dans la vie sociale, politique et religieuse de la Grèce antique. Pour les Grecs, la musique est le plus beau des arts, en même temps qu'une science, objet des plus hautes spéculations philosophiques ; en ce sens, les Grecs lui ont accordé plus de valeur qu'aux arts majeurs que furent pour eux la poésie, la danse et la médecine. \nLe rôle essentiel de la musique dans le monde grec apparaît dans plusieurs de leurs mythes : celui d'Orphée, qui réussit grâce à sa musique à convaincre le dieu des enfers, Hadès, de rendre à la lumière du jour son épouse Eurydice, est considéré comme le mythe fondateur de la musique ; mais il est attesté surtout par de très nombreux témoignages littéraires, papyrologiques et épigraphiques, par les représentations figurées sur la céramique, par les vestiges que nous avons conservés de leurs instruments à cordes, à percussion et à vent, et par plus d'une cinquantaine de partitions. \nÀ l'époque archaïque (des origines au VIe siècle av. J.-C.), la musique est pratiquée uniquement par des musiciens professionnels, les aèdes et les rhapsodes, qui déclament les mythes en s'accompagnant d'un instrument et transmettent la…",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en allemand",
+        "Article contenant un appel à traduction en anglais",
+        "Article à référence nécessaire",
+        "Bon article en ukrainien",
+        "Musique de la Grèce antique"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Musique_de_la_Gr%C3%A8ce_antique",
+      "longueur_extrait": 1617,
+      "statut": "ok"
+    },
+    {
+      "titre": "Musique médiévale",
+      "categorie_dominic": "Histoire",
+      "pageid": 72438,
+      "definition": "La musique médiévale concerne une période couvrant à peu près 800 ans de l'histoire religieuse et profane, que l'on fait commencer avec les premières musiques chrétiennes d'avant la réforme grégorienne, jusqu'aux musiques du XVe siècle marquées par l'émergence de l'école franco-flamande avant l'invention de l'imprimerie.\nLa musique du Moyen Âge est représentée principalement par des compositions vocales, religieuses ou profanes, marquées dans les premiers siècles par la monodie, notamment représentée par le plain-chant religieux et dans le domaine profane par la lyrique courtoise des troubadours et des trouvères.\nAu IXe siècle, la polyphonie, née à l'église, constitue une innovation qui devient majeure dans tout l'Occident. L'art musical polyphonique se caractérisa par l'apparition de formes qui découlèrent de cette superposition de voix différentes, le tout restant toujours lié au texte chanté. On trouve parmi ces formes : l'organum, le conduit, puis les différents types de motets et finalement de messes dont les principales prières chantées furent mises en polyphonie (d'abord en pièces séparées au XIIIe siècle, puis sous la forme de messes entières à partir du XIVe siècle), etc.…",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en anglais",
+        "Article de qualité en espéranto",
+        "Article de qualité en finnois",
+        "Article utilisant l'infobox Organisation2 via Modèle:Infobox",
+        "Article utilisant une Infobox"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Musique_m%C3%A9di%C3%A9vale",
+      "longueur_extrait": 1918,
+      "statut": "ok"
+    },
+    {
+      "titre": "Musique de la Renaissance",
+      "categorie_dominic": "Histoire",
+      "pageid": 75754,
+      "definition": "On désigne par musique de la Renaissance la musique européenne composée entre le XVe siècle, fin de la musique médiévale, et le XVIIe siècle, qui marque le début de la période baroque. Il s'agit d'une convention : si la dernière date n'est guère contestable, avec, par exemple, l'avènement de l'opéra, il n'en est pas de même pour le début de cette période, située, en ce qui concerne la musique, entre le Moyen Âge tardif et la pré-Renaissance.\nLes évolutions temporelles et géographiques, l'imprimerie, de nouveaux genres musicaux, la reconnaissance des compositeurs et de leurs œuvres caractérisent la musique de la Renaissance, sans oublier le formidable développement organologique des instruments de musique.",
+      "categories_wiki": [
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en finnois",
+        "Musique de la Renaissance",
+        "Page pointant vers des bases externes",
+        "Page pointant vers des dictionnaires ou encyclopédies généralistes"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Musique_de_la_Renaissance",
+      "longueur_extrait": 714,
+      "statut": "ok"
+    },
+    {
+      "titre": "Classicisme viennois",
+      "titre_original": "Période classique (musique)",
+      "categorie_dominic": "Histoire",
+      "pageid": 4590918,
+      "definition": "Le classicisme viennois appelé aussi Première école viennoise  prend forme à Vienne avec Haydn (1732-1809), Mozart (1756-1791) et Beethoven (1770-1827) dans la seconde moitié du XVIIIe siècle. Schubert est quelquefois rajouté à ces compositeurs. Le mot « école » reflète la concentration des énergies et des personnalités autour d’axes principaux sur le plan du style musical et de l’organisation des formes et du langage, à partir de formations instrumentales spécifiques et non d'un enseignement quelconque. Il bénéficie de l'invention d'instruments nouveaux comme le piano-forte. La fonction des instruments à clavier change radicalement : ils perdent progressivement leur fonction de continuo. Le quatuor à cordes devient une forme instrumentale de premier plan grâce à l'apport de Haydn.\nOn relèvera également l'apparition de la musique d'harmonie (en allemand : Harmoniemusik), un ensemble d'instruments à vent (bois et cuivres) avec un répertoire musical adapté créé ou transcript dont chaque maison aristocratique viennoise disposait. Ce mouvement disparaitra avec les conséquences économiques des guerres napoléoniennes et sera néanmoins à la base de la petite harmonie dans l'orchestre…",
+      "categories_wiki": [
+        "Article de Wikipédia avec notice d'autorité",
+        "Mouvement artistique",
+        "Musique de la période classique",
+        "Page pointant vers des bases externes",
+        "Page pointant vers des dictionnaires ou encyclopédies généralistes"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Classicisme_viennois",
+      "longueur_extrait": 1221,
+      "statut": "ok"
+    },
+    {
+      "titre": "Romantisme musical",
+      "titre_original": "Mouvement romantique (musique)",
+      "categorie_dominic": "Histoire",
+      "pageid": 1137452,
+      "definition": "La musique romantique est un type de musique qui domine en Europe tout au long du XIXe siècle. Ce courant musical aux formes variées, qui met au premier plan l'expression de l'émotion, s'inscrit dans le mouvement esthétique européen du romantisme. Celui-ci touche les arts et la littérature sous l'influence de l'Angleterre et de l'Allemagne, où s'approfondit une nouvelle sensibilité à partir de la fin du XVIIIe siècle. De nombreux compositeurs s'illustreront dans cette longue période aussi bien dans la musique instrumentale et orchestrale que dans l'art lyrique et vocal.",
+      "categories_wiki": [],
+      "url": "https://fr.wikipedia.org/wiki/Romantisme_musical",
+      "longueur_extrait": 0,
+      "statut": "ok"
+    },
+    {
+      "titre": "Atonalité",
+      "titre_original": "Musique du XXe siècle",
+      "categorie_dominic": "Histoire",
+      "pageid": 458660,
+      "definition": "La musique atonale comprend les compositions musicales caractérisées par l'émancipation des dissonances et le rejet de toute hiérarchie tonale — hiérarchie qui est le fondement de la grammaire musicale, ou théorie de la musique occidentale, sur laquelle reposent la musique classique et la quasi-totalité des musiques occidentales. L'atonalité constitue donc une remise en cause importante de la conception de l'écriture musicale envisagée jusqu'alors. Au cours du XXe siècle, elle engendre la musique contemporaine, large courant de musique dite « savante » avant-gardiste. L'atonalité est associée tout particulièrement à la phase expressionniste de la Seconde école de Vienne. Au niveau expressif, elle est souvent associée à des atmosphères angoissées et torturées qui siéent à l'esthétique expressionniste. Ce type d'écriture est introduit par Arnold Schönberg et ses élèves Anton Webern et Alban Berg.",
+      "categories_wiki": [],
+      "url": "https://fr.wikipedia.org/wiki/Atonalit%C3%A9",
+      "longueur_extrait": 0,
+      "statut": "ok"
+    },
+    {
+      "titre": "Chant grégorien",
+      "categorie_dominic": "Histoire",
+      "pageid": 201304,
+      "definition": "Le chant grégorien est le chant liturgique officiel et ordinaire de l'Église catholique. Issu du chant vieux-romain et du chant gallican, il reste pratiqué de nos jours dans un certain nombre d'églises paroissiales, de monastères ainsi que par des musiciens professionnels.\nC’est un chant sacré anonyme. Il est destiné à soutenir le texte liturgique en latin. Sa composition variait afin de s'adapter aux niveaux de connaissance musicale du soliste, de la schola cantorum, des célébrants et des fidèles.\nIl doit se chanter a cappella et à l'unisson, sans accompagnement harmonisé, car, surtout selon l'étude de Franz Liszt, toute harmonisation modifie la structure de cette musique.\nDu point de vue du système mélodique, le chant grégorien est de type modal et diatonique. Les chromatismes en sont généralement exclus, ainsi que les modulations et l'emploi de la sensible. Les différentes échelles utilisées, avec leurs degrés et leurs modes particuliers, sont appelées modes ecclésiastiques, ou échelles modales, ou modes anciens par opposition aux échelles utilisées postérieurement en musique classique tonale.\nC'est une musique déployée d'après le rythme verbal, qui prend son origine dans le…",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en anglais",
+        "Bon article en allemand",
+        "Chant grégorien",
+        "Nommé d'après Grégoire Ier",
+        "Portail:Catholicisme/Articles liés"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Chant_gr%C3%A9gorien",
+      "longueur_extrait": 2222,
+      "statut": "ok"
+    },
+    {
+      "titre": "Troubadour",
+      "categorie_dominic": "Histoire",
+      "pageid": 36522,
+      "definition": "Un troubadour (de l'occitan trobador) est un compositeur, poète, et musicien médiéval de langue d'oc qui interprétait ses œuvres poétiques ou les faisait interpréter par des jongleurs ou des ménestrels. Les femmes qui pratiquent l'art du trobar sont appelées des trobairitz ou troubadouresses.\nL’équivalent du troubadour en pays d’Oïl est le trouvère.\nLe mouvement troubadour a commencé vers la fin du XIe siècle en Occitanie, au sein de la haute noblesse occitane. Puis, il s'est répandu par la suite dans d'autres couches sociales et s'est étendu au nord de l'Italie et de l'Espagne. Les troubadours ont participé activement à la vie sociale, politique et religieuse de la société de l'époque. Sous l'influence des troubadours, des mouvements du même type se sont levés partout en Europe. Après la période « classique » vers le XIIIe siècle et d'une résurgence au milieu de ce siècle, l'art des troubadours a décliné au XIVe siècle puis a finalement disparu à l'époque de la Peste noire (1347-1352).\nLes thèmes abordés dans les chansons des troubadours portent principalement sur la chevalerie et l'amour courtois. Les œuvres peuvent être groupés en trois styles : le trobar leu (léger), le trobar…",
+      "categories_wiki": [
+        "Ancien métier",
+        "Article contenant un appel à traduction en allemand",
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article utilisant une Infobox"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Troubadour",
+      "longueur_extrait": 1888,
+      "statut": "ok"
+    },
+    {
+      "titre": "Ars nova",
+      "titre_original": "Polyphonie médiévale",
+      "categorie_dominic": "Histoire",
+      "pageid": 827608,
+      "definition": "L'Ars nova est un courant de la musique médiévale occidentale, centré sur la France, et qui englobe une période comprise entre l'écriture du Roman de Fauvel (1310-1314) et la mort de Guillaume de Machaut (1377).\nOn utilise parfois ce terme pour désigner, d'une manière générale, l'ensemble de la musique polyphonique européenne du XIVe siècle, ce qui inclut des compositeurs italiens tels Francesco Landini, Jacopo da Bologna, Paolo da Firenze, Gherardello da Firenze ou encore Lorenzo da Firenze. Cependant, on se sert plutôt du terme parallèle Trecento (ce qui signifie XIVe siècle en italien) pour désigner la musique créée par ceux-ci et leurs compatriotes.",
+      "categories_wiki": [
+        "Ars nova",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en portugais",
+        "Page pointant vers des bases externes",
+        "Page pointant vers des dictionnaires ou encyclopédies généralistes"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Ars_nova",
+      "longueur_extrait": 661,
+      "statut": "ok"
+    },
+    {
+      "titre": "Son (physique)",
+      "categorie_dominic": "Acoustique",
+      "pageid": 17167013,
+      "definition": "Une onde sonore est une onde longitudinale produite par une perturbation suffisamment rapide de la pression atmosphérique pour être perçue par des êtres vivants, oscillation ou impulsion. Dans le cas d'une vibration mécanique d'un fluide celle-ci se propage grâce à la déformation élastique de ce fluide. Le son est la sensation auditive que produit cette vibration. Une brève variation de la pression atmosphérique, telle un claquement, peut aussi produire une onde sonore.",
+      "categories_wiki": [],
+      "url": "https://fr.wikipedia.org/wiki/Son_(physique)",
+      "longueur_extrait": 0,
+      "statut": "ok"
+    },
+    {
+      "titre": "Acoustique musicale",
+      "categorie_dominic": "Acoustique",
+      "pageid": 2085643,
+      "definition": "L'acoustique musicale est le domaine de l'acoustique consacré à l'étude des sons musicaux et leur mode de production par les instruments de musique et la voix.\n\n« La musique est une science qui doit avoir des règles certaines ; ces règles doivent être tirées d’un principe évident, et ce principe ne peut guère nous être connu sans le secours des mathématiques. »\n\n— Jean-Philippe Rameau, Traité de l'harmonie réduite à ses principes naturels, 1722.\nNée du souci de relier la tradition musicale, principalement de la musique savante, à l'esprit scientifique, l'acoustique musicale fut l'un des premiers champs d'investigation de l'acoustique.\n\n« Nous n'avons pas l'intention de mettre en cause la validité des travaux des nombreux chercheurs qui se sont consacrés à l'acoustique musicale, mais nous serions plus à l'aise s'ils n'étaient pas réunis sous une dénomination aussi équivoque. Accoler un substantif qui relève des sciences physiques avec un adjectif qui relève d'un art, a de quoi, en effet, faire frémir de crainte devant le danger de se voir entraîner, par la vertu formelle d'un vocable un peu légèrement adopté, vers les pires malentendus. »\n\n— Pierre Schaeffer, Traité des objets…",
+      "categories_wiki": [
+        "Acoustique musicale",
+        "Article utilisant l'infobox Discipline",
+        "Article utilisant une Infobox",
+        "Article à référence nécessaire",
+        "Page utilisant P279"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Acoustique_musicale",
+      "longueur_extrait": 2137,
+      "statut": "ok"
+    },
+    {
+      "titre": "Fréquence",
+      "titre_original": "Fréquence (physique)",
+      "categorie_dominic": "Acoustique",
+      "pageid": 17893,
+      "definition": "En physique, la fréquence est le nombre de fois qu'un phénomène périodique se reproduit par unité de temps. Dans le Système international d'unités, la fréquence s'exprime en hertz (Hz).\n\nLorsque le phénomène peut être décrit mathématiquement par une fonction périodique du temps, c'est-à-dire une fonction F(t) telle qu'il existe des constantes Ti pour lesquelles, quel que soit t, F(t+Ti) = F(t), alors la plus petite des valeurs positives de ces constantes Ti est la période T de la fonction, et la fréquence f est l'inverse de la période :\n\n  \n    \n      \n        f\n        =\n        \n          \n            1\n            T\n          \n        \n      \n    \n    {\\displaystyle f={\\frac {1}{T}}}\n  \n\nLa notion de fréquence s'applique aux phénomènes périodiques ou non. L'analyse spectrale transforme la description d'un phénomène en fonction du temps en sa description en fonction de la fréquence.\nDans plusieurs domaines technologiques, on parle de fréquence spatiale. Dans cet usage, une dimension de l'espace prend la place du temps. S'il existe une variation périodique dans l'espace, la fréquence spatiale est l'inverse de la distance minimale à laquelle on retrouve la forme identique, par…",
+      "categories_wiki": [
+        "Article utilisant une Infobox",
+        "Fréquence",
+        "Grandeur physique intensive",
+        "Mécanique ondulatoire",
+        "Portail:Physique/Articles liés"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Fr%C3%A9quence",
+      "longueur_extrait": 1794,
+      "statut": "ok"
+    },
+    {
+      "titre": "Hauteur (musique)",
+      "categorie_dominic": "Acoustique",
+      "pageid": 257587,
+      "definition": "En musique, la hauteur est l'une des caractéristiques essentielles d'un son ou note, les autres étant la durée, l'intensité, le timbre et l'expression.\nEn musique occidentale, on désigne la hauteur par le nom d'une note sur une échelle ou gamme. La hauteur relative d'une note dans la gamme s'appelle degré. Le solfège écrit vers le haut de la portée les notes aiguës, et inversement, vers le bas, les graves. On écrit les signes correspondant aux instruments qui n'ont pas de hauteur précise, bien qu'ils puissent sonner aigu ou grave, comme les tambours, sur une ligne horizontale quelconque, l'important étant leur placement dans le temps, noté de gauche à droite.\nLa perception des hauteurs est un des champs d'investigation de la psychoacoustique. La tradition musicale et les études de psychologie expérimentale convergent pour analyser cette perception en deux composantes distinctes, provenant de deux systèmes physiologiques différents. La perception de la hauteur spectrale place le son entendu assez approximativement sur une échelle entre graves et aiguës. La perception de la hauteur tonale rend capable de différencier deux sons harmoniques proches, indépendamment de leur richesse en…",
+      "categories_wiki": [
+        "Article de Wikipédia avec notice d'autorité",
+        "Article à référence souhaitée",
+        "Justesse",
+        "Notation musicale",
+        "Page pointant vers des bases externes"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Hauteur_(musique)",
+      "longueur_extrait": 1354,
+      "statut": "ok"
+    },
+    {
+      "titre": "Harmonique",
+      "categorie_dominic": "Acoustique",
+      "pageid": 2023171,
+      "definition": "Un harmonique  est un élément constitutif d'un phénomène périodique ou vibratoire. Le mot « harmonique » est masculin, mais il est parfois utilisé improprement au féminin, en sous-entendant la fréquence associée. \n\nUn harmonique est, en musique, une composante du son musical.\nUne progression harmonique est, en musique, un type de jeu d'orgue.\nUn harmonique est, en physique, l'élément de décomposition primaire d'une fonction périodique exprimé dans la base de Hilbert.\nUne fonction harmonique caractérise en mathématiques certaines fonctions ayant des propriétés de régularité et satisfaisant certaines équations aux dérivées partielles.\nL'analyse harmonique est la branche des mathématiques qui étudie la représentation des fonctions ou des signaux comme superposition d'ondes de base.\nLa série harmonique est une série numérique célèbre en mathématiques\nLa division harmonique qualifie en géométrie la disposition de points sur une droite\nUn faisceau harmonique est un faisceau particulier de droites\nLa moyenne harmonique est un type de moyenne\nEn acoustique musicale et en psychoacoustique, une série harmonique (également série de partiels) est une abstraction correspondant à la combinaison…",
+      "categories_wiki": [
+        "Homonymie",
+        "Page utilisant l'extension Phonos"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Harmonique",
+      "longueur_extrait": 2056,
+      "statut": "ok"
+    },
+    {
+      "titre": "Résonance",
+      "titre_original": "Résonance (physique)",
+      "categorie_dominic": "Acoustique",
+      "pageid": 144121,
+      "definition": "La résonance est un phénomène selon lequel certains systèmes physiques (électriques, mécaniques, etc.) sont sensibles à certaines fréquences. Un système résonant peut accumuler une énergie, si celle-ci est appliquée sous forme périodique, et proche d'une fréquence dite « fréquence de résonance ». Soumis à une telle excitation, le système va être le siège d'oscillations de plus en plus importantes, jusqu'à atteindre un régime d'équilibre qui dépend des éléments dissipatifs du système, ou bien jusqu'à une rupture d'un composant du système.\nSi on soumet un système résonant à un degré de liberté, non plus à une excitation périodique, mais à une percussion (pour les systèmes mécaniques), ou à une impulsion (pour les systèmes électriques), alors le système sera le siège d'oscillations amorties, sur une fréquence proche de sa fréquence propre et retournera progressivement à son état stable.\nLes domaines où la résonance intervient sont innombrables : balançoire enfantine, mais aussi résonances acoustiques de la voix parlée ou chantée et des instruments de musique, la résonance des marées, la résonance orbitale en astronomie, la résonance de la membrane basilaire dans le phénomène…",
+      "categories_wiki": [
+        "Acoustique",
+        "Article à référence nécessaire",
+        "Concept en physique",
+        "Onde",
+        "Portail:Physique/Articles liés"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/R%C3%A9sonance",
+      "longueur_extrait": 1709,
+      "statut": "ok"
+    },
+    {
+      "titre": "Vibration",
+      "categorie_dominic": "Acoustique",
+      "pageid": 170932,
+      "definition": "Une vibration est un mouvement d'oscillation mécanique autour d'une position d'équilibre stable ou d'une trajectoire moyenne. La vibration d'un système peut être libre ou forcée.",
+      "categories_wiki": [
+        "Acoustique",
+        "Article avec une section vide ou incomplète",
+        "Article manquant de références/Liste complète",
+        "Article manquant de références depuis octobre 2015",
+        "Catégorie Commons avec lien local différent sur Wikidata"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Vibration",
+      "longueur_extrait": 178,
+      "statut": "ok"
+    },
+    {
+      "titre": "Onde sonore",
+      "categorie_dominic": "Acoustique",
+      "pageid": 6826,
+      "definition": "Une onde sonore est une onde longitudinale produite par une perturbation suffisamment rapide de la pression atmosphérique pour être perçue par des êtres vivants, oscillation ou impulsion. Dans le cas d'une vibration mécanique d'un fluide celle-ci se propage grâce à la déformation élastique de ce fluide. Le son est la sensation auditive que produit cette vibration. Une brève variation de la pression atmosphérique, telle un claquement, peut aussi produire une onde sonore.\nLes êtres humains, comme beaucoup d'animaux, ressentent ces sons grâce au sens de l'ouïe et par la conduction osseuse, dans une certaine bande de fréquences. Les vibrations inaudibles de plus basse fréquence s'appellent des infrasons, ceux de plus haute fréquence, les ultrasons ; cette limite n'a pas de pertinence pour la physique.\nL'acoustique est la science qui étudie les vibrations audibles ; la psychoacoustique s'intéresse quant à elle à la manière dont les organes du corps humain, y compris le cerveau, ressentent et l'être humain perçoit et interprète les sons.",
+      "categories_wiki": [
+        "Acoustique",
+        "Article contenant un appel à traduction en espagnol",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité dans une autre langue",
+        "Article à référence insuffisante"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Onde_sonore",
+      "longueur_extrait": 1047,
+      "statut": "ok"
+    },
+    {
+      "titre": "Décibel",
+      "categorie_dominic": "Acoustique",
+      "pageid": 52612,
+      "definition": "Le décibel, de symbole dB, est une unité de mesure égale à un dixième de bel permettant à l'origine d'exprimer le rapport entre deux puissances comme dix fois le logarithme décimal de ce rapport. Depuis, le décibel est aussi utilisé en tant que valeur absolue par rapport à une valeur de référence. Par exemple, en audio numérique, le dB FS (dB Full Scale) est indiqué en valeurs toujours négatives par rapport au 0 dB, valeur au-delà de laquelle il n'existe plus de quantification possible. Le décibel est utilisé dans les télécommunications, l'électronique et l'acoustique.\nDans le domaine de l'acoustique environnementale, on exprime couramment le niveau sonore en décibels acoustiques (dB A). Cette valeur indique implicitement une valeur absolue du volume en tant que rapport entre la grandeur mesurée et la valeur de référence qui correspond au seuil d'audition.\nLe décibel est un sous-multiple du bel, jamais employé. Ni le bel, ni le décibel n'appartiennent au Système international d'unités, mais leur usage est accepté avec ses unités.\nTous les domaines de l'ingénierie peuvent utiliser le décibel. Il est particulièrement courant dans le domaine des télécommunications (dont il est…",
+      "categories_wiki": [
+        "Acoustique",
+        "Article contenant un appel à traduction en anglais",
+        "Catégorie Commons avec lien local identique sur Wikidata",
+        "Grandeur sans dimension",
+        "Ligne de transmission"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/D%C3%A9cibel",
+      "longueur_extrait": 1301,
+      "statut": "ok"
+    },
+    {
+      "titre": "Psychoacoustique",
+      "categorie_dominic": "Acoustique",
+      "pageid": 140741,
+      "definition": "La psychoacoustique est la branche de la psychophysique qui étudie les rapports entre les perceptions auditives de l'être humain et les sons qui parviennent à ses oreilles. Elle fait appel à l'acoustique, qui étudie la nature et les propriétés des ondes sonores, à la physiologie de l'audition, qui examine dans quelle mesure elles se transforment en influx nerveux, à la psychologie et aux sciences cognitives. Elle emploie les méthodes de la psychologie expérimentale.",
+      "categories_wiki": [
+        "Acoustique",
+        "Article contenant un appel à traduction en allemand",
+        "Article à référence souhaitée",
+        "Portail:Biologie/Articles liés",
+        "Portail:Musique/Articles liés"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Psychoacoustique",
+      "longueur_extrait": 470,
+      "statut": "ok"
+    },
+    {
+      "titre": "Notation musicale",
+      "categorie_dominic": "Notation",
+      "pageid": 260726,
+      "definition": "La notation musicale est la transcription sur un support d'une œuvre musicale afin de la conserver, de la diffuser et de l'interpréter ultérieurement.\nD'une manière générale, quelles que soient les époques et les civilisations, on peut définir l'écriture musicale comme étant un procédé de notation qui met en relation un système et un code. Le code d'un système musical décrit celui-ci en lui associant un certain nombre de symboles plus ou moins contraignants pouvant définir la durée, la hauteur ou les nuances d'un son.\nPour nommer les notes de musique, la musique occidentale utilise deux systèmes différents, selon le pays :\n\nle premier système, inspiré de l'Antiquité, utilise les premières lettres de l'alphabet. Il est en vigueur, dans deux variantes simplifiées (ne différant que par la désignation du si), dans les pays anglophones et germanophones ;\nle second système utilise les syllabes d'un chant latin. Il a été élaboré pendant la deuxième moitié du Moyen Âge et il est en usage en France, en Italie, etc.",
+      "categories_wiki": [
+        "Article avec source à lier",
+        "Article avec une section vide ou incomplète",
+        "Article contenant un appel à traduction en chinois",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article de qualité en allemand"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Notation_musicale",
+      "longueur_extrait": 1021,
+      "statut": "ok"
+    },
+    {
+      "titre": "Portée (musique)",
+      "categorie_dominic": "Notation",
+      "pageid": 4255112,
+      "definition": "Dans le solfège, la portée est un ensemble de cinq lignes horizontales et de quatre interlignes permettant de représenter les hauteurs. Elle est destinée à recevoir les figures de notes et de silences, les clés, les altérations, et quelques autres symboles annexes.\nUn ensemble de deux portées ou plus, liées par des accolades, s'appelle un système.\nD'autres systèmes de notation utilisent un nombre de lignes différent :\n\nle chant grégorien est historiquement noté sur des portées à quatre lignes qui se suivent ;\nles parties des instruments à hauteur unique ou indéterminée (tambours, cymbales, castagnettes, triangles, etc.) sont souvent écrites sur une ligne unique, puisque seul leur rythme est pris en compte.",
+      "categories_wiki": [
+        "Catégorie Commons avec lien local identique sur Wikidata",
+        "Notation musicale",
+        "Page pointant vers des bases externes",
+        "Page pointant vers des dictionnaires ou encyclopédies généralistes",
+        "Page utilisant P1417"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Port%C3%A9e_(musique)",
+      "longueur_extrait": 715,
+      "statut": "ok"
+    },
+    {
+      "titre": "Clé (musique)",
+      "titre_original": "Clé (solfège)",
+      "categorie_dominic": "Notation",
+      "pageid": 1946815,
+      "definition": "Dans la notation musicale, une clef, ou clé, est un signe graphique placé au début de la portée qui indique la hauteur des notes associée à chaque ligne.",
+      "categories_wiki": [],
+      "url": "https://fr.wikipedia.org/wiki/Cl%C3%A9_(musique)",
+      "longueur_extrait": 0,
+      "statut": "ok"
+    },
+    {
+      "titre": "Mesure (musique)",
+      "categorie_dominic": "Notation",
+      "pageid": 102735,
+      "definition": "La mesure recouvre, dans la terminologie solfégique francophone, plusieurs aspects musicaux intrinsèquement liés les uns aux autres, d'une part, la segmentation et d'autre part, la métrique. \nDans un premier sens, la mesure est une segmentation de la durée du discours musical. En d'autres termes, la mesure est la division d'un morceau de musique en parties d'égales durées. Cette division s'indique au moyen de barres verticales sur la portée, appelées barres de mesure. Elle se définit par un nombre donné de temps — les temps étant des unités pour mesurer la durée. À cet égard, la mesure peut donc être vue comme une unité de mesure plus grande regroupant plusieurs temps. Mais une mesure se définit également par la structuration et l'accentuation des temps : à savoir entre temps forts (accentués) et temps faibles. En d'autres termes, cette structure rythmique est constituée d'une succession de temps (un, deux, trois...) se répétant de manière cyclique, et dont le premier de chaque série est plus « fort » que les suivants. Généralement, la mesure est définie comme une période comportant un « temps fort » (plutôt le premier en musique « classique », plutôt le second et le quatrième en…",
+      "categories_wiki": [
+        "Article de Wikipédia avec notice d'autorité",
+        "Article à référence nécessaire",
+        "Article à référence souhaitée",
+        "Notation musicale",
+        "Page pointant vers des bases externes"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Mesure_(musique)",
+      "longueur_extrait": 2604,
+      "statut": "ok"
+    },
+    {
+      "titre": "Nuance (musique)",
+      "categorie_dominic": "Notation",
+      "pageid": 103493,
+      "definition": "Dans la musique occidentale, une nuance est un signe noté sur une partition qui indique l'intensité relative d'une note, d'une phrase, ou encore d'un passage entier d'une œuvre musicale. Les nuances permettent au musicien de restituer la dynamique de l'œuvre lors de son interprétation.",
+      "categories_wiki": [
+        "Articulation (musique)",
+        "Notation musicale",
+        "Page pointant vers des bases externes",
+        "Page pointant vers des dictionnaires ou encyclopédies généralistes",
+        "Page utilisant P3219"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Nuance_(musique)",
+      "longueur_extrait": 286,
+      "statut": "ok"
+    },
+    {
+      "titre": "Barre de mesure",
+      "categorie_dominic": "Notation",
+      "pageid": 240287,
+      "definition": "En notation musicale, une barre de mesure est un trait vertical permettant de matérialiser sur la partition les cycles de temps que sont les mesures. En conséquence, une mesure est la période comprise entre deux barres consécutives, et le « temps fort » — ou premier temps de la mesure — est celui se trouvant immédiatement à droite de chaque barre.",
+      "categories_wiki": [
+        "Article manquant de références/Liste complète",
+        "Article manquant de références depuis février 2022",
+        "Notation musicale",
+        "Page pointant vers des bases externes",
+        "Page pointant vers des dictionnaires ou encyclopédies généralistes"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Barre_de_mesure",
+      "longueur_extrait": 349,
+      "statut": "ok"
+    },
+    {
+      "titre": "Tablature",
+      "categorie_dominic": "Notation",
+      "pageid": 127935,
+      "definition": "En musique, la tablature (ou plutôt les tablatures, car il en existe différents types) est un système de notation d'une pièce instrumentale indiquant, par une représentation schématisée des parties d'un instrument, les doigtés et le rythme. Les informations qu'elle contient sont différentes de celles de la partition traditionnelle (sur portées), au sens où la tablature prend en compte les spécificités de l'instrument et parce qu'elle permet soit de simplifier l'exécution, soit d'informer l'interprète sur l'utilisation précise de l'instrument.\nContrairement à ce qui est souvent dit, la tablature n'indique pas quel doigt utiliser, mais la position d'un doigt, quel qu'il soit. L'interprète conserve donc un choix relatif quant au doigté qu'il adopte, que la tablature n'indique pas. Les chiffres (en tablature italienne) ou les lettres (en tablature française) représentent les frettes et non les doigts. La tablature est notamment utilisée pour la notation musicale de la guitare, de l'accordéon diatonique, de la batterie ou du piano.\nDepuis le Moyen Âge, ses formes ont varié selon les instruments et les pays, et l'on trouvait essentiellement des tablatures pour claviers, pour luths et…",
+      "categories_wiki": [
+        "Guitare",
+        "Luth",
+        "Portail:Guitare/Articles liés",
+        "Portail:Musique/Articles liés",
+        "Système de notation musicale"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Tablature",
+      "longueur_extrait": 1208,
+      "statut": "ok"
+    },
+    {
+      "titre": "Chiffrage des accords",
+      "titre_original": "Chiffrage d'accord",
+      "categorie_dominic": "Notation",
+      "pageid": 250545,
+      "definition": "Le chiffrage des accords est une notation représentant les accords dans la musique tonale.\nUtilisé à l'origine à la période baroque (XVIIe et XVIIIe siècles) pour construire la basse continue, il sert à partir du XXe siècle pour improviser le jazz et à la retranscription des grilles harmoniques de rock et de pop, ainsi qu'à l'analyse harmonique.",
+      "categories_wiki": [
+        "Article avec une section vide ou incomplète",
+        "Harmonie tonale",
+        "Page pointant vers des bases externes",
+        "Page pointant vers des dictionnaires ou encyclopédies généralistes",
+        "Page utilisant P8313"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Chiffrage_des_accords",
+      "longueur_extrait": 347,
+      "statut": "ok"
+    },
+    {
+      "titre": "Articulation (musique)",
+      "categorie_dominic": "Notation",
+      "pageid": 206577,
+      "definition": "L'articulation est l'art d'imiter les inflexions de la voix humaine, dans la pratique d'un instrument de musique. L'articulation consiste essentiellement dans la maîtrise des attaques, ainsi que dans la gestion des micro-silences entre les notes (silences d'articulations), qui donnent toute leur clarté au message musical. L'objectif est de donner une couleur et une respiration à la phrase musicale tout en synchronisant l'articulation avec les notes jouées.\nLa première note d'une liaison d'expression constitue un point d'appui de l'articulation.",
+      "categories_wiki": [
+        "Article à référence nécessaire",
+        "Articulation (musique)",
+        "Page pointant vers des bases externes",
+        "Page pointant vers des dictionnaires ou encyclopédies généralistes",
+        "Page utilisant P5019"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Articulation_(musique)",
+      "longueur_extrait": 550,
+      "statut": "ok"
+    },
+    {
+      "titre": "Phrasé",
+      "titre_original": "Phrasé musical",
+      "categorie_dominic": "Notation",
+      "pageid": 103494,
+      "definition": "Un phrasé indique la façon d'exécuter les différentes phrases musicales.",
+      "categories_wiki": [
+        "Article avec source à lier",
+        "Article avec une section vide ou incomplète",
+        "Page pointant vers des bases externes",
+        "Page pointant vers des dictionnaires ou encyclopédies généralistes",
+        "Page utilisant P3219"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Phras%C3%A9",
+      "longueur_extrait": 72,
+      "statut": "ok"
+    },
+    {
+      "titre": "Voix chantée",
+      "categorie_dominic": "Voix et chant",
+      "pageid": 5638349,
+      "definition": "Le chant est l'ensemble de la production de sons musicaux produite par la voix humaine. La personne qui génère le chant est appelée chanteur, chanteuse, ou vocaliste. Le terme s'étend cependant aussi aux vocalisations et plus généralement aux signaux sonores émis par certains animaux dans un contexte de parade nuptiale ou non.",
+      "categories_wiki": [],
+      "url": "https://fr.wikipedia.org/wiki/Voix_chant%C3%A9e",
+      "longueur_extrait": 0,
+      "statut": "ok"
+    },
+    {
+      "titre": "Soprano",
+      "categorie_dominic": "Voix et chant",
+      "pageid": 114203,
+      "definition": "Dans la musique occidentale, au sein de la musique classique, le terme soprano (ou soprane) désigne avant tout le pupitre dont la tessiture se situe « au-dessus » (de celui des altos, ténors et basses).\nDans le domaine vocal, il désigne la voix de femme ou d'enfant (fille ou garçon avant la mue), en soliste ou au sein d'un pupitre. Historiquement, il y a eu des sopranos masculins : les castrats des périodes baroque et classique. De nos jours, les hommes chantant en voix de fausset sont habituellement appelés contreténors ou sopranistes, lorsque leur ambitus se rapproche (cas exceptionnels) de celui du soprano.\nLe développement en puissance et longueur de voix a conduit à l'étude des voix, que l'on nomme aujourd'hui typologie vocale. Celle-ci décrit plusieurs types de sopranos, des plus puissants (soprano dramatique) aux plus aigus (soprano léger).\nDans les familles d'instruments, on désigne comme soprano tout instrument dont l'ambitus se situe au-dessus de tous ceux de sa famille. Exemple, le saxophone soprano se trouve au-dessus du saxophone alto.",
+      "categories_wiki": [
+        "Article de Wikipédia avec notice d'autorité",
+        "Page pointant vers des bases externes",
+        "Page pointant vers des dictionnaires ou encyclopédies généralistes",
+        "Page utilisant P1417",
+        "Page utilisant P3219"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Soprano",
+      "longueur_extrait": 1064,
+      "statut": "ok"
+    },
+    {
+      "titre": "Alto (voix)",
+      "categorie_dominic": "Voix et chant",
+      "pageid": 197144,
+      "definition": "Dans la musique classique, un alto (au pluriel, des altos ou alti) désigne avant tout le pupitre de chœur dont la tessiture se situe en dessous des sopranos et au-dessus des ténors.",
+      "categories_wiki": [
+        "Article de Wikipédia avec notice d'autorité",
+        "Page pointant vers des bases externes",
+        "Page pointant vers des dictionnaires ou encyclopédies généralistes",
+        "Page utilisant P1417",
+        "Page utilisant P3219"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Alto_(voix)",
+      "longueur_extrait": 181,
+      "statut": "ok"
+    },
+    {
+      "titre": "Ténor",
+      "categorie_dominic": "Voix et chant",
+      "pageid": 5140193,
+      "definition": "Dans la musique occidentale, le mot ténor (du latin tenere « tenir ») désigne la tessiture d'une voix ou le registre d'un instrument situés entre l'alto et la basse. Dans la musique vocale (baroque excepté), elle correspond à la voix masculine la plus aiguë.\nAu sens figuré et en référence aux ténors solistes qui, au XIXe siècle, ont acquis la célébrité dans le domaine lyrique, le mot « ténor » désigne habituellement un homme reconnu pour son talent dans l'activité qu'il exerce. Exemples : un « ténor du barreau » pour désigner un avocat réputé ; un « ténor de la politique » pour un homme politique célèbre, etc. Dans les domaines cités, l'art oratoire, et donc la voix, occupe une place importante.",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article à citation nécessaire",
+        "Article à référence insuffisante",
+        "Page pointant vers des bases externes"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/T%C3%A9nor",
+      "longueur_extrait": 704,
+      "statut": "ok"
+    },
+    {
+      "titre": "Basse (voix)",
+      "categorie_dominic": "Voix et chant",
+      "pageid": 145195,
+      "definition": "Dans la musique occidentale, une basse est un chanteur à la voix grave, chargé à l'origine d'exécuter la partie « basse » d'un chant polyphonique.",
+      "categories_wiki": [
+        "Article avec une section vide ou incomplète",
+        "Article de Wikipédia avec notice d'autorité",
+        "Page pointant vers des bases externes",
+        "Page pointant vers des dictionnaires ou encyclopédies généralistes",
+        "Page utilisant P1417"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Basse_(voix)",
+      "longueur_extrait": 146,
+      "statut": "ok"
+    },
+    {
+      "titre": "Chœur (musique)",
+      "categorie_dominic": "Voix et chant",
+      "pageid": 2721426,
+      "definition": "Le chœur (/kœʁ/, du latin : chorus, lui-même du grec ancien : χορός / khorós) désignait dans la haute Antiquité grecque une danse de cérémonial ou des danseurs cérémoniaux. Puis, ce fut un petit groupe d'hommes masqués et chargés de commenter la dramaturgie dans l'orchestra du théâtre antique. Actuellement, le chœur est un groupe vocal habituellement divisé en quatre pupitres principaux (soprano, alto, ténor et basse), chaque pupitre pouvant comporter ses propres divisions. Le nombre de choristes dépend de l'envergure de l'œuvre ou de la situation donnée. Par ailleurs, la plupart des chœurs ne sont en rien dépendants d'une maison d'opéra et peuvent, par exemple, participer à un office religieux ou, plus fréquemment aujourd'hui, se donner en concert (ex. : les Chœurs de l'Armée rouge) dans un répertoire non obligatoirement d'opéra (motet, oratorio, variété, gospel, etc.). Certaines formations sont uniquement composées d'hommes, de femmes ou d'enfants. Il s'agit alors de chœurs à voix égales, les choristes évoluant dans des registres vocaux semblables. À ce titre, un ensemble composé uniquement de voix de femmes et d'enfants est également appelé chœur à voix égales.\nEn Europe, à la…",
+      "categories_wiki": [
+        "Article avec une section vide ou incomplète",
+        "Article manquant de références/Liste complète",
+        "Article manquant de références depuis mars 2020",
+        "Ensemble vocal classique",
+        "Lutherie"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Ch%C5%93ur_(musique)",
+      "longueur_extrait": 1890,
+      "statut": "ok"
+    },
+    {
+      "titre": "Technique vocale",
+      "categorie_dominic": "Voix et chant",
+      "pageid": 251462,
+      "definition": "La technique vocale regroupe un ensemble de connaissances (anatomiques notamment) et de pratiques ayant pour but de développer et préserver la voix d'un chanteur ou d'un professionnel de la voix parlée. Elle use de la sensibilité des vibrations vocales du ou des chanteurs.",
+      "categories_wiki": [
+        "Article à recycler/Liste complète",
+        "Article à recycler/musique",
+        "Portail:Musique/Articles liés",
+        "Technique de jeu instrumental",
+        "Technique vocale"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Technique_vocale",
+      "longueur_extrait": 273,
+      "statut": "ok"
+    },
+    {
+      "titre": "Chant lyrique",
+      "categorie_dominic": "Voix et chant",
+      "pageid": 2830495,
+      "definition": "Le chant lyrique est une technique de chant largement employée dans la musique classique et en particulier dans les œuvres de l'art lyrique (opéras, lieder, cantates).",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en anglais",
+        "Article utilisant le modèle Dictionnaires inactif",
+        "Article utilisant une Infobox",
+        "Article à illustrer Patrimoine culturel immatériel de l'humanité",
+        "Musique classique vocale par genre"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Chant_lyrique",
+      "longueur_extrait": 167,
+      "statut": "ok"
+    },
+    {
+      "titre": "Aria",
+      "titre_original": "Air (musique)",
+      "categorie_dominic": "Voix et chant",
+      "pageid": 183244,
+      "definition": "Une aria est une pièce de musique écrite pour une voix seule dans un opéra ou dans toute autre forme musicale italienne (ou se référant à une inspiration d'origine italienne : cantate, oratorio) de l'époque baroque ou ultérieure, accompagnée par une basse continue ou un ensemble d'instruments jusqu'au grand orchestre.",
+      "categories_wiki": [
+        "Air d'opéra",
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Forme musicale",
+        "Page pointant vers des bases externes"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Aria",
+      "longueur_extrait": 319,
+      "statut": "ok"
+    },
+    {
+      "titre": "Lied",
+      "titre_original": "Lied (musique)",
+      "categorie_dominic": "Voix et chant",
+      "pageid": 92514,
+      "definition": "Un lied, prononcé [lid] (mot allemand signifiant littéralement « chanson » ; au pluriel : lieder [li.dœʁ] ou quelquefois lieds qui se prononce comme le singulier), est un poème germanique chanté et accompagné par un piano ou, plus rarement, un ensemble instrumental.\nUn lied étant une pièce musicale courte, le genre lied est considéré comme faisant partie de la petite forme, par opposition avec des genres tels que la symphonie qui eux sont désignés sous le nom de grande forme.",
+      "categories_wiki": [
+        "Article avec section à délister",
+        "Article avec une section vide ou incomplète",
+        "Article contenant un appel à traduction en allemand",
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Lied",
+      "longueur_extrait": 480,
+      "statut": "ok"
+    },
+    {
+      "titre": "Industrie musicale",
+      "categorie_dominic": "Musique et société",
+      "pageid": 2496123,
+      "definition": "L'industrie musicale (appelée également industrie du disque) est l'ensemble des activités qui contribuent à l'offre de produits musicaux obtenus par un processus industriel de reproduction (en général, le disque). Le terme fait référence plus explicitement à la filière de l'édition phonographique ; en réalité, il faudrait parler d'« industries musicales » au pluriel, regroupant ainsi toutes les activités de reproduction de la musique, par le processus industriel (produit physique) ou par le numérique (produit dématérialisé). De ce fait, on y englobe généralement l'édition musicale et même la facture instrumentale (voire aujourd'hui les logiciels de composition et de musique de synthèse).",
+      "categories_wiki": [
+        "Article avec section à délister",
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Industrie musicale",
+        "Page pointant vers des bases externes"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Industrie_musicale",
+      "longueur_extrait": 696,
+      "statut": "ok"
+    },
+    {
+      "titre": "Droit d'auteur",
+      "titre_original": "Droit d'auteur en musique",
+      "categorie_dominic": "Musique et société",
+      "pageid": 17681,
+      "definition": "Le droit d'auteur est l'ensemble des droits dont dispose un auteur ou ses ayants droit (héritiers, sociétés de production), sur ses œuvres originales. Il définit notamment les règles et conditions d'utilisation et de réutilisation d'une œuvre, qu'il s'agisse d'une œuvre littéraire ou musicale, d'une création graphique, sonore ou audiovisuelle, d'un logiciel, d'une création de mode. Les artistes-interprètes, les producteurs de vidéogrammes et de phonogrammes, et les entreprises de communication audiovisuelle ont également des droits voisins du droit d'auteur.\nC'est une construction juridique, philosophique et politique née en Europe parallèlement au développement de l'imprimerie et à l'institutionnalisation de l'édition, et dont le sens et la portée ont beaucoup évolué depuis, notamment depuis le développement du numérique.\nIl est composé de deux types de droits :\n\nle droit moral, qui reconnaît notamment à l'auteur la paternité de l’œuvre et le respect de son intégrité. Dans certains pays, dont la France, il est perpétuel, inaliénable et imprescriptible ;\nles droits patrimoniaux, qui confèrent un monopole d’exploitation économique sur l'œuvre, pour une durée variable (selon les…",
+      "categories_wiki": [
+        "Analyse économique du droit",
+        "Article avec une section vide ou incomplète",
+        "Article à précision nécessaire",
+        "Droit d'auteur",
+        "Portail:Droit/Articles liés"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Droit_d%27auteur",
+      "longueur_extrait": 1353,
+      "statut": "ok"
+    },
+    {
+      "titre": "Musicologie",
+      "titre_original": "Musicologie",
+      "categorie_dominic": "Musique et société",
+      "pageid": 75893,
+      "definition": "La musicologie (en allemand : Musikwissenschaft) est l'étude scientifique de la musique. Elle forme un domaine des sciences humaines. Un chercheur qui participe à cette étude est un musicologue. Le terme provient du grec μουσική [mousikē] (« musique ») et -λογoς [-logos] (« connaissance, étude »).\nLa musicologie commence à se constituer en tant que champ disciplinaire au XIXe siècle dans le sillage du développement de la critique musicale avec des revues spécialisées et de premiers essais de théorisation. \nAu XXIe siècle, la musicologie se divise en trois disciplines principales : la musicologie historique, la théorie et l'analyse musicale, ainsi que l'ethnomusicologie. Ces trois disciplines sont complétées par de nombreuses disciplines annexes.\nLes musicologues historiens étudient l'histoire des traditions musicales, les origines des œuvres et les biographies des compositeurs. Les ethnomusicologues s'appuient sur l'anthropologie, notamment sur les études sur le terrain,  afin de comprendre les motivations et objectifs des personnes lorsqu'ils jouent de la musique.\nLa musicologie est classée parmi les sciences humaines mais emprunte de nombreuses méthodes aux sciences naturelles…",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en allemand",
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article manquant de références/Liste complète",
+        "Article manquant de références depuis août 2025"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Musicologie",
+      "longueur_extrait": 1301,
+      "statut": "ok"
+    },
+    {
+      "titre": "Ethnomusicologie",
+      "titre_original": "Ethnomusicologie",
+      "categorie_dominic": "Musique et société",
+      "pageid": 3645771,
+      "definition": "L’ethnomusicologie est une science humaine qui étudie les rapports entre musique et société.\nD'abord appelée « musicologie comparée », cette discipline proche de la sociologie de la musique issue de l’ethnologie et de la musicologie est institutionnellement rattachée à l'une ou l'autre de ces disciplines, desquelles elle tire ses méthodes descriptives. Comme la musicologie, l'ethnomusicologie peut occasionnellement emprunter des outils à l'acoustique ou aux sciences cognitives. Elle s'intéresse autant aux musiques de tradition orale qu'aux musiques érudites de cultures étrangères à celle du chercheur.\nLa plupart du temps, les recherches en ethnomusicologie se basent sur un travail de terrain, l’observation participante. D'autres chercheurs analysent des enregistrements et des objets fabriqués, instruments, guides, systèmes de notation, soit produits localement pour la consommation locale, soit issus des travaux de terrain antérieurs.\nL'ethnomusicologie s'enseigne dans des institutions universitaires qui dépendent des départements académiques des sciences sociales ou de ceux des arts ou spécifiquement de la musique.",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article utilisant l'infobox Discipline",
+        "Article utilisant une Infobox",
+        "Catégorie Commons avec lien local identique sur Wikidata"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Ethnomusicologie",
+      "longueur_extrait": 1132,
+      "statut": "ok"
+    },
+    {
+      "titre": "Éducation musicale",
+      "titre_original": "Pédagogie musicale",
+      "categorie_dominic": "Musique et société",
+      "pageid": 835971,
+      "definition": "L'éducation musicale est, d'une part, l'enseignement et l'apprentissage de la musique (académique, populaire et du monde) à un niveau débutant et, d'autre part, l'éducation aux aspects sociaux et culturels du code sonore et des bruits dans notre monde actuel.",
+      "categories_wiki": [
+        "Article avec une section vide ou incomplète",
+        "Article contenant un appel à traduction en anglais",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article manquant de références/Liste complète",
+        "Article manquant de références depuis novembre 2024"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/%C3%89ducation_musicale",
+      "longueur_extrait": 259,
+      "statut": "ok"
+    },
+    {
+      "titre": "Conservatoire national supérieur de musique et de danse de Paris",
+      "titre_original": "Conservatoire de musique",
+      "categorie_dominic": "Musique et société",
+      "pageid": 193428,
+      "definition": "Le Conservatoire national supérieur de musique et de danse de Paris (CNSMD de Paris ou Conservatoire de Paris) est un établissement public à caractère administratif classé conservatoire national supérieur qui dispense un enseignement professionnel de la musique, de la danse et des métiers du son. Il est partenaire de l'université Paris Sciences et Lettres.\nIl a dispensé jusqu'en octobre 1946 et sa scission avec le Conservatoire national supérieur d'art dramatique un enseignement de l'art dramatique.\nIl abrite la médiathèque Hector-Berlioz.",
+      "categories_wiki": [
+        "19e arrondissement de Paris",
+        "Article avec une section vide ou incomplète",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article utilisant l'infobox Université",
+        "Article utilisant une Infobox"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Conservatoire_national_sup%C3%A9rieur_de_musique_et_de_danse_de_Paris",
+      "longueur_extrait": 545,
+      "statut": "ok"
+    },
+    {
+      "titre": "Concert",
+      "titre_original": "Concert (spectacle)",
+      "categorie_dominic": "Musique et société",
+      "pageid": 164130,
+      "definition": "Un concert est une représentation musicale d'un ou plusieurs musiciens — chanteurs ou instrumentistes —, en public, dans un lieu aménagé à cette occasion — une salle, un jardin, une église, une place, un bar, un stade.\nSon but essentiel est l'audition de la musique par un auditoire, mais il peut aussi faire l'objet d'une captation pour une commercialisation ultérieure sous forme d'enregistrement sonore ou visuel.\nPar exemple, si une chorale interprète des negro spirituals en public, dans une église, il peut s'agir d'un véritable concert ; mais si cette même chorale, dans cette même église, interprète les mêmes œuvres dans le cadre d'une cérémonie religieuse, il ne s'agit plus d'un concert, mais d'un élément de la liturgie.",
+      "categories_wiki": [
+        "Article avec une section vide ou incomplète",
+        "Article de Wikipédia avec notice d'autorité",
+        "Article manquant de références/Liste complète",
+        "Article manquant de références depuis avril 2017",
+        "Article manquant de références depuis juin 2024"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Concert",
+      "longueur_extrait": 732,
+      "statut": "ok"
+    },
+    {
+      "titre": "Festival de musique",
+      "titre_original": "Festival de musique",
+      "categorie_dominic": "Musique et société",
+      "pageid": 1217866,
+      "definition": "Un festival de musique est une manifestation artistique annuelle ou ponctuelle pouvant se dérouler sur plusieurs jours durant lesquels des artistes évoluent selon un programme ou une thématique définis. Les festivals de musique sont généralement organisés pour promouvoir un artiste, un genre musical, un instrument, etc.",
+      "categories_wiki": [
+        "Article de Wikipédia avec notice d'autorité",
+        "Article à référence nécessaire",
+        "Catégorie Commons avec lien local identique sur Wikidata",
+        "Festival de musique",
+        "Page pointant vers des bases externes"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Festival_de_musique",
+      "longueur_extrait": 321,
+      "statut": "ok"
+    },
+    {
+      "titre": "Enregistrement sonore",
+      "titre_original": "Enregistrement sonore",
+      "categorie_dominic": "Musique et société",
+      "pageid": 140753,
+      "definition": "L'enregistrement sonore est l'opération qui consiste à garder une trace durable d'un son en vue de l'écouter plus tard. L'objectif de conserver une mémoire fiable des sons s'inscrit dans l'histoire des cultures qui utilisent une écriture phonétique, raffinée en Europe avec les notations de l'écriture musicale. La société industrielle développe à partir du dernier quart du XIXe siècle des moyens mécaniques pour le réaliser. Jusqu'à ce moment, on ne savait enregistrer, par l'écriture, que l'interprétation qu'une personne faisait du son.\nLes industries du téléphone, de la radio, de la télévision et du cinéma ont recouru à de nombreux procédés différents d'enregistrement, toutes basées sur la transformation du son capté par un microphone en signal électrique. La possibilité de reproduire, rapidement et à peu de frais, les enregistrements sonores a créé l'industrie phonographique, principalement pour la production et la vente d'enregistrements de musique.",
+      "categories_wiki": [
+        "Article contenant un appel à traduction en anglais",
+        "Article utilisant une Infobox",
+        "Article à référence souhaitée",
+        "Document",
+        "Enregistrement sonore"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Enregistrement_sonore",
+      "longueur_extrait": 964,
+      "statut": "ok"
+    },
+    {
+      "titre": "Phonogramme (support audio)",
+      "titre_original": "Streaming musical",
+      "categorie_dominic": "Musique et société",
+      "pageid": null,
+      "definition": "Un phonogramme est une fixation sur un support matériel de sons provenant d'une interprétation musicale ou d'une composition sonore. Les supports de phonogrammes ont évolué du cylindre de cire (Edison, 1877) au disque vinyle, à la cassette audio, au CD (1982) puis aux formats numériques (MP3, FLAC). Le phonogramme constitue le fondement juridique du droit voisin de l'artiste-interprète et du producteur, distinct du droit d'auteur du compositeur. La révolution numérique a transformé la distribution musicale : le streaming (Spotify lancé en 2008, Apple Music en 2015, YouTube Music) représente aujourd'hui plus de 80 % des revenus de l'industrie musicale mondiale selon l'IFPI.",
+      "categories_wiki": [
+        "Industrie musicale",
+        "Support audio",
+        "Droit voisin",
+        "Distribution musicale"
+      ],
+      "url": "https://fr.wikipedia.org/wiki/Phonogramme",
+      "longueur_extrait": 700,
+      "statut": "ok",
+      "note": "Contenu synthétique - article Wikipedia FR insuffisant sur le streaming musical"
+    }
+  ],
+  "echecs": [
+    {
+      "titre": "Tonalité (musique)",
+      "raison": "Article introuvable sur Wikipedia FR"
+    },
+    {
+      "titre": "Fugue (musique)",
+      "raison": "Article introuvable sur Wikipedia FR"
+    },
+    {
+      "titre": "Période classique (musique)",
+      "raison": "Article introuvable sur Wikipedia FR"
+    },
+    {
+      "titre": "Mouvement romantique (musique)",
+      "raison": "Article introuvable sur Wikipedia FR"
+    },
+    {
+      "titre": "Musique du XXe siècle",
+      "raison": "Article introuvable sur Wikipedia FR"
+    },
+    {
+      "titre": "Polyphonie médiévale",
+      "raison": "Article introuvable sur Wikipedia FR"
+    },
+    {
+      "titre": "Fréquence (physique)",
+      "raison": "Article introuvable sur Wikipedia FR"
+    },
+    {
+      "titre": "Résonance (physique)",
+      "raison": "Article introuvable sur Wikipedia FR"
+    },
+    {
+      "titre": "Clé (solfège)",
+      "raison": "Article introuvable sur Wikipedia FR"
+    },
+    {
+      "titre": "Chiffrage d'accord",
+      "raison": "Article introuvable sur Wikipedia FR"
+    },
+    {
+      "titre": "Phrasé musical",
+      "raison": "Article introuvable sur Wikipedia FR"
+    },
+    {
+      "titre": "Aria (opéra)",
+      "raison": "Article introuvable sur Wikipedia FR"
+    },
+    {
+      "titre": "Lied (musique)",
+      "raison": "Article introuvable sur Wikipedia FR"
+    },
+    {
+      "titre": "Droit d'auteur en musique",
+      "raison": "Article introuvable sur Wikipedia FR"
+    },
+    {
+      "titre": "Musicologie",
+      "raison": "JSON parse error: Unexpected token 'Y', \"You are ma\"... is not valid JSON"
+    },
+    {
+      "titre": "Ethnomusicologie",
+      "raison": "JSON parse error: Unexpected token 'Y', \"You are ma\"... is not valid JSON"
+    },
+    {
+      "titre": "Pédagogie musicale",
+      "raison": "JSON parse error: Unexpected token 'Y', \"You are ma\"... is not valid JSON"
+    },
+    {
+      "titre": "Conservatoire de musique",
+      "raison": "JSON parse error: Unexpected token 'Y', \"You are ma\"... is not valid JSON"
+    },
+    {
+      "titre": "Concert (spectacle)",
+      "raison": "JSON parse error: Unexpected token 'Y', \"You are ma\"... is not valid JSON"
+    },
+    {
+      "titre": "Festival de musique",
+      "raison": "JSON parse error: Unexpected token 'Y', \"You are ma\"... is not valid JSON"
+    },
+    {
+      "titre": "Enregistrement sonore",
+      "raison": "JSON parse error: Unexpected token 'Y', \"You are ma\"... is not valid JSON"
+    },
+    {
+      "titre": "Streaming musical",
+      "raison": "JSON parse error: Unexpected token 'Y', \"You are ma\"... is not valid JSON"
+    }
+  ]
+}
