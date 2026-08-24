@@ -1,0 +1,13 @@
+node_modules
+dist
+dist-ssr
+*.local
+.vite
+.DS_Store
+*.log
+.captures/
+
+# La clé Google est exposée au navigateur, mais elle n'a rien à faire dans Git.
+.env
+.env.*
+!.env.example 

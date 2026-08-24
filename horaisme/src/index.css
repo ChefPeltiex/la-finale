@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+@theme {
+  /* Noir profond — l'ardoise */
+  --color-ink: #0a0907;
+  --color-ink-deep: #050403;
+  --color-ink-soft: #14110c;
+  --color-ink-raised: #1c1811;
+
+  /* Crème — le retour, la lumière */
+  --color-cream: #f4efe3;
+  --color-cream-dim: #e3dac6;
+  --color-parchment: #ece6d9;
+
+  /* Vert forêt — le terrain */
+  --color-forest-deep: #101c15;
+  --color-forest: #1d3025;
+  --color-forest-mid: #2f4636;
+  --color-forest-light: #55705c;
+
+  /* Or — le fil conducteur */
+  --color-gold: #d9bd6b;
+  --color-gold-dim: #c9a961;
+  --color-gold-deep: #8a7134;
+
+  /* Accents issus de l'œuvre à la craie */
+  --color-oeil: #5fb3a9;
+  --color-oeil-deep: #2f6f68;
+  --color-terre: #b5533a;
+  --color-terre-deep: #7d3626;
+  --color-ardoise-bleu: #4b6c9b;
+  --color-ardoise-bleu-deep: #2f4665;
+
+  /* Registre — les quatre statuts */
+  --color-fait: #5fb3a9;
+  --color-plausible: #c9a961;
+  --color-simule: #6a7d94;
+  --color-inconnu: #6b6357;
+
+  --font-display: "Playfair Display", ui-serif, Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-ink);
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-ink);
+    color: var(--color-parchment);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--color-gold);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+  }
+
+  /* Aucun défilement infini nulle part : le document a une fin visible. */
+  main {
+    overflow-anchor: none;
+  }
+}
+
+@layer components {
+  .kicker {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.34em;
+    line-height: 1.5;
+  }
+
+  .data-line {
+    font-family: var(--font-mono);
+    font-size: 0.63rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 300;
+  }
+
+  .hairline {
+    border: 1px solid color-mix(in srgb, var(--color-gold-dim) 22%, transparent);
+  }
+
+  .hairline-strong {
+    border: 1px solid color-mix(in srgb, var(--color-gold-dim) 42%, transparent);
+  }
+
+  .hairline-ink {
+    border: 1px solid color-mix(in srgb, var(--color-ink) 16%, transparent);
+  }
+
+  /* Grain de craie sur ardoise — reprend la matière de l'œuvre */
+  .chalk {
+    position: relative;
+  }
+
+  .chalk::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.32;
+    mix-blend-mode: overlay;
+    background-image:
+      radial-gradient(circle at 18% 24%, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px),
+      radial-gradient(circle at 62% 71%, rgba(255, 255, 255, 0.045) 0 1px, transparent 1px),
+      radial-gradient(circle at 84% 33%, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px),
+      radial-gradient(circle at 37% 88%, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px);
+    background-size: 37px 37px, 53px 53px, 71px 71px, 29px 29px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .optical-track {
+    transform: translateX(0.028em);
+  }
+}
+
+@keyframes horaisme-rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes horaisme-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes horaisme-breathe {
+  0%,
+  100% {
+    opacity: 0.28;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.72;
+    transform: scale(1.06);
+  }
+}
+
+.rise {
+  opacity: 0;
+  animation: horaisme-rise 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.fade {
+  opacity: 0;
+  animation: horaisme-fade 1.8s ease forwards;
+}
+
+.breathe {
+  animation: horaisme-breathe 5.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise,
+  .fade,
+  .breathe {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    opacity: 1;
+  }
+}
