@@ -99,3 +99,29 @@ Thumbs.db
 circulai-final.zip (large file: 54MB)
 node_modules
 
+# --- Local à cette machine : reste sur le disque, ne part jamais ---
+# Ajouté après vérification : le dépôt est public, et aucun de ces chemins
+# n'était suivi par Git. Les ignorer ne supprime donc rien.
+
+# Lourd. 1,4 Go de snapshots, et une vidéo de 85 Mo que GitHub refuserait
+# de toute façon au-delà de 100 Mo.
+/backups/
+*.mp4
+
+# Personnel et confidentiel. Documents privés et dossier de candidature
+# (bio du fondateur, stratégie de déploiement, réponses de formulaire).
+/Dossier de sortie/
+/candidature-all-in-montreal/
+
+# Méthode de travail interne : instructions d'agents, continuité de session.
+/prompts/
+
+# État local de la machine et sorties d'outils. Le pont contient le chemin
+# absolu du poste, il n'a de sens que sur celui-ci.
+/.circulai-bridge.json
+/AUDIT_PARTIEL.txt
+
+# Brouillons et versions successives conservées côte à côte.
+/arche-12*.html
+*.backup-*
+
