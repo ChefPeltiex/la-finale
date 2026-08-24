@@ -5,7 +5,6 @@ import { Bouton, Donnee, Kicker, Marque, Panneau, ParoleHora, TitreSection, FinD
 import { FORMULES, HORA } from '../content/hora'
 import { useJeu } from '../state/JeuProvider'
 import { refuserOperation, reproposerOperation } from '../engine/memory'
-import embleme from '../assets/hora-emblem.jpg'
 
 function dateLongue(d: Date): string {
   return d.toLocaleDateString('fr-CA', {
@@ -88,11 +87,21 @@ export default function Aujourdhui() {
           </Panneau>
         ) : (
           <article className="chalk relative mt-4 overflow-hidden rounded-lg hairline-strong bg-ink-soft/80">
-            <img
-              src={embleme}
-              alt=""
+            {/*
+              Les trois accents de l'œuvre — or, terre, œil — posés en lueur là
+              où se tenaient les prismes. L'image entière pesait 305 Ko pour
+              13 % d'opacité ; le dégradé ne coûte rien et vaut aussi en mobile.
+            */}
+            <div
               aria-hidden="true"
-              className="pointer-events-none absolute -right-24 top-1/2 hidden w-[38rem] -translate-y-1/2 opacity-[0.13] mix-blend-screen md:block"
+              className="pointer-events-none absolute inset-0"
+              style={{
+                background: [
+                  'radial-gradient(38rem 26rem at 88% 50%, rgba(138,113,52,0.30), transparent 62%)',
+                  'radial-gradient(26rem 20rem at 96% 30%, rgba(125,54,38,0.20), transparent 60%)',
+                  'radial-gradient(22rem 18rem at 76% 78%, rgba(47,111,104,0.18), transparent 62%)',
+                ].join(','),
+              }}
             />
             <div
               aria-hidden="true"

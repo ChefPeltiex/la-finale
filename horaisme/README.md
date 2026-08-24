@@ -18,7 +18,8 @@ jouable entièrement, avec toute l'architecture derrière.
 
 ```bash
 npm install
-npm run dev        # http://localhost:5173
+npm run dev        # http://localhost:5184
+npm run dev:lan    # même chose, exposé au réseau local (téléphone)
 npm test           # 40 tests : moteur, philosophie, rendu
 npm run build      # typecheck complet + bundle de production
 ```
@@ -136,18 +137,124 @@ réapparaît.
 
 ## Tests
 
-`npm test` — 40 tests, trois niveaux.
+```bash
+npm test          # 40 tests, environ 5 s
+npm run test:watch
+```
 
-- **`moteur.test.ts`** — contexte, provenance, composition, registre, progression.
-- **`philosophie.test.ts`** — les principes canoniques traduits en assertions :
-  le test des dix secondes est obligatoire ; une conclusion doit survivre à
-  l'inventaire ; une hypothèse reste une hypothèse ; les XP exigent une preuve ;
-  l'échec sincère est récompensé ; la technologie s'efface ; refuser ou
-  abandonner ne coûte rien ; HORA a le droit de dire qu'il ne sait pas ; aucune
-  parole d'oracle, de devin ou de thérapeute dans le corpus.
-- **`rendu.test.tsx`** — monte l'application dans un DOM complet et joue
-  « L'angle mort » de bout en bout, dans la branche réussie et dans la branche
-  de l'échec sincère.
+Ces tests ne vérifient pas seulement que le code fonctionne : ils vérifient
+qu'il **reste fidèle à la philosophie**. C'est là que vivent les garde-fous, et
+non dans un prompt. Un futur maître de jeu génératif pourra proposer ce qu'il
+veut — il devra passer ici.
+
+| Fichier | Tests | Ce qu'il garantit |
+| --- | --- | --- |
+| `moteur.test.ts` | 14 | Le moteur calcule juste **et étiquette juste**. |
+| `philosophie.test.ts` | 18 | Les principes canoniques sont exécutables, pas décoratifs. |
+| `rendu.test.tsx` | 8 | L'application se monte et l'opération se joue réellement. |
+
+### `moteur.test.ts` — 14 tests
+
+| Suite | Assertions |
+| --- | --- |
+| **Contexte** (8) | La position de repli est marquée `simulé`, jamais `fait`. La météo répond `inconnu` faute de source branchée. La lumière restante est `plausible`, pas `fait`, parce que le calcul ignore le relief. Chaque datum reste cohérent avec son statut. Couper une source renvoie `inconnu`. Le coucher du soleil, la saison et la distance Haversine sont calculés juste. |
+| **Composition** (4) | L'opération est proposée avec son « pourquoi ». Ce qui dépasse le rayon déclaré est écarté, motif affiché. Une opération écartée par le joueur n'est jamais réinsistée. « Rien aujourd'hui » est toujours offert. |
+| **Registre** (1) | Le statut initial d'une supposition et le verdict du réel sont conservés tous les deux. |
+| **Progression** (1) | Le niveau démarre à Passant et progresse par paliers. |
+
+### `philosophie.test.ts` — 18 tests
+
+Chaque suite porte le nom du principe qu'elle défend.
+
+| Principe | Assertions |
+| --- | --- |
+| **Le test des dix secondes est obligatoire** (1) | « L'angle mort » doit déclarer pourquoi elle n'est pas évidente. Une opération qui ne le déclare pas ne se charge pas. |
+| **Une conclusion doit survivre à l'inventaire complet** (3) | Au moins deux lectures sont confrontées. Avancer avec une seule hypothèse est refusé. Un inventaire incomplet est signalé. |
+| **Une hypothèse reste une hypothèse** (2) | « Retenir » n'en fait pas un fait et n'en retient jamais deux. L'utilisateur peut corriger une hypothèse du système. |
+| **Les XP reconnaissent une action vécue** (3) | Une attribution sans preuve est rejetée par le moteur. Une attribution adossée à une observation réelle est acceptée. Aucun compteur de temps passé, de série ou de popularité n'existe dans le modèle. |
+| **Le positif véritable regarde le négatif en face** (2) | L'échec sincère est récompensé. Plusieurs suites réelles sont offertes, de même poids. |
+| **La technologie s'efface** (1) | L'opération fait quitter l'écran, puis revenir au réel. |
+| **L'utilisateur reste souverain** (2) | Refuser ne retire aucun XP. Abandonner ne brise aucune série et ne coûte rien. |
+| **HORA a le droit de dire qu'il ne sait pas** (1) | Un datum `inconnu` n'affiche aucune valeur de remplacement. |
+| **Aucune parole d'oracle, de devin ou de thérapeute** (3) | Le corpus entier est scanné : aucune formulation interdite. « L'angle mort » franchit tous les garde-fous. Et le garde-fou lui-même est testé — une formulation prédictive injectée volontairement est bien interceptée. |
+
+### `rendu.test.tsx` — 8 tests
+
+Monte l'application dans un DOM complet et la manipule comme un utilisateur.
+
+| Suite | Assertions |
+| --- | --- |
+| **Shell et navigation** (4) | Le Seuil se monte sans erreur. Les six sections sont présentes. « L'angle mort » est proposée avec son « pourquoi ». Écarter une opération n'affiche aucune pénalité. |
+| **« L'angle mort » de bout en bout** (2) | Le parcours complet se joue : fragment, inventaire, sortie, constat, ancrage. La branche de l'échec sincère est récompensée **et ne dévoile pas le lieu**. |
+| **Souveraineté visible dans l'interface** (2) | `Moi` permet réellement de couper une source, corriger une supposition et effacer les traces. `Découvrir` est un atlas fermé : il se termine et ne charge rien de plus. |
+
+Ce dernier fichier valide le comportement, pas l'apparence : jsdom ne voit pas
+un texte rendu invisible par un contraste de couleur. C'est pourquoi la
+vérification navigateur ci-dessous n'est pas facultative.
+
+---
+
+## Build
+
+```bash
+npm run build      # tsc -b && vite build
+npm run preview    # sert le dist/ produit
+```
+
+Le typecheck complet précède le bundle : une erreur de types interrompt
+`npm run build` au lieu de produire un `dist/` malgré tout.
+
+**61 modules transformés, environ 330 ms.**
+
+| Artefact | Brut | Gzip |
+| --- | --- | --- |
+| `index.js` | 314,05 Ko | **96,83 Ko** |
+| `index.css` | 48,39 Ko | **8,63 Ko** |
+| `index.html` | 1,05 Ko | 0,55 Ko |
+| **Code total** | 363,5 Ko | **106 Ko** |
+
+Les images sont servies telles quelles, sans recompression au build — elles
+passent par `scripts/optimiser-images.ps1` en amont.
+
+| Image | Taille | Où |
+| --- | --- | --- |
+| `hora-oeil.jpg` | 61,2 Ko | Médaillon du Seuil et de l'Inventaire |
+| `quebec-aerial.jpg` | 123,6 Ko | Fond du Seuil |
+| `fragment-angle-mort.jpg` | 145,5 Ko | Le fragment de l'opération |
+| `reveal-angle-mort.jpg` | 203,3 Ko | Le dévoilement après réussite |
+| `hora-emblem.jpg` | 312,1 Ko | L'œuvre entière, en bandeau sur Découvrir |
+
+### Poids réellement transféré, par route
+
+Mesuré sur le `dist/` servi par `vite preview`, cache vide, via CDP — ce sont
+des octets transférés, pas des tailles sur disque.
+
+| Route | Transféré | dont images | Requêtes |
+| --- | --- | --- | --- |
+| Aujourd'hui, Terrain, Missions, Parcours, Moi | **242 Ko** | 0 | 8 |
+| Opération | 346 Ko | 142 Ko | 8 |
+| Seuil | 409 Ko | 182 Ko | 10 |
+| Découvrir | 561 Ko | 305 Ko | 10 |
+
+Le socle commun à toutes les routes est de 242 Ko : 94 Ko de JavaScript, 9 Ko
+de CSS, et **123 Ko de fontes**. Le reste est de l'image.
+
+Cinq des huit routes ne chargent aucune image. Aujourd'hui en fait partie
+depuis que sa texture de fond — l'œuvre entière, posée à 13 % d'opacité pour
+305 Ko — a été remplacée par trois dégradés radiaux reprenant l'or, la terre et
+le turquoise du tableau. La route est passée de 547 Ko à 242 Ko, et l'effet
+existe désormais aussi en mobile, où l'image était simplement masquée.
+
+### Un constat honnête
+
+**Les fontes viennent de Google Fonts.** `index.html` charge trois `woff2`
+depuis `fonts.gstatic.com`, précédés d'une requête bloquante vers
+`fonts.googleapis.com`. C'est la moitié du socle de 242 Ko, et surtout c'est un
+appel tiers qui expose l'adresse IP du joueur à chaque visite. Cela contredit la
+promesse de souveraineté, qui ne devrait pas s'arrêter aux données que
+l'application stocke. Les héberger localement supprimerait la fuite et la
+requête bloquante. Non corrigé dans cette version, mais écrit ici plutôt que
+passé sous silence.
 
 ---
 
