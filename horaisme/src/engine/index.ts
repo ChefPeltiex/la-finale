@@ -1,6 +1,8 @@
 export * from './types'
 export * as provenance from './provenance'
+export * as faits from './facts'
 export * as securite from './safety'
+export * as nature from './nature'
 export * as contexte from './context'
 export * as composition from './composition'
 export * as operation from './operation'

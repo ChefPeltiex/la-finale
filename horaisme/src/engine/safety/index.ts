@@ -1,4 +1,5 @@
 import type { AttributionXp, Hypothese, Operation } from '../types'
+import { verifierCadreNature } from '../nature'
 
 /**
  * Garde-fous.
@@ -175,6 +176,8 @@ export function verifierOperation(op: Operation): Violation[] {
     ...op.bifurcations.flatMap((b) => [b.constat, b.suite]),
   ].join('\n')
   violations.push(...verifierTexte(textes))
+
+  violations.push(...verifierCadreNature(op))
 
   return violations
 }

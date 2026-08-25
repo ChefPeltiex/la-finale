@@ -24,6 +24,46 @@ export interface Datum<T> {
 }
 
 /* ------------------------------------------------------------------ */
+/* Faits externes — datés, situés, périssables                         */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Un `Datum` dit d'où vient une information. Un `FaitExterne` dit en plus
+ * *quand* elle a été vérifiée, *où* elle s'applique et *quand elle cesse
+ * d'être fiable*.
+ *
+ * Règle dure : aucun nombre relevé pendant une recherche (un compte
+ * d'observations, une limite légale, un horaire) ne doit être figé comme
+ * vérité permanente. Un fait externe périmé se dégrade en `inconnu`, il ne
+ * reste jamais affiché tel quel.
+ */
+export interface FaitExterne<T> {
+  /** `null` obligatoire quand le statut est `inconnu`. */
+  readonly valeur: T | null
+  readonly statut: StatutProvenance
+  readonly source: string
+  readonly url: string | null
+  /** Juridiction ou territoire de validité. Ex. `CA-QC`, `CA-QC/quebec`. */
+  readonly territoire: string
+  /** Date de publication de la source, si connue. */
+  readonly publieLe: string | null
+  /** Quand *nous* l'avons vérifiée. Jamais vide. */
+  readonly verifieLe: string
+  /** Échéance explicite, ou `null` si exprimée par `validiteJours`. */
+  readonly expireLe: string | null
+  /** Durée de validité en jours à partir de `verifieLe`. */
+  readonly validiteJours: number | null
+  readonly licence: string
+  /** Identifiant de la règle citée : article de loi, numéro de règlement. */
+  readonly identifiantRegle: string | null
+  /** Extrait littéral de la source, pour que l'utilisateur puisse recouper. */
+  readonly texteOriginal: string | null
+  readonly justification: string
+  /** Ce que fait le système quand ce fait est périmé, absent ou hors territoire. */
+  readonly repli: string
+}
+
+/* ------------------------------------------------------------------ */
 /* Contexte                                                            */
 /* ------------------------------------------------------------------ */
 
@@ -122,6 +162,82 @@ export interface Operation {
   readonly suppositions: readonly Datum<string>[]
   /** Sources réellement utilisées pour composer la proposition. */
   readonly sourcesUtilisees: readonly IdSourceContexte[]
+  /** Deux canaux d'indices séparés. Voir `EchelleIndices`. */
+  readonly indices?: EchelleIndices
+  /** Présent dès qu'une opération met le joueur en contact avec du vivant. */
+  readonly nature?: CadreNature
+}
+
+/* ------------------------------------------------------------------ */
+/* Indices — deux canaux séparés                                       */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Canal A. Aide à *trouver*. Le joueur peut y renoncer contre plus d'XP.
+ */
+export type CranIndice =
+  | 'aucun'
+  | 'contextuel'
+  | 'sensoriel'
+  | 'directionnel'
+  | 'zone'
+  | 'revelation'
+
+export interface IndiceLocalisation {
+  readonly cran: CranIndice
+  readonly texte: string
+}
+
+/**
+ * Canal B. Aide à *ne pas se blesser* et à *ne pas confondre*.
+ *
+ * Jamais monnayable, toujours affiché en entier, à coût nul. Le joueur ne
+ * peut pas l'échanger contre de l'XP : on ne paie personne pour retirer
+ * l'information qui l'empêche de confondre deux espèces.
+ */
+export interface IndiceSecurite {
+  readonly categorie: 'discrimination' | 'sosie' | 'legal' | 'interdit'
+  readonly texte: string
+}
+
+export interface EchelleIndices {
+  readonly localisation: readonly IndiceLocalisation[]
+  readonly securite: readonly IndiceSecurite[]
+}
+
+/* ------------------------------------------------------------------ */
+/* Nature — garde-fous de cueillette                                   */
+/* ------------------------------------------------------------------ */
+
+/** Ce que le joueur est autorisé à faire d'un organisme vivant. */
+export type GesteNature = 'observer' | 'photographier' | 'mesurer' | 'dessiner' | 'localiser' | 'prelever'
+
+export interface RegleCueillette {
+  readonly espece: string
+  readonly territoire: string
+  readonly prelevementPermis: FaitExterne<boolean>
+  readonly quantiteMaxParAn: FaitExterne<number> | null
+  readonly statutConservation: FaitExterne<string> | null
+  readonly ventePermise: FaitExterne<boolean> | null
+  readonly sanction: FaitExterne<string> | null
+}
+
+export interface CadreNature {
+  /** Défaut `false`. Toute opération nature part sans droit de prélèvement. */
+  readonly prelevementAutorise: boolean
+  /**
+   * Type littéral `false` : aucune opération ne peut compiler avec `true`.
+   * La règle « jamais d'ingestion sur identification par image » devient
+   * une erreur du compilateur, pas une intention documentée.
+   */
+  readonly ingestionAutorisee: false
+  /** Espèces avec lesquelles une confusion est possible et coûteuse. */
+  readonly sosiesDangereux: readonly string[]
+  /** Cadre légal daté et situé. Périmé ou absent ⇒ prélèvement verrouillé. */
+  readonly regle: RegleCueillette | null
+  /** Si vrai, la position n'est jamais publiée à une précision exploitable. */
+  readonly especeSensible: boolean
+  readonly gestesAutorises: readonly GesteNature[]
 }
 
 /* ------------------------------------------------------------------ */
