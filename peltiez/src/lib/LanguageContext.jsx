@@ -12,7 +12,7 @@ const T = {
   fr: {
     home: "Accueil", marketplace: "Marketplace", post: "Publier", profile: "Mon Profil",
     game: "Jouer 🎮", news: "Actualité", subscribe: "S'abonner",
-    hero_title: "Egor69 — sanctuaire circulaire & cosmos souverain.",
+    hero_title: "Egor69 — plateforme circulaire & souverainet� num�rique.",
     hero_sub: "Donnez, échangez, réparez. Radar, atlas vivant, quêtes — ambition mondiale, promesses mesurées.",
     join_free: "🚀 Rejoindre gratuitement", browse: "Explorer les annonces",
     game_cta: "🎮 Jouer & Gagner", game_sub: "Chaque bonne action = XP + récompenses réelles",
@@ -22,7 +22,7 @@ const T = {
   en: {
     home: "Home", marketplace: "Marketplace", post: "Post", profile: "My Profile",
     game: "Play 🎮", news: "News", subscribe: "Subscribe",
-    hero_title: "Egor69 — sovereign circular cosmos.",
+    hero_title: "Egor69 — sovereign circular platform.",
     hero_sub: "Give, exchange, repair. Radar, living atlas, quests — global ambition, honest metrics.",
     join_free: "🚀 Join for free", browse: "Browse listings",
     game_cta: "🎮 Play & Win", game_sub: "Every good deed = XP + real rewards",
@@ -31,7 +31,7 @@ const T = {
   es: {
     home: "Inicio", marketplace: "Mercado", post: "Publicar", profile: "Mi Perfil",
     game: "Jugar 🎮", news: "Noticias", subscribe: "Suscribirse",
-    hero_title: "Egor69 — cosmos circular soberano.",
+    hero_title: "Egor69 — plataforma circular soberana.",
     hero_sub: "Da, intercambia, repara. Radar, atlas vivo, misiones — ambición global, métricas honestas.",
     join_free: "🚀 Únete gratis", browse: "Ver anuncios",
     game_cta: "🎮 Jugar y Ganar", game_sub: "Cada buena acción = XP + recompensas reales",
@@ -40,7 +40,7 @@ const T = {
   pt: {
     home: "Início", marketplace: "Mercado", post: "Publicar", profile: "Meu Perfil",
     game: "Jogar 🎮", news: "Notícias", subscribe: "Assinar",
-    hero_title: "Egor69 — cosmos circular soberano.",
+    hero_title: "Egor69 — plataforma circular soberana.",
     hero_sub: "Doe, troque, repare. Radar, atlas vivo, missões — ambição global, métricas honestas.",
     join_free: "🚀 Entrar grátis", browse: "Ver anúncios",
     game_cta: "🎮 Jogar & Ganhar", game_sub: "Cada boa ação = XP + recompensas reais",

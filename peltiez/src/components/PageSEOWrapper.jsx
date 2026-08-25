@@ -24,14 +24,14 @@ export const DOMAIN_SEO_CONFIG = {
   },
   astrologie: {
     title: "Astrologie Personnelle & Carte du Ciel | Analyses IA | Egor69",
-    description: "Découvrez votre carte natale : signes solaire/lunaire, missions de vie, prédictions cosmiques. Analyses astrales et guidance spirituelle personnalisées.",
-    keywords: "astrologie, carte natale, horoscope, interprétation rêves, spiritualité, numérologie, zodiac, guidance spirituelle",
+    description: "Découvrez votre carte natale : signes solaire/lunaire, missions de vie, prédictions globales. Analyses astrales et accompagnement personnalis� personnalisées.",
+    keywords: "astrologie, carte natale, horoscope, interprétation rêves, spiritualité, numérologie, zodiac, accompagnement personnalis�",
     canonicalUrl: `${SITE_ORIGIN}/carte-du-ciel`,
     type: "CreativeWork"
   },
   reves: {
     title: "Journal des Rêves & Interprétation Spirituelle | Analyse IA | Egor69",
-    description: "Déchiffrez vos rêves grâce à l'IA : symboles, archétypes jungiens, messages de l'inconscient. Guidance spirituelle et psychologie profonde.",
+    description: "Déchiffrez vos rêves grâce à l'IA : symboles, archétypes jungiens, messages de l'inconscient. accompagnement personnalis� et psychologie profonde.",
     keywords: "rêves, interprétation rêves, symbolisme, inconscient, archétypes, spiritualité, psychologie, analyse rêves",
     canonicalUrl: `${SITE_ORIGIN}/reves`,
     type: "CreativeWork"

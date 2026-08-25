@@ -62,7 +62,7 @@ export default function SingularityClauseDialog({ open, onOpenChange, onConfirme
             <p>
               Seul le Rendu (l&apos;output) est accessible. Toute tentative de rétro-ingénierie, de décompilation du
               package Unreal Engine, ou d&apos;analyse du code Base44 est considérée comme un acte de piratage de la
-              conscience souveraine…
+              propri�t� algorithmique…
             </p>
             <p className="font-semibold text-amber-200/95 text-xs uppercase tracking-wide pt-2">3. — 4.</p>
             <p>Durée et sanctions sont détaillées dans le document complet.</p>

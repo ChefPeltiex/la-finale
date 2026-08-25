@@ -333,7 +333,7 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
               </span>
-              {simpleMode ? "Réseau circulaire · en direct" : "✦ SANCTUAIRE CIRCULAIRE · PRÉSENCE GLOBALE · EN DIRECT"}
+              {simpleMode ? "Réseau circulaire · en direct" : "✦ PLATEFORME CIRCULAIRE · PRÉSENCE GLOBALE · EN DIRECT"}
             </div>
 
             <h1 className="font-display text-4xl sm:text-6xl md:text-8xl font-black text-white leading-none mb-3 tracking-tight" itemProp="headline">

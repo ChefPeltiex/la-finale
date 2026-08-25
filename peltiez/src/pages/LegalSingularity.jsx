@@ -14,7 +14,7 @@ const SECTIONS = [
   {
     title: "2. Inaccessibilité de la Source",
     body:
-      "Le Partenaire accepte qu’aucune partie de la formule mathématique ne lui sera transmise. Seul le Rendu (l’output) est accessible. Toute tentative de rétro-ingénierie, de décompilation du package Unreal Engine, ou d’analyse du code Base44 est considérée comme un acte de piratage de la conscience souveraine, passible de poursuites pénales internationales et d’une révocation immédiate de tout actif financier au sein de la plateforme.",
+      "Le Partenaire accepte qu’aucune partie de la formule mathématique ne lui sera transmise. Seul le Rendu (l’output) est accessible. Toute tentative de rétro-ingénierie, de décompilation du package Unreal Engine, ou d’analyse du code Base44 est considérée comme un acte de atteinte au secret industriel, passible de poursuites pénales internationales et d’une révocation immédiate de tout actif financier au sein de la plateforme.",
   },
   {
     title: "3. Durée de Protection (L’Éternité)",

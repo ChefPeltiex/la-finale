@@ -239,8 +239,8 @@ const AuthenticatedApp = () => {
       <Route path="/intro" element={<Intro />} />
       <Route path="/welcome" element={<Welcome />} />
       <Route path="/underworld" element={<Underworld />} />
-      <Route path="/etherealm" element={<Etherealm />} />
-      <Route path="/netherealm" element={<Netherealm />} />
+      <Route path="/univers-ethere" element={<Etherealm />} />
+      <Route path="/univers-nether" element={<Netherealm />} />
       <Route path="/outworld" element={<OutworldChaos />} />
       <Route path="/arene-virtuelle" element={<VirtualCampaignArena />} />
       <Route path="/sanctuary" element={<AnimalSanctuary />} />
@@ -276,7 +276,7 @@ const AuthenticatedApp = () => {
       <Route path="/donations" element={<DonationCalendar />} />
       <Route path="/avatar-creator" element={<AvatarCreator />} />
       <Route path="/universal-hub" element={<UniversalHub />} />
-      <Route path="/consciousness" element={<ConsciousnessDirectory />} />
+      <Route path="/conscience" element={<ConsciousnessDirectory />} />
       <Route path="/epic-journey" element={<EpicJourney />} />
       <Route path="/piliers" element={<Piliers144K />} />
       <Route path="/fast-track" element={<FastTrack />} />
@@ -290,7 +290,7 @@ const AuthenticatedApp = () => {
       <Route path="/artisans" element={<ArtisansHub />} />
       <Route path="/smart-contrats" element={<SmartContrats />} />
       <Route path="/micro-outils" element={<MicroOutils />} />
-      <Route path="/sceau" element={<SceauEternite />} />
+      <Route path="/badge-personnel" element={<SceauEternite />} />
       <Route path="/city-hubs" element={<CityHub />} />
       <Route path="/city-hubs/:citySlug" element={<CityHub />} />
       <Route path="/negociation-ia" element={<NegociationIA />} />
@@ -307,7 +307,7 @@ const AuthenticatedApp = () => {
       <Route path="/hub-reparation" element={<RepairHub />} />
       <Route path="/numerology" element={<Numerology />} />
       <Route path="/test-your-might" element={<TestYourMight />} />
-      <Route path="/paranormal-mystique" element={<ParanormalMystique />} />
+      <Route path="/exploration-insolite" element={<ParanormalMystique />} />
       <Route path="/mythologies" element={<MythologiesHub />} />
       <Route path="/bien-etre-lexique" element={<WellnessLexiqueHub />} />
       <Route path="/esotericism" element={<EsotericismHub />} />
@@ -351,7 +351,7 @@ const AuthenticatedApp = () => {
       <Route path="/artisan-workshop" element={<ArtisanWorkshop />} />
       <Route path="/entreprises" element={<CorporatePartners />} />
       <Route path="/corporate-partners" element={<Navigate to="/entreprises" replace />} />
-      <Route path="/arts-divinatoires" element={<DivinatoryArts />} />
+      <Route path="/pratiques-divinatoires" element={<DivinatoryArts />} />
       <Route path="/arts-divinatoires-lexique" element={<DivinatoryLexiqueHub />} />
       <Route path="/global-dashboard" element={<GlobalDashboard />} />
       <Route path="/golden-eye" element={<GoldenEye />} />
