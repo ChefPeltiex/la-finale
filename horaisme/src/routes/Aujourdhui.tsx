@@ -64,7 +64,15 @@ export default function Aujourdhui() {
 
         <p className="mt-3 text-[0.78rem] leading-relaxed text-parchment/35">
           Chacune de ces sources peut être coupée depuis{' '}
-          <Link to="/moi" className="text-gold/70 underline underline-offset-4">
+          {/*
+            Lien dans un paragraphe en petit corps : sa hauteur de ligne seule
+            en ferait une cible tactile de 15 px. Le padding vertical la porte
+            au minimum utilisable sans écarter les lignes du paragraphe.
+          */}
+          <Link
+            to="/moi"
+            className="-my-[15px] inline-block py-[15px] align-baseline text-gold/70 underline underline-offset-4"
+          >
             Moi
           </Link>
           . Ce que je ne sais pas reste vide : je ne comble jamais un trou par une estimation

@@ -43,6 +43,7 @@ export default function EtapeAncrage({
   bifurcation,
   reveal,
   lieu,
+  noteLieu,
   observationInitiale,
   onClore,
 }: {
@@ -50,8 +51,16 @@ export default function EtapeAncrage({
   suppositions: readonly Datum<string>[]
   propositions: readonly PropositionOperation[]
   bifurcation: Bifurcation | null
-  reveal: string
-  lieu: { nom: string; lat: number; lon: number }
+  /** Absent quand aucune image de révélation n'existe. */
+  reveal?: string
+  /**
+   * Absent quand il n'y a pas de lieu à révéler, ou qu'il ne *doit* pas
+   * l'être : une espèce vulnérable ne se publie pas à une précision
+   * exploitable, et un phénomène de ciel n'a pas d'adresse. Dans ces deux
+   * cas, `noteLieu` dit pourquoi, au lieu de laisser un trou.
+   */
+  lieu?: { nom: string; lat: number; lon: number }
+  noteLieu?: string
   observationInitiale: string
   onClore: (
     ajustement: string,
@@ -80,9 +89,16 @@ export default function EtapeAncrage({
 
         <section className="mt-11">
           <p className="kicker text-ink/40">Le lieu</p>
-          {devoiler ? (
+          {!devoiler ? (
+            <p className="mt-4 rounded border border-dashed border-ink/20 px-5 py-6 font-display text-[1.02rem] italic leading-relaxed text-ink/55">
+              Je ne te donne pas la réponse. Tu n’as pas trouvé aujourd’hui, le fragment reste
+              ouvert, et il n’a aucune date d’expiration.
+            </p>
+          ) : lieu ? (
             <figure className="mt-4 overflow-hidden rounded border border-ink/10">
-              <img src={reveal} alt={lieu.nom} className="aspect-[3/2] w-full object-cover" />
+              {reveal ? (
+                <img src={reveal} alt={lieu.nom} className="aspect-[3/2] w-full object-cover" />
+              ) : null}
               <figcaption className="flex flex-wrap items-center justify-between gap-2 bg-ink/4 px-5 py-3">
                 <span className="font-display text-[0.98rem] text-ink/75">{lieu.nom}</span>
                 <a
@@ -97,8 +113,8 @@ export default function EtapeAncrage({
             </figure>
           ) : (
             <p className="mt-4 rounded border border-dashed border-ink/20 px-5 py-6 font-display text-[1.02rem] italic leading-relaxed text-ink/55">
-              Je ne te donne pas la réponse. Tu n’as pas trouvé aujourd’hui, le fragment reste
-              ouvert, et il n’a aucune date d’expiration.
+              {noteLieu ??
+                'Cette opération ne révèle aucune position. Ce n’est pas un oubli : elle n’a pas de lieu à publier.'}
             </p>
           )}
         </section>
@@ -117,7 +133,16 @@ export default function EtapeAncrage({
                     >
                       {LIBELLE_STATUT[s.statut]}
                     </span>
-                    <span className="font-display text-[1.02rem] text-ink/80">{s.valeur}</span>
+                    {/*
+                      Une supposition `inconnu` n'a pas de valeur — c'est la
+                      règle du type. Afficher sa justification n'est pas un
+                      repli cosmétique : c'est le seul contenu réel d'une
+                      ignorance déclarée, et le taire laisserait une ligne
+                      vide là où il y a une information.
+                    */}
+                    <span className="font-display text-[1.02rem] text-ink/80">
+                      {s.valeur ?? s.justification}
+                    </span>
                   </div>
                   <input
                     value={reponses[cle] ?? ''}

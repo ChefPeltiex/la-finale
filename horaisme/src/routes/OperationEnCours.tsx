@@ -1,7 +1,7 @@
 import { useMemo, useReducer, useState } from 'react'
 import { Link, Navigate, useNavigate, useParams } from 'react-router-dom'
 
-import { CONTRE_HYPOTHESES, MEDIAS, operationParId } from '../content/operations'
+import { CONTRE_HYPOTHESES, INVITES_HYPOTHESE, MEDIAS, operationParId } from '../content/operations'
 import { etatInitial, peutAvancer, reduire } from '../engine/operation'
 import { creerPreuve } from '../engine/evidence'
 import { attribuerXp } from '../engine/progression'
@@ -155,12 +155,18 @@ export default function OperationEnCours() {
         horodatage: new Date().toISOString(),
       })
 
-      if (!bifurcation.echecSincere && medias) {
+      /*
+       * Un lieu ne rejoint le Terrain que s'il y en a un à révéler. Une
+       * opération sur une espèce vulnérable n'en déclare aucun : ne rien
+       * inscrire est ici la bonne issue, pas une donnée perdue.
+       */
+      const lieu = medias?.lieu
+      if (!bifurcation.echecSincere && lieu) {
         suivant = revelerLieu(suivant, {
           id: `${modele.id}-lieu`,
-          nom: medias.lieu.nom,
-          lat: medias.lieu.lat,
-          lon: medias.lieu.lon,
+          nom: lieu.nom,
+          lat: lieu.lat,
+          lon: lieu.lon,
           revelePar: modele.titre,
         })
       }
@@ -225,8 +231,8 @@ export default function OperationEnCours() {
       </header>
 
       <div className="mx-auto mt-14 max-w-5xl pb-16">
-        {etape?.type === 'fragment' && medias ? (
-          <EtapeFragment etape={etape} image={medias.fragment} onContinuer={avancer} />
+        {etape?.type === 'fragment' ? (
+          <EtapeFragment etape={etape} image={medias?.fragment} onContinuer={avancer} />
         ) : null}
 
         {etape?.type === 'inventaire' ? (
@@ -234,6 +240,7 @@ export default function OperationEnCours() {
             etape={etape}
             hypotheses={etat.hypotheses}
             contrePropositions={CONTRE_HYPOTHESES[modele.id] ?? []}
+            invite={INVITES_HYPOTHESE[modele.id]}
             onAjouter={(enonce, origine) => envoyer({ type: 'ajouter-hypothese', enonce, origine })}
             onCorriger={(hid, enonce) => envoyer({ type: 'corriger-hypothese', id: hid, enonce })}
             onRetirer={(hid) => envoyer({ type: 'retirer-hypothese', id: hid })}
@@ -257,14 +264,15 @@ export default function OperationEnCours() {
           />
         ) : null}
 
-        {etape?.type === 'ancrage' && medias ? (
+        {etape?.type === 'ancrage' ? (
           <EtapeAncrage
             etape={etape}
             suppositions={modele.suppositions}
             propositions={modele.propositions}
             bifurcation={bifurcation}
-            reveal={medias.reveal}
-            lieu={medias.lieu}
+            reveal={medias?.reveal}
+            lieu={medias?.lieu}
+            noteLieu={medias?.noteLieu}
             observationInitiale={observation}
             onClore={clore}
           />

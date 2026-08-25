@@ -9,8 +9,10 @@ l'environnement quotidien en terrain d'exploration, d'action et d'apprentissage,
 sans jamais confirmer automatiquement la première interprétation de
 l'utilisateur ni fabriquer le besoin de rester devant l'écran.
 
-Cette version est une **vertical slice** : une seule opération, « L'angle mort »,
-jouable entièrement, avec toute l'architecture derrière.
+Cette version tient sur **trois opérations verticales**, chacune jouable de bout
+en bout : « L'angle mort » (enquête urbaine), « Les trois soleils »
+(démystification d'un phénomène de ciel) et « Le sosie » (identification en
+nature, sans aucun prélèvement). Toute l'architecture est derrière.
 
 ---
 
@@ -20,7 +22,7 @@ jouable entièrement, avec toute l'architecture derrière.
 npm install
 npm run dev        # http://localhost:5184
 npm run dev:lan    # même chose, exposé au réseau local (téléphone)
-npm test           # 40 tests : moteur, philosophie, rendu
+npm test           # 195 tests : moteur, philosophie, nature, déclencheurs, contrechamp, connecteurs, corpus, rendu
 npm run build      # typecheck complet + bundle de production
 ```
 
@@ -78,7 +80,8 @@ Structuré dans le code, volontairement non rempli.
 | Élément | État |
 | --- | --- |
 | **Maître de jeu génératif (LLM)** | L'interface `Compositeur` est en place et le compositeur actuel est déterministe (`genere: false`). Un compositeur génératif implémentera la même interface, et ses sorties passeront obligatoirement par `accepterPropositionExterne()` avant d'atteindre l'écran. Les garde-fous restent dans le code et les tests, pas dans un prompt. |
-| **Familles d'opérations** | Les quatre familles existent comme structure. Une seule opération est écrite. La page Missions le dit à l'utilisateur au lieu d'afficher des cartes verrouillées. |
+| **Familles d'opérations** | Trois opérations sont écrites et jouables. La famille Boss existe comme structure, sans contenu. La page Missions le dit à l'utilisateur au lieu d'afficher des cartes verrouillées. |
+| **Connecteurs externes** | Les fondations sont en place — contrat, plafond de statut, cache, quota, délai, annulation, repli `inconnu` — mais **aucune source réseau n'est branchée**. La Carte des ignorances l'affiche telle quelle : « Aucune source n'a encore été interrogée pour cette zone. » |
 | **Street View** | Chargement optionnel déjà branché (`CarteTerrain`), non utilisé pour extraire des fragments. |
 | **Boss, Parcours longs, transmission** | Vocabulaire et types posés, contenu non écrit. |
 | **Économie, social, campagnes** | Volontairement absents de cette version. |
@@ -138,7 +141,7 @@ réapparaît.
 ## Tests
 
 ```bash
-npm test          # 40 tests, environ 5 s
+npm test          # 195 tests, environ 12 s
 npm run test:watch
 ```
 
@@ -151,7 +154,12 @@ veut — il devra passer ici.
 | --- | --- | --- |
 | `moteur.test.ts` | 14 | Le moteur calcule juste **et étiquette juste**. |
 | `philosophie.test.ts` | 18 | Les principes canoniques sont exécutables, pas décoratifs. |
-| `rendu.test.tsx` | 8 | L'application se monte et l'opération se joue réellement. |
+| `nature.test.ts` | 39 | L'ingestion est impossible par le type, le prélèvement est verrouillé par défaut, le canal de sécurité n'est jamais monnayable, et un fait juridique non daté est traité comme périmé. |
+| `declencheurs.test.ts` | 21 | Un déclencheur est une donnée évaluable, pas du code injecté. Une condition inconnue n'est jamais comptée comme satisfaite — ni comme non satisfaite. |
+| `contrechamp.test.ts` | 23 | Le Démenti sépare la provenance d'une information de sa vérité. Une absence de preuve ne devient jamais une contradiction. Aucun taux global n'est publié tant que l'échantillon est trop petit. |
+| `connecteurs.test.ts` | 29 | Une panne réseau, un délai dépassé, un quota épuisé ou une réponse illisible produisent tous `inconnu` — jamais un chiffre. Zéro résultat décrit la couverture, jamais le monde. La position privée ne quitte pas la machine telle quelle. |
+| `corpus.test.ts` | 41 | Les trois opérations se chargent réellement, démontrent le cycle complet, et aucune n'est écartée en silence par les garde-fous. |
+| `rendu.test.tsx` | 10 | L'application se monte et les opérations se jouent réellement, jusqu'au Démenti. |
 
 ### `moteur.test.ts` — 14 tests
 
@@ -204,14 +212,19 @@ npm run preview    # sert le dist/ produit
 Le typecheck complet précède le bundle : une erreur de types interrompt
 `npm run build` au lieu de produire un `dist/` malgré tout.
 
-**61 modules transformés, environ 330 ms.**
+**61 modules transformés, environ 1 s.**
 
 | Artefact | Brut | Gzip |
 | --- | --- | --- |
-| `index.js` | 314,05 Ko | **96,83 Ko** |
-| `index.css` | 48,39 Ko | **8,63 Ko** |
-| `index.html` | 1,05 Ko | 0,55 Ko |
-| **Code total** | 363,5 Ko | **106 Ko** |
+| `index.js` | 370,64 Ko | **114,30 Ko** |
+| `index.css` | 51,49 Ko | **9,14 Ko** |
+| `index.html` | 0,91 Ko | 0,54 Ko |
+| **Code total** | 423 Ko | **124 Ko** |
+
+L'écart avec la mesure précédente (106 Ko gzip) vient presque entièrement du
+corpus : deux opérations complètes ajoutent du texte, des indices de sécurité,
+des propositions vérifiables et des faits sourcés. C'est du contenu, pas de la
+mécanique.
 
 Les images sont servies telles quelles, sans recompression au build — elles
 passent par `scripts/optimiser-images.ps1` en amont.
@@ -245,16 +258,23 @@ depuis que sa texture de fond — l'œuvre entière, posée à 13 % d'opacité p
 le turquoise du tableau. La route est passée de 547 Ko à 242 Ko, et l'effet
 existe désormais aussi en mobile, où l'image était simplement masquée.
 
-### Un constat honnête
+### Les fontes ne partent plus chez un tiers
 
-**Les fontes viennent de Google Fonts.** `index.html` charge trois `woff2`
-depuis `fonts.gstatic.com`, précédés d'une requête bloquante vers
-`fonts.googleapis.com`. C'est la moitié du socle de 242 Ko, et surtout c'est un
-appel tiers qui expose l'adresse IP du joueur à chaque visite. Cela contredit la
-promesse de souveraineté, qui ne devrait pas s'arrêter aux données que
-l'application stocke. Les héberger localement supprimerait la fuite et la
-requête bloquante. Non corrigé dans cette version, mais écrit ici plutôt que
-passé sous silence.
+`index.html` chargeait trois `woff2` depuis `fonts.gstatic.com`, précédés d'une
+requête bloquante vers `fonts.googleapis.com` — un appel tiers qui exposait
+l'adresse IP du joueur à chaque visite, avant tout consentement possible.
+
+**Corrigé.** Les trois familles sont désormais servies avec le bundle, en
+sous-ensemble latin uniquement, en fichier variable pour les deux principales.
+Vérification faite sur le `dist/` produit : les seules URL absolues qui
+subsistent sont des espaces de noms SVG du W3C — jamais requis sur le réseau —
+des liens de documentation dans les messages d'erreur des bibliothèques, et un
+lien Google Maps porté par une balise `a`, donc suivi seulement si le joueur
+clique. Aucune requête automatique vers un tiers ne subsiste au chargement.
+
+Google Maps et Street View restent disponibles comme expérience visuelle
+optionnelle : ils ne sont pas retirés, ils ne sont plus contactés sans geste du
+joueur.
 
 ---
 
@@ -262,7 +282,7 @@ passé sous silence.
 
 | Script | Rôle |
 | --- | --- |
-| `npm run captures` | Capture les huit routes en desktop (1440×900) et mobile (390×844), et signale débordement horizontal, erreurs console et requêtes échouées. |
+| `npm run captures` | Capture les dix routes en desktop (1440×900) et mobile (390×844), et signale débordement horizontal, erreurs console et requêtes échouées. |
 | `npm run captures:operation` | Joue « L'angle mort » de bout en bout dans un vrai navigateur et capture les cinq étapes, le mode poche, la clôture, puis Parcours / Terrain / Moi après coup. |
 | `npm run audit:cibles` | Liste les cibles tactiles sous 44 px sur chaque route en viewport mobile. |
 | `scripts/optimiser-images.ps1` | Recompresse `src/assets` (1400 px max, qualité 82). |
@@ -274,6 +294,7 @@ n'est téléchargé. Les images atterrissent dans `.captures/`, non versionné.
 `VERIFICATION.md` décrit la passe de validation manuelle, ordinateur et
 téléphone compris.
 
-Une cible reste sous 44 px : le mot « Moi » cité dans une phrase d'Aujourd'hui.
-C'est un lien en ligne dans du texte courant, pas un contrôle autonome ; l'agrandir
-casserait l'interlignage du paragraphe.
+Aucune cible tactile ne reste sous 44 px. Le mot « Moi » cité dans une phrase
+d'Aujourd'hui était le dernier cas : c'est un lien en ligne dans du texte
+courant, dont la hauteur de ligne seule faisait 15 px. Un padding vertical
+négativement compensé le porte à 45 px sans écarter les lignes du paragraphe.

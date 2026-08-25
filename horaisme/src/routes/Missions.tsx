@@ -64,9 +64,10 @@ export default function Missions() {
         <Panneau ton="forest" className="px-7 py-6">
           <Kicker className="text-parchment/40">État réel du catalogue</Kicker>
           <p className="mt-3 max-w-2xl text-[0.9rem] leading-relaxed text-parchment/60">
-            Une seule opération est écrite et jouable de bout en bout. Les trois autres familles
-            existent comme structure dans le moteur, pas comme contenu. Je préfère te le dire ici
-            plutôt que de remplir cette page de cartes verrouillées.
+            {CATALOGUE.length} opérations sont écrites et jouables de bout en bout : une enquête
+            urbaine, une démystification de ciel, une identification en nature sans prélèvement. La
+            famille Boss existe comme structure dans le moteur, pas encore comme contenu. Je préfère
+            te le dire ici plutôt que de remplir cette page de cartes verrouillées.
           </p>
         </Panneau>
       </section>

@@ -46,7 +46,7 @@ const nav = await puppeteer.connect({ browserWSEndpoint: ws })
 const page = await nav.newPage()
 await page.setViewport({ width: 390, height: 844, deviceScaleFactor: 2, isMobile: true, hasTouch: true })
 
-const ROUTES = ['/', '/aujourdhui', '/terrain', '/missions', '/parcours', '/decouvrir', '/moi', '/operation/angle-mort']
+const ROUTES = ['/', '/aujourdhui', '/terrain', '/missions', '/parcours', '/decouvrir', '/moi', '/operation/angle-mort', '/operation/trois-soleils', '/operation/le-sosie']
 
 for (const route of ROUTES) {
   await page.goto(`http://localhost:${PORT}${route}`, { waitUntil: 'networkidle0' })

@@ -34,6 +34,8 @@ const ROUTES = [
   ['05-decouvrir', '/decouvrir'],
   ['06-moi', '/moi'],
   ['07-operation', '/operation/angle-mort'],
+  ['08-trois-soleils', '/operation/trois-soleils'],
+  ['09-le-sosie', '/operation/le-sosie'],
 ]
 
 const FORMATS = [

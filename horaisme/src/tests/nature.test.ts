@@ -104,7 +104,14 @@ describe('Tout fait externe déclaré est cohérent', () => {
   })
 
   it('le seuil écologique n’est pas présenté comme une règle de droit', () => {
-    expect(seuilDeclinAilDesBois.statut).toBe('plausible')
+    /*
+     * Le statut de provenance dit la qualité de la source, pas la nature de
+     * la norme. Un résultat publié dans une revue à comité de lecture est un
+     * `fait` au même titre qu'un article de loi — ce qui les sépare, c'est
+     * qu'un seuil écologique ne cite aucun article et n'oblige personne.
+     */
+    expect(seuilDeclinAilDesBois.identifiantRegle).toBeNull()
+    expect(ailDesBois.quantiteMaxParAn?.identifiantRegle).toContain('E-12.01')
     expect(ailDesBois.quantiteMaxParAn?.statut).toBe('fait')
   })
 })

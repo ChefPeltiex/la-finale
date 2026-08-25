@@ -14,6 +14,7 @@ export default function EtapeInventaire({
   etape,
   hypotheses,
   contrePropositions,
+  invite,
   onAjouter,
   onCorriger,
   onRetirer,
@@ -24,6 +25,15 @@ export default function EtapeInventaire({
   etape: Etape
   hypotheses: readonly Hypothese[]
   contrePropositions: readonly string[]
+  /**
+   * Question posée au joueur au-dessus du champ.
+   *
+   * Toutes les opérations ne demandent pas la même chose : « où » pour une
+   * énigme de localisation, « qu'est-ce que c'est » pour une identification.
+   * Une invite unique en dur poserait la mauvaise question à la majorité du
+   * corpus.
+   */
+  invite?: string
   onAjouter: (enonce: string, origine: Hypothese['origine']) => void
   onCorriger: (id: string, enonce: string) => void
   onRetirer: (id: string) => void
@@ -88,7 +98,7 @@ export default function EtapeInventaire({
             onKeyDown={(e) => {
               if (e.key === 'Enter') soumettre()
             }}
-            placeholder="Où crois-tu que ce détail se trouve ?"
+            placeholder={invite ?? 'Écris une explication possible.'}
             className="flex-1 rounded-[3px] border border-gold-dim/25 bg-ink-soft/60 px-4 py-3 font-display text-parchment placeholder:text-parchment/25 focus:border-gold/60 focus:outline-none"
           />
           <Bouton variante="contour" onClick={soumettre} disabled={brouillon.trim() === ''}>

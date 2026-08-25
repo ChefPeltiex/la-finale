@@ -89,10 +89,16 @@ describe('shell et navigation', () => {
     const u = userEvent.setup()
     monter('/aujourdhui')
 
-    await u.click(screen.getByRole('button', { name: 'Écarter' }))
+    /*
+     * Le corpus propose plusieurs opérations le même jour depuis que les
+     * déclencheurs de saison en laissent passer plus d'une. On écarte la
+     * première : la règle testée porte sur l'absence de sanction, pas sur
+     * l'identité de la carte écartée.
+     */
+    await u.click(screen.getAllByRole('button', { name: 'Écarter' })[0]!)
 
     expect(screen.getByText('Écartées')).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: 'Remettre en jeu' })).toBeInTheDocument()
+    expect(screen.getAllByRole('button', { name: 'Remettre en jeu' }).length).toBeGreaterThan(0)
     const corps = document.body.textContent ?? ''
     expect(corps).not.toMatch(/pénalit|série brisée|tu perds/i)
   })
