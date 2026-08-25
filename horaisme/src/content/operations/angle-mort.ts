@@ -13,16 +13,42 @@ import { plausible, simule } from '../../engine/provenance'
 export const angleMort: Operation = {
   id: 'angle-mort',
   famille: 'operation',
+  thematique: 'perception',
   titre: 'L’angle mort',
   kicker: 'Opération · Terrain proche',
   promesse:
     'Un détail que tu croises chaque semaine et que tu serais incapable de dessiner de mémoire.',
 
+  intention:
+    'Faire apparaître l’écart entre « connaître un lieu » et « l’avoir réellement regardé ». Le familier est ce qu’on cesse de voir.',
+
   dixSecondes:
     'Personne ne décide spontanément d’aller défendre deux hypothèses concurrentes sur l’emplacement d’un détail de façade recadré au point d’être méconnaissable, puis de trancher sur place. L’énigme visuelle, la contrainte de proximité et la suite qui change selon l’état réel du lieu ne s’improvisent pas en dix secondes.',
 
+  declencheurs: [
+    {
+      type: 'lumiere-minimum',
+      minutes: 45,
+      raison: 'Reconnaître un détail de façade demande d’y voir clair.',
+    },
+  ],
+
   dureeMinutes: [25, 60],
-  rayonMetres: 900,
+  distanceMetres: [200, 900],
+  niveauPhysique: 'marche-douce',
+  accessibilite:
+    'Trottoirs urbains, aucun dénivelé imposé. Le détail se regarde depuis la voie publique : rien n’oblige à entrer nulle part ni à s’approcher de près.',
+  materiel: ['Rien d’autre que tes yeux', 'L’appareil, qui restera dans ta poche'],
+  risques: [
+    'Chercher un détail en levant les yeux fait oublier la circulation. Regarde la rue avant les façades.',
+    'Ne franchis aucune clôture, aucune cour, aucun terrain privé. Le détail est visible depuis la rue ou il ne compte pas.',
+  ],
+  conditionsAbandon: [
+    'La nuit tombe avant que tu aies trouvé.',
+    'Le seul point de vue possible se trouve sur une propriété privée.',
+    'Tu n’as plus envie. Ça suffit comme raison.',
+  ],
+  preuveAttendue: 'observation',
 
   etapes: [
     {
@@ -124,4 +150,42 @@ export const angleMort: Operation = {
   ],
 
   sourcesUtilisees: ['horloge', 'position', 'lumiere', 'saison', 'mobilite'],
+
+  indices: {
+    localisation: [
+      {
+        cran: 'contextuel',
+        texte:
+          'Ce genre de détail survit surtout là où les façades n’ont pas été refaites. Cherche du côté du bâti le plus ancien de ton rayon.',
+      },
+      {
+        cran: 'sensoriel',
+        texte:
+          'La lumière du fragment vient de biais et rase la surface. Ce mur n’est donc pas orienté plein sud.',
+      },
+      {
+        cran: 'directionnel',
+        texte:
+          'Le détail se trouve à hauteur d’œil ou juste au-dessus, sur une rue que tu empruntes plutôt que sur une place où tu t’arrêtes.',
+      },
+      {
+        cran: 'zone',
+        texte: 'Tu es à moins de quatre cents mètres. Trois rues, pas davantage.',
+      },
+    ],
+    securite: [
+      {
+        categorie: 'interdit',
+        texte:
+          'Le détail est visible depuis la voie publique. Si tu dois entrer quelque part pour le voir, ce n’est pas le bon.',
+      },
+    ],
+  },
+
+  consequences: {
+    terrain:
+      'Le lieu du fragment devient un point révélé de ton Terrain, quel que soit le résultat de ta recherche.',
+    registre:
+      'J’ai supposé que ce détail est encore en place et que tu passes devant chaque semaine. Ces deux suppositions partent au Registre et attendent ton constat.',
+  },
 }

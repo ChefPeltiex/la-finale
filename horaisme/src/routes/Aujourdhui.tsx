@@ -113,7 +113,7 @@ export default function Aujourdhui() {
                 <Kicker className="text-gold/60">{principale.operation.kicker}</Kicker>
                 <span className="data-line text-parchment/30">
                   {principale.operation.dureeMinutes[0]}–{principale.operation.dureeMinutes[1]} min ·{' '}
-                  {principale.operation.rayonMetres} m
+                  {principale.operation.distanceMetres[0]}–{principale.operation.distanceMetres[1]} m
                 </span>
               </div>
 
@@ -167,6 +167,25 @@ export default function Aujourdhui() {
                         </li>
                       ))}
                     </ul>
+
+                    {principale.reserves.length > 0 ? (
+                      <div>
+                        <Kicker>Ce que je n’ai pas pu vérifier</Kicker>
+                        <ul className="mt-3 flex flex-col gap-2.5">
+                          {principale.reserves.map((r) => (
+                            <li
+                              key={`${r.declencheur.type}-${r.explication}`}
+                              className="flex items-start gap-3"
+                            >
+                              <Marque statut="inconnu" />
+                              <span className="text-[0.86rem] leading-relaxed text-parchment/60">
+                                {r.explication}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ) : null}
 
                     <div className="rounded border border-gold-dim/18 bg-ink/50 px-5 py-4">
                       <Kicker className="text-gold/50">Test des dix secondes</Kicker>

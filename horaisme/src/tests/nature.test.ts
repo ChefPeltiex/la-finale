@@ -285,7 +285,7 @@ function operationNature(nature: Partial<CadreNature>, texte: string, indices?: 
     dixSecondes:
       'Une opération de test qui déclare longuement pourquoi elle ne tient pas en dix secondes.',
     etapes: angleMort.etapes.map((e) => (e.type === 'fragment' ? { ...e, corps: texte } : e)),
-    indices,
+    indices: indices ?? angleMort.indices,
     nature: { ...cadreNatureParDefaut(), ...nature },
   }
 }

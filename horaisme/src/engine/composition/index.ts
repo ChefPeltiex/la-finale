@@ -7,6 +7,7 @@ import type {
 } from '../types'
 import { estAffichable } from '../provenance'
 import { accepterPropositionExterne } from '../safety'
+import { evaluerDeclencheurs, type EvaluationDeclencheur } from '../triggers'
 
 /**
  * Composition narrative.
@@ -26,6 +27,12 @@ export interface Proposition {
   readonly operation: Operation
   /** « Pourquoi cette opération m'est-elle proposée ? » — toujours répondable. */
   readonly raisons: readonly RaisonProposition[]
+  /**
+   * Conditions que je n'ai pas pu vérifier. Elles ne bloquent pas la
+   * proposition, mais elles s'affichent : le joueur doit savoir sur quoi je
+   * n'ai aucune information.
+   */
+  readonly reserves: readonly EvaluationDeclencheur[]
 }
 
 export interface Ecartee {
@@ -57,6 +64,20 @@ export interface Compositeur {
 const RIEN_AUJOURDHUI =
   'Rien aujourd’hui est un choix entier. Aucune série ne se brise, aucun compteur ne baisse, et je ne reviendrai pas te le rappeler.'
 
+/** Rattache un déclencheur à la source de contexte qui l'a tranché. */
+function sourcePourDeclencheur(e: EvaluationDeclencheur): IdSourceContexte {
+  switch (e.declencheur.type) {
+    case 'saison':
+      return 'saison'
+    case 'lumiere-minimum':
+      return 'lumiere'
+    case 'heure':
+      return 'horloge'
+    default:
+      return 'meteo'
+  }
+}
+
 export const compositeurDeterministe: Compositeur = {
   nom: 'Compositeur déterministe',
   genere: false,
@@ -87,13 +108,31 @@ export const compositeurDeterministe: Compositeur = {
 
       const raisons: RaisonProposition[] = []
 
+      const declencheurs = evaluerDeclencheurs(operation, contexte)
+      if (declencheurs.issue === 'non-satisfait') {
+        ecartees.push({
+          operationId: operation.id,
+          titre: operation.titre,
+          motif: declencheurs.nonSatisfaits[0].explication,
+        })
+        continue
+      }
+      for (const e of declencheurs.satisfaits) {
+        raisons.push({
+          source: sourcePourDeclencheur(e),
+          enonce: e.explication,
+          statut: 'fait',
+        })
+      }
+
       const rayon = contexte.rayonMobiliteMetres
       if (estAffichable(rayon)) {
-        if (operation.rayonMetres > (rayon.valeur as number)) {
+        const [, distanceMax] = operation.distanceMetres
+        if (distanceMax > (rayon.valeur as number)) {
           ecartees.push({
             operationId: operation.id,
             titre: operation.titre,
-            motif: `Terrain de ${operation.rayonMetres} m, au-delà du rayon de ${rayon.valeur} m que tu as déclaré.`,
+            motif: `Terrain allant jusqu’à ${distanceMax} m, au-delà du rayon de ${rayon.valeur} m que tu as déclaré.`,
           })
           continue
         }
@@ -147,7 +186,7 @@ export const compositeurDeterministe: Compositeur = {
         })
       }
 
-      propositions.push({ operation, raisons })
+      propositions.push({ operation, raisons, reserves: declencheurs.indetermines })
       if (propositions.length >= maximum) break
     }
 

@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { afterEach, beforeEach, describe, expect, it } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { cleanup, render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { MemoryRouter } from 'react-router-dom'
@@ -15,7 +15,14 @@ import { angleMort } from '../content/operations/angle-mort'
  * dans un DOM complet et jouent « L'angle mort » du fragment à l'ancrage.
  * Ils vérifient que l'interface se construit vraiment, pas seulement que la
  * logique du moteur est juste.
+ *
+ * L'horloge est fixée : depuis que les opérations portent des déclencheurs
+ * contextuels, une suite qui lit l'heure réelle passerait le jour et
+ * échouerait la nuit. Seul `Date` est simulé, pour que les minuteries de
+ * `userEvent` continuent de fonctionner normalement.
  */
+
+const MIDI_DE_MAI = new Date('2026-05-20T13:00:00')
 
 function monter(route: string) {
   return render(
@@ -28,11 +35,14 @@ function monter(route: string) {
 }
 
 beforeEach(() => {
+  vi.useFakeTimers({ toFake: ['Date'] })
+  vi.setSystemTime(MIDI_DE_MAI)
   window.localStorage.clear()
 })
 
 afterEach(() => {
   cleanup()
+  vi.useRealTimers()
 })
 
 describe('shell et navigation', () => {

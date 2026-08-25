@@ -159,6 +159,69 @@ export function verifierOperation(op: Operation): Violation[] {
     })
   }
 
+  if (op.intention.trim().length < 20) {
+    violations.push({
+      regle: 'intention-absente',
+      extrait: op.id,
+      explication: 'Une opération doit déclarer ce qu’elle cherche à déplacer chez le joueur.',
+    })
+  }
+
+  if (op.conditionsAbandon.length === 0) {
+    violations.push({
+      regle: 'abandon-non-prevu',
+      extrait: op.id,
+      explication:
+        'Une opération qui ne sait pas dire quand s’arrêter est un piège. Abandonner ne coûte rien, encore faut-il l’avoir écrit.',
+    })
+  }
+
+  if (op.accessibilite.trim().length < 10) {
+    violations.push({
+      regle: 'accessibilite-non-declaree',
+      extrait: op.id,
+      explication: 'Ce que l’opération exige du corps et du terrain se dit d’avance, franchement.',
+    })
+  }
+
+  if (op.consequences.terrain.trim() === '' || op.consequences.registre.trim() === '') {
+    violations.push({
+      regle: 'consequences-absentes',
+      extrait: op.id,
+      explication:
+        'Une opération doit dire ce qu’elle laisse au Terrain et ce qu’elle inscrit au Registre.',
+    })
+  }
+
+  const [dMin, dMax] = op.distanceMetres
+  if (dMin > dMax || dMin < 0) {
+    violations.push({
+      regle: 'distance-incoherente',
+      extrait: `${dMin}–${dMax} m`,
+      explication: 'La plage de distance doit aller du plus proche au plus éloigné.',
+    })
+  }
+
+  const [tMin, tMax] = op.dureeMinutes
+  if (tMin > tMax || tMin <= 0) {
+    violations.push({
+      regle: 'duree-incoherente',
+      extrait: `${tMin}–${tMax} min`,
+      explication: 'La plage de durée doit aller de la plus courte à la plus longue.',
+    })
+  }
+
+  for (const d of op.declencheurs) {
+    if (d.raison.trim().length < 10) {
+      violations.push({
+        regle: 'declencheur-sans-raison',
+        extrait: d.type,
+        explication:
+          'Chaque condition contextuelle doit pouvoir répondre « pourquoi cette opération maintenant ? ».',
+      })
+    }
+  }
+
   if (!op.bifurcations.some((b) => b.echecSincere)) {
     violations.push({
       regle: 'echec-non-recompense',
@@ -171,7 +234,16 @@ export function verifierOperation(op: Operation): Violation[] {
     op.titre,
     op.kicker,
     op.promesse,
+    op.intention,
     op.dixSecondes,
+    op.accessibilite,
+    op.consequences.terrain,
+    op.consequences.registre,
+    ...op.risques,
+    ...op.conditionsAbandon,
+    ...op.declencheurs.map((d) => d.raison),
+    ...op.indices.localisation.map((i) => i.texte),
+    ...op.indices.securite.map((i) => i.texte),
     ...op.etapes.flatMap((e) => [e.titre, e.corps, e.consigne ?? '']),
     ...op.bifurcations.flatMap((b) => [b.constat, b.suite]),
   ].join('\n')

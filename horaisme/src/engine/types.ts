@@ -104,6 +104,62 @@ export interface Contexte {
 
 export type FamilleAction = 'quete' | 'mission' | 'operation' | 'boss'
 
+/**
+ * La thématique dit *de quoi il s'agit*, la famille dit *quelle forme cela
+ * prend*. Une enquête locale peut être une mission ou un Boss.
+ */
+export type ThematiqueOperation =
+  | 'enquete-locale'
+  | 'nature'
+  | 'demystification'
+  | 'savoir-incarne'
+  | 'action'
+  | 'perception'
+  | 'temporalite'
+  | 'boss'
+  | 'cooperation'
+  | 'echec-fertile'
+
+export type NiveauPhysique = 'assis' | 'marche-douce' | 'marche-soutenue' | 'terrain-accidente'
+
+/**
+ * Déclencheurs contextuels, déclaratifs.
+ *
+ * Volontairement des données et non des fonctions : le moteur les évalue
+ * lui-même, ce qui les rend inspectables, testables et non contournables par
+ * une proposition venue de l'extérieur. Un futur maître de jeu génératif peut
+ * en composer, jamais en exécuter.
+ */
+export type Declencheur =
+  | { readonly type: 'saison'; readonly valeurs: readonly string[]; readonly raison: string }
+  | { readonly type: 'lumiere-minimum'; readonly minutes: number; readonly raison: string }
+  | {
+      readonly type: 'heure'
+      readonly deHeure: number
+      readonly aHeure: number
+      readonly raison: string
+    }
+  | { readonly type: 'meteo-requise'; readonly valeurs: readonly string[]; readonly raison: string }
+  | { readonly type: 'meteo-exclue'; readonly valeurs: readonly string[]; readonly raison: string }
+  | { readonly type: 'temperature-max'; readonly celsius: number; readonly raison: string }
+  | { readonly type: 'temperature-min'; readonly celsius: number; readonly raison: string }
+
+/**
+ * Trois issues, jamais deux.
+ *
+ * `indetermine` est la plus importante : quand la donnée manque, le
+ * déclencheur n'est pas « non satisfait ». L'absence d'information n'est pas
+ * une information contraire.
+ */
+export type IssueDeclencheur = 'satisfait' | 'non-satisfait' | 'indetermine'
+
+export interface ConsequencesOperation {
+  /** Ce que l'opération ajoute au Terrain du joueur. */
+  readonly terrain: string
+  /** Ce qu'elle inscrit au Registre, et que le réel viendra confronter. */
+  readonly registre: string
+}
+
 export type TypeEtape =
   | 'fragment' /* Observer  — recevoir sans comprendre */
   | 'inventaire' /* Lier      — confronter plusieurs lectures */
@@ -145,17 +201,31 @@ export interface Etape {
 export interface Operation {
   readonly id: string
   readonly famille: FamilleAction
+  readonly thematique: ThematiqueOperation
   readonly titre: string
   readonly kicker: string
   readonly promesse: string
+  /** Ce que l'opération cherche à déplacer chez le joueur. Une phrase. */
+  readonly intention: string
   /**
    * Test des dix secondes. Champ obligatoire : si le joueur peut imaginer
    * la même activité en dix secondes, l'opération ne justifie pas l'app.
    * Une opération sans ce champ est rejetée au chargement.
    */
   readonly dixSecondes: string
+  /** Conditions contextuelles évaluées par le moteur avant proposition. */
+  readonly declencheurs: readonly Declencheur[]
   readonly dureeMinutes: readonly [number, number]
-  readonly rayonMetres: number
+  /** Plage de distance, du plus proche au plus éloigné. */
+  readonly distanceMetres: readonly [number, number]
+  readonly niveauPhysique: NiveauPhysique
+  /** Ce que l'opération exige du corps et du terrain, dit franchement. */
+  readonly accessibilite: string
+  readonly materiel: readonly string[]
+  readonly risques: readonly string[]
+  /** Quand s'arrêter. Une opération qui ne sait pas s'interrompre est un piège. */
+  readonly conditionsAbandon: readonly string[]
+  readonly preuveAttendue: TypePreuve
   readonly etapes: readonly Etape[]
   readonly bifurcations: readonly Bifurcation[]
   /** Ce que HORA suppose sans pouvoir le garantir, exposé au joueur. */
@@ -163,7 +233,8 @@ export interface Operation {
   /** Sources réellement utilisées pour composer la proposition. */
   readonly sourcesUtilisees: readonly IdSourceContexte[]
   /** Deux canaux d'indices séparés. Voir `EchelleIndices`. */
-  readonly indices?: EchelleIndices
+  readonly indices: EchelleIndices
+  readonly consequences: ConsequencesOperation
   /** Présent dès qu'une opération met le joueur en contact avec du vivant. */
   readonly nature?: CadreNature
 }

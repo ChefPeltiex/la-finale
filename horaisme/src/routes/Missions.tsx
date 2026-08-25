@@ -38,7 +38,8 @@ export default function Missions() {
                     </p>
                   </div>
                   <span className="data-line shrink-0 text-parchment/35 transition-colors group-hover:text-gold">
-                    {op.dureeMinutes[0]}–{op.dureeMinutes[1]} min · {op.rayonMetres} m →
+                    {op.dureeMinutes[0]}–{op.dureeMinutes[1]} min · {op.distanceMetres[0]}–
+                    {op.distanceMetres[1]} m →
                   </span>
                 </Link>
               </li>
