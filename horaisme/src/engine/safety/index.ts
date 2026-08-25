@@ -1,5 +1,6 @@
 import type { AttributionXp, Hypothese, Operation } from '../types'
 import { verifierCadreNature } from '../nature'
+import { verifierPropositions } from '../contrechamp'
 
 /**
  * Garde-fous.
@@ -244,12 +245,17 @@ export function verifierOperation(op: Operation): Violation[] {
     ...op.declencheurs.map((d) => d.raison),
     ...op.indices.localisation.map((i) => i.texte),
     ...op.indices.securite.map((i) => i.texte),
+    ...op.propositions.flatMap((p) => [p.enonce, p.resultatAttendu]),
     ...op.etapes.flatMap((e) => [e.titre, e.corps, e.consigne ?? '']),
     ...op.bifurcations.flatMap((b) => [b.constat, b.suite]),
   ].join('\n')
   violations.push(...verifierTexte(textes))
 
   violations.push(...verifierCadreNature(op))
+
+  for (const d of verifierPropositions(op)) {
+    violations.push({ regle: d.regle, extrait: d.propositionId, explication: d.explication })
+  }
 
   return violations
 }

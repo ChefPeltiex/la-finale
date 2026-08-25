@@ -19,6 +19,7 @@ export const MEMOIRE_VIDE: MemoireJoueur = {
   xpTotal: 0,
   attributions: [],
   registre: [],
+  verifications: [],
   ancrages: [],
   lieux: [],
   operationsRefusees: [],

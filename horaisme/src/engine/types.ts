@@ -230,6 +230,12 @@ export interface Operation {
   readonly bifurcations: readonly Bifurcation[]
   /** Ce que HORA suppose sans pouvoir le garantir, exposé au joueur. */
   readonly suppositions: readonly Datum<string>[]
+  /**
+   * Ce que l'opération avance et que le terrain peut démentir. Au moins une :
+   * une opération qui n'affirme rien de réfutable ne se prête pas au
+   * Contrechamp.
+   */
+  readonly propositions: readonly PropositionOperation[]
   /** Sources réellement utilisées pour composer la proposition. */
   readonly sourcesUtilisees: readonly IdSourceContexte[]
   /** Deux canaux d'indices séparés. Voir `EchelleIndices`. */
@@ -312,6 +318,56 @@ export interface CadreNature {
 }
 
 /* ------------------------------------------------------------------ */
+/* Contrechamp du réel                                                 */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Ce que l'opération avance et qui peut être démenti.
+ *
+ * Distinct des `suppositions`, et la distinction compte : une supposition dit
+ * *d'où vient* une information, une proposition dit *ce qu'on devrait
+ * observer si elle est vraie*. Le statut de provenance ne décrit pas la
+ * vérité d'un énoncé — confondre les deux rendrait tout démenti illusoire.
+ *
+ * Sans `resultatAttendu` explicite, rien ne peut être contredit.
+ */
+export interface PropositionOperation {
+  readonly id: string
+  /** L'affirmation, en clair. */
+  readonly enonce: string
+  /** Ce qu'on devrait constater sur place si l'affirmation tient. */
+  readonly resultatAttendu: string
+  /** Confiance affichée, bornée de 0 à 1. */
+  readonly confiance: number
+  /** Provenance de l'affirmation, pas sa vérité. */
+  readonly statutEpistemique: StatutProvenance
+}
+
+/**
+ * Trois issues. `indeterminee` n'est pas un échec de mesure : c'est le cas
+ * le plus fréquent et le plus honnête. Une absence de preuve ne bascule
+ * jamais d'elle-même en contradiction.
+ */
+export type IssueVerification = 'confirmee' | 'contredite' | 'indeterminee'
+
+export interface Verification {
+  readonly id: string
+  readonly operationId: string
+  readonly propositionId: string
+  readonly propositionInitiale: string
+  readonly resultatAttendu: string
+  readonly confianceInitiale: number
+  readonly statutEpistemique: StatutProvenance
+  /** Ce que le joueur a réellement constaté. `null` tant qu'il n'a rien dit. */
+  readonly observationReelle: string | null
+  readonly issue: IssueVerification
+  /** Preuves rattachées. Un démenti sans preuve n'est pas un démenti. */
+  readonly preuveIds: readonly string[]
+  readonly proposeeLe: string
+  readonly trancheeLe: string | null
+}
+
+/* ------------------------------------------------------------------ */
 /* Preuves et XP                                                       */
 /* ------------------------------------------------------------------ */
 
@@ -368,6 +424,8 @@ export interface MemoireJoueur {
   readonly xpTotal: number
   readonly attributions: readonly AttributionXp[]
   readonly registre: readonly EntreeRegistre[]
+  /** Contrechamp : ce que HORA a avancé, et ce que le terrain en a fait. */
+  readonly verifications: readonly Verification[]
   readonly ancrages: readonly Ancrage[]
   readonly lieux: readonly LieuTerrain[]
   readonly operationsRefusees: readonly string[]

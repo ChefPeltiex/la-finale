@@ -1,5 +1,11 @@
 import { useState } from 'react'
-import type { Bifurcation, Datum, Etape } from '../../engine/types'
+import type {
+  Bifurcation,
+  Datum,
+  Etape,
+  IssueVerification,
+  PropositionOperation,
+} from '../../engine/types'
 import { LIBELLE_STATUT, COULEUR_STATUT } from '../../engine/provenance'
 import { Bouton } from '../ui'
 
@@ -9,13 +15,31 @@ export interface Verdict {
   readonly reponseDuReel: string
 }
 
+/** Ce que le joueur répond à une chose que HORA avait avancée. */
+export interface VerdictContrechamp {
+  readonly propositionId: string
+  readonly issue: IssueVerification
+  readonly observation: string
+}
+
+const CHOIX: readonly { issue: IssueVerification; libelle: string }[] = [
+  { issue: 'confirmee', libelle: 'C’était le cas' },
+  { issue: 'contredite', libelle: 'Non, j’ai vu autre chose' },
+  { issue: 'indeterminee', libelle: 'Je ne peux pas trancher' },
+]
+
 /**
  * L'ancrage. Seul endroit où la réflexion existe, et elle reste courte.
- * Le Registre confronte ici ce que HORA supposait à ce que le réel a répondu.
+ *
+ * Deux sections distinctes, et la distinction n'est pas cosmétique : le
+ * Registre confronte la *provenance* de ce que HORA supposait, le Contrechamp
+ * confronte la *justesse* de ce qu'elle a avancé. Un statut de provenance ne
+ * dit rien de la vérité d'un énoncé.
  */
 export default function EtapeAncrage({
   etape,
   suppositions,
+  propositions,
   bifurcation,
   reveal,
   lieu,
@@ -24,14 +48,21 @@ export default function EtapeAncrage({
 }: {
   etape: Etape
   suppositions: readonly Datum<string>[]
+  propositions: readonly PropositionOperation[]
   bifurcation: Bifurcation | null
   reveal: string
   lieu: { nom: string; lat: number; lon: number }
   observationInitiale: string
-  onClore: (ajustement: string, verdicts: readonly Verdict[]) => void
+  onClore: (
+    ajustement: string,
+    verdicts: readonly Verdict[],
+    contrechamp: readonly VerdictContrechamp[],
+  ) => void
 }) {
   const [ajustement, setAjustement] = useState('')
   const [reponses, setReponses] = useState<Record<string, string>>({})
+  const [issues, setIssues] = useState<Record<string, IssueVerification>>({})
+  const [constats, setConstats] = useState<Record<string, string>>({})
 
   /* Un échec sincère ne dévoile pas la réponse : le fragment reste ouvert. */
   const devoiler = bifurcation !== null && !bifurcation.echecSincere
@@ -104,6 +135,60 @@ export default function EtapeAncrage({
         </section>
 
         <section className="mt-11">
+          <p className="kicker text-ink/40">Le Contrechamp — ce que j’avais avancé</p>
+          <ul className="mt-4 flex flex-col gap-7">
+            {propositions.map((p) => {
+              const choisie = issues[p.id] ?? null
+              return (
+                <li key={p.id} className="rounded border border-ink/12 bg-white/50 px-5 py-5">
+                  <p className="font-display text-[1.05rem] leading-relaxed text-ink/85">
+                    {p.enonce}
+                  </p>
+                  <p className="mt-2 text-[0.84rem] leading-relaxed text-ink/55">
+                    Si j’avais raison : {p.resultatAttendu}
+                  </p>
+                  <p className="data-line mt-2.5 text-ink/40">
+                    Confiance annoncée {Math.round(p.confiance * 100)} %
+                  </p>
+
+                  <div className="mt-4 flex flex-wrap gap-2.5">
+                    {CHOIX.map((c) => (
+                      <button
+                        key={c.issue}
+                        type="button"
+                        aria-pressed={choisie === c.issue}
+                        onClick={() => setIssues((s) => ({ ...s, [p.id]: c.issue }))}
+                        className={`min-h-11 rounded-[3px] border px-4 py-2 font-display text-[0.92rem] transition ${
+                          choisie === c.issue
+                            ? 'border-ink bg-ink text-cream'
+                            : 'border-ink/20 text-ink/65 hover:border-ink/45'
+                        }`}
+                      >
+                        {c.libelle}
+                      </button>
+                    ))}
+                  </div>
+
+                  {choisie !== null && choisie !== 'indeterminee' ? (
+                    <input
+                      value={constats[p.id] ?? ''}
+                      onChange={(e) => setConstats((s) => ({ ...s, [p.id]: e.target.value }))}
+                      placeholder="Ce que tu as constaté, en une phrase"
+                      className="mt-4 w-full border-b border-ink/15 bg-transparent py-1.5 font-display text-[0.98rem] text-ink placeholder:text-ink/30 focus:border-ink/50 focus:outline-none"
+                    />
+                  ) : null}
+                </li>
+              )
+            })}
+          </ul>
+          <p className="mt-4 text-[0.78rem] leading-relaxed text-ink/45">
+            Me démentir vaut autant que me donner raison, et rapporte davantage. Ne rien pouvoir
+            trancher est une réponse entière : je ne compte pas une absence de preuve comme une
+            preuve du contraire.
+          </p>
+        </section>
+
+        <section className="mt-11">
           <p className="kicker text-ink/40">Ton observation</p>
           <p className="mt-3 font-display text-[1.08rem] leading-relaxed text-ink/80">
             {observationInitiale}
@@ -131,6 +216,11 @@ export default function EtapeAncrage({
                   enonce: s.valeur ?? s.justification,
                   statutInitial: s.statut,
                   reponseDuReel: reponses[s.valeur ?? s.justification] ?? '',
+                })),
+                propositions.map((p) => ({
+                  propositionId: p.id,
+                  issue: issues[p.id] ?? 'indeterminee',
+                  observation: constats[p.id] ?? '',
                 })),
               )
             }

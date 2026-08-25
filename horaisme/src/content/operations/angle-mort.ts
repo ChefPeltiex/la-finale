@@ -151,6 +151,27 @@ export const angleMort: Operation = {
 
   sourcesUtilisees: ['horloge', 'position', 'lumiere', 'saison', 'mobilite'],
 
+  propositions: [
+    {
+      id: 'angle-mort-encore-en-place',
+      enonce:
+        'Ce détail est encore en place aujourd’hui, dans l’état où le fragment le montre.',
+      resultatAttendu:
+        'En arrivant, tu retrouves le motif du fragment sur la façade, entier et reconnaissable, sans échafaudage, bâche ni ravalement récent.',
+      confiance: 0.6,
+      statutEpistemique: 'plausible',
+    },
+    {
+      id: 'angle-mort-deja-passe-devant',
+      enonce:
+        'Tu es déjà passé devant ce détail sans jamais le remarquer.',
+      resultatAttendu:
+        'Une fois sur place, tu reconnais la rue et le trajet, mais pas le détail lui-même.',
+      confiance: 0.45,
+      statutEpistemique: 'plausible',
+    },
+  ],
+
   indices: {
     localisation: [
       {

@@ -14,6 +14,7 @@ import {
   revelerLieu,
 } from '../engine/memory'
 import { useJeu } from '../state/JeuProvider'
+import { avancerPropositions, trancher } from '../engine/contrechamp'
 import { HORA } from '../content/hora'
 
 import RailEtapes from '../components/operation/RailEtapes'
@@ -21,8 +22,20 @@ import EtapeFragment from '../components/operation/EtapeFragment'
 import EtapeInventaire from '../components/operation/EtapeInventaire'
 import EtapeSortie from '../components/operation/EtapeSortie'
 import EtapeConstat from '../components/operation/EtapeConstat'
-import EtapeAncrage, { type Verdict } from '../components/operation/EtapeAncrage'
+import EtapeAncrage, {
+  type Verdict,
+  type VerdictContrechamp,
+} from '../components/operation/EtapeAncrage'
 import { Bouton, Kicker } from '../components/ui'
+
+/**
+ * XP du Démenti.
+ *
+ * Contredire HORA avec une preuve rapporte davantage que lui donner raison.
+ * Ce n'est pas une coquetterie : c'est le seul moment où l'application
+ * apprend réellement quelque chose qu'elle ne savait pas.
+ */
+const XP_DEMENTI = 40
 
 export default function OperationEnCours() {
   const { id } = useParams<{ id: string }>()
@@ -50,7 +63,7 @@ export default function OperationEnCours() {
   )
 
   const [observation, setObservation] = useState('')
-  const [bilan, setBilan] = useState<{ xp: number; echec: boolean } | null>(null)
+  const [bilan, setBilan] = useState<{ xp: number; echec: boolean; dementis: number } | null>(null)
 
   const etape = modele?.etapes[etat.indexEtape] ?? null
   const bifurcation = useMemo(
@@ -70,7 +83,11 @@ export default function OperationEnCours() {
     envoyer({ type: 'etape-suivante', operation: modele })
   }
 
-  function clore(ajustement: string, verdicts: readonly Verdict[]) {
+  function clore(
+    ajustement: string,
+    verdicts: readonly Verdict[],
+    contrechamp: readonly VerdictContrechamp[],
+  ) {
     if (!modele || !bifurcation) return
 
     const preuves = [...etat.preuves, creerPreuve('presence', 'Sortie effectuée et retour déclaré.')]
@@ -78,6 +95,9 @@ export default function OperationEnCours() {
       ? 'Sortie effectuée sans trouver le fragment.'
       : `Constat sur place : ${bifurcation.constat}`
     const { attribution } = attribuerXp(modele.id, bifurcation.xp, motif, preuves)
+
+    let xpTotal = bifurcation.xp
+    let nombreDementis = 0
 
     majMemoire((m) => {
       let suivant = m
@@ -90,6 +110,41 @@ export default function OperationEnCours() {
         const reponse = verdicts[i]?.reponseDuReel.trim() ?? ''
         if (reponse !== '') suivant = confronterAuReel(suivant, derniere.id, reponse)
       })
+
+      /* Contrechamp : ce que HORA avait avancé, puis ce que le terrain en dit. */
+      suivant = avancerPropositions(suivant, modele)
+      for (const v of contrechamp) {
+        const cible = suivant.verifications.find(
+          (x) => x.operationId === modele.id && x.propositionId === v.propositionId,
+        )
+        if (!cible) continue
+
+        const preuvesDuVerdict =
+          v.observation.trim() === ''
+            ? []
+            : [creerPreuve('observation', `Contrechamp — ${v.observation.trim()}`)]
+
+        const { memoire: apres, resultat } = trancher(suivant, cible.id, {
+          issue: v.issue,
+          observation: v.observation,
+          preuves: preuvesDuVerdict,
+        })
+        suivant = apres
+
+        if (resultat.issueRetenue === 'contredite') {
+          nombreDementis += 1
+          const { attribution: bonus } = attribuerXp(
+            modele.id,
+            XP_DEMENTI,
+            `Démenti : « ${cible.propositionInitiale} » — ${v.observation.trim()}`,
+            preuvesDuVerdict,
+          )
+          if (bonus) {
+            suivant = ajouterAttribution(suivant, bonus)
+            xpTotal += XP_DEMENTI
+          }
+        }
+      }
 
       suivant = ajouterAncrage(suivant, {
         id: `ancrage-${Date.now()}`,
@@ -113,7 +168,7 @@ export default function OperationEnCours() {
       return suivant
     })
 
-    setBilan({ xp: bifurcation.xp, echec: bifurcation.echecSincere })
+    setBilan({ xp: xpTotal, echec: bifurcation.echecSincere, dementis: nombreDementis })
   }
 
   function abandonner() {
@@ -133,6 +188,12 @@ export default function OperationEnCours() {
           {bilan.echec ? HORA.echecSincere : 'C’est arrivé pour vrai, et c’est inscrit.'}
         </p>
         <p className="mt-8 data-line text-gold/70">+{bilan.xp} XP vécu</p>
+        {bilan.dementis > 0 ? (
+          <p className="mt-4 max-w-lg font-display text-[1rem] leading-relaxed text-parchment/70">
+            Tu m’as contredite {bilan.dementis === 1 ? 'une fois' : `${bilan.dementis} fois`}, preuve
+            à l’appui. C’est inscrit au Contrechamp, et ça vaut plus que de m’avoir donné raison.
+          </p>
+        ) : null}
         <div className="mt-12 flex flex-wrap items-center justify-center gap-5">
           <Link
             to="/parcours"
@@ -200,6 +261,7 @@ export default function OperationEnCours() {
           <EtapeAncrage
             etape={etape}
             suppositions={modele.suppositions}
+            propositions={modele.propositions}
             bifurcation={bifurcation}
             reveal={medias.reveal}
             lieu={medias.lieu}

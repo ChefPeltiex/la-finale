@@ -28,8 +28,30 @@ function ecrire<T>(cle: string, valeur: T): void {
   }
 }
 
+/**
+ * Complète une mémoire relue du stockage.
+ *
+ * Une sauvegarde écrite par une version antérieure ne connaît pas les champs
+ * ajoutés depuis. Les rétablir vaut mieux que planter au chargement, et mieux
+ * que jeter silencieusement ce que le joueur a accumulé : c'est sa mémoire,
+ * pas la nôtre.
+ */
+function completer(m: MemoireJoueur): MemoireJoueur {
+  return {
+    ...MEMOIRE_VIDE,
+    ...m,
+    attributions: m.attributions ?? [],
+    registre: m.registre ?? [],
+    verifications: m.verifications ?? [],
+    ancrages: m.ancrages ?? [],
+    lieux: m.lieux ?? [],
+    operationsRefusees: m.operationsRefusees ?? [],
+    operationsAbandonnees: m.operationsAbandonnees ?? [],
+  }
+}
+
 export function chargerMemoire(): MemoireJoueur {
-  return lire<MemoireJoueur>(CLE_MEMOIRE, MEMOIRE_VIDE)
+  return completer(lire<MemoireJoueur>(CLE_MEMOIRE, MEMOIRE_VIDE))
 }
 
 export function sauverMemoire(m: MemoireJoueur): void {

@@ -206,6 +206,68 @@ describe('« L’angle mort » de bout en bout', () => {
     expect(screen.getByText('Opération close')).toBeInTheDocument()
     expect(screen.getByText('+60 XP vécu')).toBeInTheDocument()
   }, 30_000)
+
+  it('démentir HORA avec une preuve rapporte davantage que lui donner raison', async () => {
+    const u = userEvent.setup()
+    monter('/operation/angle-mort')
+
+    await u.click(screen.getByRole('button', { name: 'J’en ai assez vu' }))
+    await u.type(screen.getByLabelText(/Hypothèse/), 'Sur la façade de l’église du coin')
+    await u.click(screen.getByRole('button', { name: 'Poser' }))
+    await u.type(screen.getByLabelText(/Hypothèse/), 'Sur le mur arrière du marché')
+    await u.click(screen.getByRole('button', { name: 'Poser' }))
+    await u.click(screen.getByRole('button', { name: 'Emporter l’inventaire' }))
+    await u.click(screen.getByRole('button', { name: 'Je suis déjà revenu' }))
+
+    await u.click(screen.getByRole('button', { name: 'Il est là, mais quelque chose a changé.' }))
+    await u.type(
+      screen.getByLabelText('Ce que tu as vu, en une phrase'),
+      'Le motif a été recouvert.',
+    )
+    await u.click(screen.getByRole('button', { name: 'Ancrer le résultat' }))
+
+    /* Le Contrechamp est distinct du Registre : provenance d'un côté, justesse de l'autre. */
+    expect(screen.getByText('Le Contrechamp — ce que j’avais avancé')).toBeInTheDocument()
+
+    const dementir = screen.getAllByRole('button', { name: 'Non, j’ai vu autre chose' })
+    expect(dementir).toHaveLength(angleMort.propositions.length)
+
+    /* Sans constat écrit, rien ne peut être inscrit comme démenti. */
+    await u.click(dementir[0])
+    const constat = screen.getAllByPlaceholderText('Ce que tu as constaté, en une phrase')
+    expect(constat).toHaveLength(1)
+    await u.type(constat[0], 'La façade a été ravalée, le motif n’existe plus.')
+
+    await u.click(screen.getByRole('button', { name: 'Clore l’opération' }))
+
+    expect(screen.getByText('Opération close')).toBeInTheDocument()
+    expect(screen.getByText('+150 XP vécu')).toBeInTheDocument()
+    expect(screen.getByText(/Tu m’as contredite une fois/)).toBeInTheDocument()
+  }, 30_000)
+
+  it('un démenti sans constat écrit n’est pas inscrit comme démenti', async () => {
+    const u = userEvent.setup()
+    monter('/operation/angle-mort')
+
+    await u.click(screen.getByRole('button', { name: 'J’en ai assez vu' }))
+    await u.type(screen.getByLabelText(/Hypothèse/), 'Première piste')
+    await u.click(screen.getByRole('button', { name: 'Poser' }))
+    await u.type(screen.getByLabelText(/Hypothèse/), 'Deuxième piste')
+    await u.click(screen.getByRole('button', { name: 'Poser' }))
+    await u.click(screen.getByRole('button', { name: 'Emporter l’inventaire' }))
+    await u.click(screen.getByRole('button', { name: 'Je suis déjà revenu' }))
+
+    await u.click(screen.getByRole('button', { name: 'Il est là, mais quelque chose a changé.' }))
+    await u.type(screen.getByLabelText('Ce que tu as vu, en une phrase'), 'Quelque chose a bougé.')
+    await u.click(screen.getByRole('button', { name: 'Ancrer le résultat' }))
+
+    /* Choisir « contredite » sans rien écrire ne suffit pas. */
+    await u.click(screen.getAllByRole('button', { name: 'Non, j’ai vu autre chose' })[0])
+    await u.click(screen.getByRole('button', { name: 'Clore l’opération' }))
+
+    expect(screen.getByText('+110 XP vécu')).toBeInTheDocument()
+    expect(screen.queryByText(/Tu m’as contredite/)).not.toBeInTheDocument()
+  }, 30_000)
 })
 
 describe('souveraineté visible dans l’interface', () => {

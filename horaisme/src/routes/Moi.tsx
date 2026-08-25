@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Bouton, FinDePage, Kicker, Marque, Panneau, TitreSection } from '../components/ui'
 import { LIBELLE_STATUT } from '../engine/provenance'
 import { confronterAuReel, effacerRegistre } from '../engine/memory'
+import { comptes, dementis, etatCalibration } from '../engine/contrechamp'
 import { niveauPour } from '../engine/progression'
 import { useJeu } from '../state/JeuProvider'
 
@@ -24,6 +25,9 @@ export default function Moi() {
 
   const [confirmation, setConfirmation] = useState(false)
   const niveau = niveauPour(memoire.xpTotal)
+  const c = comptes(memoire)
+  const calibration = etatCalibration(memoire)
+  const dementisInscrits = dementis(memoire)
 
   return (
     <div className="flex flex-col gap-14">
@@ -160,6 +164,56 @@ export default function Moi() {
               </li>
             ))}
           </ul>
+        )}
+      </section>
+
+      <section className="rise" style={{ animationDelay: '360ms' }}>
+        <Kicker>Le Contrechamp — ce que j’ai avancé, ce que le terrain en a fait</Kicker>
+        {c.avancees === 0 ? (
+          <p className="mt-4 text-[0.9rem] text-parchment/40">
+            Je n’ai encore rien avancé qui puisse être démenti.
+          </p>
+        ) : (
+          <>
+            <dl className="mt-4 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-gold-dim/15 bg-gold-dim/15 sm:grid-cols-4">
+              {[
+                { libelle: 'Confirmées', valeur: c.confirmees },
+                { libelle: 'Contredites', valeur: c.contredites },
+                { libelle: 'Indéterminées', valeur: c.indeterminees },
+                { libelle: 'En attente', valeur: c.enAttente },
+              ].map((x) => (
+                <div key={x.libelle} className="bg-ink px-5 py-5">
+                  <dt className="data-line text-parchment/40">{x.libelle}</dt>
+                  <dd className="mt-2 font-display text-[1.6rem] leading-none text-parchment/85">
+                    {x.valeur}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+
+            <p className="mt-4 max-w-2xl text-[0.86rem] leading-relaxed text-parchment/50">
+              {calibration.message}
+            </p>
+
+            {dementisInscrits.length > 0 ? (
+              <ul className="mt-6 flex flex-col gap-4">
+                {dementisInscrits.map((v) => (
+                  <li
+                    key={v.id}
+                    className="rounded-lg border border-gold-dim/15 px-6 py-5"
+                  >
+                    <p className="data-line text-gold/60">Démenti</p>
+                    <p className="mt-2.5 font-display text-[1.02rem] leading-relaxed text-parchment/55 line-through decoration-parchment/25">
+                      {v.propositionInitiale}
+                    </p>
+                    <p className="mt-2 font-display text-[1.02rem] leading-relaxed text-parchment/85">
+                      {v.observationReelle}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </>
         )}
       </section>
 
