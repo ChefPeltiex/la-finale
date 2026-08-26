@@ -6,6 +6,7 @@ dist-ssr
 .DS_Store
 *.log
 .captures/
+captures/
 
 # La clé Google est exposée au navigateur, mais elle n'a rien à faire dans Git.
 .env

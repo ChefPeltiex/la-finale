@@ -36,6 +36,8 @@ const ROUTES = [
   ['07-operation', '/operation/angle-mort'],
   ['08-trois-soleils', '/operation/trois-soleils'],
   ['09-le-sosie', '/operation/le-sosie'],
+  ['10-le-pas-de-cote', '/operation/le-pas-de-cote'],
+  ['11-le-geste', '/operation/le-geste'],
 ]
 
 const FORMATS = [

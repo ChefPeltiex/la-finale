@@ -1,13 +1,15 @@
 import { angleMort } from './angle-mort'
 import { troisSoleils } from './trois-soleils'
 import { leSosie } from './le-sosie'
+import { lePasDeCote } from './le-pas-de-cote'
+import { leGeste } from './le-geste'
 import { accepterPropositionExterne } from '../../engine/safety'
 import type { Operation } from '../../engine/types'
 
 import fragmentAngleMort from '../../assets/fragment-angle-mort.jpg'
 import revealAngleMort from '../../assets/reveal-angle-mort.jpg'
 
-const BRUT: readonly Operation[] = [angleMort, troisSoleils, leSosie]
+const BRUT: readonly Operation[] = [angleMort, troisSoleils, leSosie, lePasDeCote, leGeste]
 
 /**
  * Une opération qui viole un garde-fou ne se charge pas. Le catalogue est
@@ -56,9 +58,17 @@ export const MEDIAS: Record<string, MediasOperation> = {
     noteLieu:
       'Je ne publie aucune coordonnée pour cette opération. L’ail des bois est une espèce vulnérable, et une colonie divulguée est une colonie visitée. Ce n’est pas une donnée qui me manque : c’est une donnée que je refuse d’écrire.',
   },
+  'le-pas-de-cote': {
+    noteLieu:
+      'Aucune adresse n’est révélée par cette opération. Le lieu est choisi par le joueur et reste dans sa mémoire locale.',
+  },
+  'le-geste': {
+    noteLieu:
+      'Aucune position de tiers n’est conservée. Le savoir est anonyme et local.',
+  },
 }
 
-export { angleMort, troisSoleils, leSosie }
+export { angleMort, troisSoleils, leSosie, lePasDeCote, leGeste }
 
 /**
  * Question posée au joueur au moment de formuler ses hypothèses.
@@ -70,6 +80,8 @@ export const INVITES_HYPOTHESE: Record<string, string> = {
   'angle-mort': 'Où crois-tu que ce détail se trouve ?',
   'trois-soleils': 'Qu’est-ce qui produit ces deux autres soleils ?',
   'le-sosie': 'Quelle plante crois-tu avoir devant toi ?',
+  'le-pas-de-cote': 'Qu’est-ce qui risque de se passer quand tu entreras ?',
+  'le-geste': 'Qu’est-ce qui risque de s’oublier dans ce geste ?',
 }
 
 /**
@@ -94,5 +106,15 @@ export const CONTRE_HYPOTHESES: Record<string, readonly string[]> = {
     'Les deux plantes poussent côte à côte au même endroit — c’est le cas le plus fréquent, et le plus piégeux.',
     'Ce n’est ni l’une ni l’autre : c’est une troisième espèce que tu n’avais pas envisagée.',
     'Le caractère sur lequel tu t’appuies est justement celui que le sosie partage.',
+  ],
+  'le-pas-de-cote': [
+    'Tu vas entrer, puis trouver une excuse pour repartir sans avoir parlé.',
+    'Tu vas poser la question, mais la réponse va te sembler si courte que tu douteras que ça compte.',
+    'La personne sera occupée, et tu auras l’impression de déranger — même si ce n’est pas le cas.',
+  ],
+  'le-geste': [
+    'Tu vas retenir l’ensemble du geste, mais oublier l’ordre des étapes.',
+    'Tu vas retenir la position des mains, mais pas la tension ou la pression à appliquer.',
+    'Le geste semblera clair sur place, mais incompréhensible quand tu voudras le refaire seul.',
   ],
 }

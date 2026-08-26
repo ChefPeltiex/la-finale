@@ -9,22 +9,31 @@ l'environnement quotidien en terrain d'exploration, d'action et d'apprentissage,
 sans jamais confirmer automatiquement la première interprétation de
 l'utilisateur ni fabriquer le besoin de rester devant l'écran.
 
-Cette version tient sur **trois opérations verticales**, chacune jouable de bout
+Cette version tient sur **cinq opérations verticales**, chacune jouable de bout
 en bout : « L'angle mort » (enquête urbaine), « Les trois soleils »
-(démystification d'un phénomène de ciel) et « Le sosie » (identification en
-nature, sans aucun prélèvement). Toute l'architecture est derrière.
+(démystification d'un phénomène de ciel), « Le sosie » (identification en
+nature, sans aucun prélèvement), « Le pas de côté » (Boss social ordinaire) et
+« Le geste » (transmission anonyme d'un savoir avec rappel différé). Toute
+l'architecture est derrière.
 
 ---
 
 ## Démarrer
 
+L'application n'est pas déployée en ligne : elle démarre sur ta machine et reste locale.
+
 ```bash
 npm install
 npm run dev        # http://localhost:5184
-npm run dev:lan    # même chose, exposé au réseau local (téléphone)
-npm test           # 195 tests : moteur, philosophie, nature, déclencheurs, contrechamp, connecteurs, corpus, rendu
+npm run dev:lan    # exposé au réseau local (téléphone sur le même Wi-Fi)
+npm test           # 259 tests : moteur, philosophie, nature, déclencheurs, contrechamp, connecteurs, corpus, souveraineté, Boss, transmission, rendu
 npm run build      # typecheck complet + bundle de production
 ```
+
+Pour ouvrir depuis ton téléphone, lancer d'abord `npm run dev:lan`, puis taper
+l'adresse affichée dans le terminal (par exemple `http://10.0.0.81:5184`). Les
+deux appareils doivent être sur le même réseau. Si le téléphone ne trouve pas
+l'adresse, vérifier que le pare-feu Windows autorise Node.js en privé.
 
 Google Maps est facultatif. Copier `.env.example` vers `.env` et renseigner
 `VITE_GOOGLE_MAPS_API_KEY` active la carte du Terrain ; sans clé, l'application
@@ -39,6 +48,8 @@ Fonctionne vraiment, maintenant, sans dépendance externe.
 | Élément | Détail |
 | --- | --- |
 | **« L'angle mort » de bout en bout** | Fragment → Inventaire → Sortie (mode poche) → Constat → Ancrage → clôture. Les cinq étapes sont jouables. |
+| **« Le pas de côté » (Boss social ordinaire)** | Paliers refusables sans pénalité, arrêt immédiat, aucune escalade automatique, aucun contact forcé. Le joueur nomme et confirme chaque palier. |
+| **« Le geste » (transmission anonyme)** | Le tiers n'est jamais consigné par défaut. Le savoir entre en attente. Rappel différé, masqué à la saisie, verdict humain. XP au rappel, pas à la rencontre. |
 | **Les quatre statuts de provenance** | `fait` / `plausible` / `simulé` / `inconnu`. Chaque `Datum<T>` porte sa source, sa justification et son statut. Un datum `inconnu` n'affiche jamais de valeur de remplacement. |
 | **Heure locale, saison** | Lues sur l'appareil. Statut `fait`. |
 | **Position géographique** | Géolocalisation réelle du navigateur si l'utilisateur l'autorise (statut `fait`). Sinon repli Vieux-Québec, marqué `simulé`. |
@@ -80,10 +91,10 @@ Structuré dans le code, volontairement non rempli.
 | Élément | État |
 | --- | --- |
 | **Maître de jeu génératif (LLM)** | L'interface `Compositeur` est en place et le compositeur actuel est déterministe (`genere: false`). Un compositeur génératif implémentera la même interface, et ses sorties passeront obligatoirement par `accepterPropositionExterne()` avant d'atteindre l'écran. Les garde-fous restent dans le code et les tests, pas dans un prompt. |
-| **Familles d'opérations** | Trois opérations sont écrites et jouables. La famille Boss existe comme structure, sans contenu. La page Missions le dit à l'utilisateur au lieu d'afficher des cartes verrouillées. |
-| **Connecteurs externes** | Les fondations sont en place — contrat, plafond de statut, cache, quota, délai, annulation, repli `inconnu` — mais **aucune source réseau n'est branchée**. La Carte des ignorances l'affiche telle quelle : « Aucune source n'a encore été interrogée pour cette zone. » |
+| **Familles d'opérations** | Cinq opérations sont écrites et jouables. Les familles Boss et transmission ont chacune une opération verticale complète. Les Parcours longs restent à écrire. La page Missions le dit à l'utilisateur au lieu d'afficher des cartes verrouillées. |
+| **Connecteurs externes** | Les fondations sont en place — contrat, plafond de statut, cache, quota, délai, annulation, repli `inconnu` — mais **aucune source réseau n'est branchée**. La Carte des ignorances l'affiche telle quelle : « Les sources actuellement connectées documentent peu cette zone. » |
 | **Street View** | Chargement optionnel déjà branché (`CarteTerrain`), non utilisé pour extraire des fragments. |
-| **Boss, Parcours longs, transmission** | Vocabulaire et types posés, contenu non écrit. |
+| **Parcours longs** | Vocabulaire et types posés, contenu non écrit. |
 | **Économie, social, campagnes** | Volontairement absents de cette version. |
 
 ---
@@ -141,7 +152,7 @@ réapparaît.
 ## Tests
 
 ```bash
-npm test          # 195 tests, environ 12 s
+npm test          # 259 tests, environ 5 s
 npm run test:watch
 ```
 
@@ -158,7 +169,7 @@ veut — il devra passer ici.
 | `declencheurs.test.ts` | 21 | Un déclencheur est une donnée évaluable, pas du code injecté. Une condition inconnue n'est jamais comptée comme satisfaite — ni comme non satisfaite. |
 | `contrechamp.test.ts` | 23 | Le Démenti sépare la provenance d'une information de sa vérité. Une absence de preuve ne devient jamais une contradiction. Aucun taux global n'est publié tant que l'échantillon est trop petit. |
 | `connecteurs.test.ts` | 29 | Une panne réseau, un délai dépassé, un quota épuisé ou une réponse illisible produisent tous `inconnu` — jamais un chiffre. Zéro résultat décrit la couverture, jamais le monde. La position privée ne quitte pas la machine telle quelle. |
-| `corpus.test.ts` | 41 | Les trois opérations se chargent réellement, démontrent le cycle complet, et aucune n'est écartée en silence par les garde-fous. |
+| `corpus.test.ts` | 55 | Les cinq opérations se chargent réellement, démontrent le cycle complet, et aucune n'est écartée en silence par les garde-fous. |
 | `rendu.test.tsx` | 10 | L'application se monte et les opérations se jouent réellement, jusqu'au Démenti. |
 
 ### `moteur.test.ts` — 14 tests
@@ -212,18 +223,18 @@ npm run preview    # sert le dist/ produit
 Le typecheck complet précède le bundle : une erreur de types interrompt
 `npm run build` au lieu de produire un `dist/` malgré tout.
 
-**61 modules transformés, environ 1 s.**
+**76 modules transformés, environ 1 s.**
 
 | Artefact | Brut | Gzip |
 | --- | --- | --- |
-| `index.js` | 370,64 Ko | **114,30 Ko** |
-| `index.css` | 51,49 Ko | **9,14 Ko** |
+| `index.js` | 417,02 Ko | **127,16 Ko** |
+| `index.css` | 52,27 Ko | **9,26 Ko** |
 | `index.html` | 0,91 Ko | 0,54 Ko |
-| **Code total** | 423 Ko | **124 Ko** |
+| **Code total** | 470 Ko | **137 Ko** |
 
-L'écart avec la mesure précédente (106 Ko gzip) vient presque entièrement du
-corpus : deux opérations complètes ajoutent du texte, des indices de sécurité,
-des propositions vérifiables et des faits sourcés. C'est du contenu, pas de la
+L'écart avec la mesure précédente (124 Ko gzip) vient presque entièrement du
+corpus : cinq opérations complètes, dont Boss et transmission, ajoutent du texte,
+des indices de sécurité, des propositions vérifiables et des faits sourcés. C'est du contenu, pas de la
 mécanique.
 
 Les images sont servies telles quelles, sans recompression au build — elles
@@ -282,7 +293,7 @@ joueur.
 
 | Script | Rôle |
 | --- | --- |
-| `npm run captures` | Capture les dix routes en desktop (1440×900) et mobile (390×844), et signale débordement horizontal, erreurs console et requêtes échouées. |
+| `npm run captures` | Capture les douze routes en desktop (1440×900) et mobile (390×844), et signale débordement horizontal, erreurs console et requêtes échouées. |
 | `npm run captures:operation` | Joue « L'angle mort » de bout en bout dans un vrai navigateur et capture les cinq étapes, le mode poche, la clôture, puis Parcours / Terrain / Moi après coup. |
 | `npm run audit:cibles` | Liste les cibles tactiles sous 44 px sur chaque route en viewport mobile. |
 | `scripts/optimiser-images.ps1` | Recompresse `src/assets` (1400 px max, qualité 82). |

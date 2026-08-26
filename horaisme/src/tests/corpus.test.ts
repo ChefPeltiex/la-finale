@@ -6,6 +6,8 @@ import {
   CONTRE_HYPOTHESES,
   MEDIAS,
   angleMort,
+  leGeste,
+  lePasDeCote,
   leSosie,
   troisSoleils,
 } from '../content/operations'
@@ -21,19 +23,19 @@ import type { Operation } from '../engine/types'
  * impossible.
  */
 
-const ATTENDUES = ['angle-mort', 'trois-soleils', 'le-sosie'] as const
+const ATTENDUES = ['angle-mort', 'trois-soleils', 'le-sosie', 'le-pas-de-cote', 'le-geste'] as const
 
 describe('Le corpus se charge en entier', () => {
   it('aucune opération n’est écartée au démarrage', () => {
     expect(CATALOGUE_REJETE).toEqual([])
   })
 
-  it('les trois opérations verticales sont présentes', () => {
+  it('les cinq opérations verticales sont présentes', () => {
     expect(CATALOGUE.map((o) => o.id).sort()).toEqual([...ATTENDUES].sort())
   })
 })
 
-const toutes: readonly Operation[] = [angleMort, troisSoleils, leSosie]
+const toutes: readonly Operation[] = [angleMort, troisSoleils, leSosie, lePasDeCote, leGeste]
 
 describe.each(toutes.map((op) => [op.titre, op] as const))('« %s »', (_titre, op) => {
   it('passe tous les garde-fous', () => {
