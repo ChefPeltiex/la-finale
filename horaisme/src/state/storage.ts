@@ -1,4 +1,5 @@
 import type { MemoireJoueur, SourceContexte } from '../engine/types'
+import { REGLAGES_CONSTAT_PAR_DEFAUT } from '../engine/types'
 import { MEMOIRE_VIDE } from '../engine/memory'
 import { SOURCES_PAR_DEFAUT } from '../engine/context'
 
@@ -47,6 +48,15 @@ function completer(m: MemoireJoueur): MemoireJoueur {
     lieux: m.lieux ?? [],
     operationsRefusees: m.operationsRefusees ?? [],
     operationsAbandonnees: m.operationsAbandonnees ?? [],
+    engagements: m.engagements ?? [],
+    savoirs: m.savoirs ?? [],
+    rappelsLocaux: m.rappelsLocaux ?? [],
+    /*
+      Le Constat est désactivé jusqu'à consentement explicite. Une sauvegarde
+      antérieure ne peut donc pas l'activer par omission : l'absence de
+      réglage vaut refus, jamais accord.
+    */
+    reglagesConstat: { ...REGLAGES_CONSTAT_PAR_DEFAUT, ...(m.reglagesConstat ?? {}) },
   }
 }
 

@@ -194,6 +194,11 @@ export interface Etape {
   readonly consigne?: string
   /** Nombre minimal d'hypothèses concurrentes exigé (étapes `inventaire`). */
   readonly hypothesesMinimum?: number
+  /**
+   * Champ qui appartient au joueur. Sa présence signale au moteur qu'aucune
+   * valeur ne peut y être pré-écrite, quelle qu'en soit l'origine.
+   */
+  readonly saisie?: ChampSaisie
   /** Coupe l'écran : la technologie s'efface pendant l'action. */
   readonly modePoche?: boolean
 }
@@ -243,6 +248,12 @@ export interface Operation {
   readonly consequences: ConsequencesOperation
   /** Présent dès qu'une opération met le joueur en contact avec du vivant. */
   readonly nature?: CadreNature
+  /** Présent dès qu'une opération touche à un inconfort choisi. */
+  readonly enjeu?: CadreEnjeu
+  /** Présent dès qu'une opération met le joueur en contact avec un tiers. */
+  readonly tiers?: CadreTiers
+  /** Présent dès qu'une opération produit un savoir à rappeler plus tard. */
+  readonly savoir?: CadreSavoir
 }
 
 /* ------------------------------------------------------------------ */
@@ -315,6 +326,287 @@ export interface CadreNature {
   /** Si vrai, la position n'est jamais publiée à une précision exploitable. */
   readonly especeSensible: boolean
   readonly gestesAutorises: readonly GesteNature[]
+}
+
+/* ------------------------------------------------------------------ */
+/* Souveraineté des champs — ce que HORA ne remplit jamais             */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Les champs qui appartiennent au joueur.
+ *
+ * La règle n'est pas « HORA ne génère rien ». HORA a le droit de composer une
+ * opération, une contrainte, une question, une contradiction, une information
+ * sourcée, un exemple identifié comme tel, et des hypothèses concurrentes
+ * présentées comme concurrentes.
+ *
+ * Ce qu'il ne peut pas faire, c'est écrire *à la place* du joueur dans l'un de
+ * ces huit champs. Une app qui rédige ton souvenir te l'a pris.
+ */
+export type ChampSouverain =
+  | 'engagement'
+  | 'souvenir'
+  | 'observation'
+  | 'temoignage'
+  | 'interpretation'
+  | 'verdict'
+  | 'creation'
+  | 'savoir-recu'
+
+export interface ChampSaisie {
+  readonly champ: ChampSouverain
+  /** Poser la question est permis. C'est y répondre qui ne l'est pas. */
+  readonly invite: string
+  /**
+   * Type littéral `null` : aucune opération ne peut compiler avec un
+   * pré-remplissage sur un champ de souveraineté. Comme pour
+   * `ingestionAutorisee`, la règle devient une erreur du compilateur.
+   */
+  readonly valeurPreRemplie: null
+  /**
+   * Exemples explicitement présentés comme des exemples. Autorisés : ils
+   * montrent la forme attendue sans fournir le contenu.
+   */
+  readonly exemples?: readonly string[]
+}
+
+/* ------------------------------------------------------------------ */
+/* Le tiers humain                                                     */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Ce qu'on peut, avec accord, conserver d'une personne qui transmet.
+ *
+ * Aucune de ces données n'est nécessaire pour accomplir une transmission :
+ * le savoir se conserve sans identifier personne. Si le transmetteur veut
+ * être crédité, son nom devient une attribution volontaire — jamais une
+ * pièce justificative.
+ */
+export type DonneeTiers = 'nom' | 'voix' | 'photo' | 'oeuvre' | 'position' | 'publication'
+
+export interface ConsentementTiers {
+  readonly donnee: DonneeTiers
+  readonly accorde: boolean
+  readonly obtenuLe: string
+  /** Un consentement révoqué entraîne la suppression, pas un simple drapeau. */
+  readonly revoqueLe: string | null
+  /**
+   * Obligatoire pour `position` : une position ne peut être conservée que
+   * si elle désigne un lieu public. Jamais un domicile.
+   */
+  readonly lieuPublic?: boolean
+}
+
+export interface Transmetteur {
+  /** Identifiant local opaque. Ne contient jamais de nom. */
+  readonly id: string
+  /** Défaut du système, et cas normal. */
+  readonly anonyme: boolean
+  readonly consentements: readonly ConsentementTiers[]
+  /** Non `null` uniquement si le consentement `nom` est accordé et vivant. */
+  readonly attribution: string | null
+}
+
+export interface CadreTiers {
+  /** Type littéral : aucune opération ne peut exiger l'identification. */
+  readonly anonymeParDefaut: true
+  /** Ce qui *peut* être demandé, jamais ce qui doit l'être. */
+  readonly donneesFacultatives: readonly DonneeTiers[]
+  /** Ce que le joueur annonce au tiers avant de commencer. */
+  readonly formuleDeConsentement: string
+  /** Comment l'opération se termine si le tiers refuse. Sans pénalité. */
+  readonly siRefus: string
+}
+
+/* ------------------------------------------------------------------ */
+/* Boss — engagements autodéterminés                                   */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Trois classes, et une seule que le moteur compose librement.
+ *
+ * `hors-cadre` couvre le trauma, la violence, l'automutilation, la crise
+ * psychologique, le danger physique sérieux et l'illégalité. Aucune quête
+ * d'exposition n'y est jamais générée — le moteur n'a rien à y faire, et
+ * prétendre le contraire serait la faute la plus grave possible ici.
+ */
+export type ClasseEnjeu = 'defi-ordinaire' | 'enjeu-sensible' | 'hors-cadre'
+
+/**
+ * Trois axes évalués séparément.
+ *
+ * Une chose qui ne coûte rien au corps peut coûter beaucoup au social. Les
+ * confondre dans une note unique de « difficulté » efface exactement
+ * l'information dont le joueur a besoin pour choisir.
+ */
+export interface AxesDifficulte {
+  readonly physique: 0 | 1 | 2 | 3
+  readonly social: 0 | 1 | 2 | 3
+  readonly emotionnel: 0 | 1 | 2 | 3
+}
+
+/**
+ * Un palier.
+ *
+ * Aucun champ `xp` : c'est délibéré et c'est structurel. Un palier ne peut
+ * pas rapporter davantage parce qu'il fait plus peur. Le type rend
+ * impossible de rémunérer la souffrance.
+ */
+export interface Palier {
+  readonly id: string
+  readonly ordre: number
+  readonly formulation: string
+  /** Réversible en tout temps. Type littéral : aucune autre valeur ne compile. */
+  readonly reversible: true
+  readonly difficulte: AxesDifficulte
+  /** Confirmé par le joueur au moment de l'exécuter, jamais d'avance. */
+  readonly confirmeLe: string | null
+  readonly accompliLe: string | null
+  /** Renoncer à un palier n'a aucun effet. Consigné pour le joueur seul. */
+  readonly renonceLe: string | null
+}
+
+export interface Engagement {
+  readonly id: string
+  /** Les mots du joueur. Jamais générés, jamais reformulés. */
+  readonly formulationDuJoueur: string
+  /** Type littéral : un engagement d'origine HORA ne compile pas. */
+  readonly origine: 'joueur'
+  readonly classe: ClasseEnjeu
+  /** Tous les paliers, visibles dès le départ. Aucun palier secret. */
+  readonly paliers: readonly Palier[]
+  readonly creeLe: string
+  readonly closLe: string | null
+  readonly noteDeCloture: string | null
+}
+
+/** Ce qu'une opération de type Boss déclare sur son propre terrain. */
+export interface CadreEnjeu {
+  readonly classe: ClasseEnjeu
+  readonly difficulte: AxesDifficulte
+  /** Comment tout arrêter, immédiatement, écrit noir sur blanc. */
+  readonly arretImmediat: string
+  /** Ce que l'opération ne prétend pas faire. Dit avant, pas après. */
+  readonly nonPrise: string
+}
+
+/* ------------------------------------------------------------------ */
+/* La deuxième fois — transmission et rappel différé                   */
+/* ------------------------------------------------------------------ */
+
+export type CategorieSavoir =
+  | 'geste'
+  | 'histoire'
+  | 'recette'
+  | 'orientation'
+  | 'technique'
+  | 'saisonnier'
+
+/** La preuve n'est jamais l'identité du transmetteur. */
+export type FormePreuveRappel =
+  | 'reformulation'
+  | 'reproduction-geste'
+  | 'resultat-materiel'
+  | 'croquis'
+  | 'demonstration'
+  | 'enregistrement'
+  | 'correction-du-transmetteur'
+
+export interface CadreSavoir {
+  readonly categorie: CategorieSavoir
+  /**
+   * Fenêtre minimale avant le rappel. Déclarée par l'opération, jamais
+   * universelle : un geste simple ne s'oublie pas au même rythme qu'une
+   * histoire ou qu'un savoir saisonnier.
+   */
+  readonly fenetreMinimaleJours: number
+  readonly justificationFenetre: string
+  readonly formesDePreuve: readonly FormePreuveRappel[]
+}
+
+export interface Rappel {
+  /** Réécrit de mémoire par le joueur, original masqué pendant la saisie. */
+  readonly enonceDeMemoire: string
+  readonly forme: FormePreuveRappel
+  /**
+   * Le verdict est humain, intégralement. HORA affiche les deux versions
+   * côte à côte et se tait : aucune similarité, aucune note, aucun
+   * pourcentage de maîtrise. Noter un savoir humain, c'est le confisquer.
+   */
+  readonly verdictDuJoueur: 'tenu' | 'partiel' | 'perdu'
+  readonly noteDuJoueur: string
+  readonly rappeleLe: string
+}
+
+export interface SavoirRecu {
+  readonly id: string
+  readonly operationId: string
+  readonly categorie: CategorieSavoir
+  /** Écrit par le joueur au retour. Jamais par HORA. */
+  readonly enonceInitial: string
+  readonly recuLe: string
+  readonly fenetreMinimaleJours: number
+  readonly justificationFenetre: string
+  /** `null` est le cas normal : la transmission n'exige aucune collecte. */
+  readonly transmetteur: Transmetteur | null
+  readonly rappel: Rappel | null
+}
+
+/**
+ * Rappel local, créé explicitement par le joueur.
+ *
+ * Aucun champ de récurrence : le type interdit la répétition automatique.
+ * Il ne quitte pas l'appareil et se supprime en un geste.
+ */
+export interface RappelLocal {
+  readonly savoirId: string
+  readonly dateSouhaitee: string
+  readonly creeLe: string
+}
+
+/* ------------------------------------------------------------------ */
+/* Le Constat                                                          */
+/* ------------------------------------------------------------------ */
+
+export type CategorieConstat =
+  | 'ecart-thematique'
+  | 'ecart-exigence'
+  | 'abandon'
+  | 'rappel-en-attente'
+
+/**
+ * Un fait de jeu, suivi d'un aveu d'ignorance.
+ *
+ * « Tu as écarté quatre opérations qui comportaient une conversation avec
+ * une personne inconnue. Je ne sais pas pourquoi. »
+ *
+ * Quatre refus ne font pas un profil psychologique. Le compte est
+ * observable, la cause ne l'est pas — et HORA s'arrête exactement là.
+ */
+export interface Constat {
+  readonly id: string
+  readonly categorie: CategorieConstat
+  readonly enonce: string
+  /** Les événements qui l'ont produit, consultables un par un. */
+  readonly evenementIds: readonly string[]
+  readonly produitLe: string
+}
+
+export interface ReglagesConstat {
+  /** Désactivé jusqu'à consentement explicite. */
+  readonly actif: boolean
+  readonly categoriesExclues: readonly CategorieConstat[]
+  /** Le joueur peut interdire définitivement qu'il serve à composer. */
+  readonly alimenteLaComposition: boolean
+  /** Constats rejetés par le joueur : jamais reproduits. */
+  readonly constatsRejetes: readonly string[]
+}
+
+export const REGLAGES_CONSTAT_PAR_DEFAUT: ReglagesConstat = {
+  actif: false,
+  categoriesExclues: [],
+  alimenteLaComposition: false,
+  constatsRejetes: [],
 }
 
 /* ------------------------------------------------------------------ */
@@ -430,6 +722,13 @@ export interface MemoireJoueur {
   readonly lieux: readonly LieuTerrain[]
   readonly operationsRefusees: readonly string[]
   readonly operationsAbandonnees: readonly string[]
+  /** Boss : ce que le joueur a nommé lui-même. */
+  readonly engagements: readonly Engagement[]
+  /** Savoirs reçus d'un humain, en attente de leur deuxième fois. */
+  readonly savoirs: readonly SavoirRecu[]
+  /** Rappels créés explicitement par le joueur. Locaux, non récurrents. */
+  readonly rappelsLocaux: readonly RappelLocal[]
+  readonly reglagesConstat: ReglagesConstat
 }
 
 /* ------------------------------------------------------------------ */

@@ -6,6 +6,7 @@ import type {
   LieuTerrain,
   MemoireJoueur,
 } from '../types'
+import { REGLAGES_CONSTAT_PAR_DEFAUT } from '../types'
 
 /**
  * Mémoire du joueur.
@@ -24,6 +25,10 @@ export const MEMOIRE_VIDE: MemoireJoueur = {
   lieux: [],
   operationsRefusees: [],
   operationsAbandonnees: [],
+  engagements: [],
+  savoirs: [],
+  rappelsLocaux: [],
+  reglagesConstat: REGLAGES_CONSTAT_PAR_DEFAUT,
 }
 
 export function inscrireAuRegistre(
