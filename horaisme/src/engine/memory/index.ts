@@ -10,6 +10,14 @@ import type { Engagement, SavoirRecu, RappelLocal } from '../types'
 import { REGLAGES_CONSTAT_PAR_DEFAUT } from '../types'
 
 export {
+  creerRappelLocal,
+  creerSavoirRecu,
+  enregistrerRappel,
+  joursRestants,
+  rappelDisponible,
+  type PropositionSavoir,
+} from './savoir'
+export {
   activerConstat,
   autoriserComposition,
   constatsVisibles,

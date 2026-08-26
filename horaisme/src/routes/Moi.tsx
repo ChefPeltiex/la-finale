@@ -5,13 +5,22 @@ import { LIBELLE_STATUT } from '../engine/provenance'
 import {
   activerConstat,
   ajouterEngagement,
+  ajouterRappelLocal,
+  ajouterSavoir,
   autoriserComposition,
   confronterAuReel,
   constatsVisibles,
+  creerRappelLocal,
+  creerSavoirRecu,
   desactiverConstat,
   effacerRegistre,
+  enregistrerRappel,
+  joursRestants,
   mettreAJourEngagement,
+  mettreAJourSavoir,
+  rappelDisponible,
   rejeterConstat,
+  supprimerRappelLocal,
 } from '../engine/memory'
 import {
   accomplirPalier,
@@ -23,13 +32,30 @@ import {
 import { comptes, dementis, etatCalibration } from '../engine/contrechamp'
 import { niveauPour } from '../engine/progression'
 import { useJeu } from '../state/JeuProvider'
-import type { ClasseEnjeu, Engagement } from '../engine/types'
+import type { ClasseEnjeu, Engagement, FormePreuveRappel, CategorieSavoir, Rappel } from '../engine/types'
 
 const RAYONS = [500, 1000, 1500, 3000, 8000] as const
 const CLASSES_ENJEU: { id: ClasseEnjeu; label: string }[] = [
   { id: 'defi-ordinaire', label: 'Défi ordinaire' },
   { id: 'enjeu-sensible', label: 'Enjeu sensible' },
   { id: 'hors-cadre', label: 'Hors cadre (note seulement)' },
+]
+const CATEGORIES_SAVOIR: { id: CategorieSavoir; label: string }[] = [
+  { id: 'geste', label: 'Geste' },
+  { id: 'histoire', label: 'Histoire' },
+  { id: 'recette', label: 'Recette' },
+  { id: 'orientation', label: 'Orientation' },
+  { id: 'technique', label: 'Technique' },
+  { id: 'saisonnier', label: 'Savoir saisonnier' },
+]
+const FORMES_PREUVE: { id: FormePreuveRappel; label: string }[] = [
+  { id: 'reformulation', label: 'Reformulation écrite' },
+  { id: 'reproduction-geste', label: 'Reproduction du geste' },
+  { id: 'resultat-materiel', label: 'Résultat matériel' },
+  { id: 'croquis', label: 'Croquis' },
+  { id: 'demonstration', label: 'Démonstration' },
+  { id: 'enregistrement', label: 'Explication enregistrée' },
+  { id: 'correction-du-transmetteur', label: 'Correction volontaire du transmetteur' },
 ]
 
 export default function Moi() {
@@ -51,6 +77,17 @@ export default function Moi() {
   const [formulation, setFormulation] = useState('')
   const [classe, setClasse] = useState<ClasseEnjeu>('defi-ordinaire')
   const [paliersTexte, setPaliersTexte] = useState('')
+  const [nouveauSavoir, setNouveauSavoir] = useState(false)
+  const [categorieSavoir, setCategorieSavoir] = useState<CategorieSavoir>('geste')
+  const [enonceSavoir, setEnonceSavoir] = useState('')
+  const [fenetreSavoir, setFenetreSavoir] = useState('3')
+  const [justificationFenetre, setJustificationFenetre] = useState('')
+  const [savoirEnRappel, setSavoirEnRappel] = useState<string | null>(null)
+  const [rappelDeMemoire, setRappelDeMemoire] = useState('')
+  const [formeRappel, setFormeRappel] = useState<FormePreuveRappel>('reformulation')
+  const [verdictRappel, setVerdictRappel] = useState<'tenu' | 'partiel' | 'perdu'>('partiel')
+  const [noteRappel, setNoteRappel] = useState('')
+  const [dateRappelLocal, setDateRappelLocal] = useState('')
   const niveau = niveauPour(memoire.xpTotal)
   const c = comptes(memoire)
   const calibration = etatCalibration(memoire)
@@ -94,6 +131,51 @@ export default function Moi() {
         cloreEngagement(eng, 'Ferme par le joueur depuis l’ecran Moi.', new Date().toISOString()),
       ),
     )
+  }
+
+  function soumettreSavoir() {
+    const jours = Number.parseInt(fenetreSavoir, 10)
+    if (Number.isNaN(jours) || jours < 1 || enonceSavoir.trim().length < 5) return
+    const s = creerSavoirRecu(
+      {
+        operationId: 'manuel',
+        categorie: categorieSavoir,
+        enonceInitial: enonceSavoir.trim(),
+        fenetreMinimaleJours: jours,
+        justificationFenetre: justificationFenetre.trim() || 'Fenetre declaree manuellement.',
+      },
+      new Date().toISOString(),
+    )
+    majMemoire((m) => ajouterSavoir(m, s))
+    setEnonceSavoir('')
+    setFenetreSavoir('3')
+    setJustificationFenetre('')
+    setNouveauSavoir(false)
+  }
+
+  function soumettreRappel(savoirId: string) {
+    if (rappelDeMemoire.trim().length < 3) return
+    majMemoire((m) =>
+      mettreAJourSavoir(m, savoirId, (s) =>
+        enregistrerRappel(s, {
+          enonceDeMemoire: rappelDeMemoire,
+          forme: formeRappel,
+          verdictDuJoueur: verdictRappel,
+          noteDuJoueur: noteRappel,
+          rappeleLe: new Date().toISOString(),
+        }),
+      ),
+    )
+    setSavoirEnRappel(null)
+    setRappelDeMemoire('')
+    setNoteRappel('')
+  }
+
+  function creerRappelPourSavoir(savoirId: string) {
+    if (!dateRappelLocal) return
+    const r = creerRappelLocal(savoirId, dateRappelLocal, new Date().toISOString())
+    majMemoire((m) => ajouterRappelLocal(m, r))
+    setDateRappelLocal('')
   }
 
   return (
@@ -504,7 +586,217 @@ export default function Moi() {
         </Panneau>
       </section>
 
-      <section className="rise" style={{ animationDelay: '480ms' }}>
+      <section className="rise" style={{ animationDelay: '520ms' }}>
+        <Kicker>La deuxième fois — transmission et rappel</Kicker>
+        <p className="mt-3 max-w-2xl text-[0.86rem] leading-relaxed text-parchment/45">
+          Un savoir recu d’un humain n’est verifie que quand tu peux le redire de memoire. Aucune
+          notification automatique : tu choisis seul de revenir, et tu juges seul l’ecart.
+        </p>
+
+        {!nouveauSavoir ? (
+          <div className="mt-5">
+            <Bouton variante="contour" onClick={() => setNouveauSavoir(true)}>
+              Noter un savoir recu
+            </Bouton>
+          </div>
+        ) : (
+          <Panneau className="mt-5 flex flex-col gap-4 px-6 py-6">
+            <label className="flex flex-col gap-2">
+              <span className="data-line text-parchment/50">Categorie</span>
+              <select
+                value={categorieSavoir}
+                onChange={(e) => setCategorieSavoir(e.target.value as CategorieSavoir)}
+                className="w-full border-b border-parchment/12 bg-transparent py-2 font-display text-parchment focus:border-gold/60 focus:outline-none"
+              >
+                {CATEGORIES_SAVOIR.map((c) => (
+                  <option key={c.id} value={c.id}>
+                    {c.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label className="flex flex-col gap-2">
+              <span className="data-line text-parchment/50">Ce que tu as appris, ecrit par toi</span>
+              <textarea
+                value={enonceSavoir}
+                onChange={(e) => setEnonceSavoir(e.target.value)}
+                placeholder="On tient le couteau par le manche, lame vers le bas..."
+                rows={4}
+                className="w-full rounded-[3px] border border-parchment/12 bg-transparent p-3 font-display text-parchment placeholder:text-parchment/25 focus:border-gold/60 focus:outline-none"
+              />
+            </label>
+            <label className="flex flex-col gap-2">
+              <span className="data-line text-parchment/50">Delai minimum avant le rappel (jours)</span>
+              <input
+                type="number"
+                min={1}
+                value={fenetreSavoir}
+                onChange={(e) => setFenetreSavoir(e.target.value)}
+                className="w-full border-b border-parchment/12 bg-transparent py-2 font-display text-parchment focus:border-gold/60 focus:outline-none"
+              />
+            </label>
+            <label className="flex flex-col gap-2">
+              <span className="data-line text-parchment/50">Pourquoi ce delai ?</span>
+              <input
+                value={justificationFenetre}
+                onChange={(e) => setJustificationFenetre(e.target.value)}
+                placeholder="Un geste moteur commence a se degrader apres quelques jours."
+                className="w-full border-b border-parchment/12 bg-transparent py-2 font-display text-parchment placeholder:text-parchment/25 focus:border-gold/60 focus:outline-none"
+              />
+            </label>
+            <div className="flex flex-wrap gap-3">
+              <Bouton onClick={soumettreSavoir}>Enregistrer le savoir</Bouton>
+              <Bouton variante="discret" onClick={() => setNouveauSavoir(false)}>
+                Annuler
+              </Bouton>
+            </div>
+          </Panneau>
+        )}
+
+        {memoire.savoirs.length > 0 && (
+          <ul className="mt-6 flex flex-col gap-4">
+            {memoire.savoirs.map((s) => {
+              const maintenant = new Date()
+              const disponible = rappelDisponible(s, maintenant)
+              const attente = joursRestants(s, maintenant)
+              const rappelLocal = memoire.rappelsLocaux.find((r) => r.savoirId === s.id)
+              return (
+                <li key={s.id} className="rounded-lg border border-gold-dim/15 px-6 py-5">
+                  <div className="flex flex-wrap items-start justify-between gap-3">
+                    <div>
+                      <p className="font-display text-[1.02rem] text-parchment/85">
+                        {CATEGORIES_SAVOIR.find((c) => c.id === s.categorie)?.label}
+                      </p>
+                      <p className="mt-1 text-[0.82rem] text-parchment/40">
+                        {s.rappel === null
+                          ? disponible
+                            ? 'Le rappel est maintenant possible.'
+                            : `Attendre encore ${attente} jour${attente > 1 ? 's' : ''}.`+
+                            (rappelLocal ? ` Rappel local prevu le ${rappelLocal.dateSouhaitee.slice(0, 10)}.` : '')
+                          : `Rappele le ${s.rappel.rappeleLe.slice(0, 10)}.`}
+                      </p>
+                    </div>
+                    {s.rappel === null && (
+                      <Bouton
+                        variante="discret"
+                        onClick={() => {
+                          if (disponible) {
+                            setSavoirEnRappel(s.id)
+                            setRappelDeMemoire('')
+                          }
+                        }}
+                        disabled={!disponible}
+                      >
+                        Faire le rappel
+                      </Bouton>
+                    )}
+                  </div>
+
+                  {s.rappel === null && (
+                    <div className="mt-4 flex flex-wrap items-end gap-3">
+                      <input
+                        type="datetime-local"
+                        value={dateRappelLocal}
+                        onChange={(e) => setDateRappelLocal(e.target.value)}
+                        className="rounded-[3px] border border-parchment/12 bg-transparent px-3 py-2 font-display text-parchment text-[0.85rem] focus:border-gold/60 focus:outline-none"
+                      />
+                      <Bouton
+                        variante="discret"
+                        onClick={() => creerRappelPourSavoir(s.id)}
+                        disabled={!dateRappelLocal}
+                      >
+                        {rappelLocal ? 'Modifier le rappel local' : 'Creer un rappel local'}
+                      </Bouton>
+                      {rappelLocal && (
+                        <Bouton
+                          variante="discret"
+                          onClick={() => majMemoire((m) => supprimerRappelLocal(m, s.id))}
+                        >
+                          Supprimer
+                        </Bouton>
+                      )}
+                    </div>
+                  )}
+
+                  {s.rappel !== null && (
+                    <div className="mt-4 grid gap-4 rounded-[3px] border border-gold-dim/15 bg-ink-soft p-4 sm:grid-cols-2">
+                      <div>
+                        <p className="data-line text-parchment/40">Original</p>
+                        <p className="mt-1.5 font-display text-[0.95rem] leading-relaxed text-parchment/70">
+                          {s.enonceInitial}
+                        </p>
+                      </div>
+                      <div>
+                        <p className="data-line text-parchment/40">De memoire</p>
+                        <p className="mt-1.5 font-display text-[0.95rem] leading-relaxed text-parchment/85">
+                          {s.rappel.enonceDeMemoire}
+                        </p>
+                      </div>
+                    </div>
+                  )}
+
+                  {savoirEnRappel === s.id && (
+                    <Panneau className="mt-4 flex flex-col gap-4 px-5 py-5">
+                      <p className="text-[0.86rem] text-parchment/55">
+                        Ecris ce que tu retiens sans regarder l’original. L’original ne sera affiche
+                        qu’apres ta saisie.
+                      </p>
+                      <textarea
+                        value={rappelDeMemoire}
+                        onChange={(e) => setRappelDeMemoire(e.target.value)}
+                        rows={4}
+                        className="w-full rounded-[3px] border border-parchment/12 bg-transparent p-3 font-display text-parchment placeholder:text-parchment/25 focus:border-gold/60 focus:outline-none"
+                      />
+                      <label className="flex flex-col gap-2">
+                        <span className="data-line text-parchment/50">Forme de la preuve</span>
+                        <select
+                          value={formeRappel}
+                          onChange={(e) => setFormeRappel(e.target.value as FormePreuveRappel)}
+                          className="w-full border-b border-parchment/12 bg-transparent py-2 font-display text-parchment focus:border-gold/60 focus:outline-none"
+                        >
+                          {FORMES_PREUVE.map((f) => (
+                            <option key={f.id} value={f.id}>
+                              {f.label}
+                            </option>
+                          ))}
+                        </select>
+                      </label>
+                      <label className="flex flex-col gap-2">
+                        <span className="data-line text-parchment/50">Ton verdict</span>
+                        <select
+                          value={verdictRappel}
+                          onChange={(e) =>
+                            setVerdictRappel(e.target.value as Rappel['verdictDuJoueur'])
+                          }
+                          className="w-full border-b border-parchment/12 bg-transparent py-2 font-display text-parchment focus:border-gold/60 focus:outline-none"
+                        >
+                          <option value="tenu">Tenu</option>
+                          <option value="partiel">Partiel</option>
+                          <option value="perdu">Perdu</option>
+                        </select>
+                      </label>
+                      <input
+                        value={noteRappel}
+                        onChange={(e) => setNoteRappel(e.target.value)}
+                        placeholder="Note personnelle (optionnelle)"
+                        className="w-full border-b border-parchment/12 bg-transparent py-2 font-display text-parchment placeholder:text-parchment/25 focus:border-gold/60 focus:outline-none"
+                      />
+                      <div className="flex flex-wrap gap-3">
+                        <Bouton onClick={() => soumettreRappel(s.id)}>Enregistrer le rappel</Bouton>
+                        <Bouton variante="discret" onClick={() => setSavoirEnRappel(null)}>
+                          Annuler
+                        </Bouton>
+                      </div>
+                    </Panneau>
+                  )}
+                </li>
+              )
+            })}
+          </ul>
+        )}
+      </section>
+
+      <section className="rise" style={{ animationDelay: '560ms' }}>
         <Kicker>Ce que ce système ne fait pas</Kicker>
         <Panneau ton="forest" className="mt-4 px-7 py-6">
           <p className="max-w-2xl text-[0.9rem] leading-relaxed text-parchment/60">
