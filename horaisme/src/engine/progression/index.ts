@@ -1,6 +1,16 @@
 import type { AttributionXp, MemoireJoueur, Preuve } from '../types'
 import { verifierAttribution, type Violation } from '../safety'
 
+export {
+  accomplirPalier,
+  cloreEngagement,
+  confirmerPalier,
+  creerEngagement,
+  palierDisponible,
+  renoncerPalier,
+  type PropositionPaliers,
+} from './engagement'
+
 /**
  * Attribution des XP.
  *

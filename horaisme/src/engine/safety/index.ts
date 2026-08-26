@@ -479,6 +479,8 @@ const AVEUX_IGNORANCE = [
   'je ne sais pas ce que ça veut dire',
   'je ne l’interprète pas',
   "je ne l'interprète pas",
+  'je ne sais pas quand',
+  'je ne sais pas si',
 ]
 
 /**

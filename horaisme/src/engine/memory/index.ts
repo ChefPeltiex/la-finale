@@ -6,7 +6,20 @@ import type {
   LieuTerrain,
   MemoireJoueur,
 } from '../types'
+import type { Engagement, SavoirRecu, RappelLocal } from '../types'
 import { REGLAGES_CONSTAT_PAR_DEFAUT } from '../types'
+
+export {
+  activerConstat,
+  autoriserComposition,
+  constatsVisibles,
+  desactiverConstat,
+  exclureCategorie,
+  inclureCategorie,
+  produireConstats,
+  rejeterConstat,
+  type EvenementConstat,
+} from './constat'
 
 /**
  * Mémoire du joueur.
@@ -93,4 +106,52 @@ export function effacerTout(): MemoireJoueur {
 
 export function effacerRegistre(m: MemoireJoueur): MemoireJoueur {
   return { ...m, registre: [] }
+}
+
+export function ajouterEngagement(m: MemoireJoueur, e: Engagement): MemoireJoueur {
+  if (m.engagements.some((x) => x.id === e.id)) return m
+  return { ...m, engagements: [...m.engagements, e] }
+}
+
+export function mettreAJourEngagement(
+  m: MemoireJoueur,
+  id: string,
+  patch: (e: Engagement) => Engagement,
+): MemoireJoueur {
+  return {
+    ...m,
+    engagements: m.engagements.map((e) => (e.id === id ? patch(e) : e)),
+  }
+}
+
+export function ajouterSavoir(m: MemoireJoueur, s: SavoirRecu): MemoireJoueur {
+  if (m.savoirs.some((x) => x.id === s.id)) return m
+  return { ...m, savoirs: [...m.savoirs, s] }
+}
+
+export function mettreAJourSavoir(
+  m: MemoireJoueur,
+  id: string,
+  patch: (s: SavoirRecu) => SavoirRecu,
+): MemoireJoueur {
+  return {
+    ...m,
+    savoirs: m.savoirs.map((s) => (s.id === id ? patch(s) : s)),
+  }
+}
+
+export function ajouterRappelLocal(m: MemoireJoueur, r: RappelLocal): MemoireJoueur {
+  const sansDoublon = m.rappelsLocaux.filter((x) => x.savoirId !== r.savoirId)
+  return { ...m, rappelsLocaux: [...sansDoublon, r] }
+}
+
+export function supprimerRappelLocal(m: MemoireJoueur, savoirId: string): MemoireJoueur {
+  return { ...m, rappelsLocaux: m.rappelsLocaux.filter((r) => r.savoirId !== savoirId) }
+}
+
+export function mettreAJourReglagesConstat(
+  m: MemoireJoueur,
+  patch: Partial<MemoireJoueur['reglagesConstat']>,
+): MemoireJoueur {
+  return { ...m, reglagesConstat: { ...m.reglagesConstat, ...patch } }
 }
