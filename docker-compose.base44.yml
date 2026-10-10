@@ -1,0 +1,41 @@
+# Base44 development compose — runs the peltiez app (Vite frontend + Express API)
+# from the cloned source with live reload. No prebuilt images.
+services:
+  web:
+    image: node:22-slim
+    working_dir: /app/peltiez
+    volumes:
+      - ./peltiez:/app/peltiez
+      - peltiez_node_modules:/app/peltiez/node_modules
+    ports:
+      - "3000:5173"
+    environment:
+      - BASE44_PREVIEW_MODE
+      - BASE44_PUBLIC_HOST_SUFFIX
+      - BASE44_SANDBOX_HOST_DOMAIN
+      # Vite >= 6.1 appends this to server.allowedHosts (set by the platform).
+      - __VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS
+      - NODE_ENV=development
+      - PORT=8787
+    command:
+      - sh
+      - -ec
+      - |
+        npm ci --legacy-peer-deps
+        exec ./node_modules/.bin/concurrently -k -n web,api \
+          './node_modules/.bin/vite --host 0.0.0.0' \
+          'node ./server/index.js'
+    healthcheck:
+      test:
+        - CMD
+        - node
+        - -e
+        - "const c=async()=>{const a=await fetch('http://localhost:5173/');if(!a.ok)throw new Error('web');const b=await fetch('http://localhost:8787/api/health');if(!b.ok)throw new Error('api')};c().catch(()=>process.exit(1))"
+      interval: 15s
+      timeout: 10s
+      retries: 6
+      start_period: 90s
+    restart: on-failure
+
+volumes:
+  peltiez_node_modules:
